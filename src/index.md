@@ -21,7 +21,7 @@ The theoretical framework is firmly rooted in Actor-Network Theory (ANT), a cons
 
 ## Context
 
-The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), which aims to develop a Citizen Science platform around three photographic collections from the archives of Cultural Anthropology Switzerland (CAS), formerly the _Swiss Society for Folklore Studies_ ', namely the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12).
+The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), which aims to develop a Citizen Science platform around three photographic collections from the archives of Cultural Anthropology Switzerland (CAS), formerly the _Swiss Society for Folklore Studies_, namely the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12).
 
 ## Working Titles
 
