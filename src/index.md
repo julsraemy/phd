@@ -27,9 +27,9 @@ The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practi
 
 The disseration had a few working titles: 
 
-- Current title of the disseration: "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
-- Fifth working title of the dissertation: “Linked Open Usable Data for Cultural Heritage: Perspectives on Semantics and Interoperability” 
-- Fourth working title of the dissertation: “Linked Open Usable Data for Citizen Science: Perspectives on Interoperability and Knowledge Representation through and beyond an Actor-Network Theory Lens”
-- Third working title of the dissertation: “Deploying a Citizen Humanities infrastructure with Linked Open Usable Data (LOUD) standards: perspectives on Interoperability and Knowledge Representation”
-- Second working title of the dissertation: “Web-based standards for Citizen Science initiatives in the cultural heritage domain: from data modelling to deploying an open infrastructure”
-- First working title of the dissertation: “The role of open and interoperable standards in the dissemination of digital cultural heritage objects”
+- Current title of the disseration: Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
+- Fifth working title of the dissertation: Linked Open Usable Data for Cultural Heritage: Perspectives on Semantics and Interoperability 
+- Fourth working title of the dissertation: Linked Open Usable Data for Citizen Science: Perspectives on Interoperability and Knowledge Representation through and beyond an Actor-Network Theory Lens
+- Third working title of the dissertation: Deploying a Citizen Humanities infrastructure with Linked Open Usable Data (LOUD) standards: perspectives on Interoperability and Knowledge Representation
+- Second working title of the dissertation: Web-based standards for Citizen Science initiatives in the cultural heritage domain: from data modelling to deploying an open infrastructure
+- First working title of the dissertation: The role of open and interoperable standards in the dissemination of digital cultural heritage objects
