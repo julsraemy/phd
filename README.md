@@ -1,4 +1,4 @@
 # PhD
-A website telling you more about my PhD.
+A website telling you more about my PhD thesis on Linked Open Usable Data (LOUD).
 
-Working title: *Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability*
+Title: *Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability*

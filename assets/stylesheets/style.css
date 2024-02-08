@@ -1,0 +1,105 @@
+/* Navigation Bar */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background: #3075bf;
+    color: #ffffff;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+/* Heading Elements */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 30px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    line-height: 1.85em;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1140px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navigation Menu */
+nav {
+    text-align: right;
+    background: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body & Typography */
+body {
+    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Link Styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
