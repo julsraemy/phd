@@ -1,6 +1,6 @@
 ---
 layout: thesis.njk
-title: "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+title: "LOUD for Cultural Heritage - PhD Thesis"
 permalink: "/thesis.html"
 ---
 

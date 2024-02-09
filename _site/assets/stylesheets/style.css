@@ -1,3 +1,31 @@
+/* Fonts */
+
+@font-face {
+font-family:"CMUSerif-Roman";
+src:local("CMUSerif-Roman"), url("../fonts/cmunrm.otf");
+}
+@font-face {
+font-family:"CMUSerif-Bold";
+src:local("CMUSerif-Bold"), url("../fonts/cmunbx.otf");
+font-weight:bold;
+}
+@font-face {
+font-family:"CMUSerif-Italic";
+src:local("CMUSerif-Italic"), url(".,/fonts/cmunti.otf");
+font-style:italic;
+}
+@font-face {
+font-family:"CMUSerif-BoldItalic";
+src:local("CMUSerif-BoldItalic"), url("../fonts/cmunbi.otf");
+font-weight:bold;
+font-style:italic;
+}
+@font-face {
+font-family:"CMUTypewriter-Regular";
+src:local("CMUTypewriter-Regular"), url("../fonts/cmuntt.otf");
+}
+
+
 /* Navigation Bar */
 nav {
     background: #333;
@@ -24,14 +52,12 @@ header {
 
 /* Heading Elements */
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /* Paragraphs */
 p {
-    margin-bottom: 20px;
-    margin-top: 30px;
-    line-height: 1.85em;
+    margin-top: 10;
 }
 
 /* Utility Classes */
@@ -73,19 +99,42 @@ nav ul li a:hover {
 }
 
 /* Reset some basic elements */
-body, h1, h2, h3, h4, h5, h6, p, figure, figcaption {
+h1, h2, h3, h4, h5, h6, figure, figcaption {
+    font-family: "CMUSerif-Bold";
     margin: 0;
     padding: 0;
 }
 
+h1 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4, h5, h6 {
+    font-size: 1.2em;
+}
+
 /* Body & Typography */
 body {
-    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    line-height: 1.4;
     margin: 0;
     padding: 0 20px;
     background-color: #f4f4f4;
     color: #333;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.8em;
 }
 
 /* Link Styles */

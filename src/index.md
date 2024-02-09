@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: "Linked Open Usable Data (LOUD) for Cultural Heritage"
+title: "LOUD for Cultural Heritage"
 permalink: "/index.html"
 ---
 

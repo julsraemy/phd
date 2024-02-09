@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: "Research Outcomes"
+title: "LOUD for Cultural Heritage – Research Outcomes"
 permalink: "/research.html"
 ---
 
