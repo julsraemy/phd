@@ -10,6 +10,9 @@ module.exports = function(eleventyConfig) {
   
     // Custom domain configuration (CNAME file)
     eleventyConfig.addPassthroughCopy("CNAME");
+
+    // JavaScript files
+    eleventyConfig.addPassthroughCopy("src/js");
   
     // Optionally, set a global permalink structure (if you decide to apply a uniform structure)
     // eleventyConfig.addTransform('permalink', function(content, outputPath) {

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability">
+    <meta name="keywords" content="Linked Open Usable Data, LOUD, IIIF, Linked Art, Digital Humanities, Cultural Heritage, Linked Data, Semantic Interoperability, PhD, University of Basel, PIA">
+    <meta name="author" content="Julien A. Raemy">
     <title>LOUD for Cultural Heritage – Research Outcomes</title>
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
 
@@ -16,20 +18,6 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
-        <!-- Schema.org -->
-
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          
-            "@type": "Person",
-            "name": "Julien Antoine Raemy",
-            "url": "https://julsraemy.ch/",
-            "sameAs": ["https://orcid.org/0000-0002-4711-5759","https://hcommons.social/@julsraemy","https://www.linkedin.com/in/julienaraemy/","https://www.researchgate.net/profile/Julien_Raemy","https://www.zotero.org/juls14","https://scholar.google.ch/citations?user=pGROUG0AAAAJ"]
-          
-        }
-    </script>
-
     <!-- Me -->
     <link rel="me" href="https://hcommons.social/@julsraemy" />
     <link rel="me" href="https://www.wikidata.org/wiki/Q59286487">
@@ -40,7 +28,8 @@
 </head>
 <body>
     <nav>
-        <ul class="menu">
+        <button class="nav-trigger">Menu</button>
+        <ul class="collapsed">
             <li><a href="/">Home</a></li>
             <li><a href="/thesis.html">PhD Thesis</a></li>
             <li><a href="/research.html">Research Outcomes</a></li>
@@ -92,6 +81,7 @@
     <footer>
         Site created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using 11ty. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0 licence <img alt="CC BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50" /></a>.
     </footer>
+    <script src="/js/accordion.js"></script>
 </body>
 </html>
 

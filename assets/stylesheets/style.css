@@ -1,92 +1,99 @@
-/* Fonts */
+/* Fonts and Typography */
+@font-face {
+    font-family: "CMUSerif-Roman";
+    src: local("CMUSerif-Roman"), url("../fonts/cmunrm.otf");
+}
+@font-face {
+    font-family: "CMUSerif-Bold";
+    src: local("CMUSerif-Bold"), url("../fonts/cmunbx.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "CMUSerif-Italic";
+    src: local("CMUSerif-Italic"), url("../fonts/cmunti.otf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "CMUSerif-BoldItalic";
+    src: local("CMUSerif-BoldItalic"), url("../fonts/cmunbi.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "CMUTypewriter-Regular";
+    src: local("CMUTypewriter-Regular"), url("../fonts/cmuntt.otf");
+}
 
-@font-face {
-font-family:"CMUSerif-Roman";
-src:local("CMUSerif-Roman"), url("../fonts/cmunrm.otf");
-}
-@font-face {
-font-family:"CMUSerif-Bold";
-src:local("CMUSerif-Bold"), url("../fonts/cmunbx.otf");
-font-weight:bold;
-}
-@font-face {
-font-family:"CMUSerif-Italic";
-src:local("CMUSerif-Italic"), url(".,/fonts/cmunti.otf");
-font-style:italic;
-}
-@font-face {
-font-family:"CMUSerif-BoldItalic";
-src:local("CMUSerif-BoldItalic"), url("../fonts/cmunbi.otf");
-font-weight:bold;
-font-style:italic;
-}
-@font-face {
-font-family:"CMUTypewriter-Regular";
-src:local("CMUTypewriter-Regular"), url("../fonts/cmuntt.otf");
+body {
+    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Reset and Base Styles */
+h1, h2, h3, h4, h5, h6, figure, figcaption {
+    font-family: "CMUSerif-Bold";
+    margin: 0;
+    padding: 0;
+}
+
+h1 { font-size: 1.9em; margin-bottom: 10px; }
+h2 { font-size: 1.7em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1.2em; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Navigation Bar */
 nav {
     background: #333;
     color: #fff;
     padding: 10px 20px;
+    position: relative;
 }
 
-nav a {
-    color: #fff;
-    margin-right: 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Header Styles */
-header {
-    background: #3075bf;
-    color: #ffffff;
-    padding: 20px 20px;
-    text-align: center;
-}
-
-/* Heading Elements */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 50px;
-}
-
-/* Paragraphs */
-p {
-    margin-top: 10;
-}
-
-/* Utility Classes */
-.container {
-    max-width: 1140px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 15px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* Navigation Menu */
-nav {
-    text-align: right;
+.nav-trigger {
+    display: none; /* This will still only show in mobile view */
     background: #333;
-    padding: 10px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Verdana, sans-serif; /* Match the font family */
+    font-size: 1.3em; /* Match the font size, adjust as necessary */
+}
+
+
+.nav-trigger:after {
+    content: '\25BC';
+    float: right;
+}
+
+.nav-trigger.active:after {
+    content: '\25B2';
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: left;
 }
 
 nav ul li {
-    display: inline;
-    margin-left: 20px;
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 1.3em; /* Adjust font size as needed */
 }
 
 nav ul li a {
@@ -98,51 +105,31 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Reset some basic elements */
-h1, h2, h3, h4, h5, h6, figure, figcaption {
-    font-family: "CMUSerif-Bold";
-    margin: 0;
-    padding: 0;
-}
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-trigger {
+        display: block;
+    }
 
-h1 {
-    font-size: 1.9em;
-    margin-bottom: 10px;
-}
+    nav ul.collapsed {
+        display: none; /* Hide when collapsed */
+    }
 
-h2 {
-    font-size: 1.7em;
-}
+    nav ul {
+        display: block; /* Default state, shown */
+    }
 
-h3 {
-    font-size: 1.5em;
-}
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 0; /* Add padding for touch targets */
+    }
 
-h4 {
-    font-size: 1.4em;
-}
-
-h5 {
-    font-size: 1.3em;
-}
-
-h6 {
-    font-size: 1.2em;
-}
-
-/* Body & Typography */
-body {
-    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Verdana, sans-serif;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0 20px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-footer {
-    margin-top: 30px;
-    font-size: 0.85em;
+    nav ul li a {
+        display: block;
+        margin: 0 20px; /* Add margin */
+        color: white; /* Ensure text color is white */
+    }
 }
 
 /* Link Styles */
@@ -155,8 +142,31 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
+/* Header, Paragraphs, Container */
+header {
+    background: transparent; /* No background color for the header */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.85em;
 }
