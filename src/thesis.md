@@ -38,6 +38,49 @@ The theoretical framework is firmly rooted in Actor-Network Theory (ANT), a cons
 
 (...)
 
+## Context
+
+(...)
+
+## Interlinking Cultural Heritage Data
+
+(...)
+
+## Exploring Relationships through an Actor-Network Theory Lens
+
+(...)
+
+## Research Scope and Methodology
+
+(...)
+
+## The Social Fabrics of IIIF and Linked Art
+
+(...)
+
+## PIA as a Laboratory
+
+(...)
+
+## Yale's LUX
+
+(...)
+
+## Discussion
+
+(...)
+
+## Conclusion
+
+(...)
+
+## Bibliography
+
+(...)
+
+
+
+
 
 This page will host my PhD thesis in HTML format.
 
