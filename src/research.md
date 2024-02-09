@@ -33,7 +33,9 @@ Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creati
 
 - Cultural Anthropology Switzerland (CAS) Data Model for the database migration to the DaSCH Service Platform (DSP)
 - PhD Linked Art Data Model
-- PIA Linked Art Data Model
+- Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) Data Model (Legacy): Demleitner, A., & Raemy, J. A. (2022). _PIA Data Model_ (0.3.1) [Computer software]. [https://doi.org/10.5281/zenodo.5142605](https://doi.org/10.5281/zenodo.5142605)
+- PIA Linked Art Data Model: Raemy, J. A. (2022). _PIA Linked Art_ (Version 0.1.0) [Computer software]. [https://github.com/Participatory-Image-Archives/linkedart](https://github.com/Participatory-Image-Archives/linkedart)
+
 
 ## Journal Article
 
@@ -57,7 +59,7 @@ Raemy, J. A., & Sanderson, R. (2023). _Analysis of the Usability of Automaticall
 
 ## Presentations
 
-I have given a lot of presentations during my PhD. On this website, you can find a list of all the presentations that I self-host using Marp (Markdown Presentation Ecosystem): <a href="https://julsraemy.ch/prezi" target="_blank">https://julsraemy.ch/prezi</a>
+I have given a lot of presentations during my PhD. On this website you can find a list of all the self-hosted presentations I have created since November 2022 using Marp (Markdown Presentation Ecosystem): <a href="https://julsraemy.ch/prezi" target="_blank">https://julsraemy.ch/prezi</a>
 
 ## Report
 

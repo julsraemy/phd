@@ -6,19 +6,19 @@ permalink: "/index.html"
 
 # LOUD for Cultural Heritage – PhD Thesis by Julien A. Raemy
 
-_“Linked Open Usable Data (LOUD) for Cultural Heritage” not only encapsulates the essence of my PhD thesis, it reflects a passionate aspiration. It describes a vision where cultural heritage institutions and beyond actively cultivate collaboration and enthusiastically embrace community-driven standards such as those of the International Image Interoperability Framework (IIIF) and Linked Art which facilitate semantic interoperability. In cases where implementation of the standards may not be feasible, I advocate that institutions consider adopting <a href="https://linked.art/loud" target="_blank">LOUD design principles</a> as essential socio-technical practices._
+_“Linked Open Usable Data (LOUD) for Cultural Heritage" not only encapsulates the essence of my PhD thesis – conducted at the Digital Humanities Lab of the University of Basel in the context of a four-year interdisciplinary project, but also reflects a passion, as I have been actively involved in both the International Image Interoperability Framework (IIIF) and the Linked Art communities for many years. It describes a vision where cultural heritage institutions and beyond actively cultivate collaboration and enthusiastically embrace community-driven standards that enable semantic interoperability. In cases where implementation of the standards may not be feasible, I advocate that institutions consider adopting <a href="https://linked.art/loud" target="_blank">LOUD design principles</a> as essential socio-technical practices._
 
 An [HTML version of my thesis](thesis.html) will be accessible on this site upon its completion, while the [research outcomes](research.html) associated with my PhD can also be found here.
 
 ## Context
 
-The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), which aims to develop a Citizen Science platform around three <a href="https://archiv.sgv-sstp.ch/" target="_blank">photographic collections from the archives of Cultural Anthropology Switzerland</a> (CAS), formerly the _Swiss Society for Folklore Studies_, i.e. the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12). 
+The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), which aims to develop a Citizen Science platform around three <a href="https://archiv.sgv-sstp.ch/" target="_blank">photographic collections from the archives of Cultural Anthropology Switzerland</a> (CAS), formerly the _Swiss Society for Folklore Studies_, i.e. the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12). The research project is led by the University of Basel (Institute for Cultural Anthropology and European Ethnology as well as the Digital Humanities Lab) and the Bern Academy of the Arts.
 
 There is more information about the PIA research project and my involvement therein on [a dedicated page](pia.html).
 
 ## From Working Titles to Final Title
 
-The disseration had a few working titles: 
+The dissertation had a few titles: 
 
 - Current and final title of the disseration: **Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability**
 - Fifth working title of the dissertation: _Linked Open Usable Data for Cultural Heritage: Perspectives on Semantics and Interoperability_ 
