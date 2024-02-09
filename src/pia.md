@@ -4,8 +4,6 @@ title: " LOUD for Cultural Heritage – Participatory Knowledge Practices in Ana
 permalink: "/pia.html"
 ---
 
-# LOUD for Cultural Heritage – PhD Thesis by Julien A. Raemy
+# Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)
 
-## PIA
-
-[Participatory Knowledge Practices in Analogue and Digital Image Archives](https://about.participatory-archives.ch) (PIA)
+[Participatory Knowledge Practices in Analogue and Digital Image Archives](https://about.participatory-archives.ch) (PIA) is a project funded by the Swiss National Science Foundation (SNSF) under the Sinergia funding scheme from February 2021 to January 2025.
