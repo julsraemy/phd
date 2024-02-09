@@ -6,12 +6,18 @@ permalink: "/thesis.html"
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
 
+PhD Thesis in Digital Humanities affiliated with the Graduate School of Social Sciences' (G3S) doctoral programme. PDF Version on the University of Basel's repository: (...)
+
+Submitted on DD Month 2024
+
+##### Author 
+
 Julien A. Raemy (University of Basel) <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 https://orcid.org/0000-0002-4711-5759
 </a>
 
-PhD Thesis in Digital Humanities supervised by:
+##### Supervisors 
 - Prof. Dr. Peter Fornaro (University of Basel) <a href="https://orcid.org/0000-0003-1485-4923" target="_blank">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 https://orcid.org/0000-0003-1485-4923
