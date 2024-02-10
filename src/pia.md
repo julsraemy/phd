@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
-title: " LOUD for Cultural Heritage – Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)"
+title: "LOUD for Cultural Heritage – Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)"
+description: ""
 permalink: "/pia.html"
 ---
 

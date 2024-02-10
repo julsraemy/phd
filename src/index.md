@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title: "LOUD for Cultural Heritage"
+description: "A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
 permalink: "/index.html"
 ---
 
@@ -20,7 +21,7 @@ There is more information about the PIA research project and my involvement ther
 
 The dissertation had a few titles: 
 
-- Current and final title of the disseration: **Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability**
+- Current and final title of the dissertation: **Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability**
 - Fifth working title of the dissertation: _Linked Open Usable Data for Cultural Heritage: Perspectives on Semantics and Interoperability_ 
 - Fourth working title of the dissertation: _Linked Open Usable Data for Citizen Science: Perspectives on Interoperability and Knowledge Representation through and beyond an Actor-Network Theory Lens_
 - Third working title of the dissertation: _Deploying a Citizen Humanities infrastructure with Linked Open Usable Data (LOUD) standards: perspectives on Interoperability and Knowledge Representation_
