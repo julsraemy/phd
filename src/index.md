@@ -15,7 +15,7 @@ An [HTML version of my thesis](thesis.html) will be accessible on this site upon
 
 The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), which aims to develop a Citizen Science platform around three <a href="https://archiv.sgv-sstp.ch/" target="_blank">photographic collections from the archives of Cultural Anthropology Switzerland</a> (CAS), formerly the _Swiss Society for Folklore Studies_, i.e. the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12). The research project is led by the University of Basel (Institute for Cultural Anthropology and European Ethnology as well as the Digital Humanities Lab) and the Bern Academy of the Arts.
 
-There is more information about the PIA research project and my involvement therein on [a dedicated page](pia.html).
+There is more information about the PIA research project and my involvement therein on [a dedicated page](pia.html). If you just want to know more about <a href="/loud.html">LOUD</a>, I've written a summary about its design principles and community-driven standards.
 
 ## From Working Titles to Final Title
 
