@@ -2,6 +2,7 @@
 layout: layout.njk
 title: "LOUD for Cultural Heritage"
 description: "A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+date: "2024-02-11"
 permalink: "/index.html"
 ---
 
