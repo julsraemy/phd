@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
     // Custom domain configuration (CNAME file)
     eleventyConfig.addPassthroughCopy("CNAME");
 
+    // Put robots.txt in root
+    eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+
     // JavaScript files
     eleventyConfig.addPassthroughCopy("src/js");
   
