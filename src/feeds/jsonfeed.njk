@@ -9,6 +9,14 @@ eleventyExcludeFromCollections: true
   "language": "en-gb",
   "home_page_url": "{{ site.url }}",
   "feed_url": "{{ site.url }}/feed.json",
+  "favicon": "{{ site.url }}/data/favicon.ico",
+  "authors": [
+    {
+        "name": "Julien A. Raemy",
+        "url": "https://julsraemy.ch",
+        "avatar": "https://julsraemy.ch/assets/images/portrait-px.png"
+    }
+  ],
   "items": [
     {% for item in collections.sitePages %}
     {

@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
 
     // RSS Feed
     eleventyConfig.addPlugin(pluginRss);
-
+    
     eleventyConfig.addGlobalData("site", {
       "url": "https://phd.julsraemy.ch"
       // any other site-wide global data...
