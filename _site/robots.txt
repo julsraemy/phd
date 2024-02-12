@@ -1,4 +1,4 @@
-Sitemap: https://www.belter.io/sitemap.xml
+Sitemap: https://phd.julsraemy.ch/robots.txt
 
 User-agent: *
 Disallow:
