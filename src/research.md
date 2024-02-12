@@ -2,6 +2,7 @@
 layout: layout.njk
 title: "LOUD for Cultural Heritage – Research Outcomes"
 description: "Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Modelling, Software, Data Pipeline"
 date: "2024-02-11"
 permalink: "/research.html"
 ---
