@@ -44,6 +44,8 @@
     font-weight: bold;
 }
 
+@import url('https://fonts.cdnfonts.com/css/cmu-bright');
+
 body {
     font-family: 'CMUSansSerif', 'Segoe UI', Tahoma, Verdana, sans-serif;
     line-height: 1.4;
@@ -78,6 +80,7 @@ nav {
     color: #fff;
     padding: 10px 20px;
     position: relative;
+    font-family: "CMU Bright";
 }
 
 .nav-trigger {
@@ -89,7 +92,7 @@ nav {
     width: 100%;
     text-align: left;
     cursor: pointer;
-    font-family: 'CMUSansSerif-Bold', 'Segoe UI', Tahoma, Verdana, sans-serif; /* Match the font family */
+    font-family: 'CMU Bright', 'Segoe UI', Tahoma, Verdana, sans-serif; /* Match the font family */
     font-size: 1.35em; /* Match the font size, adjust as necessary */
 }
 
