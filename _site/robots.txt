@@ -1,4 +1,4 @@
-Sitemap: https://phd.julsraemy.ch/robots.txt
+Sitemap: https://phd.julsraemy.ch/sitemap.xml
 
 User-agent: *
 Disallow:
