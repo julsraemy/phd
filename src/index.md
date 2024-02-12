@@ -4,6 +4,7 @@ title: "LOUD for Cultural Heritage"
 description: "A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
 keywords: "PhD Thesis in Digital Humanities, Digital Humanities Lab, Dissertation titles, Citizen Science, Sinergia, SNSF"
 sitemapPriority: "1.0"
+date: "2024-02-10"
 permalink: "/index.html"
 ---
 

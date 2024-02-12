@@ -1,0 +1,23 @@
+---
+permalink: "/feed.json"
+eleventyExcludeFromCollections: true
+---
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "LOUD for Cultural Heritage – PhD Thesis by Julien A. Raemy",
+  "description": "A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
+  "language": "en-gb",
+  "home_page_url": "{{ site.url }}",
+  "feed_url": "{{ site.url }}/feed.json",
+  "items": [
+    {% for item in collections.sitePages %}
+    {
+      "id": "{{ site.url }}{{ item.url | url }}",
+      "url": "{{ site.url }}{{ item.url | url }}",
+      "title": "{{ item.data.title }}",
+      "content_html": "{{ item.templateContent | safe | striptags | escape }}",
+      "date_published": "{{ item.date.toISOString() }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}

@@ -1,4 +1,14 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function(eleventyConfig) {
+    // Include all pages in a collection
+    eleventyConfig.addCollection("sitePages", function(collectionApi) {
+      return collectionApi.getAll().filter(function(item) {
+          // Remove 404 from sitePages
+          return item.url !== '/404.html';
+      });
+  });
+
     // Copy the `assets/` directory (including fonts and stylesheets) to the output folder
     eleventyConfig.addPassthroughCopy("assets");
   
@@ -16,6 +26,14 @@ module.exports = function(eleventyConfig) {
 
     // JavaScript files
     eleventyConfig.addPassthroughCopy("src/js");
+
+    // RSS Feed
+    eleventyConfig.addPlugin(pluginRss);
+
+    eleventyConfig.addGlobalData("site", {
+      "url": "https://phd.julsraemy.ch"
+      // any other site-wide global data...
+  });
   
     // Optionally, set a global permalink structure (if you decide to apply a uniform structure)
     // eleventyConfig.addTransform('permalink', function(content, outputPath) {
