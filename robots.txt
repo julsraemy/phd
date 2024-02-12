@@ -1,0 +1,4 @@
+Sitemap: https://phd.julsraemy.ch/sitemap.xml
+
+User-agent: *
+Disallow:
