@@ -5,6 +5,14 @@
   "language": "en-gb",
   "home_page_url": "https://phd.julsraemy.ch",
   "feed_url": "https://phd.julsraemy.ch/feed.json",
+  "favicon": "https://phd.julsraemy.ch/data/favicon.ico",
+  "authors": [
+    {
+        "name": "Julien A. Raemy",
+        "url": "https://julsraemy.ch",
+        "avatar": "https://julsraemy.ch/assets/images/portrait-px.png"
+    }
+  ],
   "items": [
     
     {
