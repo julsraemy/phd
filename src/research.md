@@ -31,6 +31,9 @@ Raemy, J. A. (2022). Améliorer la valorisation des données du patrimoine cultu
 
 Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creation of a Participatory Archive Platform. In Y. Hou (Ed.), _Human Factors in Digital Humanities_ (pp. 1–5). Institut des humanités digitales. [https://doi.org/10.5451/unibas-ep87517](https://doi.org/10.5451/unibas-ep87517)
 
+## Data Analysis
+
+Raemy, J. A. (2023). _LOUD consistency_ [Computer software]. [https://github.com/julsraemy/loud-consistency](https://github.com/julsraemy/loud-consistency)
 
 ## Data Modelling
 
@@ -40,6 +43,12 @@ As an integral part of both my doctoral research and active engagement in the PI
 
 CAS Data Model was redesigned for the database migration to the DaSCH Service Platform (DSP)
 
+### IIIF Manifests Generation
+
+Raemy, J. A. (2024). _daschiiify_ (Version 0.2.0) [Computer software]. https://github.com/dasch-swiss/daschiiify
+
+Raemy, J. A. (2023). _iiif-photoalbum_ (Version 0.1.0) [Computer software]. https://github.com/participatory-Image-Archives/iiif-photoalbum
+
 ### PhD Data Model
 
 **Metamodel done in Linked Art, to be updated**
@@ -48,13 +57,13 @@ Raemy, J. A. (2023). _Linked Art Modelling_ [Computer software]. [https://doi.or
 
 ### Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) Data Model
 
-**PIA Data Model (Legacy)**
-
-Demleitner, A., & Raemy, J. A. (2022). _PIA Data Model_ (0.3.1) [Computer software]. [https://doi.org/10.5281/zenodo.5142605](https://doi.org/10.5281/zenodo.5142605)
-
 **Ernst Brunner Thesaurus**
 
 A controlled vocabulary done in Simple Knowledge Organization System (SKOS), using [SkoHub Docker Vocabs](https://github.com/skohub-io/skohub-docker-vocabs), for the preferred terms used by the photographer Ernst Brunner. It is published at [https://n2t.net/ark:/19156/tkt42](https://n2t.net/ark:/19156/tkt42).
+
+**PIA Data Model (Legacy)**
+
+Demleitner, A., & Raemy, J. A. (2022). _PIA Data Model_ (0.3.1) [Computer software]. [https://doi.org/10.5281/zenodo.5142605](https://doi.org/10.5281/zenodo.5142605)
 
 **PIA Linked Art Data Model**
 
@@ -74,6 +83,10 @@ Within the PIA research project, we organised a lecture series during the spring
 ### Spring Semester 2023
 
 With Murielle Cornut, PhD Candidate in Cultural Anthropology at the time, we taught a 30-hour course during the spring semester 2023 at the University of Basel: [67853-01 - Practical course: Bist du sicher, dass du dieses Foto löschen möchtest? Private Fotopraxis im Archivkontext](https://vorlesungsverzeichnis.unibas.ch/de/recherche?id=274163)
+
+## (Meta)data Aggregation
+
+Raemy, J. A. (2023). _e-periodica OAI-PMH - Ethnology and Folklore_ (Version 1.0.0) [Computer software]. [https://doi.org/10.5281/zenodo.7777797](https://doi.org/10.5281/zenodo.7777797)
 
 ## Posters
 
@@ -96,8 +109,3 @@ I have given a lot of presentations during my PhD. On this website you can find 
 ## Report
 
 Raemy, J. A. (2023). _Characterising the IIIF and Linked Art Communities: Survey report_ (p. 29) [Report]. University of Basel. [https://hal.science/hal-04162572](https://hal.science/hal-04162572)
-
-
-## Software
-
-...
