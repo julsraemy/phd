@@ -2,7 +2,6 @@
 layout: layout.njk
 title: "LOUD for Cultural Heritage – Linked Open Usable Data"
 description: "Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model."
-date: "2024-02-11"
 keywords: "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
 permalink: "/loud.html"
 ---

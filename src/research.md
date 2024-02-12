@@ -2,8 +2,7 @@
 layout: layout.njk
 title: "LOUD for Cultural Heritage – Research Outcomes"
 description: "Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
-keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Modelling, Software, Data Pipeline"
-date: "2024-02-11"
+keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
 permalink: "/research.html"
 ---
 
@@ -45,9 +44,9 @@ CAS Data Model was redesigned for the database migration to the DaSCH Service Pl
 
 ### IIIF Manifests Generation
 
-Raemy, J. A. (2024). _daschiiify_ (Version 0.2.0) [Computer software]. https://github.com/dasch-swiss/daschiiify
+Raemy, J. A. (2024). _daschiiify_ (Version 0.2.0) [Computer software]. [https://github.com/dasch-swiss/daschiiify](https://github.com/dasch-swiss/daschiiify)
 
-Raemy, J. A. (2023). _iiif-photoalbum_ (Version 0.1.0) [Computer software]. https://github.com/participatory-Image-Archives/iiif-photoalbum
+Raemy, J. A. (2023). _iiif-photoalbum_ (Version 0.1.0) [Computer software]. [https://github.com/participatory-Image-Archives/iiif-photoalbum](https://github.com/participatory-Image-Archives/iiif-photoalbum)
 
 ### PhD Data Model
 
