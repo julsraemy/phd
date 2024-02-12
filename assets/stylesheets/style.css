@@ -23,9 +23,29 @@
     font-family: "CMUTypewriter-Regular";
     src: local("CMUTypewriter-Regular"), url("../fonts/cmuntt.otf");
 }
+@font-face {
+    font-family: "CMUSansSerif-Italic";
+    src: local("CMUSansSerif-Italic"), url("../fonts/cmunbmo.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "CMUSansSerif";
+    src: local("CMUSansSerif"), url("../fonts/cmunbmr.ttf");
+}
+@font-face {
+    font-family: "CMUSansSerif-BoldItalic";
+    src: local("CMUSansSerif-BoldItalic"), url("../fonts/cmunbso.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "CMUSansSerif-Bold";
+    src: local("CMUSansSerif-Bold"), url("../fonts/cmunbsr.ttf");
+    font-weight: bold;
+}
 
 body {
-    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'CMUSansSerif', 'Segoe UI', Tahoma, Verdana, sans-serif;
     line-height: 1.4;
     margin: 0;
     padding: 0 20px;
@@ -69,7 +89,7 @@ nav {
     width: 100%;
     text-align: left;
     cursor: pointer;
-    font-family: 'CMU Sans Serif', 'Segoe UI', Tahoma, Verdana, sans-serif; /* Match the font family */
+    font-family: 'CMUSansSerif-Bold', 'Segoe UI', Tahoma, Verdana, sans-serif; /* Match the font family */
     font-size: 1.35em; /* Match the font size, adjust as necessary */
 }
 
