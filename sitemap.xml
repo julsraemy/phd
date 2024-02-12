@@ -5,36 +5,42 @@
             <loc>/thesis.html</loc>
             <lastmod>2024-02-11T00:00:00.000Z</lastmod>
             <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
         </url>
     
         <url>
             <loc>/404.html</loc>
-            <lastmod>2024-02-12T08:30:59.226Z</lastmod>
+            <lastmod>2024-02-12T08:46:41.971Z</lastmod>
             <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
         </url>
     
         <url>
             <loc>/</loc>
-            <lastmod>2024-02-12T08:30:59.234Z</lastmod>
+            <lastmod>2024-02-12T08:46:41.983Z</lastmod>
             <changefreq>monthly</changefreq>
+            <priority>1.0</priority>
         </url>
     
         <url>
             <loc>/loud.html</loc>
-            <lastmod>2024-02-12T08:30:59.234Z</lastmod>
+            <lastmod>2024-02-12T08:46:41.983Z</lastmod>
             <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
         </url>
     
         <url>
             <loc>/pia.html</loc>
-            <lastmod>2024-02-12T08:30:59.234Z</lastmod>
+            <lastmod>2024-02-12T08:46:41.983Z</lastmod>
             <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
         </url>
     
         <url>
             <loc>/research.html</loc>
-            <lastmod>2024-02-12T08:30:59.234Z</lastmod>
+            <lastmod>2024-02-12T08:46:41.983Z</lastmod>
             <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
         </url>
     
 </urlset>
