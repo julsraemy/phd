@@ -40,7 +40,7 @@ Three systems adhering to the LOUD design principles have been identified:
 These three systems are complementary and can be used either separately or in conjunction.
 
 <figure>
-  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure" width="60%">
+  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure">
   <figcaption>LOUD-Driven Infrastructure [Felsing et al. 2023]</figcaption>
 </figure>
 
@@ -53,6 +53,10 @@ These three systems are complementary and can be used either separately or in co
 Currently, IIIF has introduced [six specifications](https://iiif.io/api/), with the Image and Presentation APIs being the most notable, both updated to version 3 in June 2020 and often considered the core IIIF APIs. Additionally, the Content Search and Authorization Flow APIs, both at version 2 and released in 2022 and 2023 respectively, are expected to receive updates to match the core APIs' standards. The Change Discovery and Content State APIs, both in version 1.0, play essential roles in discovering, aggregating, and sharing IIIF resources.
 
 (...)
+
+<div class="container">
+<iframe src="https://mirador-dev.netlify.app/__tests__/integration/mirador/" width="800" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" id="frame" allowfullscreen="">You need an iFrame capable browser to view this.</iframe>
+</div>
 
 ### Web Annotation Data Model
 
@@ -136,9 +140,5 @@ The `target` specifies where the annotation applies. In this setting, it points 
   <img src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg" alt="Linked Art from 50k feet">
   <figcaption>Linked Art from 50,000 feet</figcaption>
 </figure>
-
-<div id="map" data-iiif-url="https://julsraemy.ch/hostiiing/images/pdm-overview/info.json" style="height: 400px; width: 100%;"></div>
-
-
 
 (...)

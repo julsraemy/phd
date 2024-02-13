@@ -15,4 +15,25 @@ The PIA project bridges the realms of data and tangible objects through an inter
 
 Using three collections from the photographic archives of Cultural Anthropology Switzerland (CAS), the project develops interfaces for collaborative indexing and access to archival content. These interfaces, including both graphical and application programming interfaces (APIs), facilitate the co-creation and visualisation of knowledge and offer a reflective and intuitive user experience. At the same time, the project is assessing the analogue and digital phases of archiving from an anthropological, technical and communicative point of view, involving experts from the University of Basel and the Bern University of the Arts.
 
+Three collections: Atlas of the Swiss Folklore, Kreis Family, and Ernst Brunner
+
+## Atlas of the Swiss Folklore
+
 (...)
+
+## Kreis Family
+
+(...)
+
+
+
+<div class="container">
+    <iframe src="https://projectmirador.org/embed/?iiif-content=https://julsraemy.ch/hostiiing/manifests/SGV_10A_00031.json" width="800" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" id="frame" allowfullscreen="">You need an iFrame capable browser to view this.</iframe>
+</div>
+
+
+## Ernst Brunner
+
+(...)
+
+<div id="map" alt="Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589. Alte Bildnummer: DL 89. https://archiv.sgv-sstp.ch/resource/430824" data-iiif-url="https://sipi.participatory-archives.ch/SGV_12/SGV_12N_08589.jp2/info.json" style="height: 400px; width: 100%;">Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589</div>

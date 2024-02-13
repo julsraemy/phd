@@ -290,6 +290,13 @@ figcaption {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the children (including iframe) */
+    align-items: center; /* Vertically center the children (optional) */
+    height: 100%; /* Set a height if you want vertical centering */
+}
+
 footer {
     margin-top: 40px;
     margin-bottom: 10px;
