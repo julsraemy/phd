@@ -69,6 +69,8 @@
 </ul>
 <h3>IIIF</h3>
 <p><a href="https://iiif.io" target="_blank" rel="noopener noreferrer">IIIF</a> is both a model for presenting and annotating content as well as a global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content.</p>
+<p>Currently, IIIF has introduced <a href="https://iiif.io/api/" target="_blank" rel="noopener noreferrer">six specifications</a>, with the Image and Presentation APIs being the most notable, both updated to version 3 in June 2020 and often considered the core IIIF APIs. Additionally, the Content Search and Authorization Flow APIs, both at version 2 and released in 2022 and 2023 respectively, are expected to receive updates to match the core APIs’ standards. The Change Discovery and Content State APIs, both in version 1.0, play essential roles in discovering, aggregating, and sharing IIIF resources.</p>
+<p>(…)</p>
 <h3>Web Annotation Data Model</h3>
 <p>The <a href="https://www.w3.org/TR/annotation-model/" target="_blank" rel="noopener noreferrer">Web Annotation Data Model</a> is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the <code>annotation</code>, a web resource, the <code>body</code>, and the <code>target</code>. This model allows a single comment to be associated with multiple resources.</p>
 <p>Here is an example of machine-generated annotations in a IIIF setting. The JSON-LD snippet represents an <code>AnnotationPage</code> that contains one or more annotations related to a particular IIIF resource.</p>
@@ -109,10 +111,28 @@
         &quot;dcterms:isPartOf&quot;: {
           &quot;type&quot;: &quot;Manifest&quot;,
           &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json&quot;
-        }}},
+        }
+      }
+    },
 </code></pre>
+<h4>Body</h4>
+<p>The <code>body</code> of an annotation is where the content of the annotation is defined. In this example, there are three textual bodies:</p>
+<ul>
+<li>A “TextualBody” with the value “person” for <code>commenting</code>.</li>
+<li>Another “TextualBody” with the value “Object Detection (vitrivr)” for <code>tagging</code>.</li>
+<li>A third “TextualBody” with HTML content indicating a detection score, also for <code>commenting</code>.</li>
+</ul>
+<p>These bodies represent the content of the annotation, including comments and tags related to the annotated resource.</p>
+<h4>Target</h4>
+<p>The <code>target</code> specifies where the annotation applies. In this setting, it points to a specific area of a IIIF Canvas. Key details include:</p>
+<ul>
+<li>The source URL, identifying the specific Canvas within this IIIF Presentation API 3.0 resource.</li>
+<li>A selector of type “FragmentSelector”, using the Media Fragments specification (with a value indicating the specific rectangular area on the canvas targeted by the annotation).</li>
+<li>A link (<code>dcterms:isPartOf</code>) to the IIIF Manifest that the Canvas is part of.</li>
+</ul>
 <h3>Linked Art</h3>
 <p><a href="https://linked.art" target="_blank" rel="noopener noreferrer">Linked Art</a> is a community and a CIDOC (<a href="https://cidoc.mini.icom.museum/" target="_blank" rel="noopener noreferrer">ICOM International Committee for Documentation</a>) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it.</p>
+<p>(…)</p>
 
     </main>
     
