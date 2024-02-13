@@ -6,7 +6,7 @@
     <meta name="description" content="Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model.">
     <meta name="keywords" content="Linked Open Usable Data, LOUD, IIIF, International Image Interoperability Framework, Linked Art, Web Annotation Data Model, W3C, Digital Humanities, Cultural Heritage, Linked Data, Semantic Interoperability, Community Practices, PhD, LUX: Yale Collections Discovery, University of Basel, Cultural Anthropology Switzerland, PIA, Participatory Knowledge Practices in Analogue and Digital Image Archives, Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns">
     <meta name="author" content="Julien A. Raemy">
-    <meta name="last-modified" content="2024-02-11T00:00:00.000Z">
+    <meta name="last-modified" content="2024-02-13T00:00:00.000Z">
     <title>LOUD for Cultural Heritage – Linked Open Usable Data</title>
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
@@ -63,16 +63,21 @@
 <h2>LOUD Standards</h2>
 <p>Three systems adhering to the LOUD design principles have been identified:</p>
 <ul>
-<li>International Image Interoperability Framework (IIIF)</li>
+<li>International Image Interoperability Framework (IIIF), especially the IIIF Presentation API 3.0</li>
 <li>Web Annotation Data Model</li>
 <li>Linked Art</li>
 </ul>
+<p>These three systems are complementary and can be used either separately or in conjunction.</p>
+<figure>
+  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure" width="60%">
+  <figcaption>LOUD-Driven Infrastructure [Felsing et al. 2023]</figcaption>
+</figure>
 <h3>IIIF</h3>
 <p><a href="https://iiif.io" target="_blank" rel="noopener noreferrer">IIIF</a> is both a model for presenting and annotating content as well as a global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content.</p>
 <p>Currently, IIIF has introduced <a href="https://iiif.io/api/" target="_blank" rel="noopener noreferrer">six specifications</a>, with the Image and Presentation APIs being the most notable, both updated to version 3 in June 2020 and often considered the core IIIF APIs. Additionally, the Content Search and Authorization Flow APIs, both at version 2 and released in 2022 and 2023 respectively, are expected to receive updates to match the core APIs’ standards. The Change Discovery and Content State APIs, both in version 1.0, play essential roles in discovering, aggregating, and sharing IIIF resources.</p>
 <p>(…)</p>
 <h3>Web Annotation Data Model</h3>
-<p>The <a href="https://www.w3.org/TR/annotation-model/" target="_blank" rel="noopener noreferrer">Web Annotation Data Model</a> is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the <code>annotation</code>, a web resource, the <code>body</code>, and the <code>target</code>. This model allows a single comment to be associated with multiple resources.</p>
+<p>The <a href="https://www.w3.org/TR/annotation-model/" target="_blank" rel="noopener noreferrer">Web Annotation Data Model</a> is a World Wide Web Consortium (W3C) standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the <code>annotation</code>, a web resource, the <code>body</code>, and the <code>target</code>. This model allows a single comment to be associated with multiple resources.</p>
 <p>Here is an example of machine-generated annotations in a IIIF setting. The JSON-LD snippet represents an <code>AnnotationPage</code> that contains one or more annotations related to a particular IIIF resource.</p>
 <pre><code class="language-json">{
   &quot;@context&quot;: &quot;http://iiif.io/api/presentation/3/context.json&quot;,
@@ -132,6 +137,40 @@
 </ul>
 <h3>Linked Art</h3>
 <p><a href="https://linked.art" target="_blank" rel="noopener noreferrer">Linked Art</a> is a community and a CIDOC (<a href="https://cidoc.mini.icom.museum/" target="_blank" rel="noopener noreferrer">ICOM International Committee for Documentation</a>) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Linked Art</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conceptual Model</strong></td>
+<td><a href="https://www.cidoc-crm.org/" target="_blank" rel="noopener noreferrer">CIDOC Conceptual Reference Model</a> (CRM)</td>
+</tr>
+<tr>
+<td><strong>Ontology</strong></td>
+<td><a href="https://www.cidoc-crm.org/html/cidoc_crm_v7.1.2.html" target="_blank" rel="noopener noreferrer">RDF encoding of CRM 7.1</a>, plus extensions</td>
+</tr>
+<tr>
+<td><strong>Vocabulary</strong></td>
+<td><a href="https://www.getty.edu/research/tools/vocabularies/" target="_blank" rel="noopener noreferrer">Getty Vocabularies</a>, mainly the Art &amp; Architecture Thesaurus (AAT), as well as the Thesaurus of Geographic Names (TGN) and the Union List of Artist Names (ULAN)</td>
+</tr>
+<tr>
+<td><strong>Profile</strong></td>
+<td>Object-based cultural heritage (mainly art museum oriented)</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td><a href="https://www.w3.org/TR/json-ld11/" target="_blank" rel="noopener noreferrer">JSON-LD 1.1</a>, following REST (representational state transfer) and web patterns</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg" alt="Linked Art from 50k feet">
+  <figcaption>Linked Art from 50,000 feet</figcaption>
+</figure>
 <p>(…)</p>
 
     </main>

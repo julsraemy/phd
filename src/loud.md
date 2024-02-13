@@ -3,7 +3,7 @@ layout: layout.njk
 title: "LOUD for Cultural Heritage – Linked Open Usable Data"
 description: "Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model."
 keywords: "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
-date: "2024-02-11"
+date: "2024-02-13"
 permalink: "/loud.html"
 ---
 
@@ -33,9 +33,18 @@ Similar to Tim-Berners Lee's [Five Star Open Data Deployment Scheme](https://5st
 
 Three systems adhering to the LOUD design principles have been identified:
 
-- International Image Interoperability Framework (IIIF) 
+- International Image Interoperability Framework (IIIF), especially the IIIF Presentation API 3.0 
 - Web Annotation Data Model
 - Linked Art 
+
+These three systems are complementary and can be used either separately or in conjunction.
+
+<figure>
+  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure" width="60%">
+  <figcaption>LOUD-Driven Infrastructure [Felsing et al. 2023]</figcaption>
+</figure>
+
+
 
 ### IIIF
 
@@ -47,7 +56,7 @@ Currently, IIIF has introduced [six specifications](https://iiif.io/api/), with 
 
 ### Web Annotation Data Model
 
-The [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the `annotation`, a web resource, the `body`, and the `target`. This model allows a single comment to be associated with multiple resources.
+The [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) is a World Wide Web Consortium (W3C) standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the `annotation`, a web resource, the `body`, and the `target`. This model allows a single comment to be associated with multiple resources.
 
 Here is an example of machine-generated annotations in a IIIF setting. The JSON-LD snippet represents an `AnnotationPage` that contains one or more annotations related to a particular IIIF resource.
 
@@ -114,5 +123,19 @@ The `target` specifies where the annotation applies. In this setting, it points 
 ### Linked Art
 
 [Linked Art](https://linked.art) is a community and a CIDOC ([ICOM International Committee for Documentation](https://cidoc.mini.icom.museum/)) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it.
+
+| **Level**         | **Linked Art**                      |
+|----------------|---------------------------------|
+| **Conceptual Model**      | [CIDOC Conceptual Reference Model](https://www.cidoc-crm.org/) (CRM)                       |
+| **Ontology**   | [RDF encoding of CRM 7.1](https://www.cidoc-crm.org/html/cidoc_crm_v7.1.2.html), plus extensions       |
+| **Vocabulary** | [Getty Vocabularies](https://www.getty.edu/research/tools/vocabularies/), mainly the Art & Architecture Thesaurus (AAT), as well as the Thesaurus of Geographic Names (TGN) and the Union List of Artist Names (ULAN) |
+| **Profile**    | Object-based cultural heritage (mainly art museum oriented)  |
+| **API**        | [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/), following REST (representational state transfer) and web patterns                         |
+
+<figure>
+  <img src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg" alt="Linked Art from 50k feet">
+  <figcaption>Linked Art from 50,000 feet</figcaption>
+</figure>
+
 
 (...)
