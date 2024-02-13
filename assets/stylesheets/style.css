@@ -132,6 +132,20 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+#map {
+    height: 400px; /* Fixed height or use vh for responsive height */
+    width: 100%; /* Full width to make it responsive */
+    margin: 0 auto; /* Center align if there's a max-width */
+    max-width: 960px; /* Optional: limit the size of the map */
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 300px; /* Smaller height on smaller devices */
+    }
+}
+
+
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
     .nav-trigger {
@@ -258,6 +272,7 @@ table tr:hover {
 figure {
     text-align: center; /* Center-align the content of the figure */
     margin: 20px auto; /* Add some vertical space and auto margins for horizontal centering */
+    max-width: 960px; /* Limit the width of figures */
 }
 
 figure img {
