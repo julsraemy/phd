@@ -41,6 +41,10 @@ Three systems adhering to the LOUD design principles have been identified:
 
 [IIIF](https://iiif.io) is both a model for presenting and annotating content as well as a global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content.
 
+Currently, IIIF has introduced [six specifications](https://iiif.io/api/), with the Image and Presentation APIs being the most notable, both updated to version 3 in June 2020 and often considered the core IIIF APIs. Additionally, the Content Search and Authorization Flow APIs, both at version 2 and released in 2022 and 2023 respectively, are expected to receive updates to match the core APIs' standards. The Change Discovery and Content State APIs, both in version 1.0, play essential roles in discovering, aggregating, and sharing IIIF resources.
+
+(...)
+
 ### Web Annotation Data Model
 
 The [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the `annotation`, a web resource, the `body`, and the `target`. This model allows a single comment to be associated with multiple resources.
@@ -85,9 +89,30 @@ Here is an example of machine-generated annotations in a IIIF setting. The JSON-
         "dcterms:isPartOf": {
           "type": "Manifest",
           "id": "https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json"
-        }}},
+        }
+      }
+    },
 ```
+
+#### Body
+
+The `body` of an annotation is where the content of the annotation is defined. In this example, there are three textual bodies:
+
+- A "TextualBody" with the value "person" for `commenting`.
+- Another "TextualBody" with the value "Object Detection (vitrivr)" for `tagging`.
+- A third "TextualBody" with HTML content indicating a detection score, also for `commenting`.
+
+These bodies represent the content of the annotation, including comments and tags related to the annotated resource.
+
+#### Target
+
+The `target` specifies where the annotation applies. In this setting, it points to a specific area of a IIIF Canvas. Key details include:
+- The source URL, identifying the specific Canvas within this IIIF Presentation API 3.0 resource.
+- A selector of type "FragmentSelector", using the Media Fragments specification (with a value indicating the specific rectangular area on the canvas targeted by the annotation).
+- A link (`dcterms:isPartOf`) to the IIIF Manifest that the Canvas is part of.
 
 ### Linked Art
 
 [Linked Art](https://linked.art) is a community and a CIDOC ([ICOM International Committee for Documentation](https://cidoc.mini.icom.museum/)) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it.
+
+(...)
