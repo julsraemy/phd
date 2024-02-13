@@ -137,5 +137,8 @@ The `target` specifies where the annotation applies. In this setting, it points 
   <figcaption>Linked Art from 50,000 feet</figcaption>
 </figure>
 
+<div id="map" data-iiif-url="https://julsraemy.ch/hostiiing/images/pdm-overview/info.json" style="height: 400px; width: 100%;"></div>
+
+
 
 (...)
