@@ -9,6 +9,7 @@
     <meta name="last-modified" content="2024-02-11T00:00:00.000Z">
     <title>LOUD for Cultural Heritage – Linked Open Usable Data</title>
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../data/apple-touch-icon.png">
@@ -48,9 +49,10 @@
 </style>
 <h1>Linked Open Usable Data (LOUD)</h1>
 <p>A summary page about LOUD, page in construction…</p>
+<p>The Semantic Web, with its use of Resource Description Framework (RDF) graphs, offers significant potential for data modelling and reasoning, but faces challenges in terms of query complexity, data handling, and visualisation. Despite these obstacles, the advent of JavaScript Object Notation for Linked Data (JSON-LD) represents a notable advance, providing a flexible data representation that addresses some of these issues by allowing dual treatment as both JSON and a graph.</p>
 <h2>LOUD Design Principles</h2>
 <p>One of the main purposes of LOUD is to make the data more easily accessible to software developers, who play a key role in interacting with the data and building software and services on top of it, and to some extent to academics. As such, striking a delicate balance between the dual imperatives of data completeness and accuracy, which depend on the underlying ontological construct, and the pragmatic considerations of scalability and usability, becomes imperative.</p>
-<p>Similar to Tim-Berners Lee’s <a href="https://5stardata.info/en/" target="_blank">Five Star Open Data Deployment Scheme</a>, Robert Sanderson listed <a href="https://linked.art/loud/" target="_blank">five design principles that underpin LOUD</a>:</p>
+<p>Similar to Tim-Berners Lee’s <a href="https://5stardata.info/" target="_blank" rel="noopener noreferrer">Five Star Open Data Deployment Scheme</a>, Robert Sanderson listed <a href="https://linked.art/loud/" target="_blank" rel="noopener noreferrer">five design principles that underpin LOUD</a>:</p>
 <ol>
 <li>The right Abstraction for the audience</li>
 <li>Few Barriers to entry</li>
@@ -59,7 +61,58 @@
 <li>Few Exceptions, instead many consistent patterns</li>
 </ol>
 <h2>LOUD Standards</h2>
-<p>International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model</p>
+<p>Three systems adhering to the LOUD design principles have been identified:</p>
+<ul>
+<li>International Image Interoperability Framework (IIIF)</li>
+<li>Web Annotation Data Model</li>
+<li>Linked Art</li>
+</ul>
+<h3>IIIF</h3>
+<p><a href="https://iiif.io" target="_blank" rel="noopener noreferrer">IIIF</a> is both a model for presenting and annotating content as well as a global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content.</p>
+<h3>Web Annotation Data Model</h3>
+<p>The <a href="https://www.w3.org/TR/annotation-model/" target="_blank" rel="noopener noreferrer">Web Annotation Data Model</a> is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the <code>annotation</code>, a web resource, the <code>body</code>, and the <code>target</code>. This model allows a single comment to be associated with multiple resources.</p>
+<p>Here is an example of machine-generated annotations in a IIIF setting. The JSON-LD snippet represents an <code>AnnotationPage</code> that contains one or more annotations related to a particular IIIF resource.</p>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;http://iiif.io/api/presentation/3/context.json&quot;,
+  &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list.json&quot;,
+  &quot;type&quot;: &quot;AnnotationPage&quot;,
+  &quot;items&quot;: [
+    {
+      &quot;@context&quot;: &quot;http://www.w3.org/ns/anno.jsonld&quot;,
+      &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list/annotation-436121.json&quot;,
+      &quot;motivation&quot;: &quot;commenting&quot;,
+      &quot;type&quot;: &quot;Annotation&quot;,
+      &quot;body&quot;: [
+        {
+          &quot;type&quot;: &quot;TextualBody&quot;,
+          &quot;value&quot;: &quot;person&quot;,
+          &quot;purpose&quot;: &quot;commenting&quot;
+        },
+        {
+          &quot;type&quot;: &quot;TextualBody&quot;,
+          &quot;value&quot;: &quot;Object Detection (vitrivr)&quot;,
+          &quot;purpose&quot;: &quot;tagging&quot;
+        },
+        {
+          &quot;type&quot;: &quot;TextualBody&quot;,
+          &quot;value&quot;: &quot;&lt;br&gt;&lt;small&gt;Detection score: 0.9574&lt;/small&gt;&quot;,
+          &quot;purpose&quot;: &quot;commenting&quot;
+        }
+      ],
+      &quot;target&quot;: {
+        &quot;source&quot;: &quot;https://iiif.participatory-archives.ch/SGV_12N_08589/canvas/p1&quot;,
+        &quot;selector&quot;: {
+          &quot;type&quot;: &quot;FragmentSelector&quot;,
+          &quot;conformsTo&quot;: &quot;http://www.w3.org/TR/media-frags/&quot;,
+          &quot;value&quot;: &quot;xywh=319,2942,463,523&quot;
+        },
+        &quot;dcterms:isPartOf&quot;: {
+          &quot;type&quot;: &quot;Manifest&quot;,
+          &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json&quot;
+        }}},
+</code></pre>
+<h3>Linked Art</h3>
+<p><a href="https://linked.art" target="_blank" rel="noopener noreferrer">Linked Art</a> is a community and a CIDOC (<a href="https://cidoc.mini.icom.museum/" target="_blank" rel="noopener noreferrer">ICOM International Committee for Documentation</a>) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it.</p>
 
     </main>
     
@@ -67,6 +120,7 @@
         Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0 licence <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="60" /></a>
     </footer>
     <script src="/js/accordion.js"></script>
+    <script src="/js/line-numbers.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNJQKJHNDF"></script>
     <script>
