@@ -184,15 +184,59 @@ p {
     margin-top: 10px;
 }
 
-blockquote {
-    background-color: #f5f5f5; /* Light gray background typical for code blocks */
-    border-left: 5px solid #ccc; /* A subtle left border */
-    margin: 20px 0;
-    padding: 10px 20px;
-    font-family: "CMUTypewriter-Regular", monospace; /* Using the monospace font declared earlier */
-    position: relative; /* Needed for pseudo-element positioning */
-    overflow-x: auto; /* In case of long lines */
-}
+/* Targeting inline code elements */
+code {
+    font-family: 'Fira Code', monospace; /* Example: Using Fira Code font */
+    font-size: 0.9em; /* Slightly smaller font size */
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 0.2em 0.4em; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners for the background */
+    color: #d63384; /* Example: Changing the text color */
+  }
+
+/* Styling for <pre> wrapping code blocks */
+pre {
+    background-color: #f9f9f9; /* Light grey background for the block */
+    line-height: 0.9;
+    padding: 1em; /* Padding around the block */
+    border-radius: 4px; /* Rounded corners for the block */
+    overflow-x: auto; /* Enables horizontal scrolling for longer lines */
+    position: relative; /* Needed for positioning line numbers */
+  }
+  
+  /* Ensure inline <code> doesn't inherit <pre> block styles */
+  pre > code {
+    padding: 0; /* Remove padding inside code blocks */
+    border-radius: 0; /* Remove border radius inside code blocks */
+    background-color: transparent; /* Transparent background inside code blocks */
+    font-size: 0.9em; /* Adjust font size for code blocks */
+    color: #d63384; /* Text color for code blocks */
+  }
+  
+  /* Additional styles for line numbers (if implemented) */
+  pre.line-numbers {
+    counter-reset: linenumber; /* Create a counter for line numbers */
+  }
+  
+  pre.line-numbers code {
+    counter-reset: linenumber; /* Reset the counter for each code block */
+  }
+  
+  pre.line-numbers code > span {
+    counter-increment: linenumber; /* Increment the counter */
+    display: block; /* Display line numbers as block to appear on new line */
+  }
+  
+  pre.line-numbers code > span:before {
+    content: counter(linenumber); /* Display the counter */
+    padding-right: 1em; /* Space between line numbers and code */
+    color: #999; /* Color of line numbers */
+    display: inline-block; /* Align line numbers with code */
+    text-align: right; /* Align text to the right */
+    width: 3em; /* Width of the line number area */
+    margin-left: -4em; /* Adjust spacing to align with code block */
+  }
+  
 
 .container {
     max-width: 1140px;
