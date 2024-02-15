@@ -13,6 +13,8 @@ permalink: "/loud.html"
 
 # Linked Open Usable Data (LOUD)
 
+A summary page about LOUD, page in construction...
+
 The Semantic Web, with its use of Resource Description Framework (RDF) graphs, offers significant potential for data modelling and reasoning, but faces challenges in terms of query complexity, data handling, and visualisation. Despite these obstacles, the advent of JavaScript Object Notation for Linked Data (JSON-LD) represents a notable advance, providing a flexible data representation that addresses some of these issues by allowing dual treatment as both JSON and a graph.
 
 Linked Open Data (LOD) has been pivotal in fostering a web of openly connected datasets. The progression to Linked Open Usable Data (LOUD) underscores an evolution towards making data not just accessible and linked but also readily usable for a broader audience, particularly software developers. This shift is propelled by the understanding that data's real value is unlocked through its usage. LOUD aims to enhance scalability, both from technical perspectives and in terms of data production and adoption, making data more interconnected and thus more useful.
@@ -48,6 +50,10 @@ Systems embodying LOUD principles include the International Image Interoperabili
 - **International Image Interoperability Framework** (IIIF), especially the IIIF Presentation API 3.0 which describes how the structure and layout of a digital object can be made available in a standard manner, defining their appearance in viewers and players through the `Manifest`, a JSON-LD file bundling all elements of a IIIF resource with essential metadata and structural information.
 - **Web Annotation Data Model**: It offers a standardised framework for creating annotations on web resources, promoting semantic data integration and use across the web.
 - **Linked Art**: A community effort to define a metadata application profile and API for describing and interacting with cultural heritage resources.
+
+IIIF and Linked Art are both community-driven initiatives.
+
+(...)
 
 ### IIIF
 
@@ -148,7 +154,7 @@ The `target` specifies where the annotation applies. In this setting, it points 
 
 (...)
 
-### LOUD Ecosystem
+## LOUD Ecosystem
 
 These three systems are complementary and can be used either separately or in conjunction.
 
