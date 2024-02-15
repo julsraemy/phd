@@ -21,9 +21,9 @@ Linked Open Data (LOD) has been pivotal in fostering a web of openly connected d
 
 The endeavour to make JSON-LD a polyglot format, serving both JSON and RDF, introduces some complexities as pointed out by this [blog post from Tess O'Connor](https://tess.oconnor.cx/2023/09/polyglots-and-interoperability):
 
-- Dual Data Models: Catering to two different data models increases complexity for developers and complicates the development and interoperability of tools.
-- Algorithmic Complexity: Adapting algorithms to accommodate dual models can lead to confusion and inefficiency.
-- Brittleness and Performance Issues: The specifics of JSON-LD, especially the `@context` mechanism, can introduce fragility and performance overheads, deterring its use in performance-critical applications.
+- _Dual Data Models_: Catering to two different data models increases complexity for developers and complicates the development and interoperability of tools.
+- _Algorithmic Complexity_: Adapting algorithms to accommodate dual models can lead to confusion and inefficiency.
+- _Brittleness and Performance Issues_: The specifics of JSON-LD, especially the `@context` mechanism, can introduce fragility and performance overheads, deterring its use in performance-critical applications.
 
 To mitigate the challenges associated with polyglot formats, a strategic approach that emphasises simplicity and clarity is recommended. Firstly, adopting a straightforward JSON format that does not require prior knowledge of RDF simplifies interaction and immediately broadens the appeal and usability of the data. In addition, creating canonical mappings from this JSON format to the RDF data model can meet the needs of those who require the capabilities of RDF, ensuring that the base format remains accessible while enabling interaction with Linked Data toolchains. Moreover, ensuring the use of stable contexts, as exemplified by the LOUD standards, is essential for maintaining consistent and reliable data interchange.
 
