@@ -25,7 +25,7 @@ The endeavour to make JSON-LD a polyglot format, serving both JSON and RDF, intr
 - Algorithmic Complexity: Adapting algorithms to accommodate dual models can lead to confusion and inefficiency.
 - Brittleness and Performance Issues: The specifics of JSON-LD, especially the `@context` mechanism, can introduce fragility and performance overheads, deterring its use in performance-critical applications.
 
-To mitigate the challenges associated with polyglot formats, a strategic approach that emphasises simplicity and clarity is recommended. Firstly, adopting a straightforward JSON format that does not require prior knowledge of RDF simplifies interaction and immediately broadens the appeal and usability of the data. In addition, creating canonical mappings from this JSON format to the RDF data model can meet the needs of those who require the capabilities of RDF, ensuring that the base format remains accessible while enabling interaction with Linked Data toolchains. In addition, ensuring the use of stable contexts, as exemplified by the LOUD standards, is essential to maintaining consistent and reliable data exchange.
+To mitigate the challenges associated with polyglot formats, a strategic approach that emphasises simplicity and clarity is recommended. Firstly, adopting a straightforward JSON format that does not require prior knowledge of RDF simplifies interaction and immediately broadens the appeal and usability of the data. In addition, creating canonical mappings from this JSON format to the RDF data model can meet the needs of those who require the capabilities of RDF, ensuring that the base format remains accessible while enabling interaction with Linked Data toolchains. Moreover, ensuring the use of stable contexts, as exemplified by the LOUD standards, is essential for maintaining consistent and reliable data interchange.
 
 By adopting these strategies, the benefits of both JSON and RDF can be effectively leveraged without burdening users with the complexities of a polyglot approach.
 
@@ -37,11 +37,33 @@ One of the main purposes of LOUD is to make the data more easily accessible to s
 
 Similar to Tim-Berners Lee's [Five Star Open Data Deployment Scheme](https://5stardata.info/), Robert Sanderson listed [five design principles that underpin LOUD](https://linked.art/loud/):
 
-1. **The right Abstraction for the audience**: Developers do not need the same level of access to data as ontologists, in the same way that a driver does not need the same level of access to the inner workings of their car as a mechanic. Use cases and requirements should drive the interoperability layer between systems, not ontological purity.
-2. **Few Barriers to entry**: It should be easy to get started with the data and build something. If it takes a long time to understand the model, ontology, sparql query syntax and so forth, then developers will look for easier targets. Conversely, if it is easy to start and incrementally improve, then more people will use the data.
-3. **Comprehensible by introspection**: The data should be understandable to a large degree simply by looking at it, rather than requiring the developer to read the ontology and vocabularies. Using JSON-LD lets us to talk to the developer in their language, which they already understand.
-4. **Documentation with working examples**: You can never intuit all of the rules for the data. Documentation clarifies the patterns that the developer can expect to encounter, such that they can implement robustly. Example use cases allow contextualization for when the pattern will be encountered, and working examples let you drop the data into the system to see if it implements that pattern correctly.
-5. **Few Exceptions, instead many consistent patterns**: Every exception that you have in an API (and hence ontology) is another rule that the developer needs to learn in order to use the system. Every exception is jarring, and requires additional code to manage. While not everything is homogenous, a set of patterns that manage exceptions well is better than many custom fields.
+1. The right Abstraction for the audience
+2. Few Barriers to entry
+3. Comprehensible by introspection
+4. Documentation with working examples
+5. Few Exceptions, instead many consistent patterns
+
+### A. The right Abstraction for the audience 
+
+Developers do not need the same level of access to data as ontologists, in the same way that a driver does not need the same level of access to the inner workings of their car as a mechanic. Use cases and requirements should drive the interoperability layer between systems, not ontological purity.
+
+
+### B. Few Barriers to entry
+
+It should be easy to get started with the data and build something. If it takes a long time to understand the model, ontology, sparql query syntax and so forth, then developers will look for easier targets. Conversely, if it is easy to start and incrementally improve, then more people will use the data.
+
+### C. Comprehensible by introspection 
+
+
+The data should be understandable to a large degree simply by looking at it, rather than requiring the developer to read the ontology and vocabularies. Using JSON-LD lets us to talk to the developer in their language, which they already understand.
+
+### D. Documentation with working examples
+
+You can never intuit all of the rules for the data. Documentation clarifies the patterns that the developer can expect to encounter, such that they can implement robustly. Example use cases allow contextualization for when the pattern will be encountered, and working examples let you drop the data into the system to see if it implements that pattern correctly.
+
+### E. Few Exceptions, instead many consistent patterns 
+
+Every exception that you have in an API (and hence ontology) is another rule that the developer needs to learn in order to use the system. Every exception is jarring, and requires additional code to manage. While not everything is homogenous, a set of patterns that manage exceptions well is better than many custom fields.
 
 ## LOUD Standards
 
