@@ -49,15 +49,6 @@ Systems embodying LOUD principles include the International Image Interoperabili
 - **Web Annotation Data Model**: It offers a standardised framework for creating annotations on web resources, promoting semantic data integration and use across the web.
 - **Linked Art**: A community effort to define a metadata application profile and API for describing and interacting with cultural heritage resources.
 
-These three systems are complementary and can be used either separately or in conjunction.
-
-<figure>
-  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure">
-  <figcaption>LOUD-Driven Infrastructure [Felsing et al. 2023]</figcaption>
-</figure>
-
-A LOUD ecosystem is characterised by an emphasis on interoperability between independently developed systems. This approach to design and implementation promotes semantic interoperability, ensuring that data can be understood and used across platforms and applications without the need for centralised coordination. By adhering to the LOUD principles, systems can communicate more effectively and share data in a way that is meaningful and useful to a wide range of users. This level of interoperability supports the creation of a more integrated and accessible digital environment, where data from different sources can be seamlessly connected and used for a variety of purposes.
-
 ### IIIF
 
 [IIIF](https://iiif.io) is both a model for presenting and annotating content as well as a global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content.
@@ -156,3 +147,14 @@ The `target` specifies where the annotation applies. In this setting, it points 
 </figure>
 
 (...)
+
+### LOUD Ecosystem
+
+These three systems are complementary and can be used either separately or in conjunction.
+
+<figure>
+  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure">
+  <figcaption>LOUD-Driven Infrastructure [Felsing et al. 2023]</figcaption>
+</figure>
+
+A LOUD ecosystem is characterised by an emphasis on interoperability between independently developed systems. This approach to design and implementation promotes semantic interoperability, ensuring that data can be understood and used across platforms and applications without the need for centralised coordination. By adhering to the LOUD principles, systems can communicate more effectively and share data in a way that is meaningful and useful to a wide range of users. This level of interoperability supports the creation of a more integrated and accessible digital environment, where data from different sources can be seamlessly connected and used for a variety of purposes.
