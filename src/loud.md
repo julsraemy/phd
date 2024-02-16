@@ -19,17 +19,19 @@ The Semantic Web, with its use of Resource Description Framework (RDF) graphs, o
 
 Linked Open Data (LOD) has been pivotal in fostering a web of openly connected datasets. The progression to Linked Open Usable Data (LOUD) underscores an evolution towards making data not just accessible and linked but also readily usable for a broader audience, particularly software developers. This shift is propelled by the understanding that data's real value is unlocked through its usage. LOUD aims to enhance scalability, both from technical perspectives and in terms of data production and adoption, making data more interconnected and thus more useful.
 
-The endeavour to make JSON-LD a polyglot format, serving both JSON and RDF, introduces some complexities as pointed out by this [blog post from Tess O'Connor](https://tess.oconnor.cx/2023/09/polyglots-and-interoperability):
+## JavaScript Object Notation for Linked Data (JSON-LD)
 
-- _Dual Data Models_: Catering to two different data models increases complexity for developers and complicates the development and interoperability of tools.
-- _Algorithmic Complexity_: Adapting algorithms to accommodate dual models can lead to confusion and inefficiency.
-- _Brittleness and Performance Issues_: The specifics of JSON-LD, especially the `@context` mechanism, can introduce fragility and performance overheads, deterring its use in performance-critical applications.
+[JSON-LD](https://json-ld.org/) is a modern web standard designed to simplify the encoding of linked data using the widely known JSON format. As a compact and easy-to-manage data format, JSON-LD enhances the ability to share structured data across disparate systems on the Web, while embedding rich semantic capabilities. It achieves this by allowing data to be serialised in a way that is compatible with traditional JSON, yet interpretable by RDF-based semantic processing tools.
 
-To mitigate the challenges associated with polyglot formats, a strategic approach that emphasises simplicity and clarity is recommended. Firstly, adopting a straightforward JSON format that does not require prior knowledge of RDF simplifies interaction and immediately broadens the appeal and usability of the data. In addition, creating canonical mappings from this JSON format to the RDF data model can meet the needs of those who require the capabilities of RDF, ensuring that the base format remains accessible while enabling interaction with Linked Data toolchains. Moreover, ensuring the use of stable `contexts`, as exemplified by the LOUD standards, is essential for maintaining consistent and reliable data interchange.
+At its core, JSON-LD introduces a context (`@context`) that maps terms in a JSON document to Internationalised Resource Identifiers (IRIs) used in RDF vocabularies. This mapping allows JSON documents to be interpreted as RDF graphs, facilitating the integration of structured data into the Semantic Web without requiring developers to depart from familiar JSON syntax. The design of JSON-LD aims to bridge the gap between the ease of use of JSON and the rich data connectivity and interoperability offered by RDF. The development of JSON-LD was motivated by the need to make linked data more accessible to Web developers and to encourage wider adoption of Semantic Web technologies. By embedding semantic annotations directly into JSON, JSON-LD enables developers to contribute to the linked data cloud with a minimal learning curve, accelerating the growth of a semantically rich, interconnected web of data.
 
-By adopting these strategies, the benefits of both JSON and RDF can be effectively leveraged without burdening users with the complexities of a polyglot approach.
+The strategic adoption of JSON-LD as a means to reconcile the simplicity of JSON with the descriptive power of RDF has sparked an insightful debate about its practical implications and its classification as a polyglot format. A [blog post by Tess O'Connor](https://tess.oconnor.cx/2023/09/polyglots-and-interoperability) outlines several challenges that emerge from this approach, including issues related to dual data models, algorithmic complexity, and the potential brittleness and performance impacts of JSON-LD's `@context` mechanism. To address these challenges, a strategic focus on simplicity and clarity is advocated. Adopting a straightforward JSON format that doesn't require knowledge of RDF can simplify interactions and improve the appeal and usability of the data. In addition, creating canonical mappings from JSON to RDF addresses the needs of RDF users while maintaining the accessibility of the base format. In addition, the adoption of stable `@contexts` in line with the LOUD standards is critical for consistent data exchange.
 
-Building on this foundation of simplicity and accessibility, the LOUD design principles come into play, offering a structured approach to making data not only available but intuitively usable. These principles are designed to guide the development and dissemination of data in ways that directly address the needs of developers and users alike.
+However, this polyglot characterisation of JSON-LD has been met with counter-arguments, [such as those from 
+Pierre-Antoine Champin](https://github.com/w3ctag/design-principles/issues/239#issuecomment-1762316158), that offer a different perspective. Critics argue that JSON-LD should not be considered a polyglot format in the strictest sense because it operates on a "JSON then JSON-LD" basis rather than an "either/or" scenario. In this view, any JSON-LD processor first interprets the document as JSON before applying the JSON-LD layer, similar to how other JSON formats, such as GeoJSON, encode specific types of information beyond the basic JSON structures. This process does not make these formats polyglots, but rather extensions of JSON that provide mappings to more complex data models, thus emphasising JSON-LD's role in simplifying the transition to semantically enriched data on the web.
+
+Building upon this understanding, the LOUD design principles emerge as guiding forces in the quest to make data not only accessible and interconnected but fundamentally usable and intuitive for developers and end-users alike.
+
 
 ## LOUD Design Principles
 
@@ -64,6 +66,7 @@ You can never intuit all of the rules for the data. Documentation clarifies the 
 ### E. Few Exceptions, instead many consistent patterns 
 
 Every exception that you have in an API (and hence ontology) is another rule that the developer needs to learn in order to use the system. Every exception is jarring, and requires additional code to manage. While not everything is homogenous, a set of patterns that manage exceptions well is better than many custom fields.
+
 
 ## LOUD Standards
 
