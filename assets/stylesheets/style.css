@@ -278,8 +278,6 @@ blockquote cite {
     }
 }
 
-
-
 table {
     width: 100%; /* Make the table stretch to the full container width */
     border-collapse: collapse; /* Collapse borders between table cells */
