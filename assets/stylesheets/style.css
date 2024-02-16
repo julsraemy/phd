@@ -242,6 +242,44 @@ pre > code::first-line {
     background-color: yellow; /* Temporary: For visual inspection */
 }
 
+blockquote {
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    font-family: Georgia, serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+    font-style: italic;
+    background-color: #f9f9f9;
+    border-left: 8px solid #333; /* Change color to match your theme */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+blockquote::before,
+blockquote::after {
+    font-family: Arial, sans-serif;
+    line-height: 0;
+    position: absolute;
+    color: #007bff; /* Match vertical line color */
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    text-align: right;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    blockquote {
+        padding: 15px;
+        margin: 15px 0;
+    }
+}
+
+
+
 table {
     width: 100%; /* Make the table stretch to the full container width */
     border-collapse: collapse; /* Collapse borders between table cells */
