@@ -38,7 +38,42 @@
     
         <url>
             <loc>https://phd.julsraemy.ch/404.html</loc>
-            <lastmod>2024-02-21T10:55:09.730Z</lastmod>
+            <lastmod>2024-02-22T08:37:56.364Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/s/loud/page/home/</loc>
+            <lastmod>2024-02-22T08:37:56.376Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/s/loud/page/outputs/</loc>
+            <lastmod>2024-02-22T08:37:56.376Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/s/loud/page/summary/</loc>
+            <lastmod>2024-02-22T08:37:56.376Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/s/loud/page/title/</loc>
+            <lastmod>2024-02-22T08:37:56.376Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/s/loud/page/toc/</loc>
+            <lastmod>2024-02-22T08:37:56.376Z</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.7</priority>
         </url>
