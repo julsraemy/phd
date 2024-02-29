@@ -12,7 +12,7 @@
     <meta name="DC.title" content="{{ title }}">
     <meta name="DC.creator" content="Raemy, Julien Antoine">
     <meta name="DC.date" content="{{ date }}">
-    <meta name="DC.type" content="{{ page.schemaType }}">
+    <meta name="DC.type" content="{{ schemaType }}">
     <meta name="DC.description" content="{{ description }}">
     <meta name="DC.subject" content="{{ keywords }}">
     <meta name="DC.language" content="en">
@@ -59,7 +59,7 @@
         <script type="application/ld+json">
     {
         "@context": "http://schema.org",
-        "@type": "{{ page.schemaType }}",
+        "@type": "{{ schemaType }}",
         "name": "{{ page.title }}",
         "author": {
             "@type": "Person",
@@ -83,8 +83,8 @@
             ]
         },
         "datePublished": "{{ page.date }}",
-        "description": "{{ page.description }}",
-        "keywords": "{{ page.keywords }}"
+        "description": "{{ description }}",
+        "keywords": "{{ keywords }}"
     }
     </script>
 
