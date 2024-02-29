@@ -14,6 +14,10 @@
     <meta name="DC.date" content="{{ date }}">
     <meta name="DC.type" content="{{ schemaType }}">
     <meta name="DC.identifier" content="{{ site.url }}{{ permalink }}">
+    <!-- Conditional DOI Identifier -->
+    {% if doi %}
+    <meta name="DC.identifier" content="https://doi.org/{{ doi }}">
+    {% endif %}
     <meta name="DC.description" content="{{ description }}">
     <meta name="DC.subject" content="{{ keywords }}">
     <meta name="DC.language" content="en">
