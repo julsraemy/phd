@@ -78,4 +78,11 @@
             <priority>0.7</priority>
         </url>
     
+        <url>
+            <loc>https://phd.julsraemy.ch/s/loud/page/notebook/</loc>
+            <lastmod>2024-02-29T12:11:37.480Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
+    
 </urlset>
