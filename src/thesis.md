@@ -5,6 +5,7 @@ description: "Linked Open Usable Data for Cultural Heritage: Perspectives on Com
 keywords: "Actor-Network Theory, ANT, Boundary Objects, Philosophy of Information, Situated Knowledges, Science and Technology Studies, STS, DH, PhD Thesis in Digital Humanities, Citizen Science"
 changeFreq: "weekly"
 sitemapPriority: "1.0"
+schemaType: "Thesis"
 date: "2024-02-12"
 permalink: "/thesis.html"
 ---

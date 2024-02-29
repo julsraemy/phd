@@ -5,6 +5,7 @@ description: "A website about my PhD – Linked Open Usable Data for Cultural He
 keywords: "PhD Thesis in Digital Humanities, Digital Humanities Lab, Dissertation titles, Citizen Science, Sinergia, SNSF"
 sitemapPriority: "1.0"
 date: "2024-02-10"
+schemaType: "WebSite"
 permalink: "/index.html"
 ---
 
