@@ -6,7 +6,7 @@ keywords: "Actor-Network Theory, ANT, Boundary Objects, Philosophy of Informatio
 changeFreq: "weekly"
 sitemapPriority: "1.0"
 schemaType: "Thesis"
-date: "2024-02-12"
+date: "2024-02-20"
 permalink: "/thesis.html"
 ---
 
