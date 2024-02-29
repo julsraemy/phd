@@ -33,7 +33,9 @@ Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creati
 
 ## Data Analysis
 
-Raemy, J. A. (2023). _LOUD consistency_ [Computer software]. https://github.com/julsraemy/loud-consistency
+Raemy, J. A. (2024). _The LOUD Social Fabrics_ [Computer software]. https://github.com/julsraemy/loud-socialfabrics/
+
+Raemy, J. A. (2024). _LOUD consistency_ [Computer software]. https://github.com/julsraemy/loud-consistency
 
 ## Data Modelling
 
