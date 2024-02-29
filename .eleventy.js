@@ -35,8 +35,8 @@ module.exports = function(eleventyConfig) {
     // Custom Collections
     eleventyConfig.addCollection("sitePages", function(collectionApi) {
         return collectionApi.getAll().filter(function(item) {
-            // Exclude specific pages like 404
-            return item.url !== '/404.html';
+            // Exclude specific pages like 404 and all pages under /s/
+            return !item.url.startsWith('/s/') && item.url !== '/404.html';
         });
     });
 
