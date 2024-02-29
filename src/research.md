@@ -31,11 +31,11 @@ Raemy, J. A. (2022). Améliorer la valorisation des données du patrimoine cultu
 
 Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creation of a Participatory Archive Platform. In Y. Hou (Ed.), _Human Factors in Digital Humanities_ (pp. 1–5). Institut des humanités digitales. https://doi.org/10.5451/unibas-ep87517
 
-## Data Analysis
+## Data Curation and Analysis
 
 Raemy, J. A. (2024). _The LOUD Social Fabrics_ [Computer software]. https://github.com/julsraemy/loud-socialfabrics/
 
-Raemy, J. A. (2024). _LOUD consistency_ [Computer software]. https://github.com/julsraemy/loud-consistency
+Raemy, J. A. (2024). _LOUD Consistency_ [Computer software]. https://github.com/julsraemy/loud-consistency
 
 ## Data Modelling
 
