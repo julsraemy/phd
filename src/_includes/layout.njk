@@ -14,12 +14,17 @@
     <meta name="DC.date" content="{{ date }}">
     <meta name="DC.type" content="{{ schemaType }}">
     <meta name="DC.identifier" content="{{ site.url }}{{ permalink }}">
-    <meta name="DC.publisher" content="https://phd.julsraemy.ch">
     <meta name="DC.description" content="{{ description }}">
     <meta name="DC.subject" content="{{ keywords }}">
     <meta name="DC.language" content="en">
     <meta name="DC.format" content="text/html">
     <meta name="DC.rights" content="https://creativecommons.org/licenses/by/4.0/">
+    {% if place %}
+    <meta name="DC.coverage" content="{{ place }}">
+    {% endif %}
+    {% if university %}
+    <meta name="DC.publisher" content="{{ university }}">
+    {% endif %}
 
     <!-- Title and CSS -->
     <title>{{ title }}</title>
