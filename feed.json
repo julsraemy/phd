@@ -16,6 +16,14 @@
   "items": [
     
     {
+      "id": "https://phd.julsraemy.ch/",
+      "url": "https://phd.julsraemy.ch/",
+      "title": "LOUD for Cultural Heritage",
+      "content_html": "LOUD for Cultural Heritage – PhD Thesis by Julien A. Raemy “Linked Open Usable Data (LOUD) for Cultural Heritage&quot; not only encapsulates the essence of my PhD thesis, but also reflects a passion, as I have been actively involved in both the International Image Interoperability Framework (IIIF) and the Linked Art communities for many years. It describes a vision where cultural heritage institutions and beyond actively cultivate collaboration and enthusiastically embrace community-driven standards that enable semantic interoperability. In cases where implementation of the standards may not be feasible, I advocate that institutions consider adopting LOUD design principles as essential socio-technical practices. An HTML version of my thesis will be accessible on this site upon its completion, while the research outcomes associated with my PhD can also be found here. If you just want to know more about LOUD, I’ve written a summary about its design principles and community-driven standards. Context My journey into the Digital Humanities Lab of the University of Basel began as an undergraduate in Information Science, undertaking an internship that spanned from August to October 2016. This period marked the start of my deep involvement with the IIIF community, a pivotal step that would significantly shape my academic and research pursuits. The experience gained during this internship not only provided me with a solid foundation in Digital Humanities but also sparked my interest in leveraging linked open data and standardised application programming interfaces (APIs) for cultural heritage preservation and accessibility. It was within one of these stimulating environments that I found the inspiration and support needed to embark on a doctoral journey, starting my PhD in February 2021. The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), a four-year interdisciplinary effort, which aims to develop a Citizen Science platform around three photographic collections from the archives of Cultural Anthropology Switzerland (CAS), formerly the Swiss Society for Folklore Studies, i.e. the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12). The research project is led by the University of Basel (Institute for Cultural Anthropology and European Ethnology as well as the Digital Humanities Lab) and the Bern Academy of the Arts (HKB). There is more information about the PIA research project and my involvement therein on a dedicated page. From Working Titles to Final Title The dissertation had a few titles: Current and final title of the dissertation: Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability Fifth working title of the dissertation: Linked Open Usable Data for Cultural Heritage: Perspectives on Semantics and Interoperability Fourth working title of the dissertation: Linked Open Usable Data for Citizen Science: Perspectives on Interoperability and Knowledge Representation through and beyond an Actor-Network Theory Lens Third working title of the dissertation: Deploying a Citizen Humanities infrastructure with Linked Open Usable Data (LOUD) standards: perspectives on Interoperability and Knowledge Representation Second working title of the dissertation: Web-based standards for Citizen Science initiatives in the cultural heritage domain: from data modelling to deploying an open infrastructure First working title of the dissertation: The role of open and interoperable standards in the dissemination of digital cultural heritage objects",
+      "date_published": "2024-02-10T00:00:00.000Z"
+    },
+    
+    {
       "id": "https://phd.julsraemy.ch/loud.html",
       "url": "https://phd.julsraemy.ch/loud.html",
       "title": "LOUD for Cultural Heritage – Linked Open Usable Data",
@@ -29,14 +37,6 @@
       "title": "LOUD for Cultural Heritage – Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)",
       "content_html": "Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) is a project funded by the Swiss National Science Foundation (SNSF) under the Sinergia funding scheme from February 2021 to January 2025. The PIA project bridges the realms of data and tangible objects through an interdisciplinary approach, bringing together cultural anthropology, technology and design to examine both analogue and digital archives. It explores participatory knowledge practices within image archives, encourages collaboration across disciplines, and develops digital tools to help contextualise and connect images. This initiative aims to improve the preservation and sharing of knowledge by inviting both the scholarly community and the public to actively participate in understanding its history and current practices. Through workshops and user interviews, the project aims to identify new needs in digital and process-oriented knowledge creation. Using three collections from the photographic archives of Cultural Anthropology Switzerland (CAS), the project develops interfaces for collaborative indexing and access to archival content. These interfaces, including both graphical and application programming interfaces (APIs), facilitate the co-creation and visualisation of knowledge and offer a reflective and intuitive user experience. At the same time, the project is assessing the analogue and digital phases of archiving from an anthropological, technical and communicative point of view, involving experts from the University of Basel and the Bern University of the Arts. Three collections: Atlas of the Swiss Folklore, Kreis Family, and Ernst Brunner Atlas of the Swiss Folklore (…) Kreis Family (…) You need an iFrame capable browser to view this. Ernst Brunner (…) Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589",
       "date_published": "2024-02-12T00:00:00.000Z"
-    },
-    
-    {
-      "id": "https://phd.julsraemy.ch/",
-      "url": "https://phd.julsraemy.ch/",
-      "title": "LOUD for Cultural Heritage",
-      "content_html": "LOUD for Cultural Heritage – PhD Thesis by Julien A. Raemy “Linked Open Usable Data (LOUD) for Cultural Heritage&quot; not only encapsulates the essence of my PhD thesis, but also reflects a passion, as I have been actively involved in both the International Image Interoperability Framework (IIIF) and the Linked Art communities for many years. It describes a vision where cultural heritage institutions and beyond actively cultivate collaboration and enthusiastically embrace community-driven standards that enable semantic interoperability. In cases where implementation of the standards may not be feasible, I advocate that institutions consider adopting LOUD design principles as essential socio-technical practices. An HTML version of my thesis will be accessible on this site upon its completion, while the research outcomes associated with my PhD can also be found here. If you just want to know more about LOUD, I’ve written a summary about its design principles and community-driven standards. Context My journey into the Digital Humanities Lab of the University of Basel began as an undergraduate in Information Science, undertaking an internship that spanned from August to October 2016. This period marked the start of my deep involvement with the IIIF community, a pivotal step that would significantly shape my academic and research pursuits. The experience gained during this internship not only provided me with a solid foundation in Digital Humanities but also sparked my interest in leveraging linked open data and standardised application programming interfaces (APIs) for cultural heritage preservation and accessibility. It was within one of these stimulating environments that I found the inspiration and support needed to embark on a doctoral journey, starting my PhD in February 2021. The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), a four-year interdisciplinary effort, which aims to develop a Citizen Science platform around three photographic collections from the archives of Cultural Anthropology Switzerland (CAS), formerly the Swiss Society for Folklore Studies, i.e. the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12). The research project is led by the University of Basel (Institute for Cultural Anthropology and European Ethnology as well as the Digital Humanities Lab) and the Bern Academy of the Arts (HKB). There is more information about the PIA research project and my involvement therein on a dedicated page. From Working Titles to Final Title The dissertation had a few titles: Current and final title of the dissertation: Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability Fifth working title of the dissertation: Linked Open Usable Data for Cultural Heritage: Perspectives on Semantics and Interoperability Fourth working title of the dissertation: Linked Open Usable Data for Citizen Science: Perspectives on Interoperability and Knowledge Representation through and beyond an Actor-Network Theory Lens Third working title of the dissertation: Deploying a Citizen Humanities infrastructure with Linked Open Usable Data (LOUD) standards: perspectives on Interoperability and Knowledge Representation Second working title of the dissertation: Web-based standards for Citizen Science initiatives in the cultural heritage domain: from data modelling to deploying an open infrastructure First working title of the dissertation: The role of open and interoperable standards in the dissemination of digital cultural heritage objects",
-      "date_published": "2024-02-10T00:00:00.000Z"
     },
     
     {
@@ -60,23 +60,7 @@
       "url": "https://phd.julsraemy.ch/s/loud/page/home/",
       "title": "",
       "content_html": "",
-      "date_published": "2024-02-29T10:56:40.895Z"
-    },
-    
-    {
-      "id": "https://phd.julsraemy.ch/s/loud/page/title/",
-      "url": "https://phd.julsraemy.ch/s/loud/page/title/",
-      "title": "",
-      "content_html": "",
-      "date_published": "2024-02-29T10:56:40.895Z"
-    },
-    
-    {
-      "id": "https://phd.julsraemy.ch/s/loud/page/summary/",
-      "url": "https://phd.julsraemy.ch/s/loud/page/summary/",
-      "title": "",
-      "content_html": "",
-      "date_published": "2024-02-29T10:56:40.895Z"
+      "date_published": "2024-02-29T12:12:44.427Z"
     },
     
     {
@@ -84,7 +68,31 @@
       "url": "https://phd.julsraemy.ch/s/loud/page/outputs/",
       "title": "",
       "content_html": "",
-      "date_published": "2024-02-29T10:56:40.895Z"
+      "date_published": "2024-02-29T12:12:44.427Z"
+    },
+    
+    {
+      "id": "https://phd.julsraemy.ch/s/loud/page/notebook/",
+      "url": "https://phd.julsraemy.ch/s/loud/page/notebook/",
+      "title": "",
+      "content_html": "",
+      "date_published": "2024-02-29T12:12:44.427Z"
+    },
+    
+    {
+      "id": "https://phd.julsraemy.ch/s/loud/page/summary/",
+      "url": "https://phd.julsraemy.ch/s/loud/page/summary/",
+      "title": "",
+      "content_html": "",
+      "date_published": "2024-02-29T12:12:44.427Z"
+    },
+    
+    {
+      "id": "https://phd.julsraemy.ch/s/loud/page/title/",
+      "url": "https://phd.julsraemy.ch/s/loud/page/title/",
+      "title": "",
+      "content_html": "",
+      "date_published": "2024-02-29T12:12:44.427Z"
     },
     
     {
@@ -92,7 +100,7 @@
       "url": "https://phd.julsraemy.ch/s/loud/page/toc/",
       "title": "",
       "content_html": "",
-      "date_published": "2024-02-29T10:56:40.899Z"
+      "date_published": "2024-02-29T12:12:44.427Z"
     }
     
   ]
