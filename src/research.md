@@ -64,9 +64,9 @@ Raemy, J. A. (2023). _Linked Art Modelling_ [Computer software]. https://doi.org
 
 A controlled vocabulary done in Simple Knowledge Organization System (SKOS), using [SkoHub Docker Vocabs](https://github.com/skohub-io/skohub-docker-vocabs), for the preferred terms used by the photographer Ernst Brunner. It is published at https://n2t.net/ark:/19156/tkt42.
 
-**PIA Data Model (Legacy)**
+**PIA Data Model**
 
-Demleitner, A., & Raemy, J. A. (2022). _PIA Data Model_ (0.3.1) [Computer software]. https://doi.org/10.5281/zenodo.5142605
+Demleitner, A., & Raemy, J. A. (2024). _PIA Data Model_ (0.9) [Computer software]. https://doi.org/10.5281/zenodo.5142605
 
 **PIA Linked Art Data Model**
 
