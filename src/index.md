@@ -21,7 +21,7 @@ My journey into the Digital Humanities Lab of the University of Basel began as a
 
 The thesis is grounded as part of the SNSF-funded Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) research project (2021-2025), a four-year interdisciplinary effort, which aims to develop a Citizen Science platform around three [photographic collections from the archives of Cultural Anthropology Switzerland](https://archiv.sgv-sstp.ch/) (CAS), formerly the _Swiss Society for Folklore Studies_, i.e. the Atlas of Swiss Folklore (SGV_05), Kreis Family (SGV_10), and Ernst Brunner (SGV_12). The research project is led by the University of Basel (Institute for Cultural Anthropology and European Ethnology as well as the Digital Humanities Lab) and the Bern Academy of the Arts (HKB).
 
-There is more information about the PIA research project and my involvement therein on [a dedicated page](pia.html).
+I was formally involved within the PIA project between February 2021 and March 2024 as an Assistant at the Digital Humanities Lab. Additionally, starting June 2021, I worked with a 20% position as an Interoperability Specialist at [DaSCH, Swiss National Data and Service Center for the Humanities](https://www.dasch.swiss/), a position that I held until December 2024. I continue to be involved in the project beyond March 2024, albeit solely through my PhD thesis, as I have started a new position as a Data Scientist at the [Swiss Federal Archives](https://www.bar.admin.ch). There is more information about the PIA research project and my involvement therein on [a dedicated page](pia.html).
 
 ## From Working Titles to Final Title
 
