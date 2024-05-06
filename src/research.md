@@ -3,7 +3,7 @@ layout: layout.njk
 title: "LOUD for Cultural Heritage – Research Outcomes"
 description: "Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
 keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
-date: "2024-03-18"
+date: "2024-05-06"
 schemaType: "WebPage"
 permalink: "/research.html"
 ---
@@ -44,7 +44,7 @@ As an integral part of both my doctoral research and active engagement in the PI
 
 ### Cultural Anthropology Switzerland (CAS) Data Model 
 
-CAS Data Model was redesigned for the database migration to the DaSCH Service Platform (DSP)
+CAS Data Model was redesigned for the database migration to the DaSCH Service Platform (DSP). Its JSON-LD representation is available at https://api.dasch.swiss/ontology/0812/ekws/v2. 
 
 ### IIIF Manifests Generation
 
