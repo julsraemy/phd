@@ -3,7 +3,7 @@ layout: layout.njk
 title: "LOUD for Cultural Heritage – Research Outcomes"
 description: "Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
 keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
-date: "2024-05-06"
+date: "2024-07-03"
 schemaType: "WebPage"
 permalink: "/research.html"
 ---
@@ -16,7 +16,8 @@ _The research outcomes related to the PhD are organised alphabetically by catego
 
 ## Book Chapter
 
-To be published
+Raemy, J. A., & Sanderson, R. (2024). Analysis of the Usability of Automatically Enriched Cultural Heritage Data. In F. Moral-Andrés, E. Merino-Gómez, & P. Reviriego (Eds.), _Decoding Cultural Heritage: A Critical Dissection and Taxonomy of Human Creativity through Digital Tools_ (pp. 69–93). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-57675-1_4
+
 
 ## Conference Papers
 
@@ -71,7 +72,6 @@ Demleitner, A., & Raemy, J. A. (2024). _PIA Data Model_ (0.9) [Computer software
 **PIA Linked Art Data Model**
 
 Raemy, J. A. (2022). _PIA Linked Art_ (Version 0.1.0) [Computer software]. https://github.com/Participatory-Image-Archives/linkedart
-
 
 ## Journal Article
 
