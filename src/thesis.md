@@ -8,7 +8,7 @@ sitemapPriority: "1.0"
 schemaType: "Thesis"
 place: "Basel, Switzerland"
 university: "University of Basel"
-date: "2024-07-20"
+date: "2024-08-05"
 doi: ""
 permalink: "/thesis.html"
 ---
@@ -19,8 +19,8 @@ PhD Thesis in Digital Humanities affiliated with the Graduate School of Social S
 
 PDF Version (e-dissertation) on the University of Basel's repository: (...)
 
-- Submitted on DD August 2024
-- Defence scheduled for November 2024
+- Submitted on 5 August 2024
+- Defence scheduled for 18 November 2024
 
 ##### Author 
 
