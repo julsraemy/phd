@@ -204,7 +204,7 @@ Exploring the specifics of the [Linked Art API](https://linked.art/api/1.0/), fo
 
 Linked Art prioritises ease of implementation, making it simple enough to deploy even with hand-crafted files, though automation is preferred for larger data volumes. A crucial aspect is ensuring consistency across representations, with each relationship contained within a single document to maintain clarity and coherence. The framework also emphasises the division of information, scaling from many to few - such as from a page to a book, and then to a collection - ensuring a clear hierarchy. The API’s identity and URI requirements are designed for simplicity. One-to-one relationships are embedded directly without needing separate URIs, making the data model more accessible. URIs for records are kept simple, with no internal structure, ensuring ease of use and navigation. This approach makes Linked Art an efficient tool for representing and managing cultural heritage data.
 
-In Linked Art, the division of the graph avoids duplication of definitions across records. Full URIs are used for references, simplifying client processing. Embedded structures do not carry URIs, preventing unnecessary complexity. The Linked Art API currently features eleven endpoints, which align with the conceptual model:
+In Linked Art, the division of the graph avoids duplication of definitions across records. Full URIs are used for references, simplifying client processing. Embedded structures do not carry URIs, preventing unnecessary complexity. The Linked Art API currently features [eleven endpoints](https://linked.art/api/1.0/endpoint/), which align with the conceptual model:
 
 - Concepts: Types, materials, languages, and others as full records rather than external references
 - Digital Objects: Images, services, and other digital objects
@@ -218,6 +218,7 @@ In Linked Art, the division of the graph avoids duplication of definitions acros
 - Textual Works: Distinct textual entities like book content or journal articles
 - Visual Works: Image content like paintings or drawings
 
+Each endpoint is supported by detailed documentation, including the required and permitted patterns, along with a corresponding [JSON schema](https://linked.art/api/1.0/schema_docs/).
 
 ## LOUD Ecosystem
 
