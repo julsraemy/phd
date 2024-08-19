@@ -16,10 +16,10 @@ _“Linked Open Usable Data (LOUD) for Cultural Heritage" not only encapsulates 
 An [HTML version of my thesis](thesis.html) will be accessible on this site upon its completion, while the [research outcomes](research.html) associated with my PhD can also be found here. If you just want to know more about [LOUD](loud.html), I've written a summary about its design principles and community-driven standards.
 
 ## Status
-🌱 Started (1 February 2021) <br/>
-💻 Research & Writing (February 2021 - July 2024) <br/>
-📄 Dissertation Submitted (5 August 2024)  <br/>
-**🎤 Oral Examination Scheduled (18 November 2024)**  <br/>
+🌱 Start of the PhD: 1 February 2021 <br/>
+💻 Research & Writing: February 2021 - July 2024 <br/>
+📄 Dissertation Submitted: 5 August 2024  <br/>
+**🎤 Oral Examination Scheduled: 18 November 2024**  <br/>
 🍾 Celebration <br/>
 🎓  Official Publication
 

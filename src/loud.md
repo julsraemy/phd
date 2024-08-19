@@ -3,7 +3,7 @@ layout: layout.njk
 title: "LOUD for Cultural Heritage – Linked Open Usable Data"
 description: "Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model."
 keywords: "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
-date: "2024-02-29"
+date: "2024-08-19"
 schemaType: "WebPage"
 permalink: "/loud.html"
 ---
@@ -13,8 +13,6 @@ permalink: "/loud.html"
 </style>
 
 # Linked Open Usable Data (LOUD)
-
-A summary page about LOUD, page in construction...
 
 The Semantic Web, with its use of Resource Description Framework (RDF) graphs, offers significant potential for data modelling and reasoning, but faces challenges in terms of query complexity, data handling, and visualisation. Despite these obstacles, the advent of JavaScript Object Notation for Linked Data (JSON-LD) represents a notable advance, providing a flexible data representation that addresses some of these issues by allowing dual treatment as both JSON and a graph.
 
@@ -54,7 +52,6 @@ Similar to Tim-Berners Lee's [Five Star Open Data Deployment Scheme](https://5st
 
 Developers do not need the same level of access to data as ontologists, in the same way that a driver does not need the same level of access to the inner workings of their car as a mechanic. Use cases and requirements should drive the interoperability layer between systems, not ontological purity.
 
-
 ### B. Few Barriers to entry
 
 It should be easy to get started with the data and build something. If it takes a long time to understand the model, ontology, sparql query syntax and so forth, then developers will look for easier targets. Conversely, if it is easy to start and incrementally improve, then more people will use the data.
@@ -72,28 +69,45 @@ You can never intuit all of the rules for the data. Documentation clarifies the 
 
 Every exception that you have in an API (and hence ontology) is another rule that the developer needs to learn in order to use the system. Every exception is jarring, and requires additional code to manage. While not everything is homogenous, a set of patterns that manage exceptions well is better than many custom fields.
 
-
 ## LOUD Standards
 
 Systems embodying LOUD principles include the International Image Interoperability Framework (IIIF), the Web Annotation Data Model, and Linked Art, demonstrating the ethos of making data more accessible, connected, and usable:
 
-- **International Image Interoperability Framework** (IIIF), especially the IIIF Presentation API 3.0 which describes how the structure and layout of a digital object can be made available in a standard manner, defining their appearance in viewers and players through the `Manifest`, a JSON-LD file bundling all elements of a IIIF resource with essential metadata and structural information.
-- **Web Annotation Data Model**: It offers a standardised framework for creating annotations on web resources, promoting semantic data integration and use across the web.
-- **Linked Art**: A community effort to define a metadata application profile and API for describing and interacting with cultural heritage resources.
+- **International Image Interoperability Framework** (IIIF), especially the [IIIF Presentation API 3.0](https://iiif.io/api/presentation/3.0/) which describes how the structure and layout of a digital object can be made available in a standard manner, defining their appearance in viewers and players through the `Manifest`, a JSON-LD file bundling all elements of a IIIF resource with essential metadata and structural information.
+- **Web Annotation Data Model**: It offers a [standardised framework](https://www.w3.org/TR/annotation-model/) for creating annotations on web resources, promoting semantic data integration and use across the web.
+- **Linked Art**: A community effort to define [a metadata application profile and API](https://linked.art) for describing and interacting with cultural heritage resources.
 
-IIIF and Linked Art are both community-driven initiatives.
-
-(...)
+IIIF and Linked Art are exemplary community-driven efforts, where ongoing engagement and collaboration within their respective communities ensure continuous development and updates. As for the Web Annotation Data Model, while it doesn't operate as an active community, it remains a recognised LOUD standard. In the event that updates are needed, a dedicated World Wide Web Consortium (W3C) working group would probably be re-established or revamped.
 
 ### IIIF
 
 [IIIF](https://iiif.io) is both a model for presenting and annotating content as well as a global community that develops shared application programming interfaces (APIs), implements them in software, and exposes interoperable content.
 
-Currently, IIIF has introduced [six specifications](https://iiif.io/api/), with the Image and Presentation APIs being the most notable, both updated to version 3 in June 2020 and often considered the core IIIF APIs. Additionally, the Content Search and Authorization Flow APIs, both at version 2 and released in 2022 and 2023 respectively, are expected to receive updates to match the core APIs' standards. The Change Discovery and Content State APIs, both in version 1.0, play essential roles in discovering, aggregating, and sharing IIIF resources.
+IIIF was initially established in 2011 as a community-based initiative that emerged from the convergence of two pivotal endeavours. One strand of this narrative revolved around the imperative to facilitate the seamless exchange of high-definition images over the internet. This aspiration arose as a practical solution to mitigate the proliferation of duplicated images required for distinct projects. The desire to avoid the necessity of sending substantial volumes of image data via conventional methods, such as mailing terabytes of data on hard drives, led to the contemplation of a web-based approach for sharing images that could break down silos. The second strand, interwoven with the first, emanated from the explorations and experiments surrounding the interoperability of digitised medieval manuscripts. The DMSTech group at Stanford, operational from 2010 to 2013, provided the fertile ground for these reflections. These deliberations ultimately led to the development of the Shared Canvas Data Model, which remains a foundational influence on the IIIF Presentation API to this day.
 
-Despite its strengths in facilitating the sharing and interoperability of digital objects, IIIF can sometimes appear disconnected, especially in contexts where discovery and linking to semantic data is not fully realised. However, this perceived disconnect provides an opportunity for improvement through the implementation of robust discovery mechanisms.
+As of August 2024, IIIF has introduced [six specifications](https://iiif.io/api/), with the Image and Presentation APIs being the most notable, both updated to version 3 in June 2020 and often considered the core IIIF APIs. Additionally, the Content Search and Authorization Flow APIs, both at version 2 and released in 2022 and 2023 respectively, are expected to receive updates to match the core APIs' standards. The Change Discovery and Content State APIs, both in version 1.0, play essential roles in discovering, aggregating, and sharing IIIF resources. 
 
-(...)
+The development of the IIIF specifications is firmly rooted in the [IIIF design principles](https://iiif.io/community/policy/design-principles/), which have influenced similar methodologies such as the LOUD design principles. These principles emphasise clear, practical goals aligned with shared use cases to meet the needs of developers effectively. By focusing on simplicity, minimal barriers to entry, and adherence to good web and Linked Data practices, these principles have been crucial in making the IIIF APIs both user-friendly and technically sound. They advocate for ease of implementation and internationalisation, promoting a flexible yet cohesive structure that naturally leads to usable and accessible data.
+
+### IIIF Image API
+
+The IIIF Image API is a RESTful web service that allows users to interact with images in a highly flexible manner. It facilitates the retrieval of images via standard HTTPS requests, effectively serving as an agreement between an image client and an image server to deliver image pixels. This API defines its own URI syntax, enabling users to interact with images in two primary modes: image requests and image information requests.
+
+In the **image request mode**, users can retrieve a specific image derived from the underlying content, with parameters that control the region, size, rotation, quality, and format of the returned image. This allows for advanced functionalities such as panning, deep zooming, and the sharing of specific regions of interest within an image. The **image information request mode** (`info.json`) provides details about the image service itself in JSON-LD, including the characteristics and available functionalities of the image service.
+
+### IIIF Presentation API
+
+The IIIF Presentation API's goal is to deliver structured and human-readable information about digital objects or collections, designed to drive remote viewing experiences. It is a JSON-LD-based framework for displaying minimal descriptive and legal metadata, focusing primarily on enhancing the user experience rather than providing semantic metadata for search engines. However, it does offer flexibility for IIIF adopters to incorporate structured metadata for discovery purposes through properties like `rdfs:seeAlso`.
+
+Loosely based on the Shared Canvas Data Model, the Presentation API organises content into four main resource types: Collection, Manifest, Canvas, and Range. Each of these serves a distinct function within the API’s framework, enabling a rich and interactive presentation of digital objects. Additionally, the API integrates types defined by the Web Annotation Data Model, such as `AnnotationCollection`, `AnnotationPage`, `Annotation`, and `Content`, further enhancing its capacity to deliver detailed and structured digital content.
+
+### Compatible software
+
+These APIs, central to the IIIF ecosystem, underscore the initiative's commitment to interoperability, flexibility, and a user-centric approach in the handling and presentation of digital images and their associated metadata. The widespread adoption of these APIs by numerous institutions around the world highlights their robustness and utility.
+
+The suite of IIIF-compliant software encompasses a diverse range of tools, each catering to specific aspects of the framework. Central to this suite are image servers, predominantly tailored to align with the IIIF Image API, such as [IIPImage](https://iipimage.sourceforge.io/), [Cantaloupe](https://cantaloupe-project.github.io/), or [SIPI](https://sipi.io/). Complementing these servers are image viewers, designed to be compatible with either the Image API alone, like [OpenSeadragon (OSD)](https://openseadragon.github.io/) and [Leaflet-IIIF](https://github.com/mejackreed/Leaflet-IIIF), or with both of the core IIIF APIs. With the release of version 3.0 of the Presentation API, A/V players have also been developed, which frequently comply with the Image API as well. Examples of known clients that support the Image and Presentation APIs 3.0 are [Mirador](https://projectmirador.org), the [Universal Viewer (UV)](https://universalviewer.io/), [Annona](https://ncsu-libraries.github.io/annona/multistoryboard/), [Clover](https://samvera-labs.github.io/clover-iiif/), and [Ramp](https://iiif-react-media-player.netlify.app/). As support and behaviour vary, a dedicated [IIIF 3.0 Viewer Matrix](https://iiif.io/api/cookbook/recipe/matrix/) was created.
+
+The embedded viewer below is [Mirador](https://projectmirador.org), a powerful IIIF-compliant client. Stanford University played a pivotal role in rebuilding it, marking a key milestone that exemplifies the spirit of community-driven effort within the IIIF initiative. This endeavour, which has since been placed in the hands of the community, was later augmented through a collaborative partnership with Harvard University Library. The cooperative dynamics and collective contributions fundamental to the success and advancement of IIIF are clearly reflected in the widespread adoption and continued development of Mirador.
 
 <div class="container">
 <iframe src="https://mirador-dev.netlify.app/__tests__/integration/mirador/" width="800" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" id="frame" allowfullscreen="">You need an iFrame capable browser to view this.</iframe>
@@ -101,7 +115,7 @@ Despite its strengths in facilitating the sharing and interoperability of digita
 
 ### Web Annotation Data Model
 
-The [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) is a World Wide Web Consortium (W3C) standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes the `annotation`, a web resource, the `body`, and the `target`. This model allows a single comment to be associated with multiple resources.
+The [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes key components such as the `annotation`, a web resource, the `body`, and the `target`. This model allows a single comment to be associated with multiple resources, enhancing the semantic integration of data across the web. The Web Annotation Working Group, which was chartered from August 2014 to October 2016 and extended to February 2017, played a pivotal role in developing and officially vetting this specification as a standard.
 
 Here is an example of machine-generated annotations in a IIIF setting. The JSON-LD snippet represents an `AnnotationPage` that contains one or more annotations related to a particular IIIF resource.
 
@@ -175,7 +189,7 @@ The `target` specifies where the annotation applies. In this setting, it points 
 | **Ontology**   | [RDF encoding of CRM 7.1](https://www.cidoc-crm.org/html/cidoc_crm_v7.1.2.html), plus extensions       |
 | **Vocabulary** | [Getty Vocabularies](https://www.getty.edu/research/tools/vocabularies/), mainly the Art & Architecture Thesaurus (AAT), as well as the Thesaurus of Geographic Names (TGN) and the Union List of Artist Names (ULAN) |
 | **Profile**    | Object-based cultural heritage (mainly art museum oriented)  |
-| **API**        | [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/), following REST (representational state transfer) and web patterns                         |
+| **API**        | [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/), following representational state transfer (REST) and web patterns                         |
 
 <figure>
   <img src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg" alt="Linked Art from 50k feet">
