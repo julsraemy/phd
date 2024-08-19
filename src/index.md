@@ -2,7 +2,7 @@
 layout: layout.njk
 title: "LOUD for Cultural Heritage"
 description: "A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
-keywords: "PhD Thesis in Digital Humanities, Digital Humanities Lab, Dissertation titles, Citizen Science, Sinergia, SNSF"
+keywords: "PhD Thesis in Digital Humanities, Digital Humanities Lab, Dissertation titles, Citizen Science, Sinergia, SNSF, Julien A. Raemy, Cultural Anthropology Switzerland, Participatory Knowledge Practices in Analogue and Digital Image Archives"
 sitemapPriority: "1.0"
 date: "2024-08-19"
 schemaType: "WebSite"
