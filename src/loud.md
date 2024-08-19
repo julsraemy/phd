@@ -181,7 +181,9 @@ The `target` specifies where the annotation applies. In this setting, it points 
 
 ### Linked Art
 
-[Linked Art](https://linked.art) is a community and a CIDOC ([ICOM International Committee for Documentation](https://cidoc.mini.icom.museum/)) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it.
+[Linked Art](https://linked.art) is a community and a CIDOC ([ICOM International Committee for Documentation](https://cidoc.mini.icom.museum/)) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it. It aims to solve problems from real data, is designed for usability and ease of implementation, which are prerequisites for sustainability.
+
+Linked Art presents a layered framework that distinguishes between the conceptual and implementation aspects. At its core, Linked Art is a [data model](https://linked.art/model/) or [metadata application profile](https://linked.art/model/profile/) that draws extensively from the RDF implementation of version 7.1.1 of CIDOC-CRM. The Getty Vocabularies are leveraged as core sources of identity for domain-specific terminology. JSON-LD 1.1 is chosen as the preferred serialisation format, promoting clarity and interoperability. This framework constructs common patterns, integrating conceptual models, ontologies, and vocabulary terms. These elements are derived from real-world scenarios and contributions from the diverse participants and institutions within the Linked Art community.
 
 | **Level**         | **Linked Art**                      |
 |----------------|---------------------------------|
@@ -191,12 +193,31 @@ The `target` specifies where the annotation applies. In this setting, it points 
 | **Profile**    | Object-based cultural heritage (mainly art museum oriented)  |
 | **API**        | [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/), following representational state transfer (REST) and web patterns                         |
 
+The Linked Art data model, in its domain-specific application, particularly resonates with five of these facets: "what," "where," "who," "how," and "when."
+
 <figure>
   <img src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg" alt="Linked Art from 50k feet">
   <figcaption>Linked Art from 50,000 feet</figcaption>
 </figure>
 
-(...)
+Exploring the specifics of the [Linked Art API](https://linked.art/api/1.0/), four key areas are highlighted: ease of implementation, consistency across representations, division of information, and URI requirements.
+
+Linked Art prioritises ease of implementation, making it simple enough to deploy even with hand-crafted files, though automation is preferred for larger data volumes. A crucial aspect is ensuring consistency across representations, with each relationship contained within a single document to maintain clarity and coherence. The framework also emphasises the division of information, scaling from many to few - such as from a page to a book, and then to a collection - ensuring a clear hierarchy. The API’s identity and URI requirements are designed for simplicity. One-to-one relationships are embedded directly without needing separate URIs, making the data model more accessible. URIs for records are kept simple, with no internal structure, ensuring ease of use and navigation. This approach makes Linked Art an efficient tool for representing and managing cultural heritage data.
+
+In Linked Art, the division of the graph avoids duplication of definitions across records. Full URIs are used for references, simplifying client processing. Embedded structures do not carry URIs, preventing unnecessary complexity. The Linked Art API currently features eleven endpoints, which align with the conceptual model:
+
+- Concepts: Types, materials, languages, and others as full records rather than external references
+- Digital Objects: Images, services, and other digital objects
+- Events: Related activities that are not part of other entities
+- Groups: Groups and organisations
+- People: Individuals
+- Physical Objects: Artworks, buildings, books, and other physical items
+- Places: Geographic locations
+- Provenance Activities: Events in the history of a physical item
+- Sets: Collections and exhibition sets
+- Textual Works: Distinct textual entities like book content or journal articles
+- Visual Works: Image content like paintings or drawings
+
 
 ## LOUD Ecosystem
 
