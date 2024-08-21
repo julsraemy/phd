@@ -3,7 +3,7 @@ layout: layout.njk
 title: "LOUD for Cultural Heritage – Research Outcomes"
 description: "Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
 keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
-date: "2024-07-03"
+date: "2024-08-21"
 schemaType: "WebPage"
 permalink: "/research.html"
 ---
@@ -63,7 +63,7 @@ Raemy, J. A. (2023). _Linked Art Modelling_ [Computer software]. https://doi.org
 
 **Ernst Brunner Thesaurus**
 
-A controlled vocabulary done in Simple Knowledge Organization System (SKOS), using [SkoHub Docker Vocabs](https://github.com/skohub-io/skohub-docker-vocabs), for the preferred terms used by the photographer Ernst Brunner. It is published at https://n2t.net/ark:/19156/tkt42.
+A controlled vocabulary done in Simple Knowledge Organization System (SKOS), using [SkoHub Docker Vocabs](https://github.com/skohub-io/skohub-docker-vocabs), for the preferred terms used by the photographer Ernst Brunner. It is published at https://n2t.net/ark:/19156/tkt42/.
 
 **PIA Data Model**
 
