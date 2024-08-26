@@ -96,7 +96,7 @@ LOUD should lead efforts to enhance the accessibility and usability of CH data. 
 
 (...)
 
-## Yale's LUX
+## Yale's LUX and LOUD Consistency
 
 (...)
 
