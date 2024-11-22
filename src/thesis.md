@@ -18,19 +18,16 @@ sitemapPriority: "1.0"
 schemaType: "Thesis"
 place: "Basel, Switzerland"
 university: "University of Basel"
-date: "2024-08-05"
+date: "2024-11-18"
 doi: ""
 permalink: "/thesis.html"
 ---
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
 
-PhD Thesis in Digital Humanities affiliated with the Graduate School of Social Sciences' (G3S) doctoral programme. 
+PhD in Digital Humanities, completed as part of the Graduate School of Social Sciences' (G3S) doctoral programme. The thesis was successfully defended on 18 November 2024, receiving an overall grade of _insigni cum laude_ (5.4 / 6).
 
 PDF Version (e-dissertation) on the University of Basel's repository: (...)
-
-- Submitted on 5 August 2024
-- Defence scheduled for 18 November 2024
 
 ##### Author 
 

@@ -4,7 +4,7 @@ title: "LOUD for Cultural Heritage"
 description: "A website about my PhD – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
 keywords: "PhD Thesis in Digital Humanities, Digital Humanities Lab, Dissertation titles, Citizen Science, Sinergia, SNSF, Julien A. Raemy, Cultural Anthropology Switzerland, Participatory Knowledge Practices in Analogue and Digital Image Archives"
 sitemapPriority: "1.0"
-date: "2024-08-19"
+date: "2024-11-22"
 schemaType: "WebSite"
 permalink: "/index.html"
 ---
@@ -19,9 +19,9 @@ An [HTML version of my thesis](thesis.html) will be accessible on this site upon
 🌱 Start of the PhD: 1 February 2021 <br/>
 💻 Research & Writing: February 2021 - July 2024 <br/>
 📄 Dissertation Submitted: 5 August 2024  <br/>
-**🎤 Oral Examination Scheduled: 18 November 2024**  <br/>
-🍾 Celebration <br/>
-🎓  Official Publication
+🎤 Oral Examination: 18 November 2024  <br/>
+🍾 **Celebration** <br/>
+🎓  Official Publication: TBD
 
 ## Context
 
