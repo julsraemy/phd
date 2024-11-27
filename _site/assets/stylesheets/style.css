@@ -132,6 +132,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
+
 #map {
     height: 400px; /* Fixed height or use vh for responsive height */
     width: 100%; /* Full width to make it responsive */
