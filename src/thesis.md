@@ -62,7 +62,6 @@ Key findings indicate that LOUD improves the discoverability and integration of 
 LOUD should lead efforts to enhance the accessibility and usability of CH data. The community-driven approaches of IIIF and Linked Art foster collaboration and transparency, making these standards essential tools in the ongoing evolution of data management. Even for projects and institutions that do not adopt these specifications, LOUD's socio-technical practices offer valuable insights into effective digital stewardship and community engagement strategies.
 
 
-
 **Keywords**: Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model
 
 ## Introduction
