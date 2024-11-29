@@ -13,7 +13,7 @@ permalink: "/index.html"
 
 _“Linked Open Usable Data (LOUD) for Cultural Heritage" not only encapsulates the essence of my PhD thesis, but also reflects a passion, as I have been actively involved in both the International Image Interoperability Framework (IIIF) and the Linked Art communities for many years. It describes a vision where cultural heritage institutions and beyond actively cultivate collaboration and enthusiastically embrace community-driven standards that enable semantic interoperability. In cases where implementation of the standards may not be feasible, I advocate that institutions consider adopting [LOUD design principles](https://linked.art/loud) as essential socio-technical practices._
 
-An [HTML version of my thesis](thesis.html) will be accessible on this site upon its completion (January/February 2025), while the [research outcomes](research.html) associated with my PhD can also be found here. If you just want to know more about [LOUD](loud.html), I've written a summary about its design principles and community-driven standards.
+An [HTML version of my thesis](thesis) will be accessible on this site upon its completion (January/February 2025), while the [research outcomes](research) associated with my PhD can also be found here. If you just want to know more about [LOUD](loud), I've written a summary about its design principles and community-driven standards.
 
 ## Status
 🌱 Start of the PhD: 1 February 2021 <br/>
