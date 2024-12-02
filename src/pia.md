@@ -5,7 +5,7 @@ description: "Participatory Knowledge Practices in Analogue and Digital Image Ar
 keywords: "Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts"
 date: "2024-02-29"
 schemaType: "WebPage"
-permalink: "/pia.html"
+permalink: "/pia"
 ---
 
 # Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)
