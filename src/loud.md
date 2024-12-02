@@ -5,7 +5,7 @@ description: "Linked Open Usable Data (LOUD), its design principles and its stan
 keywords: "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
 date: "2024-08-19"
 schemaType: "WebPage"
-permalink: "/loud"
+permalink: "/loud.html"
 ---
 
 <style type="text/css">

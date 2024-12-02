@@ -20,7 +20,7 @@ place: "Basel, Switzerland"
 university: "University of Basel"
 date: "2024-11-18"
 doi: ""
-permalink: "/thesis"
+permalink: "/thesis.html"
 ---
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability

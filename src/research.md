@@ -5,7 +5,7 @@ description: "Research Outcomes related to my PhD thesis titled Linked Open Usab
 keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
 date: "2024-08-21"
 schemaType: "WebPage"
-permalink: "/research"
+permalink: "/research.html"
 ---
 
 # Research Outcomes
