@@ -13,7 +13,7 @@
     <meta name="DC.creator" content="Raemy, Julien Antoine">
     <meta name="DC.date" content="2024-08-21">
     <meta name="DC.type" content="WebPage">
-    <meta name="DC.identifier" content="https://phd.julsraemy.ch/research.html">
+    <meta name="DC.identifier" content="https://phd.julsraemy.ch/research">
     <!-- Conditional DOI Identifier -->
     
     <meta name="DC.description" content="Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability">
@@ -29,18 +29,17 @@
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-<!-- jQuery (Only if needed for other scripts; Leaflet-IIIF does not require jQuery) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Leaflet-IIIF -->
-<script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
-
+    <!-- Leaflet-IIIF -->
+    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../data/apple-touch-icon.png">
@@ -60,8 +59,7 @@
     <link rel="me" href="https://www.researchgate.net/profile/Julien_Raemy">
 
     <!-- Schema.org -->
-
-        <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "WebPage",
@@ -71,15 +69,18 @@
             "givenName": "Julien Antoine",
             "familyName": "Raemy",
             "gender": "Male",
+            "nationality": "Swiss",
             "url": "https://julsraemy.ch",
-            "affiliation": [
+            "alumniOf": [
                 {
                 "@type": "EducationalOrganization",
                 "name": "University of Basel",
                 "location": "Basel, Switzerland",
                 "url": "https://www.unibas.ch/",
                 "sameAs": "https://ror.org/02s6k3f65"
-                },
+                }
+            ],
+            "affiliation": [
                 {
                 "@type": "ArchiveOrganization",
                 "name": "Swiss Federal Archives",
@@ -101,7 +102,6 @@
         "keywords": "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
     }
     </script>
-
 </head>
 <body>
     <nav>
@@ -114,11 +114,12 @@
             <li><a href="/pia">PIA</a></li>
         </ul>
     </nav>
-            <!-- Theme and Font Size Controls -->
-        <div id="controls">
-            <button id="font-increase">A+</button>
-            <button id="font-decrease">A-</button>
-        </div>
+
+    <!-- Theme and Font Size Controls -->
+    <div id="controls">
+        <button id="font-increase">A+</button>
+        <button id="font-decrease">A-</button>
+    </div>
     
     <header>
         <!-- Header content here -->
@@ -181,7 +182,7 @@
     </main>
     
     <footer>
-        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0 licence <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="60" /></a>
+        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="60" /></a>
     </footer>
     <script src="/js/accordion.js"></script>
     <script src="/js/line-numbers.js"></script>
@@ -193,7 +194,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-TNJQKJHNDF');
     </script>
 </body>

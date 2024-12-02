@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="Linked Open Usable Data, LOUD, IIIF, International Image Interoperability Framework, Linked Art, Web Annotation Data Model, W3C, Digital Humanities, Cultural Heritage, Linked Data, Semantic Interoperability, Community Practices, PhD, LUX: Yale Collections Discovery, University of Basel, Cultural Anthropology Switzerland, PIA, Participatory Knowledge Practices in Analogue and Digital Image Archives, ">
     <meta name="author" content="Julien A. Raemy">
-    <meta name="last-modified" content="2024-11-29T15:19:57.376Z">
+    <meta name="last-modified" content="2024-03-21T07:54:49.492Z">
 
     <!-- Dublin Core -->
     <meta name="DC.title" content="LOUD for Cultural Heritage – Page Not Found (404)">
@@ -29,18 +29,17 @@
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-<!-- jQuery (Only if needed for other scripts; Leaflet-IIIF does not require jQuery) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Leaflet-IIIF -->
-<script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
-
+    <!-- Leaflet-IIIF -->
+    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../data/apple-touch-icon.png">
@@ -60,8 +59,7 @@
     <link rel="me" href="https://www.researchgate.net/profile/Julien_Raemy">
 
     <!-- Schema.org -->
-
-        <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "",
@@ -71,15 +69,18 @@
             "givenName": "Julien Antoine",
             "familyName": "Raemy",
             "gender": "Male",
+            "nationality": "Swiss",
             "url": "https://julsraemy.ch",
-            "affiliation": [
+            "alumniOf": [
                 {
                 "@type": "EducationalOrganization",
                 "name": "University of Basel",
                 "location": "Basel, Switzerland",
                 "url": "https://www.unibas.ch/",
                 "sameAs": "https://ror.org/02s6k3f65"
-                },
+                }
+            ],
+            "affiliation": [
                 {
                 "@type": "ArchiveOrganization",
                 "name": "Swiss Federal Archives",
@@ -96,12 +97,11 @@
                 "https://www.linkedin.com/in/julienaraemy/"
             ]
         },
-        "datePublished": "Fri Nov 29 2024 15:19:57 GMT+0000 (Coordinated Universal Time)",
+        "datePublished": "Thu Mar 21 2024 08:54:49 GMT+0100 (Central European Standard Time)",
         "description": "",
         "keywords": ""
     }
     </script>
-
 </head>
 <body>
     <nav>
@@ -114,11 +114,12 @@
             <li><a href="/pia">PIA</a></li>
         </ul>
     </nav>
-            <!-- Theme and Font Size Controls -->
-        <div id="controls">
-            <button id="font-increase">A+</button>
-            <button id="font-decrease">A-</button>
-        </div>
+
+    <!-- Theme and Font Size Controls -->
+    <div id="controls">
+        <button id="font-increase">A+</button>
+        <button id="font-decrease">A-</button>
+    </div>
     
     <header>
         <!-- Header content here -->
@@ -132,7 +133,7 @@
 <ul>
 <li><a href="/">Go to the Homepage</a></li>
 <li>Get to know <a href="/loud">Linked Open Usable Data (LOUD)</a></li>
-<li>Check out my <a href="/thesis">PhD Thesis</a></li>
+<li>Check out my <a href="/thesis">PhD Thesis</a>: Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability</li>
 <li>Explore the <a href="/research">Research Outcomes</a></li>
 <li>Find out more about the <a href="/pia">Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)</a> research project</li>
 </ul>
@@ -140,7 +141,7 @@
     </main>
     
     <footer>
-        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> CC BY 4.0 licence <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="60" /></a>
+        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="60" /></a>
     </footer>
     <script src="/js/accordion.js"></script>
     <script src="/js/line-numbers.js"></script>
@@ -152,7 +153,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-TNJQKJHNDF');
     </script>
 </body>
