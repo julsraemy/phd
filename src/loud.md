@@ -3,7 +3,7 @@ layout: layout.njk
 title: "LOUD for Cultural Heritage – Linked Open Usable Data"
 description: "Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model."
 keywords: "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
-date: "2024-08-19"
+date: "2024-12-04"
 schemaType: "WebPage"
 permalink: "/loud.html"
 ---
@@ -183,12 +183,12 @@ The `target` specifies where the annotation applies. In this setting, it points 
 
 [Linked Art](https://linked.art) is a community and a CIDOC ([ICOM International Committee for Documentation](https://cidoc.mini.icom.museum/)) Working Group collaborating to define a metadata application profile for describing cultural heritage, and the technical means for conveniently interacting with it. It aims to solve problems from real data, is designed for usability and ease of implementation, which are prerequisites for sustainability.
 
-Linked Art presents a layered framework that distinguishes between the conceptual and implementation aspects. At its core, Linked Art is a [data model](https://linked.art/model/) or [metadata application profile](https://linked.art/model/profile/) that draws extensively from the RDF implementation of version 7.1.1 of CIDOC-CRM. The Getty Vocabularies are leveraged as core sources of identity for domain-specific terminology. JSON-LD 1.1 is chosen as the preferred serialisation format, promoting clarity and interoperability. This framework constructs common patterns, integrating conceptual models, ontologies, and vocabulary terms. These elements are derived from real-world scenarios and contributions from the diverse participants and institutions within the Linked Art community.
+Linked Art presents a layered framework that distinguishes between the conceptual and implementation aspects. At its core, Linked Art is a [data model](https://linked.art/model/) or [metadata application profile](https://linked.art/model/profile/) that draws extensively from the RDF implementation of version 7.1.3 of CIDOC-CRM. The Getty Vocabularies are leveraged as core sources of identity for domain-specific terminology. JSON-LD 1.1 is chosen as the preferred serialisation format, promoting clarity and interoperability. This framework constructs common patterns, integrating conceptual models, ontologies, and vocabulary terms. These elements are derived from real-world scenarios and contributions from the diverse participants and institutions within the Linked Art community.
 
 | **Level**         | **Linked Art**                      |
 |----------------|---------------------------------|
 | **Conceptual Model**      | [CIDOC Conceptual Reference Model](https://www.cidoc-crm.org/) (CRM)                       |
-| **Ontology**   | [RDF encoding of CRM 7.1](https://www.cidoc-crm.org/html/cidoc_crm_v7.1.2.html), plus extensions       |
+| **Ontology**   | [RDF encoding of CRM 7.1](https://www.cidoc-crm.org/html/cidoc_crm_v7.1.3.html), plus extensions       |
 | **Vocabulary** | [Getty Vocabularies](https://www.getty.edu/research/tools/vocabularies/), mainly the Art & Architecture Thesaurus (AAT), as well as the Thesaurus of Geographic Names (TGN) and the Union List of Artist Names (ULAN) |
 | **Profile**    | Object-based cultural heritage (mainly art museum oriented)  |
 | **API**        | [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/), following representational state transfer (REST) and web patterns                         |
