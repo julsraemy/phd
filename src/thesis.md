@@ -24,7 +24,7 @@ permalink: "/thesis.html"
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
 
-PhD in Digital Humanities, completed as part of the Graduate School of Social Sciences' (G3S) doctoral programme. The thesis was successfully defended on 18 November 2024, receiving an overall grade of _insigni cum laude_ (5.4 / 6).
+PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' (G3S) doctoral programme.
 
 PDF Version (e-dissertation) on the University of Basel's repository: (...)
 
