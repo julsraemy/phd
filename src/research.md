@@ -81,11 +81,11 @@ Cornut, M., Raemy, J. A., & Spiess, F. (2023). Annotations as Knowledge Practice
 
 ### Spring Semester 2024
 
-Within the PIA research project, we organised a lecture series during the spring semester 2024 where I gave a 2-hour presentation in one of the lessons: [70931-01 – Vorlesung: PIA. Partizipative Wissenspraktiken in analogen und digitalen Bildarchiven](https://vorlesungsverzeichnis.unibas.ch/de/home?id=282833)
+Within the PIA research project, we organised a lecture series during the spring semester 2024 where I gave a 2-hour presentation in one of the lessons: [70931-01 – Vorlesung: PIA. Partizipative Wissenspraktiken in analogen und digitalen Bildarchiven](https://vorlesungsverzeichnis.unibas.ch/de/vorlesungsverzeichnis?id=282833)
 
 ### Spring Semester 2023
 
-With Murielle Cornut, PhD Candidate in Cultural Anthropology at the time, we taught a 30-hour course during the spring semester 2023 at the University of Basel: [67853-01 - Practical course: Bist du sicher, dass du dieses Foto löschen möchtest? Private Fotopraxis im Archivkontext](https://vorlesungsverzeichnis.unibas.ch/de/recherche?id=274163)
+With Murielle Cornut, PhD Candidate in Cultural Anthropology at the time, we taught a 30-hour course during the spring semester 2023 at the University of Basel: [67853-01 - Practical course: Bist du sicher, dass du dieses Foto löschen möchtest? Private Fotopraxis im Archivkontext](https://vorlesungsverzeichnis.unibas.ch/de/vorlesungsverzeichnis?id=274163)
 
 ## (Meta)data Aggregation
 
