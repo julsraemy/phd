@@ -188,190 +188,44 @@ https://orcid.org/0000-0003-4441-6852
 <li><a href="#cha:conclusion">Conclusion</a></li>
 </ol>
 <h2 id="cha:intro" tabindex="-1">1. Introduction</h2>
-<p>Since its inception in 2011, the <abbr title="International Image Interoperability Framework">IIIF</abbr> has revolutionised<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> the accessibility
-of image-based resources. Initially driven by the needs of manuscript
-scholars, <abbr title="International Image Interoperability Framework">IIIF</abbr>
-focused on two-dimensional images, but has since expanded to encompass a
-wide range of image-based resources, including audiovisual materials
-and, in the near future, <abbr title="three-dimensional">3D</abbr> images. Similarly, Linked Art, formally
-established in 2017, initially concentrated on art museum objects but
-has since broadened its scope to model a variety of
-<abbr title="Cultural Heritage">CH</abbr> entities,
-leveraging <abbr title="CIDOC Conceptual Reference Model">CIDOC-CRM</abbr>, a renowned ontology in the museum and
-<abbr title="Digital Humanities">DH</abbr> space. Both
-initiatives aim to break down silos: <abbr title="International Image Interoperability Framework">IIIF</abbr> focuses on improving the presentation of
-digital objects, while both initiatives enhance their dissemination.
-Together, they make <abbr title="Cultural Heritage">CH</abbr> data more accessible through
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and more
-meaningful through Linked Art for machines. These efforts have primarily
-benefited the <abbr title="Cultural Heritage">CH</abbr>
-domain.</p>
-<p>A key commonality is that the main <abbr title="Application Programming Interface">API</abbr>s these communities create align with the
-<abbr title="Linked Open Usable Data">LOUD</abbr> design
-principles, either intentionally or empirically demonstrated through use
-cases. These principles enable software developers to develop compliant
-tools and services without needing to fully understand
-<abbr title="Resource Description Framework">RDF</abbr>, a syntax for
-representing information on the web. Additionally, they may not need to
-grasp all <abbr title="Linked Open Data">LOD</abbr>
-principles, which promote the interlinking of data from diverse datasets
-using tools like <abbr title="Knowledge Organisation Systems">KOS</abbr>
-such as thesauri. <abbr title="Web Annotation Data Model">WADM</abbr>, a <abbr title="World Wide Web Consortium">W3C</abbr> standard, is also recognised as a
-<abbr title="Linked Open Usable Data">LOUD</abbr> specification.
-It provides a framework for creating interoperable annotations on web
-resources, facilitating the linking and sharing of data across different
-platforms and applications. These <abbr title="Linked Open Usable Data">LOUD</abbr> design principles include the right
-abstraction for the audience, few barriers to entry, comprehensibility
-by introspection, documentation with working examples, and the use of
-many consistent patterns rather than few exceptions. Additionally, both
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked
-Art are driven by vibrant communities, mainly comprising
-<abbr title="Galleries, Libraries, Archives, and Museums">GLAM</abbr> and higher
-education institutions.</p>
-<p>While the standards and principles discussed have broad applications, it
-is important to clarify the scope of this dissertation. This work does
-not focus on <abbr title="Knowledge Graph">KG</abbr>s by
-assessing triplestores – databases specifically designed to store and
-retrieve triples, which are the fundamental data structures in
-<abbr title="Resource Description Framework">RDF</abbr>. Similarly, it
-does not deal with evaluating SPARQL engines, which are specifically designed
-to query <abbr title="Knowledge Graph">KG</abbr>s.
-Additionally, this dissertation does not address the intersection of
-<abbr title="Machine Learning">ML</abbr> and
-<abbr title="International Image Interoperability Framework">IIIF</abbr>, or the
-ontological reasoning of Linked Art.</p>
-<p>Instead, this dissertation concentrates on <abbr title="Linked Open Usable Data">LOUD</abbr>, the consistency of its standards, design
-principles and the vibrant communities behind it. It examines
-<abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr>
-serialisation efforts and the crucial intersection required to establish
-robust semantic interoperability baselines between presentation and
-semantic layers. It also presents real-world use case implementations,
-both on a small scale in a laboratory and flexible space within the
-<abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> research
-project, and on a large scale at Yale, exemplified by the LUX platform
-that provides access to (meta)data from <abbr title="Yale University Library">YUL</abbr>, <abbr title="Yale Center for British Art">YCBA</abbr>, <abbr title="Yale University Art Gallery">YUAG</abbr>, and <abbr title="Yale Peabody Museum of Natural History">YPM</abbr>.</p>
-<p>The focus is therefore on digital infrastructures capable of delivering
-<abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr> files
-from the above specifications, which are primarily, though not
-exclusively, <abbr title="Cultural Heritage">CH</abbr>
-resources. It is more about the different actors – both human and
-non-human – that create and maintain these interconnected systems and
-the dynamic interactions that sustain them. The deployment of various
-<abbr title="Linked Open Usable Data">LOUD</abbr>
-specifications addresses the need for semantic interoperability between
-<abbr title="Cultural Heritage">CH</abbr> resources and
-disparate datasets by establishing a standardised approach to
-representing and linking data, ensuring that information can be
-seamlessly shared and understood across different platforms and
-contexts.</p>
-<p>This dissertation seeks to carve out a distinct niche by addressing an
-often-overlooked aspect of <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art.
-<abbr title="International Image Interoperability Framework">IIIF</abbr> is sometimes
-perceived and studied merely as a service or an appendix, with the
-content it delivers taking precedence. However, this PhD thesis
-positions <abbr title="International Image Interoperability Framework">IIIF</abbr> as
-a first-class citizen worthy of in-depth study. Similarly, Linked Art,
-despite its potential and its relatively recent establishment, has been
-the subject of very few scholarly papers. This gap underscores the
-significance of <abbr title="Linked Open Usable Data">LOUD</abbr> in this context. Furthermore, this thesis
-elevates Linked Art to a position of primary importance, recognising its
-significance and advocating for its thorough examination. To thoroughly
-study <abbr title="Linked Open Usable Data">LOUD</abbr> and its
-adherence to design principles, it is essential to immerse ourselves
-actively in both communities – an approach I have embraced for years.
-The thesis also emphasises the importance of participatory efforts and
-collaboration between research projects, which typically have shorter
-lifespans, and memory institutions, which need to implement technical
-standards as a <em>lingua franca</em>. In doing so, it reveals the mediating
-role of <abbr title="Linked Open Usable Data">LOUD</abbr> in
-advancing the heritage sphere. To truly understand
-<abbr title="International Image Interoperability Framework">IIIF</abbr>, Linked Art,
-and to a lesser extent <abbr title="Web Annotation Data Model">WADM</abbr>, it is crucial to examine the social
-fabrics and consensus decision-making of each community. Among these
-considerations are how the specifications can be implemented
-pragmatically, and how the standards can support the implementation and
-maintenance of more extensive semantic interoperability efforts.</p>
-<p>The significance of this research lies in highlighting the commitment
-and diligence of the individuals and organisations that make up both the
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked
-Art communities. It aims to demonstrate that community-driven practices,
-such as those exemplified by <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art, have a potential that
-goes beyond the mere sharing of digital objects and their associated
-metadata. The more people who embrace these approaches and implement the
-associated specifications, the more society as a whole will benefit.
-Furthermore, this research illustrates that <abbr title="International Image Interoperability Framework">IIIF</abbr> is no longer limited to two-dimensional
-images, that Linked Art is not restricted to artworks, and that
-<abbr title="Web Annotation Data Model">WADM</abbr> is a simple,
-content-agnostic standard that can be easily integrated into a range of
-systems. This adaptability is a strength of <abbr title="Linked Open Usable Data">LOUD</abbr> standards, which are designed to be
-simple yet effective. <abbr title="Linked Open Usable Data">LOUD</abbr> can serve a variety of purposes,
-primarily rooted in <abbr title="Cultural Heritage">CH</abbr>, but with the potential to extend its
-benefits to other sectors. The true beauty of
-<abbr title="Linked Open Usable Data">LOUD</abbr> lies in its
-ability to foster networking opportunities and transparent
-socio-technical practices, demonstrating its value beyond mere technical
-implementation.</p>
-<p>By emphasising these aspects, this dissertation highlights the wider
-impact of <abbr title="Linked Open Usable Data">LOUD</abbr> in
-promoting semantic interoperability and enhancing collaborative efforts
-within the heritage field and beyond. In addition, the implementation of
-standards through <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> underlines the potential for similar
-participatory or citizen science projects, while the LUX initiative
-serves as an illustrative example of robust infrastructure and
-cross-unit engagement. These examples demonstrate the practical
-applications and far-reaching implications of adopting
-<abbr title="Linked Open Usable Data">LOUD</abbr> standards in
-different contexts.</p>
-<p>This dissertation is structured across ten chapters, each building upon
-the previous ones up to Chapter 5 to provide a comprehensive
-understanding of the research. These initial chapters lay the foundation
-of the study, establishing the context, theoretical framework, and
-methodological approaches. After this foundational section, Chapters 6,
-7, and 8 present empirical studies that, while interconnected, can be
-read independently if desired. These chapters offer detailed insights
-into specific aspects of the research and can be appreciated on their
-own or as part of the broader narrative.</p>
-<p>The thesis continues with <a href="#cha:context">Chapter 2</a>, which extends this introduction by providing
-more information about the research setting, specifically
-<abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>. <a href="#cha:literature">Chapter 3</a> follows with
-an extensive literature review, offering a comprehensive overview of
-methods to interlink <abbr title="Cultural Heritage">CH</abbr> data. Next, <a href="#cha:theoretical">Chapter 4</a> presents the theoretical
-framework, conceptualised as a toolbox and firmly rooted in
-<abbr title="Actor-Network Theory">ANT</abbr>, guiding the
-analysis and discussion throughout the dissertation. Following this, <a href="#cha:scope">Chapter 5</a>
-details the research scope and methodology, explaining the approaches
-and methods employed in the study.</p>
-<p>Moving on to the empirical work, <a href="#cha:social-fabrics">Chapter 6</a> sheds light on the social fabrics of
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked
-Art, exploring the communities and practices that underpin these
-initiatives.<a href="#cha:pia-laboratory">Chapter 7</a> then examines the implementation of
-<abbr title="Linked Open Usable Data">LOUD</abbr> standards
-within <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>,
-highlighting the practical aspects and challenges encountered. This is
-followed by <a href="#cha:lux-consistency">Chapter 8</a>, which focuses on the LUX initiative at Yale, examining the
-underlying governance and interdepartmental ownership of the Yale
-Collections Discovery platform. The discussion of findings is presented
-in <a href="#cha:discussion">Chapter 9</a>, where the results from the empirical chapters are synthesised and
-analysed in relation to the theoretical framework. Finally, <a href="#cha:conclusion">Chapter 10</a> concludes
+<p>Since its inception in 2011, the <abbr title="International Image Interoperability Framework">IIIF</abbr> has revolutionised<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> the accessibility of image-based resources. Initially driven by the needs of manuscript scholars, <abbr title="International Image Interoperability Framework">IIIF</abbr> focused on two-dimensional images, but has since expanded to encompass a wide range of image-based resources, including audiovisual materials and, in the near future, <abbr title="three-dimensional">3D</abbr> images. Similarly, Linked Art, formally established in 2017, initially concentrated on art museum objects but has since broadened its scope to model a variety of <abbr title="Cultural Heritage">CH</abbr> entities, leveraging <abbr title="CIDOC Conceptual Reference Model">CIDOC-CRM</abbr>, a renowned ontology in the museum and <abbr title="Digital Humanities">DH</abbr> space. Both initiatives aim to break down silos: <abbr title="International Image Interoperability Framework">IIIF</abbr> focuses on improving the presentation of digital objects, while both initiatives enhance their dissemination. Together, they make <abbr title="Cultural Heritage">CH</abbr> data more accessible through <abbr title="International Image Interoperability Framework">IIIF</abbr> and more meaningful through Linked Art for machines. These efforts have primarily benefited the <abbr title="Cultural Heritage">CH</abbr> domain.</p>
+<p>A key commonality is that the main <abbr title="Application Programming Interface">API</abbr>s these communities create align with the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles, either intentionally or empirically demonstrated through use cases. These principles enable software developers to develop compliant tools and services without needing to fully understand <abbr title="Resource Description Framework">RDF</abbr>, a syntax for representing information on the web. Additionally, they may not need to grasp all <abbr title="Linked Open Data">LOD</abbr> principles, which promote the interlinking of data from diverse datasets using tools like <abbr title="Knowledge Organisation Systems">KOS</abbr> such as thesauri. <abbr title="Web Annotation Data Model">WADM</abbr>, a <abbr title="World Wide Web Consortium">W3C</abbr> standard, is also recognised as a <abbr title="Linked Open Usable Data">LOUD</abbr> specification. It provides a framework for creating interoperable annotations on web resources, facilitating the linking and sharing of data across different platforms and applications. These <abbr title="Linked Open Usable Data">LOUD</abbr> design principles include the right abstraction for the audience, few barriers to entry, comprehensibility by introspection, documentation with working examples, and the use of many consistent patterns rather than few exceptions. Additionally, both <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art are driven by vibrant communities, mainly comprising <abbr title="Galleries, Libraries, Archives, and Museums">GLAM</abbr> and higher education institutions.</p>
+<p>While the standards and principles discussed have broad applications, it is important to clarify the scope of this dissertation. This work does not focus on <abbr title="Knowledge Graph">KG</abbr>s by assessing triplestores – databases specifically designed to store and retrieve triples, which are the fundamental data structures in <abbr title="Resource Description Framework">RDF</abbr>. Similarly, it does not deal with evaluating SPARQL engines, which are specifically designed to query <abbr title="Knowledge Graph">KG</abbr>s. Additionally, this dissertation does not address the intersection of <abbr title="Machine Learning">ML</abbr> and <abbr title="International Image Interoperability Framework">IIIF</abbr>, or the ontological reasoning of Linked Art.</p>
+<p>Instead, this dissertation concentrates on <abbr title="Linked Open Usable Data">LOUD</abbr>, the consistency of its standards, design principles and the vibrant communities behind it. It examines <abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr> serialisation efforts and the crucial intersection required to establish robust semantic interoperability baselines between presentation and semantic layers. It also presents real-world use case implementations, both on a small scale in a laboratory and flexible space within the <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> research project, and on a large scale at Yale, exemplified by the LUX platform that provides access to (meta)data from <abbr title="Yale University Library">YUL</abbr>, <abbr title="Yale Center for British Art">YCBA</abbr>, <abbr title="Yale University Art Gallery">YUAG</abbr>, and <abbr title="Yale Peabody Museum of Natural History">YPM</abbr>.</p>
+<p>The focus is therefore on digital infrastructures capable of delivering <abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr> files from the above specifications, which are primarily, though not exclusively, <abbr title="Cultural Heritage">CH</abbr> resources. It is more about the different actors – both human and non-human – that create and maintain these interconnected systems and the dynamic interactions that sustain them. The deployment of various <abbr title="Linked Open Usable Data">LOUD</abbr> specifications addresses the need for semantic interoperability between <abbr title="Cultural Heritage">CH</abbr> resources and disparate datasets by establishing a standardised approach to representing and linking data, ensuring that information can be seamlessly shared and understood across different platforms and contexts.</p>
+<p>This dissertation seeks to carve out a distinct niche by addressing an often-overlooked aspect of <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art. <abbr title="International Image Interoperability Framework">IIIF</abbr> is sometimes perceived and studied merely as a service or an appendix, with the content it delivers taking precedence. However, this PhD thesis positions <abbr title="International Image Interoperability Framework">IIIF</abbr> as a first-class citizen worthy of in-depth study. Similarly, Linked Art, despite its potential and its relatively recent establishment, has been the subject of very few scholarly papers. This gap underscores the significance of <abbr title="Linked Open Usable Data">LOUD</abbr> in this context. Furthermore, this thesis elevates Linked Art to a position of primary importance, recognising its significance and advocating for its thorough examination. To thoroughly study <abbr title="Linked Open Usable Data">LOUD</abbr> and its adherence to design principles, it is essential to immerse ourselves actively in both communities – an approach I have embraced for years. The thesis also emphasises the importance of participatory efforts and collaboration between research projects, which typically have shorter lifespans, and memory institutions, which need to implement technical standards as a <em>lingua franca</em>. In doing so, it reveals the mediating role of <abbr title="Linked Open Usable Data">LOUD</abbr> in advancing the heritage sphere. To truly understand <abbr title="International Image Interoperability Framework">IIIF</abbr>, Linked Art, and to a lesser extent <abbr title="Web Annotation Data Model">WADM</abbr>, it is crucial to examine the social fabrics and consensus decision-making of each community. Among these considerations are how the specifications can be implemented pragmatically, and how the standards can support the implementation and maintenance of more extensive semantic interoperability efforts.</p>
+<p>The significance of this research lies in highlighting the commitment and diligence of the individuals and organisations that make up both the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities. It aims to demonstrate that community-driven practices, such as those exemplified by <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art, have a potential that goes beyond the mere sharing of digital objects and their associated metadata. The more people who embrace these approaches and implement the associated specifications, the more society as a whole will benefit. Furthermore, this research illustrates that <abbr title="International Image Interoperability Framework">IIIF</abbr> is no longer limited to two-dimensional images, that Linked Art is not restricted to artworks, and that <abbr title="Web Annotation Data Model">WADM</abbr> is a simple, content-agnostic standard that can be easily integrated into a range of systems. This adaptability is a strength of <abbr title="Linked Open Usable Data">LOUD</abbr> standards, which are designed to be simple yet effective. <abbr title="Linked Open Usable Data">LOUD</abbr> can serve a variety of purposes, primarily rooted in <abbr title="Cultural Heritage">CH</abbr>, but with the potential to extend its benefits to other sectors. The true beauty of <abbr title="Linked Open Usable Data">LOUD</abbr> lies in its ability to foster networking opportunities and transparent socio-technical practices, demonstrating its value beyond mere technical implementation.</p>
+<p>By emphasising these aspects, this dissertation highlights the wider impact of <abbr title="Linked Open Usable Data">LOUD</abbr> in promoting semantic interoperability and enhancing collaborative efforts within the heritage field and beyond. In addition, the implementation of standards through <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> underlines the potential for similar participatory or citizen science projects, while the LUX initiative serves as an illustrative example of robust infrastructure and cross-unit engagement. These examples demonstrate the practical applications and far-reaching implications of adopting <abbr title="Linked Open Usable Data">LOUD</abbr> standards in different contexts.</p>
+<p>This dissertation is structured across ten chapters, each building upon the previous ones up to Chapter 5 to provide a comprehensive understanding of the research. These initial chapters lay the foundation of the study, establishing the context, theoretical framework, and methodological approaches. After this foundational section, Chapters 6, 7, and 8 present empirical studies that, while interconnected, can be read independently if desired. These chapters offer detailed insights into specific aspects of the research and can be appreciated on their own or as part of the broader narrative.</p>
+<p>The thesis continues with <a href="#cha:context">Chapter 2</a>, which extends this introduction by providing more information about the research setting, specifically <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>. <a href="#cha:literature">Chapter 3</a> follows with an extensive literature review, offering a comprehensive overview of methods to interlink <abbr title="Cultural Heritage">CH</abbr> data. Next, <a href="#cha:theoretical">Chapter 4</a> presents the theoretical framework, conceptualised as a toolbox and firmly rooted in <abbr title="Actor-Network Theory">ANT</abbr>, guiding the analysis and discussion throughout the dissertation. Following this, <a href="#cha:scope">Chapter 5</a> details the research scope and methodology, explaining the approaches and methods employed in the study.</p>
+<p>Moving on to the empirical work, <a href="#cha:social-fabrics">Chapter 6</a> sheds light on the social fabrics of <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art, exploring the communities and practices that underpin these initiatives.<a href="#cha:pia-laboratory">Chapter 7</a> then examines the implementation of <abbr title="Linked Open Usable Data">LOUD</abbr> standards
+within <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>, highlighting the practical aspects and challenges encountered. This is followed by <a href="#cha:lux-consistency">Chapter 8</a>, which focuses on the LUX initiative at Yale, examining the underlying governance and interdepartmental ownership of the Yale Collections Discovery platform. The discussion of findings is presented in <a href="#cha:discussion">Chapter 9</a>, where the results from the empirical chapters are synthesised and analysed in relation to the theoretical framework. Finally, <a href="#cha:conclusion">Chapter 10</a> concludes
 the thesis, summarising the key insights and contributions of the
 research while outlining potential directions for future study.</p>
-<h2 id="cha:context" tabindex="-1">Context</h2>
+<h2 id="cha:context" tabindex="-1">2. Context</h2>
+<p>In this chapter, I will set the stage for my PhD thesis by providing important background information. First, in , I will explain why I chose the title for my thesis. This will give you an understanding of the main focus and the direction of my research. Next, in , I will describe the <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> research project, which is central to my work. This section will cover the project’s goals, significance, and overall framework. In , I will detail my specific contributions to the <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> project. I will emphasise how my work fits into the larger project and its importance to my thesis. Finally, in , I will talk about my active participation in the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities. This section will highlight how my involvement in these communities has influenced my research and its broader implications.</p>
+<h3 id="2.1-phd-title" tabindex="-1">2.1 PhD Title</h3>
+<p>I chose the title as it encapsulates the essence of my research focus but I could have indeed chosen other ones.</p>
+<p>During the initial stages of my research, multiple working titles were explored to capture the diverse facets of my interests and objectives. If I was quite sure about having in the title after the third iteration, I was quite unsure of what should follow and if a subtitle was actually needed at all. Amidst this dynamic progression, the underlying theme of my research remained steadfast – to delve into the transformative potential of <abbr title="Linked Open Usable Data">LOUD</abbr> for <abbr title="Cultural Heritage">CH</abbr>.</p>
+<p>I also opted to maintain in the title of my thesis subsection. While holds its appeal, my choice reflects a broader narrative that acknowledges the crucial role of <abbr title="Cultural Heritage Institution">CHI</abbr>s and spotlighting the multifaceted nature of heritage preservation, encapsulating both its digital facets and the essential contribution of individuals and institutions in curating, interpreting, and making heritage accessible.</p>
+<p>As for the subtitle, while I do explore <abbr title="Communites of Practice">CoP</abbr> as defined by (Lave &amp; Wenger, 1991) and (Wenger, 2011) through investigating the social fabrics of the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities, my main interest lies in the broader application of <abbr title="Linked Open Usable Data">LOUD</abbr> for describing and interlinking <abbr title="Cultural Heritage">CH</abbr> resources. Thus, I decided to opt for the more generic as the first axis or perspective.</p>
+<p>For the second perspective, I wanted to see how semantic interoperability can be achieved through standards adhering to the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles, as they seem to be key enablers for seamless collaboration and knowledge exchange among practitioners. There was a time in my research when I envisaged decoupling and , perceiving them as two distinct dimensions. However, what really captivates me is the unification of these factors to facilitate collective reasoning for both humans and machines.</p>
+<p>In summary, this title reflects my enthusiasm for using web-based and community-driven technologies to transform the way we understand, share and value <abbr title="Cultural Heritage">CH</abbr>.</p>
+<h2 id="cha:literature" tabindex="-1">3. Interlinking Cultural Heritage Data</h2>
 <p>(…)</p>
-<h2 id="cha:literature" tabindex="-1">Interlinking Cultural Heritage Data</h2>
+<h2 id="cha:theoretical" tabindex="-1">4. Exploring Relationships through an Actor-Network Theory Lens</h2>
 <p>(…)</p>
-<h2 id="cha:theoretical" tabindex="-1">Exploring Relationships through an Actor-Network Theory Lens</h2>
+<h2 id="cha:scope" tabindex="-1">5. Research Scope and Methodology</h2>
 <p>(…)</p>
-<h2 id="cha:scope" tabindex="-1">Research Scope and Methodology</h2>
+<h2 id="cha:social-fabrics" tabindex="-1">6. The Social Fabrics of IIIF and Linked Art</h2>
 <p>(…)</p>
-<h2 id="cha:social-fabrics" tabindex="-1">The Social Fabrics of IIIF and Linked Art</h2>
+<h2 id="cha:pia-laboratory" tabindex="-1">7. PIA as a Laboratory</h2>
 <p>(…)</p>
-<h2 id="cha:pia-laboratory" tabindex="-1">PIA as a Laboratory</h2>
+<h2 id="cha:lux-consistency" tabindex="-1">8. Yale’s LUX and LOUD Consistency</h2>
 <p>(…)</p>
-<h2 id="cha:lux-consistency" tabindex="-1">Yale’s LUX and LOUD Consistency</h2>
+<h2 id="cha:discussion" tabindex="-1">9. Discussion</h2>
 <p>(…)</p>
-<h2 id="cha:discussion" tabindex="-1">Discussion</h2>
-<p>(…)</p>
-<h2 id="cha:conclusion" tabindex="-1">Conclusion</h2>
+<h2 id="cha:conclusion" tabindex="-1">10. Conclusion</h2>
 <blockquote>
 <p>For a better understanding of the past, <br>
 Our images have to be enhanced, <br>
@@ -384,234 +238,20 @@ And a multitude of answers, <br>
 Simply awaiting to be found. <br>
 (Mr Gee, 2023)</p>
 </blockquote>
-<p>This chapter brings to a close the journey undertaken since February
-2021, aiming to clearly articulate the answers to the research
-questions, discuss how the research aligns with the objectives,
-elucidate the significance of the work, outline its shortcomings, and
-suggest avenues for future research.</p>
-<p>I had the privilege of hearing the above poem at EuropeanaTech in The
-Hague in October 2023. What struck me most, and what I have tried to
-convey in this thesis, was the powerful dialogue and collective spirit
-striving to harness the potential of our (digital) heritage. With a
-sense of conviction after this conference, I approached the next one in
-Geneva in February 2024 with confidence, believing that I had made a
-compelling case for the concept of <abbr title="Linked Open Usable Data">LOUD</abbr>. When a participant asked how
-<abbr title="Linked Open Usable Data">LOUD</abbr> differed from
-Linked Data, however, I found myself explaining the socio-technical
-ethos of <abbr title="International Image Interoperability Framework">IIIF</abbr> and
-Linked Art, the richness of the individuals who make them up, the
-ability to combine these different standards, and the common use cases
-that emerge from these collaborations. Whether my answer was convincing
-remains uncertain, but I knew it was too brief. Perhaps it is here, in
-this conclusion, that my thoughts can find their full expression.</p>
-<p>I believe that <abbr title="Linked Open Usable Data">LOUD</abbr> should be at the forefront of efforts to
-improve the accessibility and usability of <abbr title="Cultural Heritage">CH</abbr> data, an endeavour that is increasingly
-relevant in a web-centric environment. This paradigm has gained
-considerable traction, particularly with the advent of Linked Art and
-the recognition that the <abbr title="International Image Interoperability Framework">IIIF</abbr> Presentation <abbr title="Application Programming Interface">API</abbr> has been an inspiration for the
-<abbr title="Linked Open Usable Data">LOUD</abbr> design
-principles. The development and maintenance of
-<abbr title="Linked Open Usable Data">LOUD</abbr> standards by
-dedicated communities are characterised by collaboration, consensus
-building, and transparency. In the interstices of the
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked
-Art communities, frameworks for interoperability are not only exposed,
-but revealed as profound testaments to the power of transparent
-collaboration across institutional boundaries. Both communities, it is
-true, are still very much Anglo-Saxon efforts, where the specifications
-have mainly been implemented in <abbr title="Galleries, Libraries, Archives, and Museums">GLAM</abbr> and/or <abbr title="Digital Humanities">DH</abbr> research projects, or at least when we
-have been aware of them. It has clear guidelines on how to propose use
-cases, mostly using GitHub, and hides the sometimes unnecessary
-<abbr title="Resource Description Framework">RDF</abbr> complexity
-behind a set of <abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr> <code>@ context</code>. <abbr title="International Image Interoperability Framework">IIIF</abbr> is at the presentation layer and can
-really play its role as a mediator, with the Manifest as its central
-unit connecting other specifications, including semantic metadata, and
-preferably with simpatico specifications such as Linked Art.</p>
-<p>An important hypothesis arises from the observation that adherence to
-the <abbr title="Linked Open Usable Data">LOUD</abbr> design
-principles makes specifications more likely to be adopted. The primary
-benefit of adopting <abbr title="Linked Open Usable Data">LOUD</abbr> standards lies in their grassroots
-nature. This grassroots approach not only aligns with the core values of
-openness and collaboration within the <abbr title="Digital Humanities">DH</abbr> community but also serves as a common
-denominator between <abbr title="Digital Humanities">DH</abbr> practitioners and
-<abbr title="Cultural Heritage Institution">CHI</abbr>s. This unique
-alignment fosters a sense of shared purpose and common ground. However,
-it’s essential to acknowledge that while <abbr title="Linked Open Usable Data">LOUD</abbr> and its associated standards, including
-IIIF, hold immense promise, their limited recognition in the wider
-socio-technical ecosystem may currently hinder their full potential
-impact beyond the <abbr title="Cultural Heritage">CH</abbr>
-domain.</p>
-<p>Consideration of socio-technical requirements and the promotion of
-digital equity are essential to the development of specifications in
-line with the <abbr title="Linked Open Usable Data">LOUD</abbr>
-design principles. In the context of the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities, this means
-both recognising current challenges and building on existing practices.
-This includes forming alliances that support diverse forms of inclusion
-at both project and individual levels. For example, organisations should
-be encouraged to send representatives from diverse professional and
-personal backgrounds, such as underrepresented groups or non-technical
-fields. This can be facilitated by initiatives that lower the barriers
-to participation, such as financial support for travel and
-participation, flexible participation formats, and targeted outreach
-efforts. Furthermore, as these standards often align with open
-government data initiatives, they present opportunities for broader
-public engagement and institutional transparency.</p>
-<p>In the broader context of <abbr title="Digital Humanities">DH</abbr>, understanding
-<abbr title="Linked Open Usable Data">LOUD</abbr> involves
-tracing the historical development of the field and its evolving
-relationship with technology. The interdisciplinary nature of
-<abbr title="Digital Humanities">DH</abbr> has always
-integrated diverse scholarly and technical practices. In recent years,
-<abbr title="Digital Humanities">DH</abbr> has seen a
-notable increase in interest in the use of Linked Data and semantic
-technologies to improve the discoverability and accessibility of
-<abbr title="Cultural Heritage">CH</abbr> collections.
-<abbr title="Linked Open Usable Data">LOUD</abbr>'s emphasis on
-user-centred design and usability aligns well with these goals.
-Consequently, the principles of <abbr title="Linked Open Usable Data">LOUD</abbr> hold great promise for advancing the
-integration and use of community-driven <abbr title="Application Programming Interface">API</abbr>s and/or Linked Data within
-<abbr title="Digital Humanities">DH</abbr>. This can be seen
-within <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>, where
-the benefits of implementing <abbr title="International Image Interoperability Framework">IIIF</abbr> helped us to streamline machine-generated
-annotations, integrate different thumbnails into
-<abbr title="Graphical user interface">GUI</abbr> prototypes,
-model photo albums with different layers from the Kreis Family
-collection, and enable project members and students to engage in digital
-storytelling, an important participatory facet that can be seamlessly
-explored by <abbr title="Digital Humanities">DH</abbr>
-efforts and <abbr title="Cultural Heritage Institution">CHI</abbr>s with
-the help of the <abbr title="International Image Interoperability Framework">IIIF</abbr> Image and Presentation
-<abbr title="Application Programming Interface">API</abbr>s. Data reuse is
-definitely a key <abbr title="Linked Open Usable Data">LOUD</abbr> driver, which could have been done more
-extensively with a productive instance of Linked Art. As for widening
-participation, this is definitely a strategic and political decision,
-rather than a technical one. That said, <abbr title="Linked Open Usable Data">LOUD</abbr> specifications can definitely be embedded
-through strategic citizen science initiatives.</p>
-<p>A recent example that highlights the comprehensive value of Linked Data
-was presented by (Newbury, 2024) at the <abbr title="Coalition for Networked Information">CNI</abbr> Spring 2024 Meeting. He delineated its
-significance as extending well beyond single entities, such as the Getty
-Research Institute, to enrich a vast ecosystem. Specifically, he
-identified three principal areas of value: Firstly, within the ecosystem
-itself, where the utility of information is amplified through its
-application in diverse contexts. Secondly, for the audience, by directly
-addressing user needs and facilitating various conceptual frameworks.
-And finally, within the community, by enabling wider use and adaptation
-of data and code. This approach to Linked Data, as articulated by
-Newbury, not only enhances its utility across these dimensions, but also
-aligns seamlessly with the <abbr title="Linked Open Usable Data">LOUD</abbr> proposition, underscoring a shared vision
-for a digital space where the interconnectedness and accessibility of
-(meta)data serve as foundational principles for progress and community
-engagement.</p>
-<p>LUX, as a catalyst for <abbr title="Linked Open Usable Data">LOUD</abbr>, exemplifies a practical approach to
-implementing Linked Data that has garnered significant local engagement
-and support at Yale. This initiative demonstrates how sound
-socio-technical practices can be effectively applied within a supportive
-institutional environment. The consistency of the data within LUX aligns
-well with <abbr title="International Image Interoperability Framework">IIIF</abbr> and
-Linked Art standards, with only a few minor adjustments required for
-full compliance. These quick fixes are manageable and do not detract
-from the overall robustness of the initiative. While it may be too early
-to fully assess the wider impact of using <abbr title="Linked Open Usable Data">LOUD</abbr> specifications on the LUX platform within
-the <abbr title="Cultural Heritage">CH</abbr> domain, the
-initiative has already attracted considerable interest in recent months.
-This growing attention suggests that the LUX approach is resonating with
-other organisations, suggesting the potential for wider adoption and
-impact. The enthusiastic local engagement at Yale provides a strong
-foundation for LUX and highlights its potential to serve as a model for
-similar projects aimed at enriching digital heritage through effective
-collaboration and agreed-upon standards.</p>
-<p>In carrying out this thesis, I have adhered to the five main objectives
-set out at the beginning of the PhD. These objectives have been
-accomplished to a high degree, reflecting a substantial and
-well-executed project. Furthermore, most of the outputs – such as data
-models and scripts – from this work are available on GitHub, providing
-open access to the wider community. In addition, I have published
-several papers, both individually and collaboratively, further
-disseminating the findings and contributions of this research.</p>
-<p>Additionally, this thesis is relevant because it sheds light on
-communities and implementations that can be celebrated not only for
-their standards but also for their operating ethos;
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked
-Art present models ripe for emulation beyond their immediate digital
-confines. Here, agency and authority are most typically granted to the
-collective over the isolated, with each actor - be it an individual, an
-institution or an interface – intricately interconnected. Yale’s LUX
-initiative also embodies this ethos, demonstrating how collaborative
-efforts can lead to innovative solutions and wider impact. It is to be
-hoped, then, that these practices of openness and multiple partnerships
-will not be seen as limited to their origins in digital representation.
-At the very least, I hope that these socio-technical approaches can
-serve as exemplars or sources of inspiration in broader arenas, where
-the principles of mutual visibility and concerted action can point the
-way towards cohesive and adaptive collaborative architectures.</p>
-<p>Despite its contribution, this thesis is far from perfect and certainly
-contains several shortcomings. I will name here three significant ones.
-First, the visualisations included and the use of
-<abbr title="First-order logic">FOL</abbr> are primarily
-designed to support my own self-reflection and may be more beneficial to
-me than to the broader academic community. While they provide insights
-into my research process and findings, their applicability and
-usefulness to others might be limited. Second, the theoretical framework
-I employed, while instrumental to my research, may not serve as a
-universally applicable toolbox. Nevertheless, I urge readers to pay
-close attention to <abbr title="Science and Technology Studies">STS</abbr> methodologies and practices. The works of
-Bruno Latour, Donna Haraway, and Susan Leigh Star have been invaluable
-companions throughout this dissertation. Additionally, for those
-involved in conceptualising semantic information, I recommend exploring
-Floridi’s <abbr title="Philosophy of Information">PI</abbr>, which
-offers profound insights into the nature and dynamics of information.
-These readings have greatly influenced my approach and understanding,
-and I believe they can offer valuable perspectives to others as well.
-Third, while the thesis aims to address both community practices and
-semantic interoperability, it leans more heavily towards the former.
-This emphasis on community practices may overshadow the broader
-discussion of semantic interoperability, potentially limiting the appeal
-of the thesis to those primarily interested in the technical aspects.</p>
-<p>Other shortcomings include the broad scope of the thesis, with three
-empirical chapters exploring different avenues. While this comprehensive
-approach provides a broad understanding of the research topic, it has
-also resulted in a rather lengthy thesis. This may be a challenge for
-the reader, as a topic of interest in one chapter may not be as
-compelling in another. The diversity of empirical focus, while enriching
-the research, may dilute the coherence for some readers, making it more
-difficult to maintain a consistent engagement throughout the
-dissertation. Despite these limitations, I hope that the different
-perspectives and findings contribute to a richer, more nuanced
-understanding of <abbr title="Linked Open Usable Data">LOUD</abbr> for <abbr title="Cultural Heritage">CH</abbr>.</p>
-<p>Avenues for future research are numerous and promising. One interesting
-area to explore is the comparative benefits experienced by early
-adopters of <abbr title="International Image Interoperability Framework">IIIF</abbr>
-and Linked Art specifications versus those who implemented these
-standards later. Early adopters have the advantage of having their use
-cases discussed and resolved within the community, and it would be
-insightful to analyse the long-term impacts on their projects. Such a
-study is already feasible for early adopters of
-<abbr title="International Image Interoperability Framework">IIIF</abbr> and will
-become possible to compare further implementations of Linked Art within
-a few years. Furthermore, future exploration could focus on the full
-implementation of Linked Art within <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> or similar efforts, as well as more
-performance-oriented testing with the deployed
-<abbr title="Linked Open Usable Data">LOUD</abbr>
-<abbr title="Application Programming Interface">API</abbr>s. These efforts
-should further validate the robustness and scalability of these
-specifications. Another important area for future investigation is the
-participation of institutions and individuals from the Global South in
-both the <abbr title="International Image Interoperability Framework">IIIF</abbr> and
-Linked Art communities. It is crucial to explore how we can better
-support their uptake of these specifications and encourage their active
-involvement in these initiatives to ensure a more inclusive and globally
-representative environment.</p>
-<p>As I reflect on the journey of this thesis, I am reminded of the
-powerful dialogue and collective effort that has been at its heart. Mr
-Gee’s poem resonates deeply with my own aspirations for this work: to
-enhance our understanding of the past through openness and
-collaboration, as can be seen in <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art. As I bring this
-dissertation to a close, I am filled with a sense of accomplishment and
-a renewed commitment to promoting sound socio-technical practices. It is
-my hope that the insights and methodologies presented here will inspire
-others to engage in this ongoing dialogue, continually asking and
-answering the many questions that arise as we collectively explore our
-cultural heritage landscapes.</p>
+<p>This chapter brings to a close the journey undertaken since February 2021, aiming to clearly articulate the answers to the research questions, discuss how the research aligns with the objectives, elucidate the significance of the work, outline its shortcomings, and suggest avenues for future research.</p>
+<p>I had the privilege of hearing the above poem at EuropeanaTech in The Hague in October 2023. What struck me most, and what I have tried to convey in this thesis, was the powerful dialogue and collective spirit striving to harness the potential of our (digital) heritage. With a sense of conviction after this conference, I approached the next one in Geneva in February 2024 with confidence, believing that I had made a compelling case for the concept of <abbr title="Linked Open Usable Data">LOUD</abbr>. When a participant asked how <abbr title="Linked Open Usable Data">LOUD</abbr> differed from Linked Data, however, I found myself explaining the socio-technical ethos of <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art, the richness of the individuals who make them up, the ability to combine these different standards, and the common use cases that emerge from these collaborations. Whether my answer was convincing remains uncertain, but I knew it was too brief. Perhaps it is here, in this conclusion, that my thoughts can find their full expression.</p>
+<p>I believe that <abbr title="Linked Open Usable Data">LOUD</abbr> should be at the forefront of efforts to improve the accessibility and usability of <abbr title="Cultural Heritage">CH</abbr> data, an endeavour that is increasingly relevant in a web-centric environment. This paradigm has gained considerable traction, particularly with the advent of Linked Art and the recognition that the <abbr title="International Image Interoperability Framework">IIIF</abbr> Presentation <abbr title="Application Programming Interface">API</abbr> has been an inspiration for the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles. The development and maintenance of <abbr title="Linked Open Usable Data">LOUD</abbr> standards by dedicated communities are characterised by collaboration, consensus building, and transparency. In the interstices of the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities, frameworks for interoperability are not only exposed, but revealed as profound testaments to the power of transparent collaboration across institutional boundaries. Both communities, it is true, are still very much Anglo-Saxon efforts, where the specifications have mainly been implemented in <abbr title="Galleries, Libraries, Archives, and Museums">GLAM</abbr> and/or <abbr title="Digital Humanities">DH</abbr> research projects, or at least when we have been aware of them. It has clear guidelines on how to propose use cases, mostly using GitHub, and hides the sometimes unnecessary <abbr title="Resource Description Framework">RDF</abbr> complexity behind a set of <abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr> <code>@ context</code>. <abbr title="International Image Interoperability Framework">IIIF</abbr> is at the presentation layer and can really play its role as a mediator, with the Manifest as its central unit connecting other specifications, including semantic metadata, and preferably with simpatico specifications such as Linked Art.</p>
+<p>An important hypothesis arises from the observation that adherence to the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles makes specifications more likely to be adopted. The primary benefit of adopting <abbr title="Linked Open Usable Data">LOUD</abbr> standards lies in their grassroots nature. This grassroots approach not only aligns with the core values of openness and collaboration within the <abbr title="Digital Humanities">DH</abbr> community but also serves as a common denominator between <abbr title="Digital Humanities">DH</abbr> practitioners and <abbr title="Cultural Heritage Institution">CHI</abbr>s. This unique alignment fosters a sense of shared purpose and common ground. However, it’s essential to acknowledge that while <abbr title="Linked Open Usable Data">LOUD</abbr> and its associated standards, including IIIF, hold immense promise, their limited recognition in the wider socio-technical ecosystem may currently hinder their full potential impact beyond the <abbr title="Cultural Heritage">CH</abbr> domain.</p>
+<p>Consideration of socio-technical requirements and the promotion of digital equity are essential to the development of specifications in line with the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles. In the context of the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities, this means both recognising current challenges and building on existing practices. This includes forming alliances that support diverse forms of inclusion at both project and individual levels. For example, organisations should be encouraged to send representatives from diverse professional and personal backgrounds, such as underrepresented groups or non-technical fields. This can be facilitated by initiatives that lower the barriers to participation, such as financial support for travel and participation, flexible participation formats, and targeted outreach efforts. Furthermore, as these standards often align with open government data initiatives, they present opportunities for broader public engagement and institutional transparency.</p>
+<p>In the broader context of <abbr title="Digital Humanities">DH</abbr>, understanding <abbr title="Linked Open Usable Data">LOUD</abbr> involves tracing the historical development of the field and its evolving relationship with technology. The interdisciplinary nature of <abbr title="Digital Humanities">DH</abbr> has always integrated diverse scholarly and technical practices. In recent years, <abbr title="Digital Humanities">DH</abbr> has seen a notable increase in interest in the use of Linked Data and semantic technologies to improve the discoverability and accessibility of <abbr title="Cultural Heritage">CH</abbr> collections. <abbr title="Linked Open Usable Data">LOUD</abbr>'s emphasis on user-centred design and usability aligns well with these goals. Consequently, the principles of <abbr title="Linked Open Usable Data">LOUD</abbr> hold great promise for advancing the integration and use of community-driven <abbr title="Application Programming Interface">API</abbr>s and/or Linked Data within <abbr title="Digital Humanities">DH</abbr>. This can be seen within <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>, where the benefits of implementing <abbr title="International Image Interoperability Framework">IIIF</abbr> helped us to streamline machine-generated annotations, integrate different thumbnails into <abbr title="Graphical user interface">GUI</abbr> prototypes, model photo albums with different layers from the Kreis Family collection, and enable project members and students to engage in digital storytelling, an important participatory facet that can be seamlessly explored by <abbr title="Digital Humanities">DH</abbr> efforts and <abbr title="Cultural Heritage Institution">CHI</abbr>s with the help of the <abbr title="International Image Interoperability Framework">IIIF</abbr> Image and Presentation <abbr title="Application Programming Interface">API</abbr>s. Data reuse is definitely a key <abbr title="Linked Open Usable Data">LOUD</abbr> driver, which could have been done more extensively with a productive instance of Linked Art. As for widening participation, this is definitely a strategic and political decision, rather than a technical one. That said, <abbr title="Linked Open Usable Data">LOUD</abbr> specifications can definitely be embedded through strategic citizen science initiatives.</p>
+<p>A recent example that highlights the comprehensive value of Linked Data was presented by (Newbury, 2024) at the <abbr title="Coalition for Networked Information">CNI</abbr> Spring 2024 Meeting. He delineated its significance as extending well beyond single entities, such as the Getty Research Institute, to enrich a vast ecosystem. Specifically, he identified three principal areas of value: Firstly, within the ecosystem itself, where the utility of information is amplified through its application in diverse contexts. Secondly, for the audience, by directly addressing user needs and facilitating various conceptual frameworks. And finally, within the community, by enabling wider use and adaptation of data and code. This approach to Linked Data, as articulated by Newbury, not only enhances its utility across these dimensions, but also aligns seamlessly with the <abbr title="Linked Open Usable Data">LOUD</abbr> proposition, underscoring a shared vision for a digital space where the interconnectedness and accessibility of (meta)data serve as foundational principles for progress and community engagement.</p>
+<p>LUX, as a catalyst for <abbr title="Linked Open Usable Data">LOUD</abbr>, exemplifies a practical approach to implementing Linked Data that has garnered significant local engagement and support at Yale. This initiative demonstrates how sound socio-technical practices can be effectively applied within a supportive institutional environment. The consistency of the data within LUX aligns well with <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art standards, with only a few minor adjustments required for full compliance. These quick fixes are manageable and do not detract from the overall robustness of the initiative. While it may be too early to fully assess the wider impact of using <abbr title="Linked Open Usable Data">LOUD</abbr> specifications on the LUX platform within the <abbr title="Cultural Heritage">CH</abbr> domain, the initiative has already attracted considerable interest in recent months. This growing attention suggests that the LUX approach is resonating with other organisations, suggesting the potential for wider adoption and impact. The enthusiastic local engagement at Yale provides a strong foundation for LUX and highlights its potential to serve as a model for similar projects aimed at enriching digital heritage through effective collaboration and agreed-upon standards.</p>
+<p>In carrying out this thesis, I have adhered to the five main objectives set out at the beginning of the PhD. These objectives have been accomplished to a high degree, reflecting a substantial and well-executed project. Furthermore, most of the outputs – such as data models and scripts – from this work are available on GitHub, providing open access to the wider community. In addition, I have published several papers, both individually and collaboratively, further disseminating the findings and contributions of this research.</p>
+<p>Additionally, this thesis is relevant because it sheds light on communities and implementations that can be celebrated not only for their standards but also for their operating ethos; <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art present models ripe for emulation beyond their immediate digital confines. Here, agency and authority are most typically granted to the collective over the isolated, with each actor - be it an individual, an institution or an interface – intricately interconnected. Yale’s LUX initiative also embodies this ethos, demonstrating how collaborative efforts can lead to innovative solutions and wider impact. It is to be hoped, then, that these practices of openness and multiple partnerships will not be seen as limited to their origins in digital representation. At the very least, I hope that these socio-technical approaches can serve as exemplars or sources of inspiration in broader arenas, where the principles of mutual visibility and concerted action can point the way towards cohesive and adaptive collaborative architectures.</p>
+<p>Despite its contribution, this thesis is far from perfect and certainly contains several shortcomings. I will name here three significant ones. First, the visualisations included and the use of <abbr title="First-order logic">FOL</abbr> are primarily designed to support my own self-reflection and may be more beneficial to me than to the broader academic community. While they provide insights into my research process and findings, their applicability and usefulness to others might be limited. Second, the theoretical framework I employed, while instrumental to my research, may not serve as a universally applicable toolbox. Nevertheless, I urge readers to pay close attention to <abbr title="Science and Technology Studies">STS</abbr> methodologies and practices. The works of Bruno Latour, Donna Haraway, and Susan Leigh Star have been invaluable companions throughout this dissertation. Additionally, for those involved in conceptualising semantic information, I recommend exploring Floridi’s <abbr title="Philosophy of Information">PI</abbr>, which offers profound insights into the nature and dynamics of information. These readings have greatly influenced my approach and understanding, and I believe they can offer valuable perspectives to others as well. Third, while the thesis aims to address both community practices and semantic interoperability, it leans more heavily towards the former. This emphasis on community practices may overshadow the broader discussion of semantic interoperability, potentially limiting the appeal of the thesis to those primarily interested in the technical aspects.</p>
+<p>Other shortcomings include the broad scope of the thesis, with three empirical chapters exploring different avenues. While this comprehensive approach provides a broad understanding of the research topic, it has also resulted in a rather lengthy thesis. This may be a challenge for the reader, as a topic of interest in one chapter may not be as compelling in another. The diversity of empirical focus, while enriching the research, may dilute the coherence for some readers, making it more difficult to maintain a consistent engagement throughout the dissertation. Despite these limitations, I hope that the different perspectives and findings contribute to a richer, more nuanced understanding of <abbr title="Linked Open Usable Data">LOUD</abbr> for <abbr title="Cultural Heritage">CH</abbr>.</p>
+<p>Avenues for future research are numerous and promising. One interesting area to explore is the comparative benefits experienced by early adopters of <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art specifications versus those who implemented these standards later. Early adopters have the advantage of having their use cases discussed and resolved within the community, and it would be insightful to analyse the long-term impacts on their projects. Such a study is already feasible for early adopters of <abbr title="International Image Interoperability Framework">IIIF</abbr> and will become possible to compare further implementations of Linked Art within a few years. Furthermore, future exploration could focus on the full implementation of Linked Art within <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr> or similar efforts, as well as more performance-oriented testing with the deployed <abbr title="Linked Open Usable Data">LOUD</abbr> <abbr title="Application Programming Interface">API</abbr>s. These efforts should further validate the robustness and scalability of these specifications. Another important area for future investigation is the participation of institutions and individuals from the Global South in both the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities. It is crucial to explore how we can better support their uptake of these specifications and encourage their active involvement in these initiatives to ensure a more inclusive and globally representative environment.</p>
+<p>As I reflect on the journey of this thesis, I am reminded of the powerful dialogue and collective effort that has been at its heart. Mr Gee’s poem resonates deeply with my own aspirations for this work: to enhance our understanding of the past through openness and collaboration, as can be seen in <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art. As I bring this dissertation to a close, I am filled with a sense of accomplishment and a renewed commitment to promoting sound socio-technical practices. It is my hope that the insights and methodologies presented here will inspire others to engage in this ongoing dialogue, continually asking and answering the many questions that arise as we collectively explore our cultural heritage landscapes.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -623,7 +263,9 @@ cultural heritage landscapes.</p>
     
         <section id="bibliography">
             <h2>Bibliography</h2>
-              <div class="bibliography-entry">Mr Gee. (2023, October). Day 2 Closing – A multitude of tools. <i>EuropeanaTech 2023</i>. <a href="https://youtu.be/pOX9CrvAG7I" target="_blank" rel="noopener noreferrer">https://youtu.be/pOX9CrvAG7I</a></div>
+              <div class="bibliography-entry">Lave, J., &amp; Wenger, E. (1991). <i>Situated learning: Legitimate peripheral participation</i>. Cambridge University Press.</div>
+  <div class="bibliography-entry">Wenger, E. (2011). Communities of practice: A brief introduction. <i>National Science Foundation</i>, 1–7. <a href="http://hdl.handle.net/1794/11736" target="_blank" rel="noopener noreferrer">http://hdl.handle.net/1794/11736</a></div>
+  <div class="bibliography-entry">Mr Gee. (2023, October). Day 2 Closing – A multitude of tools. <i>EuropeanaTech 2023</i>. <a href="https://youtu.be/pOX9CrvAG7I" target="_blank" rel="noopener noreferrer">https://youtu.be/pOX9CrvAG7I</a></div>
   <div class="bibliography-entry">Newbury, D. (2024). <i>Linked Data in Production: Moving Beyond Ontologies</i>. <a href="https://www.slideshare.net/slideshow/linked-data-in-production-moving-beyond-ontologies/266976602" target="_blank" rel="noopener noreferrer">https://www.slideshare.net/slideshow/linked-data-in-production-moving-beyond-ontologies/266976602</a></div>
 
         </section>
