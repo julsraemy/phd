@@ -333,6 +333,31 @@ figcaption {
     height: 100%; /* Set a height if you want vertical centering */
 }
 
+#bibliography {
+    margin-top: 2em;
+    font-size: 0.8em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+}
+#bibliography h2 {
+    font-size: 1.6em;
+    margin-bottom: 0.3em;
+}
+
+/* Make the entire footnotes section smaller */
+.footnotes, 
+.footnotes .footnotes-list, 
+.footnotes .footnote-item, 
+.footnotes p {
+  font-size: 0.95em;
+}
+
+/* Hide the horizontal line separator */
+hr.footnotes-sep {
+  display: none;
+  border: none; /* Just in case */
+}
+
 footer {
     margin-top: 40px;
     margin-bottom: 10px;
