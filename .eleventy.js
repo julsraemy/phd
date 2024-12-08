@@ -1,6 +1,12 @@
+const path = require('path'); 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const markdownItFootnote = require("markdown-it-footnote"); 
+const markdownItAnchor = require("markdown-it-anchor");
+const eleventyCiteproc = require("eleventy-plugin-citeproc");
+const { JSDOM } = require("jsdom"); 
+const acronyms = require("./src/data/acronyms.json");
 
 module.exports = function(eleventyConfig) {
     // RSS Feed
@@ -11,7 +17,9 @@ module.exports = function(eleventyConfig) {
         html: true,
         linkify: true,
         typographer: true,
-    }).use(markdownItAttrs);
+    }).use(markdownItAttrs)
+    .use(markdownItAnchor)
+    .use(markdownItFootnote); 
 
     // Custom rule for opening external links in a new tab
     const defaultRender = markdownLibrary.renderer.rules.link_open || function(tokens, idx, options, env, self) {
@@ -32,6 +40,36 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setLibrary("md", markdownLibrary);
 
+    // Citeproc Plugin for Citations and Bibliographies
+    eleventyConfig.addPlugin(eleventyCiteproc, {
+        bibliographicStylePath: path.join(__dirname, 'src/utils/apa.csl'),
+        bibliographicLocalizationPath: path.join(__dirname, 'src/utils/locales-en-GB.xml'),
+        bibliographicDataPath: path.join(__dirname, 'src/utils/bib-data.json'),
+    });
+
+    eleventyConfig.addTransform("makeUrlsClickable", function(content, outputPath) {
+        // Apply only to HTML files
+        if (outputPath && outputPath.endsWith(".html")) {
+            const dom = new JSDOM(content);
+            const document = dom.window.document;
+    
+            // Select the bibliography section
+            const bibliography = document.querySelector("#bibliography");
+            if (bibliography) {
+                // Replace all URLs with clickable links in the innerHTML of the bibliography
+                bibliography.innerHTML = bibliography.innerHTML.replace(
+                    /(https?:\/\/[^\s<]+)/g,
+                    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+                );
+            }
+    
+            return dom.serialize();
+        }
+    
+        // Return unchanged content for non-HTML files
+        return content;
+    });  
+
     // Custom Collections
     eleventyConfig.addCollection("sitePages", function(collectionApi) {
         return collectionApi.getAll().filter(function(item) {
@@ -39,6 +77,14 @@ module.exports = function(eleventyConfig) {
             return !item.url.startsWith('/s/') && item.url !== '/404.html';
         });
     });
+
+    // Abbr
+    eleventyConfig.addFilter("abbr", function(key) {
+        if (acronyms[key]) {
+          return `<abbr title="${acronyms[key]}">${key}</abbr>`;
+        }
+        return key;
+      });
 
     // Static File Copying
     eleventyConfig.addPassthroughCopy("assets");
