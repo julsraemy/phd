@@ -106,11 +106,12 @@ research while outlining potential directions for future study.
 
 ## 2. Context {id="cha:context"}
 
-In this chapter, I will set the stage for my PhD thesis by providing important background information. First, in , I will explain why I chose the title for my thesis. This will give you an understanding of the main focus and the direction of my research. Next, in , I will describe the {{ "PIA" | abbr | safe }} research project, which is central to my work. This section will cover the project's goals, significance, and overall framework. In , I will detail my specific contributions to the {{ "PIA" | abbr | safe }} project. I will emphasise how my work fits into the larger project and its importance to my thesis. Finally, in , I will talk about my active participation in the {{ "IIIF" | abbr | safe }} and Linked Art communities. This section will highlight how my involvement in these communities has influenced my research and its broader implications.
+In this chapter, I will set the stage for my PhD thesis by providing important background information. First, in [Section 2.1](#sec:title), I will explain why I chose the title for my thesis. This will give you an understanding of the main focus and the direction of my research. Next, in , I will describe the {{ "PIA" | abbr | safe }} research project, which is central to my work. This section will cover the project's goals, significance, and overall framework. In , I will detail my specific contributions to the {{ "PIA" | abbr | safe }} project. I will emphasise how my work fits into the larger project and its importance to my thesis. Finally, in , I will talk about my active participation in the {{ "IIIF" | abbr | safe }} and Linked Art communities. This section will highlight how my involvement in these communities has influenced my research and its broader implications.
 
-### 2.1 PhD Title
+### 2.1 PhD Title {id="sec:title"}
 
-I chose the title as it encapsulates the essence of my research focus but I could have indeed chosen other ones.
+I chose the title ‘Linked Open Usable Data for Cultural Heritage: Perspectives on
+Community Practices and Semantic Interoperability’ as it encapsulates the essence of my research focus but I could have indeed chosen other ones.
 
 During the initial stages of my research, multiple working titles were explored to capture the diverse facets of my interests and objectives. If I was quite sure about having in the title after the third iteration, I was quite unsure of what should follow and if a subtitle was actually needed at all. Amidst this dynamic progression, the underlying theme of my research remained steadfast -- to delve into the transformative potential of {{ "LOUD" | abbr | safe }} for {{ "CH" | abbr | safe }}.
 
@@ -122,9 +123,19 @@ For the second perspective, I wanted to see how semantic interoperability can be
 
 In summary, this title reflects my enthusiasm for using web-based and community-driven technologies to transform the way we understand, share and value {{ "CH" | abbr | safe }}.
 
+### 2.2 The PIA Research Project {id="sec:pia"}
+
+I undertook my doctoral studies within the scope of the {{ "PIA" | abbr | safe }} research project financed by the {{ "SNSF" | abbr | safe }} under their Sinergia funding scheme from February 2021 to January 2025[^3]. The project aimed to analyse the interplay of participants, epistemological orders and the graphical representation of information and knowledge in relation to three photographic collections from {{ "CAS" | abbr | safe }}. It sought to bring together the world of data and things in an interdisciplinary manner, exploring the phases of the analogue and digital archive from a cultural anthropological, technical and design research perspective [@felsing_community_2023 p. 42]. As part of this endeavour, interfaces were developed to enable the collaborative indexing and use of photographic archival records [@chiquet_participatory_2023 p. 110]. I discuss in more detail the interdisciplinary components and briefly introduce the people involved in the project in , then talk about the photographic collections that were the overarching narrative of the research in , and lastly in , the vision that we had put together.
+
 ## 3. Interlinking Cultural Heritage Data {id="cha:literature"}
 
 (...)
+
+Data processing offers great potential for humanities research as Owens [2011] argues: ‘In the end,
+the kinds of questions humanists ask about texts and artifacts are just as relevant to ask of data. While
+the new and exciting prospects of processing data offer humanists a range of exciting possibilities for
+research, humanistic approaches to the textual and artifactual qualities of data also have a considerable
+amount to offer to the interpretation of data’.
 
 ## 4. Exploring Relationships through an Actor-Network Theory Lens {id="cha:theoretical"}
 
@@ -147,6 +158,89 @@ In summary, this title reflects my enthusiasm for using web-based and community-
 (...)
 
 ## 9. Discussion {id="cha:discussion"}
+
+>     [Il] faut renoncer à l’idée d’une interopérabilité syntaxique ou structurelle par l’utilisation d’un modèle unique, qu’il s’agisse de la production, de stockage ou de l’exploitation au sein même d’un [système d'information]. [@poupeau_reflexions_2018] [^363]
+
+This chapter presents a comprehensive discussion where I interpret, analyse and critically examine my findings in relation to the thesis and the wider application of {{ "LOUD" | abbr | safe }}. Through an in-depth analysis of the design principles of {{ "LOUD" | abbr | safe }} and their implications for {{ "CH" | abbr | safe }}, this discussion aims to demonstrate the many challenges and opportunities inherent in this framework. The focus is on achieving community-driven consensus, rather than simply pursuing technological breakthrough. 
+
+The following sections are organised to provide a comprehensive review of the empirical findings, an evaluation abstracting {{ "LOUD" | abbr | safe }}, and a retrospective analysis of the research journey. Firstly, in [Section 9.1](#sec:empirical-findings), I will present a summary of the empirical findings from my research. This will include key themes and insights, structured to reflect the different areas of study and practice within {{ "LOUD" | abbr | safe }}. 
+
+Secondly, in [Section 9.2](#sec:evaluation-loud) I will provide an evaluation of {{ "LOUD" | abbr | safe }} by means of using the {{ "LoA" | abbr | safe }} approach. This evaluation will focus on the impact of {{ "LOUD" | abbr | safe }} on the perception of Linked Data within the {{ "CH" | abbr | safe }} domain and the wider {{ "DH" | abbr | safe }} field. This will include the key themes and insights that have emerged, structured in a way that reflects four levels of abstraction. I will also explore the dual nature of {{ "LOUD" | abbr | safe }} implementation, involving both simplicity and complexity, and discuss the various factors that influence such dynamics. 
+
+Finally, in [Section 9.3](#sec:retrospective-ant), I will offer a retrospective analysis of the research journey. This section will interpret the findings to situate {{ "LOUD" | abbr | safe }} as fully-fledged actors. It will reflect on the challenges, achievements, and lessons learned throughout the research process, providing a holistic view of the project's trajectory and its implications for the future of {{ "LOUD" | abbr | safe }}.
+
+### 9.1 Empirical Findings {id="sec:empirical-findings"}
+
+This section summarises the empirical findings of my research and already offers some suggestions. The structure does not follow the exact order of the three empirical chapters but is organised around overarching topics that emerged throughout the study. The seven topics include Community Practices and Standards, Inclusion and Marginalised Groups, Maintenance and Community Engagement, Interoperability and Usability, Future Directions and Sustainability, Digital Materiality and Representation, as well as Challenges of Scaling and Implementation.
+
+**Community Practices and Standards** 
+
+_GitHub serves as a vital hub for community involvement, with a core group of active contributors often attending meetings regularly. This platform simplifies decision-making within the community, although it also reflects biases similar to those in {{ "FLOSS" | abbr | safe }} communities. Behind visible activities like meetings, there is     substantial preparatory work managed by co-chairs, editorial boards, or driven by community-generated use cases. This foundational work often determines the direction and outcomes of formal gatherings. The LUX project at Yale, as seen in , has successfully fostered collaboration across various units, bringing together libraries and museums on a unified platform. The technological foundation of LUX, based on open standards, facilitates data integration and cross-collections discovery._
+
+_Not only does the deployment of {{ "FLOSS" | abbr | safe }} tools contribute to these     achievements, but it also emphasises the social advantages of working collaboratively. The concept of the Tragedy of the Commons,     as described by @hardin_tragedy_1968, highlights the potential for     individual self-interest to deplete shared resources. However, @ostrom_governing_1990 offers a counterpoint by demonstrating how     communities can successfully manage common resources through     collective action and shared norms. In this context, initiatives like the {{ "CHAOSS" | abbr | safe }} initiative[^364] play a significant role by providing metrics that help evaluate the health and     sustainability of open source communities. These metrics include     contributions, issue resolution times, and community growth,     offering valuable insights into how collaborative efforts can be     maintained and improved._
+
+_Reaching consensus is another critical aspect of community practices     and standards. While the minutes of meetings are valuable artefacts,     they often reflect an Anglo-Saxon approach to decision-making     characterised by few substantive points and critical turning points.     The formal aspects of conversations captured in minutes do not fully     encompass the decision-making process, which frequently involves     informal conversations, consensus-building through open dialogue,     and subtle cues that influence outcomes. These elements are integral     to the English and American approach and hold valuable lessons for     an international community. {{ "IIIF" | abbr | safe }} and Linked Art are international     communities, but decisions are made in English and the majority of     participants are based in North America and the UK, significantly     imprinting this approach. Understanding these nuances can help us     improve our collaborative efforts within the     {{ "IIIF" | abbr | safe }} and     Linked Art communities. By recognising and appreciating these     different facets of decision-making, we can learn from each other     and enhance our collective ability to make effective and inclusive     decisions._
+
+_Some of the challenges associated with these practices include the     major demand on resources for community building, the slowness     inherent in distributed development, and the difficulty in achieving     consensus. Additionally, the concept of social sustainability can be     seen as an imaginary construct that papers over differences, as     discussed by @fitzpatrick_generous_2019. Addressing these challenges     is crucial for the long-term success and effectiveness of the     {{ "IIIF" | abbr | safe }} and     Linked Art communities._
+
+**Inclusion and Marginalised Groups**
+
+_The demographic homogeneity in these communities can perpetuate     biases and neglect issues relevant to underrepresented or     marginalised groups, as seen in . Participation in these     standardisation processes is itself a privilege. The assumption that     internet access and digital devices are universally available is     critically examined, revealing key actors in the digital landscape.     This mirrors issues within the {{ "IIIF" | abbr | safe }} community, where generating     {{ "IIIF" | abbr | safe }} resources     presupposes means that may not be accessible to all._
+
+_We need clear terms of inclusion, as highlighted by     @hoffmann_terms_2021. She argues that effective inclusion requires a     critical examination of the frameworks and conditions under which     inclusion is offered. The framework should ensure that inclusion     initiatives do not merely add diversity to existing power structures     but work to transform these structures fundamentally. This involves     questioning who defines the terms of inclusion, who benefits from     them, and who may be inadvertently excluded. @hoffmann_terms_2021     suggests a participatory approach, where marginalised communities     are actively involved in shaping inclusion policies and practices,     thus making inclusion an ongoing, reflective process rather than a     static goal._
+
+_The inclusion of marginalised groups is a necessary step, but it is     not sufficient. To truly make a difference, there must be a     strategic and concentrated effort to appropriate technologies, as     emphasised by     [@morales_apropiacion_2009; @morales_imaginacion_2017; @morales_apropiacion_2018] and further     articulated by     [@martinez_demarco_empowering_2019; @martinez_demarco_digital_2023]. This strategic approach highlights     the political significance of challenging dominant neoliberal and     consumerist perspectives on technology and individual engagement._
+
+_@martinez_demarco_digital_2023 underscores the critical importance     of focusing on practices that go beyond mere inclusion. Instead, it     requires a deep understanding and critical assessment of how     technology is intertwined with social, economic, and ideological     contexts. It implies a reflective and deliberate process of     technology adoption in which individuals creatively tailor     technology to their specific needs, beliefs, and interests.     Moreover, a key aspect highlighted by @martinez_demarco_digital_2023     is the implicit and explicit critique of a universalist approach to     inclusion, which often lends itself to all too easy     instrumentalisation. Understanding and studying resistance to     inclusion in an oppressive digital transformation context is     paramount, particularly given the highly unequal conditions that     prevail._
+
+_In this light, a comprehensive study of socio-material and symbolic     processes, practices, and involved in embedding technologies into     individuals' lives is needed. This approach also recognises     technology as a catalyst for change. It envisions the use of     technology to drive meaningful change at multiple dimensions and     realities---national, societal, or personal. By focusing on these     practices, empowering individuals to navigate and use technology     thoughtfully and purposefully becomes a reality, bridging the gap     between technological advances and societal progress     [@martinez_demarco_empowering_2019]._
+
+**Maintenance and Community Engagement**
+
+_The tension between creating advanced specifications and their     practical implementation by platforms is evident in the IIIF     Cookbook recipes and Linked Art patterns, as discussed in [Chapter 6](#cha:social-fabrics). This     ongoing development shows that the community is still finding the     best ways to achieve broad adoption and interoperability. The     deployment of the Change Discovery {{ "API" | abbr | safe }}, as illustrated in [Chapter 7](#cha:pia-laboratory), demonstrates     that establishing such a protocol on top of the     {{ "IIIF" | abbr | safe }}     Presentation {{ "API" | abbr | safe }} is feasible and straightforward.     High-level support from leadership, particularly Susan Gibbons as     Vice Provost, has been crucial in building trust and ensuring the     project's success as a valuable discovery layer at Yale. This     integration of diverse collections through a unified platform, based     on open standards, highlights the potential for transforming     teaching, learning, and research by leveraging collaborative     efforts. The topic modelling exercise in LUX reveals the intricate     actor-networks composed of organisations, individuals, and non-human     actors. This analysis underscores the importance of ongoing     processes and relationships in maintaining and evolving     infrastructure, akin to the concept of ‘infrastructuring’._
+
+_As detailed in [Chapter 8](#cha:lux-consistency), following best practices and guidelines such as the     {{ "SHARED" | abbr | safe }}     Principles is essential for better involvement, but it is also     crucial to uphold these commitments consistently over the long term     to ensure meaningful participation. Between the     {{ "PIA" | abbr | safe }} team     members, there were sometimes ‘disconnects between different communities who undertake collaborative research’ [@vienni-baptista_foundations_2023].     This was something we had to navigate and learn from, which was     manageable within the context of a laboratory setting. However, for     any follow-up projects or whatever forms the digital infrastructure     we built may take, it is imperative that these disconnects are     addressed and solidified to ensure cohesive and sustained community     engagement._
+
+**Interoperability and Usability**
+
+_Within {{ "PIA" | abbr | safe }},     different {{ "API" | abbr | safe }}s     have been progressively deployed to meet various requirements while     allowing parallel exploration of data modelling. Each     {{ "API" | abbr | safe }} offers     unique advantages, but their collective integration promotes     semantic interoperability. For example, the     {{ "IIIF" | abbr | safe }} Image     {{ "API" | abbr | safe }} has been     instrumental in rationalising image distribution across prototypes,     providing efficient access to high-quality digital surrogates and     the ability to resize them for different uses. Adherence to     {{ "LOUD" | abbr | safe }} standards     and schemas within LUX has generally been positive, although     transitioning between versions of a specification can present     challenges, highlighting the need to improve the consistency of     compliant resources._
+
+_Linked Art, for instance, has the capacity to generate various     insights and sources of truth around different entities. However,     additional or entirely new vocabularies from sources like the Getty     may need to be used -- such as Homosaurus. Complementary to Linked     Art, using {{ "WADM" | abbr | safe }} allows for assertions that go beyond     purely descriptive narratives, though it may sacrifice some semantic     richness. This complexity in managing vocabularies and maintaining     semantic richness directly ties into broader usability     considerations within the community._
+
+_Addressing these usability concerns, Robert Sanderson has suggested     focusing on the use of full {{ "URI" | abbr | safe }}s in Linked Art to ensure computational     usability, in contrast to {{ "IIIF" | abbr | safe }}'s approach of minimising     {{ "URI" | abbr | safe }}s to enhance     readability. This difference highlights a fundamental question in     usability: balancing readability and computational usability.     Understanding developers' perspectives on these approaches is     critical._
+
+_I would suggest as a way forward for the {{ "IIIF" | abbr | safe }} and Linked Art communities to focus     on further improving usability of the specifications. This includes     conducting comprehensive usability assessments of     {{ "API" | abbr | safe }}s to evaluate     the experiences of new developers versus existing ones,     understanding the steepness of the learning curve associated with     each {{ "API" | abbr | safe }}, and     guiding improvements in documentation, on-boarding processes, and     overall developer support. Efforts should be made to lower the     barriers to entry for new developers by developing more intuitive     and user-friendly tutorials, providing example projects, and     creating a robust support community. Ensuring that developers can     quickly and effectively leverage {{ "API" | abbr | safe }}s will foster greater adoption.     Addressing the challenges of transitioning between different     versions of specifications is critical, and developing tools and     guidelines that help maintain consistency across versions will     reduce friction and ensure smoother updates._
+
+**Future Directions and Sustainability**
+
+_Survey findings, as discussed in , underscore the need for ongoing     efforts to develop {{ "LOUD" | abbr | safe }} standards that foster an inclusive,     dynamic digital ecosystem. Future strategies should include creating     educational resources and frameworks that support interdisciplinary     collaboration and reduce barriers to participation. While the     Manifest serves as the fundamental unit within     {{ "IIIF" | abbr | safe }}, the     Linked Art protocol can play a similar central role as semantic     gateways in broader contexts, allowing round-tripping across the     {{ "API" | abbr | safe }}s. The topic     modelling exercise in LUX, detailed in , reveals complex     actor-networks of organisations, individuals, and non-human actors,     providing insights into the relationships sustaining the LUX     initiative._
+
+_The next steps for Linked Art might involve forming a new consortium     independent of a {{ "CIDOC" | abbr | safe }} Working Group, which could provide     the necessary support to sustain the initiative. Alternatively,     integrating Linked Art into {{ "IIIF" | abbr | safe }} as a new {{ "TSG" | abbr | safe }} and specification could address the     discovery challenges within {{ "IIIF" | abbr | safe }}, as discussed during the birds of a     feather session led by Robert Sanderson [see @raemy_notes_2024] at     the 2024 {{ "IIIF" | abbr | safe }}     Conference in Los Angeles[^365]. Design principles that act as     bridges across different disciplines, as proposed by     @roke_pragmatic_2022, are crucial. {{ "IIIF" | abbr | safe }} has demonstrated that this     collaborative approach is feasible, and Linked Art could follow in     its footsteps. However, achieving this requires increased dedication     from passive members and broader adoption of the model and the     {{ "API" | abbr | safe }} ecosystem     in the near future._
+
+**Digital Materiality and Representation**
+
+_As explored in [Chapter 7](#cha:pia-laboratory), the detailed digital representation of photographic     albums, such as the Kreis Family Collection, demonstrates the need     to comprehensively capture the materiality of digital objects. This     includes the structure and context of images, which are crucial for     maintaining their historical and social significance. The     implementation of the {{ "IIIF" | abbr | safe }} Presentation     {{ "API" | abbr | safe }} in creating     a detailed digital replica of the Getty's Bayard Album shows how     digital materiality can be enhanced through thoughtful use of     technology, but also highlights the scalability challenges for such     detailed representations._
+
+_Creating these detailed digital representations can be seen as a ‘boutique’     approach, which, while labour-intensive and resource-demanding, is     necessary for preserving the integrity and contextual significance     of cultural heritage objects. The challenge lies in developing the     appropriate means and methodologies to achieve this level of detail     consistently. Future endeavours, whether through research projects     or collaborative efforts between {{ "GLAM" | abbr | safe }} institutions and     {{ "DH" | abbr | safe }}     practitioners, should aim to address these challenges and create     sustainable practices for digital materiality and representation. As     Edwards aptly notes:_
+
+> ‘Presentational forms equally reflect specific intent in the use and value of the photographs they embed, to the extent that the objects that embed photographs are in many cases meaningless without their photographs; for instance, empty frames or albums. These objects are only invigorated when they are again in conjunction with the images with which they have a symbiotic relationship, for display functions not only make the thing itself visible but make it more visible in certain ways‘.
+[@edwards_photographs_2004 p. 11]
+
+**Challenges of Scaling and Implementation**
+
+_As seen in [Chapter 6](#cha:social-fabrics), the {{ "IIIF" | abbr | safe }} Cookbook recipes and Linked Art     patterns reflect the tension between creating advanced     specifications and their practical implementation. This gap between     ideation and real-world application underscores the challenges faced     by the community in achieving broad adoption and interoperability.     In [Chapter 7](#cha:pia-laboratory), the exploration of {{ "API" | abbr | safe }}s like the {{ "IIIF" | abbr | safe }} Change Discovery     {{ "API" | abbr | safe }} illustrates     the practical challenges and potential of scaling these technologies     for wider adoption. The successful implementation in     {{ "PIA" | abbr | safe }}     demonstrates viability, but also points to the need for continued     development and community engagement to fully realise the benefits._
+
+_Furthermore, assessing the scalability of     {{ "IIIF" | abbr | safe }} image     servers, as discussed by [@duin_webassembly_2022] and exemplified by     the firm Q42 with their Edge-based service Micrio[^366], highlights     the importance of optimising data performance. Erwin Verbruggen     aptly noted that ‘optimising data performance in my opinion mens sending as little data over as needed’[^367], emphasising the need for efficient data     handling to enhance scalability. This insight reinforces the     necessity of continual refinement in scaling digital infrastructure     to support broader use and integration._
+
+Reflecting on these findings, I would like to assert that continuous participation, particularly for institutions that can afford to be part of initiatives like {{ "IIIF-C" | abbr | safe }}, is essential. Active members should not only focus on their own use cases but also consider the needs and perspectives of other, perhaps marginalised, groups. Achieving the dual goals of making progress within one community, whether it be {{ "IIIF" | abbr | safe }} or Linked Art, while also engaging in effective outreach and creating a solid baseline, will benefit everyone in the {{ "CH" | abbr | safe }} sector and beyond. Addressing where {{ "LOUD" | abbr | safe }} fits in, how people perceive this new concept or paradigm, and understanding how {{ "LOUD" | abbr | safe }} differs from Linked Data in general are essential. These questions help to clarify the stages at which themes related to one of the {{ "LOUD" | abbr | safe }} design principles emerge, crystallise, and potentially disappear. My thesis does not fully resolve these queries but offers insights and hints for further exploration.
+
+In conclusion, the empirical findings reveal the richness of the implementation and maintenance of {{ "LOUD" | abbr | safe }} standards in the {{ "CH" | abbr | safe }} domain. From the critical role of community practices and standards to the challenges of achieving interoperability and inclusivity, each theme underlines the complex interplay of social, technical and organisational factors. will look at the evaluation of {{ "LOUD" | abbr | safe }} and explore its overall impact, delving into the delta of what to do with it, particularly in terms of Linked Data versus {{ "LOUD" | abbr | safe }}, where my thesis provides pointers but does not provide definitive answers.
+
+### 9.2 Evaluation: Abstracting LOUD {id="sec:evaluation-loud"}
+
+(...)
+
+### 9.3 Retrospective: Truding like an Ant {id="sec:retrospective-ant"}
 
 (...)
 
@@ -191,11 +285,9 @@ Avenues for future research are numerous and promising. One interesting area to 
 
 As I reflect on the journey of this thesis, I am reminded of the powerful dialogue and collective effort that has been at its heart. Mr Gee's poem resonates deeply with my own aspirations for this work: to enhance our understanding of the past through openness and collaboration, as can be seen in {{ "IIIF" | abbr | safe }} and Linked Art. As I bring this dissertation to a close, I am filled with a sense of accomplishment and a renewed commitment to promoting sound socio-technical practices. It is my hope that the insights and methodologies presented here will inspire others to engage in this ongoing dialogue, continually asking and answering the many questions that arise as we collectively explore our cultural heritage landscapes.
 
-{{ '' | bibliography | safe }}
-
 [^1]: Throughout this dissertation, British English spelling conventions are predominantly observed. However, there are instances of American English spelling where direct quotations from sources are used as well as referring to names of institutions, standards, or concepts.
 
-[^3]: SNSF Data Portal - Grant number 193788:
+[^3]: {{ "SNSF" | abbr | safe }} Data Portal - Grant number 193788:
     <https://data.snf.ch/grants/grant/193788>
 
 [^4]: *Seminar für Kulturwissenschaft und Europäische Ethnologie*:
@@ -1419,7 +1511,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 [^362]: Paul Mellon Centre: <https://www.paul-mellon-centre.ac.uk/>
 
-[^363]: Author's translation:
+[^363]: Author's translation: ‘We need to give up on the idea of syntactic or structural interoperability through the use of a single model, whether for producing, storing or managing data within an information system’. 
 
 [^364]: {{ "CHAOSS" | abbr | safe }}:
     <https://chaoss.community/>
@@ -1444,7 +1536,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 [^370]: QLever: <https://github.com/ad-freiburg/qlever>
 
 [^371]: The title of the section is an homage to Bruno Latour and a
-    passage found in his book _We have never been modern_.
+    passage found in his book ‘We have never been modern’.
 
 
 

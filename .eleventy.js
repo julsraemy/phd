@@ -42,9 +42,10 @@ module.exports = function(eleventyConfig) {
 
     // Citeproc Plugin for Citations and Bibliographies
     eleventyConfig.addPlugin(eleventyCiteproc, {
-        bibliographicStylePath: path.join(__dirname, 'src/utils/apa.csl'),
+        bibliographicStylePath: path.join(__dirname, 'src/utils/apa-no-initials.csl'),
         bibliographicLocalizationPath: path.join(__dirname, 'src/utils/locales-en-GB.xml'),
         bibliographicDataPath: path.join(__dirname, 'src/utils/bib-data.json'),
+        deduplicate: true
     });
 
     eleventyConfig.addTransform("makeUrlsClickable", function(content, outputPath) {
