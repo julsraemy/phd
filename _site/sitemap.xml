@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://phd.julsraemy.ch/</loc>
-            <lastmod>2024-11-22T00:00:00.000Z</lastmod>
-            <changefreq>weekly</changefreq>
-            <priority>1.0</priority>
-        </url>
-    
-        <url>
             <loc>https://phd.julsraemy.ch/loud.html</loc>
             <lastmod>2024-12-04T00:00:00.000Z</lastmod>
             <changefreq>weekly</changefreq>
@@ -33,6 +26,13 @@
             <loc>https://phd.julsraemy.ch/thesis.html</loc>
             <lastmod>2024-11-18T00:00:00.000Z</lastmod>
             <changefreq>daily</changefreq>
+            <priority>1.0</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/</loc>
+            <lastmod>2024-11-22T00:00:00.000Z</lastmod>
+            <changefreq>weekly</changefreq>
             <priority>1.0</priority>
         </url>
     
