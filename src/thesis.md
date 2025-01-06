@@ -28,7 +28,7 @@ PhD Thesis in Digital Humanities, completed as part of the Graduate School of So
 
 This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807. 
 
-<p style="font-size: 2em; color: gray; text-align: center;">Page in construction</p>
+<p style="font-size: 2em; color: gray; text-align: center;">Page in construction (please be patient 😅)</p>
 
 ##### Author 
 
@@ -110,8 +110,7 @@ In this chapter, I will set the stage for my PhD thesis by providing important b
 
 ### 2.1 PhD Title {id="sec:title"}
 
-I chose the title ‘Linked Open Usable Data for Cultural Heritage: Perspectives on
-Community Practices and Semantic Interoperability’ as it encapsulates the essence of my research focus but I could have indeed chosen other ones.
+I chose the title ‘Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability’ as it encapsulates the essence of my research focus but I could have indeed chosen other ones.
 
 During the initial stages of my research, multiple working titles were explored to capture the diverse facets of my interests and objectives. If I was quite sure about having in the title after the third iteration, I was quite unsure of what should follow and if a subtitle was actually needed at all. Amidst this dynamic progression, the underlying theme of my research remained steadfast -- to delve into the transformative potential of {{ "LOUD" | abbr | safe }} for {{ "CH" | abbr | safe }}.
 
@@ -125,23 +124,96 @@ In summary, this title reflects my enthusiasm for using web-based and community-
 
 ### 2.2 The PIA Research Project {id="sec:pia"}
 
-I undertook my doctoral studies within the scope of the {{ "PIA" | abbr | safe }} research project financed by the {{ "SNSF" | abbr | safe }} under their Sinergia funding scheme from February 2021 to January 2025[^3]. The project aimed to analyse the interplay of participants, epistemological orders and the graphical representation of information and knowledge in relation to three photographic collections from {{ "CAS" | abbr | safe }}. It sought to bring together the world of data and things in an interdisciplinary manner, exploring the phases of the analogue and digital archive from a cultural anthropological, technical and design research perspective [@felsing_community_2023 p. 42]. As part of this endeavour, interfaces were developed to enable the collaborative indexing and use of photographic archival records [@chiquet_participatory_2023 p. 110]. I discuss in more detail the interdisciplinary components and briefly introduce the people involved in the project in , then talk about the photographic collections that were the overarching narrative of the research in , and lastly in , the vision that we had put together.
+I undertook my doctoral studies within the scope of the {{ "PIA" | abbr | safe }} research project financed by the {{ "SNSF" | abbr | safe }} under their Sinergia funding scheme from February 2021 to January 2025[^3]. The project aimed to analyse the interplay of participants, epistemological orders and the graphical representation of information and knowledge in relation to three photographic collections from {{ "CAS" | abbr | safe }}. It sought to bring together the world of data and things in an interdisciplinary manner, exploring the phases of the analogue and digital archive from a cultural anthropological, technical and design research perspective [@felsing_community_2023 p. 42]. As part of this endeavour, interfaces were developed to enable the collaborative indexing and use of photographic archival records [@chiquet_participatory_2023 p. 110]. I discuss in more detail the interdisciplinary components and briefly introduce the people involved in the project in [Subsection 2.2.1](#subsec:interdisciplinary), then talk about the photographic collections that were the overarching narrative of the research in [Subsection 2.2.2](#subsec:sgv_collections), and lastly in [Subsection 2.2.3](#subsec:pia_vision), the vision that we had put together.
+
+The project, divided in three interdisciplinary teams, was led by the University of Basel through the Institute for Cultural Anthropology and European Ethnology[^4] (Team A) and the {{ "DHLab" | abbr | safe }}[^5] in collaboration with the {{ "DBIS" | abbr | safe }} group (Team B) as well as by the {{ "HKB" | abbr | safe }}[^6], an art school and department of the Bern University of Applied Sciences (Team C) [@felsing_community_2023 p. 43]. [Table 2.1](#tab:pia-team) lists the people who contributed to the project, broken down by the three teams and their particular perspectives.
+
+**Table 2.1: PIA Team Core Members** {id="tab:pia-team"}
+
+| **Perspective**       | **People**                                                                                                                                                                                                                                             |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| A) Anthropological    | Prof. Dr. Walter Leimgruber, Team Leader and Dissertation Supervisor<br/>Dr. Nicole Peduzzi, Photographic Restoration and Digitisation Supervisor<br/>Regula Anklin, Conservation and Restoration Specialist (project partner at Anklin & Assen)<br/>Murielle Cornut, PhD Candidate in Cultural Anthropology<br/>Birgit Huber, PhD Candidate in Cultural Anthropology<br/>Fabienne Lüthi, PhD Candidate in Cultural Anthropology |
+| B) Technical          | Prof. Dr. Peter Fornaro, Team Leader and Dissertation Supervisor<br/>Prof. Dr. Heiko Schuldt, Dissertation Supervisor (project partner at the University of Basel)<br/>Dr. Vera Chiquet, Postdoctoral Researcher<br/>Adrian Demleitner, Software Developer (2021-2023)<br/>Fabian Frei, Software Developer (2023-2025)<br/>Christoph Rohrer, Software Developer (2023-2025)<br/>Julien A. Raemy, PhD Candidate in Digital Humanities<br/>Florian Spiess, PhD Candidate in Computer Science |
+| C) Communicative      | Dr. Ulrike Felsing, Team Leader and Dissertation Supervisor<br/>Prof. Dr. Tobias Hodel, Dissertation Supervisor (project partner at the University of Bern)<br/>Daniel Schoeneck, Research Fellow<br/>Lukas Zimmer, Designer (project partner at A/Z&T)<br/>Max Frischknecht, PhD Candidate in Digital Humanities                                                                 |
+
+In addition to the core members mentioned in , there were several other individuals who made significant contributions to the {{ "CAS" | abbr | safe }} photo archive and {{ "PIA" | abbr | safe }}. Their efforts were invaluable, particularly in digitising, cataloguing, and indexing the collections. Although their names are not listed in the table, I would like to express my gratitude to the following people who played a crucial role: Miriam Kull, Laura Citaku, Andrea Suter, Charlotte Nachtsheim, and Alexandra Tschakert. The project's success owed a great deal to the collective efforts of these individuals and many others who worked behind the scenes, including Véronique Hilfiker, who provided essential administrative support.
+
+
+#### 2.2.2 Photographic Collections/Archives as Anchors {id="subsec:sgv_collections"}
+
+{{ "CAS" | abbr | safe }} has historically been engaged in active collaborations that bridge the academic research and the public sphere, primarily through traditional analogue methods. The {{ "PIA" | abbr | safe }} project was created with the intention of exploring the complexities inherent in both analogue and digital approaches, and to encourage and investigate these collaborative endeavours between academia and the wider public. As such, {{ "PIA" | abbr | safe }} represents a paradigm shift within the scope of projects associated with or supported by {{ "CAS" | abbr | safe }}, facilitating the seamless integration of digital tools to explore multiple facets of participation and engagement. This transformative endeavour embodies a profound exploration of new intersections where scholarly endeavours intertwine with the active involvement of citizens.
+
+{{ "PIA" | abbr | safe }} drew on three collections: one focusing on scientific cartography and titled (*Atlas der Schweizerischen Volkskunde*), a second from the estate of the photojournalist Ernst Brunner (1901--1979), and a third collection consisting of vernacular photography which was owned by the Kreis Family (1860--1970).
+
+**SGV_05 {{ "ASV" | abbr | safe }}**
+
+...
+
+**SGV_10 Kreis Family**
+
+...
+
+**SGV_12 Ernst Brunner**
+
+...
+
+#### 2.2.3 Project Vision {id="subsec:pia_vision"}
+
+Between December 2021 and March 2022, we worked together to develop and finalise a vision for the project[^13]. It includes seven key priorities, or pillars, which were meant to strengthen the interdisciplinary perspectives of {{ "PIA" | abbr | safe }}. Although ambitious, these elements were of paramount importance to us and served as a guiding blueprint for all {{ "PIA" | abbr | safe }} activities. Hereafter is a modified version of the vision[^14] taken from @cornut_annotations_2023 [p. 4].
+
+1.  **Accessibility** by developing open interfaces and offering the     possibility of expanding the archive and turning it into an     instrument of current research that collects and evaluates knowledge     with the participation of other users (Citizen Science).
+
+2.  **Heterogeneity** by making visible where, why and under what     circumstances the objects were created, how they were handled and     what path they have taken to get to and in the archive. We work on     visualisations that take into account the heterogeneous character of     archival materials and make their respective biographies visible.
+
+3.  **Materiality** by conveying the material properties of the objects:     they have front and back sides, inscriptions, traces, development     errors, they are transparent, multi-layered or fabric-covered. They     tell of their origin, use, and peculiarities. We want to make this     knowledge accessible and understandable in digital form. To this     end, we also consider the necessary infrastructure involved in the     creation as part of their narrative: the restoration, the     relocation, the indexing, the storage devices, the research tools,     the display medium, as well as the process of repro-photography.
+
+4.  **Interoperability** as a crucial component and which will be done     by supporting digital means that allow different stakeholders to     freely access and interact with the project's data. Both humans and     machines can use, contribute to, correct and annotate the existing     data in an open and interoperable manner, thus encouraging exchange     and the creation of new knowledge. To do this, we use web-based     standards that are widely adopted in the cultural heritage field.
+
+5.  **Affinities** by leveraging data models and pattern recognition     which can uncover semantic relationships between entities that were     previously incomplete or difficult for users to access. Using     specific interfaces and visualisations, we make it possible to     explore digital assets and discover forms of relationships and     similarities between images.
+
+6.  **{{ "AI" | abbr | safe }}** that     facilitates automated searches for simple image attributes such as     colour, shapes, and localisation of image components. It should also     become possible to recognise texts and object types for extracting     metadata.
+
+7.  **Bias Management** by taking into account that associated metadata     was human-made[^15] and thus is never objective. Collections and     their metadata reflect biases or focus narrowly on selected areas     and perceptions. Machines working on the basis of such data     automatically reproduce the implicit biases in decision-making due     to so-called biased algorithms. Therefore, understanding the data     used for training and the algorithms applied for decision making is     crucial to ensure the integrity of the application of these     technologies in archives. We take ethical issues into account when     using {{ "AI" | abbr | safe }} and     visualisations, because the higher the awareness of a possible bias,     the faster it can be detected or brought up for consideration with     users.
+
+As my thesis is notably concerned with semantic interoperability, **Interoperability** and **Affinities** are of particular importance to my PhD thesis, although I recognise the importance of all pillars. Each of these resonated with me and my fellow PhD Candidates. As we immersed ourselves in the vision of the {{ "PIA" | abbr | safe }} research project, it became a unifying thread that brought us together in our research ambitions. We found that all these priorities within the project spoke to us at different points and provided a strong point of communication and practice in the development of processes, prototypes or interfaces.
+
+#### 2.3 Contribution to PIA and its Relevance to the Thesis {id="#sec:pia-contribution"}
+
+To develop a participatory platform, an open and sustainable technological foundation for facilitating the reuse of {{ "CH" | abbr | safe }} resources was needed [@raemy_applying_2021]. Throughout the {{ "PIA" | abbr | safe }} project, I was mainly involved in the extension of the data infrastructure, the uptake of {{ "IIIF" | abbr | safe }} as well as designing the data model, leveraging Linked Art and {{ "WADM" | abbr | safe }} [@raemy_interlinking_2024]. As a member of Team B, I undertook this PhD as a bridge between the different teams, mostly participating in discussions with the three doctoral candidates from Team A to further develop and agree on the {{ "CAS" | abbr | safe }} data model and with the software developers from my team to discuss the impact of the data model on our evolving --- yet transitory --- infrastructure as well as helping in implementing the {{ "API" | abbr | safe }}s adhering to the {{ "LOUD" | abbr | safe }} design principles.
+
+It was necessary to redesign the data model within the context of a database migration, from Salsah to the {{ "DSP" | abbr | safe }}, that happened between November 2021 and March 2024. This updated version, based on the Knora Base Ontology[^16], corresponded to the needs of the {{ "CAS" | abbr | safe }} archives and to some extent to those of {{ "PIA" | abbr | safe }}, in particular to enable the PhD Candidates in Cultural Anthropology to make more precise assertions, whether in terms of descriptive metadata, or in the ability to link one object to another or to provide comments on these objects in several narrative forms.
+
+Moreover, an assessment of the appropriate technical standards for improved usability of the objects by both humans and machines was carried out, as a basis for extending the capabilities provided by {{ "DaSCH" | abbr | safe }}, such as helping the software developers to implement {{ "SIPI" | abbr | safe }}[^17], a `C++` image server compatible with the {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }} and build services that create {{ "IIIF" | abbr | safe }} Presentation API 3.0 resources.
+
+While the theoretical framework of the thesis extends across the scope of {{ "PIA" | abbr | safe }}, the empirical part focuses on a specific set of findings derived from the research project outlined in , under the title . In this chapter, I discuss the data model and its refinement as well as the generation of custom {{ "IIIF" | abbr | safe }} Manifests during the specific digitisation, cataloguing and indexing efforts that took place throughout the project for the three {{ "CAS" | abbr | safe }} collections (SGV_05, SGV_10 and SGV_12) under investigation, the implementation of {{ "LOUD" | abbr | safe }} standards, and the overall design of the technological underpinnings.
+
+
+#### 2.4 Involvement within the IIIF and Linked Art communities {id="#sec:involvement_iiif_la"}
+
+I must acknowledge the invaluable role that my involvement within the {{ "IIIF" | abbr | safe }} and Linked Art communities has played in shaping my journey as a trained information specialist and an aspiring {{ "DH" | abbr | safe }} practitioner. Being an active participant in both communities has not only broadened my understanding of the latest developments in the field but has also profoundly influenced the trajectory of this dissertation.
+
+I have been involved within the {{ "IIIF" | abbr | safe }} community since October 2016 and the Working Groups Meeting that happened in The Hague[^18]. This significant journey was, in fact, initiated by a recommendation from my first supervisor, Peter Fornaro, during my time as an undergraduate doing an internship at the {{ "DHLab" | abbr | safe }}. Little did I know that this recommendation would lead me to be carrying out a PhD and looking at {{ "IIIF" | abbr | safe }} not only as community-driven standards but as an object of study. Engaging with the {{ "IIIF" | abbr | safe }} community exposed me to cutting-edge advances in image interoperability and standards, and fostered a deeper appreciation for the importance of digital representations of cultural heritage. Through collaborative discussions with experts from diverse backgrounds, I gained new perspectives on the potential of technology to advance humanities research and preserve our collective cultural memory.
+
+Similarly, my involvement in the Linked Art community introduced me to the opportunities offered by {{ "LOUD" | abbr | safe }} and its transformative impact on research discourse. Exposure to Linked Data methodologies and the {{ "CIDOC-CRM" | abbr | safe }} has significantly influenced the way I have structured and interpreted the data in this dissertation, thereby enriching its scholarly breadth and rigour. I started to be actively involved in Linked Art at the beginning of my PhD in 2021, but I was already a by 2020, driven by the efforts of Rob Sanderson, my third supervisor. By mid-2023, I had become a member of the Editorial Board.
+
+The individuals I have met and the knowledge shared in these vibrant communities have deeply informed my approach as a scholar. The invaluable connections and collaborations I have made have expanded my network of fellow researchers, educators, and experts, leading to fruitful discussions that have significantly shaped the research questions addressed in this thesis. The events and workshops organised by these communities have also provided immersive learning experiences, giving me first-hand insights into the tools, technologies and methodologies used in the context of describing and disseminating {{ "CH" | abbr | safe }} data. The dynamic ecosystem of these communities has served as an inspiring backdrop, fostering innovative thinking and encouraging a more holistic approach to my research.
 
 ## 3. Interlinking Cultural Heritage Data {id="cha:literature"}
 
 (...)
 
-Data processing offers great potential for humanities research as Owens [2011] argues: ‘In the end,
-the kinds of questions humanists ask about texts and artifacts are just as relevant to ask of data. While
-the new and exciting prospects of processing data offer humanists a range of exciting possibilities for
-research, humanistic approaches to the textual and artifactual qualities of data also have a considerable
-amount to offer to the interpretation of data’.
+Data processing offers great potential for humanities research as @owens_defining_2011 argues: ‘In the end,
+the kinds of questions humanists ask about texts and artifacts are just as relevant to ask of data. While the new and exciting prospects of processing data offer humanists a range of exciting possibilities for
+research, humanistic approaches to the textual and artifactual qualities of data also have a considerable amount to offer to the interpretation of data’.
 
 ## 4. Exploring Relationships through an Actor-Network Theory Lens {id="cha:theoretical"}
 
 (...)
 
 ## 5. Research Scope and Methodology {id="cha:scope"}
+
+This chapter delineates the Research Scope and Methodology, laying the groundwork for the empirical exploration within this thesis.
+
 
 (...)
 
@@ -1541,7 +1613,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 
 
-
+<p style="font-size: 1.2em; color: gray; text-align: center;">For some reasons, the bibliography duplicates entries and is not yet alphabetically ordered...</p>
 
 
 

@@ -45,7 +45,8 @@ module.exports = function(eleventyConfig) {
         bibliographicStylePath: path.join(__dirname, 'src/utils/apa-no-initials.csl'),
         bibliographicLocalizationPath: path.join(__dirname, 'src/utils/locales-en-GB.xml'),
         bibliographicDataPath: path.join(__dirname, 'src/utils/bib-data.json'),
-        deduplicate: true
+        deduplicate: true,
+        sort: true
     });
 
     eleventyConfig.addTransform("makeUrlsClickable", function(content, outputPath) {
