@@ -20,8 +20,8 @@ An [HTML version of my thesis](thesis.html) will be accessible on this site upon
 💻 Research & Writing: February 2021 - July 2024 <br/>
 📄 Dissertation Submitted: 5 August 2024  <br/>
 🎤 Oral Examination: 18 November 2024  <br/>
-🍾 **Celebration** <br/>
-🎓  Official Publication: TBD
+🍾 Celebration <br/>
+🎓  Official Publication: [HTML](thesis.html) / [PDF](https://doi.org/10.5451/unibas-ep96807)
 
 ## Context
 
