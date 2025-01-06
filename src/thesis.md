@@ -153,15 +153,21 @@ In addition to the core members mentioned in , there were several other individu
 
 Figure 2.1: Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="#fig:sgv-atlas"}
 
-
-
 **SGV_10 Kreis Family**
 
-...
+This collection comprises approximately 20,000 loose photographic objects, where a quarter of them are organised and kept in 93 photo albums --- as illustrated by [Figure 2.2](#fig:sgv-kreis), from a wealthy Basel-based family and spanning from the 1850s to the 1980s. This private collection was acquired by {{ "CAS" | abbr | safe }} in 1991. The collection, which originally arrived in banana cases and was enigmatic due to the lack of clear organisation or accompanying information from the family, posed significant challenges. Despite these initial hurdles, {{ "CAS" | abbr | safe }} undertook meticulous efforts to catalogue and preserve its contents [@felsing_re-imagining_2024 p. 42]. The pictures were taken by studio photographers as well as by family members themselves. The Kreis Family collection represents a typical example of urban bourgeois culture and gives a comprehensive insight into the development of private photography over the course of a century [@pagenstecher_private_2009]. The photographic materials and formats are very diverse, ranging from prints to negatives, small, medium or large format photographs, black and white or colour. The collection also encompasses many photographic techniques, from the one-off daguerreotypes and ferrotypes, to the glass-based negatives that could be reproduced *en masse*, to the modern paper prints. While some of the albums and loose images were restored and digitised during the 2014 project, much of this work was completed during {{ "PIA" | abbr | safe }} and overseen by Murielle Cornut, whose doctoral investigation was centred on the study of photo albums [see @cornut_open_2023].
+
+(...)
+
+Figure 2.2: A photo Album Page from the SGV_10 Collection, Bearing the Following Inscription: *Botanische Excursion ins Wallis, Pfingster 1928*. SGV_10A_00031_015. Kreis Family. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="#fig:sgv-kreis"}
 
 **SGV_12 Ernst Brunner**
 
-...
+SGV_12 is a donation of about 48,000 negatives and 20,000 prints to the {{ "CAS" | abbr | safe }} archives from Ernst Brunner, a self-taught photojournalist, who lived from 1901 to 1979 and who documented mainly in the 1930s and 1940s a wide range of folkloristic themes --- as shown by [Figure 2.3](#fig:sgv-brunner). He is one of the most important photographers of the era and one of the most outstanding visual chroniclers of Swiss society [@pfrunder_ernst_1995]. His photographs show rural lifestyles, but also urban motifs. In his late work, he led the documentation and research on farmhouses in a specific Swiss district, a project initiated by {{ "CAS" | abbr | safe }}. Before Ernst Brunner became an independent photojournalist in the mid-1930s, he worked as a carpenter, influenced by the ideas of the *Bauhaus* and *Neues Bauen* movements. This can also be seen in the aesthetics and formal language of his photography. If all the black and white negatives were digitised and recorded between 2014 and 2018, the digitisation of prints, which is a selection done by Ernst Brunner, was conducted at the end of the {{ "PIA" | abbr | safe }} research project. The latter was supervised by Fabienne Lüthi, whose PhD was about organisational systems and knowledge practices in the Ernst Brunner Collection.
+
+(...)
+
+Figure 2.3: Picture from the SGV_12 Collection Showing Walkers Looking at the Timetable Train. [Wanderer studieren den Fahrplan in der Bahnhofhalle]. Lucerne, 1938. Ernst Brunner. SGV_12N_00716. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="#fig:sgv-brunner"}
 
 #### 2.2.3 Project Vision {id="subsec:pia_vision"}
 
