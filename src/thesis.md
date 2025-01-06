@@ -24,11 +24,11 @@ permalink: "/thesis.html"
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
 
-<p style="font-size: 1.8em; color: gray; text-align: center;">Page in construction</p>
-
 PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' ({{ "G3S" | abbr | safe }}) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)).
 
-This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. PDF Version (e-dissertation) on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807. 
+This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807. 
+
+<p style="font-size: 2em; color: gray; text-align: center;">Page in construction</p>
 
 ##### Author 
 
