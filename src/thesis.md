@@ -1672,14 +1672,3 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 [^371]: The title of the section is an homage to Bruno Latour and a
     passage found in his book ‘We have never been modern’.
-
-
-
-
-<p style="font-size: 1.2em; color: gray; text-align: center;">For some reasons, the bibliography duplicates entries and is not yet alphabetically ordered...</p>
-
-
-
-
-
-

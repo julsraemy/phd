@@ -49,6 +49,34 @@ module.exports = function(eleventyConfig) {
         sort: true
     });
 
+    eleventyConfig.addTransform("handleCitations", function(content, outputPath) {
+        if (outputPath?.endsWith(".html")) {
+            const dom = new JSDOM(content);
+            const bibliography = dom.window.document.querySelector("#bibliography");
+            
+            if (bibliography) {
+                // Get all citation elements
+                const citations = Array.from(bibliography.querySelectorAll("div"));
+                
+                // Create map to deduplicate
+                const uniqueCitations = new Map();
+                citations.forEach(citation => {
+                    uniqueCitations.set(citation.textContent, citation);
+                });
+                
+                // Sort citations alphabetically
+                const sortedCitations = Array.from(uniqueCitations.values())
+                    .sort((a, b) => a.textContent.localeCompare(b.textContent));
+                
+                // Clear and rebuild bibliography
+                bibliography.innerHTML = '';
+                sortedCitations.forEach(citation => bibliography.appendChild(citation));
+            }
+            return dom.serialize();
+        }
+        return content;
+    });
+
     eleventyConfig.addTransform("makeUrlsClickable", function(content, outputPath) {
         // Apply only to HTML files
         if (outputPath && outputPath.endsWith(".html")) {
