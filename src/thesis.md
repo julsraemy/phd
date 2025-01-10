@@ -299,6 +299,7 @@ Here, I aim to establish the indirect territory of my study, as I am situated on
 
 (...)
 
+
 Data processing offers great potential for humanities research as @owens_defining_2011 argues: ‘In the end,
 the kinds of questions humanists ask about texts and artifacts are just as relevant to ask of data. While the new and exciting prospects of processing data offer humanists a range of exciting possibilities for
 research, humanistic approaches to the textual and artifactual qualities of data also have a considerable amount to offer to the interpretation of data’.
