@@ -129,15 +129,55 @@ I undertook my doctoral studies within the scope of the {{ "PIA" | abbr | safe }
 
 The project, divided in three interdisciplinary teams, was led by the University of Basel through the Institute for Cultural Anthropology and European Ethnology[^4] (Team A) and the {{ "DHLab" | abbr | safe }}[^5] in collaboration with the {{ "DBIS" | abbr | safe }} group (Team B) as well as by the {{ "HKB" | abbr | safe }}[^6], an art school and department of the Bern University of Applied Sciences (Team C) [@felsing_community_2023 p. 43]. [Table 2.1](#tab:pia-team) lists the people who contributed to the project, broken down by the three teams and their particular perspectives.
 
-**Table 2.1**: PIA Team Core Members {id="tab:pia-team"}
+<figure id="tab:pia-team" style="text-align: center;">
+  <figcaption><strong>Table 2.1</strong>: PIA Team Core Members</figcaption>
+  
+  <table style="margin: 1em auto;">
+    <thead>
+      <tr>
+        <th><strong>Perspective</strong></th>
+        <th><strong>People</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A) Anthropological</td>
+        <td>
+          Prof. Dr. Walter Leimgruber, Team Leader and Dissertation Supervisor<br/>
+          Dr. Nicole Peduzzi, Photographic Restoration and Digitisation Supervisor<br/>
+          Regula Anklin, Conservation and Restoration Specialist (project partner at Anklin &amp; Assen)<br/>
+          Murielle Cornut, PhD Candidate in Cultural Anthropology<br/>
+          Birgit Huber, PhD Candidate in Cultural Anthropology<br/>
+          Fabienne Lüthi, PhD Candidate in Cultural Anthropology
+        </td>
+      </tr>
+      <tr>
+        <td>B) Technical</td>
+        <td>
+          Prof. Dr. Peter Fornaro, Team Leader and Dissertation Supervisor<br/>
+          Prof. Dr. Heiko Schuldt, Dissertation Supervisor (project partner at the University of Basel)<br/>
+          Dr. Vera Chiquet, Postdoctoral Researcher<br/>
+          Adrian Demleitner, Software Developer (2021-2023)<br/>
+          Fabian Frei, Software Developer (2023-2025)<br/>
+          Christoph Rohrer, Software Developer (2023-2025)<br/>
+          Julien A. Raemy, PhD Candidate in Digital Humanities<br/>
+          Florian Spiess, PhD Candidate in Computer Science
+        </td>
+      </tr>
+      <tr>
+        <td>C) Communicative</td>
+        <td>
+          Dr. Ulrike Felsing, Team Leader and Dissertation Supervisor<br/>
+          Prof. Dr. Tobias Hodel, Dissertation Supervisor (project partner at the University of Bern)<br/>
+          Daniel Schoeneck, Research Fellow<br/>
+          Lukas Zimmer, Designer (project partner at A/Z&amp;T)<br/>
+          Max Frischknecht, PhD Candidate in Digital Humanities
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 
-| **Perspective**       | **People**                                                                                                                                                                                                                                             |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A) Anthropological    | Prof. Dr. Walter Leimgruber, Team Leader and Dissertation Supervisor<br/>Dr. Nicole Peduzzi, Photographic Restoration and Digitisation Supervisor<br/>Regula Anklin, Conservation and Restoration Specialist (project partner at Anklin & Assen)<br/>Murielle Cornut, PhD Candidate in Cultural Anthropology<br/>Birgit Huber, PhD Candidate in Cultural Anthropology<br/>Fabienne Lüthi, PhD Candidate in Cultural Anthropology |
-| B) Technical          | Prof. Dr. Peter Fornaro, Team Leader and Dissertation Supervisor<br/>Prof. Dr. Heiko Schuldt, Dissertation Supervisor (project partner at the University of Basel)<br/>Dr. Vera Chiquet, Postdoctoral Researcher<br/>Adrian Demleitner, Software Developer (2021-2023)<br/>Fabian Frei, Software Developer (2023-2025)<br/>Christoph Rohrer, Software Developer (2023-2025)<br/>Julien A. Raemy, PhD Candidate in Digital Humanities<br/>Florian Spiess, PhD Candidate in Computer Science |
-| C) Communicative      | Dr. Ulrike Felsing, Team Leader and Dissertation Supervisor<br/>Prof. Dr. Tobias Hodel, Dissertation Supervisor (project partner at the University of Bern)<br/>Daniel Schoeneck, Research Fellow<br/>Lukas Zimmer, Designer (project partner at A/Z&T)<br/>Max Frischknecht, PhD Candidate in Digital Humanities                                                                 |
-
-In addition to the core members mentioned in , there were several other individuals who made significant contributions to the {{ "CAS" | abbr | safe }} photo archive and {{ "PIA" | abbr | safe }}. Their efforts were invaluable, particularly in digitising, cataloguing, and indexing the collections. Although their names are not listed in the table, I would like to express my gratitude to the following people who played a crucial role: Miriam Kull, Laura Citaku, Andrea Suter, Charlotte Nachtsheim, and Alexandra Tschakert. The project's success owed a great deal to the collective efforts of these individuals and many others who worked behind the scenes, including Véronique Hilfiker, who provided essential administrative support.
 
 
 #### 2.2.2 Photographic Collections/Archives as Anchors {id="subsec:sgv_collections"}
