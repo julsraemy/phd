@@ -55,22 +55,23 @@ module.exports = function(eleventyConfig) {
             const bibliography = dom.window.document.querySelector("#bibliography");
             
             if (bibliography) {
-                // Get all citation elements
-                const citations = Array.from(bibliography.querySelectorAll("div"));
+                // Get all citations and convert to array immediately
+                const citationsArray = Array.from(bibliography.children);
                 
-                // Create map to deduplicate
+                // Create map with citation text as key for deduplication
                 const uniqueCitations = new Map();
-                citations.forEach(citation => {
-                    uniqueCitations.set(citation.textContent, citation);
+                citationsArray.forEach(citation => {
+                    const citationText = citation.textContent.trim();
+                    if (!uniqueCitations.has(citationText)) {
+                        uniqueCitations.set(citationText, citation.cloneNode(true));
+                    }
                 });
                 
-                // Sort citations alphabetically
-                const sortedCitations = Array.from(uniqueCitations.values())
-                    .sort((a, b) => a.textContent.localeCompare(b.textContent));
-                
-                // Clear and rebuild bibliography
+                // Sort and rebuild bibliography
                 bibliography.innerHTML = '';
-                sortedCitations.forEach(citation => bibliography.appendChild(citation));
+                Array.from(uniqueCitations.values())
+                    .sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim()))
+                    .forEach(citation => bibliography.appendChild(citation));
             }
             return dom.serialize();
         }
