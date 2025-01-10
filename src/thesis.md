@@ -20,6 +20,7 @@ university: "University of Basel"
 date: "2024-11-18"
 doi: "10.5451/unibas-ep96807"
 permalink: "/thesis.html"
+keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model"
 ---
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
@@ -28,7 +29,7 @@ PhD Thesis in Digital Humanities, completed as part of the Graduate School of So
 
 This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807. 
 
-<p style="font-size: 2em; color: gray; text-align: center;">Page in construction (please be patient 😅)</p>
+<p style="font-size: 2em; color: gray; text-align: center;">Page in construction (please be patient ⌛)</p>
 
 ##### Author 
 
@@ -128,7 +129,7 @@ I undertook my doctoral studies within the scope of the {{ "PIA" | abbr | safe }
 
 The project, divided in three interdisciplinary teams, was led by the University of Basel through the Institute for Cultural Anthropology and European Ethnology[^4] (Team A) and the {{ "DHLab" | abbr | safe }}[^5] in collaboration with the {{ "DBIS" | abbr | safe }} group (Team B) as well as by the {{ "HKB" | abbr | safe }}[^6], an art school and department of the Bern University of Applied Sciences (Team C) [@felsing_community_2023 p. 43]. [Table 2.1](#tab:pia-team) lists the people who contributed to the project, broken down by the three teams and their particular perspectives.
 
-**Table 2.1: PIA Team Core Members** {id="tab:pia-team"}
+**Table 2.1**: PIA Team Core Members {id="tab:pia-team"}
 
 | **Perspective**       | **People**                                                                                                                                                                                                                                             |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -145,29 +146,33 @@ In addition to the core members mentioned in , there were several other individu
 
 {{ "PIA" | abbr | safe }} drew on three collections: one focusing on scientific cartography and titled (*Atlas der Schweizerischen Volkskunde*), a second from the estate of the photojournalist Ernst Brunner (1901--1979), and a third collection consisting of vernacular photography which was owned by the Kreis Family (1860--1970).
 
-**SGV_05 {{ "ASV" | abbr | safe }}**
+**SGV_05 {{ "ASV" | abbr | safe }}** consists of 292 maps and 1000 pages of commentary published from 1950 to 1995 --- an example of such a map is shown in [Figure 2.1](#fig:sgv-atlas). This collection was commissioned by the {{ "CAS" | abbr | safe }} to do an extensive survey of the Swiss population in the 1930s and 1940s on many issues pertaining, for instance, to everyday life, local laws, superstitions, celebrations or labour [@weiss_atlas_1940]. The contents were compiled by researchers and by people who were described as [^11]. Questions were asked about everyday habits, community rights, work, trade, superstitions, and many other topics [@schmoll_richard_2009; @schmoll_vermessung_2009]. This collection offers a snapshot of everyday life in Switzerland right before the beginning of a modernisation process that fundamentally changed lifestyles in all areas during the postwar period. A digitised version of the {{ "ASV" | abbr | safe }} would not only allow the results of that time to be enriched with further findings  [@schranz_critical_2021], but would also make transparent how knowledge was generated in cartographic form through a complex process along different types of media and actors. The restoration, digitisation, cataloguing and indexing efforts took all part throughout {{ "PIA" | abbr | safe }} under the supervision of Birgit Huber, who extensively based her doctoral research on this particular collection [see @huber_entdeckung_2023].
 
-{{ "ASV" | abbr | safe }} consists of 292 maps and 1000 pages of commentary published from 1950 to 1995 --- an example of such a map is shown in [Figure 2.1](#fig:sgv-atlas). This collection was commissioned by the {{ "CAS" | abbr | safe }} to do an extensive survey of the Swiss population in the 1930s and 1940s on many issues pertaining, for instance, to everyday life, local laws, superstitions, celebrations or labour [@weiss_atlas_1940]. The contents were compiled by researchers and by people who were described as [^11]. Questions were asked about everyday habits, community rights, work, trade, superstitions, and many other topics [@schmoll_richard_2009; @schmoll_vermessung_2009]. This collection offers a snapshot of everyday life in Switzerland right before the beginning of a modernisation process that fundamentally changed lifestyles in all areas during the postwar period. A digitised version of the {{ "ASV" | abbr | safe }} would not only allow the results of that time to be enriched with further findings  [@schranz_critical_2021], but would also make transparent how knowledge was generated in cartographic form through a complex process along different types of media and actors. The restoration, digitisation, cataloguing and indexing efforts took all part throughout {{ "PIA" | abbr | safe }} under the supervision of Birgit Huber, who extensively based her doctoral research on this particular collection [see @huber_entdeckung_2023].
+<figure id="fig:sgv-atlas" style="margin: 0 auto; text-align: center;">
+  <img 
+    src="data/Figures/ASV_Scan_Karte_Frage_93.png"
+    alt="Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. ASV. CAS. CC BY-NC 4.0"
+    style="width: 100%; display: block; margin: 0 auto;" />
 
-![Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0](data/Figures/ASV_Scan_Karte_Frage_93.png)
+  <figcaption>
+    <strong>Figure 2.1</strong>: 
+    Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0
+  </figcaption>
+</figure>
 
-**Figure 2.1: Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0** {id="fig:sgv-atlas"}
 
-**SGV_10 Kreis Family**
 
-This collection comprises approximately 20,000 loose photographic objects, where a quarter of them are organised and kept in 93 photo albums --- as illustrated by [Figure 2.2](#fig:sgv-kreis), from a wealthy Basel-based family and spanning from the 1850s to the 1980s. This private collection was acquired by {{ "CAS" | abbr | safe }} in 1991. The collection, which originally arrived in banana cases and was enigmatic due to the lack of clear organisation or accompanying information from the family, posed significant challenges. Despite these initial hurdles, {{ "CAS" | abbr | safe }} undertook meticulous efforts to catalogue and preserve its contents [@felsing_re-imagining_2024 p. 42]. The pictures were taken by studio photographers as well as by family members themselves. The Kreis Family collection represents a typical example of urban bourgeois culture and gives a comprehensive insight into the development of private photography over the course of a century [@pagenstecher_private_2009]. The photographic materials and formats are very diverse, ranging from prints to negatives, small, medium or large format photographs, black and white or colour. The collection also encompasses many photographic techniques, from the one-off daguerreotypes and ferrotypes, to the glass-based negatives that could be reproduced *en masse*, to the modern paper prints. While some of the albums and loose images were restored and digitised during the 2014 project, much of this work was completed during {{ "PIA" | abbr | safe }} and overseen by Murielle Cornut, whose doctoral investigation was centred on the study of photo albums [see @cornut_open_2023].
-
-(...)
-
-**Figure 2.2: A photo Album Page from the SGV_10 Collection, Bearing the Following Inscription: *Botanische Excursion ins Wallis, Pfingster 1928*. SGV_10A_00031_015. Kreis Family. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0** {id="fig:sgv-kreis"}
-
-**SGV_12 Ernst Brunner**
-
-SGV_12 is a donation of about 48,000 negatives and 20,000 prints to the {{ "CAS" | abbr | safe }} archives from Ernst Brunner, a self-taught photojournalist, who lived from 1901 to 1979 and who documented mainly in the 1930s and 1940s a wide range of folkloristic themes --- as shown by [Figure 2.3](#fig:sgv-brunner). He is one of the most important photographers of the era and one of the most outstanding visual chroniclers of Swiss society [@pfrunder_ernst_1995]. His photographs show rural lifestyles, but also urban motifs. In his late work, he led the documentation and research on farmhouses in a specific Swiss district, a project initiated by {{ "CAS" | abbr | safe }}. Before Ernst Brunner became an independent photojournalist in the mid-1930s, he worked as a carpenter, influenced by the ideas of the *Bauhaus* and *Neues Bauen* movements. This can also be seen in the aesthetics and formal language of his photography. If all the black and white negatives were digitised and recorded between 2014 and 2018, the digitisation of prints, which is a selection done by Ernst Brunner, was conducted at the end of the {{ "PIA" | abbr | safe }} research project. The latter was supervised by Fabienne Lüthi, whose PhD was about organisational systems and knowledge practices in the Ernst Brunner Collection.
+**SGV_10 Kreis Family** comprises approximately 20,000 loose photographic objects, where a quarter of them are organised and kept in 93 photo albums --- as illustrated by [Figure 2.2](#fig:sgv-kreis), from a wealthy Basel-based family and spanning from the 1850s to the 1980s. This private collection was acquired by {{ "CAS" | abbr | safe }} in 1991. The collection, which originally arrived in banana cases and was enigmatic due to the lack of clear organisation or accompanying information from the family, posed significant challenges. Despite these initial hurdles, {{ "CAS" | abbr | safe }} undertook meticulous efforts to catalogue and preserve its contents [@felsing_re-imagining_2024 p. 42]. The pictures were taken by studio photographers as well as by family members themselves. The Kreis Family collection represents a typical example of urban bourgeois culture and gives a comprehensive insight into the development of private photography over the course of a century [@pagenstecher_private_2009]. The photographic materials and formats are very diverse, ranging from prints to negatives, small, medium or large format photographs, black and white or colour. The collection also encompasses many photographic techniques, from the one-off daguerreotypes and ferrotypes, to the glass-based negatives that could be reproduced *en masse*, to the modern paper prints. While some of the albums and loose images were restored and digitised during the 2014 project, much of this work was completed during {{ "PIA" | abbr | safe }} and overseen by Murielle Cornut, whose doctoral investigation was centred on the study of photo albums [see @cornut_open_2023].
 
 (...)
 
-**Figure 2.3: Picture from the SGV_12 Collection Showing Walkers Looking at the Timetable Train. [Wanderer studieren den Fahrplan in der Bahnhofhalle]. Lucerne, 1938. Ernst Brunner. SGV_12N_00716. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0** {id="fig:sgv-brunner"}
+**Figure 2.2**: A photo Album Page from the SGV_10 Collection, Bearing the Following Inscription: *Botanische Excursion ins Wallis, Pfingster 1928*. SGV_10A_00031_015. Kreis Family. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="fig:sgv-kreis"}
+
+**SGV_12 Ernst Brunner** is a donation of about 48,000 negatives and 20,000 prints to the {{ "CAS" | abbr | safe }} archives from Ernst Brunner, a self-taught photojournalist, who lived from 1901 to 1979 and who documented mainly in the 1930s and 1940s a wide range of folkloristic themes --- as shown by [Figure 2.3](#fig:sgv-brunner). He is one of the most important photographers of the era and one of the most outstanding visual chroniclers of Swiss society [@pfrunder_ernst_1995]. His photographs show rural lifestyles, but also urban motifs. In his late work, he led the documentation and research on farmhouses in a specific Swiss district, a project initiated by {{ "CAS" | abbr | safe }}. Before Ernst Brunner became an independent photojournalist in the mid-1930s, he worked as a carpenter, influenced by the ideas of the *Bauhaus* and *Neues Bauen* movements. This can also be seen in the aesthetics and formal language of his photography. If all the black and white negatives were digitised and recorded between 2014 and 2018, the digitisation of prints, which is a selection done by Ernst Brunner, was conducted at the end of the {{ "PIA" | abbr | safe }} research project. The latter was supervised by Fabienne Lüthi, whose PhD was about organisational systems and knowledge practices in the Ernst Brunner Collection.
+
+(...)
+
+**Figure 2.3**: Picture from the SGV_12 Collection Showing Walkers Looking at the Timetable Train. [Wanderer studieren den Fahrplan in der Bahnhofhalle]. Lucerne, 1938. Ernst Brunner. SGV_12N_00716. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="fig:sgv-brunner"}
 
 Whereas for each of the PhD Candidates in Cultural Anthropology, a particular collection was assigned to them and its content was to varying degrees part of their subject of study, this was not exactly the same for the PhD Candidates in {{ "DH" | abbr | safe }}, including myself, and in Computer Science. Put differently, we had relative leeway in terms of what interested us in each or all of these three photographic collections. In my case, I briefly explain my contribution to the project more in and then in as part of the empirical portion of my thesis focusing on the deployment of {{ "LOUD" | abbr | safe }} specifications using the three {{ "CAS" | abbr | safe }} photographic collections.
 
