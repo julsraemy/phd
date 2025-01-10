@@ -50,32 +50,40 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addTransform("handleCitations", function(content, outputPath) {
-        if (outputPath?.endsWith(".html")) {
-            const dom = new JSDOM(content);
-            const bibliography = dom.window.document.querySelector("#bibliography");
+        if (!outputPath?.endsWith(".html")) return content;
+        
+        const dom = new JSDOM(content);
+        const document = dom.window.document;
+        const bibliography = document.querySelector("#bibliography");
+        
+        if (bibliography) {
+            const citationsArray = Array.from(bibliography.children);
+            const uniqueCitations = new Map();
             
-            if (bibliography) {
-                // Get all citations and convert to array immediately
-                const citationsArray = Array.from(bibliography.children);
-                
-                // Create map with citation text as key for deduplication
-                const uniqueCitations = new Map();
-                citationsArray.forEach(citation => {
-                    const citationText = citation.textContent.trim();
+            // Create bibliography entries with IDs
+            citationsArray.forEach((citation, index) => {
+                const citationText = citation.textContent.trim();
+                if (citationText && !citationText.startsWith('Bibliography')) {
+                    const authorYear = citationText.match(/^([^,]+),\s*([^(.]+)/);
+                    if (authorYear) {
+                        const [_, author, year] = authorYear;
+                        const cleanId = `${author.replace(/[^a-zA-Z]/g, '')}${year.trim()}`;
+                        citation.id = cleanId;
+                    }
                     if (!uniqueCitations.has(citationText)) {
                         uniqueCitations.set(citationText, citation.cloneNode(true));
                     }
-                });
-                
-                // Sort and rebuild bibliography
-                bibliography.innerHTML = '';
-                Array.from(uniqueCitations.values())
-                    .sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim()))
-                    .forEach(citation => bibliography.appendChild(citation));
-            }
-            return dom.serialize();
+                }
+            });
+    
+            // Sort and rebuild bibliography
+            bibliography.innerHTML = '<h2 id="bib-Bibliography">Bibliography</h2>';
+            Array.from(uniqueCitations.values())
+                .sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim()))
+                .forEach(citation => bibliography.appendChild(citation));
         }
-        return content;
+        
+        return dom.serialize();
     });
 
     eleventyConfig.addTransform("makeUrlsClickable", function(content, outputPath) {
