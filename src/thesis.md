@@ -32,7 +32,7 @@ This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesi
 
 ##### Author 
 
-- Julien A. Raemy (University of Basel) <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
+- Dr. Julien A. Raemy (University of Basel) <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
 https://orcid.org/0000-0002-4711-5759
 </a>
@@ -151,7 +151,7 @@ In addition to the core members mentioned in , there were several other individu
 
 ![Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0](data/Figures/ASV_Scan_Karte_Frage_93.png)
 
-Figure 2.1: Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="#fig:sgv-atlas"}
+**Figure 2.1: Map from the SGV_05 Collection Relating to Question 93 Showing Walks and Excursions at Pentecost. {{ "ASV" | abbr | safe }}. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0** {id="fig:sgv-atlas"}
 
 **SGV_10 Kreis Family**
 
@@ -159,7 +159,7 @@ This collection comprises approximately 20,000 loose photographic objects, where
 
 (...)
 
-Figure 2.2: A photo Album Page from the SGV_10 Collection, Bearing the Following Inscription: *Botanische Excursion ins Wallis, Pfingster 1928*. SGV_10A_00031_015. Kreis Family. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="#fig:sgv-kreis"}
+**Figure 2.2: A photo Album Page from the SGV_10 Collection, Bearing the Following Inscription: *Botanische Excursion ins Wallis, Pfingster 1928*. SGV_10A_00031_015. Kreis Family. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0** {id="fig:sgv-kreis"}
 
 **SGV_12 Ernst Brunner**
 
@@ -167,7 +167,13 @@ SGV_12 is a donation of about 48,000 negatives and 20,000 prints to the {{ "CAS"
 
 (...)
 
-Figure 2.3: Picture from the SGV_12 Collection Showing Walkers Looking at the Timetable Train. [Wanderer studieren den Fahrplan in der Bahnhofhalle]. Lucerne, 1938. Ernst Brunner. SGV_12N_00716. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0 {id="#fig:sgv-brunner"}
+**Figure 2.3: Picture from the SGV_12 Collection Showing Walkers Looking at the Timetable Train. [Wanderer studieren den Fahrplan in der Bahnhofhalle]. Lucerne, 1938. Ernst Brunner. SGV_12N_00716. {{ "CAS" | abbr | safe }}. CC BY-NC 4.0** {id="fig:sgv-brunner"}
+
+Whereas for each of the PhD Candidates in Cultural Anthropology, a particular collection was assigned to them and its content was to varying degrees part of their subject of study, this was not exactly the same for the PhD Candidates in {{ "DH" | abbr | safe }}, including myself, and in Computer Science. Put differently, we had relative leeway in terms of what interested us in each or all of these three photographic collections. In my case, I briefly explain my contribution to the project more in and then in as part of the empirical portion of my thesis focusing on the deployment of {{ "LOUD" | abbr | safe }} specifications using the three {{ "CAS" | abbr | safe }} photographic collections.
+
+Florian Spiess focused on the use of {{ "VR" | abbr | safe }} through vitrivr, a multimedia retrieval system developed by the {{ "DBIS" | abbr | safe }} research group at the Department of Mathematics and Computer Science [@spiess_multimodal_2022; @spiess_forschung_2023; @spiess_exploring_2024]. His work included experiments with {{ "PIA" | abbr | safe }}-related collections, such as the creation of virtual galleries clustered according to content-based similarity [see @peterhans_automatic_2022]. In the case of Max Frischknecht, his doctoral research centred on generative design[^12], a methodology to visualise dynamic cultural archives. He mostly worked on the {{ "ASV" | abbr | safe }} collection and on a mapping tool which is a cartographic visualisation designed to explore the {{ "CAS" | abbr | safe }} photographic archives [see @frischknecht_generating_2022; @eggmann_digitalisierung_2024].
+
+It should also be mentioned that not only did we use the three collections of the {{ "CAS" | abbr | safe }} photographic archives within the project, but that both formal and informal meetings took place most commonly within the photographic archives at the Spalenvorstadt premises in the old Gewerbemuseum and later either at the on Allschwilerstrasse, though less frequently, or at Rheinsprung where the Institute for Cultural Anthropology and European Ethnology is located. This meant that there was a strong and sometimes blurred entanglement between those involved in the archives and the {{ "PIA" | abbr | safe }} core team members.
 
 #### 2.2.3 Project Vision {id="subsec:pia_vision"}
 
