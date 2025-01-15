@@ -420,7 +420,7 @@ By shifting our focus to the sphere of humanities data, we broaden our scope to 
 
 {{ "CH" | abbr | safe }} data usually refers to information about cultural artefacts, sites, and practices that hold historical or cultural significance. Humanities data encompasses information about human culture, history, and society, including literature, philosophy, art, and language [@tasovac_cultural_2020]. Both often involve ethical considerations, such as ownership, access, and preservation, and require a comprehensive understanding of their various meanings and values [@ioannides_towards_2019]. Moreover, @schoch_big_2013 explains that data in the humanities, such as text and visual elements, have unique qualities. While these analogue forms could be considered data, they lack the ability to be analysed computationally as they are non-discrete. The semiotic nature of language, text and art introduces dimensions tied to meaning and context, making the term ‘data’ problematic. Critics question its use because it conflicts with humanistic principles such as contextual interpretation and the subjective position of the scholar.
 
-@schoch_big_2013 distinguish data in the humanities further into two core types: smart and big data. The former tends to be small in volume, carefully curated, but harder to scale such as digital editions. As for the latter, it describes voluminous and varied data and it loosely relies on the three $Vs$ by @laney_3d_2001: volume, velocity and variety (see [3.3.1.2](#subsubsec:big_data)). Yet, big data in the humanities differs significantly from other fields as it rarely requires rapid real-time analysis, is less focused on handling massive volumes, and instead deals with diverse, unstructured data sources. @schoch_big_2013 concludes by arguing that ‘I believe the most interesting challenge for the next years when it comes to dealing with data in the humanities will be to actually transgress this opposition of smart and big data. What we need is bigger smart data or smarter big data, and to create and use it, we need to make use of new methods’.
+@schoch_big_2013 distinguish data in the humanities further into two core types: smart and big data. The former tends to be small in volume, carefully curated, but harder to scale such as digital editions. As for the latter, it describes voluminous and varied data and it loosely relies on the three &bigvee; by @laney_3d_2001: volume, velocity and variety (see [3.3.1.2](#subsubsec:big_data)). Yet, big data in the humanities differs significantly from other fields as it rarely requires rapid real-time analysis, is less focused on handling massive volumes, and instead deals with diverse, unstructured data sources. @schoch_big_2013 concludes by arguing that ‘I believe the most interesting challenge for the next years when it comes to dealing with data in the humanities will be to actually transgress this opposition of smart and big data. What we need is bigger smart data or smarter big data, and to create and use it, we need to make use of new methods’.
 
 Data processing offers great potential for humanities research as @owens_defining_2011 argues: ‘In the end, the kinds of questions humanists ask about texts and artifacts are just as relevant to ask of data. While the new and exciting prospects of processing data offer humanists a range of exciting possibilities for research, humanistic approaches to the textual and artifactual qualities of data also have a considerable amount to offer to the interpretation of data’.
 
@@ -511,7 +511,20 @@ This subsection offers insights into the importance of metadata in {{ "CH" | abb
 
 #### 3.2.1 Data about Data {id="subsec:metadata-introduction"}
 
-(...)
+For curating {{ "CH" | abbr | safe }} resources, metadata[^31], ‘data about data’, is probably one of the key concept that needs to be introduced here. Metadata permeate our digital and physical landscapes, playing a vital role in organising, describing and managing a vast array of information. Rather than being confined to a specific domain, they are ubiquitous and pervade many aspects of our everyday lives [@riley_understanding_2017 pp. 2-3]. From websites and databases to social media platforms and online marketplaces, metadata adds meaning to data, enabling users to understand their context, relevance and provenance. As an example, [Figure 3.1](#fig:meta-metadata) shows the metadata of a book[^32].
+
+<figure id="fig:meta-metadata" style="margin: 0 auto; text-align: center;">
+  <img 
+    src="data/Figures/meta-metadata.png"
+    alt="Snapshot from the Swisscovery Platform Showing the Bibliographic Record of @zeng_metadata_2022"
+    style="width: 70%; display: block; margin: 0 auto;" />
+
+  <figcaption>
+    <strong>Figure 3.1</strong>: Snapshot from the Swisscovery Platform Showing the Bibliographic Record of @zeng_metadata_2022
+  </figcaption>
+</figure>
+
+
 
 #### 3.2.2 Types and Functions {id="subsec:types-functions"}
 
@@ -784,11 +797,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 [^30]: Rijksmuseum: <https://www.rijksmuseum.nl/>
 
-[^31]: @zeng_metadata_2022 [p. 11] articulate that . In the context of
-    this thesis, I have chosen to favour the plural form of (meta)data.
-    However, I acknowledge that I may occasionally use the singular form
-    when referring to the overarching concepts or when quoting
-    references verbatim.
+[^31]: @zeng_metadata_2022 [p. 11] articulate that ‘as with “data”, metadata can be either singular or plural. It is used as singular in the sense of a kind of data; however, in plural form, the term refers to things one can count’. In the context of this thesis, I have chosen to favour the plural form of (meta)data. However, I acknowledge that I may occasionally use the singular form when referring to the overarching concepts or when quoting references verbatim.
 
 [^32]: The snapshot of this bibliographic record was taken from
     <https://swisscovery.slsp.ch/permalink/41SLSP_UBS/11jfr6m/alma991170746542405501>.
