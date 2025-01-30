@@ -1231,14 +1231,149 @@ In summary, the {{ "FAIR" | abbr | safe }} data principles comprise four key pri
 
 ##### 3.3.2.4 CARE Principles for Indigenous Data Governance {id="subsubsec:care"}
 
-(...)
+The {{ "CARE" | abbr | safe }}[^102] Principles were developed to protect Indigenous data sovereignty [@carroll_care_2020] as complementary guidelines to {{ "FAIR" | abbr | safe }}. The principles are as follows:
+
+- C. **Collective Benefit**:   Data should be collected and used in a way that benefits the     community as a whole, rather than just individuals or organisations.
+- A. **Authority to Control**:   Indigenous communities should have control over their own data,     including how it is collected, stored, and used.
+- R. **Responsibility**:   Those who collect and use Indigenous data have a responsibility to     ensure that it is used ethically and responsibly.
+- E. **Ethics**:   Indigenous data governance should be guided by ethical principles     that reflect the values and beliefs of the community.
+
+The concept of adhering to the {{ "CARE" | abbr | safe }} principles is vital for promoting equitable data practices. {{ "CARE" | abbr | safe }} are built upon existing data reuse principles like {{ "FAIR" | abbr | safe }} but also integrate the efforts of Indigenous-led networks focused on Indigenous data governance and research control. While {{ "FAIR" | abbr | safe }} emphasise data accessibility, {{ "CARE" | abbr | safe }} go beyond that by considering actions aligned with the needs and intentions of individuals and communities connected to the data [@carroll_operationalizing_2021]. By embedding CARE-informed data practices into project design, the ethical and responsible use of Indigenous data can be enabled to improve inclusive policies and services [@robinson_caring_2021].
 
 ##### 3.3.2.5 Collections as Data {id="subsubsec:collections-data"}
 
-(...)
+In the same vein of {{ "FAIR" | abbr | safe }} and {{ "CARE" | abbr | safe }} should be mentioned the that originated from a meeting of {{ "GLAM" | abbr | safe }} practitioners in Vancouver, Canada in April 2023 that builds on the [^103] done in 2017 [@padilla_always_2017]. The statement highlights the growing global engagement with collections as data. It promotes the responsible computational use of collections to empower memory, knowledge and data practitioners. It emphasises ethical concerns, openness and participatory design, as well as the need for transparent documentation and sustainable infrastructure. The statement, comprising of ten recommendations, also recognises the potential impact of data consumption by {{ "AI" | abbr | safe }}, and the importance of considering climate impacts and exploitative labour [@padilla_vancouver_2023]. More specifically, the following ten principles have been established for anyone with (meta)data stewardship responsibilities:
+
+1.  Collections as Data development aims to encourage computational use     of digitised and born digital collections.
+2.  Collections as Data stewards are guided by ongoing ethical     commitments.
+3.  Collections as Data stewards aim to lower barriers to use.
+4.  Collections as Data designed for everyone serve no one.
+5.  Shared documentation helps others find a path to doing the work.
+6.  Collections as Data should be made openly accessible by default,     except in cases where ethical or legal obligations preclude it.
+7.  Collections as Data development values interoperability.
+8.  Collections as Data stewards work transparently in order to develop     trustworthy, long-lived collections.
+9.  Data as well as the data that describe those data are considered in     scope.
+10. The development of collections as data is an ongoing process and     does not necessarily conclude with a final version.
+
+In a final report, @padilla_collections_2023 underscore the transformative potential of the Collections as Data paradigm, particularly in the context of {{ "GLAM" | abbr | safe }}s. The principles and case studies highlighted in the report offer a roadmap for organisations to responsibly and ethically engage with their collections in the digital era. It is imperative to recognise that the journey towards fully realising its potential is ongoing and requires a commitment to continual evaluation and adaptation. This involves not only adhering to established principles but also being responsive to emerging technological trends, societal changes, and evolving ethical considerations. The role of {{ "AI" | abbr | safe }} in shaping the future of Collections as Data is particularly noteworthy. As {{ "AI" | abbr | safe }} continues to advance, it offers both opportunities and challenges in terms of enhancing access and insights into collections while also necessitating careful consideration of ethical implications, such as bias and privacy. Furthermore, the growing emphasis on climate impacts and sustainable practices in data stewardship is a crucial aspect that aligns with global efforts towards environmental responsibility.
+
+Building on the discussion of the principles and initiatives surrounding Collections as Data, an in-depth analysis was carried out to assess the compliance of repositories, projects and platforms from six organisations with the checklist, namely the British Library[^104], the National Library of Scotland[^105], {{ "LoC" | abbr | safe }}[^106], the Royal Danish Library[^107], Meemoo[^108], and the Miguel de Cervantes Virtual Library[^109] [@candelaChecklistPublishCollections2023a p. 13]. Although several institutions have opened access to their collections through {{ "API" | abbr | safe }}s, such as {{ "IIIF" | abbr | safe }}s capabilities, challenges remain in fully embracing the Collections as Data principles. Barriers include resource limitations and the balance between making collections widely available through simplified access and downloads. In addition, different items within the checklist may require different levels of maturity and prioritisation, often requiring collaborative efforts. Initial results show that the checklist is a valuable tool for identifying relevant issues for individual institutions, although prioritisation may vary according to context and user needs. Collaborative initiatives between institutions are underway to improve the practical implementation and user experience, particularly in the structuring of datasets [@candelaChecklistPublishCollections2023a pp. 20-21].
+
+While there are still relatively few examples of institutions that have fully adopted the Collections as Data principles, several case studies -- such as at the Royal Library of Belgium, which is materialised through DATA-KBR-BE[^110] [see @chambers_collections_2021] -- and initiatives offer valuable insights. For instance, @candelaChecklistPublishCollections2023a [p. 7] outline a checklist tailored to {{ "GLAM" | abbr | safe }} institutions to publish Collections as Data[^111]. They devised 11 criteria, including the provision of clear licensing for dataset reuse without restrictions, citation guidelines, comprehensive documentation, the use of public platforms, sharing examples of dataset use, structuring the data, providing machine-readable metadata, participation in collaborative edition platforms, offering {{ "API" | abbr | safe }} access to the repository, developing a dedicated portal page, and defining clear terms of use. These recommendations serve as a structured framework to enhance accessibility, usability, and interoperability, fostering engagement with cultural and historical collections.
+
+A further notable advancement that has been done in the area of publishing Collections as Data is the contribution of @alkemade_datasheets_2023. They have outlined a series of recommendations for developing datasheets or modular templates designed for {{ "CH" | abbr | safe }} datasets. This initiative holds significant importance for {{ "GLAM" | abbr | safe }}s, facilitating the structured organisation of their data, notably for seamless integration with {{ "ML" | abbr | safe }} tools where they propose to provide a description of how content have been influenced by digitisation. Their work highlights the need for documentation, focusing on tailored metrics, biases, and system integration. The proposed datasheets aim to detail the creation, selection, and digitisation processes, enhancing transparency and addressing the distinctive challenges of digital {{ "CH" | abbr | safe }} data. Emphasising a narrative approach to articulating biases, the author acknowledges the complex historical context and ethical implications.
+
+### 3.4 Open Web Platform and Linked Data {id="sec:linkeddata"}
+
+The web, created at the {{ "CERN" | abbr | safe }} in 1989 by Tim Berners-Lee[^112], has enabled scholars and {{ "CH" | abbr | safe }} practitioners to access and analyse vast amounts of data in new ways, thereby opening the door to the creation of federated datasets and {{ "KG" | abbr | safe }}s. At the heart of this transformation are two pivotal concepts: the Open Web Platform and Linked Data. The Open Web Platform refers to a set of technologies and standards that allow for the creation and sharing of content on the web. Linked Data, on the other hand, refers to a set of principles and technologies that enable the publication and interlinking of data on the web, creating a web of data that can be easily navigated and used by humans and machines alike.
+
+Recognising the Web as an environment that supports a wide range of applications beyond traditional browser-based interactions is becoming increasingly important. Platforms such as social networks like Facebook, Twitter, Instagram, and Mastodon, streaming services such as Netflix and Disney+, as well as cloud-based applications, all leverage web technologies even when not accessed via a traditional web browser. These platforms are integral to the web ecosystem, highlighting the web's role as a foundational platform for diverse digital interactions and data exchanges.
+
+In the context of the Internet, it is important to note that much of what we know today about it is the result of developments by many individuals and organisations. However, a significant milestone was the development of the TCP/IP protocol by Vinton Cerf and Robert E. Kahn in the 1970s [see @cerf_protocol_1974]. This protocol became the standard networking protocol on the ARPANET in 1983, marking the beginning of the modern Internet [@leiner_past_1997]. Understanding the differentiation between the Internet and the web is crucial. The former is a global network of interconnected computers that communicate using Internet protocols, forming the infrastructure that enables online communication. The web, or World Wide Web, is a service built on top of the Internet, leveraging {{ "HTTP" | abbr | safe }} to transmit data. While the Internet provides the underlying connectivity, the web offers a way to access and share information through websites and links. This differentiation is vital in comprehending how the web, as a part of the Internet, has evolved into a versatile and ubiquitous platform supporting a wide array of applications.
+
+This section, divided into five subsections, explores some of the key concepts underlying the Open Web Platform and Linked Data, and their applications in the {{ "CH" | abbr | safe }} field.
+
+First, [3.4.1](#sub:webarchi) examines the foundational principles and technologies that underpin the Open Web Platform. This includes an overview of principles, protocols such as {{ "HTTP" | abbr | safe }}, and the use of {{ "URI" | abbr | safe }}s to identify resources on the web. This part also explores the different types of web architectures such as the client-server model or the concept of web services, which allow for the exchange of data and functionality across different applications and systems.
+
+[3.4.2](#sub:semanticweb) explores the vision of the web as a giant, interconnected database of structured data that can be queried and manipulated by machines. The subsection examines the technologies and standards that make up the Semantic Web, including {{ "RDF" | abbr | safe }}, {{ "RDFS" | abbr | safe }}, {{ "OWL" | abbr | safe }}, and {{ "SPARQL" | abbr | safe }}.
+
+Subsection [3.4.3](#sub:ldprinciples) examines the set of principles designed to promote the publication and interlinking of data on the web. The subsection explores the four principles of Linked Data - using {{ "URI" | abbr | safe }}s to identify resources, using {{ "HTTP" | abbr | safe }} to retrieve resources, providing machine-readable data, and linking data to other data.
+
+Subsection [3.4.4](#sub:5star) examines the set of criteria for publishing data on the web in a way that makes it easily discoverable, accessible, and usable. The subsection describes the Five-Star and Seven-Star deployment schemes, which include criteria such as providing data in a structured format, using open standards, and providing a machine-readable license.
+
+Finally, [3.4.5](#sub:5star) explores the specific application of {{ "LOD" | abbr | safe }} in the {{ "CH" | abbr | safe }} domain. The subsection provides examples of how {{ "CHI" | abbr | safe }}s such as museums, libraries, and archives are using Linked Data to make their datasets more accessible and discoverable on the web.
+
+Overall, this section provides a comprehensive overview of the key concepts and technologies underlying the web as an open and linked platform, and their applications in the {{ "CH" | abbr | safe }} field and more broadly for any scientific endeavours as that the web started with [@nelson_d-lib_2022 citing @berners-lee_worldwideweb_1991]. Through exploring these concepts, we can gain a deeper understanding of how the web is evolving into a more open, interconnected, and data-driven platform, and how this evolution is transforming the way we access, use, and share information.
+
+#### 3.4.1 Web Architecture {id="sub:webarchi"}
+
+The web architecture has played a very important role in the development of scholarly research and {{ "CH" | abbr | safe }} practices, enabling new forms of collaboration, data sharing and interdisciplinary research. By providing a standardised and interoperable framework based on open standards for sharing and accessing data [@berners-lee_long_2010], it has facilitated the open exchange of information, even if citation, i.e. has always been an issue, particularly for scholarly outputs [@lagoze_web-based_2012 p. 2223].
+
+Web architecture is a conceptual framework led by the {{ "W3C" | abbr | safe }} that underpins and sustain the World Wide Web [@jacobs_architecture_2004], created to be [@berners-lee_world-wide_1994]. It encompasses the architectural bases of identification, interaction, and format -- also referred to as representation where {{ "HTTP" | abbr | safe }} provides the technical mechanisms for transmitting and accessing information.
+
+The web architecture is based on a set of identifiers, such as {{ "URI" | abbr | safe }}s, which are used to uniquely identify resources on the web. These identifiers play a crucial role in enabling users to find, access, and share information on the web, and they help to ensure that web-based systems are both user-friendly and interoperable. Here, it is valuable to distinguish between three key concepts: {{ "URI" | abbr | safe }}, {{ "URL" | abbr | safe }}, and {{ "URN" | abbr | safe }}, as a {{ "URI" | abbr | safe }} can be further classified as a locator, a name, or both [@berners-lee_uniform_2005 p. 7] -- as shown in [Figure 3.13](#fig:uri-url-urn).
+
+- **{{ "URI" | abbr | safe }}**:   It is the overarching term encompassing both     {{ "URL" | abbr | safe }}s and     {{ "URN" | abbr | safe }}s. It serves     as a generic identifier for any resource on the web.     {{ "URI" | abbr | safe }}s can be used     to uniquely identify resources, regardless of the specific naming or     addressing scheme employed.
+- **{{ "URL" | abbr | safe }}**:   It is a subset of {{ "URI" | abbr | safe }}s and refers to web addresses that     specify not only the resource's identity but also its location or     how to access it. {{ "URL" | abbr | safe }}s often include the protocol (such as     {{ "HTTP" | abbr | safe }}) and the     resource's specific location (e.g., a domain and path).
+- **{{ "URN" | abbr | safe }}**:   It is another subset of {{ "URI" | abbr | safe }}s that emphasise the resource's identity     rather than its location or how to access it.     {{ "URN" | abbr | safe }}s are designed     to be persistent and unique, making them suitable for resources that     are intended to be recognised and referenced over time. While URLs     may change as resources move or evolve, {{ "URN" | abbr | safe }}s should remain constant.
+
+<figure id="fig:uri-url-urn" style="text-align: center;">
+  <img
+    src="data/Figures/uri-url-url.png"
+    alt="Overlap and Difference between URI, URL, and URN"
+    style="max-width: 85%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.13:</strong> Overlap and Difference between URI, URL, and URN
+  </figcaption>
+</figure>
+
+Interaction between web agents, i.e. a person or a piece of software acting in the information space on behalf of a person, entity or process, over a network involves {{ "URI" | abbr | safe }}s, messages and data. Web protocols, such as {{ "HTTP" | abbr | safe }}, are message-based. Messages can contain data, resource metadata, message data, and even metadata about the metadata of the message, typically for integrity checking [@jacobs_architecture_2004].
+
+The Web Architecture allows for multiple Representations of a Resource. In this context, a data format specification becomes pivotal, encapsulating an agreement on how to correctly interpret the representation of data, as articulated by [@jacobs_architecture_2004]:
+
+> A data format specification embodies an agreement on the correct interpretation of representation data. The first data format used on the Web was Hypertext Markup Language (HTML). Since then, data formats have grown in number. Web architecture does not constrain which data formats content providers can use. This flexibility is important because there is constant evolution in applications, resulting in new data formats and refinements of existing formats. Although Web architecture allows for the deployment of new data formats, the creation and deployment of new formats (and agents able to handle them) is expensive. Thus, before inventing a new data format (or “meta” format such as XML), designers should carefully consider re-using one that is already available.
+
+Access can also be mediated by content negotiation, which is a mechanism employed in web communication to determine the most appropriate representation of a resource to be sent to a client based on the client's preferences and the available representations [@lagoze_web-based_2012 pp. 2223-2224].
+
+At its core, web architecture is based on a set of architectural principles that guide the design and development of web-based systems and applications. These principles include concepts such as orthogonality, extensibility, error handling, and protocol-based interoperability. Orthogonality allows the evolution of identification, interaction, and representation independently. Extensibility is key, enabling technology to adapt without compromising interoperability. Error handling addresses diverse errors, from predictable to unpredictable, ensuring seamless correction. Finally, the web's protocol-based interoperability fosters communication across varied contexts, outlasting entities and facilitating the longevity of shared technology [@jacobs_architecture_2004]. Overall, these principles help to ensure that the web remains robust, reliable, and flexible.
+
+Web architectures can be categorised into several types, each offering a specific approach to designing and structuring web-based systems. Here, I will focus on the following three types of architectures -- shown in [Figure 3.14](#fig:webarchi-types): the client-server model, the three-tier model, and {{ "SOA" | abbr | safe }}.
+
+<figure id="fig:webarchi-types" style="text-align: center;">
+  <img
+    src="data/Figures/webarchi-types.png"
+    alt="Types of Web Architectures: Client-server Model, Three Tier Model, SOA"
+    style="max-width: 100%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.14:</strong> Types of Web Architectures: Client-server Model, Three Tier Model, SOA
+  </figcaption>
+</figure>
+
+The client-server model partitions the responsibilities between two key components: the client, which represents the user interface or user-facing part of the system, and the server, which is responsible for storing and serving data. In this model, clients and servers communicate to perform various functions, such as requesting and delivering information [@oluwatosin_client-server_2014 pp. 67-68].
+
+The three-tier model is another significant web architecture that introduces an additional layer between the client and server, resulting in a three-part structure. This architecture is designed to further segregate and manage the system's components [@wijegunaratne_three-tier_1998 pp. 41-42]. The three tiers typically consist of the presentation tier (the user interface), the application tier (responsible for logic and processing), and the data tier (where data storage and retrieval occur).
+
+{{ "SOA" | abbr | safe }} is a web architecture that emphasises the creation and utilisation of services as the central building blocks of a system. Services in this context are self-contained, modular units of functionality that can be accessed and used independently by various components of a web application. These services are designed to be loosely coupled, meaning they can interact with other services without a deep dependency on one another. Overall, *‘{{ "SOA" | abbr | safe }} is a paradigm for organizing and packaging units of functionality as distinct services, making them available across a network to be invoked via defined interfaces, and combining them into solutions to business problems.’* [@laskey_service_2009 p. 101].
+
+{{ "SOA" | abbr | safe }} can encompass various communication protocols, such as {{ "REST" | abbr | safe }}, which is a prominent architectural style for designing networked applications [@fielding_architectural_2000], primarily leveraging {{ "HTTP" | abbr | safe }}. {{ "REST" | abbr | safe }}ful services, i.e. applications that complies with the {{ "REST" | abbr | safe }} constraints, are designed to work with existing capabilities rather than creating new standards, frameworks and technologies [@battle_bridging_2008 p. 62]. These services are built around a set of constraints, including statelessness, a uniform interface, resource-based identification, and the use of standard request methods such as `GET`, `POST`, `PUT`, and `DELETE` [@tilkov_brief_2017].
+
+The following are all the specified request methods enabling clients to perform a wide range of operations on resources[^113] [@fielding_http_2022 p. 72]:
+
+- **GET**:   Transfer a current representation of the target resource.
+- **HEAD**:   Same as `GET`, but only transfer the status line and header section.
+- **POST**:   Perform resource-specific processing on the request payload.
+- **PUT**:   Replace all current representations of the target resource with the     request payload.
+- **DELETE**:   Remove all current representations of the target resource.
+- **CONNECT**:   Establish a tunnel to the server identified by the target resource.
+- **OPTIONS**:   Describe the communication options for the target resource.
+- **TRACE**:   Perform a message loop-back test along the path to the target     resource.
+
+{{ "REST" | abbr | safe }}ful services, with their emphasis on using standardised {{ "HTTP" | abbr | safe }} methods and resource-based identification, offer a versatile means of designing web services and {{ "API" | abbr | safe }}s. Their simplicity and compatibility with the web's core protocols make them a practical choice for implementing various web-based applications. In the context of the Semantic Web, {{ "REST" | abbr | safe }}ful services can serve as a crucial component for accessing and exchanging graph data [see @lee_learning_2011].
+
+
+#### 3.4.2 The Semantic Web {id="sub:semanticweb"}
+
+#### 3.4.3 Linked Data Principles {id="sub:ldprinciples"}
+
+#### 3.4.4 Deployment Schemes for Open Data {id="sub:5star"}
+
+#### 3.4.5 Linked Open Data in the Cultural Heritage Domain {id="sub:lodch"}
 
 (...)
 
+### 3.5 Linked Open Usable Data
+
+(...)
+
+### 3.6 Characterising Community Practices and Semantic Interoperability
+
+(...)
+
+### 3.7 Summary and Preliminary Insights
+
+(...)
 
 
 ## 4. Exploring Relationships through an Actor-Network Theory Lens {id="cha:theoretical"}
