@@ -1107,13 +1107,127 @@ Overall, the principles of Open Science provide a framework for promoting greate
 
 ##### 3.3.2.2 Citizen Science, Citizen Humanities {id="subsubsec:citizen"}
 
-(...)
+Citizen Science and Citizen Humanities are approaches that involve the public in scientific and humanities research, respectively. They have become increasingly popular in recent years as a means of democratising research and engaging the public in academic initiatives.
+
+Citizen Science, as articulated by @irwin_citizen_1995, embodies a fundamental commitment to sourcing knowledge beyond the confines of academia, with a deliberate focus on addressing the concerns and interests of the public. This perspective underscores the transformative power of Citizen Science, making it a catalyst for a more democratic approach to scientific endeavours.
+
+@bonney_citizen_1996's perspective complements this vision by framing Citizen Science as a collaborative process where amateur enthusiasts actively participate in data collection for academic science, all the while gaining a deeper understanding of scientific principles and processes. In this light, Citizen Science emerges as an ideal vehicle for science education and a potent tool for enhancing public appreciation of scientific pursuits.
+
+These viewpoints loosely align with the Oxford English Dictionary's definition, characterising Citizen Science as *‘scientific work undertaken by members of the general public, often in collaboration with or under the direction of professional scientists and scientific institutions’* and traces the earliest evidence of the term in 1989 [@oxford_english_dictionary_citizen_2023]. As such, Citizen Science stands as a harmonious intersection of public engagement, education, and scientific inquiry, amplifying the voice of non-academic contributors and democratising the scientific landscape.
+
+The public can play a vital role in data collection, analysis, and interpretation. This involvement can take the form of participating in wildlife sightings tracking, monitoring water quality, or assessing air pollution. By participating in these activities, citizens become direct contributors to the generation of valuable scientific data. The transformative power of Citizen Science extends across a wide spectrum of scientific disciplines, emphasising its capacity to democratise and broaden the reach of scientific endeavours [see @vohland_science_2021].
+
+Citizen Science is a form of co-creation, whether viewed as an innovation-oriented means of value creation [@jansma_co-creation_2022] or as a more radical form of empowerment, reinforces the democratisation of the research process [@metz_co-creative_2019]. It amplifies the voice of non-academic participants in scholarly pursuits, reflecting a profound shift in the way science is conducted. This collaborative model demonstrates how public engagement enriches the scientific landscape, allowing for the inclusion of different perspectives and a wider range of voices in the pursuit of knowledge. Furthermore, engaging in participatory practices also involves elements of ‘phronesis’ [^96] [see @mehlenbacher_expertise_2022], encompassing moral, affective, and care-oriented dimensions.
+
+Trust is also a foundational and indispensable element in the landscape of participatory initiatives [see @dahlgren_diversity_2020]. The success and sustainability of projects within Citizen Science heavily rely on establishing and maintaining trust among all stakeholders involved. This trust extends in multiple directions. First and foremost, participants must trust the project organisers and platforms that host these initiatives. They must have confidence that their contributions will be used responsibly and ethically, with respect to their time and effort. When contributors are assured that their involvement is valued and that the data they provide serves a meaningful purpose, their motivation to participate and provide accurate information is bolstered. Conversely, project organisers and institutions also need to instil trust in participants. Transparency in project objectives, methodology and data use is paramount. Clear and consistent communication is essential to address participants' concerns and provide feedback on the impact of their contributions. This two-way trust is the foundation of successful participatory projects and facilitates long-term engagement.
+
+Citizen Humanities where members of the public can participate in activities such as crowdsourced transcription, tagging, and annotation of digital {{ "CH" | abbr | safe }} materials. These activities can help to uncover new knowledge and insights, as well as to make {{ "CH" | abbr | safe }} materials more accessible to a wider audience [@strasser_citizen_2018]. It is important to note that within the context of these terms, Citizen Science is often regarded as the broader concept, encompassing both Citizen Science and Citizen Humanities. While the primary distinction between the two may, in some cases, appear to be terminological, in practice, they both exemplify the principles of open and inclusive research, akin to the concepts of Open Science and Open Humanities discussed in the preceding subsection. These approaches foster collaboration and engagement between researchers and the public, deepening the public's understanding and appreciation of the research process as a whole [@zourou_citizen_2022]. This inclusive perspective, even if those participatory activities have been more widely used in natural sciences than in the humanities [@lowry_is_2021], underscores Citizen Science as an umbrella term encompassing both scientific and humanities endeavours, each enriched by the active participation of the public.
+
+While Citizen Science involves the public in research, they differ from crowdsourcing projects in several ways. Crowdsourcing typically involves the outsourcing of tasks to a large group of people, often through online platforms, with the aim of completing a specific task or project [@ridge_crowdsourcing_2017]. In contrast, Citizen Science focuses more on engagement and collaboration, with the goal of involving the public in the research process and generating new knowledge. That being said, there is also a convergence between Citizen Science with crowdsourcing projects. In many cases, Citizen Science initiatives may also involve crowdsourcing tasks, such as collecting or annotating data. Similarly, crowdsourcing projects may involve elements of Citizen Science, particularly when they aim to engage the public in scientific or {{ "CH" | abbr | safe }} research [@ridge_5_2021].
+
+For instance, @haklay_citizen_2013 [pp. 115-116] distinguish four categories or levels of participation in Citizen Science projects, each serving as a rung on the ladder of public engagement. The levels are as follows:
+
+- Level 1. **Crowdsourcing**:   In this level, citizens act as sensors and volunteered computing     resources.
+- Level 2. **Distributed intelligence**:   Here, citizens serve as basic interpreters and volunteered thinkers.
+- Level 3. **Participatory science**:   At this stage, citizens actively participate in problem definition     and data collection.
+- Level 4. **Extreme Citizen Science**:   In the highest level, citizens engage in collaborative science that     encompasses problem definition, data collection, and analysis.
+
+When applied in the context of Citizen Humanities, public participation takes diverse forms. This involvement can encompass activities such as the public's engagement in archaeological finds recording, as demonstrated by the Finnish Archaeological Finds Recording Linked Open Database (SuALT) project [@wessman_citizen_2019]. Another illustration is the case of the Citizen-Led Urban Environmental Restoration project where *‘young citizen scientists [in Jamaica and the United States] worked closely with museum scientists to restore two environmentally degraded urban sites’* [@commock_connecting_2023]. In terms of crowdsourcing of {{ "CH" | abbr | safe }} data or more broadly in the humanities, @owens_digital_2013 [p. 121] discusses two primary challenges associated with integrating the concept. He highlights that both the terms and pose certain problems. Successful crowdsourcing initiatives in libraries, archives, and museums, as he notes, typically do not rely on extensive crowds, and they are far from resembling traditional labour outsourcing endeavours. Furthermore, Owens emphasises that the central focus of such initiatives is not on amassing large crowds but rather on cultivating engagement and participation among individuals in the public who have a genuine interest.
+
+As Citizen Humanities broadens its scope to encompass a wider public engagement in {{ "DH" | abbr | safe }} and {{ "CH" | abbr | safe }} research, successful collaborations between {{ "DH" | abbr | safe }} and relevant research infrastructures have shown promising results [@fiser_boost_2018; @simpson_zooniverse_2014]. Furthermore, the integration of scientific and curatorial knowledge plays a pivotal role in {{ "CH" | abbr | safe }} and humanities studies, uncovering previously unknown contextual information within original materials [@france_integrating_2014]. As illustrated by institutions like the National Library of Estonia, the shift towards human-centred approaches and the development of {{ "DH" | abbr | safe }} services exemplify the expansion of Citizen Humanities [@andresoo_hundred-year-old_2018].
+
+Incorporating user-generated or user-enhanced metadata still presents several challenges [@raemy_applying_2021]. One major challenge is ensuring the quality and consistency of the data. Another challenge is managing the large volume of data generated by users. With increasing numbers of participants and contributions, it can become difficult to process and organise the data in a way that is useful for research and for the broader public. As @dahlgren_diversity_2020 argue:
+
+> Participatory metadata production has been valued for its potential to reduce the workload of the heritage institutions and make possible speedier digitization. However, in practice, little of the resulting metadata has been reinserted into the institutions databases and used in-house by information specialists.  
+
+This challenge is compounded by the fact that user-generated metadata may be unstructured, making it more difficult to analyse and interpret. To address these challenges, it can be helpful to have a robust data curation strategy, maintained by a team that can communicate with participants on a regular basis, as well as tools and technologies that enable efficient data processing and analysis. {{ "LOD" | abbr | safe }} can also be a useful approach for organising and linking diverse sources of information, enabling researchers to incorporate different perspectives and opinions into their analysis. This form of participation often involves micro-tasks, akin to ‘puzzle-like’ tasks, connecting users closely with the subjects they are describing [see @ridge_enriching_2023]. The dynamics of participatory projects are intriguing and multifaceted. As expressed by @dahlgren_diversity_2020:
+
+> [It] is the often tightly curated top–down design of crowdsourcing platforms where participation is wide in terms of numbers of participants but small in terms of what those participants are allowed to do. The second involves the preconception that the crowd per se, because of its sheer size, in some ways represents a diversity of perspectives and experiences, an idea which is often put forward as one of the benefits of participatory metadata production.
+
+Five recommendations outlined by [@ridge_recommendations_2023], specifically geared towards the {{ "CH" | abbr | safe }} domain, can serve as valuable guidance for various participatory endeavours. These recommendations encompass:
+
+- **Infrastructure**:   ensuring platform sustainability by supporting existing tools     alongside new developments;
+- **Evidencing and Evaluation**:   creating an evaluation toolkit to emphasise impact and wider     benefits;
+- **Skills and Competencies**:   establishing a self-guided skills assessment tool and workshops for     upskilling;
+- **{{ "CoP" | abbr | safe }}**:   funding international knowledge-sharing events like informal     meetups, low-cost conferences, and peer review panels, ensuring     inclusivity beyond limited regional funding projects;
+- **Incorporating Emergent Technologies and Methods**:   providing support for educational resources and workshops to     anticipate the opportunities and implications of emerging     technologies.
+
+These recommendations offer a versatile framework that can be applied to various participatory efforts, transcending the boundaries of specific domains and promoting a more inclusive and effective approach to public engagement in research and collaborative initiatives. By adhering to these measures, Citizen Science projects can better flourish, fostering a collaborative and proficient community of practitioners. Rather than creating new infrastructure, research projects should leverage and extend existing ones, such as Zooniverse[^97], a generic Citizen Science portal and FromThePage[^98], a transcribing platform. 
+
+In summary, both Citizen Science and Citizen Humanities represent participatory methods of inquiry. While they have gained popularity, critical discussions regarding their potential limitations, notably in terms of diversity, are integral to their ongoing development. These critical discussions encompass issues like the challenge of addressing notions of volunteer --- thus unpaid -- labour, lack of diversity, and countering the dominance of traditional, often exclusive scientific practices [see @stengers_another_2018]. These conversations serve as essential drivers for the evolution of participatory approaches, prompting a reevaluation and refinement of their methodologies to ensure greater inclusivity and equity [@lewenstein_is_2022].
+
 
 ##### 3.3.2.3 FAIR Data Principles {id="subsubsec:fair"}
 
 The {{ "FAIR" | abbr | safe }} data principles[^99] were developed to ensure that three types of entities -- namely data, metadata, as well as infrastructures -- are Findable, Accessible, Interoperable, and Reusable. The four key principles of {{ "FAIR" | abbr | safe }} and their underlying 15 sub-elements or facets are as follows [@wilkinson_fair_2016]:
 
-(...)
+**F. Findable** --- (Meta)data should be easy to find for both humans and computers.     Machine-readable metadata are essential for automatic discovery of     datasets and services.
+- F1   (Meta)data are assigned a globally unique and         {{ "PID" | abbr | safe }}
+- F2   Data are described with rich metadata (defined by R1)
+- F3   Metadata clearly and explicitly include the identifier of the         data they describe
+- F4   (Meta)data are registered or indexed in a searchable resource
+
+**A. Accessible** --- Once the user finds the required data, she/he/they need to know how     they can be accessed, possibly including authentication and     authorisation.
+
+- A1  (Meta)data are retrievable by their identifier using a         standardised communications protocol
+    - A1.1  The protocol is open, free, and universally implementable
+    - A1.2  The protocol allows for an authentication and authorisation             procedure, where necessary
+- A2  Metadata are accessible, even when the data are no longer         available
+
+**I. Interoperable** --- The data usually need to be integrated with other data. In addition,     the data need to interoperate with applications or workflows for     analysis, storage, and processing.
+- I1  (Meta)data use a formal, accessible, shared, and broadly         applicable language for knowledge representation.
+- I2  (Meta)data use vocabularies that follow         {{ "FAIR" | abbr | safe }}         principles
+- I3  (Meta)data include qualified references to other (meta)data
+
+**R. Reusable** --- The ultimate goal of {{ "FAIR" | abbr | safe }} is to optimise the reuse of data. To     achieve this, metadata and data should be well-described so that     they can be replicated and/or combined in different settings.
+- R1  (Meta)data are richly described with a plurality of accurate and         relevant attributes
+    - R1.1  (Meta)data are released with a clear and accessible data             usage license
+    - R1.2  (Meta)data are associated with detailed provenance
+    - R1.3  (Meta)data meet domain-relevant community standards
+
+Originally introduced to improve data management and sharing in the life sciences, the {{ "FAIR" | abbr | safe }} principles have evolved into a widely adopted framework that transcends research disciplines. They have been adopted in a wide range of fields, including astronomy [@otoole_fair_2022], genomics [@corpas_fair_2018], environmental science [@crystal-ornelas_enabling_2022] and the humanities. In particular, {{ "FAIR" | abbr | safe }} principles have been applied to make historical archives, artworks or linguistic datasets more openly available for human users and search engines. Moreover, {{ "CHI" | abbr | safe }}s have embraced {{ "FAIR" | abbr | safe }} principles as guidelines and best practices, employing them in the deployment of repositories, virtual research environments or data platforms [@hahnel_how_2020; @beretta_challenge_2021].
+
+Yet, the concept of {{ "FAIR" | abbr | safe }} data management practices in the humanities is not always straightforward as demonstrated by @gualandi_what_2022 at the University of Bologna in Italy. The study, involving 19 researchers from the Department of Classical Philology and Italian Studies were interviewed to investigate the concept of ‘data’ in the humanities, particularly in relation to the {{ "FAIR" | abbr | safe }} principles. The study identified 13 types of research data based on participant input, such as publications, primary sources (manuscripts, artworks), digital representations of {{ "CH" | abbr | safe }} resources, but also websites, events, or standards. Thus, suggesting that within {{ "FAIR" | abbr | safe }}, should encompass all inputs and outputs of humanities research. The research also emphasised the importance of methodologies and collaboration in managing research effectively, emphasising the need for clarity and consensus in applying {{ "FAIR" | abbr | safe }} data principles within the field.
+
+Indeed, implementing {{ "FAIR" | abbr | safe }} can be complex due to the variety of data types and existing practices. Such complexity requires structured methods. As [@jacobsen_fair_2020 p. 11] point out, {{ "FAIR" | abbr | safe }} is not a standard, it is a guide that needs implementations based on interpretations.
+
+Similarly, @dunning_are_2017 [pp. 187-188] emphasise the multifaceted nature of the {{ "FAIR" | abbr | safe }} Data Principles and the need to view compliance as an aspirational objective. Their research reveals challenges in achieving full compliance, with specific difficulty in the Interoperable and Re-usable facets. They advocate for basic policy implementation in areas like {{ "PID" | abbr | safe }}, metadata, licensing, and protocols, alongside transparent documentation. Additionally, the authors stress the importance of using {{ "HTTPS" | abbr | safe }} -- an extension of {{ "HTTP" | abbr | safe }} (see [3.4.1](#sub:webarchi)) -- to ensure secure data transmission and accessibility. Finally, the authors stress the importance of collaboration between (data) archivists and researchers.
+
+@go_fair_fairification_2016 -- an initiative that aims to implement the {{ "FAIR" | abbr | safe }} data principles -- outlined a seven-step {{ "FAIR" | abbr | safe }}ification process, which includes essential stages in the transformation of data, as illustrated by [Figure 3.11](#fig:fairification). These steps begin with the retrieval of non-{{ "FAIR" | abbr | safe }} data, followed by in-depth analysis to understand the content and structure of the data. The process then requires the creation of a semantic model that accurately defines the meaning and relationships of the data in a computational way, often involving the integration of existing ontologies and vocabularies. The fourth step involves linking data through the application of Semantic Web technologies, thereby improving interoperability and integration with disparate data sources. In addition, the assignment of a clear licence is highlighted as a separate step, emphasising its key role in enabling data reuse and open access. As a sixth step, metadata need to be assigned in order to support data discovery and access. Finally, the {{ "FAIR" | abbr | safe }}ified data is deployed or published with its associated metadata and licence, ensuring that it can be accessed and discovered by search engines, even if authentication and authorisation requirements are in place. As a result, the new {{ "FAIR" | abbr | safe }} dataset can now be more conveniently aggregated with other data sources, making it more straightforward to raise research questions across multiple sources.
+
+<figure id="fig:fairification" style="text-align: center;">
+  <img
+    src="data/Figures/FAIRification.png"
+    alt="The FAIRification Process. Adapted from @go_fair_fairification_2016"
+    style="max-width: 100%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.11:</strong> The FAIRification Process. Adapted from 
+    @go_fair_fairification_2016
+  </figcaption>
+</figure>
+
+
+A further illustration of how {{ "FAIR" | abbr | safe }} can be deployed is the conceptualisation of the {{ "FDO" | abbr | safe }}, which includes a strong binding of various types of metadata [@schultes_fair_2019 pp. 7-9]. The members of the @european_commission_directorate_general_for_research_and_innovation_turning_2018 [p. 35] underline that the establishment of a {{ "FAIR" | abbr | safe }}-compliant ecosystem hinges on the {{ "FDO" | abbr | safe }} concept, an implementation framework to develop scalable cross-disciplinary capabilities. As illustrated in [Figure 3.12](#fig:fdo-model), data must be assigned {{ "PID" | abbr | safe }}s and accompanied by detailed metadata to ensure reliable discoverability, usability and citation. They also argue to use widely accepted file formats and adhering to community-specific metadata standards as well as vocabularies to support interoperability and reuse.
+
+<figure id="fig:fdo-model" style="text-align: center;">
+  <img
+    src="data/Figures/fair-digital-object-model.png"
+    alt="The FDO Model [@european_commission_directorate_general_for_research_and_innovation_turning_2018]"
+    style="max-width: 70%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.12:</strong> The FDO Model 
+    [@european_commission_directorate_general_for_research_and_innovation_turning_2018]
+  </figcaption>
+</figure>
+
+
+
+@soiland-reyes_updating_2022 highlight the potential of {{ "LOD" | abbr | safe }} to drive the adoption of {{ "FDO" | abbr | safe }} within research infrastructures. While this approach provides specifications and tools, the proliferation of standards and metadata vocabularies poses challenges to interoperability and implementation. To address these hurdles, the authors present the use of {{ "FAIR" | abbr | safe }} Signposting[^101], which enables straightforward navigation to core {{ "FDO" | abbr | safe }} properties, without the need for complex content negotiation heuristics.
+
+In summary, the {{ "FAIR" | abbr | safe }} data principles comprise four key principles or 15 facets that provide a comprehensive framework for data management and sharing. While processes are in place to facilitate their implementation, the path to {{ "FAIR" | abbr | safe }}ness can be complex, with interoperability and compliance challenges. A key element is the thoughtful mapping of different metadata standards and the strategic incorporation of Linked Data technologies. The {{ "FDO" | abbr | safe }} approach is equally relevant to the {{ "CH" | abbr | safe }} sector, supporting the preservation, accessibility and sharing of {{ "CH" | abbr | safe }} data and resources. The sharing of code, accompanied by comprehensive documentation, also enhances such an ecosystem by facilitating the exchange of valuable technical knowledge and resources.
+
 
 ##### 3.3.2.4 CARE Principles for Indigenous Data Governance {id="subsubsec:care"}
 
@@ -1611,8 +1725,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 [^95]: According to the Open Knowledge Foundation, a non-profit network established in 2004 in the U.K., which aims to promote the idea of open knowledge, sets out some some principles around the concept of openness and defines it as follows: *‘Open means anyone can freely access, use, modify, and share for any purpose (subject, at most, to requirements that preserve provenance and openness)’*. <https://opendefinition.org/>
 
-[^96]: Phrenosis in philosophy is related to
-    [@oxford_english_dictionary_phronesis_2023]
+[^96]: ~~Phrenosis~~ **phronesis**[^400] in philosophy is related to *‘practical understanding; wisdom, prudence; sound judgement’* [@oxford_english_dictionary_phronesis_2023]
 
 [^97]: Zooniverse: <https://www.zooniverse.org/>
 
