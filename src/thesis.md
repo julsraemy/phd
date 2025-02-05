@@ -1355,6 +1355,26 @@ The following are all the specified request methods enabling clients to perform 
 
 #### 3.4.2 The Semantic Web {id="sub:semanticweb"}
 
+The Semantic Web is [@berners-lee_semantic_2001 p. 35]. It was already in [@berners-lee_realising_1999]'s vision and prediction that the web, in its next phase, could be understood by machines, i.e. shifting from a traditional web of documents to a web of data. @bauer_linked_2012 [p. 25] articulates that *‘[t]he basic idea of a semantic web is to provide cost-efficient ways to publish information in distributed environments. To reduce costs when it comes to transferring information among systems, standards play the most crucial role.’*.
+
+At the heart of the Semantic Web lies the foundation of {{ "RDF" | abbr | safe }}. The original {{ "RDF" | abbr | safe }} specification, known as the {{ "RDF" | abbr | safe }} Model and Syntax, serves as the underlying mechanism that establishes the basic framework of {{ "RDF" | abbr | safe }}. This framework provides the cornerstone to facilitate the exchange of data among automated processes [@lassila_resource_1999]. A fundamental component within {{ "RDF" | abbr | safe }} is the {{ "RDF" | abbr | safe }} triple as shown in this [equation](#eq:rdf-triple), comprising three essential elements: the subject (<em>s</em>), the predicate (<em>p</em>), and the object (<em>o</em>). In an {{ "RDF" | abbr | safe }} triple, the subject is the resource or entity about which a statement is made, the predicate is the relationship or property describing that statement, and the object is the value or resource associated with the statement. 
+
+<div id="eq:rdf-triple">   <p>     <em>s</em>     <span style="display: inline-flex; align-items: center;">       <span style="position: relative; margin: 0 5px;">         &rarr;         <span style="position: absolute; top: -1em; left: 50%; transform: translateX(-50%); font-size: 0.8em;">           <em>p</em>         </span>       </span>     </span>     <em>o</em>   </p> </div>
+
+(...)
+
+<figure id="fig:triangle" style="text-align: center;">
+  <img
+    src="data/Figures/Ogden_semiotic_triangle.png"
+    alt="The Semiotic Triangle by [@ogden_meaning_1930]."
+    style="max-width: 62%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.15:</strong> The Semiotic Triangle by [@ogden_meaning_1930].
+  </figcaption>
+</figure>
+
+
 #### 3.4.3 Linked Data Principles {id="sub:ldprinciples"}
 
 #### 3.4.4 Deployment Schemes for Open Data {id="sub:5star"}
