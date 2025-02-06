@@ -1542,9 +1542,19 @@ Quasi-objects, existing in a state of flux and embodying characteristics of both
 
 > Boundary objects are objects which are both plastic enough to adapt to local needs and constraints of the several parties employing them, yet robust enough to maintain a common identity across sites. They are weakly structured in common use, and become strongly structured in individual-site use. They may be abstract or concrete. They have different meanings in different social worlds but their structure is common enough to more than one world to make them recognizable, a means of translation. The creation and management of boundary objects is key in developing and maintaining coherence across intersecting social worlds [@star_ethnography_1999 p. 393]
 
-The relevance of {{ "BO" | abbr | safe }} extends to the restructuring of residual categories through cycles of standardisation attempts that create said boundary objects as illustrated in [Figure 4.1](fig:bo-residual). This cycle emphasises the negotiation and alignment among different stakeholders, underscoring the adaptive and flexible nature of {{ "BO" | abbr | safe }} in managing the complexities of standardisation and the varied interpretations across social worlds [see @star_this_2010].
+The relevance of {{ "BO" | abbr | safe }} extends to the restructuring of residual categories through cycles of standardisation attempts that create said boundary objects as illustrated in [Figure 4.1](#fig:bo-residual). This cycle emphasises the negotiation and alignment among different stakeholders, underscoring the adaptive and flexible nature of {{ "BO" | abbr | safe }} in managing the complexities of standardisation and the varied interpretations across social worlds [see @star_this_2010].
 
-Figure 4.1
+<figure id="fig:bo-residual" style="text-align: center;">
+  <img
+    src="data/Figures/bo-residual.svg"
+    alt="Relationships Between Residual Categories, BOs, and Standardisation Attempts. Adapted from @star_this_2010"
+    style="max-width: 100%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 4.1:</strong> Relationships Between Residual Categories, BOs, and 
+    Standardisation Attempts. Adapted from @star_this_2010
+  </figcaption>
+</figure>
 
 The integration of concepts such as quasi-objects and {{ "BO" | abbr | safe }}s within the {{ "ANT" | abbr | safe }}-based toolbox necessitates a reevaluation of existing ontological frameworks. This shift leads to a more interconnected understanding of societal dynamics, recognising the central role of diverse actors in forming networks.
 
@@ -1583,18 +1593,38 @@ Considering the insights from @selbst_fairness_2019, this thesis will explore fo
 - **Data Model**:   It covers the organisation and structuring of data, including     metadata standards and {{ "LOUD" | abbr | safe }} specifications. An example would be     examining how {{ "CIDOC-CRM" | abbr | safe }} is used in Linked Art.
 - **Representation and Display**:   This level not only encompasses the     {{ "JSON-LD" | abbr | safe }}     outputs for effective data sharing and interlinking but also focuses     on how users see and interact with {{ "LOUD" | abbr | safe }} representations across different     platforms -- browsers, viewers, and players. It examines the     {{ "GUI" | abbr | safe }} that make     digital collections accessible and engaging. For example, how a     virtual gallery allows users to explore a digital exhibit.
 
-In the exploration of {{ "LOUD" | abbr | safe }} ecosystems, the concepts of and , as delineated by @bolter_remediation_1999, provide additional insightful perspectives on the role of interfaces as {{ "LoA" | abbr | safe }}. Immediacy refers to the design of interfaces that aim to create a seamless, transparent {{ "UX" | abbr | safe }}, making the technology invisible and allowing for direct interaction with the content. This is evident in interfaces such as {{ "OSD" | abbr | safe }}, which displays high-resolution images and strives to provide a smooth and immersive viewing experience by minimising the perceptibility of the {{ "API" | abbr | safe }}-compliant resource. On the other hand, hypermediacy emphasises the presence and visibility of the medium, drawing attention to the various forms of mediation. Interfaces embodying hypermediacy offer a multi-layered, heterogeneous presentation, making users aware of the different media elements and their interactions, e.g. Exhibit for storytelling purposes. This duality enriches the user's digital encounter, underscoring the need for {{ "LOUD" | abbr | safe }}-compliant tools and services to mediate these experiences effectively. By embracing these concepts, the framework can strategically leverage interfaces to either conceal or reveal the intricacies of the digital medium, facilitating a nuanced engagement with information ecosystems. [Figure 4.2]() presents a comprehensive view of the {{ "LOUD" | abbr | safe }} ecosystem's {{ "LoA" | abbr | safe }}, enriched by the inclusion of societal implications as a cross-cutting dimension and the incorporation of immediacy and hypermediacy as critical concepts at the representation and display level for understanding user interaction and interface design.
+In the exploration of {{ "LOUD" | abbr | safe }} ecosystems, the concepts of and , as delineated by @bolter_remediation_1999, provide additional insightful perspectives on the role of interfaces as {{ "LoA" | abbr | safe }}. Immediacy refers to the design of interfaces that aim to create a seamless, transparent {{ "UX" | abbr | safe }}, making the technology invisible and allowing for direct interaction with the content. This is evident in interfaces such as {{ "OSD" | abbr | safe }}, which displays high-resolution images and strives to provide a smooth and immersive viewing experience by minimising the perceptibility of the {{ "API" | abbr | safe }}-compliant resource. On the other hand, hypermediacy emphasises the presence and visibility of the medium, drawing attention to the various forms of mediation. Interfaces embodying hypermediacy offer a multi-layered, heterogeneous presentation, making users aware of the different media elements and their interactions, e.g. Exhibit for storytelling purposes. This duality enriches the user's digital encounter, underscoring the need for {{ "LOUD" | abbr | safe }}-compliant tools and services to mediate these experiences effectively. By embracing these concepts, the framework can strategically leverage interfaces to either conceal or reveal the intricacies of the digital medium, facilitating a nuanced engagement with information ecosystems. [Figure 4.2](#fig:LoA-LOUD) presents a comprehensive view of the {{ "LOUD" | abbr | safe }} ecosystem's {{ "LoA" | abbr | safe }}, enriched by the inclusion of societal implications as a cross-cutting dimension and the incorporation of immediacy and hypermediacy as critical concepts at the representation and display level for understanding user interaction and interface design.
 
-Figure 4.2...
+<figure id="fig:LoA-LOUD" style="text-align: center;">
+  <img
+    src="data/Figures/LoA-LOUD.png"
+    alt="Exploring Levels of Abstraction in LOUD Ecosystems: Integrating Societal Implications with the Concepts of Immediacy and Hypermediacy"
+    style="max-width: 80%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 4.2:</strong> Exploring Levels of Abstraction in LOUD Ecosystems: Integrating Societal
+    Implications with the Concepts of Immediacy and Hypermediacy
+  </figcaption>
+</figure>
 
-The {{ "SLMS" | abbr | safe }} scheme, which includes a framework for each identified {{ "LoA" | abbr | safe }}, equips this research with a comprehensive lens for analysing computational systems, revealing how they can be effectively combined with {{ "ANT" | abbr | safe }}. This methodology, as depicted in [Figure 4.3](), enriches the exploration of digital ecosystems. This combination offers a unique perspective on understanding the interplay between computational entities and the broader networks they inhabit. The {{ "SLMS" | abbr | safe }} scheme can be summarised as follows:
+The {{ "SLMS" | abbr | safe }} scheme, which includes a framework for each identified {{ "LoA" | abbr | safe }}, equips this research with a comprehensive lens for analysing computational systems, revealing how they can be effectively combined with {{ "ANT" | abbr | safe }}. This methodology, as depicted in [Figure 4.3](#fig:slms), enriches the exploration of digital ecosystems. This combination offers a unique perspective on understanding the interplay between computational entities and the broader networks they inhabit. The {{ "SLMS" | abbr | safe }} scheme can be summarised as follows:
 
 - **System**:   This refers to any entity or collection of entities that can be     studied. It could be anything from a physical object, a biological     entity, to a social or computational system.
 - **{{ "LoA" | abbr | safe }}**:   Floridi emphasises the importance of levels of abstraction in     understanding and analysing systems. A level of abstraction is a way     of observing a system, focusing on certain aspects while ignoring     others. It's a conceptual framework or lens through which we can     understand complex systems.
 - **Model**:   At each level of abstraction, we create models of the system. These     models are simplifications or representations of the system that     highlight certain features while omitting others, based on the     chosen level of abstraction.
 - **Structure**:   This refers to the organisation or arrangement of the components     within the system, as understood or represented at a given level of     abstraction.
 
-Figure 4.3...
+<figure id="fig:slms" style="text-align: center;">
+  <img
+    src="data/Figures/floridi_slms.png"
+    alt="The SLMS According to [@floridi_method_2008]"
+    style="max-width: 100%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 4.3:</strong> The SLMS According to [@floridi_method_2008]
+  </figcaption>
+</figure>
+
 
 @gobbo_what_2016 expand on the {{ "SLMS" | abbr | safe }} scheme by highlighting the challenges and intricacies of quantifying and qualifying computational information. They advocate for a comprehensive methodology that appreciates both the physical and conceptual dimensions of data, facilitating a deeper understanding of programmable artefacts and their informational content. This perspective not only complements the analytical capabilities of {{ "ANT" | abbr | safe }} but also opens new avenues for investigating the dynamics of information and technology.
 
@@ -1614,9 +1644,19 @@ In forging this theoretical framework, I seek to transcend the notion of merely 
 - {{ "BO" | abbr | safe }} further     refine this framework by offering a means to characterise actors and     mediate interactions within the network, facilitating connectivity     and translation among diverse groups.
 - {{ "PI" | abbr | safe }} enriches     {{ "ANT" | abbr | safe }} by framing     information as a fundamental element in actor-network interactions.     It offers insights into the different {{ "LoA" | abbr | safe }}, or different actor-networks, each     with a different perspective or granularity, and how information is     created, shared, and used, and how these processes influence the     relationships and dynamics within networks.
 
-[Figure 4.4]() illustrates how these theories intertwine to form the epistemological foundation of this research, demonstrating the synergistic potential of combining {{ "ANT" | abbr | safe }} with {{ "SK" | abbr | safe }}, {{ "BO" | abbr | safe }}, and {{ "PI" | abbr | safe }} to navigate the complexities of digital ecosystems in the {{ "CH" | abbr | safe }} field.
+[Figure 4.4](#fig:sympoiesis) illustrates how these theories intertwine to form the epistemological foundation of this research, demonstrating the synergistic potential of combining {{ "ANT" | abbr | safe }} with {{ "SK" | abbr | safe }}, {{ "BO" | abbr | safe }}, and {{ "PI" | abbr | safe }} to navigate the complexities of digital ecosystems in the {{ "CH" | abbr | safe }} field.
 
-Figure 4.4...
+<figure id="fig:sympoiesis" style="text-align: center;">
+  <img
+    src="data/Figures/sympoiesis-theories.svg"
+    alt="A Sympoiesis of Theories: ANT Entangled with SK, BO, and PI"
+    style="height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 4.4:</strong> A Sympoiesis of Theories: 
+    ANT Entangled with SK, BO, and PI
+  </figcaption>
+</figure>
 
 Concluding this chapter, the developed toolbox lays a coherent foundation for empirical research, poised to explore the dynamics within actor-networks. This exploration is not entirely novel in the context of {{ "CH" | abbr | safe }}, as exemplified by @guillem_faire_2023's use of {{ "ANT" | abbr | safe }} to spotlight the keystones that were destroyed by the fire at Notre-Dame de Paris. As this narrative unfolds into , the {{ "ANT" | abbr | safe }}-based toolbox, enriched with amodern and feminist perspectives, will be instrumental in navigating the forthcoming empirical landscapes.
 
