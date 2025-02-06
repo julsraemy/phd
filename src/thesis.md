@@ -1452,21 +1452,83 @@ Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I 
 
 (...)
 
-### 3.5 Linked Open Usable Data
+### 3.5 Linked Open Usable Data {id="sec:loud"}
 
 (...)
 
-### 3.6 Characterising Community Practices and Semantic Interoperability
+### 3.6 Characterising Community Practices and Semantic Interoperability {id="sec:semantics-interoperability"} 
 
 (...)
 
 ### 3.7 Summary and Preliminary Insights {id="sec:review-summary-insights"} 
 
-This section provides a summary of what has been discussed in this literature review as well as some preliminary insights with regard to the {{ "LOUD" | abbr | safe }} ecosystem, chiefly the design principles, communities, standards, and the implementations. It follows the flow of the present chapter and is organised into five subsequent parts. Finally, in , I end with a few reflections on why we ought to care about {{ "CH" | abbr | safe }} data in the wider sense.
+This section provides a summary of what has been discussed in this literature review as well as some preliminary insights with regard to the {{ "LOUD" | abbr | safe }} ecosystem, chiefly the design principles, communities, standards, and the implementations. It follows the flow of the present chapter and is organised into five subsequent parts. Finally, in [3.7.7](#subsec:summary-why-we-care), I end with a few reflections on why we ought to care about {{ "CH" | abbr | safe }} data in the wider sense.
 
+#### 3.7.1 Cultural Heritage Data {id="subsec:summary-ch-data"}
 
-(...)
+{{ "CH" | abbr | safe }} data are unique and require different --- or adjacent -- methods of analysis than quantitative scientific data. The diversity of {{ "CH" | abbr | safe }} data, including tangible, intangible, and natural heritage, presents a challenge in preserving and promoting these resources effectively. Representing {{ "CH" | abbr | safe }} data in digital form can also be challenging, as it may lead to a loss of context and complexity. To address these challenges, a comprehensive understanding of the various types of heritage resources, their meanings, and values is necessary, along with an effective preservation and valorisation strategy that considers their heterogeneity. For this, I find that we need a vision that takes into account the diversity of human and non-human entities, entangled in community-based socio-technical activities, whether local, interdisciplinary or global. The following provides a concise summary of the key aspects explored in the first section, addressing the distinctive nature of {{ "CH" | abbr | safe }} data.
 
+- **The dimensions of {{ "CH" | abbr | safe }} data**:   I argue that three key dimensions need to be taken into consideration for {{ "CH" | abbr | safe }} data: heterogeneity, knowledge     latency, and custodianship.
+
+- **Representing and embodying {{ "CH" | abbr | safe }} data**:   I discuss that the faithful recreation of materiality in digitised     and digital-born resources appears to be a significant issue and     that it needs to be treated as new types of affordances or     surrogates. Moreover, while achieving a high degree of digital     material fidelity may be challenging, it is important to acknowledge     that accessibility remains a paramount concern in this context.
+
+- **Collectives and apparatuses are entangled**:   Actors, encompassing individuals, institutions, local and global     communities, along with the (digital) infrastructures and their     components, are deeply interwoven. These human and non-human     entities collaboratively shape and navigate the complex networks of     interactions and technologies that form society. Within this     context, {{ "ANT" | abbr | safe }}     emerges as a valuable theoretical framework for understanding these     close relationships and interdependencies.
+
+#### 3.7.2 Cultural Heritage Metadata {id="subsec:summary-metadata"}
+
+A variety of different metadata standards have emerged, tailored to different functions and purposes, with some dating back to the 1960s, particularly in library settings. However, the majority of other traditional {{ "CH" | abbr | safe }} metadata standards have emerged between the 1990s and the 2000s. In terms of descriptive metadata standards and conceptual models, {{ "MARC" | abbr | safe }}, {{ "ISAD(G)" | abbr | safe }}, {{ "CDWA" | abbr | safe }}, {{ "CIDOC-CRM" | abbr | safe }} are being supplemented -- or gradually substituted -- by models and profiles like {{ "LRM" | abbr | safe }}, {{ "RiC" | abbr | safe }}, and Linked Art, which -- to some extent -- align with Linked Data principles, enabling richer relationships and enhancing access to vast and diverse collections.
+
+These evolving metadata standards support a more interconnected, open, and accessible information landscape, enabling researchers, practitioners, and the public that should hopefully navigate and explore {{ "CH" | abbr | safe }} resources more effectively[^227], especially when they are used in conjunction with controlled vocabularies, facilitating cross-domain reconciliation. As for aggregation of {{ "CH" | abbr | safe }} (meta)data, alternative web-based technologies to {{ "OAI-PMH" | abbr | safe }} appear to be viable options, using {{ "AS" | abbr | safe }} in particular.
+
+#### 3.7.3 Trends, Movements, and Principles {id="subsec:summary-movements"}
+
+{{ "CH" | abbr | safe }} data is intrinsically intertwined with broader trends including Big Data and {{ "AI" | abbr | safe }}, serving as both a reflection and a product of these influences. Yet it is vital to recognise that {{ "CHI" | abbr | safe }}s and {{ "DH" | abbr | safe }} practitioners are -- or should be -- instrumental in shaping and curating such data. They not only shape and curate them, but also inform and drive the very trends that permeate across our data landscape. Their values, actions and methodologies represent critical drivers in the process, guiding the collection, preservation, and interpretation of {{ "CH" | abbr | safe }} data.
+
+The scientific movements and guiding principles of Open Science/Open Scholarship, Citizen Science/Citizen Humanities, {{ "FAIR" | abbr | safe }}, {{ "CARE" | abbr | safe }}, and Collections as Data collectively permeate and shape {{ "CH" | abbr | safe }} data. While the first two represent dynamic movements actively involving scholarly practices or the public, the other three are more concerned with the system in which data is situated. {{ "LOUD" | abbr | safe }} design principles and standards, which are more content-centric, bolster the effectiveness of these principles and movements, fostering open and accessible {{ "CH" | abbr | safe }} data through their real-world applicability.
+
+#### 3.7.4 Linked Open Data {id="subsec:summary-lod"}
+
+The Open Web Platform and Linked Data are foundational to the evolution of scholarly research and {{ "CH" | abbr | safe }} practices, enabling the creation of federated datasets and {{ "KG" | abbr | safe }}s. The section explores these concepts and their applications in the {{ "CH" | abbr | safe }} domain.
+
+The web architecture, underpinned by principles, protocols, and identifiers like {{ "URI" | abbr | safe }}, {{ "URL" | abbr | safe }}, and {{ "URN" | abbr | safe }}, facilitates the exchange of data and functionality across applications and systems. It emphasises architectural principles such as orthogonality and protocol-based interoperability and explores various web architectures, including the client-server model and {{ "SOA" | abbr | safe }}.
+
+The Semantic Web, a vision for a web understood by machines, relies on standards like {{ "RDF" | abbr | safe }}, {{ "RDFS" | abbr | safe }}, {{ "OWL" | abbr | safe }}, and {{ "SPARQL" | abbr | safe }}. The limitations of {{ "RDF" | abbr | safe }} in complex {{ "KR" | abbr | safe }} can be mitigated to some extent with {{ "RDF" | abbr | safe }} reification and quoted triples. {{ "SHACL" | abbr | safe }} is also introduced for data graph validation.
+
+Linked data principles promote the publication and interlinking of data on the web, creating a web of data that is navigable and usable. Challenges in Linked Data implementation include {{ "GUI" | abbr | safe }}s, application architectures, schema mapping, link maintenance, licensing, trust, quality, relevance, and privacy, enhancing the web's potential as an open, interconnected platform.
+
+Deployment schemes like the Five-Star and Seven-Star models provide criteria for publishing open data. These models address the clarity, usability, and applicability of open data, emphasising schema documentation and data quality.
+
+Finally, the application of {{ "LOD" | abbr | safe }} in the {{ "CH" | abbr | safe }} sector is explored through examples like Europeana. Despite its potential in improving data quality and visibility, challenges persist, including issues related to cataloguing, adoption of new standards, and the complexity of Linked Data terminology. The section underscores the need for collaboration and community-driven practices for effective {{ "LOD" | abbr | safe }} implementation.
+
+#### 3.7.5 LOUD: Design Principles, Communities, Standards {id="subsec:summary-loud"}
+
+{{ "LOUD" | abbr | safe }} focuses on improving data accessibility primarily for software developers. It balances data completeness and practical considerations like scalability and usability. Its design principles are:
+
+<ol type="a">
+    <li>Right Abstraction for the Audience: Tailoring data access to specific user needs.</li>
+    <li>Few Barriers to Entry: Simplifying initial engagement with the data.</li>
+    <li>Comprehensibility by Introspection: Ensuring data is largely self-explanatory.</li>
+    <li>Documentation with Working Examples: Providing clear guidelines and practical use cases.</li>
+    <li>Consistent Patterns Over Exceptions: Reducing complexity through uniform patterns.</li>
+</ol>
+
+The systematic review of {{ "LOUD" | abbr | safe }} in scholarly literature employed the weight of evidence framework. A Boolean query identified relevant papers, with findings showing 46 relevant references from 2018-2023, mainly in English. These papers were categorised into four main categories: mentions of {{ "LOUD" | abbr | safe }}, descriptions of {{ "LOUD" | abbr | safe }}, explanations of {{ "LOUD" | abbr | safe }} design principles, and comparative analyses where the{{ "LOUD" | abbr | safe }} principles have been reused in various applications.
+
+{{ "LOUD" | abbr | safe }} integrates technologies, mostly community-driven, like {{ "IIIF" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art. {{ "IIIF" | abbr | safe }} facilitates the sharing of high-resolution images and audiovisual content through a series of specifications, {{ "WADM" | abbr | safe }} provides a standard for creating and sharing annotations across various platforms, and Linked Art provides a model and an {{ "API" | abbr | safe }} specification for semantically describing {{ "CH" | abbr | safe }}. Together, they demonstrate a transformative potential in how {{ "CH" | abbr | safe }} data is interacted with and understood, reshaping traditional humanities and opening new research opportunities.
+
+#### 3.7.6 Community Practices and Semantic Interoperability {id="subsec:summary-perspectives"}
+
+In the exploration of community dynamics and the intricacies of data exchange, two axes or perspectives come into focus in my PhD: community practices and semantic interoperability. These axes represent not just isolated concepts but comprehensive frameworks that influence how communities function and thrive in an interconnected world. Community practices, as shared activities and rituals, weave the fabric of collective identity within communities, while semantic interoperability acts as the bridge for meaningful and truthful data exchange between different systems.
+
+Both community practices and semantic interoperability will permeate the empirical parts of the thesis as I explore {{ "LOUD" | abbr | safe }} for {{ "CH" | abbr | safe }} through different prisms. These axes serve as critical lenses through which we can dissect and analyse the dynamics, challenges, and opportunities that arise within this landscape.
+
+#### 3.7.7 The Case for Cultural Heritage Data {id="subsec:summary-why-we-care"}
+
+One thing that has been partially touched upon but not strongly asserted in this chapter is *‘why do we really care about cultural heritage?’*
+
+The importance of {{ "CH" | abbr | safe }} data as primary and secondary sources for {{ "DH" | abbr | safe }} practitioners transcends the mere definition, interlinking, and preservation of these sources. The undertaking, notwithstanding technological assistance, can be inherently challenging, contingent upon numerous interdependencies.
+
+Moreover, it is deeply rooted in our response to many pressing global challenges, including the far-reaching consequences of climate change largely caused and accelerated by human activities. In an era characterised by profound disruptions, exemplified by events such as heatwaves, fires, droughts, floods, rising sea levels, and the resultant migrations driven by these environmental changes, which affect not only humans but the entire biosphere, it becomes increasingly important to emphasise the societal responsibilities that accompany our engagement with {{ "CH" | abbr | safe }} as well as {{ "DH" | abbr | safe }} practices in the Anthropocene [see @nowviskie_digital_2015].
 
 ## 4. Exploring Relationships through an Actor-Network Theory Lens {id="cha:theoretical"}
 
