@@ -291,7 +291,7 @@ Efforts to interlink {{ "CH" | abbr | safe }} data have brought about significan
 
 Finding this equilibrium becomes crucial as {{ "CH" | abbr | safe }} data continues to grow in complexity and size, necessitating the seamless integration of native web technologies. The {{ "LOUD" | abbr | safe }} concept cultivates an environment that encourages the formation of vibrant {{ "CoP" | abbr | safe }} and the seamless integration of native web technologies, wherein an essential principle is the availability of comprehensive documentation supplemented with practical examples [@raemy_ameliorer_2022]. Moreover, the emphasis on leveraging widely adopted technologies enhances the interoperability of data and promotes its wider dissemination. With {{ "LOUD" | abbr | safe }} principles guiding the linking of {{ "CH" | abbr | safe }} data, the resulting web of knowledge becomes more than just a machine-readable resource; it transforms into a user-centric ecosystem where both accessibility of Linked Data and usability intersect to enable scholars and a wider audience to engage in the exploration and appreciation of {{ "CH" | abbr | safe }} [@newbury_loud_2018]. Finally, by fostering a collaborative, knowledge-sharing mindset, {{ "LOUD" | abbr | safe }} empowers software developers to implement data in a robust way, drawing insights from shared experiences [see @page_linked_2020].
 
-In this chapter, which serves as the literature review of the PhD thesis, I attempt to draw on this brief introduction by dividing the insights into seven sections in order to provide an overview of the key concepts related to interlinking data in the {{ "CH" | abbr | safe }} domain. The literature review primarily encompasses works published up until December 2023, providing a comprehensive snapshot of the field's current state and its evolution. [Section 3.1](#sec:standout) discusses what makes {{ "CH" | abbr | safe }} data stand out and [Section 3.2](#sec:metadata) is about {{ "CH" | abbr | safe }} metadata standards, while ?????? explores the technological trends, scientific movements and guiding principles that have shaped the field. ?????? provides an overview of the web as an open platform, which are essential to understanding the current landscape of interlinking {{ "CH" | abbr | safe }} data. ?????? focuses on {{ "LOUD" | abbr | safe }}, while ?????? looks at characterising the community practices and semantic interoperability dimensions for {{ "CH" | abbr | safe }}. Finally, in ??????, I summarise key elements from each section and within each of these I give some initial thoughts with respect to {{ "LOUD" | abbr | safe }}, and then conclude the chapter with some considerations on why we as a society need to care about {{ "CH" | abbr | safe }} data.
+In this chapter, which serves as the literature review of the PhD thesis, I attempt to draw on this brief introduction by dividing the insights into seven sections in order to provide an overview of the key concepts related to interlinking data in the {{ "CH" | abbr | safe }} domain. The literature review primarily encompasses works published up until December 2023, providing a comprehensive snapshot of the field's current state and its evolution. [Section 3.1](#sec:standout) discusses what makes {{ "CH" | abbr | safe }} data stand out and [Section 3.2](#sec:metadata) is about {{ "CH" | abbr | safe }} metadata standards, while [Section 3.3](#sec:movements) explores the technological trends, scientific movements and guiding principles that have shaped the field. [Section 3.4](#sec:linkeddata) provides an overview of the web as an open platform, which are essential to understanding the current landscape of interlinking {{ "CH" | abbr | safe }} data. [Section 3.5](#sec:loud) focuses on {{ "LOUD" | abbr | safe }}, while [Section 3.6](#sec:semantics-interoperability) looks at characterising the community practices and semantic interoperability dimensions for {{ "CH" | abbr | safe }}. Finally, in [Section 3.7](#sec:review-summary-insights), I summarise key elements from each section and within each of these I give some initial thoughts with respect to {{ "LOUD" | abbr | safe }}, and then conclude the chapter with some considerations on why we as a society need to care about {{ "CH" | abbr | safe }} data.
 
 ### 3.1 What Makes Cultural Heritage Data Stand Out? {id="sec:standout"} 
 
@@ -1460,7 +1460,10 @@ Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I 
 
 (...)
 
-### 3.7 Summary and Preliminary Insights
+### 3.7 Summary and Preliminary Insights {id="sec:review-summary-insights"} 
+
+This section provides a summary of what has been discussed in this literature review as well as some preliminary insights with regard to the {{ "LOUD" | abbr | safe }} ecosystem, chiefly the design principles, communities, standards, and the implementations. It follows the flow of the present chapter and is organised into five subsequent parts. Finally, in , I end with a few reflections on why we ought to care about {{ "CH" | abbr | safe }} data in the wider sense.
+
 
 (...)
 
@@ -2211,26 +2214,9 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 [^115]: [@wood_linked_2014 p. 35]
 
-[^116]: {{ "FOL" | abbr | safe }}, also
-    known as first-order predicate logic or first-order predicate
-    calculus, is a formal system of symbolic logic used in mathematics,
-    philosophy, and computer science. It is a logical framework for
-    expressing and reasoning about statements involving objects and
-    their properties and relationships. In {{ "FOL" | abbr | safe }}, statements are represented using
-    variables, constants, functions, and predicates. It allows for the
-    quantification of variables and the formulation of statements such
-    as $\forall$ (for all) and $\exists$ (there exists), which enable
-    the expression of universal and existential quantification. As such,
-    {{ "FOL" | abbr | safe }} can express
-    facts concerning some or all of the objects in the universe. Its
-    epistemological commitment, i.e. what an agent believes about facts,
-    is concentrated of what is true, false, or unknown\
-    [see @russell_artificial_2010 pp. 285 ff.]
+[^116]: {{ "FOL" | abbr | safe }}, also known as first-order predicate logic or first-order predicate calculus, is a formal system of symbolic logic used in mathematics, philosophy, and computer science. It is a logical framework for expressing and reasoning about statements involving objects and their properties and relationships. In {{ "FOL" | abbr | safe }}, statements are represented using variables, constants, functions, and predicates. It allows for the quantification of variables and the formulation of statements such as ∀ (for all) and ∃ (there exists), which enable the expression of universal and existential quantification. As such, {{ "FOL" | abbr | safe }} can express facts concerning some or all of the objects in the universe. Its epistemological commitment, i.e. what an agent believes about facts, is concentrated of what is true, false, or unknown [see @russell_artificial_2010 pp. 285 ff.]
 
-[^117]: It must be noted that {{ "DL" | abbr | safe }}, a subset of
-    {{ "FOL" | abbr | safe }} -- briefly
-    introduced in , has a more restricted syntax and semantics tailored
-    for ontology modelling.
+[^117]: It must be noted that {{ "DL" | abbr | safe }}, a subset of {{ "FOL" | abbr | safe }} -- briefly introduced in [3.2.4.4](#subsubsec:ontology), has a more restricted syntax and semantics tailored for ontology modelling.
 
 [^118]: {{ "IRI" | abbr | safe }} is an
     extension of {{ "URI" | abbr | safe }} that allows for the use of
