@@ -1446,6 +1446,19 @@ Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I 
 
 #### 3.4.3 Linked Data Principles {id="sub:ldprinciples"}
 
+By exploiting the core structure of the web's architecture, Linked Data maximises its potential to enable the widespread distribution of information on a global scale. This approach makes effective use of the fundamental elements of the Web and is consistent with its principles of simplicity, decentralisation and openness. As a result, Linked Data exploits the optimal structural equilibrium of the web, allowing content from disparate servers to be assembled seamlessly into a unified repository of global knowledge. This harmonious convergence of principles has driven the remarkable growth of the Web over the past few decades, demonstrating its ability to provide an integrated platform for information exchange. The four principles of Linked Data, as outlined by [@berners-lee_linked_2006] are:
+
+1.  Use {{ "URI" | abbr | safe }}s as names     for things
+2.  Use {{ "HTTP" | abbr | safe }}     {{ "URI" | abbr | safe }}s so that     people can look up those names.
+3.  When someone looks up a {{ "URI" | abbr | safe }}, provide useful information, using     the standards (e.g. {{ "RDF" | abbr | safe }}, {{ "RDFS" | abbr | safe }}, {{ "SPARQL" | abbr | safe }}, etc.)
+4.  Include links to other {{ "URI" | abbr | safe }}s so that they can discover more things.
+
+By following these principles, Linked Data enables structured data to be published and interlinked on the Web, creating a graph of data that can be accessed and navigated by both humans and machines. These principles are closely related to the Semantic Web, which is an extension of the web that aims to give information well-defined meaning, enabling computers and people to work together more effectively [@heath_principles_2011].
+
+> The glue that holds together the traditional document Web is the hypertext links between {{ "HTML" | abbr | safe }} pages. The glue of the data web is {{ "RDF" | abbr | safe }} links. [@bizer_linked_2008 p. 1265] 
+
+(...)
+
 #### 3.4.4 Deployment Schemes for Open Data {id="sub:5star"}
 
 #### 3.4.5 Linked Open Data in the Cultural Heritage Domain {id="sub:lodch"}
