@@ -1357,11 +1357,25 @@ The following are all the specified request methods enabling clients to perform 
 
 The Semantic Web is [@berners-lee_semantic_2001 p. 35]. It was already in [@berners-lee_realising_1999]'s vision and prediction that the web, in its next phase, could be understood by machines, i.e. shifting from a traditional web of documents to a web of data. @bauer_linked_2012 [p. 25] articulates that *‘[t]he basic idea of a semantic web is to provide cost-efficient ways to publish information in distributed environments. To reduce costs when it comes to transferring information among systems, standards play the most crucial role.’*.
 
-At the heart of the Semantic Web lies the foundation of {{ "RDF" | abbr | safe }}. The original {{ "RDF" | abbr | safe }} specification, known as the {{ "RDF" | abbr | safe }} Model and Syntax, serves as the underlying mechanism that establishes the basic framework of {{ "RDF" | abbr | safe }}. This framework provides the cornerstone to facilitate the exchange of data among automated processes [@lassila_resource_1999]. A fundamental component within {{ "RDF" | abbr | safe }} is the {{ "RDF" | abbr | safe }} triple as shown in this [equation](#eq:rdf-triple), comprising three essential elements: the subject (<em>s</em>), the predicate (<em>p</em>), and the object (<em>o</em>). In an {{ "RDF" | abbr | safe }} triple, the subject is the resource or entity about which a statement is made, the predicate is the relationship or property describing that statement, and the object is the value or resource associated with the statement. 
+At the heart of the Semantic Web lies the foundation of {{ "RDF" | abbr | safe }}. The original {{ "RDF" | abbr | safe }} specification, known as the {{ "RDF" | abbr | safe }} Model and Syntax, serves as the underlying mechanism that establishes the basic framework of {{ "RDF" | abbr | safe }}. This framework provides the cornerstone to facilitate the exchange of data among automated processes [@lassila_resource_1999]. A fundamental component within {{ "RDF" | abbr | safe }} is the {{ "RDF" | abbr | safe }} triple as shown in [Equation 3.1](#eq:rdf-triple), comprising three essential elements: the subject (<em>s</em>), the predicate (<em>p</em>), and the object (<em>o</em>). In an {{ "RDF" | abbr | safe }} triple, the subject is the resource or entity about which a statement is made, the predicate is the relationship or property describing that statement, and the object is the value or resource associated with the statement. 
 
-<div id="eq:rdf-triple">   <p>     <em>s</em>     <span style="display: inline-flex; align-items: center;">       <span style="position: relative; margin: 0 5px;">         &rarr;         <span style="position: absolute; top: -1em; left: 50%; transform: translateX(-50%); font-size: 0.8em;">           <em>p</em>         </span>       </span>     </span>     <em>o</em>   </p> </div>
+<div id="eq:rdf-triple" style="display: flex; flex-direction: column; align-items: center;">
+  <p>
+    <em>s</em>
+    <span style="display: inline-flex; align-items: center;">
+      <span style="position: relative; margin: 0 5px;">
+        &rarr;
+        <span style="position: absolute; top: -1em; left: 50%; transform: translateX(-50%); font-size: 0.8em;">
+          <em>p</em>
+        </span>
+      </span>
+    </span>
+    <em>o</em>
+  </p>
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.1:</strong> Triple Pattern Notation</p>
+</div>
 
-(...)
+{{ "RDF" | abbr | safe }} statements are reminiscent of the semiotic triangle of @ogden_meaning_1930 [p. 11] --- as illustrated in [Figure 3.15](#fig:triangle) --- where the referent is tantamount to the predicate of a triple. This analogy emphasises the intrinsic relationship between communication, representation and knowledge organisation. It highlights how both language and structured data rely on the establishment of connections and relationships to effectively convey meaning.
 
 <figure id="fig:triangle" style="text-align: center;">
   <img
@@ -1373,6 +1387,61 @@ At the heart of the Semantic Web lies the foundation of {{ "RDF" | abbr | safe }
     <strong>Figure 3.15:</strong> The Semiotic Triangle by [@ogden_meaning_1930].
   </figcaption>
 </figure>
+
+[Figure 3.16](#fig:rdf-graph) is an {{ "RDF" | abbr | safe }} graph about myself and where I was born leveraging mostly Schema.org[^114], a collaborative project and Linked Data vocabulary used to create structured data markup on websites. This graph consists of vertices and edges, where vertices can be either {{ "URI" | abbr | safe }}s or literal values, and the edges represent relationships between them. In plain language, the graph asserts that there is a person represented by the {{ "URL" | abbr | safe }} `https://www.example.org/julien-a-raemy`, who has a given name ‘Julien Antoine’ and a family name ‘Raemy’. The person's birthplace is specified as an {{ "URL" | abbr | safe }} from Wikidata, which is of type `schema:Place`. Additionally, there's a statement indicating that the birthplace is named ‘Fribourg’.
+
+<figure id="fig:rdf-graph" style="text-align: center;">
+  <img
+    src="data/Figures/rdf-graph.png"
+    alt="Example of an RDF Graph"
+    style="max-width: 80%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.16:</strong> Example of an RDF Graph
+  </figcaption>
+</figure>
+
+
+In the subject-predicate-object syntax of {{ "RDF" | abbr | safe }}, the subject can be either a {{ "URI" | abbr | safe }} or a blank node[^115]. The predicate is an {{ "URI" | abbr | safe }}, like `schema:givenName`, and its aim is to establish connections between subjects and objects, describing the nature of the relationship. The object is either an {{ "URI" | abbr | safe }}, a blank node or a literal, such as or . Objects can also act as subjects if they are identifiable, allowing for the expansion and interconnection of {{ "RDF" | abbr | safe }} graphs.
+
+The original specification proved too broad, leading to confusion and a subsequent effort yielded an updated specification and new documents such as {{ "RDF" | abbr | safe }}/XML [@beckett_rdfxml_2004], which express an {{ "RDF" | abbr | safe }} graph as {{ "XML" | abbr | safe }}, a syntax specification recommendation in 2004 and later revised in 2014 as part of the RDF 1.1 document set [@gandon_rdf_2014], which also introduces the notion of an {{ "RDF" | abbr | safe }} dataset that can represent multiple graphs [@cyganiak_rdf_2014]. is the {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }} serialisation of the earlier graph.
+
+(...)
+
+@idehen_semantic_2017 highlights a significant concern regarding the earlier representations of the Semantic Web and how it is portrayed. These portrayals often place undue emphasis on the pivotal role of {{ "XML" | abbr | safe }} as an ostensibly obligatory component in Semantic Web development. To him, this historical perspective, particularly prominent around the year 2000, erroneously positioned {{ "XML" | abbr | safe }} as a superior alternative to {{ "HTML" | abbr | safe }} for constructing the Semantic Web.
+
+As illustrated by [Figure 3.17](#fig:semweb-cake), @idehen_semantic_2017's revision embodies a Semantic Web layer cake that encompasses several technical or conceptual components.
+
+- **Smart Applications and Services**:   These systems are constructed declaratively, as opposed to using an     imperative approach, with a flexible integration of data models,     interaction, and visualisation.
+- **Trust**:   It is established through verifiable claims regarding identity, the     source of content, and related issues.
+- **Proof**:   It provides a basis for building trust, such as leveraging     authentication tiers.
+- **Transmission Security**:   It pertains to safeguarding data during its transit over networks.     This protection is achieved by implementing established protocols,     such as {{ "TLS" | abbr | safe }},     which includes inherent cryptographic support for ensuring the     confidentiality and integrity of data as it travels across     communication channels.
+- **Unifying Logic**:   In this component, {{ "FOL" | abbr | safe }}[^116] assumes a central role by     providing the fundamental schema for modelling and comprehending     data. These propositions serve as the core building blocks for     problem-solving and decision-making, offering a universal and     abstract structure that can be applied across various domains and     applications[^117].
+- **Rules**:   They serve as the foundation for conducting reasoning and inference,     such as using {{ "SHACL" | abbr | safe }}, which is used to specify integrity     constraints for data entry when constructing structured data with     {{ "RDF" | abbr | safe }}. At this     level, mapping languages such as {{ "R2RML" | abbr | safe }} and {{ "RML" | abbr | safe }} have a part to play.     {{ "R2RML" | abbr | safe }} is a     powerful language for expressing customised mappings from relational     databases to {{ "RDF" | abbr | safe }} datasets [see @das_r2rml_2012]. On     the other hand, {{ "RML" | abbr | safe }} extends these capabilities beyond     relational databases, allowing for the transformation of various     types of data sources, including {{ "CSV" | abbr | safe }}, {{ "XML" | abbr | safe }}, and {{ "JSON" | abbr | safe }} files, into {{ "RDF" | abbr | safe }} [see @dimou_rdf_2022]. Both languages     are instrumental in bridging the gap between     non-{{ "RDF" | abbr | safe }} data     sources and the Semantic Web.
+- **Query**:   This can be achieved by employing {{ "SPARQL" | abbr | safe }} for retrieving and manipulating data     on structured {{ "RDF" | abbr | safe }} statements.
+- **Dictionaries**:   Collections of formal definitions (also referred to as vocabularies     or ontologies) that describe entity and entity relationship types.     They provide a structured framework for defining and organising     concepts, properties, and relationships, which aids in modelling     knowledge in a systematic and machine-readable manner. Some of the     commonly used dictionary languages include     {{ "RDFS" | abbr | safe }}, which is     a simple vocabulary language used to define basic schema information     for {{ "RDF" | abbr | safe }},     {{ "SKOS" | abbr | safe }} designed     for representing and organising some {{ "KOS" | abbr | safe }}s, particularly in the context of     thesauri and taxonomies, as well as {{ "OWL" | abbr | safe }}.
+- **Abstract Language**:   It is done by leveraging the {{ "RDF" | abbr | safe }} syntax (as shown in [Equation 3.1](#eq:rdf-triple)) as a     basis.
+- **Sentence Part Identifiers**:   To identify resources on the web, {{ "IRI" | abbr | safe }}s[^118] or {{ "URI" | abbr | safe }}s can be used.
+- **Document Types**:   Different serialisations of {{ "RDF" | abbr | safe }} exist within the Semantic Web, such     as {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }}, Turtle or     {{ "JSON-LD" | abbr | safe }}[^119].
+- **Semantic Web of Linked Data**:   The final component that holds the rest together; originating from     Tim Berners-Lee's vision (see ).
+
+<figure id="fig:semweb-cake" style="text-align: center;">
+  <img
+    src="data/Figures/tweaked-semweb-layer-cake.webp"
+    alt="Tweaked Semantic Web Technology Layer Cake by @idehen_semantic_2017"
+    style="max-width: 100%; height: auto;"
+  />
+  <figcaption>
+    <strong>Figure 3.17:</strong> Tweaked Semantic Web Technology Layer Cake 
+    by @idehen_semantic_2017
+  </figcaption>
+</figure>
+
+Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I will look in more detail at further {{ "RDF" | abbr | safe }} features, serialisations, and {{ "RDF" | abbr | safe }}-based standards for representing, querying or validating graphs. In doing so, I will touch on some considerations related to the inference and reasoning of {{ "RDF" | abbr | safe }} graphs.
+
+[Code Snippet 3.5]() is a Turtle serialisation of [Figure 3.16](#fig:rdf-graph). Turtle, a {{ "W3C" | abbr | safe }} standard, is a notation is a way to express this data in a structured and machine-readable format [@wood_linked_2014 p. 44]. It is a common syntax used for representing {{ "RDF" | abbr | safe }} data. It allows people to create statements in a more friendly manner than in an {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }} serialisation [@beckett_rdf_2014]. Here are some of the most important features:
+
+(...)
 
 
 #### 3.4.3 Linked Data Principles {id="sub:ldprinciples"}
