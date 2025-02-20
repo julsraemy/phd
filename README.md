@@ -2,6 +2,7 @@
 A website telling you more about my PhD thesis on Linked Open Usable Data (LOUD).
 
 Title: *Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability*
+PDF Version: <https://doi.org/10.5451/unibas-ep96807>
 
 ## Installing Eleventy
 
