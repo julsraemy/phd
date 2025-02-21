@@ -1812,6 +1812,35 @@ This subsection serves as a baseline exploration of the concepts of semantics, i
 
 To begin, semantics can range from simple, general definitions of data elements to highly specific and complex definitions that fully describe the context, relationships, and constraints of the data within a particular domain or system. According to the @oxford_english_dictionary_semantics_2023, semantics in linguistics are the *‘the meaning of signs; the interpretation or description of such meaning; (chiefly Semiotics) the study of the meaning of signs, and of the relationship of sign vehicles to referents’*, as well as the branch of linguistics or philosophy concerned with meaning in language. Whereas in computing, it relates *‘to the meaning of the strings in a programming language’*. It is essential to recognise that semantics provide the basis for shared understanding, both in language and technology.
 
+In terms of a more formal definition, the {{ "SDI" | abbr | safe }} can serves as a basis for what semantic information is. @floridi_is_2005 [p. 367] describes semantic information as *‘well-formed, meaningful, and truthful data’* This definition can be formally represented using {{ "FOL" | abbr | safe }} as:
+
+<div id="eq:boolean" style="display: flex; flex-direction: column; align-items: center;">
+<p>    &forall;x [W(x) &and; M(x) &and; T(x)] &rarr; S(x)</p> 
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.3:</strong> Semantic Information</p>
+</div>
+
+Here is a breakdown of and the three criteria that data (x) must satisfied to be considered as representing semantic information S(x):
+<ol>
+    <li>x must be well-formed, denoted as W(x).</li>
+    <li>x must be meaningful, denoted as M(x).</li>
+    <li>x must be truthful, denoted as T(x).</li>
+</ol>
+
+In simpler terms, ‘for all data x, if x is well-formed, meaningful, and truthful, then x represents semantic information’. 
+
+Transitioning to interoperability, it extends beyond basic compatibility, ranging from systems that can exchange data without errors [@fafalios_workflow_2023] to more sophisticated levels of interoperability where systems can effectively use the data being exchanged to support a wide range of tasks and operations.
+
+Shedding light on the perspective of the {{ "W3C" | abbr | safe }} [see @etemad_w3c_2023 6.3.2.], @raemy_analysis_2023 [p. 22] have taken a stance in positioning {{ "LOUD" | abbr | safe }} through the prism of interoperability: *‘Interoperability is a state in which two or more tested, independently developed technological systems can interact successfully according to their scope through the implementation of agreed-upon standards’*.
+
+To delve deeper into the nuances of interoperability, it is important to understand that it can take various forms, as outlined by @ouksel_semantic_1999. These forms manifest in different ways, and some examples and descriptions, drawing insights from various sources, are being explored here:
+
+- **System interoperability**:   which provides interactions between distributed objects and     components.
+- **Syntactic interoperability**:   is accomplished when several systems of information discover and     access information within transmitted objects. As examples of     protocols to enable syntactic interoperability between institutional     repositories that have been widely used in the     {{ "CH" | abbr | safe }} field are     {{ "OAI-PMH" | abbr | safe }} and     {{ "OAI-ORE" | abbr | safe }}     [see @van_de_sompel_reminiscing_2015; @freire_aggregation_2018].
+- **Structural interoperability**:   involves using standardised data formats to enable seamless     communication between systems, such as {{ "RDF" | abbr | safe }} in the Semantic Web.
+- **Semantic interoperability**:   which will be discussed hereafter.
+
+Exploring the practical application of interoperability in the {{ "STEM" | abbr | safe }}, the {{ "HIMMS" | abbr | safe }}[^226] - an American non-profit organisation founded in 1961 dedicated to transforming the global health ecosystem through information and technology -- outlines four levels of interoperability [@himss_interoperability_2020]:
+
 
 (...)
 
