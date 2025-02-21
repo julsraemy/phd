@@ -1588,7 +1588,7 @@ Transitioning into the domain of community-driven and {{ "JSON-LD" | abbr | safe
 
 Beginning with [3.5.1](#subsec:loud-principles), I explore the five core design principles or characteristics of {{ "LOUD" | abbr | safe }}. Then, [3.5.2](#subsec:loud-review) presents a systematic review of {{ "LOUD" | abbr | safe }}. Subsection [3.5.3](#subsec:iiif) provides an overview of {{ "IIIF" | abbr | safe }}, encompassing its inception, community, specifications, and the {{ "IIIF" | abbr | safe }} ecosystem. Subsection [3.5.4](#subsec:wadm) delves into the specifics of {{ "WADM" | abbr | safe }}, a {{ "W3C" | abbr | safe }} standard provides a structured framework for representing annotations on the web. Then, [3.5.5](#subsec:linked-art) goes into the history, conceptual model, {{ "API" | abbr | safe }} and standards for Linked Art. It also explores the community around Linked Art and its current or planned implementations. Finally, [3.5.6](#subsec:loud-implications) discusses the implications and opportunity that {{ "LOUD" | abbr | safe }} brings to the field of {{ "CH" | abbr | safe }} and the humanities at large.
 
-#### 3.5.1 Linked Art {id="subsec:loud-principles"}
+#### 3.5.1 LOUD Design Principles {id="subsec:loud-principles"}
 
 One of the main purposes of {{ "LOUD" | abbr | safe }} is to make the data more easily accessible to software developers, who play a key role in interacting with the data and building software and services on top of it, and to some extent to academics. As such, striking a delicate balance between the dual imperatives of data completeness and accuracy, which depend on the underlying ontological construct, and the pragmatic considerations of scalability and usability, becomes imperative. Similar to Tim-Berners Lee's Five Star Open Data Deployment Scheme, five design principles underpin {{ "LOUD" | abbr | safe }}[^129].
 
@@ -1602,13 +1602,57 @@ One of the main purposes of {{ "LOUD" | abbr | safe }} is to make the data more 
 
 The concerns articulated by @hyvonen_linked_2014 in their Seven-Star Model in terms of schema and data validation are also indirectly addressed by the {{ "LOUD" | abbr | safe }} design principles. Conceptualisations of {{ "LOUD" | abbr | safe }} specifications and their representation, mostly through usable {{ "API" | abbr | safe }}s -- echoing human-centred approach for developing them as articulated by [@myers_improving_2016], address schema concerns. For data validation, best practices and validators developed by the {{ "IIIF" | abbr | safe }} and Linked Art communities come into play. Moreover, {{ "LOUD" | abbr | safe }} indirectly respond to the needs of scientists who advocate that and emphasise treating research objects, data, as first class citizens for reproducibility purposes [see @bechhofer_why_2013].
 
-Highlighting the success of the practices that guided {{ "IIIF" | abbr | safe }}, @sanderson_importance_2020 identifies three systems adhering to the LOUD design principles: {{ "IIIF" | abbr | safe }} and specifically the third version of the Presentation {{ "API" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art. These three systems are complementary and can be used either separately or in conjunction. illustrates an high-level overview of an infrastructure combining all three of the {{ "LOUD" | abbr | safe }} specifications.
+Highlighting the success of the practices that guided {{ "IIIF" | abbr | safe }}, @sanderson_importance_2020 identifies three systems adhering to the LOUD design principles: {{ "IIIF" | abbr | safe }} and specifically the third version of the Presentation {{ "API" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art. These three systems are complementary and can be used either separately or in conjunction. [Figure 3.20]() illustrates an high-level overview of an infrastructure combining all three of the {{ "LOUD" | abbr | safe }} specifications.
 
-(...)
+(...) Figure 3.20
+
+In summary, the {{ "LOUD" | abbr | safe }} design principles, guided by considerations of accessibility, ease of use, comprehensibility, documentation, and consistency, not only address crucial concerns raised by Linked Data practitioners but also respond to the evolving needs of the {{ "CH" | abbr | safe }} and scientific communities emphasising data reproducibility. In the following subsection, I will explore the presence and impact of {{ "LOUD" | abbr | safe }} and their underlying principles in the scholarly landscape.
 
 #### 3.5.2 LOUD: Systematic Review {id="subsec:loud-review"}
 
+This subsection deals with a systematic review of academic references and ongoing projects related to {{ "LOUD" | abbr | safe }}. It examines how the concept is mentioned in the academic literature.
+
+To conduct this systematic review, I employed the weight of evidence framework[^130] developed by @gough_weight_2007 [p. 218-219]. This framework consists of nine criteria, starting with formulating the review question and developing a protocol. In this case, the review question was formulated as a Boolean query, as shown in [Equation 3.2](#eq:boolean), due to the absence of an existing systematic review for {{ "LOUD" | abbr | safe }}. The criteria also include defining inclusion and exclusion criteria for papers and conducting a systematic search strategy across academic databases. Screening, mapping, data extraction, quality and relevance appraisal, synthesis, and communication and engagement are other essential steps in this framework.
+
+For the systematic review, I used a specific Boolean search query[^131] to identify relevant research papers and resources. The query, as presented in [Equation 3.2](#eq:boolean), was applied across academic databases, including Google Scholar[^132], Semantic Scholar[^133], Web of Science, and Scopus. Specifically, the query seeks references containing either ‘Linked Open Usable Data’ or ‘LOUD Design Principles’ or ‘LOUD Principles’ or instances of ‘LOUD’ combined with any of the three recognised standards adhering to its design principles: {{ "IIIF" | abbr | safe }}, Linked Art, and {{ "WADM" | abbr | safe }}.
+
+<div id="eq:boolean" style="display: flex; flex-direction: column; align-items: center;">
+<p>     <strong>Q</strong> = “Linked Open Usable Data” &or; “LOUD Design Principles” &or; “LOUD Principles” <br>     &nbsp;&nbsp;&nbsp;&nbsp; “LOUD” &and; “IIIF” &or; “LOUD” &and; “Linked Art” &or; “LOUD” &and; “Web Annotation”   </p> 
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.2:</strong> Executed Boolean Query</p>
+</div>
+
+In Google Scholar, 60 results were returned, with 41 deemed relevant. Semantic Scholar's results were not available due to difficulties with the search process as it yielded more than 800k results. Web of Science returned no relevant results, and Scopus provided four results, of which three were unique items. I also queried the Zenodo repository[^134], resulting in 25 hits, including two conference papers, one journal article, and one working paper. The remaining results included presentations or datasets, mostly associated with my own work.
+
+(...) Table 3.2
+
+As of mid-November 2023, the systematic review yielded a total of 46 results, covering the period between 2018 and 2023. These results are summarised in [Table 3.2](). For more detailed information about each reference, including their type, language, source database, and categorisation, refer to [Table 3.3](). For instance, the references were predominantly written in English (37), with additional contributions in German (5), French (2), and one reference being bilingual in German and French. Additionally, one paper was in Japanese.
+
+(...) Table 3.3
+
+To categorise the papers, I employed a classification scheme with three main categories: &alpha;, &beta;, and &gamma;. Within α, there are four subcategories: &alpha;<sub>1</sub> (**Mention**) for papers mentioning {{ "LOUD" | abbr | safe }}, &alpha;<sub>2</sub>  (**Description**) for those providing descriptions, &alpha;<sub>3</sub> (**Principles**) for explanations of the design principles, and &alpha;<sub>4</sub> (**Analysis**) for comparative analyses. &beta; (**Standards**) represents papers mentioning recognised {{ "LOUD" | abbr | safe }} standards, i.e. {{ "IIIF" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art, while &gamma; (**Application**) covers {{ "LOUD" | abbr | safe }} applications or reflection to other standards. Some papers fall into multiple categories. [Figure 3.21]() displays the distribution of references across these categories, categorised by year. I also highlighted in yellow the nine references I took part in.
+
+(...) Figure 3.21
+
+- &alpha;<sub>1</sub> -- **Mention**:   Papers that mention {{ "LOUD" | abbr | safe }} as a new concept, accounting for 30     out of 46 papers. For instance, @alexiev_museum_2018 introduced     {{ "LOUD" | abbr | safe }} as a     novel moniker or approach to Linked Data.
+- &alpha;<sub>2</sub> -- **Description**:   Papers providing descriptions of what {{ "LOUD" | abbr | safe }} is, including varying perspectives on     its target audience, such as human-readability or data practitioners     [@schmidtPracticesLinkedOpen2022a; @adamou_shout_2022].
+- &alpha;<sub>3</sub> -- **Principles**:   Papers explaining {{ "LOUD" | abbr | safe }} design principles, often authored by     a small group that know each other such as     @delmas-glass_fostering_2020 or myself. They also frequently     referenced {{ "IIIF" | abbr | safe }} and Linked Art.
+- &alpha;<sub>4</sub> -- **Analysis**:   Papers that interpret and reuse {{ "LOUD" | abbr | safe }} design principles for diverse     applications, offering comparative analyses or presenting case     studies. For instance, @thiery_sphere_2019 proposed a model of seven     data spheres, with {{ "LOUD" | abbr | safe }} as the sphere and     {{ "LOUD" | abbr | safe }} and     {{ "FAIR" | abbr | safe }} together     in the sphere. In another case, @pohl_lobid_2018 highlights the     importance of the principles for lobid[^135], a     {{ "LOD" | abbr | safe }} service in     Germany that consists of {{ "GUI" | abbr | safe }}s and {{ "API" | abbr | safe }}s.
+
+[Figure 3.22]() depicts Venn diagrams illustrating all six intersections of these categories, revealing how different aspects of {{ "LOUD" | abbr | safe }} are covered in the literature.
+
+(...) Figure 3.22
+
+Several papers related to archaeology also made references to {{ "LOUD" | abbr | safe }} in the context of the CAA Data Dragons Interest Group's work on semantics and {{ "LOUD" | abbr | safe }}[^136]. Furthermore, a search on popular search engines, specifically Bing and Google, revealed the existence of a research project named simply {{ "LOUD" | abbr | safe }}. This project, initiated in 2019 by the Royal Museum for Central Africa in Belgium[^137], was delayed due to the COVID-19 pandemic and is now being considered for future re-initiation.
+
+Further research should explore projects that implement a combination of the above standards, without necessarily mentioning {{ "LOUD" | abbr | safe }}. It is important to note that a quick search will show many {{ "IIIF" | abbr | safe }} implementations that reference {{ "WADM" | abbr | safe }}, but it is mainly due to the Presentation {{ "API" | abbr | safe }} data model's dependence on this specification. However, such mentions of {{ "WADM" | abbr | safe }} often do not indicate active adoption of web annotations for broader purposes. In these cases, while these projects still adhere to the design principles of {{ "LOUD" | abbr | safe }} by implementing {{ "IIIF" | abbr | safe }}, I would argue that the full potential of {{ "LOUD" | abbr | safe }} is realised through a combination of specifications, especially when it comes to achieving semantic interoperability[^138].
+
+As I move on to explore {{ "IIIF" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art in the following subsequent subsections, it is worth noting that these systems, as exemplified by @sanderson_importance_2020, embody and adhere to the foundational principles of {{ "LOUD" | abbr | safe }}, showcasing their practical applicability in diverse contexts.
+
 #### 3.5.3 International Image Interoperability Framework (IIIF) {id="subsec:iiif"}
+
+In essence, the {{ "IIIF" | abbr | safe }}[^139] serves as both a model for presenting and annotating content, as well as a global community that develops shared {{ "API" | abbr | safe }}s, implements them in software, and exposes interoperable content.
+
+(...)
 
 #### 3.5.4 Web Annotation Data Model {id="subsec:wadm"}
 
