@@ -1805,7 +1805,6 @@ Within this context, it is essential to assess the mechanisms by which actors be
 
 The next subsection explores the second axis of this thesis, which is intricately intertwined with community practices. {{ "LOUD" | abbr | safe }} specifications, especially {{ "IIIF" | abbr | safe }} and Linked Art standards, represent community-driven endeavours that hold the key to achieving semantic interoperability. These standards provide a shared foundation upon which organisations, individuals, and apparatuses can build, facilitating more effective communication, and reinforcing the consensus-making processes that has been discussed.
 
-
 #### 3.6.2 Semantic Interoperability {id="subsec:semantic-interoperability"}
 
 This subsection serves as a baseline exploration of the concepts of semantics, interoperability, and the powerful synergy they form in the space of information exchange known as semantic interoperability.
@@ -1868,7 +1867,7 @@ The principle that governs the exchange of data between entities needs to be def
 
 <div id="eq:exchange_fol" style="display: flex; flex-direction: column; align-items: center;">
 <p>&forall;y &forall;z [I(y) &and; I(z) &and; E(y,z)]</p> 
-  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.4:</strong>Information Exchange</p>
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.4:</strong> Information Exchange</p>
 </div>
 
 [Equation 3.4](#eq:exchange_fol) asserts that for all entities *y* and *z*, if they exhibit semantic interoperability and there is a seamless exchange mechanism between them, certain criteria regarding the exchanged data must be met. Specifically, it implies that for any data "x" being exchanged between *y* and *z*, the three conditions of {{ "SDI" | abbr | safe }} presented in must also be satisfied.
@@ -1877,7 +1876,7 @@ The complete implication can be expressed as:
 
 <div id="eq:semanticinteroperability_fol" style="display: flex; flex-direction: column; align-items: center;">
 <p>&forall;y &forall;z [I(y) &and; I(z) &and; E(y,z)] &rarr; [&forall;x (W(x) &and; M(x) &and; T(x)) &rarr; E(y,z) &and; S(x)]</p> 
-  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.5:</strong>Semantic Interoperability</p>
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.5:</strong> Semantic Interoperability</p>
 </div>
 
 Simply put, [Equation 3.5](#eq:semanticinteroperability_fol) can be summarised it this way: ‘For all *y*, for all *z*, if both *y* and *z* exhibit Semantic Interoperability *I* and there is a seamless exchange *E* between *y* and *z*, then for any data *x* being exchanged between them, *x* must be well-formed, meaningful, and truthful’.
@@ -2160,8 +2159,24 @@ Concluding this chapter, the developed toolbox lays a coherent foundation for em
 
 This chapter delineates the Research Scope and Methodology, laying the groundwork for the empirical exploration within this thesis.
 
+Structured into five key sections, this chapter outlines the methodological framework adopted to explore the purposes of the research and specifies the systematic approach used to consider the outcomes. It initiates with the presentation of research questions in [Section 5.1](#sec:rq) and hypotheses in [Section 5.2]() that are crucial for evaluating {{ "LOUD" | abbr | safe }} within the {{ "CH" | abbr | safe }} context. Following this, [Section 5.3]() details the objectives aimed to be achieved based on the research findings. The methodology, elaborated in [Section 5.4](), encompasses the research methods, data creation, collection, curation, modelling, analysis, alongside considerations of limitations and ethics. The final section, [5.5](), defines some of the scholarly implications of the thesis, highlighting its substantial contributions to {{ "DH" | abbr | safe }} and the broader field of the humanities. This discourse encapsulates the implications of the research, affirming its value and positioning within the scholarly community.
+
+Throughout this thesis, the two pivotal perspectives, *Community Practices* and *Semantic Interoperability*, serve as threads interwoven across chapters. While certain research questions, hypotheses, and objectives are specifically aligned with one perspective, others bridge both, showcasing their interconnected relevance.
+
+### 5.1 Research Questions {id="sec:rq"}
+
+Within this thesis, the primary research question seeks to critically evaluate the role and impact of {{ "LOUD" | abbr | safe }}, exploring how it influences and integrates within the fields of {{ "CH" | abbr | safe }} and {{ "DH" | abbr | safe }}. This research seeks, in part, to uncover the depth of {{ "LOUD" | abbr | safe }}'s contribution to these disciplines, and to explore its potential to reshape the perception and use of Linked Data. Framing the central inquiry of this investigation, the primary research question is articulated as follows:
+
 
 (...)
+
+### 5.2 ...
+
+### 5.3 ...
+
+### 5.4 ...
+
+### 5.5 ...
 
 ## 6. The Social Fabrics of IIIF and Linked Art {id="cha:social-fabrics"}
 
