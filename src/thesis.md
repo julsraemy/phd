@@ -2152,14 +2152,14 @@ In forging this theoretical framework, I seek to transcend the notion of merely 
   </figcaption>
 </figure>
 
-Concluding this chapter, the developed toolbox lays a coherent foundation for empirical research, poised to explore the dynamics within actor-networks. This exploration is not entirely novel in the context of {{ "CH" | abbr | safe }}, as exemplified by @guillem_faire_2023's use of {{ "ANT" | abbr | safe }} to spotlight the keystones that were destroyed by the fire at Notre-Dame de Paris. As this narrative unfolds into , the {{ "ANT" | abbr | safe }}-based toolbox, enriched with amodern and feminist perspectives, will be instrumental in navigating the forthcoming empirical landscapes.
+Concluding this chapter, the developed toolbox lays a coherent foundation for empirical research, poised to explore the dynamics within actor-networks. This exploration is not entirely novel in the context of {{ "CH" | abbr | safe }}, as exemplified by @guillem_faire_2023's use of {{ "ANT" | abbr | safe }} to spotlight the keystones that were destroyed by the fire at Notre-Dame de Paris. As this narrative unfolds into [Chapter 5](#cha:scope), the {{ "ANT" | abbr | safe }}-based toolbox, enriched with amodern and feminist perspectives, will be instrumental in navigating the forthcoming empirical landscapes.
 
 
 ## 5. Research Scope and Methodology {id="cha:scope"}
 
 This chapter delineates the Research Scope and Methodology, laying the groundwork for the empirical exploration within this thesis.
 
-Structured into five key sections, this chapter outlines the methodological framework adopted to explore the purposes of the research and specifies the systematic approach used to consider the outcomes. It initiates with the presentation of research questions in [Section 5.1](#sec:rq) and hypotheses in [Section 5.2]() that are crucial for evaluating {{ "LOUD" | abbr | safe }} within the {{ "CH" | abbr | safe }} context. Following this, [Section 5.3]() details the objectives aimed to be achieved based on the research findings. The methodology, elaborated in [Section 5.4](), encompasses the research methods, data creation, collection, curation, modelling, analysis, alongside considerations of limitations and ethics. The final section, [5.5](), defines some of the scholarly implications of the thesis, highlighting its substantial contributions to {{ "DH" | abbr | safe }} and the broader field of the humanities. This discourse encapsulates the implications of the research, affirming its value and positioning within the scholarly community.
+Structured into five key sections, this chapter outlines the methodological framework adopted to explore the purposes of the research and specifies the systematic approach used to consider the outcomes. It initiates with the presentation of research questions in [Section 5.1](#sec:rq) and hypotheses in [Section 5.2](#sec:hyp) that are crucial for evaluating {{ "LOUD" | abbr | safe }} within the {{ "CH" | abbr | safe }} context. Following this, [Section 5.3](#sec:obj) details the objectives aimed to be achieved based on the research findings. The methodology, elaborated in [Section 5.4](#sec:methodo), encompasses the research methods, data creation, collection, curation, modelling, analysis, alongside considerations of limitations and ethics. The final section, [5.5](), defines some of the scholarly implications of the thesis, highlighting its substantial contributions to {{ "DH" | abbr | safe }} and the broader field of the humanities. This discourse encapsulates the implications of the research, affirming its value and positioning within the scholarly community.
 
 Throughout this thesis, the two pivotal perspectives, *Community Practices* and *Semantic Interoperability*, serve as threads interwoven across chapters. While certain research questions, hypotheses, and objectives are specifically aligned with one perspective, others bridge both, showcasing their interconnected relevance.
 
@@ -2170,13 +2170,25 @@ Within this thesis, the primary research question seeks to critically evaluate t
 
 (...)
 
-### 5.2 ...
+### 5.2 Hypotheses {id="sec:hyp"}
 
-### 5.3 ...
+### 5.3 Objectives {id="sec:obj"}
 
-### 5.4 ...
+### 5.4 Methodology {id="sec:methodo"}
 
-### 5.5 ...
+#### 5.4.1 Outline of the Research Methods {id="subsec:outline"}
+
+##### 5.4.1.1 Assessment of Practices in IIIF and Linked Art Communities {id="subsubsec:outline-chap1"}
+
+##### 5.4.1.2 Deployment of LOUD within PIA {id="subsubsec:outline-chap2"}
+
+##### 5.4.1.3 Review of a Large-Scale LOUD Implementation and Data Consistency within LUX {id="subsubsec:outline-chap3"}
+
+#### 5.4.2 Overall Limitations {id="subsec:overall-limitations"}
+
+#### 5.4.3 
+
+### 5.5 
 
 ## 6. The Social Fabrics of IIIF and Linked Art {id="cha:social-fabrics"}
 
