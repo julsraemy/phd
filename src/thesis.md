@@ -1814,12 +1814,12 @@ To begin, semantics can range from simple, general definitions of data elements 
 
 In terms of a more formal definition, the {{ "SDI" | abbr | safe }} can serves as a basis for what semantic information is. @floridi_is_2005 [p. 367] describes semantic information as *‘well-formed, meaningful, and truthful data’* This definition can be formally represented using {{ "FOL" | abbr | safe }} as:
 
-<div id="eq:boolean" style="display: flex; flex-direction: column; align-items: center;">
+<div id="eq:sdi_fol" style="display: flex; flex-direction: column; align-items: center;">
 <p>    &forall;x [W(x) &and; M(x) &and; T(x)] &rarr; S(x)</p> 
   <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.3:</strong> Semantic Information</p>
 </div>
 
-Here is a breakdown of and the three criteria that data (x) must satisfied to be considered as representing semantic information S(x):
+Here is a breakdown of and the three criteria that data *(x)* must satisfied to be considered as representing semantic information *S(x)*:
 <ol>
     <li>x must be well-formed, denoted as W(x).</li>
     <li>x must be meaningful, denoted as M(x).</li>
@@ -1841,8 +1841,54 @@ To delve deeper into the nuances of interoperability, it is important to underst
 
 Exploring the practical application of interoperability in the {{ "STEM" | abbr | safe }}, the {{ "HIMMS" | abbr | safe }}[^226] - an American non-profit organisation founded in 1961 dedicated to transforming the global health ecosystem through information and technology -- outlines four levels of interoperability [@himss_interoperability_2020]:
 
+- Foundational (Level 1):   This first level establishes the inter-connectivity requirements     needed for one system or application to securely communicate data to     and receive data from another.
+- Structural (Level 2):   It defines the format, syntax and organisation of data exchange     including at the data field level for interpretation.
+- Semantic (Level 3):   It provides for common underlying models and codification of the     data including the use of data elements with standardised     definitions from publicly available value sets and coding     vocabularies, providing shared understanding and meaning to the     user.
+- Organisational (Level 4):   It includes governance, policy, social, legal and organisational     considerations to facilitate the secure, seamless and timely     communication and use of data both within and between organisations,     entities and individuals. These components enable shared consent,     trust and integrated end-user processes and workflows.
 
-(...)
+These levels illustrate the multifaceted nature of interoperability and its role in enhancing data exchange in common models.
+
+Moreover, open standards play a pivotal role in fostering interoperability, aligning with the enrichments policy of Europeana [@manguinhas_enrichments_2023 p. 7]. Yet, the openness of a standard alone may not guarantee widespread adoption. As highlighted by @nelson_25_2020 [@nelson_d-lib_2022], successful interoperability often depends on having a significant platform, whether through commercial influence or active community engagement. In essence, a core ingredient for successful interoperability specifications is a substantial presence, either in the form of commercial influence or engaged communities. In their words:
+
+> Because of [the growing global adoption of open standards] by GLAM institutions, especially [IIIF specifications stand] as a testimony that rich interoperability for distributed resource collections is effectively achievable. But other promising specifications that aim for the same holy grail are struggling for adoption, and, many times, lack of resources is mentioned as a reason. While that undoubtedly plays a role, it did not stand in the way of rapid adoption of protocols that have emerged from large corporations, such as the Google-dominated schema.org. This consideration re-emphasizes that a core ingredient of a successful interoperability specification, and hence of achieving an interoperable global information web, is a large megaphone, either in the guise of commercial power or active community engagement. [@nelson_d-lib_2022 pp. 8-9]
+
+In the context of semantic interoperability, {{ "CIDOC-CRM" | abbr | safe }} defines it as . More specifically, the intended meaning comprises of the following elements [@bekiari_cidoc_2021 p. 18]:
+
+1.  the data structure elements involved;
+2.  the terminology appearing as data;
+3.  the identifiers used in the data for factual items such as places,     people, objects, etc.
+
+Furthermore, @sacramento_considering_2022 [p. 124] provides a comprehensive definition of semantic or content interoperability, emphasising the simultaneous exchange of data and meaning. This is achieved through metadata and controlled, shared vocabularies.
+
+> Semantic (content) interoperability is the ability of computer systems to unambiguously exchange data using a shared meaning, independently of their hardware, software, or platforms. It is concerned not just with the packaging of data (syntax), but the simultaneous transmission of the meaning with the data (semantics). This is accomplished by adding data about the data (metadata) and linking each data element to a controlled, shared vocabulary (ontology).
+
+As such, by following @floridi_is_2005 [@floridi_philosophy_2011]'s logic of {{ "SDI" | abbr | safe }}, semantic interoperability can be defined as the seamless exchange of well-formed, meaningful, and truthful data between distinct systems.
+
+The principle that governs the exchange of data between entities needs to be defined. It ensures that when two entities, represented by *y* and *z*, exhibit semantic interoperability denoted as *I(y)* and *I(z)* respectively, and there exists a seamless exchange mechanism *E* between them, then certain conditions must hold true for the exchanged data *x*. In {{ "FOL" | abbr | safe }}, it can be formally expressed as follows:
+
+<div id="eq:exchange_fol" style="display: flex; flex-direction: column; align-items: center;">
+<p>&forall;y &forall;z [I(y) &and; I(z) &and; E(y,z)]</p> 
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.4:</strong>Information Exchange</p>
+</div>
+
+[Equation 3.4](#eq:exchange_fol) asserts that for all entities *y* and *z*, if they exhibit semantic interoperability and there is a seamless exchange mechanism between them, certain criteria regarding the exchanged data must be met. Specifically, it implies that for any data "x" being exchanged between *y* and *z*, the three conditions of {{ "SDI" | abbr | safe }} presented in must also be satisfied.
+
+The complete implication can be expressed as:
+
+<div id="eq:semanticinteroperability_fol" style="display: flex; flex-direction: column; align-items: center;">
+<p>&forall;y &forall;z [I(y) &and; I(z) &and; E(y,z)] &rarr; [&forall;x (W(x) &and; M(x) &and; T(x)) &rarr; E(y,z) &and; S(x)]</p> 
+  <p style="margin-top: 0.5em; font-style: italic;"><strong>Equation 3.5:</strong>Semantic Interoperability</p>
+</div>
+
+Simply put, [Equation 3.5](#eq:semanticinteroperability_fol) can be summarised it this way: ‘For all *y*, for all *z*, if both *y* and *z* exhibit Semantic Interoperability *I* and there is a seamless exchange *E* between *y* and *z*, then for any data *x* being exchanged between them, *x* must be well-formed, meaningful, and truthful’.
+
+Moreover, building upon this definition of semantic interoperability, it is crucial to recognise that the exchange of well-formed or meaningful data hinges on specific constructs within information systems. Delving into this relationship, @scharnhorst_knowledge_2023 [p. 1115] emphasise the close connection between the creation of controlled vocabularies and the paradigms emerging within research. They articulate that:
+
+> The creation of specific KOS is intrinsically connected to the innovativeness of new systems of thought in research and inherently non-interoperable. For service providers supporting humanities research and providing access to cultural heritage data the challenge lies in  balance between accommodating specific communities and their needs and fostering data exchange across communities. Part of this balance is realized via an emerging network of connected services. This problem is actually shared by all knowledge domains, and not specific to the humanities. What is needed to further foster the implementation of semantic interoperability is to explicitly discuss the context in which it is introduced, including its main target (findability, accessibility, or re-use), its function for research and beyond, and levels of maturity and sustainability when it comes to new technological solutions.
+
+This observation underscores the imperative nature of addressing these socio-technical requirements to enhance semantic interoperability. Achieving this capability enables different systems to communicate information consistently with the intended meaning, thereby promoting seamless and meaningful data exchange.
+
+In conclusion, the concept of semantic interoperability, encompassing semantics and interoperability, forms a crucial axis of my research. The synergy between these elements and their profound influence on data exchange will be central to my exploration of {{ "LOUD" | abbr | safe }} through various lenses.
 
 ### 3.7 Summary and Preliminary Insights {id="sec:review-summary-insights"} 
 
