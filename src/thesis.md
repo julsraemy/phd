@@ -1283,7 +1283,7 @@ Subsection [3.4.4](#sub:5star) examines the set of criteria for publishing data 
 
 Finally, [3.4.5](#sub:5star) explores the specific application of {{ "LOD" | abbr | safe }} in the {{ "CH" | abbr | safe }} domain. The subsection provides examples of how {{ "CHI" | abbr | safe }}s such as museums, libraries, and archives are using Linked Data to make their datasets more accessible and discoverable on the web.
 
-Overall, this section provides a comprehensive overview of the key concepts and technologies underlying the web as an open and linked platform, and their applications in the {{ "CH" | abbr | safe }} field and more broadly for any scientific endeavours as that the web started with [@nelson_d-lib_2022 citing @berners-lee_worldwideweb_1991]. Through exploring these concepts, we can gain a deeper understanding of how the web is evolving into a more open, interconnected, and data-driven platform, and how this evolution is transforming the way we access, use, and share information.
+Overall, this section provides a comprehensive overview of the key concepts and technologies underlying the web as an open and linked platform, and their applications in the {{ "CH" | abbr | safe }} field and more broadly for any scientific endeavours as that the web started with *‘the philosophy that much academic information should be freely available to anyone’* [@nelson_d-lib_2022; @berners-lee_worldwideweb_1991]. Through exploring these concepts, we can gain a deeper understanding of how the web is evolving into a more open, interconnected, and data-driven platform, and how this evolution is transforming the way we access, use, and share information.
 
 #### 3.4.1 Web Architecture {id="sub:webarchi"}
 
@@ -1404,9 +1404,32 @@ At the heart of the Semantic Web lies the foundation of {{ "RDF" | abbr | safe }
 
 In the subject-predicate-object syntax of {{ "RDF" | abbr | safe }}, the subject can be either a {{ "URI" | abbr | safe }} or a blank node[^115]. The predicate is an {{ "URI" | abbr | safe }}, like `schema:givenName`, and its aim is to establish connections between subjects and objects, describing the nature of the relationship. The object is either an {{ "URI" | abbr | safe }}, a blank node or a literal, such as or . Objects can also act as subjects if they are identifiable, allowing for the expansion and interconnection of {{ "RDF" | abbr | safe }} graphs.
 
-The original specification proved too broad, leading to confusion and a subsequent effort yielded an updated specification and new documents such as {{ "RDF" | abbr | safe }}/XML [@beckett_rdfxml_2004], which express an {{ "RDF" | abbr | safe }} graph as {{ "XML" | abbr | safe }}, a syntax specification recommendation in 2004 and later revised in 2014 as part of the RDF 1.1 document set [@gandon_rdf_2014], which also introduces the notion of an {{ "RDF" | abbr | safe }} dataset that can represent multiple graphs [@cyganiak_rdf_2014]. [Code Snippet 3.4] is the {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }} serialisation of the earlier graph.
+The original specification proved too broad, leading to confusion and a subsequent effort yielded an updated specification and new documents such as {{ "RDF" | abbr | safe }}/XML [@beckett_rdfxml_2004], which express an {{ "RDF" | abbr | safe }} graph as {{ "XML" | abbr | safe }}, a syntax specification recommendation in 2004 and later revised in 2014 as part of the RDF 1.1 document set [@gandon_rdf_2014], which also introduces the notion of an {{ "RDF" | abbr | safe }} dataset that can represent multiple graphs [@cyganiak_rdf_2014]. [Code Snippet 3.4](lst:rdfxml) is the {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }} serialisation of the earlier graph.
 
-(...) Code Snippet 3.4
+<figure id="lst:rdfxml" style="text-align: center;">
+ <figcaption>
+<strong>Code 3.4:</strong> RDF/XML Serialisation of the RDF Graph
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-xml">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:schema="http://schema.org/"&gt;
+  &lt;schema:Person rdf:about="https://www.example.org/julien-a-raemy"&gt;
+    &lt;schema:givenName&gt;Julien Antoine&lt;/schema:givenName&gt;
+    &lt;schema:familyName&gt;Raemy&lt;/schema:familyName&gt;
+    &lt;schema:birthPlace&gt;
+      &lt;schema:Place rdf:about="https://www.wikidata.org/entity/Q36378"&gt;
+        &lt;schema:name&gt;Fribourg&lt;/schema:name&gt;
+      &lt;/schema:Place&gt;
+    &lt;/schema:birthPlace&gt;
+  &lt;/schema:Person&gt;
+&lt;/rdf:RDF&gt;
+</code></pre>
+</div>
+</figure>
 
 @idehen_semantic_2017 highlights a significant concern regarding the earlier representations of the Semantic Web and how it is portrayed. These portrayals often place undue emphasis on the pivotal role of {{ "XML" | abbr | safe }} as an ostensibly obligatory component in Semantic Web development. To him, this historical perspective, particularly prominent around the year 2000, erroneously positioned {{ "XML" | abbr | safe }} as a superior alternative to {{ "HTML" | abbr | safe }} for constructing the Semantic Web.
 
@@ -1423,7 +1446,7 @@ As illustrated by [Figure 3.17](#fig:semweb-cake), @idehen_semantic_2017's revis
 - **Abstract Language**:   It is done by leveraging the {{ "RDF" | abbr | safe }} syntax (as shown in [Equation 3.1](#eq:rdf-triple)) as a     basis.
 - **Sentence Part Identifiers**:   To identify resources on the web, {{ "IRI" | abbr | safe }}s[^118] or {{ "URI" | abbr | safe }}s can be used.
 - **Document Types**:   Different serialisations of {{ "RDF" | abbr | safe }} exist within the Semantic Web, such     as {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }}, Turtle or     {{ "JSON-LD" | abbr | safe }}[^119].
-- **Semantic Web of Linked Data**:   The final component that holds the rest together; originating from     Tim Berners-Lee's vision (see ).
+- **Semantic Web of Linked Data**:   The final component that holds the rest together; originating from     Tim Berners-Lee's vision (see [3.4.3](#sub:ldprinciples)).
 
 <figure id="fig:semweb-cake" style="text-align: center;">
   <img
@@ -1439,14 +1462,37 @@ As illustrated by [Figure 3.17](#fig:semweb-cake), @idehen_semantic_2017's revis
 
 Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I will look in more detail at further {{ "RDF" | abbr | safe }} features, serialisations, and {{ "RDF" | abbr | safe }}-based standards for representing, querying or validating graphs. In doing so, I will touch on some considerations related to the inference and reasoning of {{ "RDF" | abbr | safe }} graphs.
 
-[Code Snippet 3.5]() is a Turtle serialisation of [Figure 3.16](#fig:rdf-graph). Turtle, a {{ "W3C" | abbr | safe }} standard, is a notation is a way to express this data in a structured and machine-readable format [@wood_linked_2014 p. 44]. It is a common syntax used for representing {{ "RDF" | abbr | safe }} data. It allows people to create statements in a more friendly manner than in an {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }} serialisation [@beckett_rdf_2014]. Here are some of the most important features:
+[Code Snippet 3.5](#lst:turtle) is a Turtle serialisation of [Figure 3.16](#fig:rdf-graph). Turtle, a {{ "W3C" | abbr | safe }} standard, is a notation is a way to express this data in a structured and machine-readable format [@wood_linked_2014 p. 44]. It is a common syntax used for representing {{ "RDF" | abbr | safe }} data. It allows people to create statements in a more friendly manner than in an {{ "RDF" | abbr | safe }}/{{ "XML" | abbr | safe }} serialisation [@beckett_rdf_2014]. Here are some of the most important features:
 
 - `@ prefix`:   It is used to declare namespace prefixes at the beginning of a     Turtle document. These prefixes are used to shorten     {{ "URI" | abbr | safe }}s, making the     {{ "RDF" | abbr | safe }} data more     readable and helps to avoid repeating long     {{ "URI" | abbr | safe }}s.
 - Resource Notation:   In Turtle, resources ({{ "URI" | abbr | safe }}s) are typically enclosed in angle     brackets: `< >`.
 - Literals:   Literal values like strings, numbers, and dates are represented     directly without angle brackets.
 - Comments:   Turtle allows for comments, which are preceded by a hash symbol.
 
-(...) - Code Snippet 3.5
+<figure id="lst:turtle" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.5:</strong> Turtle Serialisation of the RDF Graph
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code>
+@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@ prefix schema: <http://schema.org/> .
+
+# A small RDF graph about myself
+<https://www.example.org/julien-a-raemy>;
+     rdf:type schema:Person ;
+    schema:givenName "Julien Antoine" ;
+    schema:familyName "Raemy" ;
+    schema:birthPlace <https://www.wikidata.org/entity/Q36378>; .
+
+<https://www.wikidata.org/entity/Q36378>;
+     rdf:type schema:Place ;
+    schema:name "Fribourg" .
+</code></pre>
+</div>
+</figure>
 
 To query {{ "RDF" | abbr | safe }}-based graphs, {{ "SPARQL" | abbr | safe }} is leveraged. It is a query language as well as a protocol designed for querying and manipulating {{ "RDF" | abbr | safe }} data. It allows users to retrieve specific information from {{ "RDF" | abbr | safe }} datasets, making it a fundamental tool for working with Linked Data [@wood_linked_2014 pp. 99-100]. The {{ "SPARQL" | abbr | safe }} query provided in [Code Snippet 3.6]() is aimed at extracting the name of a person from a given {{ "RDF" | abbr | safe }} graph. The query uses {{ "RDF" | abbr | safe }} predicates associated with the given name and family name properties, concatenating them to form the person's complete name. The answer to the query, based on the provided {{ "RDF" | abbr | safe }} data, would be the complete name of the person, which in this case is ‘Julien Antoine Raemy’. It showcases the versatility of {{ "SPARQL" | abbr | safe }}, offering a flexible and expressive means of interacting with {{ "RDF" | abbr | safe }} data. By specifying patterns and conditions, this query identifies and combines relevant information.
 
