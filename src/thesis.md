@@ -1939,7 +1939,14 @@ As for the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }}, ba
 
 #### 3.5.6 Implications and Opportunities for the Cultural Heritage Domain and the Humanities {id="subsec:loud-implications"}
 
-(...)
+In envisioning the ideal scenario for the {{ "CH" | abbr | safe }} domain and the humanities, the integration of {{ "LOUD" | abbr | safe }} technologies presents unprecedented opportunities. While {{ "IIIF" | abbr | safe }} has laid a foundational path, the full spectrum of {{ "LOUD" | abbr | safe }} specifications potentially catalyses a more profound transformation in how we interact with and understand {{ "CH" | abbr | safe }} data. This transformation prompts us to ponder two critical questions:
+
+-   *How are {{ "LOUD" | abbr | safe }}     technologies reshaping traditional humanities?* This question probes     into the ways {{ "LOUD" | abbr | safe }} is influencing human interaction,     societal communication, and the broader fabric of our cultural     discourse. It challenges us to consider the evolving role of     technology in mediating our understanding of history, culture, and     the arts.
+-   *As new data becomes increasingly accessible and novel tools for     data analysis emerge, how will LOUD enable the formulation of new     research questions?* This inquiry looks at the potential of     {{ "LOUD" | abbr | safe }} to unlock     uncharted territories of knowledge, offering researchers ways to     interrogate and interpret the vast expanse of human history and     cultural expression.
+
+The implications of {{ "LOUD" | abbr | safe }} extend beyond technological innovation; they invite a reexamination of our methodologies, perspectives, and frameworks. {{ "KR" | abbr | safe }} is inherently subjective, influenced by the context and intent behind data collection and modelling. While it is crucial to understand the epistemic underpinnings of knowledge, the {{ "LOUD" | abbr | safe }} principles advocate a balanced approach with usability at the forefront.
+
+Does {{ "LOUD" | abbr | safe }}, and its precursor {{ "LOD" | abbr | safe }}, represent a paradigm shift in the {{ "CH" | abbr | safe }} domain and for {{ "DH" | abbr | safe }} at large, akin to the transformative changes described by Thomas Kuhn in his seminal work on the structure of scientific revolutions [@kuhn_structure_1994]? This ecosystem of models suggests a substantial shift not only in technological capabilities but also in epistemological frameworks. {{ "LOUD" | abbr | safe }} serves as a unifying common denominator, simplifying the complex landscape of digital {{ "CH" | abbr | safe }} to hopefully making it more accessible for exploration and interconnection.
 
 ### 3.6 Characterising Community Practices and Semantic Interoperability {id="sec:semantics-interoperability"} 
 
