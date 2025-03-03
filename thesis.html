@@ -1192,29 +1192,107 @@ Chemistry
 rdf:type schema:Person ;
 schema:givenName “Julien Antoine” ;
 schema:familyName “Raemy” ;
-schema:birthPlace <a href="https://www.wikidata.org/entity/Q36378" target="_blank" rel="noopener noreferrer">https://www.wikidata.org/entity/Q36378</a>; .</p>
-</http:></http:></code><p><code><a href="https://www.wikidata.org/entity/Q36378" target="_blank" rel="noopener noreferrer">https://www.wikidata.org/entity/Q36378</a>;
+schema:birthPlace <a href="https://www.wikidata.org/entity/Q36378" target="_blank" rel="noopener noreferrer">https://www.wikidata.org/entity/Q36378</a> .</p>
+</http:></http:></code><p><code><a href="https://www.wikidata.org/entity/Q36378" target="_blank" rel="noopener noreferrer">https://www.wikidata.org/entity/Q36378</a>
 rdf:type schema:Place ;
 schema:name “Fribourg” .
 </code></p></pre><p></p>
 </div>
 </figure>
-<p>To query <abbr title="Resource Description Framework">RDF</abbr>-based graphs, <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr> is leveraged. It is a query language as well as a protocol designed for querying and manipulating <abbr title="Resource Description Framework">RDF</abbr> data. It allows users to retrieve specific information from <abbr title="Resource Description Framework">RDF</abbr> datasets, making it a fundamental tool for working with Linked Data (Wood et al., 2014, pp. 99–100). The <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr> query provided in <a href="">Code Snippet 3.6</a> is aimed at extracting the name of a person from a given <abbr title="Resource Description Framework">RDF</abbr> graph. The query uses <abbr title="Resource Description Framework">RDF</abbr> predicates associated with the given name and family name properties, concatenating them to form the person’s complete name. The answer to the query, based on the provided <abbr title="Resource Description Framework">RDF</abbr> data, would be the complete name of the person, which in this case is ‘Julien Antoine Raemy’. It showcases the versatility of <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr>, offering a flexible and expressive means of interacting with <abbr title="Resource Description Framework">RDF</abbr> data. By specifying patterns and conditions, this query identifies and combines relevant information.</p>
-<p>(…) - Code Snippet 3.6</p>
+<p>To query <abbr title="Resource Description Framework">RDF</abbr>-based graphs, <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr> is leveraged. It is a query language as well as a protocol designed for querying and manipulating <abbr title="Resource Description Framework">RDF</abbr> data. It allows users to retrieve specific information from <abbr title="Resource Description Framework">RDF</abbr> datasets, making it a fundamental tool for working with Linked Data (Wood et al., 2014, pp. 99–100). The <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr> query provided in <a href="#lst:sparql">Code Snippet 3.6</a> is aimed at extracting the name of a person from a given <abbr title="Resource Description Framework">RDF</abbr> graph. The query uses <abbr title="Resource Description Framework">RDF</abbr> predicates associated with the given name and family name properties, concatenating them to form the person’s complete name. The answer to the query, based on the provided <abbr title="Resource Description Framework">RDF</abbr> data, would be the complete name of the person, which in this case is ‘Julien Antoine Raemy’. It showcases the versatility of <abbr title="SPARQL Protocol and RDF Query Language">SPARQL</abbr>, offering a flexible and expressive means of interacting with <abbr title="Resource Description Framework">RDF</abbr> data. By specifying patterns and conditions, this query identifies and combines relevant information.</p>
+<figure id="lst:sparql" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.6:</strong> SPARQL Query Against the RDF Graph
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-sparql">
+PREFIX rdf: <http: www.w3.org="" 1999="" 02="" 22-rdf-syntax-ns#="">
+PREFIX schema: <http: schema.org="">
+</http:></http:></code><p><code class="language-sparql">SELECT ?name WHERE {
+<a href="https://www.example.org/julien-a-raemy" target="_blank" rel="noopener noreferrer">https://www.example.org/julien-a-raemy</a> schema:givenName ?givenName ;
+schema:familyName ?familyName .
+BIND(CONCAT(?givenName, " ", ?familyName) AS ?name)
+}
+</code></p></pre><p></p>
+</div>
+</figure>
 <p>While <abbr title="Resource Description Framework">RDF</abbr>'s simplicity is one of its strengths, it can also pose limitations when it comes to expressing nuanced details, tracing the origins of statements, and addressing the intricacies of logical reasoning. <abbr title="Resource Description Framework">RDF</abbr>'s foundational model, which relies on triples to establish relationships between resources, may not always capture the full depth of knowledge and inferences that more complex <abbr title="Knowledge Representation">KR</abbr> languages or systems can achieve.</p>
 <p>As such, <abbr title="Resource Description Framework">RDF</abbr> reification, as expounded by (Massari et al., 2023), emerges as a pivotal mechanism to enrich <abbr title="Resource Description Framework">RDF</abbr>. It stands as a mechanism that allows for the explicit representation of statements about statements in <abbr title="Resource Description Framework">RDF</abbr>. This technique facilitates the modelling of metadata or provenance information about <abbr title="Resource Description Framework">RDF</abbr> triples. In other words, <abbr title="Resource Description Framework">RDF</abbr> reification allows you to describe when and by whom a particular statement was made, adding a layer of context and traceability to <abbr title="Resource Description Framework">RDF</abbr> data. This is particularly valuable in scenarios where data lineage, trustworthiness, and attribution need to be maintained.</p>
 <p>Furthermore, <abbr title="Resource Description Framework">RDF</abbr> 1.2 introduces the concept of ‘quoted triples’, i.e. <em>‘an RDF triple that is used as the subject or object of another triple’</em> (Hartig et al., 2023). Quoted triples are a powerful extension to the <abbr title="Resource Description Framework">RDF</abbr> model, enabling the inclusion of entire <abbr title="Resource Description Framework">RDF</abbr> triples within other triples. This feature adds a layer of expressiveness to <abbr title="Resource Description Framework">RDF</abbr>, making it more versatile in representing complex relationships and data structures.</p>
 <p>Deduction of entity class membership is an essential aspect of <abbr title="Knowledge Representation">KR</abbr>, and in this regard, <abbr title="RDF Schema">RDFS</abbr> plays a pivotal role (Brickley &amp; Guha, 2014). <abbr title="RDF Schema">RDFS</abbr>, with its foundation in formal semantics, provides a framework for verifying properties like <code>rdfs:domain</code> and <code>rdfs:range</code> associated with given properties (Bruns et al., 2023).</p>
-<p><a href="">Code Snippet 3.7</a> showcases how <abbr title="RDF Schema">RDFS</abbr> can be leveraged. In this example, <abbr title="RDF Schema">RDFS</abbr> class and property are specified. For instance, <code>schema:Person</code> and <code>schema:Place</code> are classes using <code>rdf:type</code> <code>rdfs:Class</code>, and property characteristics, including domains and ranges, using <code>rdf:Property</code>, <code>rdfs:domain</code>, and <code>rdfs:range</code> have been defined to create basic <abbr title="RDF Schema">RDFS</abbr>.</p>
-<p>(…) - Code Snippet 3.7</p>
+<p><a href="#lst:rdfs">Code Snippet 3.7</a> showcases how <abbr title="RDF Schema">RDFS</abbr> can be leveraged. In this example, <abbr title="RDF Schema">RDFS</abbr> class and property are specified. For instance, <code>schema:Person</code> and <code>schema:Place</code> are classes using <code>rdf:type</code> <code>rdfs:Class</code>, and property characteristics, including domains and ranges, using <code>rdf:Property</code>, <code>rdfs:domain</code>, and <code>rdfs:range</code> have been defined to create basic <abbr title="RDF Schema">RDFS</abbr>.</p>
+<figure id="lst:rdfs" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.7:</strong> Example of using RDFS to Determine Class Membership and Property Definitions
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-turtle">
+@ prefix rdf: <http: www.w3.org="" 1999="" 02="" 22-rdf-syntax-ns=""> .
+@ prefix rdfs: <http: www.w3.org="" 2000="" 01="" rdf-schema#=""> .
+@ prefix schema: <http: schema.org=""> .
+<p>schema:Person rdf:type rdfs:Class .
+schema:Place rdf:type rdfs:Class .</p>
+<p>schema:givenName rdf:type rdf:Property ;
+rdfs:domain schema:Person ;
+rdfs:range rdfs:Literal .</p>
+<p>schema:familyName rdf:type rdf:Property ;
+rdfs:domain schema:Person ;
+rdfs:range rdfs:Literal .</p>
+<p>schema:birthPlace rdf:type rdf:Property ;
+rdfs:domain schema:Person ;
+rdfs:range schema:Place .</p>
+</http:></http:></http:></code><p><code class="language-turtle">schema:name rdf:type rdf:Property ;
+rdfs:domain schema:Place ;
+rdfs:range rdfs:Literal .
+</code></p></pre><p></p>
+</div>
+</figure>
 <p><abbr title="RDF Schema">RDFS</abbr>, when used in conjunction with other reasoning methods, enhances the overall inferential capabilities of <abbr title="Resource Description Framework">RDF</abbr>, enabling more profound insights and <abbr title="Knowledge Representation">KR</abbr>. For example, <abbr title="Web Ontology Language">OWL</abbr> allows authors to decide how expressive they want to be, given the computational realities involved, which is not the case with <abbr title="RDF Schema">RDFS</abbr>.</p>
 <p>Indeed, for modelling ontologies in the Semantic Web, <abbr title="Web Ontology Language">OWL</abbr> is the preferred language. It is a powerful and widely used language for developing ontologies that can be leveraged as metadata vocabularies on the web [(Zeng &amp; Qin, 2022) p. 63] and provides a framework for creating, sharing, and reusing ontologies. <abbr title="Web Ontology Language">OWL</abbr> is a key component in the Semantic Web, enabling the formal representation of knowledge and complex relationships. <abbr title="Web Ontology Language">OWL</abbr> possesses several key features that make it a powerful language for modelling ontologies. Firstly, it provides a well-defined formal semantics, allowing computers to infer new knowledge and make logical deductions based on the information encoded in the ontology. Additionally, <abbr title="Web Ontology Language">OWL</abbr> supports a rich vocabulary of constructs for defining classes, properties, and individuals, enabling the creation of complex and structured ontologies.</p>
-<p><a href="">Code Snippet 3.8</a> is an example of an ontology using <abbr title="Web Ontology Language">OWL</abbr> in Turtle. Two classes, <code>ex:Person</code> and <code>ex:Place</code>, along with two properties: <code>hasName</code> and <code>hasBirthPlace</code> have been defined. The <code>ex:Person</code> class is constrained to have a name, which is specified as a datatype property with a string value. Additionally, each <code>ex:Person</code> is required to have a <code>hasBirthPlace</code>, which is defined as an object property with a reference to the <code>ex:Place</code> class.</p>
-<p>(…) - Code Snippet 3.8</p>
-<p><abbr title="Web Ontology Language">OWL</abbr> is grounded in <abbr title="Description logic">DL</abbr> (Ma &amp; Hitzler, 2009, p. 197), striking a balance between expressiveness and computational complexity, making it well-suited for automated reasoning. There are different versions of <abbr title="Web Ontology Language">OWL</abbr>, including <abbr title="Web Ontology Language">OWL</abbr> Lite, <abbr title="Web Ontology Language">OWL</abbr> <abbr title="Description logic">DL</abbr>, and <abbr title="Web Ontology Language">OWL</abbr> Full, which vary in terms of their expressive power and reasoning capabilities. <abbr title="Web Ontology Language">OWL</abbr> 2, introduced in 2009, extended the original <abbr title="Web Ontology Language">OWL</abbr> specification with additional features and improvements (W3C OWL Working Group, 2012). <a href="">Figure 3.18</a> provides an overview of <abbr title="Web Ontology Language">OWL</abbr>, highlighting its main building blocks in terms of syntax as well as semantics.</p>
-<p>(…) Figure 3.18</p>
+<p><a href="#lst:owl">Code Snippet 3.8</a> is an example of an ontology using <abbr title="Web Ontology Language">OWL</abbr> in Turtle. Two classes, <code>ex:Person</code> and <code>ex:Place</code>, along with two properties: <code>hasName</code> and <code>hasBirthPlace</code> have been defined. The <code>ex:Person</code> class is constrained to have a name, which is specified as a datatype property with a string value. Additionally, each <code>ex:Person</code> is required to have a <code>hasBirthPlace</code>, which is defined as an object property with a reference to the <code>ex:Place</code> class.</p>
+<figure id="lst:owl" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.8:</strong> Example of a OWL-based Ontology
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-turtle">
+@ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@ prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@ prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@ prefix ex: &lt;http://example.org/ontologies#&gt; .
+<p>ex:Person rdf:type owl:Class .
+ex:Place rdf:type owl:Class .</p>
+<p>ex:hasName rdf:type owl:DatatypeProperty .
+ex:hasBirthPlace rdf:type owl:ObjectProperty .</p>
+<p>ex:Person rdfs:subClassOf [
+rdf:type owl:Restriction ;
+owl:onProperty ex:hasName ;
+owl:someValuesFrom xsd:string
+] .</p>
+</code><p><code class="language-turtle">ex:Person rdfs:subClassOf [
+rdf:type owl:Restriction ;
+owl:onProperty ex:hasBirthPlace ;
+owl:someValuesFrom ex:Place
+] .
+</code></p></pre><p></p>
+</div>
+</figure>
+<p><abbr title="Web Ontology Language">OWL</abbr> is grounded in <abbr title="Description logic">DL</abbr> (Ma &amp; Hitzler, 2009, p. 197), striking a balance between expressiveness and computational complexity, making it well-suited for automated reasoning. There are different versions of <abbr title="Web Ontology Language">OWL</abbr>, including <abbr title="Web Ontology Language">OWL</abbr> Lite, <abbr title="Web Ontology Language">OWL</abbr> <abbr title="Description logic">DL</abbr>, and <abbr title="Web Ontology Language">OWL</abbr> Full, which vary in terms of their expressive power and reasoning capabilities. <abbr title="Web Ontology Language">OWL</abbr> 2, introduced in 2009, extended the original <abbr title="Web Ontology Language">OWL</abbr> specification with additional features and improvements (W3C OWL Working Group, 2012). <a href="#fig:owl-structure">Figure 3.18</a> provides an overview of <abbr title="Web Ontology Language">OWL</abbr>, highlighting its main building blocks in terms of syntax as well as semantics.</p>
+<figure id="fig:owl-structure" style="margin: 0 auto; text-align: center;">
+ <img src="data/Figures/OWL2-structure.png" alt="Structure of OWL 2" style="width: 84%; display: block; margin: 0 auto;">
+<figcaption>
+<strong>Figure 3.18</strong>:
+ Structure of OWL 2 (W3C OWL Working Group, 2012)
+</figcaption>
+</figure>
 <p>Turning to <abbr title="Shapes Constraint Language">SHACL</abbr>, a <abbr title="World Wide Web Consortium">W3C</abbr> standard defined in 2017, it provides a valuable framework for validating data graphs against specific shapes and constraints. Shapes are templates that specify the expected structure, properties, and validation rules for a particular class of resources, while constraints are rules or conditions applied to data instances to ensure they conform to the structure and validation criteria defined by a shape. Overall, <abbr title="Shapes Constraint Language">SHACL</abbr> is primarily used for data validation and quality assessment (Knublauch &amp; Kontokostas, 2017).</p>
-<p><a href="">Code Snippet 3.9</a> is an example of <abbr title="Shapes Constraint Language">SHACL</abbr> could be used to validate the <abbr title="Resource Description Framework">RDF</abbr> data graph of . The following shapes and constraints have been defined:</p>
+<p><a href="#lst:shacl">Code Snippet 3.9</a> is an example of <abbr title="Shapes Constraint Language">SHACL</abbr> could be used to validate the <abbr title="Resource Description Framework">RDF</abbr> data graph of . The following shapes and constraints have been defined:</p>
 <ul>
 <li><code>schema:PersonShape</code> which corresponds to <code>schema:Person</code>;</li>
 <li><code>schema:PlaceShape</code> which relates to <code>schema:Place</code>;</li>
@@ -1223,7 +1301,43 @@ schema:name “Fribourg” .
 <li><code>sh:minCount</code> to ensure that the specified properties are required;</li>
 <li><code>sh:nodeKind</code> <code>sh:IRI</code> to specify that the <code>schema:birthPlace</code>     property should have <abbr title="Internationalized Resource Identifier">IRI</abbr> values.</li>
 </ul>
-<p>(…) Code Snippet 3.9</p>
+<figure id="lst:shacl" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.9:</strong> Example of a SHACL Document in Turtle that can be Used to Validate the RDF Graph
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-turtle">
+@ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@ prefix schema: &lt;http://schema.org/&gt; .
+@ prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
+<p>schema:PersonShape
+a sh:NodeShape ;
+sh:targetClass schema:Person ;
+sh:property [
+sh:path schema:givenName ;
+sh:minCount 1 ;
+] ;
+sh:property [
+sh:path schema:familyName ;
+sh:minCount 1 ;
+] ;
+sh:property [
+sh:path schema:birthPlace ;
+sh:minCount 1 ;
+sh:nodeKind sh:IRI ;
+] .</p>
+</code><p><code class="language-turtle">schema:PlaceShape
+a sh:NodeShape ;
+sh:targetClass schema:Place ;
+sh:property [
+sh:path schema:name ;
+sh:minCount 1 ;
+] .
+</code></p></pre><p></p>
+</div>
+</figure>
 <p>One thing to realise, however, is that there are limitations when it comes to reasoning with controlled vocabularies and constraints in <abbr title="Shapes Constraint Language">SHACL</abbr>. While it excels in data validation and quality assurance, <abbr title="Shapes Constraint Language">SHACL</abbr> is not inherently a comprehensive reasoning framework. In their study, (Sacramento et al., 2022) [p. 129] noted that there is still a challenge in harnessing the potential of ontologies’ axioms to deduce information and derive implicit facts. While ontologies are instrumental in structuring knowledge and relationships between concepts, the efficient utilisation of axioms for reasoning remains an ongoing challenge.</p>
 <h4 id="sub:ldprinciples" tabindex="-1">3.4.3 Linked Data Principles</h4>
 <p>By exploiting the core structure of the web’s architecture, Linked Data maximises its potential to enable the widespread distribution of information on a global scale. This approach makes effective use of the fundamental elements of the Web and is consistent with its principles of simplicity, decentralisation and openness. As a result, Linked Data exploits the optimal structural equilibrium of the web, allowing content from disparate servers to be assembled seamlessly into a unified repository of global knowledge. This harmonious convergence of principles has driven the remarkable growth of the Web over the past few decades, demonstrating its ability to provide an integrated platform for information exchange. The four principles of Linked Data, as outlined by (Berners-Lee, 2006) are:</p>
@@ -1250,8 +1364,14 @@ schema:name “Fribourg” .
 <p>These challenges serve as a foundation for exploring <abbr title="Linked Open Data">LOD</abbr> practices in the subsequent subsection, where I introduce two deployment schemes.</p>
 <h4 id="sub:5star" tabindex="-1">3.4.4 Deployment Schemes for Open Data</h4>
 <p><abbr title="Linked Open Data">LOD</abbr> is a potent blend of Linked Data and Open Data that is both linked and uses open sources. <abbr title="Linked Open Data">LOD</abbr> is defined as Linked Data released under an open licence that does not prevent it from being reused free of charge.</p>
-<p>In 2010, Tim Berners-Lee introduced the Five-Star Open Data Deployment Scheme<sup class="footnote-ref"><a href="#fn113" id="fnref113">[113]</a></sup>, also known as Five-Star Open Data or Five-Star Linked Data, to provide a structured framework for publishing and promoting data on the web. The scheme, as illustrated by <a href="">Figure 3.19</a>, comprises five progressively more demanding criteria that define the level of openness and accessibility of data.</p>
-<p>(…) Figure 3.19</p>
+<p>In 2010, Tim Berners-Lee introduced the Five-Star Open Data Deployment Scheme<sup class="footnote-ref"><a href="#fn113" id="fnref113">[113]</a></sup>, also known as Five-Star Open Data or Five-Star Linked Data, to provide a structured framework for publishing and promoting data on the web. The scheme, as illustrated by <a href="#fig:5-star">Figure 3.19</a>, comprises five progressively more demanding criteria that define the level of openness and accessibility of data.</p>
+<figure id="fig:5-star" style="margin: 0 auto; text-align: center;">
+ <img src="data/Figures/5-star-open-data.png" alt="Five-Star Deployment Scheme for Open Data" style="width: 70%; display: block; margin: 0 auto;">
+<figcaption>
+<strong>Figure 3.19</strong>:
+ Five-Star Deployment Scheme for Open Data
+</figcaption>
+</figure>
 <ol>
 <li>The first star indicates that the data are available on the web in any     format, setting a basic level of accessibility.</li>
 <li>Moving on to the second star, data should be made available in a     machine-readable, structured format that allows for easier     processing and analysis. This eliminates the need to interpret     unstructured information and promotes efficient use of data.</li>
@@ -1303,8 +1423,14 @@ schema:name “Fribourg” .
     <li><b>Few exceptions, instead many consistent patterns</b>:   Every exception that you have in an <abbr title="Application Programming Interface">API</abbr> (and hence ontology) is another rule     that the developer needs to learn in order to use the system. Every     exception is jarring, and requires additional code to manage. While     not everything is homogeneous, a set of patterns that manage     exceptions well is better than many custom fields.</li>
 </ol>
 <p>The concerns articulated by (Hyvönen et al., 2014) in their Seven-Star Model in terms of schema and data validation are also indirectly addressed by the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles. Conceptualisations of <abbr title="Linked Open Usable Data">LOUD</abbr> specifications and their representation, mostly through usable <abbr title="Application Programming Interface">API</abbr>s – echoing human-centred approach for developing them as articulated by (Myers &amp; Stylos, 2016), address schema concerns. For data validation, best practices and validators developed by the <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art communities come into play. Moreover, <abbr title="Linked Open Usable Data">LOUD</abbr> indirectly respond to the needs of scientists who advocate that and emphasise treating research objects, data, as first class citizens for reproducibility purposes (see Bechhofer et al., 2013).</p>
-<p>Highlighting the success of the practices that guided <abbr title="International Image Interoperability Framework">IIIF</abbr>, (Sanderson, 2020) identifies three systems adhering to the LOUD design principles: <abbr title="International Image Interoperability Framework">IIIF</abbr> and specifically the third version of the Presentation <abbr title="Application Programming Interface">API</abbr>, <abbr title="Web Annotation Data Model">WADM</abbr>, and Linked Art. These three systems are complementary and can be used either separately or in conjunction. <a href="">Figure 3.20</a> illustrates an high-level overview of an infrastructure combining all three of the <abbr title="Linked Open Usable Data">LOUD</abbr> specifications.</p>
-<p>(…) Figure 3.20</p>
+<p>Highlighting the success of the practices that guided <abbr title="International Image Interoperability Framework">IIIF</abbr>, (Sanderson, 2020) identifies three systems adhering to the LOUD design principles: <abbr title="International Image Interoperability Framework">IIIF</abbr> and specifically the third version of the Presentation <abbr title="Application Programming Interface">API</abbr>, <abbr title="Web Annotation Data Model">WADM</abbr>, and Linked Art. These three systems are complementary and can be used either separately or in conjunction. <a href="#fig:loud_infra">Figure 3.20</a> illustrates an high-level overview of an infrastructure combining all three of the <abbr title="Linked Open Usable Data">LOUD</abbr> specifications.</p>
+<figure id="fig:loud_infra" style="margin: 0 auto; text-align: center;">
+ <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="Example of a LOUD-Driven Infrastructure" style="width: 100%; display: block; margin: 0 auto;">
+<figcaption>
+<strong>Figure 3.20</strong>:
+ Example of a LOUD-Driven Infrastructure (Felsing et al., 2023, p. 43)
+</figcaption>
+</figure>
 <p>In summary, the <abbr title="Linked Open Usable Data">LOUD</abbr> design principles, guided by considerations of accessibility, ease of use, comprehensibility, documentation, and consistency, not only address crucial concerns raised by Linked Data practitioners but also respond to the evolving needs of the <abbr title="Cultural Heritage">CH</abbr> and scientific communities emphasising data reproducibility. In the following subsection, I will explore the presence and impact of <abbr title="Linked Open Usable Data">LOUD</abbr> and their underlying principles in the scholarly landscape.</p>
 <h4 id="subsec:loud-review" tabindex="-1">3.5.2 LOUD: Systematic Review</h4>
 <p>This subsection deals with a systematic review of academic references and ongoing projects related to <abbr title="Linked Open Usable Data">LOUD</abbr>. It examines how the concept is mentioned in the academic literature.</p>
