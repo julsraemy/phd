@@ -1484,19 +1484,36 @@ Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I 
      rdf:type schema:Person ;
     schema:givenName "Julien Antoine" ;
     schema:familyName "Raemy" ;
-    schema:birthPlace <https://www.wikidata.org/entity/Q36378>; .
+    schema:birthPlace <https://www.wikidata.org/entity/Q36378> .
 
-<https://www.wikidata.org/entity/Q36378>;
+<https://www.wikidata.org/entity/Q36378>
      rdf:type schema:Place ;
     schema:name "Fribourg" .
 </code></pre>
 </div>
 </figure>
 
-To query {{ "RDF" | abbr | safe }}-based graphs, {{ "SPARQL" | abbr | safe }} is leveraged. It is a query language as well as a protocol designed for querying and manipulating {{ "RDF" | abbr | safe }} data. It allows users to retrieve specific information from {{ "RDF" | abbr | safe }} datasets, making it a fundamental tool for working with Linked Data [@wood_linked_2014 pp. 99-100]. The {{ "SPARQL" | abbr | safe }} query provided in [Code Snippet 3.6]() is aimed at extracting the name of a person from a given {{ "RDF" | abbr | safe }} graph. The query uses {{ "RDF" | abbr | safe }} predicates associated with the given name and family name properties, concatenating them to form the person's complete name. The answer to the query, based on the provided {{ "RDF" | abbr | safe }} data, would be the complete name of the person, which in this case is ‘Julien Antoine Raemy’. It showcases the versatility of {{ "SPARQL" | abbr | safe }}, offering a flexible and expressive means of interacting with {{ "RDF" | abbr | safe }} data. By specifying patterns and conditions, this query identifies and combines relevant information.
+To query {{ "RDF" | abbr | safe }}-based graphs, {{ "SPARQL" | abbr | safe }} is leveraged. It is a query language as well as a protocol designed for querying and manipulating {{ "RDF" | abbr | safe }} data. It allows users to retrieve specific information from {{ "RDF" | abbr | safe }} datasets, making it a fundamental tool for working with Linked Data [@wood_linked_2014 pp. 99-100]. The {{ "SPARQL" | abbr | safe }} query provided in [Code Snippet 3.6](#lst:sparql) is aimed at extracting the name of a person from a given {{ "RDF" | abbr | safe }} graph. The query uses {{ "RDF" | abbr | safe }} predicates associated with the given name and family name properties, concatenating them to form the person's complete name. The answer to the query, based on the provided {{ "RDF" | abbr | safe }} data, would be the complete name of the person, which in this case is ‘Julien Antoine Raemy’. It showcases the versatility of {{ "SPARQL" | abbr | safe }}, offering a flexible and expressive means of interacting with {{ "RDF" | abbr | safe }} data. By specifying patterns and conditions, this query identifies and combines relevant information.
 
+<figure id="lst:sparql" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.6:</strong> SPARQL Query Against the RDF Graph
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-sparql">
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
 
-(...) - Code Snippet 3.6
+SELECT ?name WHERE {
+  <https://www.example.org/julien-a-raemy> schema:givenName ?givenName ;
+                                            schema:familyName ?familyName .
+  BIND(CONCAT(?givenName, " ", ?familyName) AS ?name)
+}
+</code></pre>
+</div>
+</figure>
 
 While {{ "RDF" | abbr | safe }}'s simplicity is one of its strengths, it can also pose limitations when it comes to expressing nuanced details, tracing the origins of statements, and addressing the intricacies of logical reasoning. {{ "RDF" | abbr | safe }}'s foundational model, which relies on triples to establish relationships between resources, may not always capture the full depth of knowledge and inferences that more complex {{ "KR" | abbr | safe }} languages or systems can achieve.
 
@@ -1506,25 +1523,99 @@ Furthermore, {{ "RDF" | abbr | safe }} 1.2 introduces the concept of ‘quoted t
 
 Deduction of entity class membership is an essential aspect of {{ "KR" | abbr | safe }}, and in this regard, {{ "RDFS" | abbr | safe }} plays a pivotal role [@brickley_rdf_2014]. {{ "RDFS" | abbr | safe }}, with its foundation in formal semantics, provides a framework for verifying properties like `rdfs:domain` and `rdfs:range` associated with given properties [@bruns_26_2023].
 
-[Code Snippet 3.7]() showcases how {{ "RDFS" | abbr | safe }} can be leveraged. In this example, {{ "RDFS" | abbr | safe }} class and property are specified. For instance, `schema:Person` and `schema:Place` are classes using `rdf:type` `rdfs:Class`, and property characteristics, including domains and ranges, using `rdf:Property`, `rdfs:domain`, and `rdfs:range` have been defined to create basic {{ "RDFS" | abbr | safe }}.
+[Code Snippet 3.7](#lst:rdfs) showcases how {{ "RDFS" | abbr | safe }} can be leveraged. In this example, {{ "RDFS" | abbr | safe }} class and property are specified. For instance, `schema:Person` and `schema:Place` are classes using `rdf:type` `rdfs:Class`, and property characteristics, including domains and ranges, using `rdf:Property`, `rdfs:domain`, and `rdfs:range` have been defined to create basic {{ "RDFS" | abbr | safe }}.
 
-(...) - Code Snippet 3.7
+<figure id="lst:rdfs" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.7:</strong> Example of using RDFS to Determine Class Membership and Property Definitions
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-turtle">
+@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns> .
+@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@ prefix schema: <http://schema.org/> .
+
+schema:Person rdf:type rdfs:Class .
+schema:Place rdf:type rdfs:Class .
+
+schema:givenName rdf:type rdf:Property ;
+    rdfs:domain schema:Person ;
+    rdfs:range rdfs:Literal .
+
+schema:familyName rdf:type rdf:Property ;
+    rdfs:domain schema:Person ;
+    rdfs:range rdfs:Literal .
+
+schema:birthPlace rdf:type rdf:Property ;
+    rdfs:domain schema:Person ;
+    rdfs:range schema:Place .
+
+schema:name rdf:type rdf:Property ;
+    rdfs:domain schema:Place ;
+    rdfs:range rdfs:Literal .
+</code></pre>
+</div>
+</figure>
 
 {{ "RDFS" | abbr | safe }}, when used in conjunction with other reasoning methods, enhances the overall inferential capabilities of {{ "RDF" | abbr | safe }}, enabling more profound insights and {{ "KR" | abbr | safe }}. For example, {{ "OWL" | abbr | safe }} allows authors to decide how expressive they want to be, given the computational realities involved, which is not the case with {{ "RDFS" | abbr | safe }}.
 
 Indeed, for modelling ontologies in the Semantic Web, {{ "OWL" | abbr | safe }} is the preferred language. It is a powerful and widely used language for developing ontologies that can be leveraged as metadata vocabularies on the web [@zeng_metadata_2022 p. 63] and provides a framework for creating, sharing, and reusing ontologies. {{ "OWL" | abbr | safe }} is a key component in the Semantic Web, enabling the formal representation of knowledge and complex relationships. {{ "OWL" | abbr | safe }} possesses several key features that make it a powerful language for modelling ontologies. Firstly, it provides a well-defined formal semantics, allowing computers to infer new knowledge and make logical deductions based on the information encoded in the ontology. Additionally, {{ "OWL" | abbr | safe }} supports a rich vocabulary of constructs for defining classes, properties, and individuals, enabling the creation of complex and structured ontologies.
 
-[Code Snippet 3.8]() is an example of an ontology using {{ "OWL" | abbr | safe }} in Turtle. Two classes, `ex:Person` and `ex:Place`, along with two properties: `hasName` and `hasBirthPlace` have been defined. The `ex:Person` class is constrained to have a name, which is specified as a datatype property with a string value. Additionally, each `ex:Person` is required to have a `hasBirthPlace`, which is defined as an object property with a reference to the `ex:Place` class.
+[Code Snippet 3.8](#lst:owl) is an example of an ontology using {{ "OWL" | abbr | safe }} in Turtle. Two classes, `ex:Person` and `ex:Place`, along with two properties: `hasName` and `hasBirthPlace` have been defined. The `ex:Person` class is constrained to have a name, which is specified as a datatype property with a string value. Additionally, each `ex:Person` is required to have a `hasBirthPlace`, which is defined as an object property with a reference to the `ex:Place` class.
 
-(...) - Code Snippet 3.8
+<figure id="lst:owl" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.8:</strong> Example of a OWL-based Ontology
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-turtle">
+@ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@ prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@ prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@ prefix ex: &lt;http://example.org/ontologies#&gt; .
 
-{{ "OWL" | abbr | safe }} is grounded in {{ "DL" | abbr | safe }} [@ma_paraconsistent_2009 p. 197], striking a balance between expressiveness and computational complexity, making it well-suited for automated reasoning. There are different versions of {{ "OWL" | abbr | safe }}, including {{ "OWL" | abbr | safe }} Lite, {{ "OWL" | abbr | safe }} {{ "DL" | abbr | safe }}, and {{ "OWL" | abbr | safe }} Full, which vary in terms of their expressive power and reasoning capabilities. {{ "OWL" | abbr | safe }} 2, introduced in 2009, extended the original {{ "OWL" | abbr | safe }} specification with additional features and improvements [@w3c_owl_working_group_owl_2012]. [Figure 3.18]() provides an overview of {{ "OWL" | abbr | safe }}, highlighting its main building blocks in terms of syntax as well as semantics.
+ex:Person rdf:type owl:Class .
+ex:Place rdf:type owl:Class .
 
-(...) Figure 3.18
+ex:hasName rdf:type owl:DatatypeProperty .
+ex:hasBirthPlace rdf:type owl:ObjectProperty .
+
+ex:Person rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty ex:hasName ;
+    owl:someValuesFrom xsd:string
+] .
+
+ex:Person rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty ex:hasBirthPlace ;
+    owl:someValuesFrom ex:Place
+] .
+</code></pre>
+</div>
+</figure>
+
+{{ "OWL" | abbr | safe }} is grounded in {{ "DL" | abbr | safe }} [@ma_paraconsistent_2009 p. 197], striking a balance between expressiveness and computational complexity, making it well-suited for automated reasoning. There are different versions of {{ "OWL" | abbr | safe }}, including {{ "OWL" | abbr | safe }} Lite, {{ "OWL" | abbr | safe }} {{ "DL" | abbr | safe }}, and {{ "OWL" | abbr | safe }} Full, which vary in terms of their expressive power and reasoning capabilities. {{ "OWL" | abbr | safe }} 2, introduced in 2009, extended the original {{ "OWL" | abbr | safe }} specification with additional features and improvements [@w3c_owl_working_group_owl_2012]. [Figure 3.18](#fig:owl-structure) provides an overview of {{ "OWL" | abbr | safe }}, highlighting its main building blocks in terms of syntax as well as semantics.
+
+<figure id="fig:owl-structure" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/OWL2-structure.png"
+alt="Structure of OWL 2"
+style="width: 84%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.18</strong>:
+ Structure of OWL 2 [@w3c_owl_working_group_owl_2012]
+</figcaption>
+</figure>
+
 
 Turning to {{ "SHACL" | abbr | safe }}, a {{ "W3C" | abbr | safe }} standard defined in 2017, it provides a valuable framework for validating data graphs against specific shapes and constraints. Shapes are templates that specify the expected structure, properties, and validation rules for a particular class of resources, while constraints are rules or conditions applied to data instances to ensure they conform to the structure and validation criteria defined by a shape. Overall, {{ "SHACL" | abbr | safe }} is primarily used for data validation and quality assessment [@knublauch_shapes_2017].
 
-[Code Snippet 3.9]() is an example of {{ "SHACL" | abbr | safe }} could be used to validate the {{ "RDF" | abbr | safe }} data graph of . The following shapes and constraints have been defined:
+[Code Snippet 3.9](#lst:shacl) is an example of {{ "SHACL" | abbr | safe }} could be used to validate the {{ "RDF" | abbr | safe }} data graph of . The following shapes and constraints have been defined:
 
 -   `schema:PersonShape` which corresponds to `schema:Person`;
 -   `schema:PlaceShape` which relates to `schema:Place`;
@@ -1533,7 +1624,45 @@ Turning to {{ "SHACL" | abbr | safe }}, a {{ "W3C" | abbr | safe }} standard def
 -   `sh:minCount` to ensure that the specified properties are required;
 -   `sh:nodeKind` `sh:IRI` to specify that the `schema:birthPlace`     property should have {{ "IRI" | abbr | safe }} values.
 
-(...) Code Snippet 3.9
+<figure id="lst:shacl" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.9:</strong> Example of a SHACL Document in Turtle that can be Used to Validate the RDF Graph
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-turtle">
+@ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@ prefix schema: &lt;http://schema.org/&gt; .
+@ prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
+
+schema:PersonShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    sh:property [
+        sh:path schema:givenName ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:familyName ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:birthPlace ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+schema:PlaceShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Place ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+    ] .
+</code></pre>
+</div>
+</figure>
 
 One thing to realise, however, is that there are limitations when it comes to reasoning with controlled vocabularies and constraints in {{ "SHACL" | abbr | safe }}. While it excels in data validation and quality assurance, {{ "SHACL" | abbr | safe }} is not inherently a comprehensive reasoning framework. In their study, @sacramento_considering_2022 [p. 129] noted that there is still a challenge in harnessing the potential of ontologies' axioms to deduce information and derive implicit facts. While ontologies are instrumental in structuring knowledge and relationships between concepts, the efficient utilisation of axioms for reasoning remains an ongoing challenge.
 
@@ -1566,9 +1695,18 @@ These challenges serve as a foundation for exploring {{ "LOD" | abbr | safe }} p
 
 {{ "LOD" | abbr | safe }} is a potent blend of Linked Data and Open Data that is both linked and uses open sources. {{ "LOD" | abbr | safe }} is defined as Linked Data released under an open licence that does not prevent it from being reused free of charge.
 
-In 2010, Tim Berners-Lee introduced the Five-Star Open Data Deployment Scheme[^120], also known as Five-Star Open Data or Five-Star Linked Data, to provide a structured framework for publishing and promoting data on the web. The scheme, as illustrated by [Figure 3.19](), comprises five progressively more demanding criteria that define the level of openness and accessibility of data.
+In 2010, Tim Berners-Lee introduced the Five-Star Open Data Deployment Scheme[^120], also known as Five-Star Open Data or Five-Star Linked Data, to provide a structured framework for publishing and promoting data on the web. The scheme, as illustrated by [Figure 3.19](#fig:5-star), comprises five progressively more demanding criteria that define the level of openness and accessibility of data.
 
-(...) Figure 3.19
+<figure id="fig:5-star" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/5-star-open-data.png"
+alt="Five-Star Deployment Scheme for Open Data"
+style="width: 70%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.19</strong>:
+ Five-Star Deployment Scheme for Open Data
+</figcaption>
+</figure>
 
 1.   The first star indicates that the data are available on the web in any     format, setting a basic level of accessibility.
 2.   Moving on to the second star, data should be made available in a     machine-readable, structured format that allows for easier     processing and analysis. This eliminates the need to interpret     unstructured information and promotes efficient use of data.
@@ -1647,9 +1785,18 @@ One of the main purposes of {{ "LOUD" | abbr | safe }} is to make the data more 
 
 The concerns articulated by @hyvonen_linked_2014 in their Seven-Star Model in terms of schema and data validation are also indirectly addressed by the {{ "LOUD" | abbr | safe }} design principles. Conceptualisations of {{ "LOUD" | abbr | safe }} specifications and their representation, mostly through usable {{ "API" | abbr | safe }}s -- echoing human-centred approach for developing them as articulated by [@myers_improving_2016], address schema concerns. For data validation, best practices and validators developed by the {{ "IIIF" | abbr | safe }} and Linked Art communities come into play. Moreover, {{ "LOUD" | abbr | safe }} indirectly respond to the needs of scientists who advocate that and emphasise treating research objects, data, as first class citizens for reproducibility purposes [see @bechhofer_why_2013].
 
-Highlighting the success of the practices that guided {{ "IIIF" | abbr | safe }}, @sanderson_importance_2020 identifies three systems adhering to the LOUD design principles: {{ "IIIF" | abbr | safe }} and specifically the third version of the Presentation {{ "API" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art. These three systems are complementary and can be used either separately or in conjunction. [Figure 3.20]() illustrates an high-level overview of an infrastructure combining all three of the {{ "LOUD" | abbr | safe }} specifications.
+Highlighting the success of the practices that guided {{ "IIIF" | abbr | safe }}, @sanderson_importance_2020 identifies three systems adhering to the LOUD design principles: {{ "IIIF" | abbr | safe }} and specifically the third version of the Presentation {{ "API" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art. These three systems are complementary and can be used either separately or in conjunction. [Figure 3.20](#fig:loud_infra) illustrates an high-level overview of an infrastructure combining all three of the {{ "LOUD" | abbr | safe }} specifications.
 
-(...) Figure 3.20
+<figure id="fig:loud_infra" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg"
+alt="Example of a LOUD-Driven Infrastructure"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.20</strong>:
+ Example of a LOUD-Driven Infrastructure [@felsing_community_2023 p. 43]
+</figcaption>
+</figure>
 
 In summary, the {{ "LOUD" | abbr | safe }} design principles, guided by considerations of accessibility, ease of use, comprehensibility, documentation, and consistency, not only address crucial concerns raised by Linked Data practitioners but also respond to the evolving needs of the {{ "CH" | abbr | safe }} and scientific communities emphasising data reproducibility. In the following subsection, I will explore the presence and impact of {{ "LOUD" | abbr | safe }} and their underlying principles in the scholarly landscape.
 
