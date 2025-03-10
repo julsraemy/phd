@@ -2573,9 +2573,98 @@ The {{ "WADM" | abbr | safe }}[^188], a {{ "W3C" | abbr | safe }} standard estab
 
 {{ "WADM" | abbr | safe }} is designed to support both simple and complex use cases, such as linking content to specific data points or multimedia resources. It standardises annotations for interoperability and easy integration into existing collections, using {{ "JSON-LD" | abbr | safe }} for serialisation, which integrates annotations into the web's structured data ecosystem. The model adopts Linked Data principles, emphasising interoperable and flexible structures for annotations [@sanderson_designing_2013].
 
-(...)
+Annotations in {{ "WADM" | abbr | safe }} link resources, referred to as `body` and `target`. The `target` is the resource being annotated, while the `body` contains the annotation content, which can be text, images, or other media. This structure allows a single annotation to relate to multiple resources, ensuring compatibility with web architecture and facilitating cross-platform sharing [@sanderson_web_2017]. [Figure 3.30](#fig:wadm-model) illustrates this three-part model.
+
+<figure id="fig:wadm-model" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/wadm_model.png"
+alt="WADM High-level Overview"
+style="width: 75%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.30</strong>:
+ WADM High-level Overview [@sanderson_web_2017]
+</figcaption>
+</figure>
+
+The model outlines various components of an annotation [@sanderson_web_2017]:
+
+-`@ context`:   A property defining the {{ "JSON" | abbr | safe }}'s meaning as an `Annotation`. Each     `Annotation` must include one or more `@ context` values, with     <http://www.w3.org/ns/anno.jsonld> as a mandatory inclusion. If only     one value is present, it should be a string.
+- id:   A property identifying the `Annotation` with a unique     {{ "IRI" | abbr | safe }}. Each     `Annotation` must have exactly one identifying     {{ "IRI" | abbr | safe }}.
+- type:   A relationship specifying the `Annotation`'s type. Each `Annotation`     should have one or more types, including the `Annotation` class.
+- Annotation:   A class representing web annotations. Each `Annotation` must be     specified with `type`.
+- body:   A relationship linking the `Annotation` to its `body`. An     `Annotation` can have one or more `body` relationships, but it is     possible to have none.
+- target:   A relationship linking the `Annotation` to its `target`. Each     `Annotation` must have one or more `target` relationships.
+
+[Code Snippet 3.12](#lst:wadm1) is an example of a basic annotation.
+
+<figure id="lst:wadm1" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.12:</strong> Example of Basic Annotation According to WADM @sanderson_web_2017
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "@ context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://example.org/anno1",
+  "type": "Annotation",
+  "body": "http://example.org/post1",
+  "target": "http://example.com/page1"
+}
+</code></pre>
+</div>
+</figure>
+
+Annotations can link to different types of resources, including external web resources, embedded text, or specific segments of a resource. They can also include lifecycle information, agent details, intended audience, accessibility features, motivations, rights information and other identities.
+
+[Code Snippet 3.13](#lst:wadm2) shows an example of an annotation with a `motivation` and a `purpose`.
+
+<figure id="lst:wadm2" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.13:</strong> Example of an Annotation According to WADM with a motivation and a purpose @sanderson_web_2017
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "@ context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://example.org/anno15",
+  "type": "Annotation",
+  "motivation": "bookmarking",
+  "body": [
+    {
+      "type": "TextualBody",
+      "value": "readme",
+      "purpose": "tagging"
+    },
+    {
+      "type": "TextualBody",
+      "value": "A good description of the topic that bears further investigation",
+      "purpose": "describing"
+    }
+  ],
+  "target": "http://example.com/page1"
+}
+</code></pre>
+</div>
+</figure>
+
+Annotations can be organised into collections or pages for easy reference and management. An `AnnotationCollection` manages a potentially large number of annotations, maintaining its own descriptive and creation information, and includes references to the first page of annotations. Each `AnnotationPage` contains an ordered list of some or all annotations within the collection.
+
+{{ "WADM" | abbr | safe }} has played a key role in several areas, particularly in extending the functionality of the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} data model. Beyond the {{ "IIIF" | abbr | safe }} space, the influence of {{ "WADM" | abbr | safe }} extends into other areas, demonstrating its versatility and wide applicability.
+
+In the field of knowledge management, [@rossenova_wikidata_2022 p. 10] uses {{ "WADM" | abbr | safe }} to annotate {{ "3D" | abbr | safe }} content within an instance of Wikibase[^190], a suite of {{ "KB" | abbr | safe }} software used by Wikidata for managing {{ "LOD" | abbr | safe }}. Additionally, {{ "WADM" | abbr | safe }} finds application in the field of musicology, where it aids in the annotation of musical notes, thus enriching the study and understanding of music through a digital lens [@weigl_notes_2021 pp. 26-27]. The importance of {{ "WADM" | abbr | safe }} has been also important in the domain of data quality assessment [@wei_dqaf_2016 p. 24]. Moreover, the {{ "VR" | abbr | safe }} gaming industry has also embraced {{ "WADM" | abbr | safe }} to enrich the generated {{ "KG" | abbr | safe }}s [@rousi_supporting_2021 pp. 100-101]. This application demonstrates the standard's potential in creating immersive and interactive digital experiences.
+
+Incorporating all the discussed aspects of {{ "WADM" | abbr | safe }}, it is evident that this model offers a comprehensive and flexible framework for web annotations. The {{ "WADM" | abbr | safe }}'s capacity to handle diverse annotation types, from simple text to complex multimedia segments, and its consideration of aspects like resource lifecycle, rights information, and accessibility, make it a robust tool for web-based annotations. Envisioning {{ "WADM" | abbr | safe }}-driven storytelling, it could serve as a potent means to convey *hypotyposes* --- picturesque descriptions of scenes or events. This aligns with the concept of multimedia assemblage of archival objects, as discussed by @bachimont_archive_2021 and revisited in the context of web annotations[^191], highlighting the potential of {{ "WADM" | abbr | safe }} in transforming the presentation and interpretation of content into dynamic, contemporary narratives.
+
+In contrast to {{ "IIIF" | abbr | safe }} and Linked Art, {{ "WADM" | abbr | safe }} stands out as the only recognised {{ "LOUD" | abbr | safe }} standard that doesn't concurrently function as an active community. In the event that updates to {{ "WADM" | abbr | safe }} are required, a dedicated {{ "W3C" | abbr | safe }} working group would need to be re-established or revamped[^192]. This necessity contrasts with the community-driven evolution seen in {{ "IIIF" | abbr | safe }} and Linked Art, where ongoing community engagement and collaboration play a crucial role in their development and updating processes.
+
 
 #### 3.5.5 Linked Art {id="subsec:linked-art"}
+
+Linked Art[^193] is a community-driven initiative working together to define a {{ "LOUD" | abbr | safe }} specification for describing {{ "CH" | abbr | safe }}, primarily artworks, designed to operate across {{ "CHI" | abbr | safe }}s, facilitating the publication and use of a common body of knowledge. As such, Linked Art presents itself as *‘providing a standards based metadata profile, which consistently solves problems from real data, is designed for usability and ease of implementation, which are prerequisites for sustainability’* [@sanderson_understanding_2023]. Specifically, the community develops and maintains a shared data model, or profile, based on {{ "CIDOC-CRM" | abbr | safe }} as well as a {{ "JSON-LD" | abbr | safe }}-based {{ "API" | abbr | safe }} to interact with the data [@cornut_annotations_2023, p. 10].
+
+Linked Art presents a layered framework that distinguishes between the conceptual and implementation aspects of its model. This stratification is key to understanding how the Linked Art profile and its {{ "API" | abbr | safe }} are situated within a broader context of shared abstractions and sustainable implementations [@sanderson_cultural_2020].
+
+
 
 (...)
 
