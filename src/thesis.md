@@ -1815,24 +1815,429 @@ For the systematic review, I used a specific Boolean search query[^131] to ident
 
 In Google Scholar, 60 results were returned, with 41 deemed relevant. Semantic Scholar's results were not available due to difficulties with the search process as it yielded more than 800k results. Web of Science returned no relevant results, and Scopus provided four results, of which three were unique items. I also queried the Zenodo repository[^134], resulting in 25 hits, including two conference papers, one journal article, and one working paper. The remaining results included presentations or datasets, mostly associated with my own work.
 
-(...) Table 3.2
+<figure id="tab:loud-review" style="text-align: center;">
+ <figcaption><strong>Table 3.2</strong>: Summary of Database Search Results on {{ "LOUD" | abbr | safe }}</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Database</strong></th>
+<th><strong>Total Items</strong></th>
+<th><strong>Relevant Entries</strong></th>
+<th><strong>Unique Entries</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Scholar</td>
+<td>60</td>
+<td>41</td>
+<td>41</td>
+</tr>
+<tr>
+<td>Semantic Scholar</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Web of Science</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Scopus</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Zenodo</td>
+<td>25</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr style="border-top: 2px solid #000; font-weight: bold; background-color: #f5f5f5;">
+<td>Total</td>
+<td>89</td>
+<td>48</td>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+</figure>
 
-As of mid-November 2023, the systematic review yielded a total of 46 results, covering the period between 2018 and 2023. These results are summarised in [Table 3.2](). For more detailed information about each reference, including their type, language, source database, and categorisation, refer to [Table 3.3](). For instance, the references were predominantly written in English (37), with additional contributions in German (5), French (2), and one reference being bilingual in German and French. Additionally, one paper was in Japanese.
+As of mid-November 2023, the systematic review yielded a total of 46 results, covering the period between 2018 and 2023. These results are summarised in [Table 3.2](#tab:loud-review). For more detailed information about each reference, including their type, language, source database, and categorisation, refer to [Table 3.3](#tab:loud-paper). For instance, the references were predominantly written in English (37), with additional contributions in German (5), French (2), and one reference being bilingual in German and French. Additionally, one paper was in Japanese. I also highlighted in yellow the nine references I took part in.
 
-(...) Table 3.3
+<figure id="tab:loud-paper" style="text-align: center;">
+ <figcaption><strong>Table 3.3</strong>: Summary of the {{ "LOUD" | abbr | safe }} Systematic Review</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Reference</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Lang.</strong></th>
+<th><strong>DB</strong></th>
+<th><strong>Cat.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[@alexiev_museum_2018]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@harpring_linking_2018]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Scopus</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@newbury_loud_2018]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@pohl_lobid_2018]</td>
+<td>Journal Article</td>
+<td>ger</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>4</sub>, &gamma;</td>
+</tr>
+<tr>
+<td>[@cossu_labours_2019]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@france_linked_2019]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Scopus</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@hofmann_ding-editionen_2019]</td>
+<td>Journal Article</td>
+<td>ger</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@klammt_loud_2019]</td>
+<td>Journal Article</td>
+<td>ger, fre</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>2</sub></td>
+</tr>
+<tr>
+<td>[@klic_digital_2019]</td>
+<td>PhD Thesis</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@nakamura_open_2019]</td>
+<td>Conference Paper</td>
+<td>jpn</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@sanderson_keynote_2019]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@thiery_sphere_2019]</td>
+<td>Working Paper</td>
+<td>eng</td>
+<td>Zenodo</td>
+<td>&alpha;<sub>4</sub></td>
+</tr>
+<tr>
+<td>[@van_ginhoven_art_2019]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@brown_towards_2020]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@delmas-glass_fostering_2020]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@paquet_linked_2020]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>2</sub></td>
+</tr>
+<tr>
+<td>[@romein_state_2020]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@schmidt_sparqling_2020]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@thiery_linked_2020]</td>
+<td>Journal Article</td>
+<td>ger</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@thiery_sparqling_2020]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &gamma;</td>
+</tr>
+<tr>
+<td>[@bogdani_sparqling_2020]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &gamma;</td>
+</tr>
+<tr>
+<td>[@brown_linking_2021]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@delmas-glass_lessons_2021]</td>
+<td>Book Chapter</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>2</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@pohl_how_2021]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@raemy_applying_2021]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@roberts_paper_2021]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@adamou_shout_2022]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub></td>
+</tr>
+<tr>
+<td>[@binding_linked_2022]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@hopkins_glossary_2022]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@lemos_proposal_2022]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Scopus</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@middle_investigating_2022]</td>
+<td>PhD Thesis</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>4</sub></td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@raemy_ameliorer_2022]</td>
+<td>Conference Paper</td>
+<td>fre</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@roke_pragmatic_2022]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr>
+<td>[@schmidtPracticesLinkedOpen2022a]</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>2</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@wigg-wolf_frankfurt_2022]</td>
+<td>Journal Article</td>
+<td>ger</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>@cornut_annotations_2023</td>
+<td>Journal Article</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub>, &beta;</td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@felsing_community_2023]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>2</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@llewellyn_enriching_2023]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Zenodo</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@manz_recommended_2023]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@petz_linked_2023]</td>
+<td>Journal Article</td>
+<td>ger</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>3</sub></td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@raemy_characterising_2023]</td>
+<td>Report</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>2</sub>, &beta;</td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@raemy_elaboration_2023]</td>
+<td>Conference Paper</td>
+<td>fre</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@raemy_enabling_2023]</td>
+<td>Conference Paper</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr style="background-color: #FFFFCC;">
+<td>[@raemy_analysis_2023]</td>
+<td>Pre-print</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>4</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@toth-czifra_research_2023]</td>
+<td>Report</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub>, &beta;</td>
+</tr>
+<tr>
+<td>[@brughmans_linked_2023]</td>
+<td>Book Chapter</td>
+<td>eng</td>
+<td>Google Scholar</td>
+<td>&alpha;<sub>1</sub></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
-To categorise the papers, I employed a classification scheme with three main categories: &alpha;, &beta;, and &gamma;. Within α, there are four subcategories: &alpha;<sub>1</sub> (**Mention**) for papers mentioning {{ "LOUD" | abbr | safe }}, &alpha;<sub>2</sub>  (**Description**) for those providing descriptions, &alpha;<sub>3</sub> (**Principles**) for explanations of the design principles, and &alpha;<sub>4</sub> (**Analysis**) for comparative analyses. &beta; (**Standards**) represents papers mentioning recognised {{ "LOUD" | abbr | safe }} standards, i.e. {{ "IIIF" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art, while &gamma; (**Application**) covers {{ "LOUD" | abbr | safe }} applications or reflection to other standards. Some papers fall into multiple categories. [Figure 3.21]() displays the distribution of references across these categories, categorised by year. I also highlighted in yellow the nine references I took part in.
+To categorise the papers, I employed a classification scheme with three main categories: &alpha;, &beta;, and &gamma;. Within α, there are four subcategories: &alpha;<sub>1</sub> (**Mention**) for papers mentioning {{ "LOUD" | abbr | safe }}, &alpha;<sub>2</sub>  (**Description**) for those providing descriptions, &alpha;<sub>3</sub> (**Principles**) for explanations of the design principles, and &alpha;<sub>4</sub> (**Analysis**) for comparative analyses. &beta; (**Standards**) represents papers mentioning recognised {{ "LOUD" | abbr | safe }} standards, i.e. {{ "IIIF" | abbr | safe }}, {{ "WADM" | abbr | safe }}, and Linked Art, while &gamma; (**Application**) covers {{ "LOUD" | abbr | safe }} applications or reflection to other standards. Some papers fall into multiple categories. [Figure 3.21](#fig:loud-references-stacked) displays the distribution of references across these categories, categorised by year. 
 
-(...) Figure 3.21
+<figure id="fig:loud-references-stacked" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/loud-references-stacked.png"
+alt="LOUD References Ordered by Year and α Sub-categories"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.21</strong>:
+ LOUD References Ordered by Year and &alpha; Sub-categories
+</figcaption>
+</figure>
 
 - &alpha;<sub>1</sub> -- **Mention**:   Papers that mention {{ "LOUD" | abbr | safe }} as a new concept, accounting for 30     out of 46 papers. For instance, @alexiev_museum_2018 introduced     {{ "LOUD" | abbr | safe }} as a     novel moniker or approach to Linked Data.
 - &alpha;<sub>2</sub> -- **Description**:   Papers providing descriptions of what {{ "LOUD" | abbr | safe }} is, including varying perspectives on     its target audience, such as human-readability or data practitioners     [@schmidtPracticesLinkedOpen2022a; @adamou_shout_2022].
 - &alpha;<sub>3</sub> -- **Principles**:   Papers explaining {{ "LOUD" | abbr | safe }} design principles, often authored by     a small group that know each other such as     @delmas-glass_fostering_2020 or myself. They also frequently     referenced {{ "IIIF" | abbr | safe }} and Linked Art.
 - &alpha;<sub>4</sub> -- **Analysis**:   Papers that interpret and reuse {{ "LOUD" | abbr | safe }} design principles for diverse     applications, offering comparative analyses or presenting case     studies. For instance, @thiery_sphere_2019 proposed a model of seven     data spheres, with {{ "LOUD" | abbr | safe }} as the sphere and     {{ "LOUD" | abbr | safe }} and     {{ "FAIR" | abbr | safe }} together     in the sphere. In another case, @pohl_lobid_2018 highlights the     importance of the principles for lobid[^135], a     {{ "LOD" | abbr | safe }} service in     Germany that consists of {{ "GUI" | abbr | safe }}s and {{ "API" | abbr | safe }}s.
 
-[Figure 3.22]() depicts Venn diagrams illustrating all six intersections of these categories, revealing how different aspects of {{ "LOUD" | abbr | safe }} are covered in the literature.
+[Figure 3.22](#fig:loud-references-venn) depicts Venn diagrams illustrating all six intersections of these categories, revealing how different aspects of {{ "LOUD" | abbr | safe }} are covered in the literature.
 
-(...) Figure 3.22
+<figure id="fig:loud-references-venn" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/loud-references-venn.png"
+alt="LOUD References as Venn Diagrams for Each of the Six Intersections"
+style="width: 90%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.22</strong>:
+ LOUD References as Venn Diagrams for Each of the Six Intersections
+</figcaption>
+</figure>
 
 Several papers related to archaeology also made references to {{ "LOUD" | abbr | safe }} in the context of the CAA Data Dragons Interest Group's work on semantics and {{ "LOUD" | abbr | safe }}[^136]. Furthermore, a search on popular search engines, specifically Bing and Google, revealed the existence of a research project named simply {{ "LOUD" | abbr | safe }}. This project, initiated in 2019 by the Royal Museum for Central Africa in Belgium[^137], was delayed due to the COVID-19 pandemic and is now being considered for future re-initiation.
 
@@ -1858,7 +2263,7 @@ Robert Sanderson's recollections, shared on the {{ "IIIF" | abbr | safe }} Slack
 
 Tracing the development of {{ "IIIF" | abbr | safe }}, as highlighted in this timeline[^146], reveals a sequence of pivotal milestones. Among these, the establishment of the Shared Canvas Data Model, a subject previously touched upon, stands out as a significant step. This timeline, while informative, is not all-encompassing but effectively underscores the essential moments shaping {{ "IIIF" | abbr | safe }}. The journey from visionary dialogues to the concerted collaborative efforts showcases the collective ingenuity pivotal in enhancing digital image accessibility and interoperability. A notable milestone in this journey was the first officially listed {{ "IIIF" | abbr | safe }} working meeting, which took place in Cambridge, England, in September 2011. This event symbolises the global commitment and the evolutionary stride of the {{ "IIIF" | abbr | safe }} initiative.
 
-Stanford University played a pivotal role in rebuilding the Mirador viewer[^147], a key milestone that exemplifies the spirit of community-driven effort in the {{ "IIIF" | abbr | safe }} initiative [@zundert_not_2018 p. 2]. This endeavour, later augmented through a collaborative partnership with Harvard University Library, highlights the cooperative dynamics and collective contributions that have been fundamental to the success and advancement of {{ "IIIF" | abbr | safe }}. The {{ "UV" | abbr | safe }}[^148] served as an additional client, validating {{ "IIIF" | abbr | safe }}'s interoperability aspirations [@raemy_international_2017 p. 30]. The availability of the people behind {{ "OSD" | abbr | safe }}[^149], facilitated these advancements [@raemy_analysis_2023 p. 8].
+Stanford University played a pivotal role in rebuilding the Mirador viewer[^147], a key milestone that exemplifies the spirit of community-driven effort in the {{ "IIIF" | abbr | safe }} initiative [@zundert_not_2018 p. 2]. This endeavour, later augmented through a collaborative partnership with Harvard University Library, highlights the cooperative dynamics and collective contributions that have been fundamental to the success and advancement of {{ "IIIF" | abbr | safe }}. The {{ "UV" | abbr | safe }}[^148] served as an additional client, validating {{ "IIIF" | abbr | safe }}'s interoperability aspirations [@raemy_international_2017 p. 30]. The availability of the people behind {{ "OSD" | abbr | safe }}[^149], facilitated these advancements [@raemyAnalysisUsabilityAutomatically2024 p. 76].
 
 The maturation of {{ "IIIF" | abbr | safe }} was marked by incremental achievements, with Stanford's active stewardship from 2014 to 2016 playing a pivotal role. The project's multifaceted requirements found a harmonious synthesis within a supportive community. Financial resources, technical infrastructure, a coherent data model, and the collective dedication of engaged participants converged to transform {{ "IIIF" | abbr | safe }} from an abstract concept into a tangible reality [@hadro_introduction_2019].
 
@@ -1915,7 +2320,16 @@ The two modes of interaction are as follows:
 
 [Figure 3.23](#fig:imageapi-transformation) shows the sequence of parameters of the {{ "URI" | abbr | safe }} syntax that needs to be interpreted by compliant software (`region` then `size` then `rotation` then `quality` then `format`), as well as showcasing different manipulations that are available. In this case, the image has been cropped to *125,15,120,140* as its coordinate, has a width of *90* pixels, is mirrored and then rotated by *345* degrees, and returned in a *grey* -- or rather according to the specification -- quality. This would give the following {{ "URL" | abbr | safe }}: `https://example.org/image42/125,15,120,140/90,/!345/gray.jpg`
 
-(...) Figure 3.23
+<figure id="fig:imageapi-transformation" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/imageapi-transformation.png"
+alt="IIIF Image API Order of Implementation"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.23</strong>:
+ IIIF Image API Order of Implementation [@applebyIIIFImageAPI2020]
+</figcaption>
+</figure>
 
 Furthermore, it is mandatory for the image information document to delineate the extent of {{ "API" | abbr | safe }} support, i.e. the set of parameters and features that are supported by the image service, by denoting the compliance level as the value of the profile property. This compliance level must align with one of the three levels (*0*, *1*, or *2*) outlined in the Image API Compliance document[^164].
 
@@ -1923,19 +2337,247 @@ The chosen compliance level should represent the highest level that meets all th
 
 The result is that the {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }} provides a well-defined image retrieval format that is easy to implement. It provides sufficient detail to drive zoomable image viewers. The {{ "URL" | abbr | safe }}s are designed to be intuitive, allowing easy manipulation by users. In addition, these {{ "URL" | abbr | safe }}s are optimised for caching and scalability, improving performance and efficiency.
 
-As for the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }}, based on {{ "JSON-LD" | abbr | safe }}, it provides the necessary information about the structure and layout of objects or collections to drive a remove viewing experience. As such, its primary purpose is to display human-readable descriptive information, i.e. some minimal descriptive and legal metadata, rather than offering semantic metadata for search engines[^166] [@applebyIIIFPresentationAPI2020]. Loosely based on the Shared Canvas Data Model, it incorporates four main resource types: Collection, Manifest, Canvas, and Range, each serving distinct functions within the {{ "API" | abbr | safe }} framework. In addition, the specification make use of types that are defined by {{ "WADM" | abbr | safe }}, such as `AnnotationCollection`, `AnnotationPage`, `Annotation`, and `Content` (see ). A diagram of the Presentation {{ "API" | abbr | safe }} data model is shown in [Figure 3.24](#fig:prezi3-model).
+As for the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }}, based on {{ "JSON-LD" | abbr | safe }}, it provides the necessary information about the structure and layout of objects or collections to drive a remove viewing experience. As such, its primary purpose is to display human-readable descriptive information, i.e. some minimal descriptive and legal metadata, rather than offering semantic metadata for search engines[^166] [@applebyIIIFPresentationAPI2020]. Loosely based on the Shared Canvas Data Model, it incorporates four main resource types: Collection, Manifest, Canvas, and Range, each serving distinct functions within the {{ "API" | abbr | safe }} framework. In addition, the specification make use of types that are defined by {{ "WADM" | abbr | safe }}, such as `AnnotationCollection`, `AnnotationPage`, `Annotation`, and `Content` (see [3.5.4](#subsec:wadm)). A diagram of the Presentation {{ "API" | abbr | safe }} data model is shown in [Figure 3.24](#fig:prezi3-model).
 
-(...) Figure 3.24
+<figure id="fig:prezi3-model" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://iiif.io/api/assets/images/data-model.png"
+alt="IIIF Presentation API Data Model"
+style="width: 70%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.24</strong>:
+ IIIF Presentation API Data Model [@applebyIIIFPresentationAPI2020]
+</figcaption>
+</figure>
 
-(...)
+The {{ "IIIF" | abbr | safe }} Manifest plays a key role as it encapsulates the structure and attributes of a compound object. It contains essential data required for a client application to accurately display the content to users. Typically, each Manifest is dedicated to delineating the presentation of a single complex entity, which could be diverse in nature, ranging from a book or a sculpture to a musical album. The Manifest thus serves as a crucial intermediary, translating complex object properties into a format that is both accessible and comprehensible to users engaging with digital representations of these objects. In the context of the Presentation {{ "API" | abbr | safe }}, the Manifest is perhaps one of the most important resource types, acting as the cornerstone for how digital content is structured and presented within the {{ "IIIF" | abbr | safe }} ecosystem. [Code Snippet 3.10](#lst:iiifmanifestexample) shows an example of a basic Manifest from the cookbook recipes[^167], which are published by the community to encourage publishers to adopt common patterns when modelling {{ "IIIF" | abbr | safe }} resources. To provide a clearer understanding, the following is a detailed breakdown of the structure this {{ "IIIF" | abbr | safe }} Manifest.
+
+- `@ context`:   This defines the context for interpreting the     {{ "JSON-LD" | abbr | safe }}     document. In this case, it points to the {{ "IIIF" | abbr | safe }} Presentation     {{ "API" | abbr | safe }} 3 context.
+- `id`:   This is the unique identifier of the Manifest, pointing to its     location on the web.
+- `type`:   Specifies that this {{ "JSON-LD" | abbr | safe }} document represents a     {{ "IIIF" | abbr | safe }} Manifest.
+- `label`:   It provides a human-readable label for the manifest in different     languages. Here, it is labelled in English as .
+`items`:   An array of items within the Manifest. This Manifest contains one     `item`, a Canvas.
+- `Canvas`:   Represents a single canvas that can contain one or more images or     content resources. It includes its own `id`, `type`, `label`,     `height`, and `width`. The `items` array within the Canvas contains     an `AnnotationPage`.
+- `AnnotationPage`:   Represents a page within the canvas that can contain annotations. It     has its own `id`, `type`, and contains an array of `items`, each an     Annotation.
+- `Annotation`:   An annotation associates a region of an image with descriptive or     interpretive information. It has its own `id`, `type`, `motivation`     (here as ‘painting’), and `body` which contains detailed information about the     image being annotated, including `id`, `type`, `format`, `height`,     `width`, and `service`.
+- `service`:   It contains information about the {{ "IIIF" | abbr | safe }} Image Service for the image.
+- `target`:   It specifies the target Canvas to which the annotation is     associated.
+
+<figure id="lst:iiifmanifestexample" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.10:</strong> Example of a IIIF Manifest
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "@ context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Picture of Göttingen taken during the 2019 IIIF Conference"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "Canvas with a single IIIF image"
+        ]
+      },
+      "height": 3024,
+      "width": 4032,
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+          "type": "Annotation",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3024,
+                "width": 4032,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+                    "profile": "level1",
+                    "type": "ImageService3"
+                  }
+                ]
+              },
+              "target": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</div>
+</figure>
+
+In summary, this {{ "IIIF" | abbr | safe }} Manifest describes a Canvas with a single {{ "IIIF" | abbr | safe }} image, and the image is associated with an an `Annotation` that provides additional information about the image. The Manifest also includes metadata such as a label and unique identifiers for various components.
+
+In addition to the core functionalities, the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} is augmented by three formally approved extensions:
+
+- navPlace Extension:   Enhancing the {{ "IIIF" | abbr | safe }} Presentation     {{ "API" | abbr | safe }} with the     `navPlace` property, defined using GeoJSON-LD[^168] for geographic     coordinates.
+- Text Granularity Extension:   This extension offers a standard for indicating text granularity     levels in annotations, especially useful for     {{ "OCR" | abbr | safe }} software,     manual transcriptions, or existing digitised text.
+- Georeference Extension:   Leveraging {{ "WADM" | abbr | safe }}, it provides a pattern for     georeferencing {{ "IIIF" | abbr | safe }} Presentation 3     {{ "API" | abbr | safe }} `Canvases`     and images from the {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }}.
+
+{{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources such as Manifest and Collection can be validated against a dedicated Presentation {{ "API" | abbr | safe }} Validator[^169]. This tool ensures that these resources conform to the specification, guaranteeing their correctness within the framework.
+
+If Version 3.0 of the Presentation {{ "API" | abbr | safe }} was released only a few years ago, the need for a specification that can formally display and disseminate {{ "3D" | abbr | safe }} objects has been widely recognised across various domains. Addressing this demand, ongoing work on an upgraded version of the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} (Version 4.0) to accommodate {{ "3D" | abbr | safe }} resources holds great promise [@haynes_evolving_2023]. While particularly relevant to the {{ "CH" | abbr | safe }} sector, as highlighted by @raemy_elaboration_2023 and @manz_recommended_2023 where conventional dissemination approaches struggle to effectively convey the depth and complexity of {{ "3D" | abbr | safe }} artefacts, there are specific challenges beyond visual representation. These challenges include accurately representing the lighting conditions that affect the object's appearance and capturing the spatial orientation, such as handedness (defining the coordinate system: where does the coordinate _x_, _y_, _z_ have to be and in which direction). Such enhancements of the forthcoming {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} have the potential to empower institutions and industries beyond {{ "CH" | abbr | safe }}.
+
+Certain key features have already been firmly established, particularly in regard to the integration of 3D content. A new resource type known as a `Scene` will be introduced to better accommodate 3D content and sits besides Canvas in the updated data model. This `Scene` is characterised by an infinite boundless space, where the origin (_0_,_0_,_0_) is at the centre rather than on the top-left corner as it is the case with still images, and is structured around a right-handed coordinate system. Within this system, movement along the Y-axis is interpreted as upward, while movement along the Z-axis signifies forward progression. Importantly, `Canvases` can be effectively nested within these `Scenes`, and likewise, `Scenes` have the capacity to be nested within other `Scenes` [@haynes_iiif_2023]. As @rossenova_iiif_2023 importantly argues, *‘the 3D specification would need to ensure that viewers can both implement a “minimum viable product” for user interaction and remain interoperable, as well as include more complex interactions and still specify those in a standards-compliant way’*. This advancement could potentially enable the presentation of collections in immersive formats, transforming access, engagement and cross-platform interoperability.
+
+[Figure 3.25](#fig:iiif-core-apis-viewer) illustrates the integration of the core {{ "API" | abbr | safe }}s within Mirador. Elements highlighted in blue are rendered via the Image {{ "API" | abbr | safe }}, while those in red are facilitated by the Presentation {{ "API" | abbr | safe }}. It is important to note that the Image {{ "API" | abbr | safe }} can function independently or in conjunction with the Presentation {{ "API" | abbr | safe }} for additional viewing capabilities. Additionally, there is no direct counterpart to the Image {{ "API" | abbr | safe }} for {{ "A/V" | abbr | safe }} content; instead, {{ "A/V" | abbr | safe }} specifics are conveyed using the `duration` property of the Presentation {{ "API" | abbr | safe }}.
+
+<figure id="fig:iiif-core-apis-viewer" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/iiif-core-apis-viewer.png"
+alt="The Interaction of the Core IIIF APIs in Mirador"
+style="width: 75%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.25</strong>:
+ The Interaction of the Core IIIF APIs in Mirador
+</figcaption>
+</figure>
+
+Shifting focus to the additional {{ "IIIF" | abbr | safe }} {{ "API" | abbr | safe }}s, the Content Search {{ "API" | abbr | safe }} plays a vital role in enhancing the framework's functionality. The specification facilitates searching within textual annotations and provides the mechanism for performing these searches within the {{ "IIIF" | abbr | safe }} context [@applebyIIIFContentSearch2022]. To add a Content Search service to a {{ "IIIF" | abbr | safe }} Manifest, an {{ "URI" | abbr | safe }} must be provided through the `service` property. Then the client, such as Mirador or the {{ "UV" | abbr | safe }}, will use it to create a valid query. An auto-complete service can also be embedded, further enriching the {{ "UX" | abbr | safe }} by streamlining the search process.
+
+The Authorization Flow {{ "API" | abbr | safe }} outlines four mechanisms for accessing restricted content to either initiate an interaction with an access control system or to give a client enough information bout the user's state with respect to the content provider. These mechanisms are: access service, token service, probe service, as well as logout service. The access service typically manifests as a user interface provided by the content host, which the client opens in a new tab, usually leading to the provider's login page. The token service plays a crucial role wherein the client acquires an access token, necessitating presentation of the same authorising credentials to the token service as the browser would to the related access-controlled resource. The probe service, as defined in this specification, is an endpoint used by the client to ascertain the user's association with the access-controlled resource it represents. This is applicable for both access-controlled content resources and image information documents (`info.json`) that produce access-controlled image responses. Additionally, there is an optional logout service, designed to facilitate user logout [@applebyIIIFAuthorizationFlow2023].
+
+The Change Discovery {{ "API" | abbr | safe }} is designed for machine-to-machine interfaces, primarily serving {{ "IIIF" | abbr | safe }}-aware systems. It enables content providers to efficiently publish lists of links to their content, which facilitates easy discovery and synchronisation for consuming systems [@appleby_iiif_2021]. The {{ "API" | abbr | safe }} is based on the {{ "W3C" | abbr | safe }} {{ "AS" | abbr | safe }} standard, ensuring a consistent and universally understandable pattern for publishing content changes. The {{ "API" | abbr | safe }} designates {{ "IIIF" | abbr | safe }} Collections and Manifests as primary access points for published content. Activities describing changes to these resources, and potentially to other types like {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }} endpoints.
+
+Central to the {{ "API" | abbr | safe }}'s utility is its ability to allow content providers to articulate the specifics of how their content has evolved. This includes providing details on content that has been deleted or is no longer available. This optimisation significantly helps consuming systems in retrieving only those resources that have been modified since their last update, thereby streamlining the update process. The specification defines three distinct levels of conformance, each offering a different depth of information about the changes to {{ "IIIF" | abbr | safe }} resources.
+
+- Level 0:   It offers a straightforward list of resources along with their     {{ "URI" | abbr | safe }}s, focusing on     basic interoperability.
+- Level 1:   It enhances the list by adding timestamps and ordering, allowing     consuming applications to process changes more efficiently.
+- Level 2:   It provides comprehensive information about the types of activities     undertaken, such as the creation, modification, and deletion of     resources, thus giving a detailed insight into the content changes. [Code Snippet 3.11](#lst:iiifchangediscovery) shows an example of a Level 2 `Activity`.
+
+<figure id="lst:iiifchangediscovery" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.11:</strong> Example of a Level 2 Activity Compliant with the IIIF Change Discovery API @appleby_iiif_2021
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "type": "Create",
+  "object": {
+    "id": "https://example.org/iiif/1/manifest",
+    "type": "Manifest"
+  },
+  "endTime": "2017-09-20T00:00:00Z"
+}
+</code></pre>
+</div>
+</figure>
+
+In the Change Discovery {{ "API" | abbr | safe }}, the `rdfs:seeAlso` property from the Presentation {{ "API" | abbr | safe }} is a vital feature that enhances the discoverability and understanding of {{ "IIIF" | abbr | safe }} resources [@raemy_enabling_2020 p. 16]. This property is used to reference external documents containing richer and more detailed information about the content being presented. The specification also provides a structured approach for the organisation and processing of `OrderedCollection` and `OrderedCollectionPage`. This includes clear directives on how activities within these structures are managed and accessed.
+
+In terms of network considerations, the Change Discovery {{ "API" | abbr | safe }} addresses critical aspects such as handling media types and activities for access-restricted content. These considerations ensure that the network interactions remain efficient and reliable, even in scenarios where content accessibility is dynamically changing. Additionally, the {{ "IIIF" | abbr | safe }} community deployed a {{ "IIIF" | abbr | safe }} Registry[^170] to give access to {{ "IIIF" | abbr | safe }} resources and streams that are compatible with the Change Discovery {{ "API" | abbr | safe }}.
+
+
+Finally, the Content State {{ "API" | abbr | safe }} enables deep-linking into objects and annotations from search results, aiding users in sharing specific {{ "IIIF" | abbr | safe }} content [@appleby_iiif_2022]. Specifically, a content state is a {{ "JSON-LD" | abbr | safe }} data structure that can be leveraged by {{ "IIIF" | abbr | safe }} clients to load and present a particular part of a resource, such as region of a Canvas in a Manifest, playing a particular point in a recording, displaying multiple targets from a comparison view, and embedding search results. Because the content states are serialised in {{ "JSON" | abbr | safe }}, these must be encoded in the base64url format, a variant of the base64 encoding designed to be safe for use in {{ "URL" | abbr | safe }}s as it avoids using special characters [see @josefsson_base16_2006]. In summary, as @crane_what_2020 argues, the specification is .
+
+[Figure 3.26](#fig:contentstate-buddha) displays a {{ "IIIF" | abbr | safe }} Manifest, specifically of *The Life of Buddha, first book (Shaka no Honji, jō)*, hosted by e-codices[^171]. This resource is accessed through Jalava[^172], a directory tree-based interface that aggregates {{ "IIIF" | abbr | safe }}-compliant repositories. It also includes a custom viewer, which enables the sharing of resources based on the {{ "IIIF" | abbr | safe }} Content State {{ "API" | abbr | safe }} in {{ "JSON" | abbr | safe }} and base64url formats.
+
+<figure id="fig:contentstate-buddha" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/contentstate-buddha.png"
+alt="Cologny, Fondation Martin Bodmer, Cod. Bodmer 600a: The Life of Buddha, First Book (Shaka no Honji, jō) Embedded in Jalava, a Customised Client from Durham University Compliant with the IIIF Content State API"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.26</strong>:
+ <em>Cologny, Fondation Martin Bodmer, Cod. Bodmer 600a: The Life of Buddha, First Book (Shaka no Honji, jō)</em> Embedded in Jalava, a Customised Client from Durham University Compliant with the IIIF Content State API
+</figcaption>
+</figure>
+
+Collectively, these {{ "API" | abbr | safe }}s, extensions and validators are not only fundamental components that enable the framework, they are also anchored by a set of well-defined design principles and an editorial process. This combination ensures improved interoperability and utility across different digital platforms, while maintaining consistent and usable standards that reflect the evolving needs of the community.
+
+In order to effectively deploy {{ "IIIF" | abbr | safe }}, it is important for the system building blocks to have a comprehensive understanding of the different {{ "API" | abbr | safe }}s involved. For a basic {{ "IIIF" | abbr | safe }} solution, the images need to be delivered in compliance with the Image {{ "API" | abbr | safe }}s through a web service. Then, a series of scripts can be used to generate {{ "IIIF" | abbr | safe }} resources, which combine the relevant metadata and data structure. These can be displayed within {{ "IIIF" | abbr | safe }}-compliant viewers. Deploying a more advanced {{ "IIIF" | abbr | safe }} architecture that can manage and save annotations, restrict access to certain objects, inform the {{ "IIIF" | abbr | safe }} community of changes made within its own collection, or search for {{ "OCR" | abbr | safe }} text requires a more complex environment. This involves deploying multiple types of servers and different libraries. [Figure 3.27](#fig:iiif-archi) illustrates an example of a {{ "IIIF" | abbr | safe }} architecture with the six {{ "API" | abbr | safe }}s.
+
+<figure id="fig:iiif-archi" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/iiif-archi-example.png"
+alt="Example of a IIIF Architecture Implementing the Six APIs"
+style="width: 90%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.27</strong>:
+ Example of a IIIF Architecture Implementing the Six APIs
+</figcaption>
+</figure>
+
+As I move from the underlying technical structure to its practical application, the next subsection takes a closer look at the {{ "IIIF" | abbr | safe }} ecosystem. This includes a diverse range of compliant software and implementations, each contributing to the widespread adoption and versatility of {{ "IIIF" | abbr | safe }}. By exploring these elements, it is possible to gain a comprehensive understanding of how {{ "IIIF" | abbr | safe }} is being operationalised and integrated into various environments.
 
 ##### 3.5.3.4 IIIF Ecosystem {id="subsubsec:iiif-ecosystem"}
 
-(...)
+This segment explores the composition of the {{ "IIIF" | abbr | safe }} ecosystem, particularly focusing on how its suite of shared {{ "API" | abbr | safe }}s has been integrated into software and the institutions that have made their resources compliant with the specifications.
+
+The adoption of {{ "IIIF" | abbr | safe }} by diverse organisations marks a significant turning point plays a crucial role in dismantling silos. This fosters enhanced communication and interoperability between various software platforms. As a result, users gain access to a richer array of options for viewing and interacting with digital resources. This transformation, catalysed by the widespread adoption of {{ "IIIF" | abbr | safe }}, is illustrated in [Figure 3.28](#fig:iiif-ecosystem), showcasing the dynamic and interconnected nature of the {{ "IIIF" | abbr | safe }} ecosystem.
+
+<figure id="fig:iiif-ecosystem" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/iiif-ecosystem.png"
+alt="Example of a IIIF Ecosystem of Software"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.28</strong>:
+ Example of a IIIF Ecosystem of Software
+</figcaption>
+</figure>
+
+The suite of {{ "IIIF" | abbr | safe }}-compliant software encompasses a diverse range of tools, each catering to specific aspects of the framework. Central to this suite are image servers, predominantly tailored to align with the {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }}, such as IIPImage[^174], Cantaloupe[^175], or {{ "SIPI" | abbr | safe }}[^176]. Complementing these servers are image viewers, designed to be compatible with either the Image {{ "API" | abbr | safe }} alone, like {{ "OSD" | abbr | safe }} and Leaflet-{{ "IIIF" | abbr | safe }}[^177], or with both of the core {{ "IIIF" | abbr | safe }} {{ "API" | abbr | safe }}s. With the release of the version 3.0 of the Presentation {{ "API" | abbr | safe }}, {{ "A/V" | abbr | safe }} players have also been developed, which frequently comply with the Image {{ "API" | abbr | safe }} as well. Examples of known clients that support the Image and Presentations {{ "API" | abbr | safe }}s 3.0 are Mirador, the {{ "UV" | abbr | safe }}, Annona[^178], Clover[^179], and Ramp[^180]. As the support and behaviour vary, a dedicated viewer matrix[^181] was created by Glen Robson, the {{ "IIIF-C" | abbr | safe }} Technical Coordinator.
+
+Additionally, the ecosystem includes an array of tools and libraries which offer pre-written code segments essential for constructing and manipulating {{ "IIIF" | abbr | safe }} resources. For narrative and website creation, there are specialised exhibition and guided viewing tools such as Storiiies[^182] and Exhibit[^183], adding a storytelling dimension to the experience. Moreover, validators play a critical role in ensuring compliance and accuracy, while annotation servers and clients offer advanced functionalities for enriching digital resources with contextual and interpretive information. Together, these components form a comprehensive and versatile toolkit, enabling a wide range of applications and enhancing the utility of {{ "IIIF" | abbr | safe }} resources.
+
+The evolving software landscape has witnessed a notable expansion in {{ "IIIF" | abbr | safe }} compatibility, where a larger number of software applications now align with the {{ "IIIF" | abbr | safe }} specifications. This shift is evident in the growing support for one or more of the {{ "IIIF" | abbr | safe }} {{ "API" | abbr | safe }}s, with a particular emphasis on the Image {{ "API" | abbr | safe }} or both core {{ "API" | abbr | safe }}s [@rabun_scoping_2016]. In May 2016, recognising the need to provide guidance and support to both newcomers and software developers within the {{ "IIIF" | abbr | safe }} community, a curated collection titled [^184] was initiated. This resource compiles a comprehensive array of {{ "IIIF" | abbr | safe }}-compliant tools, tutorials, and descriptive links, organised to facilitate easy navigation and understanding of the {{ "IIIF" | abbr | safe }} ecosystem. It serves as an invaluable resource, offering insights and directions for those embarking on their journey with {{ "IIIF" | abbr | safe }}, as well as helping developers in finding the necessary tools and information to integrate {{ "IIIF" | abbr | safe }} specifications effectively into their projects.
+
+{{ "IIIF" | abbr | safe }} has been embraced by a variety of institutions worldwide, spanning from state and national libraries to aggregators, museums, archives, and universities. Examples include Austria's national library, the British Library, {{ "BnF" | abbr | safe }}, Israel's national library, aggregators like Europeana, the Digital Public Library of America, and the Wikimedia Foundation, museums such as the Victoria & Albert Museum, the alters Art Museum, and the {{ "YCBA" | abbr | safe }}, archives such as the Swiss Federal Archives, the Blavatnik Foundation Archive, and the National Film and Sound Archive of Australia, as well as academic institutions such as Leiden University, University of Edinburgh, and Université Paris Cité. These implementations showcase the versatility of {{ "IIIF" | abbr | safe }}, illustrating its ability to cater to a wide spectrum of {{ "CH" | abbr | safe }} needs.
+
+In Switzerland, {{ "IIIF" | abbr | safe }} has seen significant uptake, primarily within the library and academic sectors. Institutions like {{ "DaSCH" | abbr | safe }}, e-manuscripta, e-rara, Kunstmuseum Basel, the Swiss Federal Archives, and the University of Geneva have all adopted {{ "IIIF" | abbr | safe }} to some extent. Notably, both core {{ "IIIF" | abbr | safe }} {{ "API" | abbr | safe }}s, in their Version 2.0, saw their initial implementation by e-codices[^185], the Virtual Manuscript Library of Switzerland, in December 2014 [@raemy_international_2017 p. 24]. It marked a strategic shift towards integrating modern open-source technologies, such as {{ "OSD" | abbr | safe }}, in the overhaul of their digital platform [@fritschi_e-codicesvirtual_2017 pp. 245-246]. This early adoption not only demonstrated e-codices' commitment to using the latest state-of-the-art digital tools, but also paved the way for the wider adoption of {{ "IIIF" | abbr | safe }} standards in digital libraries.
+
+Scoping the whole so-called {{ "IIIF" | abbr | safe }} universe is complex as there is no mandatory requirement -- and there probably shouldn't be one -- to tell the {{ "IIIF" | abbr | safe }} community that you have implemented the {{ "API" | abbr | safe }}s or that you have developed tools that are compliant with the specifications. In terms of specifications, mostly the core {{ "IIIF" | abbr | safe }} {{ "API" | abbr | safe }}s are implemented, such as shown in different investigations [see @raemy_daschcon_2023; @raemy_suggested_2019]. The {{ "IIIF" | abbr | safe }} community has also carried out several surveys, targeted at institutions implementing the standards in 2017, 2020, and 2023 [@raemy_characterising_2023 p. 2]. In 2017, the number of images compatible with the {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }} was estimated to be over 335 million [@raemy_international_2017 p. 27], probably under-representing the real number. At the time of writing, it is likely that there are over 2 billion images compliant with the Image {{ "API" | abbr | safe }}, as the Internet Archive alone hosts over 1 billion of them.
+
+The latest 2023 {{ "IIIF" | abbr | safe }} Implementation Survey, receiving 80 responses, showcased a diverse range of institutions including 26 libraries, 11 museums (some encompassing combinations like museum and research library), 16 universities or research institutions, seven archives, five service providers, as well as four software providers. It is quite representative to what is known to {{ "IIIF-C" | abbr | safe }} and the wider community, with participation and implementations mostly from libraries, museums, and universities from North America and Europe. Most surveyed institutions currently support IIIF, with a few in the planning stage. The number of {{ "IIIF" | abbr | safe }}-compatible resources varies widely, ranging from fewer than a thousand to over a million in some cases. Popular IIIF-compliant image servers include Cantaloupe and IIIPImage. Mirador and {{ "UV" | abbr | safe }} are commonly used viewers. JPEG2000 and TIFF are the predominant image formats used across the surveyed institutions. A portion of the institutions actively contribute staff time or funding to shared IIIF tools and projects, highlighting a collaborative approach within the {{ "IIIF" | abbr | safe }} community.
+
+Navigating the world of {{ "IIIF" | abbr | safe }} resources can be a challenging endeavour, given their vast and varied nature. To assist in this task, a comprehensive guide has been developed, providing valuable insights and directions on how to locate {{ "IIIF" | abbr | safe }} resources effectively[^186]. As an illustration, [Figure 3.29](#fig:cultural-japan) presents the entry of the Cultural Japan platform[^187], which aggregates {{ "IIIF" | abbr | safe }}-compliant of and about Japan [see @machiya_improvement_2023].
+
+<figure id="fig:cultural-japan" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/cultural-japan.png"
+alt="Screenshot of the Cultural Japan Platform in the IIIF Guides"
+style="width: 90%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.29</strong>:
+ Screenshot of the Cultural Japan Platform in the IIIF Guides
+</figcaption>
+</figure>
+
+While the {{ "IIIF" | abbr | safe }} ecosystem is dynamic and evolving, it is important to note that its expansion and development are predominantly observed within {{ "GLAM" | abbr | safe }} and academic institutions, mostly in wealthy countries. This skew indicates that while {{ "IIIF" | abbr | safe }} specifications have gained traction and proving to be influential in the {{ "DH" | abbr | safe }} and {{ "CH" | abbr | safe }} domains, their adoption is not uniformly distributed globally. The concentration of {{ "IIIF" | abbr | safe }} tools and implementations in certain regions underscores the need for broader outreach and support to enable more diverse and widespread adoption. Despite its current geographical and sectoral concentration, the framework's capability to enhance access, interaction, and preservation of digital resources remains significant, offering a promising avenue for the future of digital archival work on an international scale.
+
 
 #### 3.5.4 Web Annotation Data Model {id="subsec:wadm"}
 
+The {{ "WADM" | abbr | safe }}[^188], a {{ "W3C" | abbr | safe }} standard established in 2017 and influenced by the outcomes of the {{ "OAC" | abbr | safe }}[^189] resulting from several years of effort [see @haslhofer_open_2011], provides an extensible and interoperable framework for creating and sharing annotations across various platforms.
+
+{{ "WADM" | abbr | safe }} is designed to support both simple and complex use cases, such as linking content to specific data points or multimedia resources. It standardises annotations for interoperability and easy integration into existing collections, using {{ "JSON-LD" | abbr | safe }} for serialisation, which integrates annotations into the web's structured data ecosystem. The model adopts Linked Data principles, emphasising interoperable and flexible structures for annotations [@sanderson_designing_2013].
+
+(...)
+
 #### 3.5.5 Linked Art {id="subsec:linked-art"}
+
+(...)
 
 #### 3.5.6 Implications and Opportunities for the Cultural Heritage Domain and the Humanities {id="subsec:loud-implications"}
 
