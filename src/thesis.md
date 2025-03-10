@@ -2588,7 +2588,7 @@ style="width: 75%; display: block; margin: 0 auto;" />
 
 The model outlines various components of an annotation [@sanderson_web_2017]:
 
--`@ context`:   A property defining the {{ "JSON" | abbr | safe }}'s meaning as an `Annotation`. Each     `Annotation` must include one or more `@ context` values, with     <http://www.w3.org/ns/anno.jsonld> as a mandatory inclusion. If only     one value is present, it should be a string.
+- `@ context`:   A property defining the {{ "JSON" | abbr | safe }}'s meaning as an `Annotation`. Each     `Annotation` must include one or more `@ context` values, with     <http://www.w3.org/ns/anno.jsonld> as a mandatory inclusion. If only     one value is present, it should be a string.
 - id:   A property identifying the `Annotation` with a unique     {{ "IRI" | abbr | safe }}. Each     `Annotation` must have exactly one identifying     {{ "IRI" | abbr | safe }}.
 - type:   A relationship specifying the `Annotation`'s type. Each `Annotation`     should have one or more types, including the `Annotation` class.
 - Annotation:   A class representing web annotations. Each `Annotation` must be     specified with `type`.
@@ -2664,9 +2664,325 @@ Linked Art[^193] is a community-driven initiative working together to define a {
 
 Linked Art presents a layered framework that distinguishes between the conceptual and implementation aspects of its model. This stratification is key to understanding how the Linked Art profile and its {{ "API" | abbr | safe }} are situated within a broader context of shared abstractions and sustainable implementations [@sanderson_cultural_2020].
 
+- **Shared Abstraction Level**:   The conceptual model is encoded by the ontology, which is refined by     vocabularies.
+    - Conceptual Model:   This represents an abstract way of conceptualising the world in         a holistic, consistent, and coherent manner. A conceptual model         can express just about anything anyone wishes to document.         Linked Art is based on {{ "CIDOC-CRM" | abbr | safe }}, an event-based framework.
+    - Ontology:   This involves a shared set of terms that encode the conceptual         model in a logical and machine-actionable way. This layer aims         for the correctness of data. Linked Art uses the         {{ "RDF" | abbr | safe }}         encoding of {{ "CIDOC-CRM" | abbr | safe }} 7.1.3, with a few other         extensions like CRMdig and properties and classes created by the         Linked Art community, as well as other commonly used         {{ "RDF" | abbr | safe }}         namespaces such as Dublin Core and {{ "RDFS" | abbr | safe }} for disambiguating closely         related property names.
+    - Vocabulary:   A curated set of terms specific to sub-domains, making the         ontology more concrete and applicable. The Getty Vocabularies         are used in Linked Art to further classify the main core         entities from {{ "CIDOC-CRM" | abbr | safe }}.
+- **Sustainable Implementations Level**:   The shared abstraction level is specialised by a profile and     available through an {{ "API" | abbr | safe }}.
+    - Profile:   It entails a selection of appropriate abstractions from the         conceptual model, aimed at encoding the scope of what can be         described. In the case of Linked Art, its profile is mainly         focused on describing artworks.
+    - {{ "API" | abbr | safe }}:   This involves a selection of appropriate technologies to provide         access to data managed using the profile. Like the other         {{ "LOUD" | abbr | safe }}         specifications, the Linked Art {{ "API" | abbr | safe }} is serialised in         {{ "JSON-LD" | abbr | safe }}         and follows the {{ "REST" | abbr | safe }} architectural principles.
 
+[Figure 3.31](#fig:la-overview) illustrates these layers, delineating the transition from shared abstractions (in blue) to their sustainable implementations (in green) in the Linked Art ecosystem.
 
-(...)
+<figure id="fig:la-overview" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/la-overview.svg"
+alt="Abstraction and Implementation Level of Linked Art. Adapted from @sanderson_linked_2021"
+style="width: 75%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.31</strong>:
+ Abstraction and Implementation Level of Linked Art. Adapted from @sanderson_linked_2021
+</figcaption>
+</figure>
+
+Embarking on an exploration of Linked Art, this subsection unfolds in four distinct yet interconnected segments. First, [3.5.5.1](#subsubsec:la-history) offers a historical perspective on the development and evolution of Linked Art. This is followed by [3.5.5.2](#subsubsec:la-model), which provides an in-depth examination overview of the model, detailing its structure and patterns. Subsequently, [3.5.5.3](#subsubsec:la-api) explores the architectural and design principles of the Linked Art {{ "API" | abbr | safe }}, including its protocol, core constructs, and the array of entity endpoints it recommends. The subsection culminates with [3.5.5.4](), where I look at the community dynamics surrounding Linked Art and how the specification has been, or will be, implemented.
+
+##### 3.5.5.1 History {id="subsubsec:la-history"}
+
+Linked Art officially came into existence in 2017 [@raemy_characterising_2023 pp. 1-2]. However, its roots can be traced back to November 2016 with the creation of its first GitHub repository[^194], marking the beginning of the community. The initiative gained significant momentum in January 2019, when it commenced hosting open community calls, inviting broader participation and engagement[^195].
+
+In the same year, Linked Art received financial support in the form of grants from both the Kress Foundation[^196], known for its dedication to advancing the field of art history, and the {{ "AHRC" | abbr | safe }}[^197], a major funding body in the United Kingdom. This support from two esteemed organisations has strengthened Linked Art's capabilities and resources, allowing it to expand its scope and organise five face-to-face meetings; three in 2019 and two in 2023 -- delayed due to the COVID-19 pandemic.
+
+The official recognition of Linked Art as a {{ "CIDOC" | abbr | safe }} Working Group in 2020 marks another milestone in its development. This recognition not only confirms the importance and relevance of Linked Art within the international museum sector, but also increases its visibility.
+
+The evolution of Linked Art was significantly influenced by two key precedents: the {{ "AAC" | abbr | safe }}[^198] and Pharos[^199], the International Consortium of Photo Archives. {{ "AAC" | abbr | safe }}, a consortium of fourteen American art museums, played a critical role in promoting the adoption of agreed-upon {{ "LOD" | abbr | safe }} practices for artworks [@knoblock_lessons_2017]. On the other hand, Pharos brought together a network of photographic archives [@delmas-glass_fostering_2020].
+
+@fink_american_2018 [p. 35] highlights the philosophical alignment between Linked Art and {{ "AAC" | abbr | safe }}. She notes that *‘[Linked Art] describes the philosophy that shaped the AAC target model. It indicates the model will be updated by applying it to other data sets, such as the Getty Museum and Pharos, The International Consortium of Photo Archives, with the intention of having it serve as a resource for the broad museum community’*. While AAC's alignment with Linked Art's philosophy is evident, Pharos' engagement with the community has followed a distinct path. Initially closely aligned with Linked Art, Pharos eventually branched off, adopting unique modelling practices and decided to deploy their own instance of ResearchSpace[^200], an open source semantic web platform, to aggregate and align data from partner institutions.
+
+The creation of {{ "AAC" | abbr | safe }}'s dates back to 2014, and in 2016 it published its target model based on {{ "CIDOC-CRM" | abbr | safe }}. This model embodied a design philosophy similar to that of Linked Art, characterised by its adaptability to different museum infrastructures. The well-structured and strategic design of the {{ "AAC" | abbr | safe }} target model laid a solid foundation for the development of functional applications and influenced the approach and methodology adopted by Linked Art in its subsequent evolution.
+
+Linked Art's development and growth are also significantly intertwined with the trajectory of {{ "IIIF" | abbr | safe }} [see @daga_integrating_2022]. This connection is evident in the way Linked Art has emulated {{ "IIIF" | abbr | safe }}'s principles and methodologies. In addition, a few core people collaborate in both initiatives [@raemy_characterising_2023 p. 11].
+
+The release of the Linked Art {{ "API" | abbr | safe }} V1.0, scheduled for the course of ~~December 2024~~[^400] February 2025[^500], represents a significant turning point in the evolution of the standard, but it is worth noting that several earlier implementations had already laid the groundwork for its adoption. These implementations not only provided valuable insights into the data model and the {{ "API" | abbr | safe }}'s potential but also served as a catalyst for its refinement and enhancement.
+
+##### 3.5.5.2 Linked Art Data Model {id="subsubsec:la-model"}
+
+At its core, Linked Art is a data model[^201] or metadata application profile[^202] that draws extensively from the {{ "RDF" | abbr | safe }} implementation of the version 7.1.3 of {{ "CIDOC-CRM" | abbr | safe }} [see @bekiari_cidoc_2024]. The Getty Vocabularies -- namely {{ "AAT" | abbr | safe }}, {{ "ULAN" | abbr | safe }}, and {{ "TGN" | abbr | safe }} -- are leveraged as core sources of identity for domain-specific terminology. {{ "JSON-LD" | abbr | safe }} 1.1 is chosen as the preferred serialisation format, promoting clarity and interoperability. This framework constructs common patterns, integrating conceptual models, ontologies, and vocabulary terms. These elements are derived from real-world scenarios and contributions from the diverse participants and institutions within the Linked Art community [@sanderson_introduction_2019].
+
+In the area of data provenance, the work of @ram_new_2009 on the W7 model stands as an example. This ontological framework conceptualises data provenance through seven interconnected facets: ‘what’, ‘when’, ‘where’, ‘how’, ‘who’, ‘which’, and ‘why’. Each of these elements serves as a means to monitor and understand events impacting data throughout its existence. Importantly, the W7 model demonstrates flexibility and adaptability in capturing the nuances of provenance for data across diverse domains. The Linked Art data model, in its domain-specific application, particularly resonates with five of these facets: ‘what’, ‘where’, ‘who’, ‘who’, and ‘when’ and [@sanderson_importance_2020]. This focus facilitates a nuanced tracking and interpretation of the key aspects of data provenance, as visually captured in [Figure 3.32](#fig:linkedart_50k) [^203].
+
+<figure id="fig:linkedart_50k" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/linkedart_50k_feet.svg"
+alt="Linked Art from 50,000 Feet"
+style="width: 90%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.32</strong>:
+ Linked Art from 50,000 Feet [@raemyEnablingParticipatoryData2023Poster adapted from [@sanderson_importance_2020]]
+</figcaption>
+</figure>
+
+There are a few base patterns[^204] that every resource should have for it to be a useful part of the world of Linked Data [@raemy_analysis_2023 p. 11]. The core properties, types and classifications are listed hereafter.
+
+- `@ context`:   It contains a reference to the context mapping. It is a property of     the document pointing to <https://linked.art/ns/v1/linked-art.json>.
+- `id`:   It captures the {{ "URI" | abbr | safe }} that identifies the object. Every     resource must have exactly one `id`, and it must be an     {{ "HTTP" | abbr | safe }}     {{ "URI" | abbr | safe }}.
+- `type`:   It captures the class of the object, or `rdf:type` in     {{ "RDF" | abbr | safe }}. Every     resource must have exactly one class. This allows software to align     the data model with an internal, object oriented class based     implementation.
+- `_label`:   It captures a human readable label as a string, intended for     developers or other people reading the data to understand what they     are looking at. Every resource should have exactly one label, and     must not have more than one. It is just a string, and does not have     a language associated with it -- if multiple languages are available     for the content, then implementations can choose which is most     likely to be valuable for a developer looking at the data.
+- `classified_as`:   {{ "CIDOC-CRM" | abbr | safe }}     needs to be extended for effective application. To facilitate this,     Linked Art employs the `classified_as` property, which is designed     to link to a term within a controlled vocabulary, offering a     mechanism for expansion and customisation. Specifically, it is     `P2_has_type` with a different mapping in the `@ context` document to     avoid the collision with `rdf:type`.
+
+The {{ "JSON-LD" | abbr | safe }} serialisation displayed in [Code Snippet 3.14](#lst:nightwatch1) represents a practical application of the properties previously discussed, exemplifying the modelling of Rembrandt's *The Night Watch*[^205]. This particular use case was not only a central focus during the Linked Art face-to-face meeting held in Amsterdam in October 2023 [@sanderson_understanding_2023] but also serves as an illustrative example in various core scenario modellings highlighted here. This extract and the ones that follow offer a glimpse of how Linked Art effectively captures artwork metadata and presents it in a structured format.
+
+<figure id="lst:nightwatch1" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.14:</strong> The Night Watch: Representation in the Linked Art Data Model Including URI; Class; Label; and Classification
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "@ context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://example.org/object/42",
+  "type": "HumanMadeObject",
+  "_label": "The Night Watch",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Work of Art"
+    }
+  ]
+}
+</code></pre>
+</div>
+</figure>
+
+Linked Art categorises controlled vocabulary terms[^206] into three distinct classes to facilitate validation and interoperability. This classification is key to ensuring that data adheres to consistent rules across different implementations.
+
+- Required:   These terms must be used to be considered valid, as they form the     bedrock of classification.
+- Recommended:   Terms in this category are strongly suggested for use. They     contribute significantly to the quality and coherence of data. While     their usage is encouraged, there may be valid reasons for opting     out.
+- Listed:   These terms are put forward to promote uniformity and wider adoption     of common practices. While their use is not mandatory, employing     them aligns with the established practices of the Linked Art     community.
+
+[Code Snippet 3.15](#lst:nightwatch2) shows how names, identifiers and statements are represented in Linked Art. Names, distinct from the `_label` property which serves as internal documentation, are essential for user-facing resources. Every entity that should be visible to an end-user, be it an object, person, group, or event, is recommended to have at least one specific name. This is achieved using the `identified_by` property with a `Name` resource, where the actual name is specified in the `content` property. Identifiers are handled similarly but employ the `Identifier` class. They are often classified to distinguish between various types, like internal system numbers and accession numbers. This classification helps in differentiating and understanding the origins and nature of each identifier. Statements come into play where data does not support the specificity that the full ontology allows or when information is best conveyed in human-readable form. This could include descriptions like medium or materials, rights or usage statements, dimensions, or edition statements. In scenarios where there is descriptive text about the resource, regardless of the type of description, the `referred_to_by` property is used to record this textual information.
+
+<figure id="lst:nightwatch2" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.15:</strong> The Night Watch: Representation in the Linked Art Data Model Including Names; Identifiers; and Statements
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "@ context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://example.org/object/42",
+  "type": "HumanMadeObject",
+  "_label": "The Night Watch",
+  (...),
+  "identified_by": [
+    {
+      "type": "Name",
+      "_label": "The Night Watch (English)",
+      "content": "The Night Watch",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ],
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388277",
+          "type": "Language",
+          "_label": "English"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "_label": "Night Watch Object Identifier",
+      "content": "SK-C-5",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404621",
+          "type": "Type",
+          "_label": "Repository number"
+        }
+      ]
+    }
+  ],
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435429",
+          "type": "Type",
+          "_label": "Material Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ],
+      "content": "Oil on Canvas",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388277",
+          "type": "Language",
+          "_label": "English"
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+</div>
+</figure>
+
+The use of an intermediate `Activity` entity, rather than direct links, allows for richer descriptions and associations. This approach enables linking multiple actors, places, techniques, and timespans to a single activity, enhancing the depth of cultural heritage data representation. Here are the following properties:
+
+- `carried_out_by`:   It identifies who carried out the activity, linking it to people or     groups.
+- `took_place_at`:   It specifies where the activity occurred, associating it with     specific locations.
+- `technique`:   It describes how the activity was carried out, detailing methods or     techniques used.
+
+Furthermore, Linked Art incorporates a minimal `TimeSpan` model for activities, utilising properties `begin_of_the_begin` and `end_of_the_end`. These properties record the beginning and end of the `TimeSpan`, respectively. Both activities, all encapsulated within the `produced_by` property, and timespans are exemplified in [Code Snippet 3.16](#lst:nightwatch3).
+
+<figure id="lst:nightwatch3" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 3.16:</strong> The Night Watch: Representation in the Linked Art Data Model Including Activities and Timespans
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "@ context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://example.org/object/42",
+  "type": "HumanMadeObject",
+  "_label": "The Night Watch",
+  (...),
+  "produced_by": {
+    "type": "Production",
+    "carried_out_by": [
+      {
+        "id": "http://vocab.getty.edu/ulan/500011051",
+        "type": "Person",
+        "_label": "Rembrandt, Harmensz van Rijn"
+      }
+    ],
+    "took_place_at": [
+      {
+        "id": "http://vocab.getty.edu/tgn/7006952",
+        "type": "Place",
+        "_label": "Amsterdam"
+      }
+    ],
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300053343",
+        "type": "Type",
+        "_label": "Painting"
+      }
+    ],
+    "timespan": {
+      "type": "TimeSpan",
+      "begin_of_the_begin": "1642-01-01",
+      "end_of_the_end": "1642-12-31",
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "1642",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404669",
+              "type": "Type",
+              "_label": "Display Label"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+</div>
+</figure>
+
+In essence, Linked Art's basic patterns revolve around a few principles: {{ "URI" | abbr | safe }}s for web identification of entities and records, a small yet impactful set of classes (ontology) coupled with an extensive array of classifications (vocabulary). Core elements such as names, identifiers, statements, and classifications are universally applicable to every entity. The concepts of activities and partitioning enable connections and detailed specificity between entities.
+
+Within the data model, further key patterns have been recognised and established. These include object descriptions, people and organisations, places, digital integration (such as describing {{ "IIIF" | abbr | safe }}-compliant resources and pointing to their {{ "JSON-LD" | abbr | safe }} {{ "API" | abbr | safe }} context -- as shown in [Figure 3.33](#fig:linkedart_iiif)), provenance of objects, collections and sets, exhibitions of objects, primary sources of information, assertion level metadata, and dataset level metadata [@raemy_analysis_2023 p. 12]. This classification provides a robust framework to distinguish between the physicality of objects, the abstract nature of works, and the human or collective agents involved.
+
+<figure id="fig:linkedart_iiif" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/IIIF-LA.svg"
+alt="Linked Art Digital Integration: Possible Description of Available IIIF resources"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 3.33</strong>:
+ Linked Art Digital Integration: Possible Description of Available IIIF resources
+</figcaption>
+</figure>
+
+Particularly, objects are differentiated as `HumanMadeObject`[^208], physical entities with tangible presence, and `DigitalObject`, representing digital files. Works include `PropositionalObject` (abstract concepts not tied to text or visuals), `LinguisticObject` (textual works like ‘The Lord of the Rings’), and `VisualItem` (visual works, such as ‘The Night Watch’). Actors are classified as `Person` (individuals with intentional action) or `Group` (collectives).
+
+Linked Art extends the notion of actors to non-humans who are responsible, albeit temporarily, for activities under the category of persons. `Place` entities are defined as fixed geographical locations with identifiable coordinates. For concepts, `Type` represents broad categories or classifications, supplemented by specific concepts such as `Language`, `Material`, `Currency` and `MeasurementUnit`. The `Set` class is defined as an unordered group that is unique to Linked Art, as opposed to `E78 Curated Holding` in {{ "CIDOC-CRM" | abbr | safe }}, which emphasises physical and purposefully preserved sets.
+
+Furthermore, `Activity` in Linked Art, especially `Provenance` and `Exhibition`, offer explicit connections between entities, setting Linked Art apart from other data models. Here, objects are distinct from works and provide a context, while people, groups, and places are entities in their own right [@sanderson_understanding_2023].
+
+Each of these patterns has an essential function in the structured representation and organisation of a wide range of data. This includes data about artworks, the artists who created them, the places associated with those artworks, digital representations, historical background, as well as information about collections, exhibitions and the rich metadata that supports this rich tapestry of {{ "CH" | abbr | safe }} [@raemy_analysis_2023 p. 12].
+
+##### 3.5.5.3 Linked Art API and Standards for Linked Art {id="subsubsec:la-api"}
+
+In Linked Art, a clear distinction exists between the model and the {{ "API" | abbr | safe }}. The model is inherently flexible, allowing for a wide range of representations, while the {{ "API" | abbr | safe }} is tailored for software developers, providing a more defined and structured interaction mechanism. In this section I will look at the characteristics of the Linked Art {{ "API" | abbr | safe }} and other specifications relevant to Linked Art, such as {{ "HAL" | abbr | safe }} or {{ "AS" | abbr | safe }}.
+
+Linked Art, drawing inspiration from {{ "IIIF" | abbr | safe }}, espouses a set of design principles[^209] aimed at fostering usability and interoperability [@sanderson_semantic_2023]. These principles emphasise the importance of defining scope through shared use cases and designing for internal utility, while adhering to the axiom of simplicity. They advocate for making easy tasks straightforward and complex tasks achievable, without over-reliance on specific technologies. Embracing {{ "REST" | abbr | safe }} and leveraging the benefits of web caching, these guidelines are grounded in {{ "REST" | abbr | safe }}ful architecture and the efficient use of network resources. As such, the Linked Art {{ "API" | abbr | safe }} revolves around the use of {{ "URI" | abbr | safe }}s as both identifiers and locators. It is also important not to infer information about the publisher based on the {{ "URI" | abbr | safe }} structure and to prefer {{ "HTTPS" | abbr | safe }} for security. Additionally, the principles prioritise designing for {{ "JSON-LD" | abbr | safe }}, employing {{ "LOD" | abbr | safe }} methodologies, and adhering to established standards and best practices wherever feasible. A key focus is on defining criteria for success to facilitate extensibility, thereby ensuring a robust and adaptable framework for Linked Art's implementation.
+
+Further delving into the specifics of the Linked Art {{ "API" | abbr | safe }} in terms of requirements, four key areas are listed: trivial to implement, consistency across representations, division of information, and {{ "URI" | abbr | safe }} requirements [@raemy_analysis_2023 p. 13].
+
+Linked Art advocates for trivial implementation. The framework is designed such that even hand-crafted files on disk are feasible for deployment, though automation may be preferred for managing larger data volumes. A key aspect is the consistency across representations, ensuring that each relationship is contained within a single document. This approach aids in maintaining clarity and coherence in data structuring. Moreover, Linked Art emphasises the division of information across different representations, adopting a structured approach that scales from many to few. For example, in the context of a book, the structure would flow from the page level to the book, and eventually to the collection, delineating a clear hierarchy of information. Additionally, the identity and {{ "URI" | abbr | safe }} requirements in Linked Art are strategically designed. One-to-one relationships are embedded directly and do not necessitate separate {{ "URI" | abbr | safe }}s. This simplifies the data model and enhances its accessibility. Furthermore, the {{ "URI" | abbr | safe }}s for records are devoid of any internal structure, adhering to a principle of simplicity and straightforward usability. This approach ensures that the model remains user-friendly and easily navigable, making it an efficient tool for representing and managing {{ "CH" | abbr | safe }} data.
+
+The division of the graph in Linked Art ensures no duplication of definitions across records. Full {{ "URI" | abbr | safe }}s are used for references, simplifying client processing. Embedded structures, even if potentially identifiable, do not carry {{ "URI" | abbr | safe }}s to avoid unnecessary complexity. At the moment, there are eleven endpoints[^210] in the Linked Art {{ "API" | abbr | safe }}, loosely based on the conceptual model presented previously:
+
+1.  **Concepts**: Types, Materials, Languages, and others, as full     records rather than external references
+2.  **Digital Objects**: Images, services and other digital objects
+3.  **Events**: Events and other non-specific activities that are     related but not part of other entities
+4.  **Groups**: Groups and Organisations
+5.  **People**: Individuals
+6.  **Physical Objects**: Physical things, including artworks, buildings     or other architecture, books, parts of objects, and more
+7.  **Places**: Geographic places
+8.  **Provenance Activities**: The various events that take place during     the history of a physical thing
+9.  **Sets**: Sets, including Collections and sets of objects used for     exhibitions
+10. **Textual Works**: Texts worthy of description as distinct entities,     such as the content carried by a book or journal article
+11. **Visual Works**: Image content worthy of description as distinct     entities, such as the image shown by a painting or drawing
+
+Each of these endpoints is accompanied by detailed documentation outlining the required and permitted patterns, complemented by a corresponding {{ "JSON" | abbr | safe }} schema[^211].
+
+Linked Art has investigated to use of both {{ "HAL" | abbr | safe }}, an {{ "IETF" | abbr | safe }} {{ "RFC" | abbr | safe }}, and {{ "AS" | abbr | safe }} for managing back-links and harvesting content. {{ "HAL" | abbr | safe }} links, which are media types for representing resources and their relations with hyperlinks [see @kelly_json_2023], are simple and reliable, with existing tooling including validation. It should play a fundamental role in addressing redundancy for Linked Art by mitigating response bloating between {{ "API" | abbr | safe }} responses. They are placed at the top level of {{ "JSON-LD" | abbr | safe }} documents, not treated as properties but as part of the {{ "API" | abbr | safe }} [@raemy_analysis_2023 p. 17][^212]. {{ "AS" | abbr | safe }}, already implemented by the {{ "IIIF" | abbr | safe }} Change Discovery {{ "API" | abbr | safe }}, provides a common paging model across various standards, allowing for flexible data aggregation.
+
+Overall, {{ "API" | abbr | safe }}s for the Linked Art prioritise {{ "JSON" | abbr | safe }} for syntax, appealing to the software developer audience. By implementing Linked Art records in {{ "JSON-LD" | abbr | safe }} and using {{ "HAL" | abbr | safe }} links for back-links, along with {{ "HAL" | abbr | safe }} for search and aggregation, the specifications offer consistency, usability, and ease of implementation without the need for specialised technologies, yet retaining semantic richness. Essentially, implementing those specifications means adopting the model itself.
+
+##### 3.5.5.4 Community and Implementations 
+
+The Linked Art community[^213] boasts a diverse and international membership primarily from museums and universities in North America and Europe. Key institutions such as The National Gallery of Art (USA), The J. Paul Getty Trust, the Museum of Modern Art, the Frick, the Rijksmuseum, and the Victoria and Albert Museum, alongside universities and research centres like Oxford, Yale, {{ "FORTH" | abbr | safe }}, {{ "DHLab" | abbr | safe }}, and ETH Zurich, are among the earlier and active participating institution in the community. Other organisations such as Europeana and the American Numismatics Society have also been involved.
+
+Linked Art has seen significant project-based support and investigation, notably from the University of Oxford e-Research Centre[^214]. This includes initiatives like the [^215] and [^216], both supported by {{ "AHRC" | abbr | safe }} funding. These projects exemplify the collaborative and research-focused ethos at the heart of the Linked Art initiative. In the area of collaborative projects, Linked Art lists partners such as Pre-Raphaelites Online[^217] and Linked Conservation Data[^218] on its website. These partnerships highlight the diverse applications of Linked Art across different domains, from art history to conservation practices, underlining its adaptability and relevance to a wide range of {{ "CH" | abbr | safe }} endeavours.
+
+From a library and archives perspective, the LD4 Art & Design Affinity Group in the USA[^219], extending beyond museums to encompass libraries and archives, has listed Linked Art as a relevant initiative emphasising its cross-disciplinary appeal.
+
+Several institutions have already adopted various implementations of Linked Art, each tailoring it to their specific needs and due to the release of Version 1.0 being delayed. Yale's LUX Collection Discovery platform (see ) stands out as a flagship implementation [@raemy_characterising_2023 p. 26]. Additionally, digital platforms like The Art and Life of Georgia O'Keeffe, the Getty Museum Collection, the Getty Vocabularies, Van Gogh Worldwide, and the Rijksmuseum have either implemented or are planning to implement Linked Art.
+
+However, the adoption of Linked Data in European museums and beyond remains limited, with few institutions displaying digital objects online. For instance, @france_addressing_2021 argued that structuring data internally using the Linked Art model might be premature due to its ongoing development. This highlights the importance of establishing a stable implementation of Linked Art to facilitate broader adoption and unlock its full potential in the {{ "CH" | abbr | safe }} sector. Moreover, while @klic_digital_2019 [p. 23] mentions that Linked Art utilises the {{ "CIDOC-CRM" | abbr | safe }} ontology to its full expressiveness, there appears to be a lack of clarity or common understanding among readers regarding the precise nature and characteristics of Linked Art, which is a streamlined profile.
+
+One potential driver for wider implementation is the integration of Linked Art with existing standards, akin to the {{ "EODEM" | abbr | safe }}[^220], a framework that enables museum databases to export an import object data more easily. Establishing standardised mechanisms for data exchange could enhance the accessibility and applicability of Linked Art for more institutions. Additionally, the {{ "SARI" | abbr | safe }} Reference Models[^221] and platforms like Arches[^222], developed by the Getty Conservation Institute[^223] and World Monuments Fund[^224], present promising opportunities for implementing Linked Art in various software and partnership settings.
+
+Overall, while Linked Art does not aim for perfect semantic interoperability, it strives for practical generalisation, positioning itself as a potential benchmark for accessing and aggregating digital collections. Its development and implementation across a spectrum of {{ "CHI" | abbr | safe }}s underscore its role as a transformative tool in the field, as suggested by @raemy_enabling_2023. As the community continues to grow and evolve, Linked Art holds the promise of shaping the future of digital {{ "CH" | abbr | safe }}, fostering greater connectivity and understanding across diverse collections and practices.
+
 
 #### 3.5.6 Implications and Opportunities for the Cultural Heritage Domain and the Humanities {id="subsec:loud-implications"}
 
@@ -3912,7 +4228,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
     @degler_georgia_2020].
 
 [^139]: {{ "IIIF" | abbr | safe }}:
-    <https://iiif.io> -- the acronym is pronounced .
+    <https://iiif.io> -- the acronym is pronounced ‘triple eye eff’.
 
 [^140]: No, it wasn't a napkin.
 
@@ -3930,10 +4246,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
     <https://developers.exlibrisgroup.com/sfx/apis/web_services/openurl/>
 
 [^145]: Grants allocated to Stanford University by the Mellon Foundation
-    to support the development of {{ "IIIF" | abbr | safe }}:\
-    <https://www.mellon.org/grant-details/international-image-interoperability-framework-9268>
-    and\
-    <https://www.mellon.org/grant-details/lam-convergence-via-iiif-shared-canvas-devconx-and-bumblebee-10319>
+    to support the development of {{ "IIIF" | abbr | safe }}: <https://www.mellon.org/grant-details/international-image-interoperability-framework-9268> and <https://www.mellon.org/grant-details/lam-convergence-via-iiif-shared-canvas-devconx-and-bumblebee-10319>
 
 [^146]: See
     <https://training.iiif.io/time_machine/iiif_intro/timeline.html>
@@ -4066,8 +4379,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 
 [^189]: {{ "OAC" | abbr | safe }}
     specified the Open Annotation Data Model, a precursor of
-    {{ "WADM" | abbr | safe }}:\
-    <https://web.archive.org/web/20230328030315/http://www.openannotation.org/spec/core/>
+    {{ "WADM" | abbr | safe }}: <https://web.archive.org/web/20230328030315/http://www.openannotation.org/spec/core/>
 
 [^190]: Wikibase: <https://wikiba.se/>
 
@@ -4079,8 +4391,7 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
 [^192]: The Web Annotation Working Group was chartered from August 2014
     to October 2016, and was extended to February 2017 when
     {{ "WADM" | abbr | safe }} was
-    officially vetted as a standard.\
-    See <https://www.w3.org/groups/wg/annotation/>.
+    officially vetted as a standard. <https://www.w3.org/groups/wg/annotation/>.
 
 [^193]: Linked Art: <https://linked.art>
 
@@ -4681,3 +4992,5 @@ As I reflect on the journey of this thesis, I am reminded of the powerful dialog
   or factual errors. They have been struck through and corrected here.
 
 [^403]: The term ‘Global South’ has been replaced as it overgeneralises vastly different economies, cultures, and development stages across Africa, Asia, Latin America, and Oceania. It creates a problematic binary that masks the complex and diverse realities of these regions, while implying a homogeneity that doesn't exist. More specific regional descriptors better acknowledge the unique contexts and contributions of institutions from these varied regions.
+
+[^500]: Linked Art V1.0 was finally released on 19 February 2025: <https://linked.art/about/1.0/>
