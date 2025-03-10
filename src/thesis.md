@@ -2685,7 +2685,7 @@ style="width: 75%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-Embarking on an exploration of Linked Art, this subsection unfolds in four distinct yet interconnected segments. First, [3.5.5.1](#subsubsec:la-history) offers a historical perspective on the development and evolution of Linked Art. This is followed by [3.5.5.2](#subsubsec:la-model), which provides an in-depth examination overview of the model, detailing its structure and patterns. Subsequently, [3.5.5.3](#subsubsec:la-api) explores the architectural and design principles of the Linked Art {{ "API" | abbr | safe }}, including its protocol, core constructs, and the array of entity endpoints it recommends. The subsection culminates with [3.5.5.4](), where I look at the community dynamics surrounding Linked Art and how the specification has been, or will be, implemented.
+Embarking on an exploration of Linked Art, this subsection unfolds in four distinct yet interconnected segments. First, [3.5.5.1](#subsubsec:la-history) offers a historical perspective on the development and evolution of Linked Art. This is followed by [3.5.5.2](#subsubsec:la-model), which provides an in-depth examination overview of the model, detailing its structure and patterns. Subsequently, [3.5.5.3](#subsubsec:la-api) explores the architectural and design principles of the Linked Art {{ "API" | abbr | safe }}, including its protocol, core constructs, and the array of entity endpoints it recommends. The subsection culminates with [3.5.5.4](#subsubsec:la-implementations), where I look at the community dynamics surrounding Linked Art and how the specification has been, or will be, implemented.
 
 ##### 3.5.5.1 History {id="subsubsec:la-history"}
 
@@ -2709,7 +2709,7 @@ The release of the Linked Art {{ "API" | abbr | safe }} V1.0, scheduled for the 
 
 At its core, Linked Art is a data model[^201] or metadata application profile[^202] that draws extensively from the {{ "RDF" | abbr | safe }} implementation of the version 7.1.3 of {{ "CIDOC-CRM" | abbr | safe }} [see @bekiari_cidoc_2024]. The Getty Vocabularies -- namely {{ "AAT" | abbr | safe }}, {{ "ULAN" | abbr | safe }}, and {{ "TGN" | abbr | safe }} -- are leveraged as core sources of identity for domain-specific terminology. {{ "JSON-LD" | abbr | safe }} 1.1 is chosen as the preferred serialisation format, promoting clarity and interoperability. This framework constructs common patterns, integrating conceptual models, ontologies, and vocabulary terms. These elements are derived from real-world scenarios and contributions from the diverse participants and institutions within the Linked Art community [@sanderson_introduction_2019].
 
-In the area of data provenance, the work of @ram_new_2009 on the W7 model stands as an example. This ontological framework conceptualises data provenance through seven interconnected facets: ‘what’, ‘when’, ‘where’, ‘how’, ‘who’, ‘which’, and ‘why’. Each of these elements serves as a means to monitor and understand events impacting data throughout its existence. Importantly, the W7 model demonstrates flexibility and adaptability in capturing the nuances of provenance for data across diverse domains. The Linked Art data model, in its domain-specific application, particularly resonates with five of these facets: ‘what’, ‘where’, ‘who’, ‘who’, and ‘when’ and [@sanderson_importance_2020]. This focus facilitates a nuanced tracking and interpretation of the key aspects of data provenance, as visually captured in [Figure 3.32](#fig:linkedart_50k) [^203].
+In the area of data provenance, the work of @ram_new_2009 on the W7 model stands as an example. This ontological framework conceptualises data provenance through seven interconnected facets: ‘what’, ‘when’, ‘where’, ‘how’, ‘who’, ‘which’, and ‘why’. Each of these elements serves as a means to monitor and understand events impacting data throughout its existence. Importantly, the W7 model demonstrates flexibility and adaptability in capturing the nuances of provenance for data across diverse domains. The Linked Art data model, in its domain-specific application, particularly resonates with five of these facets: ‘what’, ‘where’, ‘who’, ‘who’, and ‘when’ [@sanderson_importance_2020]. This focus facilitates a nuanced tracking and interpretation of the key aspects of data provenance, as visually captured in [Figure 3.32](#fig:linkedart_50k) [^203].
 
 <figure id="fig:linkedart_50k" style="margin: 0 auto; text-align: center;">
  <img
@@ -2967,7 +2967,7 @@ Linked Art has investigated to use of both {{ "HAL" | abbr | safe }}, an {{ "IET
 
 Overall, {{ "API" | abbr | safe }}s for the Linked Art prioritise {{ "JSON" | abbr | safe }} for syntax, appealing to the software developer audience. By implementing Linked Art records in {{ "JSON-LD" | abbr | safe }} and using {{ "HAL" | abbr | safe }} links for back-links, along with {{ "HAL" | abbr | safe }} for search and aggregation, the specifications offer consistency, usability, and ease of implementation without the need for specialised technologies, yet retaining semantic richness. Essentially, implementing those specifications means adopting the model itself.
 
-##### 3.5.5.4 Community and Implementations 
+##### 3.5.5.4 Community and Implementations {id="subsubsec:la-implementations"}
 
 The Linked Art community[^213] boasts a diverse and international membership primarily from museums and universities in North America and Europe. Key institutions such as The National Gallery of Art (USA), The J. Paul Getty Trust, the Museum of Modern Art, the Frick, the Rijksmuseum, and the Victoria and Albert Museum, alongside universities and research centres like Oxford, Yale, {{ "FORTH" | abbr | safe }}, {{ "DHLab" | abbr | safe }}, and ETH Zurich, are among the earlier and active participating institution in the community. Other organisations such as Europeana and the American Numismatics Society have also been involved.
 
@@ -3097,7 +3097,7 @@ Moreover, open standards play a pivotal role in fostering interoperability, alig
 
 > Because of [the growing global adoption of open standards] by GLAM institutions, especially [IIIF specifications stand] as a testimony that rich interoperability for distributed resource collections is effectively achievable. But other promising specifications that aim for the same holy grail are struggling for adoption, and, many times, lack of resources is mentioned as a reason. While that undoubtedly plays a role, it did not stand in the way of rapid adoption of protocols that have emerged from large corporations, such as the Google-dominated schema.org. This consideration re-emphasizes that a core ingredient of a successful interoperability specification, and hence of achieving an interoperable global information web, is a large megaphone, either in the guise of commercial power or active community engagement. [@nelson_d-lib_2022 pp. 8-9]
 
-In the context of semantic interoperability, {{ "CIDOC-CRM" | abbr | safe }} defines it as . More specifically, the intended meaning comprises of the following elements [@bekiari_cidoc_2021 p. 18]:
+In the context of semantic interoperability, {{ "CIDOC-CRM" | abbr | safe }} defines it as *‘the capability of different information systems to communicate information consistent with the intended meaning’*. More specifically, the intended meaning comprises of the following elements [@bekiari_cidoc_2021 p. 18]:
 
 1.  the data structure elements involved;
 2.  the terminology appearing as data;
@@ -3616,12 +3616,425 @@ In an effort to transcend the conventional boundaries of academic dissemination,
 
 ## 6. The Social Fabrics of IIIF and Linked Art {id="cha:social-fabrics"}
 
-This chapter unfolds as a foray into the social fabrics of the {{ "IIIF" | abbr | safe }} and Linked Art communities, and represents the first of three empirical chapters within this doctoral thesis. In this endeavour, I seek to disentangle the many threads that make up these communities, with the aim of identifying the essential strands that contribute to their collective weave. Drawing on [@haraway_staying_2016 p. 116], this investigation explores the extent to which their fabric encompasses an entanglement of [@haraway_staying_2016 pp. 128-129], examining dependencies as highlighted by [@latour_habiter_2022 p. 71]. In doing so, I attempt to shed light on the interplay of relationships that form the backbone of {{ "IIIF" | abbr | safe }} and Linked Art, unveiling the complex tapestry of collaboration and interconnectedness that defines them.
+This chapter unfolds as a foray into the social fabrics of the {{ "IIIF" | abbr | safe }} and Linked Art communities, and represents the first of three empirical chapters within this doctoral thesis. In this endeavour, I seek to disentangle the many threads that make up these communities, with the aim of identifying the essential strands that contribute to their collective weave. Drawing on [@haraway_staying_2016 p. 116], this investigation explores the extent to which their fabric encompasses an entanglement of *‘people, critters and apparatuses’* [@haraway_staying_2016 pp. 128-129], examining dependencies as highlighted by [@latour_habiter_2022 p. 71]. In doing so, I attempt to shed light on the interplay of relationships that form the backbone of {{ "IIIF" | abbr | safe }} and Linked Art, unveiling the complex tapestry of collaboration and interconnectedness that defines them.
 
+With respect to scope, this chapter considers the socio-technical dynamics required to produce specifications that are aligned with the {{ "LOUD" | abbr | safe }} design principles. The central hypothesis is that although grassroots efforts to forge active communities require substantial and sustained commitment, these efforts typically succeed in the medium to long term. The analysis focuses on how consensus building and advocacy within the {{ "IIIF" | abbr | safe }} and Linked Art communities promote the adoption of {{ "LOUD" | abbr | safe }}. It also examines the role of community participation in the evolutionary adoption of these standards.
+
+Most of the (technical) documentation related to this empirical investigation, such as Python scripts, raw data, and diagrams, is made accessible through GitHub[^241]. This open repository serves not only as a resource for replicating and verifying the findings but also exemplifies a commitment to transparency, in keeping with the ethos of the {{ "IIIF" | abbr | safe }} and Linked Art communities.
+
+The chapter begins in [Section 6.1](#sec:iiif-la-foundations), where I delve into some of the foundations of the {{ "IIIF" | abbr | safe }} and Linked Art communities. The first objective, concerning consensus building and advocacy within these digital communities, is addressed in more detail in [Section 6.2](#sec:consensus). This section unpacks the collaborative strategies and initiatives that are central to promoting standards adoption and community cohesion. Following this, [Section 6.3](#sec:community-participation-loud) focuses on the second objective by analysing community participation and adoption of {{ "LOUD" | abbr | safe }} standards.
+
+In [Section 6.4](#sec:synthesis-insights-6), the chapter synthesises the findings from the previous analyses, weaving together the threads of the research to provide a comprehensive overview of the terrain explored. The chapter concludes in [Section 6.5](#sec:perspectives-6), where reflections and forward-looking perspectives consider the wider implications of the study's findings for the future of the {{ "IIIF" | abbr | safe }} and Linked Art communities, anticipating the challenges and opportunities on the horizon.
+
+### 6.1 Exploring the Foundations {id="sec:iiif-la-foundations"}
+
+The core objective of the {{ "IIIF" | abbr | safe }} and Linked Art communities is the creation and maintenance of specifications. Through these specifications, which act as mediators, there is the potential for a harmonious symphony of technology and purpose. At the heart of this ecosystem is the {{ "API" | abbr | safe }}, mediated by the {{ "JSON-LD" | abbr | safe }}'s {{ "API" | abbr | safe }} `@ context`, which provides clarity and cohesion to the standards being developed and implemented. Validators ensure compliance with the specifications, with software conforming to these standards and encapsulating the layered abstractions that define the technological landscape.
+
+For this potential to be fully realised, however, it is imperative that those within these communities possess resources that not only comply with these shared {{ "API" | abbr | safe }}s, but also embody them. This embodiment is facilitated by an underlying infrastructure that includes servers, scripts, micro-services and other technological components, as well as viewers, players and browsers that render compliant (meta)data.
+
+In this respect, while specifications serve as the foundational goal, the broader vision of achieving harmony through technology and purpose requires the active participation of community members. They are tasked with fostering an ecosystem where specifications are not only developed and maintained, but brought to life through practical implementation. This requires a commitment to true collaboration within and across community boundaries, and a concerted effort to implement best practices, especially in user interface design. Such a commitment ensures that the integration of vision and execution is not just a theoretical ideal, but a lived reality that reflects the shared aspirations of both {{ "IIIF" | abbr | safe }} and Linked Art and their respective constituencies.
+
+The complexity of the {{ "IIIF" | abbr | safe }} community provides a rich area for exploration, in contrast to Linked Art, where community interactions are more streamlined and occur primarily through fortnightly calls[^242]. This complexity is vividly illustrated in [Figure 6.1](#fig:iiif-community-overview), which describes the range of entities within the framework. The decision to focus on {{ "IIIF" | abbr | safe }} is motivated by its rich constellation of committees, working groups and supporting institutions, providing a deeper dive into the development of digital standards in a robust community setting.
+
+<figure id="fig:iiif-community-overview" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/iiif_community_overview.svg"
+alt="Overview of the IIIF Community"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.1</strong>:
+ Overview of the IIIF Community
+</figcaption>
+</figure>
+
+In the diagram, a colour scheme helps to identify the different components of the {{ "IIIF" | abbr | safe }} ecosystem: entities in purple represent people, resources and institutions that are part of the {{ "IIIF-C" | abbr | safe }}. Light pink highlights the committees associated with the consortium, reflecting the structural elements that support the governance and operational dynamics of the consortium. Soft blue denotes the community committees, including the {{ "CoCo" | abbr | safe }} and the Editorial Committee, which are central to guiding community initiatives and maintaining specifications. Green identifies the community and {{ "TSG" | abbr | safe }}s, highlighting the collaborative spirit that drives the development of {{ "IIIF" | abbr | safe }}. Finally, yellow identifies essential resources and tools, such as the specifications or cookbook recipes, highlighting the practical outputs that enable the adoption and implementation of the {{ "API" | abbr | safe }}s.
+
+This visual representation serves not only as a guide to the organisational structure of the {{ "IIIF" | abbr | safe }} community, but also as a representation of the vibrant interaction between disparate entities. It highlights the integral role of both the formal {{ "IIIF-C" | abbr | safe }} bodies and the wider community in fostering a culture around interoperability, facilitating collaboration and sharing best practice. This comprehensive approach to community engagement and standards development underscores the concerted effort needed to move the digital scholarship and {{ "CH" | abbr | safe }} fields forward. The interconnectedness depicted underscores the role of essential platforms, facilitating their evolution. For instance, both the {{ "IIIF" | abbr | safe }} and Linked Art communities maintain accessible Google Drives, where meeting minutes on Google Docs, often linking to GitHub issues, underscore the technical discourse within these initiatives. In addition, the use of dedicated Slack workspaces for continuous conversations further reinforces the importance of regular engagement.
+
+The following sections explore in more depth the processes of consensus building and the advocacy initiatives as well as the engagement of the community that not only promote adherence to specifications, but also encourage best practices. Such endeavours are foundational to fostering a {{ "LOUD" | abbr | safe }} ecosystem characterised by community-driven commitment to a few standards, yet embracing a multitude of implementations. This rich tapestry of connected knowledge and practices ensures the digital heritage domain is both universally accessible and deeply engaging.
+
+### 6.2 Consensus Building and Advocacy Initiatives {id="sec:consensus"} 
+
+The analysis examines the mechanisms of capacity building and advocacy within the {{ "IIIF" | abbr | safe }} and Linked Art communities, focusing on three key areas.
+
+Initial research centres on [6.2.1](#subsec:meetings), exploring the different types of meetings that play a crucial role in both community engagement and the wider collaborative process, with illustrations from the {{ "IIIF" | abbr | safe }} Discovery {{ "TSG" | abbr | safe }} and Linked Art meeting minutes. Attention then shifts to [6.2.2](#subsec:gh-issues), highlighting the role of GitHub in facilitating code and use case documentation, particularly within {{ "TRC" | abbr | safe }}, as a testament to the community's collaborative spirit and commitment to transparency. Finally, [6.2.3](#subsec:guidelines) examines community guidelines and best practice efforts, discussing how each community provides resources that transcend the standards, such as the {{ "IIIF" | abbr | safe }} cookbook recipes and Linked Art patterns, to guide and encourage further community contributions and foster interoperability.
+
+#### 6.2.1 Types of Meetings and Engagement Opportunities {id="subsec:meetings"}
+
+
+Meetings within the {{ "IIIF" | abbr | safe }} and Linked Art communities are essential for collaboration, sharing insights and steering the direction of projects and standards. These predominantly virtual meetings are orchestrated by designated chairs and follow structured agendas to maximise productivity and inclusivity. {{ "IIIF" | abbr | safe }} meetings vary in frequency - fortnightly, monthly or quarterly - reflecting the dynamic needs of different parties. Linked Art, which maintains a consistent rhythm, meets fortnightly. Each meeting begins with a roll call, which allows participants to register their presence or send their regrets in advance, a gesture that underlines their interest even if they are absent. To further enhance the collaborative nature of these discussions, one or more participants are asked to take the role of note-taker for each meeting.
+
+A foundational element of these meetings is the ongoing, mostly asynchronous, collection of use cases, primarily facilitated through GitHub. Although the initial sessions heavily focus on gathering these use cases, the practice continues across all stages of development and discussion. Each meeting is structured around a predefined agenda, ensuring focused and productive sessions that typically span one hour. Additionally, meetings are announced at least a day in advance. This process ensures that discussions about the implications of use cases and their potential integration into documents -- such as specifications, early drafts or recipes -- are grounded in a broad and inclusive collection of community inputs, pending subsequent approval or implementation.
+
+In addition to virtual sessions, face-to-face meetings provide invaluable opportunities for deeper engagement. Within {{ "IIIF" | abbr | safe }}, the annual conference acts as a catalyst for stakeholders to meet -- whether as part of the official programme or in parallel sessions. In addition, ad-hoc in-person meetings have also been instrumental in driving significant progress, such as the inclusion of audiovisual resources in the Presentation {{ "API" | abbr | safe }} 3.0 and the ongoing efforts to include {{ "3D" | abbr | safe }} materials in the forthcoming version of this specification.
+
+The Linked Art initiative, although newer, has held five major face-to-face meetings, three before the COVID-19 pandemic and two in 2023. The fourth meeting, held in New Haven, CT, USA, focused on resolving outstanding issues to finalise the first version of the standard. The practical implications of developing the Linked Art {{ "API" | abbr | safe }}, alongside the deployment of the LUX platform, illustrate the tangible outcomes of these meetings. Many discussed issues were long-standing, exacerbated by the pandemic. For instance, discussions around rights statements[^244] and {{ "API" | abbr | safe }} Displacements and/or Transclusions[^245] have highlighted the evolving requirements and challenges faced by the community. It also became clear that discussions on identity -- encompassing nationality, gender, and ethnicity -- had matured, enabling new insights and considerations. These discussions are delicate, often challenged by inherent biases and assumptions in metadata assignment, highlighting the need for a more inclusive and diverse approach to identity representation within {{ "CH" | abbr | safe }}.
+
+Furthermore, while discussions about extending the {{ "CIDOC-CRM" | abbr | safe }} hierarchy to include new properties or classes - such as the `Transfer` class and the inclusion of non-human actors - take place within the broader {{ "CRM-SIG" | abbr | safe }}, Linked Art approaches these considerations from a different perspective[^246]. Unlike {{ "CRM-SIG" | abbr | safe }}, where ontological purity is a major concern, Linked Art prioritises more practical applicability and flexibility in modelling {{ "CH" | abbr | safe }} data. This leads to decisions where Linked Art has, for pragmatic reasons, created its own classes and leveraged existing classes designed for human entities to encompass non-human actors. This approach, while departing from strict ontological standards, aims to address immediate modelling needs within the community, recognising that it may occasionally compromise semantic interoperability for the sake of broader and more inclusive data representation practices.
+
+Transitioning from these theoretical and practical considerations, I delve into detailed case studies of community interactions as this section explores specific series of meetings by looking at the notes taken during them -- in [6.2.1.1](#subsubsec:iiif-tsg-meetings) meetings from the {{ "IIIF" | abbr | safe }} Discovery {{ "TSG" | abbr | safe }}[^247], a completed {{ "IIIF" | abbr | safe }} group, and in [6.2.1.2](#subsubsec:la-meetings) the ongoing fortnightly meetings of the Linked Art initiative.
+
+This exploration provides a lens into the number of meetings, the people involved and the outcomes that shape the evolving landscapes of both communities. Meeting minutes from both groups were extracted using a tool developed by @bainbridge_extract_2021 to streamline the process of extracting texts from Google Docs into organised spreadsheets. This data then underwent a cleaning and curation process to ensure accuracy and consistency for analysis and visualisation[^248].
+
+##### 6.2.1.1 IIIF Discovery TSG Meetings {id="subsubsec:iiif-tsg-meetings"}
+
+The {{ "IIIF" | abbr | safe }} Discovery {{ "TSG" | abbr | safe }} formally ended its work in summer 2022, but continued to meet several times until March 2023. The purpose of the Discovery {{ "TSG" | abbr | safe }} was to address the critical need for interoperable resources to be easily discoverable. Recognising the importance of standardised discovery processes, the group aimed to develop specifications to improve the findability and reusability of {{ "IIIF" | abbr | safe }} resources. This initiative focused on adopting existing techniques and tools, facilitating their widespread use within the community, and supporting the creation of infrastructure such as registries. Key deliverables from the group comprise the Change Discovery {{ "API" | abbr | safe }} and the Content State {{ "API" | abbr | safe }}.
+
+In addition to these {{ "API" | abbr | safe }}s, the {{ "TSG" | abbr | safe }} focused its efforts on producing essential documentation and support materials to facilitate the wider adoption and implementation of these standards. This includes the creation of a Registry of (Metadata) Profiles[^249], which serve as a mechanism for discovery-related metadata profiles to leverage through the `seeAlso` property in {{ "IIIF" | abbr | safe }} Manifests. A note on {{ "SEO" | abbr | safe }} guidelines was also produced[^250], with a view to improving search engine ranking of web pages containing {{ "IIIF" | abbr | safe }} resources.
+
+[Figure 6.2](#fig:barchart-tsg-meeting-attendance) shows that 84 people, represented as individual horizontal bars, attended a total of 101 Discovery {{ "TSG" | abbr | safe }} meetings. Each person attended an average of 10.49 meetings, but the median attendance was 2. This illustrates a significant imbalance in participation: a small core group was highly active and contributed to the majority of discussions, while a larger number of participants attended less frequently.
+
+<figure id="fig:barchart-tsg-meeting-attendance" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/attendance_stacked_bar_tsg.svg"
+alt="Stacked Bar Chart Showing IIIF Discovery TSG Meeting Attendance"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.2</strong>:
+ Stacked Bar Chart Showing IIIF Discovery TSG Meeting Attendance
+</figcaption>
+</figure>
+
+A closer look at meeting attendance over the years reveals a gradual decline in participation, providing insights into the operational dynamics of the Discovery {{ "TSG" | abbr | safe }} and engagement trends. Initially, in 2017, there were 20 meetings with 42 unique participants and an average attendance of 12.35 per meeting. In 2018, while the number of meetings increased to 22, the number of unique participants decreased to 35 and the average attendance decreased to 8.73.
+
+In 2019, the number of meetings decreased to 18 with 26 unique participants, and the average attendance further decreased to 7.78. The trend continued in 2020 with 15 meetings, 20 unique participants and an average attendance of 8.2. In 2021, there were 17 meetings with a slightly higher pool of 23 unique participants and an average attendance of 7.94.
+
+The most significant decline occurred in 2022, when only 6 meetings were held, with 13 unique participants and an average attendance of 5. This decline continued in 2023, with only 3 meetings, 7 unique participants and an average attendance of 4.67. This significant reduction in engagement can be explained by the fact that the majority of the group's objectives and outputs had been achieved by the summer of 2022, leading to a natural reduction in the need and frequency of meetings as the project neared completion.
+
+The data also highlights the centrality of `github.com` in discussions and collaborations, as evidenced by over 400 hyperlinks to GitHub issues, pull requests and other GitHub-related content mentioned during meetings. In addition to GitHub, other frequently referenced domains include `iiif.io` with 169 mentions and `docs.google.com` with 139 mentions, reflecting the use of official documentation and shared documents for referencing standards. In addition, `www.w3.org` was mentioned 60 times, demonstrating its relevance for {{ "W3C" | abbr | safe }} standards aligned with {{ "IIIF" | abbr | safe }} practices. This frequency underscores GitHub's essential role as a central platform for facilitating communication and project development within the {{ "IIIF" | abbr | safe }} Discovery {{ "TSG" | abbr | safe }}, alongside these other critical resources.
+
+As the Discovery {{ "TSG" | abbr | safe }} wrapped up its active phase, its contributions to the {{ "IIIF" | abbr | safe }} community proved significant, setting critical standards for interoperability. However, the full impact of its work remains to be seen. To date, only a limited number of institutions have implemented the Change Discovery {{ "API" | abbr | safe }}, and while some viewers support the basics of the Content State {{ "API" | abbr | safe }}, the full intent of the standard has been realised predominantly through demo clients. This scenario underscores the ongoing challenge within the community: not only to develop these capabilities, but also to deploy and use them widely.
+
+##### 6.2.1.2 Linked Art Meetings {id="subsubsec:la-meetings"}
+
+Now transitioning into the Linked Art meeting minutes, some parallels with the {{ "IIIF" | abbr | safe }} Discovery {{ "TSG" | abbr | safe }} meetings can be observed, yet with distinct dynamics reflective of its ongoing activity. This analysis provides a snapshot of the Linked Art meetings from January 2019 to March 2024. The group convenes fortnightly to deliberate on refining the model and the {{ "API" | abbr | safe }}, with a strong emphasis on releasing the first stable version and integrating the patterns and specification into various platforms.
+
+[Figure 6.3](#fig:barchart-la-meeting-attendance) indicates participation trends over this period, showing that 130 different individuals attended the 115 meetings held, predominantly in a virtual format, with five of these meetings being face-to-face[^253]. Each participant attended an average of 13.57 of sessions, but the median attendance was only 2, indicating a very long tail of participation. This suggests a core group of highly engaged members who contribute consistently, while a larger number of participants engage more sporadically. This distribution highlights the challenges and successes of sustaining engagement over time, particularly in a volunteer-driven context where continuous engagement can be difficult to maintain.
+
+<figure id="fig:barchart-la-meeting-attendance" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/attendance_stacked_bar_la.svg"
+alt="Stacked Bar Chart Showing Linked Art Meeting Attendance"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.3</strong>:
+ Stacked Bar Chart Showing Linked Art Meeting Attendance
+</figcaption>
+</figure>
+
+A detailed examination of meeting attendance over the years for the Linked Art initiative reveals an active yet fluctuating participant engagement. In 2019, the year began with 26 meetings and included 53 unique participants, each attending an average of 17.88 sessions. This high level of involvement suggests robust initial interest and active participation in the foundational phases of the initiative.
+
+However, subsequent years showed a slight decrease in engagement: 2020 hosted 23 meetings with 34 unique participants and an average attendance dropping to 15.48. In 2021, the meetings slightly increased to 25 with 48 unique participants, averaging 13.92 attendees per session. The year 2022 saw 19 meetings with 46 participants and an average of 14.74, showing a stabilisation in engagement levels despite fewer meetings.
+
+The year 2023 continued with 18 meetings, and an increase in unique participants to 57, suggesting a widening of the community base, with an average attendance of 14.11 per meeting. The early data for 2024 shows 4 meetings with 25 unique participants and a relatively high attendance rate of 15.25, indicating sustained, albeit selective, engagement.
+
+The data also underscores the significance of `github.com` as a pivotal platform for discussion and collaboration within the Linked Art meetings, with over 431 links pointing to GitHub highlighting its use for project management and technical discussions. Other frequently mentioned domains include `docs.google.com` with 35 references and `linked.art` with 44 mentions, reflecting their roles in documentation and project-specific discussions, respectively. Domains such as `www.getty.edu` and `vocab.getty.edu` were also significant, cited 10 and 9 times respectively, indicating the integration of controlled vocabularies in standardising terminologies within the Linked Art context.
+
+While the Linked Art group originally had optimistic goals of releasing the first stable version of the specifications by 2020 and then 2021, the actual release is now expected to occur in 2024. This extended timeline, while longer than originally planned, has had an unforeseen benefit: it has allowed various platforms to experiment more extensively with implementing the evolving model, even in the absence of a finalised standard. Such experimental implementations have not only helped to refine the specifications through practical application, but have also fostered a richer understanding among actors of how the model can be adapted and used. Although Linked Art focuses primarily on museum artworks and their relationships, treating them as first-class citizen resources within the digital representation sphere, there is an observable shift towards embracing the broader {{ "GLAM" | abbr | safe }} domain. This broadening of scope suggests significant potential for Linked Art to impact a wider range of {{ "CHI" | abbr | safe }}s, improving cross-domain semantic interoperability while maintaining a hands-on orientation.
+
+#### 6.2.2 Collaborative Development through GitHub Documentation {id="subsec:gh-issues"}
+
+Within {{ "IIIF" | abbr | safe }} and Linked Art, GitHub has solidified its position as a central hub for collaboration across both communities, further illustrating the pragmatic approach adopted towards research and development [see @scroggie_github_2023]. This preference for GitHub, complemented by the use of universally accessible tools like Google Drive for documentation, illustrates a pragmatic shift towards platforms that facilitate broad participation and collaboration. Such practices are integral to the collaborative process, enhancing transparency, and efficiency in addressing and resolving issues [@escamilla_its_2023].
+
+[Figure 6.4](#fig:use-case-api-1) illustrates the journey from a conceptual use case to its technical realisation within both the {{ "IIIF" | abbr | safe }} and Linked Art communities, highlighting the shared methodologies despite the different governance structures. The diagram begins with the community's identification and documentation of a use case, which leads to the creation of a corresponding GitHub issue. This issue acts as a nexus for collaborative discussion, leading to the creation of a GitHub pull request proposing specific changes or additions to the specifications. The figure highlights the critical role that community editors and reviewers play in this sequence, and the collaborative vetting process that ensures that proposals are consistent with the technical and philosophical ethos of the communities. For {{ "IIIF" | abbr | safe }}, this process extends to formal review mechanisms involving the {{ "TRC" | abbr | safe }}, which ensures adherence to established standards and eventually validation against a validator if needed. In contrast, Linked Art, while using a similar collaborative and open platform for discussion and documentation, manages this process without a formal {{ "TRC" | abbr | safe }}, relying on broader community engagement and consensus, especially from its Editorial Board.
+
+<figure id="fig:use-case-api-1" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/use_cases-specifications-1.svg"
+alt="Illustrative Diagram of the GitHub-Based Process for Approving and Integrating Use Cases"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.4</strong>:
+ Illustrative Diagram of the GitHub-Based Process for Approving and Integrating Use Cases
+</figcaption>
+</figure>
+
+[Figure 6.5](#fig:use-case-api-2) details the process undertaken by the {{ "IIIF" | abbr | safe }} community to review and integrate a specific GitHub issue[^254], the validation of the Image and Presentation {{ "API" | abbr | safe }}s 3.0 that happened in May 2020[^255]. This detailed illustration shows the relationships and interactions between the various actors, and highlights the structured approach to consensus building, specification development and implementation by compatible software. The process begins with a human collective, such as the {{ "IIIF" | abbr | safe }} Editorial Committee, identifying and proposing changes, which are then carefully discussed and voted on by {{ "TRC" | abbr | safe }} members using platforms such as GitHub and Zoom. The involvement of the {{ "TRC" | abbr | safe }} is critical, providing the formal review and approval necessary for the adoption of changes, marked by key milestones such as the release of the API 3.0 Release Candidate. This figure emphasises the essential role of compliance and compatibility checks against the {{ "JSON-LD" | abbr | safe }} {{ "API" | abbr | safe }} `@ context` and the relevant validators, ensuring that updates are seamlessly integrated into the wider {{ "IIIF" | abbr | safe }} ecosystem, supporting a wide range of compliant clients.
+
+<figure id="fig:use-case-api-2" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/use_cases-specifications-2.svg"
+alt="Detailed Illustration of the GitHub-Enabled Approval Process by the TRC for the Image and Presentation APIs 3.0"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.5</strong>:
+ Detailed Illustration of the GitHub-Enabled Approval Process by the TRC for the Image and Presentation APIs 3.0
+</figcaption>
+</figure>
+
+The approval of both specifications by 30 members of the {{ "TRC" | abbr | safe }} marks a significant milestone, reflecting a substantial level of consensus for such a key initiative. While this level of participation is remarkable in the context of other use cases, it also demonstrates the difficulty of achieving widespread participation. The fact that not all {{ "TRC" | abbr | safe }} members were present or voted on these crucial specifications, and that not every institution within the {{ "IIIF-C" | abbr | safe }} consistently sends a representative, suggests areas for improvement in engagement and representation within the decision-making processes of the community[^256].
+
+Despite these challenges, there's a great deal of trust within the community in those who manage the development and implementation of the specifications. Many institutions and developers are diligently adapting their content and software to meet or upgrade to the latest specifications. However, without a concentrated authority to enforce compliance, deviations occur. These range from instances where cross-institutional interoperability remains achievable despite unorthodox approaches, to scenarios where outright anti-patterns are deployed, underscoring the diverse adherence to the {{ "API" | abbr | safe }}s[^257].
+
+While there is no of implementations within the {{ "IIIF" | abbr | safe }} or Linked Art community, understanding and addressing these deviations is crucial for the ecosystem's health. Moreover, as both communities maintain open and shared specifications, the responsibility falls on the community itself to oversee and assess how the standards are leveraged across different settings.
+
+#### 6.2.3 Community Guidelines and Best Practice Efforts {id="subsec:guidelines"}
+
+As highlighted in the literature review, {{ "IIIF" | abbr | safe }} and to some extent Linked Art publish guidelines, primarily on their website. These resources are designed to facilitate the discovery of standards-compliant resources across different platforms and to assist individuals, projects and organisations in implementing these standards. This dissemination of knowledge plays a key role in enabling a wide range of users to effectively engage with and use {{ "IIIF" | abbr | safe }} and Linked Art specifications, in many cases mediated by external interfaces.
+
+These best practices are critical as they demonstrate the full potential of the specifications and, in the case of Linked Art, demonstrate the full promise of the model. However, when moving from one client to another, one often encounters {{ "BO" | abbr | safe }}s, as parts of a resource may be supported differently or not at all [see @raemy_back_2022]. In the context of Linked Art, starting with the model before considering the implementation of API endpoints can lead to complex situations. This complexity arises when considering cases of transclusion, as the rigidity of the {{ "API" | abbr | safe }} requires careful consideration of how different aspects of the model are represented and accessed across endpoints, necessitating a nuanced approach to integrating the model with {{ "API" | abbr | safe }} capability.
+
+To further understand the nuances of these guidelines and best practices, in March 2024 I undertook an in-depth exploration of the {{ "IIIF" | abbr | safe }} cookbook recipes in [6.2.3.1](#subsubsec:iiif-cookbook) and Linked Art patterns in [6.2.3.2](#subsubsec:la-patterns). This exploration was done to be reasonably grounded in {{ "SNA" | abbr | safe }} using NetworkX and Gephi Lite, allowing commonalities within this set of guidelines to be discovered and visualised.
+
+##### 6.2.3.1 IIIF Cookbook Recipes {id="subsubsec:iiif-cookbook"}
+
+[Figure 6.6](#fig:iiif-cookbook-gephi) illustrates a network derived from the {{ "IIIF" | abbr | safe }} cookbook recipes and their support across various viewer clients, including {{ "UV" | abbr | safe }}, Mirador, Annona, Ramp, Clover, and the navPlace Viewer[^259]. In this graph, nodes represent either specific {{ "IIIF" | abbr | safe }} Cookbook Recipes, identified by unique slugs and labelled with descriptive titles, or viewer clients, serving as the primary agents interacting with these recipes. The edges between nodes are colour-coded to signify the degree of support -- ‘yes’ for full support or ‘partial’ -- for each recipe by the respective client.
+
+<figure id="fig:iiif-cookbook-gephi" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/iiif-cookbook-recipes-gephi-lite-export.png"
+alt="Exploring IIIF Cookbook Recipes by Support with Gephi Lite"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.6</strong>:
+ Exploring IIIF Cookbook Recipes by Support with Gephi Lite
+</figcaption>
+</figure>
+
+The allocation of node colours, predicated on their modularity class, categorises the recipes, elucidating their thematic relevance and grouping within the {{ "IIIF" | abbr | safe }} ecosystem. This classification sheds light on the recipes' roles and their significance to the community, from simple manifest creation to more complex implementations like audio, video, and multi-volume work representations. The size of each recipe node quantitatively reflects the extent of client support, visually emphasising recipes that have garnered widespread adoption or those that may require further advocacy. In a more analytical lens, the graph unveils the pivotal roles of Mirador and {{ "UV" | abbr | safe }} within the framework, underscoring their centrality and indispensability in the broad spectrum of implementing the core {{ "API" | abbr | safe }}s. Concurrently, it delineates specific trajectories, such as Annona and Mirador's inclination towards annotations, and Ramp's association with audiovisual content.
+
+In terms of {{ "JSON" | abbr | safe }} Path analysis, a thorough examination was conducted to discern patterns and insights regarding the structure and use of properties across the {{ "IIIF" | abbr | safe }} Cookbook Recipes. Although this analysis was meticulously performed, it did not yield any particularly striking results or unexpected insights[^260].
+
+For content similarity, leveraging the cosine similarity scores from the analysis, two pairs of recipes emerged as notably identical, showcasing the closest thematic and content-based connections within the dataset. The recipes ‘Embedding HTML in descriptive properties’[^261] and ‘Rights statement’[^262] shared the highest similarity score of 0.672318, indicating a significant overlap in their content and approach. This high degree of similarity suggests that these recipes, while distinct in their focus, employ comparable structures or narratives. Another pair, ‘Support Deep Viewing with Basic Use of a IIIF Image API Service’[^263] and ‘Image in Annotations’[^264], also demonstrated a notable similarity score of 0.541640.
+
+Additionally, the examination sheds light on the significant re-use of fixtures or content links across the recipes, which underscores the foundational role of these materials within the {{ "IIIF" | abbr | safe }} ecosystem. The repeated utilisation of specific resources, such as the image captured during the 2019 {{ "IIIF" | abbr | safe }} Conference in Göttingen, Germany[^265], which appears 41 times across various guides, exemplifies how readily available and central these resources have become in demonstrating {{ "IIIF" | abbr | safe }} capabilities. Similarly, audio and video fixtures from Indiana, such as the Mahler Symphony Audio[^266] and the Lunchroom Manners Video[^267], highlight the framework's adaptability and richness in managing a diverse range of multimedia content. However, it also highlights a certain tendency towards using readily available or well-known resources, often those directly provided by the {{ "IIIF" | abbr | safe }} community or known to be in the public domain. This practice, while practical, sometimes leads to a lack of diversity in the resources used, underscoring an opportunity for the {{ "IIIF" | abbr | safe }} Cookbook authors to explore and integrate a wider array of materials.
+
+##### 6.2.3.2 Linked Art Patterns {id="subsubsec:la-patterns"}
+
+Turning the analytical gaze to Linked Art, I extend my exploration to the patterns that underpin this vibrant ecosystem. This progression makes it possible to discern the web of relationships that animate the Linked Art data model, mirroring here the methodological approach through graphs with the {{ "IIIF" | abbr | safe }} cookbook recipes.
+
+[Figure 6.7](#fig:la-patterns-gephi) presents a graph where nodes symbolise Linked Art patterns[^268]. The edges in this visualisation represent the relationships derived from the patterns' data, notably in terms of model components and their (sub)category. The colour of each node is determined by the pattern's category, signifying the thematic or functional group to which it belongs. Meanwhile, the edge colour is informed by the source nodes, providing insight into the directionality and origin of each relationship.
+
+<figure id="fig:la-patterns-gephi" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/linked-art-patterns-gephi-lite-export.png"
+alt="Exploring Linked Art Patterns by Category with Gephi Lite"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.7</strong>:
+ Exploring Linked Art Patterns by Category with Gephi Lite
+</figcaption>
+</figure>
+
+A diverse array of 136 patterns emerges, categorised under themes such as [^269], which serve as the foundation for resource description and interaction. The analysis identifies a comprehensive list of patterns, each addressing specific aspects of {{ "CH" | abbr | safe }} data modelling. Notably, some patterns function as sub-patterns, inheriting their parent name as one of their categories. Exploration of pattern similarity within the Linked Art model reveals noteworthy connections[^270], reflecting the integrated and comprehensive nature of the model. While these findings underscore the versatility and depth of the framework, its true value extends to practical applications. The insights gained from these similarities provide a rich resource for optimising Linked Art implementations in real-world scenarios, suggesting a broad potential for reuse in various {{ "CH" | abbr | safe }} contexts.
+
+It's important to recognise that, like the {{ "IIIF" | abbr | safe }} cookbook recipes, this graph represents a snapshot in time, reflecting the entities and relationships documented up to a certain point. While this visualisation provides a window into the modelling efforts within Linked Art, other examples using different entities could be explored, recognising the dynamic and evolving nature of the initiative.
+
+### 6.3 Community Participation and LOUD Standards: Adoption and Impact {id="sec:community-participation-loud"} 
+
+This section addresses the objective of examining community participation, alongside the evolutionary adoption of {{ "LOUD" | abbr | safe }} standards and their potential impact with respect to scientific movements and principles. In pursuit of this objective, data were collected from adoption surveys conducted within the {{ "IIIF" | abbr | safe }} community, enriched further by insights drawn specifically for this study on the socio-technical characteristics of both {{ "IIIF" | abbr | safe }} and the Linked Art community. This comprehensive dataset [see @raemy_pseudonymised_2023] serves as a foundation for our exploration, offering a unique lens through which the dynamics of community engagement, technological adoption, and the overarching influence of {{ "LOUD" | abbr | safe }} standards.
+
+Following the publication of a detailed survey report on the characteristics of {{ "IIIF" | abbr | safe }} and Linked Art [see @raemy_characterising_2023], this section presents a comprehensive summary of its findings. The survey has provided insightful revelations into the dynamics of community engagement, preferred practices and tools, barriers to wider participation and the resulting implications for the {{ "CH" | abbr | safe }} sector. These findings underscore the central role of open standards and collaborative efforts in shaping practices, and provide a nuanced understanding of how these communities contribute to the development and adoption of {{ "LOUD" | abbr | safe }} standards.
+
+Conducted between March and May 2023[^271], the online survey attracted 79 participants from 20 countries[^272]. It was targeted to individuals involved in {{ "IIIF" | abbr | safe }} and Linked Art, but also people that have heard of the communities or the specifications. The survey's structure included sections tailored to gauge involvement in either or both communities, with branching logic to ensure relevance to participants' experiences. It captured data on socio-demographics, organisational affiliation, and the extent of participants' involvement in community events, activities, and calls, offering a window into the communities' composition and engagement patterns.
+
+Results highlighted a global distribution of participants, with a noticeable concentration in the Global North, and indicated a wide range of engagement levels, from passive awareness to active participation in community events and activities. The findings underscore the communities' commitment to fostering global collaboration, despite challenges such as geographical and institutional representation biases. The survey serves as a foundational effort to map the landscape of these communities, identifying areas for growth and increased inclusivity.
+
+The survey findings reveal a core group of individuals actively involved in both the {{ "IIIF" | abbr | safe }} and Linked Art communities, underscoring the depth of engagement among key members. This involvement reflects a collaborative spirit and a shared dedication to advancing the digital cultural heritage landscape.
+
+[Figure 6.8](#fig:iiif_calls_engagement) illustrates the dynamics of this engagement within the {{ "IIIF" | abbr | safe }} community, mapping out the timeline of involvement and highlighting the active participation in community calls. It shows the year of {{ "IIIF" | abbr | safe }} involvement along the `x`-axis against participant IDs on the `y`-axis, representing engagement through point size for {{ "IIIF" | abbr | safe }} call participation over the past year. It highlights a pattern of greater participation from members involved since 2016 or earlier, with one instance of engagement traced back to 2009, demonstrating the impact of long-term involvement and hinting at early contributions to the {{ "IIIF" | abbr | safe }} community's evolution. Participants who are only involved in the Linked Art community are not included in this plot.
+
+<figure id="fig:iiif_calls_engagement" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/survey_heatmap.svg"
+alt="Year of Involvement in the IIIF Community"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.8</strong>:
+ Year of Involvement in the IIIF Community [@raemy_characterising_2023 p. 20]
+</figcaption>
+</figure>
+
+Following on from the visualisation of {{ "IIIF" | abbr | safe }}'s community engagement, the responses of 52 participants are analysed in [Figure 6.9](#fig:iiif_principles), which situates {{ "IIIF" | abbr | safe }}'s contributions within broader scientific and data governance movements. The data reveals a strong recognition of {{ "IIIF" | abbr | safe }}'s pivotal role in several areas: a substantial majority affirm its importance to Open Science and Citizen Science initiatives, illustrating its far-reaching benefits. Participants also highlighted {{ "IIIF" | abbr | safe }}'s substantial contribution to the {{ "FAIR" | abbr | safe }} principles, particularly in the areas of interoperability and reusability, demonstrating its effectiveness in promoting a more connected and accessible digital research environment. However, further research is needed to fully assess {{ "IIIF" | abbr | safe }}'s adherence to the {{ "CARE" | abbr | safe }} Principles for Indigenous Data Governance, suggesting a potential area for future developmental focus.
+
+<figure id="fig:iiif_principles" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/iiif_principles.svg"
+alt="Situating IIIF to Movements and Principles"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.9</strong>:
+ Situating IIIF to Movements and Principles [@raemy_characterising_2023 p. 21]
+</figcaption>
+</figure>
+
+Shifting the emphasis to Linked Art, analysis of the engagement of 16 participants in [Figure 6.10](#fig:linked_art_principles) provides a nuanced view of the role of Linked Art in relation to the same scientific and governance movements. Although the pool of participants is smaller, resulting in a more limited data set, the responses still provide useful insights. Participants recognise Linked Art's potential contributions to Open Science and Citizen Science, albeit to a lesser extent than {{ "IIIF" | abbr | safe }}. In addition, the feedback highlights Linked Art's strong capabilities in interoperability, in line with the {{ "FAIR" | abbr | safe }} principles, particularly in the areas of discoverability, accessibility and reusability. These findings highlight the need for further empirical studies to validate and refine Linked Art's alignment with {{ "CARE" | abbr | safe }}, and provide a clear direction for future research and community engagement strategies.
+
+<figure id="fig:linked_art_principles" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/linked_art_principles.svg"
+alt="Situating Linked Art to Movements and Principles"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 6.10</strong>:
+ Situating Linked Art to Movements and Principles [@raemy_characterising_2023 p. 22]
+</figcaption>
+</figure>
+
+Following the survey's broad findings on participant distribution and engagement, we transition to a focused exploration of the {{ "IIIF" | abbr | safe }} and Linked Art communities' characteristics. Through this research, I seek to gain a better understanding of the contributions and challenges faced by these communities.
+
+- Community Engagement:   The survey revealed a vibrant ecosystem of practitioners committed     to the ideals of {{ "IIIF" | abbr | safe }} and Linked Art. A significant     proportion of respondents actively contribute to both initiatives,     embodying a spirit of cross-community collaboration. This strong     commitment is indicative of a shared vision for the future of     digital cultural heritage, where collective effort and knowledge     sharing are fundamental pillars.
+- Practices and tools:   Looking at the communities' technological preferences, there is a     strong trend towards open standards and interoperable tools. This     trend is not only a testament to the technical rigour of the     communities, but also aligns with the {{ "FAIR" | abbr | safe }} and {{ "CARE" | abbr | safe }} principles. Such adherence ensures     that digital artefacts and the frameworks used to manage them are     accessible, interoperable, reusable and ethically managed, fostering     a digital ecosystem that is inclusive and equitable.
+- Barriers to Involvement:   Despite the thriving community and progressive adoption of open     standards, the survey identifies critical barriers to wider     participation. The most prominent of these is the need for more     inclusive outreach and comprehensive support for newcomers. This     challenge highlights an area of opportunity for community growth,     requiring initiatives aimed at lowering barriers to entry and     fostering an environment that welcomes diverse perspectives and     expertise.
+- Impact on {{ "CH" | abbr | safe }}:   The contribution of {{ "IIIF" | abbr | safe }} and Linked Art to the heritage domain     is profound, particularly in enhancing accessibility,     interoperability, and reusability. The survey highlights the central     role that {{ "IIIF" | abbr | safe }}     and Linked Art play in democratising access to heritage data,     enabling richer, more connected narratives that span time and     geography. {{ "IIIF" | abbr | safe }} has expanded into various domains,     while Linked Art remains focused on art-related objects for a     smaller audience.
+
+### 6.4 Synthesis and Insights {id="sec:synthesis-insights-6"}
+
+This section synthesises the present chapter and provides some and insights that can be learned from the social fabrics of {{ "IIIF" | abbr | safe }} and Linked Art.
+
+Behind the visible activities like meetings lies a preponderance of preparatory work managed by co-chairs, editorial boards, or driven by community-generated use cases. This foundational work often predetermines the direction and outcomes of formal gatherings. Meeting patterns indicate initial high attendance, which peaks at certain project milestones before declining. Scheduling meetings to accommodate broader global participation, particularly from Asia and Oceania, should be considered to enhance inclusivity, although the primary interaction remains asynchronous.
+
+GitHub serves as a critical hub for community engagement, with a core group of active contributors who often consistently attend meetings. This platform lowers the barrier to decision-making within the community, although it also reflects biases similar to those found in {{ "FLOSS" | abbr | safe }} communities in terms of inclusiveness. The assertion that *‘standards are made by the people who show up, and not nearly enough people are showing up’* as posited by @cramer_w3c_2016, underscores the critical role of active participants in shaping these standards. However, when individuals from privileged backgrounds wield disproportionate influence in these participatory roles, the issue of over-representation comes into sharp focus.
+
+This demographic homogeneity can give rise to several challenges, including the perpetuation of biases and the neglect of pivotal issues of relevance to underrepresented or marginalised groups. Such imbalances can lead to standards that inadequately reflect the comprehensive spectrum of societal needs and realities. Furthermore, participation in these standardisation processes is itself a privilege, a point underscored by @capadisli_social_2023, suggesting the need for greater inclusivity in these influential roles. Moreover, the assumption that internet access and digital devices are universally available is critically examined in works such as @czahajda_live_2022, which uses {{ "ANT" | abbr | safe }} to reveal key actors in the digital landscape. This echoes the issues of the {{ "IIIF" | abbr | safe }} community, where the generation of IIIF resources presupposes means that may not be accessible to all, particularly outside the Global North and among non-English speakers.
+
+The {{ "IIIF" | abbr | safe }} Cookbook recipes and Linked Art patterns demonstrate the tension between the creation of advanced specifications and their practical implementation by platforms. While new recipes and patterns continue to emerge, actual implementation in software and tools lags behind, reflecting a gap between ideation and practical application. For instance, the {{ "IIIF" | abbr | safe }} community is actively developing customised tools, particularly for annotations, aimed at catering to users with advanced needs. These tools are designed to enhance usability and functionality but have yet to achieve widespread deployment. This ongoing development indicates that the community is still navigating the optimal routes to broad adoption and interoperability, striving to balance sophisticated requirements with general usability. As another example, the question of how digital frameworks represent non-human entities remains a point of discussion within Linked Art, reflecting wider societal challenges in ensuring that diverse perspectives are included in digital and cultural narratives.
+
+Survey findings also underscore the need for ongoing efforts to develop {{ "LOUD" | abbr | safe }} standards that foster an inclusive, dynamic digital ecosystem. Future strategies should include creating educational resources and frameworks that support interdisciplinary collaboration and reduce barriers to participation.
+
+In summary, as the {{ "IIIF" | abbr | safe }} and Linked Art communities progress, their continued relevance will increasingly depend on their ability to embrace diverse perspectives and adapt to changing technological and cultural landscapes. The concept of *sympoietic collaboration*, inspired by Donna Haraway's ideas in @haraway_staying_2016 [pp. 86-87], illustrates this path forward. ‘Sympoiesis‘, or making-with, in contrast to ‘autopoiesis’, or self-making, portrays these communities not just as isolated entities but as interdependent networks. This interdependence must extend to incorporating new voices into ideas, meetings, and implementations, fostering vibrant ecosystems where diverse contributions enrich the shared narrative. By prioritising mutual collaboration over individual autonomy, sympoietic collaboration aims to enrich the field, ensuring that digital heritage remains dynamic and inclusive. Pragmatically, this discussion will be continued in the following section, where I will explore specific perspectives and suggest potential pathways forward.
+
+### 6.5 Perspectives {id="sec:perspectives-6"}
+
+This section reflects on the empirical findings of this chapter and outlines prospective avenues for both the {{ "IIIF" | abbr | safe }} and Linked Art communities, emphasising strategic steps forward in community engagement, technical innovation, and culminating in discussing integration practices.
+
+#### 6.5.1 Enhancing Community Engagement {id="subsec:community-engagement"}
+
+Both the {{ "IIIF" | abbr | safe }} and Linked Art communities face challenges in transforming increased membership into active participation. Despite a tenfold increase in members on platforms like {{ "IIIF" | abbr | safe }} Slack workspace over the past 7-8 years, this has not translated into proportional growth in contributions. Advocacy efforts need to focus on making these platforms more welcoming and integrating passive members into active roles. One of these efforts in the {{ "IIIF" | abbr | safe }} community is the Ambassadors programme[^273], which could be expanded. For Linked Art, it is essential to increase engagement through clear role definitions and regular interactive sessions that go beyond the technicalities of the model, including workshops and webinars. These efforts should aim to demystify the participation process and encourage more diverse community involvement.
+
+While the primary tools for collaboration in the {{ "IIIF" | abbr | safe }} and Linked Art communities are hosted by {{ "GAFAM" | abbr | safe }} -- namely GitHub and Google Drive -- there are growing calls to consider alternatives that may better align with open-source values and data sovereignty concerns. Codeberg[^274], as an alternative to GitHub, represents one such possibility. However, transitioning to new platforms could be a significant undertaking, requiring considerable effort and adaptation. Exploring these options could help mitigate the risks associated with reliance on major tech conglomerates and foster a more decentralised approach to digital resource management, though the change would be quite tremendous and involve significant logistics.
+
+#### 6.5.2 Technical Development {id="subsec:technical-development"}
+
+The technical backbone of both the {{ "IIIF" | abbr | safe }} and Linked Art communities relies on the continuous development and maintenance of essential tools.
+
+For {{ "IIIF" | abbr | safe }}, this includes servers and clients such as Cantaloupe, Mirador, and {{ "UV" | abbr | safe }}. These tools not only need regular updates to stay compliant with evolving standards but also require careful management of dependencies, such as upgrading to the latest versions of underlying technologies like React for Mirador, to avoid security vulnerabilities [see @white_10_2023]. Similarly, Linked Art's integration efforts must focus on enhancing interoperability with broader standards like {{ "RiC" | abbr | safe }} and Schema.org, which will improve its usability across various {{ "DAM" | abbr | safe }}s. This effort should be supported by the development of targeted guidelines that cater to different technical levels and user groups, and the creation or availability of comprehensive workflows and tools essential for the uptake of the standard.
+
+These measures are crucial for ensuring the broader adoption and sustainability of {{ "IIIF" | abbr | safe }} and Linked Art. By keeping technological infrastructure up-to-date and secure, and by enhancing interoperability with other standards, the communities can accommodate a wider range of platforms and users. Additionally, providing clear guidelines and accessible tools is essential for lowering entry barriers, thereby facilitating a more widespread and effective implementation of these standards across diverse environments.
+
+#### 6.5.3 Integration Practices {id="subsec:integration-practices"}
+
+Robust governance is essential for sustaining the technical infrastructure and community cohesion in both {{ "IIIF" | abbr | safe }} and Linked Art. Establishing diverse expert governance bodies can guide strategic developments and ensure adherence to best practices. These bodies should also address the preservation of institutional knowledge to maintain continuity amidst changes. The role of initiatives like iiif-commons[^275] is critical here, as they lower barriers to entry and support the development of both general-purpose and specialised tools, accommodating a wide range of community needs[^276].
+
+{{ "LOUD" | abbr | safe }} entities, in the context of this analysis, can be perceived as *‘[a construction of] new properties to perceive in the world’* [p.251 @nyhan_pursuing_2023 citing [@anderson_after_2014]], suggesting that these entities do more than just exist; they actively shape our understanding and engagement with {{ "CH" | abbr | safe }}. By rearranging data and metadata in unprecedented ways, {{ "LOUD" | abbr | safe }} instances allow us to see connections and interactions that were previously obscured. This conceptual framework not only enriches our interaction with digital archives, but also challenges us to rethink how these technologies can be used to foster a more inclusive and dynamically interconnected cultural landscape.
+
+Ultimately, the synthesis of insights from the {{ "IIIF" | abbr | safe }} and Linked Art initiatives provides a robust framework for future growth. By fostering an environment that encourages sympoietic collaboration and integrates diverse perspectives, these communities can continue to thrive and lead in the creation of open ecosystems. Integrating new voices and adapting to the shifting technological landscape will be crucial for the continued relevance of the {{ "IIIF" | abbr | safe }} and Linked Art communities.
+
+The following two chapters look at the practical implementation of their respective {{ "API" | abbr | safe }}s in a research project and on larger systems, illustrating their versatility and implications in a number of different settings.
+
+## 7. PIA as a Laboratory {id="cha:pia-laboratory"}
+
+> [D]igital environments are, of course, themselves socio-technical assemblages, with agency, affective and material qualities. [@caraffa_photographs_2011 p. 48]
+
+This chapter focuses on an empirical exploration of the implementation and evaluation of {{ "LOUD" | abbr | safe }} standards within the {{ "PIA" | abbr | safe }} project, which runs from February 2021 to January 2025. Specifically, the discussion covers the refinement of the data model, the creation of bespoke {{ "IIIF" | abbr | safe }}-compliant resources, Linked Art templating and the technological framework to undertake the digitisation, cataloguing and indexing of the associated {{ "CAS" | abbr | safe }} photographic collections (SGV_05, SGV_10 and SGV_12).
+
+This is an attempt to consider how the {{ "PIA" | abbr | safe }} project's implementation of {{ "LOUD" | abbr | safe }} standards enhances our understanding of their potential to facilitate data reuse and wider participation. I argue that the implementation of shared {{ "API" | abbr | safe }} allows for a prompt understanding of the benefits and limitations of these standards, drawing on the expertise and contributions of the extended communities. Expected outcomes include improved accessibility and reusability of heritage data, as well as wider engagement with diverse user communities. The aim is to implement and evaluate these standards in an exploratory setting to assess their impact on long-term engagement. The choice of {{ "PIA" | abbr | safe }} as a testing ground is suited both to the fluidity of research environments and to the possibility of experimenting with different modes of practice. Research agendas are inherently transient and flexible, making {{ "PIA" | abbr | safe }} a dynamic space for the uptake and evaluation of {{ "LOUD" | abbr | safe }} standards. This approach not only deepens the understanding of these technologies, but also increases the flexibility to adapt to emerging capabilities.
+
+In [Section 7.1](#baseline-pia), I begin by providing an overview of the infrastructure baseline that was established at the start of the project and the data that was aggregated to set the stage for a thorough assessment of the research. The application and impact of {{ "LOUD" | abbr | safe }} standards within the research project will be explored in [Section 7.2](#sec:loud-explorative), a section that is crucial to deriving actionable insights and understanding the wider impact of {{ "LOUD" | abbr | safe }} in a real-world and relatively short-term context. The synthesis of these findings in [Section 7.3]() provides a comprehensive overview of the impact and potential benefits of {{ "LOUD" | abbr | safe }} standards on participatory knowledge practices.
+
+The chapter concludes with [Section 7.4](), which offers insights into the future implications of this work for research and practice, for what will be done until the end of the {{ "PIA" | abbr | safe }} project or beyond.
+
+### 7.1 Data and Infrastructure Baseline at the Project Onset {id="baseline-pia"} 
+
+The journey of the analogue archives of {{ "CAS" | abbr | safe }} began at the end of the century with the creation of the first archives by the {{ "SSFS" | abbr | safe }} in 1896, now known as {{ "CAS" | abbr | safe }}. They began collecting photographs in the 1930s and have approximately 300,000 objects spread across 30 collections. This first phase, which continued well into the era of digitisation, consisted of maintaining and expanding analogue archives. Over time, as social and cultural contexts evolved, so did archival practices and technologies. Early photographic collections were central to shaping national identities and cultural origins during periods of significant industrial and social change [see @caraffa_introduction_2015]. These collections were not simply repositories of existing cultural elements, but were instrumental in constructing the very notions of culture they purported to document through the systematic collection, archiving and interpretation of images and materials.
+
+In the early 2010s, the second stage began, involving the digitisation of approximately 105,000 photographs, in collaboration with the {{ "DHLab" | abbr | safe }} and the restoration atelier of Anklin & Assen [@graf_fotoarchiv_2019]. This phase included the development of a database for the digitised images and the addition of metadata to these images. The move to digital archives offered many benefits, including easier classification, access from anywhere, and increased security through redundant storage [see @rosenthaler_international_2016]. Moreover, as the physical life of analogue originals diminishes and reproduction becomes more difficult, digitisation has become an essential strategy not only for preservation but also for redefining collections as integral components of {{ "CH" | abbr | safe }} in today's knowledge society.
+
+The digital transformation of the {{ "CAS" | abbr | safe }} archives has involved a network of interconnected actors, primarily centred around the University of Basel. The analogue {{ "CAS" | abbr | safe }} archives are stored on one of the university's premises, underlining the collaborative ties and shared resources between the Institute of Cultural Anthropology and European Ethnology and the broader university framework [@leimgruberVolkskundeZurKulturwissenschaft2011; @eggmann_interview_2010]. The digitisation initiative, overseen by the {{ "DHLab" | abbr | safe }}, reinforces the university's key role in the digital preservation and management of {{ "CH" | abbr | safe }} [@fornaro_digital_2020]. After its inception as a project within the {{ "DHLab" | abbr | safe }}, {{ "DaSCH" | abbr | safe }} became an independent entity in 2021, operating as a national research data infrastructure with substantial support from the {{ "SNSF" | abbr | safe }}, with the University of Basel continuing as the hosting institution [@rosenthaler_dasch_2015; @gautschy_swiss_2022]. This transition underlines the integral role of the University of Basel in the management of digital archives. In addition, the {{ "PIA" | abbr | safe }} project, involving similar stakeholders such as the Institute and the {{ "DHLab" | abbr | safe }}, and now also the {{ "HKB" | abbr | safe }} as design experts, with {{ "DaSCH" | abbr | safe }} overseeing the long-term preservation of the (meta)data @cornut_annotations_2023.
+
+Among the practices for cataloguing and indexing the photographic archives of {{ "CAS" | abbr | safe }} was, and still is, spreadsheet-based processing of metadata according to a specific data model agreed upon with the {{ "DHLab" | abbr | safe }}, and uploading this along with the associated data, i.e. the digitisations, onto the Salsah platform, which was the first virtual research environment developed for {{ "DaSCH" | abbr | safe }}. The metadata uploads could be corrected at any time using an online mass editor on Salsah, and sometimes the digitised objects were uploaded first, sometimes in parallel with the metadata, depending on the needs and resources available.
+
+[Figure 7.1](#fig:old-cas-data-model) shows a rather elementary data model of {{ "SSFS" | abbr | safe }}, which was still in use at the beginning of the {{ "PIA" | abbr | safe }} project. It is primarily centred on photographic objects, through `sgv:Image`, `sgv:Album` or `sgv:Tonbildschau`, although it already had links to other types of entities, whether people or subjects, or links to Geonames[^278] for geographical referencing. While this model aligns with the spirit of Linked Data, its integration was quite basic; apart from using Dublin Core for titles (`dc:title`), there were no other subproperties or mappings being actively implemented [^279]. 
+
+<figure id="fig:old-cas-data-model" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/old-ssfs-data-model.svg"
+alt="Overview of the Legacy SSFS Data Model"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 7.1</strong>:
+ Overview of the Legacy SSFS Data Model
+</figcaption>
+</figure>
+
+Additionally, the naming convention for properties did not fully adhere to camel case[^280], which combines words or phrases by capitalising all words following the first word and removing spaces (e.g., `CamelCase`), often used to improve readability and compatibility in coding environments. The eight classes of the {{ "SSFS" | abbr | safe }} data model are as follows:
+
+- `sgv:Collection`:   This class is representative of one of the archive's photographic     collections. While the material of 17 different collections was     partially or fully available through Salsah, 20 were already     described at this level.
+- `sgv:Image`:   This is the most widely used class of the data model representing     digitised images, totalling around 105,000. This class also includes     the largest number of properties, whether for a title, date or     location, or to specify the format or type of object, or links     representing the subject(s) covered by the image, or to identify the     people or institutions depicted in it.
+- `sgv:Album`:   This is an intermediate class between `sgv:Image` and     `sgv:Collection` for objects belonging to a photographic album. This     class was conceived for visualisation purposes by integrating the     notion of sequence number, but was only realised conceptually.
+- `sgv:Tonbildschau`:   A series of diapositives that were originally shown through a     carousel slide projector. Like `sgv:Album`, this is also an     intermediate layer, and 26 resources from the SGV_13 collection were     assigned to it.
+- `sgv:Film`:   The photographic archives also hold a number of audiovisual     materials, such as filmed anthropological interviews. 34 films, all     from the SGV_01 collection, were uploaded onto Salsah.
+- `sgv:Sequence`:   The sequences are oral transcriptions of a `sgv:Film`. For each     film, a series of sequences has been associated, generally under the     time constraint and therefore includes a property to mark an     interval. 290 resources belong to this class.
+- `sgv:Persons`:   They may be individuals, groups of individuals or legal entities.     2515 resources were identified using this class.
+- `sgv:Subject`:   These are monitored topics specifying recurring keywords, but which     do not necessarily come from controlled vocabularies. 3005 entries     were identified as subjects.
+
+Furthermore, a series of lists completes this legacy data model, notably on the accepted formats (through `has:Format`), medium (via `hasModel`), and types of photographic objects (via `hasObjecttype`), in which a hierarchy was created and is maintained by {{ "CAS" | abbr | safe }}.
+
+A dedicated website has also been created to present the digitised photographic archives, aggregating (meta)data from the Salsah {{ "API" | abbr | safe }}. On this interface, and still at the time of writing in April 2024, visitors can access around the images digitally preserved by {{ "DaSCH" | abbr | safe }}, although some of these have not yet been catalogued and/or digitised.
+
+This phenomenon can be clearly illustrated by the three corresponding {{ "CAS" | abbr | safe }} collections studied over the course of the {{ "PIA" | abbr | safe }} research project. In the SGV_05 collection, which comprises approximately 90,000 objects, none had been catalogued or digitised prior to the initiation of {{ "PIA" | abbr | safe }}, with these processes beginning concurrently once the project commenced. However, not all items in this collection are slated for digitisation or fine cataloguing. In the case of the SGV_10 collection, although over 12,000 photographs were digitised and catalogued, the level of detail in this cataloguing remains minimal. Regarding the Kreis Family collection, approximately fifty photo albums had yet to be digitised. For the SGV_12 collection, while more than 47,000 black and white negatives were successfully digitised and catalogued, there remained over 10,000 prints yet to be processed. These prints, a curated selection by the photographer Brunner, are organised within boxes according to a nomenclature established by the photographer himself. Additionally, some of these objects from these three collections needed to be restored prior to digitisation[^281].
+
+The following consideration regarding the assignment of identifiers within the {{ "CAS" | abbr | safe }} photographic archives is intended to provide additional contextual information. Understanding the structure of these identifiers is important, particularly for images without extensive associated metadata, as the identifiers themselves provide valuable clues as to the original format of the items and the collection to which they belong. This systematic approach to naming helps to infer details that are not always explicitly documented elsewhere within the metadata.
+
+- **Collection Prefix**:   All identifiers start with `SGV_`, followed by a two-digit number     which represents the specific collection within the     {{ "CAS" | abbr | safe }} archives.     For example, `SGV_10` represent the Kreis Family collection.
+- **Item Type**:   After the collection number, a letter or letters denote the type of     item. Each type has a designated letter:
+    - `A` for Albums (e.g., `SGV_10A_00001`)
+    - `D` for Dias (slides) (e.g., `SGV_10D_00001`)
+    - `N` for Negatives (e.g., `SGV_10N_00001`)
+    - `P` for Positives (photographic prints) (e.g., `SGV_10P_00001`)
+    - `S` for Schriftliches (written documents) (e.g.,         `SGV_10S_00001`)
+    - `G` for Gegenstand (objects) (e.g., `SGV_10G_00001`)
+    - `F` for Film (e.g., `SGV_10F_00001`)
+    - `T` for Ton (sound recordings) (e.g., `SGV_10T_00001`)
+- **Sequential Number**:   Following the item type, there is an underscore followed by a     sequence number formatted with leading zeros. This number uniquely     identifies each item within its type and collection. For example,     the first album in the `SGV_10` collection would be `SGV_10A_00001`.
+- **Special Identifiers for Carousel Items**:   Some collections, such as those involving carousels, have additional     components in their identifiers. After the type and sequential     number, additional identifiers may include a carousel number and     position within that carousel, separated by underscores. For     instance, `SGV_13D_22_00001_a` indicates the first item in the 22<sup>nd</sup> carousel of the `SGV_13D` collection, position `a`.
+
+Initially, the database migration from Salsah to {{ "DSP" | abbr | safe }} was scheduled to be completed by the start of the project in 2021. However, delays meant that this task extended nearly to the project's conclusion, necessitating some extraction and handling of (meta)data, especially at the beginning of {{ "PIA" | abbr | safe }}. This ongoing requirement significantly influenced the project workflow and data management strategies, underscoring the dynamic nature of managing large-scale digital archives.
+
+The migration to {{ "DSP" | abbr | safe }} also provided an opportunity to redesign the data model to better meet the needs of both {{ "CAS" | abbr | safe }} and {{ "PIA" | abbr | safe }}. A balance had to be struck between minting new {{ "PIA" | abbr | safe }}-specific properties and dealing with the extension of the model on the research project so as not to overload the {{ "CAS" | abbr | safe }} data model. The development of {{ "DSP" | abbr | safe }} started as a replacement for Salsah and consists of three main components: {{ "DSP" | abbr | safe }}-APP, {{ "DSP" | abbr | safe }}-{{ "API" | abbr | safe }} and {{ "DSP" | abbr | safe }}-TOOLS. {{ "DSP" | abbr | safe }}-APP is the {{ "GUI" | abbr | safe }} that allows users to view and edit data directly in their browser, improving accessibility and interaction. {{ "DSP" | abbr | safe }}-{{ "API" | abbr | safe }} acts as the core of the software stack, an {{ "RDF" | abbr | safe }} database that provides {{ "API" | abbr | safe }} access to data, enabling data interactions. Finally, {{ "DSP" | abbr | safe }}-TOOLS is a command-line tool for uploading data models and large datasets to a {{ "DSP" | abbr | safe }} server, streamlining the data integration process.
+
+One of the challenges was to integrate {{ "LOUD" | abbr | safe }} standards within these processes and to coordinate this implementation alongside the myriad satellite activities of the research project. In the following section, I will delve into the specifics of these efforts and discuss how collaboration and technological adaptation were managed concurrently with the main objective tied to my thesis within {{ "PIA" | abbr | safe }}.
+
+### 7.2 LOUD Standards in an Explorative Setting {id="sec:loud-explorative"} 
+
+{{ "PIA" | abbr | safe }} has envisioned the development of processes, tools and interfaces to generate and make visible knowledge in a participatory manner. The purpose is to enable intuitive access and exploration, based on the example of three collections from the {{ "CAS" | abbr | safe }} photographic archives. To this end, we have used a variety of face-to-face, virtual and hybrid formats: plenary meetings every six weeks, group and thematic meetings at different intervals, meetings between PhD students, sprint meetings among developers or designers, project-related courses, as well as internal and external workshops. Additionally, we had to navigate the creation of a technical infrastructure that would allow us to begin our research activities independently or in tandem with the ongoing database migration, restoration, and digitisation efforts. This infrastructure setup was critical to ensure that our research could proceed without too much delay, even as fundamental records management tasks were being completed.
+
+With a view to achieving semantic interoperability affordances beyond or in parallel with the development of {{ "GUI" | abbr | safe }}-based tools, I, with the help of my colleagues, have approached the deployment and establishment of {{ "LOUD" | abbr | safe }} specifications and practices within the project incrementally, as a way of addressing the needs of different audiences, whether human or machine, but also as an attempt to extend participation beyond the set of tools being developed specifically for {{ "PIA" | abbr | safe }}. As such, the two main {{ "IIIF" | abbr | safe }} {{ "API" | abbr | safe }}s were first implemented to streamline access to image-based resources and to facilitate user annotation of resources in accordance with {{ "WADM" | abbr | safe }}. Then, an endpoint compatible with the {{ "IIIF" | abbr | safe }} Change Discovery {{ "API" | abbr | safe }} to support ongoing updates and changes was deployed. On the Linked Art front, a conceptual model mapping the current classes and properties, and boilerplate documents were created, followed by the roll-out of a preliminary version to coincide with the ongoing development of the initiative's first stable specification release. Not only does Linked Art serve as a benchmark for accessing {{ "CH" | abbr | safe }} semantic metadata, but also as an alternative endpoint that expands the scope and accessibility of data interactions.
+
+[Figure 7.2](#fig:infra-constellation) presents a synoptic - and asynchronously processed - overview of the {{ "PIA" | abbr | safe }} technical infrastructure, providing a high-level perspective focusing on {{ "API" | abbr | safe }}s and (meta)data integration rather than the various {{ "GUI" | abbr | safe }}-based prototypes. This view helps to outline the phased implementation of the infrastructure, which will be explored hereafter, starting with (meta)data extraction, followed by an explanation of the updated {{ "CAS" | abbr | safe }} data model. I will then look at the {{ "IIIF" | abbr | safe }} Image {{ "API" | abbr | safe }} and the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} along with {{ "WADM" | abbr | safe }}, moving on to {{ "IIIF" | abbr | safe }} Change Discovery and concludes with an overview of the metadata {{ "API" | abbr | safe }}s, including Linked Art. Each of these components plays an important role in the project's architecture. The systematic deployment of these processes and standards has been strategically designed to build layers of semantic interoperability incrementally.
+
+<figure id="fig:infra-constellation" style="margin: 0 auto; text-align: center;">
+ <img
+src="https://julsraemy.ch/prezi/assets/infrastructure_constellation.svg"
+alt="Synoptic View of the PIA Infrastructure: Showcasing its Connection to DSP and the CAS Photo Archive Website"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 7.2</strong>:
+ Synoptic View of the PIA Infrastructure: Showcasing its Connection to DSP and the CAS Photo Archive Website
+</figcaption>
+</figure>
+
+#### 7.2.1
 
 (...)
 
-## 7. PIA as a Laboratory {id="cha:pia-laboratory"}
+#### 7.2.2
+
+(...)
+
+#### 7.2.3
+
+(...)
+
+#### 7.2.4
+
+(...)
+
+### 7.3 Synthesis and Insights
+
+(...)
+
+### 7.4 Perspectives
 
 (...)
 
