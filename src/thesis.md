@@ -4898,6 +4898,68 @@ The consensus-building process for mapping metadata in Linked Art, while general
 
 Key individuals played a pivotal role in the success of LUX. Susan Gibbons' high-level support as Vice Provost facilitated trust and established LUX as a layer of discovery without replacing existing units. Sarah Prown's role as project manager was central to fostering collaboration and audience engagement, with norms and boundaries that built trust. Robert Sanderson's facilitation and collaboration with developers was also significant, despite some challenges in communicating the potential of Linked Art. His strategic role, particularly with a documented {{ "API" | abbr | safe }}, is expected to encourage future cross-collection projects such as hackathons.
 
+Alison Clemens, Access Strategist for Special Collections at the Beinecke Rare Book & Manuscript Library, emphasised the impact of Susan Gibbons' leadership.
+
+> The success of this iteration of cross-collection discovery can be attributed, in large part, to Susan Gibbon’s role as Vice Provost, who initiated the project and revitalised cross-campus collaboration efforts. This new approach to cross-collection discovery has resulted in a significant investment of staff time and resources <br/> Alison Clemens, Access Strategist for Special Collections, Beinecke Rare Book & Manuscript Library, {{ "YUL" | abbr | safe }}
+
+LUX's technological foundation is considered innovative, providing a cross-collection discovery platform that integrates and links digital data more effectively than previous systems. LUX is known as the largest known {{ "CH" | abbr | safe }} Linked Data platform, based on open standards such as Linked Art, {{ "IIIF" | abbr | safe }} and {{ "AS" | abbr | safe }}. The platform provides new entry points for accessing data, improving data integration and organisation. However, the usability of the data varied between units, with significant challenges around data quality and consistency, particularly from {{ "YUL" | abbr | safe }}. The lack of dedicated resources for data cleansing and reconciliation at unit level hinders transparency and effectiveness, highlighting the need for specialised roles within each unit. Kelly Davis, Data Engineer at {{ "CSC" | abbr | safe }}, underscored the importance of data ownership and quality:
+
+> I firmly believe that the owners of the data should be responsible for fixing any issues that arise, as the pipeline or external sources may not have the necessary context. However, addressing such issues requires significant time and resources. Improving the mapping process and leveraging high-quality external sources can enhance the usability of the data, although errors are inevitable <br/> Kelly Davis, Data Engineer, {{ "CSC" | abbr | safe }}
+
+There is also a consensus that the advanced search function needs further improvement to make it more intuitive. Anna Arays, Librarian for Slavic & East European Studies at {{ "YUL" | abbr | safe }}, shared her insights into the challenges faced by libraries and museums:
+
+> The library’s role is to provide quick, reasonable, and easy access to a large volume of materials. Our users typically have specific search goals, and while they do browse, their approach to discovery differs from object-based environments. Collaborating with museums revealed challenges that may seem straightforward to them but become real problems for our users. For instance, the object/works split in the platform, which stems from the distinction between intellectual content and objects. Balancing these elements to ensure user-friendly integration poses significant friction. Additionally, discussions on data privacy highlighted librarians’ strong concerns about recording user search data. Achieving consensus required labour-intensive efforts to address the distinct needs of both user communities. Despite the complexity, this project fostered mutual learning and serves as a foundation for further improvements based on user feedback. <br/> Anna Arays, Librarian for Slavic & East European Studies, {{ "YUL" | abbr | safe }}
+
+In addition, the separation of objects and works on the {{ "GUI" | abbr | safe }} has been confusing for many users. This challenge is deeply rooted in the distinction made by {{ "CIDOC-CRM" | abbr | safe }} and Linked Art between the intellectual content of a work and the physical Human-Made Object. While this separation facilitates more nuanced metadata and relational connections in databases, it often complicates the {{ "UX" | abbr | safe }}, particularly for those accustomed to viewing an object and its intellectual content as a single, unified entity.
+
+Yer Vang-Cohen, Data and Database Administrator at {{ "YUAG" | abbr | safe }}, explained this difficulty:
+
+> It was challenging to convey the distinction between work and the Human-Made Object, particularly to our curators who perceive the object as a unified entity. Although they have a general understanding of the visual entity record, it proved difficult for them to grasp the concept of splitting the record and having metadata about the visual content reside separately from the Human-Made Object <br/> Yer Vang-Cohen, Data and Database Administrator, {{ "YUAG" | abbr | safe }}
+
+LUX adheres to principles such as {{ "FAIR" | abbr | safe }} and {{ "LOUD" | abbr | safe }}, which have provided essential guidance, ensured interoperability and influenced its design and development. However, perceptions of these principles varied considerably. Project managers placed a strong emphasis on these principles, while developers, librarians and archivists considered them to be of secondary importance in the creation of LUX, with some individuals simply unaware of them. This variance underlines the need for wider awareness and integration of these principles across all roles involved in the project.
+
+In terms of future potential, there is significant interest in the potential re-use of the LUX code base. Many believe that with a small, dedicated team possessing foundational knowledge in core technologies like JavaScript and React, it is feasible to adapt and extend the LUX system for new applications. Leveraging the work already done with MarkLogic could further streamline this process, making it accessible for research-oriented systems or other institutional needs. Jeff Campbell, Associate Director of Digital Asset Technologies at {{ "ITS" | abbr | safe }}, elaborated on this potential:
+
+> I believe that a small team of two or three individuals, who are open to exploring new avenues and possess a sense of curiosity, could accomplish it. Ideally, they should have a foundational understanding of core technologies like JavaScript and React, so they can focus on specific requirements without starting from scratch. While MarkLogic is a robust system, the work we’ve already done with it can potentially be leveraged for their use cases, making the process smoother. If someone is interested in a research-oriented system similar to LUX, they could start with a single-node environment or opt for a powerful machine. <br/> Jeff Campbell, Associate Director, Digital Asset Technologies, {{ "ITS" | abbr | safe }}
+
+After collecting these qualitative findings, I aimed to obtain a distant reading perspective of the interviews using simple topic modelling methods. To do this, I used an online topic extraction tool[^345]. The tool performs the following steps:
+
+1.  Clean up the text: flatten to ASCII, remove     {{ "URL" | abbr | safe }}s and     punctuation marks.
+2.  Lemmatisation.
+3.  Decompose the text into n-grams up to four grams and remove less     relevant n-grams.
+4.  Counting co-occurrences: identifying which pairs of n-grams occur     frequently together.
+5.  Create a network from the list of co-occurring n-grams: connect     frequent n-grams.
+6.  Apply a community detection algorithm to the network using the     Louvain algorithm.
+7.  Apply the parameter chosen by the user: a large value detects a few     large communities, while a small value detects many small clusters.
+8.  Each cluster in the network is identified as a topic. The key terms     in each topic are the n-grams contained in the cluster.
+
+I fed all the raw `.txt` files, which contained no names or identification, into the tool. I set the parameter to detect large topics, limiting the number to ten, and used a special stopword file (e.g. LUX, data) to avoid overcrowding the results. The identified clusters can be seen in [Figure 8.4](#fig:lux-interviews-topics) [^346]:
+
+<figure id="fig:lux-interviews-topics" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/lux-interviews-topics.png"
+alt="LUX Interviews: Key Topics and Their Relationships"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.4</strong>:
+ LUX Interviews: Key Topics and Their Relationships
+</figcaption>
+</figure>
+
+The topic modelling results reveal a broad range of themes and focal points across the interviews. Below is a detailed analysis of each identified cluster:
+
+- Topic 1:   This cluster centres around the pipeline, prominently featuring     Kelly Davis, the Data Engineer. This indicates a significant     emphasis on the technical aspects of data processing and     infrastructure within LUX. The focus on a single individual     highlights the pivotal role played by certain key personnel in the     project's technical operations.
+- Topic 2:   This topic focuses on {{ "YCBA" | abbr | safe }} and curators, suggesting strong     involvement and interest from this particular unit and its staff. It     could indicate that the {{ "YCBA" | abbr | safe }} has been particularly proactive or     influential in the LUX project's development.
+- Topic 3:   This cluster pertains to usability and software, reflecting ongoing     discussions about the user experience and the practical     implementation of software tools. It underscores the importance of     ensuring that the {{ "GUI" | abbr | safe }} and functionality are accessible and     effective for end users.
+- Topic 4:   This topic highlights semantic and interoperability issues, which     are critical for achieving seamless integration and use of data     across different systems and platforms.
+Topic 5:   This cluster revolves around meetings and committee activities, with     being a prominent term. It reflects the impact of virtual meetings     on collaboration.
+- Topic 6:   This topic discusses product ownership and management, highlighting     the need for clear leadership and accountability.
+- Topic 7:   This cluster includes terms related to technical aspects such as and     , indicating a focus on software development and issue tracking     tools.
+- Topic 8:   This topic is focused on museums, particularly the     {{ "YPM" | abbr | safe }},     emphasising the role of specific institutions within the LUX     initiative.
+- Topic 9:   This cluster covers exhibitions and {{ "CH" | abbr | safe }}, with mentions of and , suggesting an     emphasis on public engagement and the presentation of collections.     It highlights the importance of exhibitions in making collections     accessible and engaging to the public.
+- Topic 10:   This topic focuses on library services and {{ "DH" | abbr | safe }}, with key terms like and , indicating     discussions about the integration of digital tools and resources in     library contexts. It reflects the evolving nature of     {{ "CH" | abbr | safe }} services in     the digital space.
+
+
 (...)
 
 ### 8.2 Linked Art and IIIF Consistency {id="sec:la-iiif-consistency"}
