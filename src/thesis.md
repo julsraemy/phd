@@ -29,7 +29,7 @@ PhD Thesis in Digital Humanities, completed as part of the Graduate School of So
 
 This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807. 
 
-<p style="font-size: 2em; color: gray; text-align: center;">Page in construction (please be patient ⌛)</p>
+<p style="font-size: 1.5em; color: gray; text-align: center;"> 📋 Content Ready 🎨 Design Upgrade in Progress (please be patient ⌛)</p>
 
 ##### Author 
 
@@ -4952,15 +4952,16 @@ The topic modelling results reveal a broad range of themes and focal points acro
 - Topic 2:   This topic focuses on {{ "YCBA" | abbr | safe }} and curators, suggesting strong     involvement and interest from this particular unit and its staff. It     could indicate that the {{ "YCBA" | abbr | safe }} has been particularly proactive or     influential in the LUX project's development.
 - Topic 3:   This cluster pertains to usability and software, reflecting ongoing     discussions about the user experience and the practical     implementation of software tools. It underscores the importance of     ensuring that the {{ "GUI" | abbr | safe }} and functionality are accessible and     effective for end users.
 - Topic 4:   This topic highlights semantic and interoperability issues, which     are critical for achieving seamless integration and use of data     across different systems and platforms.
-Topic 5:   This cluster revolves around meetings and committee activities, with     being a prominent term. It reflects the impact of virtual meetings     on collaboration.
+Topic 5:   This cluster revolves around meetings and committee activities, with ‘Zoom’     being a prominent term. It reflects the impact of virtual meetings     on collaboration.
 - Topic 6:   This topic discusses product ownership and management, highlighting     the need for clear leadership and accountability.
-- Topic 7:   This cluster includes terms related to technical aspects such as and     , indicating a focus on software development and issue tracking     tools.
+- Topic 7:   This cluster includes terms related to technical aspects such as ‘GitHub’ and ‘Bugherd’     , indicating a focus on software development and issue tracking     tools.
 - Topic 8:   This topic is focused on museums, particularly the     {{ "YPM" | abbr | safe }},     emphasising the role of specific institutions within the LUX     initiative.
-- Topic 9:   This cluster covers exhibitions and {{ "CH" | abbr | safe }}, with mentions of and , suggesting an     emphasis on public engagement and the presentation of collections.     It highlights the importance of exhibitions in making collections     accessible and engaging to the public.
-- Topic 10:   This topic focuses on library services and {{ "DH" | abbr | safe }}, with key terms like and , indicating     discussions about the integration of digital tools and resources in     library contexts. It reflects the evolving nature of     {{ "CH" | abbr | safe }} services in     the digital space.
+- Topic 9:   This cluster covers exhibitions and {{ "CH" | abbr | safe }}, with mentions of ‘Turner’ and ‘Gallery’, suggesting an     emphasis on public engagement and the presentation of collections.     It highlights the importance of exhibitions in making collections     accessible and engaging to the public.
+- Topic 10:   This topic focuses on library services and {{ "DH" | abbr | safe }}, with key terms like ‘platform’ and ‘catalogue’, indicating     discussions about the integration of digital tools and resources in     library contexts. It reflects the evolving nature of     {{ "CH" | abbr | safe }} services in     the digital space.
 
+While these clusters provide valuable insights into the main themes discussed during the interviews, some limitations should be noted. For instance, the prominence of individual names, such as Kelly Davis, may skew the perceived importance of certain topics. Additionally, the clustering process might overlook nuanced discussions or smaller, yet significant, themes that are not captured by the dominant n-grams. Nonetheless, this topic modelling exercise offers a useful overview of the key areas of focus and concern within LUX.
 
-(...)
+Having explored the qualitative findings and performed a distant reading of the interviews data using topic modelling, I now turn my attention to the second objective of this investigation: assessing the consistency of Linked Art and {{ "IIIF" | abbr | safe }} resources within LUX. The following section examines the tools and methods used to ensure compliance with {{ "LOUD" | abbr | safe }} standards and highlighting key findings from this analysis.
 
 ### 8.2 Linked Art and IIIF Consistency {id="sec:la-iiif-consistency"}
 
@@ -4986,15 +4987,465 @@ These tools ensure that {{ "IIIF" | abbr | safe }} services and resources are co
 
 #### 8.2.2 LUX Data Consistency {id="subsec:consistency-lux"}
 
-(...)
+This subsection discusses the data consistency of a large-scale {{ "LOUD" | abbr | safe }} application, focusing primarily on Linked Art in [8.2.2.1](#subsubsec:consistency-la) and peripherally on {{ "IIIF" | abbr | safe }} in [8.2.2.2](#subsubsec:consistency-iiif).
+
+The consistency of the Linked Art data was assessed in three different ways: against the `JSON` validator based on the API endpoint constraints, unit-to-unit consistency between {{ "YUAG" | abbr | safe }} and {{ "YCBA" | abbr | safe }}, and by comparing concept terms from LUX with Getty's {{ "AAT" | abbr | safe }}. Finally, the consistency of {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources (V2.1 and/or V3.0, depending on their availability across Yale units).
+
+##### 8.2.2.1 Linked Art Consistency {id="subsubsec:consistency-la"}
+
+In May 2023, I received one of the full LUX dataset, i.e. a slice of records which correspond to the highest number of parallel processes possible. It is a {{ "JSONL" | abbr | safe }} file which is composed of lines of LUX {{ "JSON-LD" | abbr | safe }} that include Marklogic's rather verbose triples format. The full dataset is about $435${{ "GB" | abbr | safe }} uncompressed, or about $45${{ "GB" | abbr | safe }} compressed with `gzip`. At the time of verifying the consistency of the data, a downloadable LUX dataset or a custom dataset builder were not available.
+
+To ensure data consistency across LUX, I conducted in October 2023 an extensive validation of Linked Art data. This process involved testing the Linked Art {{ "JSON" | abbr | safe }} validator and schemas with data from both the Linked Art {{ "API" | abbr | safe }} Endpoints and the LUX platform. The goal was to verify if the Linked Art examples and schemas were up-to-date and to validate exemplary data from LUX before a larger scale validation.
+
+Originally, my intention was to check all the resources I received from LUX. However, after testing an initial batch, I found that they all yielded similar results for each entity endpoint. Consequently, I did not continue to check every resource. I communicated the results to Robert Sanderson, who maintains the Linked Art {{ "JSON" | abbr | safe }} validator, manages the Linked Art website, and also works on LUX, to ensure that the findings were accurate.
+
+The validation process was conducted using a Python script that was forked and adapted with specific arguments from the Linked Art {{ "JSON" | abbr | safe }} validator[^353]. This script processed data from the examples found on the Linked Art website and LUX, checking for compliance with the respective `JSON` schemas. [Code Snippet 8.3](#lst:la-concept) and [Code Snippet 8.4](#lst:lux-concept) are validation results for a `Concept`[^354]:
+
+<figure id="lst:la-concept" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.3:</strong> Validating a Linked Art Resource: Example Concept
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-bash">
+----------------------- Processing: https://linked.art/example/concept/0
+  Validation failed. Validation errors:
+  Error 1: /member_of/0 --> 'id' is a required property
+  Error 2: /created_by/influenced_by/0 --> 'id' is a required property
+  Error 3: /created_by/influenced_by/1 --> 'id' is a required property
+  Error 4: /broader/0 --> 'id' is a required property
+</code></pre>
+</div>
+</figure>
+
+<figure id="lst:lux-concept" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.4:</strong> Validating a Linked Art Resource: Concept on LUX
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-bash">
+---------------------------------- Processing: https://lux.collections.yale.edu/data/concept/000052b6-a350-4bcb-afca-15dceb72920a
+  Validated!
+</code></pre>
+</div>
+</figure>
+
+[Table 8.2](#tab:lux-validation-summary) summarises the validation results for different Linked Art endpoints and selected LUX instances. The table includes the status of the {{ "JSON" | abbr | safe }} schema validation, specific issues identified, and the required actions to achieve consistency. The main validation errors were due to missing identifiers in the Linked Art Endpoint examples and issues with the `identified_by` $\rightarrow$ `Identifier` pattern and the `referred_to_by` property in `Set` instances for the LUX data. All instances that bear the `TBD*` in the table had the same message warning regarding the use of `Identifier` within `identified_by`. It is a pattern that seems correct according to the documentation, informed by the Linked Art core schema[^355] which led to validation errors.
+
+<figure id="tab:lux-validation-summary" style="text-align: center;">
+ <figcaption><strong>Table 8.2</strong>: Validation Summary of Linked Art Example Endpoints and LUX Instances</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Endpoint</strong></th>
+<th><strong>JSON Schema</strong></th>
+<th><strong>LA Example</strong></th>
+<th><strong>LUX Instance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Concepts</strong></td>
+<td></td>
+<td>Add missing IDs</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Digital Objects</strong></td>
+<td></td>
+<td>Add missing ID</td>
+<td>TBD*</td>
+</tr>
+<tr>
+<td><strong>Events</strong></td>
+<td>Add <code>Period</code> as accepted Class when using the <code>equivalent</code> property</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Groups</strong></td>
+<td></td>
+<td>Add missing IDs</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>People</strong></td>
+<td></td>
+<td>Add missing IDs</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Physical Objects</strong></td>
+<td></td>
+<td>Add missing IDs</td>
+<td>TBD*</td>
+</tr>
+<tr>
+<td><strong>Places</strong></td>
+<td></td>
+<td>Add missing IDs</td>
+<td>TBD*</td>
+</tr>
+<tr>
+<td><strong>Provenance Activities</strong></td>
+<td></td>
+<td></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Sets</strong></td>
+<td></td>
+<td></td>
+<td><code>referred_to_by</code> - LUX specific hack to deal with HTML</td>
+</tr>
+<tr>
+<td><strong>Textual Works</strong></td>
+<td></td>
+<td>Add missing IDs</td>
+<td>TBD*</td>
+</tr>
+<tr>
+<td><strong>Visual Works</strong></td>
+<td>Add <code>shown_by</code>. Schema name (endpoint path) to be changed to <code>visual</code>?</td>
+<td></td>
+<td>TBD*</td>
+</tr>
+</tbody>
+</table>
+</figure>
+
+As part of this Linked Art consistency effort, I received two different spreadsheets from Robert Sanderson. The first contained 113,151 Getty terms from either {{ "AAT" | abbr | safe }}, {{ "TGN" | abbr | safe }}, or {{ "ULAN" | abbr | safe }} that are also present in LUX. The spreadsheet indicated how many times these terms appeared at both {{ "YCBA" | abbr | safe }} and {{ "YUAG" | abbr | safe }}. This data was used to check the consistency of concepts between LUX and the Getty Vocabularies, as well as the unit-to-unit consistency of both art museums. The Linked Art endpoints in question are categorised as either `concept` ({{ "AAT" | abbr | safe }}), `person` ({{ "ULAN" | abbr | safe }} and occasionally {{ "AAT" | abbr | safe }}), `group` ({{ "ULAN" | abbr | safe }} and occasionally {{ "AAT" | abbr | safe }}), or `place` ({{ "TGN" | abbr | safe }} and occasionally {{ "AAT" | abbr | safe }}).
+
+For example, when comparing the term (`aat:300343852`) between the {{ "AAT" | abbr | safe }}[^356] and LUX endpoints[^357], which is also present in both {{ "YCBA" | abbr | safe }} and {{ "YUAG" | abbr | safe }} digital collections, we can observe some differences. The Linked Art representation of the term on the Getty endpoint is loosely consistent with the data model but not with the Linked Art {{ "API" | abbr | safe }}, whereas LUX strictly follows the `concept` schema. Additionally, some {{ "SKOS" | abbr | safe }} properties present in the Getty endpoint, such as `skos:inScheme`, are not allowed by either the model or the {{ "API" | abbr | safe }}. Others, like `skos:narrower`, are permitted in the model but not in the Linked Art {{ "API" | abbr | safe }}. While it is understandable that Getty wants to maintain the hierarchical structure of a controlled vocabulary in both directions, Linked Art typically constrains this type of relationship in one direction. Therefore, external institutions building upon any of the Getty Vocabularies' Linked Art representations need to do so carefully.
+
+The second spreadsheet focused on the 27,944 Getty terms that are also present in both of the art museums, either as direct references or after reconciliation through the LUX pipeline. {{ "YCBA" | abbr | safe }} uses 13,042 concepts and {{ "YUAG" | abbr | safe }} uses 19,114, with 4,212 terms present in both collections[^358], as illustrated in [Figure 8.5](#fig:vocab-ycba-yuag).
+
+<figure id="fig:vocab-ycba-yuag" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/vocab_ycba_yuag.png"
+alt="Getty Vocabularies Term Presence in the YCBA and YUAG Digital Collections"
+style="width: 85%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.5</strong>:
+ Getty Vocabularies Term Presence in the YCBA and YUAG Digital Collections
+</figcaption>
+</figure>
+
+[Figure 8.6](#fig:vocab-ycba-yuag-upset) is an UpSet plot which was used to analyse the intersections between these terms. It reveals that {{ "ULAN" | abbr | safe }} is the most used controlled vocabulary, especially to reference people, with 12,908 terms, including 4,063 shared between {{ "YCBA" | abbr | safe }} and {{ "ULAN" | abbr | safe }} and 9,893 between {{ "YUAG" | abbr | safe }} and {{ "ULAN" | abbr | safe }}. However, {{ "AAT" | abbr | safe }} is the most shared controlled vocabulary, with significant overlaps: 5,508 terms shared between {{ "YCBA" | abbr | safe }} and {{ "AAT" | abbr | safe }}, and 4,263 terms between {{ "YUAG" | abbr | safe }} and {{ "AAT" | abbr | safe }}. Additionally, there are 2,242 terms shared among {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "AAT" | abbr | safe }}; 1,048 terms shared among {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "ULAN" | abbr | safe }}; and 922 terms shared among {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "TGN" | abbr | safe }}. In contrast, {{ "TGN" | abbr | safe }} is the least leveraged vocabulary, contributing 7,505 terms, with 3,471 shared between {{ "YCBA" | abbr | safe }} and {{ "TGN" | abbr | safe }} and 4,956 between {{ "YUAG" | abbr | safe }} and {{ "TGN" | abbr | safe }}. This analysis shows the predominant use of {{ "ULAN" | abbr | safe }} for referencing people and the extensive sharing of {{ "AAT" | abbr | safe }} within LUX for these particular units.
+
+<figure id="fig:vocab-ycba-yuag-upset" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/vocab_ycba_yuag-upset.png"
+alt="Shared Terminology in YCBA and YUAG via Getty Vocabularies"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.6</strong>:
+ Shared Terminology in YCBA and YUAG via Getty Vocabularies
+</figcaption>
+</figure>
+
+[Table 8.3](#tab:ycba-vocab) and [Table 8.4](#tab:yuag-vocab) illustrate how {{ "YCBA" | abbr | safe }} and {{ "YUAG" | abbr | safe }} use the Getty controlled vocabularies. The columns represent the terms directly referenced, terms added after reconciliation through the LUX platform, and the total terms that are both directly referenced and added after reconciliation. Direct reference indicates terms that these units have directly put into their systems, while reconciliation is thanks to the LUX pipeline mechanism.
+
+<figure id="tab:ycba-vocab" style="text-align: center;">
+ <figcaption><strong>Table 8.3</strong>: YCBA - Usage of Getty Controlled Vocabularies</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Vocabulary</strong></th>
+<th><strong>Direct Reference</strong></th>
+<th><strong>After Reconciliation</strong></th>
+<th><strong>Both</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AAT</td>
+<td>4949</td>
+<td>417</td>
+<td>142</td>
+</tr>
+<tr>
+<td>ULAN</td>
+<td>1</td>
+<td>4062</td>
+<td>0</td>
+</tr>
+<tr>
+<td>TGN</td>
+<td>4</td>
+<td>3454</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+</figure>
+
+<figure id="tab:yuag-vocab" style="text-align: center;">
+ <figcaption><strong>Table 8.4</strong>: YUAG - Usage of Getty Controlled Vocabularies</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Vocabulary</strong></th>
+<th><strong>Direct Reference</strong></th>
+<th><strong>After Reconciliation</strong></th>
+<th><strong>Both</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AAT</td>
+<td>4189</td>
+<td>72</td>
+<td>4</td>
+</tr>
+<tr>
+<td>ULAN</td>
+<td>0</td>
+<td>9893</td>
+<td>0</td>
+</tr>
+<tr>
+<td>TGN</td>
+<td>4939</td>
+<td>12</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+</figure>
+
+This breakdown shows the significant role of the LUX platform in enriching the datasets of both museums. It is notable that {{ "AAT" | abbr | safe }} is heavily used directly by both units and {{ "TGN" | abbr | safe }} by {{ "YUAG" | abbr | safe }}, whereas {{ "ULAN" | abbr | safe }} is heavily incorporated through reconciliation.
+
+Overall, the consistency of Linked Art across LUX is quite satisfactory. The main challenges were navigating the Linked Art {{ "JSON" | abbr | safe }} schemas, which were occasionally out of date. In addition, the Linked Art examples have been heavily modified since the initial validation and no longer have the `Identifier` issue. Despite these improvements, the findings indicate that while terms referenced by {{ "AAT" | abbr | safe }} are the most shared entities between {{ "YUAG" | abbr | safe }} and {{ "YCBA" | abbr | safe }}, there is probably still room for further reconciliation of other entities to enhance the cross-interoperability within LUX.
+
+##### 8.2.2.2 IIIF Consistency {id="subsubsec:consistency-iiif"}
+
+In this subsection, I will evaluate the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources from the LUX platform in terms of compliance with the specifications. Manifests from {{ "YUAG" | abbr | safe }}, {{ "YPM" | abbr | safe }}, and {{ "YCBA" | abbr | safe }} are available both as versions 2.1 and 3.0 of the Presentation {{ "API" | abbr | safe }}. The following {{ "URL" | abbr | safe }} patterns are used for either serving Version 2.1 (default for {{ "YCBA" | abbr | safe }}) or 3.0 (default for the two other museums):
+
+- `https://manifests.collections.yale.edu/v2/<unit>/<obj|nat>/<id>`     
+- `https://manifests.collections.yale.edu/<unit>/<obj|nat>/<id>`
+
+{{ "YPM" | abbr | safe }}'s {{ "IIIF" | abbr | safe }} resources have `nat` in their {{ "URL" | abbr | safe }}s and the art museums have `obj` as a slug before the identifier. As for {{ "YUL" | abbr | safe }}, Manifests are available in version 3.0 at the following {{ "URL" | abbr | safe }}:
+
+- `https://collections.library.yale.edu/manifests/<id>`
+
+[Code Snippet 8.5](#lst:curl) is an example command to validate a {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resource against the validator installed locally. The command sends a request to the local instance of the validator, specifying the version of the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} (either 2.1 or 3.0) and the {{ "URL" | abbr | safe }} of the {{ "IIIF" | abbr | safe }} resource to be validated.
+
+<figure id="lst:curl" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.5:</strong> CURL Command Against a Local Instance of the IIIF Presentation API Validator
+</figcaption>
+ <!-- Wrap the code block in a container that is centered overall,
+ but text is left-aligned inside. -->
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-bash">
+curl "http://localhost:8080/validate?version=<2.1|3.0>&url=<iiif-resource-url>"
+</code></pre>
+</div>
+</figure>
+
+The results are returned as {{ "JSON" | abbr | safe }}, as shown in [Code Snippet 8.6](#lst:curl-result-v2.1) for a Version 2.1 Manifest and in [Code Snippet 8.7](#lst:curl-result-v3.0) for a Version 3.0 Manifest. These results indicate whether the {{ "IIIF" | abbr | safe }} resource is valid ($1$) or invalid ($0$) by the value of the `okay` field. Additionally, the response includes any potential `warnings` and errors found in the resource. The way errors are handled differs slightly between the two versions.
+
+<figure id="lst:curl-result-v2.1" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.6:</strong> JSON Responses against the Presentation API Validator: V2.1 Resource
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "okay": 1,
+  "warnings": [
+    "The remote server did not use the requested gzip transfer compression, which will slow access. (Content-Encoding: )",
+    "WARNING: Setting non-standard field 'rendering' on resource of type 'sc:Canvas'\n",
+    "WARNING: Setting non-standard field 'rendering' on resource of type 'sc:Canvas'\n",
+    "WARNING: Resource type 'sc:Manifest' should have 'description' set\n",
+    "WARNING: Resource type 'dctypes:Image' should have 'format' set\n",
+    "WARNING: Resource type 'dctypes:Image' should have 'format' set\n"
+  ],
+  "error": "None",
+  "url": "https://manifests.collections.yale.edu/v2/ycba/obj/53822"
+}
+</code></pre>
+</div>
+</figure>
+
+..<figure id="lst:curl-result-v3.0" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.7:</strong> JSON Responses against the Presentation API Validator: V3.0 Resource
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-json">
+{
+  "okay": 0,
+  "warnings": [],
+  "error": "",
+  "errorList": [
+    {
+      "title": "Error 1 of 2.\n Message: Additional properties are not allowed ('logo' was unexpected)",
+      "detail": "",
+      "description": "",
+      "path": "/[Additional properties are not allowed ('logo' was unexpected)]",
+      "context": {
+        "@ context": "http://iiif.io/api/presentation/3/context.json",
+        "id": "https://manifests.collections.yale.edu/ycba/obj/53822",
+        "type": "Manifest",
+        "label": "{ ... }",
+        "metadata": "[ ... ]",
+        "rights": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "requiredStatement": "{ ... }",
+        "logo": "[ ... ]",
+        "homepage": "[ ... ]",
+        "seeAlso": "[ ... ]",
+        "items": "[ ... ]"
+      }
+    },
+    {
+      "title": "Error 2 of 2.\n Message: 'https://creativecommons.org/publicdomain/zero/1.0/' does not match 'http://creativecommons.org/licenses/.*'",
+      "detail": "",
+      "description": "",
+      "path": "/rights/['https://creativecommons.org/publicdomain/zero/1.0/' does not match 'http://creativecommons.org/licenses/.*']",
+      "context": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "url": "https://manifests.collections.yale.edu/ycba/obj/53822"
+}
+</code></pre>
+</div>
+</figure>
+
+With the help of a forked version of the Presentation {{ "API" | abbr | safe }} Validator[^359], I created a shell script to automate the validation of multiple {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources using the {{ "CLI" | abbr | safe }}. The script prompts the user for the unit, version, base {{ "URL" | abbr | safe }}, starting identifier, and the desired number of valid manifests. It then incrementally generates {{ "URL" | abbr | safe }}s by adding sequential identifiers to the base {{ "URL" | abbr | safe }} and sends validation requests to the local instance of the validator for each generated {{ "URL" | abbr | safe }}. This method was particularly useful as the exact range of identifiers was unknown and, besides, there were no {{ "IIIF" | abbr | safe }} Collections available from Yale to be parsed.
+
+The script was designed with embedded logic to handle situations where certain identifiers might result in 404 errors, intending to skip these invalid {{ "URL" | abbr | safe }}s and continue crawling until the specified number of valid Manifests was attained. However, this logic did not work as intended. Instead of continuing beyond the specified range to achieve the desired count of valid manifests, the script stopped once it reached the end of the specified range, even if it had not yet processed the desired number of valid resources. As a result, some intended validations were skipped and not replaced by additional identifiers.
+
+The outputs are then saved into a consolidated {{ "JSONL" | abbr | safe }} file, maintaining a structured and easily readable format. This facilitates further analysis and reporting by providing a comprehensive and structured dataset of the validation results. [Table 8.5](#tab:iiif-base-urls) lists the base {{ "URL" | abbr | safe }} and respective version used for validating the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources.
+
+<figure id="tab:iiif-base-urls" style="text-align: center;">
+ <figcaption><strong>Table 8.5</strong>: Base Yale Manifest URLs and Respective Versions Used for Validation</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Unit</strong></th>
+<th><strong>V.</strong></th>
+<th><strong>Base URL</strong></th>
+<th><strong>Start ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ycba</td>
+<td>2.1</td>
+<td><code>https://manifests.collections.yale.edu/v2/ycba/obj/</code></td>
+<td>53800</td>
+</tr>
+<tr>
+<td>ycba</td>
+<td>3.0</td>
+<td><code>https://manifests.collections.yale.edu/ycba/obj/</code></td>
+<td>53800</td>
+</tr>
+<tr>
+<td>yuag</td>
+<td>2.1</td>
+<td><code>https://manifests.collections.yale.edu/v2/yuag/obj/</code></td>
+<td>53800</td>
+</tr>
+<tr>
+<td>yuag</td>
+<td>3.0</td>
+<td><code>https://manifests.collections.yale.edu/yuag/obj/</code></td>
+<td>53800</td>
+</tr>
+<tr>
+<td>ypm</td>
+<td>2.1</td>
+<td><code>https://manifests.collections.yale.edu/v2/ypm/nat/</code></td>
+<td>53800</td>
+</tr>
+<tr>
+<td>ypm</td>
+<td>3.0</td>
+<td><code>https://manifests.collections.yale.edu/ypm/nat/</code></td>
+<td>1629301</td>
+</tr>
+<tr>
+<td>yul</td>
+<td>3.0</td>
+<td><code>https://collections.library.yale.edu/manifests/</code></td>
+<td>16198300</td>
+</tr>
+</tbody>
+</table>
+</figure>
+
+Using the shell script, $100$ Manifests per version and per unit were crawled. Since {{ "YUL" | abbr | safe }} only had {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} 3.0, a total of $700$ {{ "URL" | abbr | safe }}s potentially discoverable on LUX were parsed with the validator. This resulted in the following outcomes:
+
+- V2.1 Manifests from {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "YPM" | abbr | safe }}:   These Manifests all validated successfully but had the following     warnings: the remote server did not use the requested gzip transfer     compression, which can significantly slow down access to the     resources. Gzip[^360] compression reduces the size of the data being     transferred, thereby speeding up the download process and reducing     the load on network bandwidth. Additionally, the warnings included     non-standard field `rendering` on resource of type `sc:Canvas`, and     resource type `dctypes:Image` should have `format` set.
+- V3.0 Manifests from {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "YPM" | abbr | safe }}:   These Manifests were all invalid and had minor error issues: the     `logo` property was not properly structured as it should be embedded     within the provider; the {{ "URL" | abbr | safe }} to Creative Commons should be     {{ "HTTP" | abbr | safe }} rather     than {{ "HTTPS" | abbr | safe }}[^361]; and in some     {{ "YUAG" | abbr | safe }}     Manifests, the language map construction was not leveraged     correctly, as `en` cannot be an array.
+- V3.0 Manifests from {{ "YUL" | abbr | safe }}:   These Manifests all validated successfully.
+
+[Figure 8.7](#fig:iiif-lux-validation) shows the distribution of valid Manifests, valid Manifests with warnings, invalid Manifests, and {{ "HTTP" | abbr | safe }} 404 responses across the different units and versions.
+
+<figure id="fig:iiif-lux-validation" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/iiif-lux-validation.png"
+alt="Validation Results of IIIF Presentation API Resources from Yale (Sample)"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.7</strong>:
+ Validation Results of IIIF Presentation API Resources from Yale (Sample)
+</figcaption>
+</figure>
+
+All of the errors in the Version 3.0 Manifests likely stem from conversions from Version 2.1 to 3.0. For example, the `logo` property could be at the top level in older versions but must now be embedded within the `provider` object, which is an array that includes the provider's details. The `logo` itself should be a list of image objects associated with the provider. Similarly, the language map construction logic has been updated in the more recent specification to improve internationalisation efforts. Additionally, the Presentation {{ "API" | abbr | safe }} specifies that the {{ "HTTP" | abbr | safe }} form of Creative Commons license {{ "URI" | abbr | safe }}s should be used for machine readability, even though {{ "HTTPS" | abbr | safe }} is recommended for human-readable contexts.
+
+The following section synthesises these findings and provide further insights into the deployment of {{ "LOUD" | abbr | safe }} standards within LUX.
 
 ### 8.3 Synthesis and Insights {id="sec:synthesis-insights-8"}
 
-(...)
+This section, which summarises the empirical research into the large-scale use of {{ "LOUD" | abbr | safe }} within the LUX platform, is divided into two subsections, one for each research question or objective, emphasising the collaborative aspect that emerged from the interviews and then pointing out the relative character of sheer consistency with standards.
+
+#### 8.3.1 Cross-Unit Collaboration {id="subsec:cross-unit"}
+
+The success of the collaboration at Yale can be attributed to a shared vision that recognises the value of highlighting the connections between our diverse collections across different domains. This shared vision has enabled the resources of all participating units to contribute significantly over a number of years through active participation in committees, working groups and unit-level development efforts.
+
+The LUX project has successfully fostered collaboration among various units at Yale, bringing together libraries and museums to work on a unified platform. The technological foundation of LUX, based on open standards, offers innovative features for data integration and organisation, facilitating cross-collections discovery. This collaborative environment has the potential to transform teaching, learning, and research, generating interest and demonstrating potential for other institutions. High-level support from leadership, particularly Susan Gibbons as Vice Provost, has been crucial in building trust and ensuring the project's success as a valuable discovery layer.
+
+Despite the positive outcomes, several challenges and areas for improvement have been identified. One major issue is the unresolved question of ownership and decision-making for LUX, which complicates resource allocation and responsibility assignments. Data quality and consistency present another challenge, particularly with library data, and the lack of dedicated resources for data cleanup and reconciliation hinders transparency and effectiveness. Additionally, the advanced search feature of LUX requires further enhancement to improve its intuitiveness, and the separation of `Objects` and `Works` on the {{ "GUI" | abbr | safe }} has been confusing for some users. There is also a variation in the perception of principles such as {{ "FAIR" | abbr | safe }} and {{ "LOUD" | abbr | safe }}, with some stakeholders placing high importance on them, while others view them as secondary or are unaware of them.
+
+The topic modelling exercise revealed actor-networks composed of organisations, individuals, and non-human actors that are intricately intertwined. This analysis provides insights into the complex web of relationships that sustain the LUX initiative. These findings resonate with the work of Ashwin Jacob Mathew, who in an ethnographic study of the internet, highlighted that it is maintained by a variety of social and technical relationships built on trust and technique [@mullaney_internet_2021]. This concept, echoing the notion of [see @pawlicka-deger_infrastructuring_2022], underscores the importance of ongoing processes and relationships in maintaining and evolving infrastructure, similar to the collaborative efforts seen in LUX.
+
+Ultimately, the lessons learned from cross-unit collaboration at Yale underscore the importance of a shared vision and strong leadership support in driving successful projects. While challenges remain, LUX's collaborative model offers a promising framework for future initiatives within and beyond the confines of this university.
+
+#### 8.3.2 As Consistent as Required {id="subsec:consistent-required"}
+
+Ensuring full consistency in data across different institutions and platforms is challenging. The balance lies between achieving semantic consistency that can be reconciled or matched across diverse datasets and maintaining sound {{ "UX" | abbr | safe }} that remains intuitive and functional across various {{ "GUI" | abbr | safe }}s, mostly embodied by compliant viewers or players, from one institution to another.
+
+Adherence to {{ "LOUD" | abbr | safe }} standards and schemas within LUX has generally been positive. However, specific issues arise, particularly when transitioning between versions of a specification. For instance, the `logo` property, which could be appended at the top level in Version 2.1 of the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }}, must now be embedded within the `provider` object in Version 3.0. This transition can be problematic for validators, as they might flag such properties as errors. Nevertheless, clients like Mirador can still display the logo correctly upon parsing the Manifest. This makes it currently acceptable but client-dependent. Maintaining strict consistency with the {{ "API" | abbr | safe }} is crucial for large institutions that could serve as examples for others, particularly those that are {{ "IIIF-C" | abbr | safe }} members.
+
+For Linked Art representations in LUX, achieving consistency within the {{ "API" | abbr | safe }} entity endpoints is fundamental to ensuring interoperability beyond the portal, positioning it as a flagship for Linked Art implementation. For {{ "IIIF" | abbr | safe }}, as long as key clients such as {{ "UV" | abbr | safe }} and Mirador can accurately interpret the data patterns, the focus on strict consistency can be loosened to some extent. However, maintaining a high level of consistency remains a prerequisite for success, ensuring that data can be seamlessly integrated and used across different platforms and institutions.
+
+In conclusion, while LUX's adherence to {{ "LOUD" | abbr | safe }} standards and schemas is commendable, the initiative must continue to address specific consistency issues to enhance (semantic) interoperability. The following section will explore the broader perspectives of the LUX initiative and its implications for the {{ "CH" | abbr | safe }} field, highlighting the lessons learned and potential future developments.
 
 ### 8.4 Perspectives {id="sec:perspectives-8"}
 
-(...)
+This chapter has explored the complexities and achievements of the LUX initiative at Yale, highlighting the importance of cross-unit collaboration, technical innovations, and the adherence to standards. Looking forward, the LUX platform continues to evolve, offering valuable lessons for other institutions in the {{ "CH" | abbr | safe }} field.
+
+The LUX platform is dedicated to a multi-faceted approach for its development and expansion. Actively collecting user feedback through a form available on each page, the platform leverages this input to continually refine its services and features. Additionally, LUX will broaden its scope by incorporating more collections, including those from renowned institutions like the Paul Mellon Centre in London[^362]. Furthermore, their commitment to updating descriptive metadata aims to enhance the accuracy of collection descriptions and reduce any inherent biases. These efforts are guided by the Bias Awareness and Responsibility Committee, ensuring a more equitable representation of cultural heritage [@metcalfe_hurst_lux_2023 p. 4].
+
+The integration of external data sources, such as Wikimedia statements for public domain images, introduces new dimensions and challenges to the LUX platform. While enriching the dataset, it also poses issues where queries may return unrelated results due to these external statements. For instance, searching for might return results related to ‘Bird of paradise’. This highlights the need for ongoing refinement in query handling and data integration processes to maintain relevance and accuracy in search results.
+
+One of the key insights from the LUX initiative is that a Linked Data-driven infrastructure does not necessarily necessitate {{ "SPARQL" | abbr | safe }} for its implementation. The use of community-driven {{ "JSON-LD" | abbr | safe }}-based specifications has enabled the platform to maintain interoperability and data consistency without the complexity of {{ "SPARQL" | abbr | safe }} queries. This approach simplifies the adoption and integration process for institutions with varying levels of technical expertise, promoting wider usage and collaboration. Additionally, by leveraging MarkLogic, a multi-modal database, LUX benefits from robust data management capabilities [@sanderson_implementing_2024]. Although MarkLogic is a paid service, all the processes related to its use -- such as {{ "API" | abbr | safe }} usage, build tools and tasks, data constants, database indexing, or performance testing procedure -- along with the data pipeline, have been made open source as part of the LUX project. This transparency further encourages collaboration and adoption by other institutions.
+
+The experiences and lessons learnt from LUX provide valuable insights for other institutions looking to implement similar projects. The success of the LUX platform underscores the importance of high-level support, interdisciplinary collaboration, and a commitment to standards compliance. Other institutions can draw from these experiences to enhance their own digital collections and discovery platforms. That said, the requirements of the {{ "API" | abbr | safe }} ecosystem, such as the implementation of {{ "HAL" | abbr | safe }} and the {{ "IIIF" | abbr | safe }} Change Discovery {{ "API" | abbr | safe }} for deploying Linked Art, as LUX has done, are quite significant. Consolidation work within the Linked Art community is needed to help support smaller institutions in adopting this ecosystem. For LUX, the ecosystem they have built will need to be updated once Linked Art comes to an agreement on how to have sound naming conventions using {{ "HAL" | abbr | safe }} for back-links, which is necessary to drive the {{ "GUI" | abbr | safe }} affordances as well.
+
+In reflecting on the broader implications of the LUX initiative, it becomes clear that innovation within the digital space is a multifaceted concept that extends beyond technological advancements. It encompasses innovative approaches to knowledge building and production methods, often influenced by interdisciplinary fields. @nell_smith_frozen_2014 highlights the need to question what counts as innovation, particularly the contributions of critical and feminist studies to {{ "DH" | abbr | safe }}.
+
+> Innovation continues to be a hot term, especially in the digital world. What counts as innovation should persistently be questioned, especially since technological innovation has repeatedly overshadowed innovations in knowledge building, including methods of knowledge production. These suggestions all come from methods generated by feminist criticism and theory, critical race studies, sexuality studies and queer theory, and class studies and have advanced and otherwise improved my own work, and, as is surely obvious, can improve the work of digital humanities, scholarly editing, computer science, information studies, library science and humanities computing. The frozen social relations of old orders can and should be thawed in order to enable sociological innovations, which should be key and self-consciously incorporated into the production of any postcolonial digital archive [@nell_smith_frozen_2014]
+
+Large-scale Linked Data projects such as LUX need to be enabled by the adoption of sound socio-technical principles. These principles ensure that technological innovations are balanced with social and institutional considerations, fostering an environment where both data and human (f)actors are aligned towards common goals. Interdisciplinary committees, such as those focused on metadata or bias awareness, play a crucial role in achieving mutual agreement and, most importantly, in recognising the diverse perspectives and contributions of all current and past contributors.
+
+As LUX moves forward, it will continue to focus on user feedback, integrating new collections, and updating metadata to improve accuracy and representation. These efforts will ensure that LUX remains a flagship project for the integration and discovery of {{ "CH" | abbr | safe }} data leveraging {{ "LOUD" | abbr | safe }} specifications and their design principles, setting a benchmark for other institutions in the field.
 
 ## 9. Discussion {id="cha:discussion"}
 
