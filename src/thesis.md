@@ -4696,19 +4696,207 @@ As with the previous chapters, the findings of this research are compiled in [Se
 
 ### 8.1 Large-Scale Deployment of LOUD at Yale {id="sec:large-scale-loud"} 
 
-This section examines the use of {{ "LOUD" | abbr | safe }} at Yale University. It is divided into three parts: the background to the LUX initiative is detailed in [8.1.1](), the technology stack used is outlined in [8.1.2](), and a series of interviews conducted in 2023 with Yale staff members involved in developing LUX is covered in [8.1.3](). This structure provides an account of the deployment, from its conceptualisation to its technological realisation, as well as practical insights from its implementers.
+This section examines the use of {{ "LOUD" | abbr | safe }} at Yale University. It is divided into three parts: the background to the LUX initiative is detailed in [8.1.1](#subsec:lux-background), the technology stack used is outlined in [8.1.2](#subsec:lux-technology), and a series of interviews conducted in 2023 with Yale staff members involved in developing LUX is covered in [8.1.3](#subsec:lux-interviews). This structure provides an account of the deployment, from its conceptualisation to its technological realisation, as well as practical insights from its implementers.
 
-(...)
+#### 8.1.1 Background {id="subsec:lux-background"}
 
-#### 8.1.1
+The trajectory of the LUX platform[^332] at Yale began over a decade ago, marked by a series of strategic developments aimed at improving digital access and infrastructure across {{ "CH" | abbr | safe }} units. The journey began in 2008 with the establishment of the Office for Digital Access and Infrastructure and the creation of the first shared {{ "DAM" | abbr | safe }} system. This system initially connected the collections of {{ "YUAG" | abbr | safe }}, {{ "YCBA" | abbr | safe }} and {{ "YPM" | abbr | safe }}, providing a basic framework for subsequent digital integration efforts. In fact, the development of LUX was built on a series of incremental steps.
 
-(...)
+In 2011, Yale University adopted an {{ "OA" | abbr | safe }} policy and launched its first-generation cross-collection discovery platform, which included digital assets from its major {{ "CH" | abbr | safe }} collections. This platform was a precursor to the LUX system and demonstrated Yale's commitment to making its vast resources more accessible and connected.
 
-#### 8.1.2
+The appointment of Susan Gibbons in 2016 as first Vice Provost for {{ "CSC" | abbr | safe }} significantly advanced these initiatives. Her leadership coincided with the creation of the {{ "CHIT" | abbr | safe }} Pillar in 2017, which brought together {{ "CH" | abbr | safe }} directors and {{ "ITS" | abbr | safe }} representatives on a regular basis, fostering a collaborative environment critical to the subsequent phases of the project.
 
-(...)
+2018 saw the launch of a five-year project to improve access to Yale's collections, supported by initial project funding and an expanded scope to include {{ "YUL" | abbr | safe }} bibliographic records and archival finding aids. The following year, 2019, was pivotal, with the adoption of {{ "IIIF" | abbr | safe }} as the image standard for the collections, the beginning of project management, and a significant grant from the Andrew W. Mellon Foundation to support metadata reconciliation and harmonisation efforts.
 
-#### 8.1.3
+The proof of concept, based on Blacklight[^333], for LUX in 2020 united data from over 15 million object records into a shared index, marking a major milestone in the project. Despite budget cuts due to the COVID-19 pandemic, the project continued with the refinement of the metadata schema and the addition of Robert Sanderson to lead these efforts[^334].
+
+Although this proof of concept was an achievement in that it demonstrated the ability to integrate data from all units. However, it also showed that the interface did not meet the functional expectations. As a result, a technology evaluation process called a was initiated. Teams of community members from across {{ "CHIT" | abbr | safe }} - the museums, {{ "YUL" | abbr | safe }} and {{ "ITS" | abbr | safe }} - looked at a number of technology stacks and made an informed recommendation within a few months. LUX has been governed by several committees and groups[^335]. The {{ "CHIT" | abbr | safe }} Steering Committee oversees all strategic decisions, supported by technical and interdisciplinary collaboration teams such as the Cross-Collections Discovery Working Group, Cultural Heritage Information Technology Architecture, the Metadata Working Group, and the Bias Awareness and Responsibility Committee.
+
+In 2021, after a thorough six-month evaluation of technologies, the LUX project entered the build phase of LUX 1.0. By 2022, all metadata from participating units had been ingested into LUX, and internal reviews of the beta version began, leading to its public release in May 2023.
+
+At the time of writing, LUX integrates over 17 million objects, over 5 million agents (people and groups), over 600,000 places, some 4.8 million concepts, over 38,000 events, and over 13 million works from Yale's diverse collections (as seen in [Figure 8.1](#fig:lux-gui)), facilitating access and connectivity through a platform built on Linked Art. This format is not only appropriate for art museums, but has also proven adaptable to mapping library and archival data, thereby addressing cross-disciplinary challenges and ensuring that the LUX platform remains a vital resource for scholars, researchers and the general public, enabling detailed exploration of Yale's vast {{ "CH" | abbr | safe }} resources.
+
+<figure id="fig:lux-gui" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/lux-gui.png"
+alt="Snapshot of the LUX GUI (23 May 2024)"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.1</strong>:
+ Snapshot of the LUX GUI (23 May 2024)
+</figcaption>
+</figure>
+
+Through collaboration and a shared understanding of responsibilities, Yale has established a data architecture in which each unit is responsible for providing data in a format and structure that supports a consistent approach to data harvesting. This approach allows for easy updates and future enhancements. This collaborative effort has not only facilitated numerous improvements to the dataset, but has also led to advances in the technologies used.
+
+The following subsection on the technology stack, in particular the LUX Data Transformation Pipeline, looks at the specific technologies and strategies used to achieve these optimisations and functional integrations.
+
+#### 8.1.2 Technology Stack {id="subsec:lux-technology"}
+
+This subsection explores the comprehensive technology stack that underpins the LUX platform at Yale, detailing its architectural components, collaborative development processes and integration with external data sources. It covers the initial design principles, system components, data management procedures and continuous data quality improvement efforts. Key elements of the architecture and data pipeline are illustrated in [Figure 8.2](#fig:lux-pipeline) and [Figure 8.3](#fig:lux-pipeline-annotated), providing a visual representation of the workflows and technologies involved.
+
+LUX was initially designed with a strong emphasis on standards compliance and interoperability [@sanderson_linking_2023]. This design approach includes the use of {{ "AS" | abbr | safe }} and {{ "JSON-LD" | abbr | safe }} for efficient data harvesting, Linked Art to facilitate data sharing across domains, and {{ "IIIF" | abbr | safe }} for seamless image delivery. To enable efficient data interpretation and simplify the work for software engineers, each collection exports their content using {{ "JSON-LD" | abbr | safe }}, which can be interpreted as triples. The choice was made to employ a low-level ontology, specifically Linked Art. LUX also uses {{ "HAL" | abbr | safe }} to generate the accordions in the {{ "GUI" | abbr | safe }} through the `_links` properties.
+
+As noted by @sanderson_lux_2023, LUX functions primarily as an aggregator, with individual institutions retaining ownership of their data. This arrangement fosters a highly collaborative environment, characterised by engagement and experimentation that drives consensus building. Described as ‘contagious’, this cooperative spirit fosters community-wide collaboration. Guided by agreed models for governance and cost-sharing, LUX integrates {{ "LOUD" | abbr | safe }} standards and adheres to the self-defined {{ "SHARED" | abbr | safe }} technical principle. The platform's front-end facilitates user interaction by seamlessly handling all Linked Data under the hood, eliminating the need for stakeholders to learn {{ "SPARQL" | abbr | safe }}. In addition, LUX's advanced search capabilities feature graph queries that balance search depth and performance, limiting computation times to one minute to optimise responsiveness and usability.
+
+The architecture of LUX consists of several interconnected components: data harvesting, data pipeline, back-end database, middle tier and front-end. These components have been integrated according to some of the established standards mentioned earlier, allowing any individual component to be replaced without requiring a complete rewrite of the system. Hosted by Amazon, LUX benefits from the widespread adoption and robust support within the software development community for technologies such as Python, JavaScript, Node.js and React.
+
+Moreover, LUX harnesses the power of an enterprise-class, multi-modal back-end database, increasing its efficiency. To encourage collaboration and knowledge sharing, the code for all components of LUX, including the custom code for MarkLogic[^336], has been made open source and available to the wider community[^337] [see @cahill_open-source_2024].
+
+The LUX platform is characterised by its extensive connections, not only within Yale units, but also beyond, through the inclusion of external data sources during data processing. These sources cover different subject areas and perspectives and are available as Linked Data, enriching the information available to users by matching records in LUX. For example, one of the key processes used to match works and objects is the integration of Wikidata records, providing the ability to make meaningful associations between objects from units, such as those within the {{ "YCBA" | abbr | safe }} collection, and related works. They also include additional names and terms from authority records and subject headings of libraries like {{ "GND" | abbr | safe }}[^338], {{ "LoC" | abbr | safe }}[^339], or the {{ "NDL" | abbr | safe }}[^340], as well as the {{ "VIAF" | abbr | safe }}[^341]. This strategic approach requires careful anticipation of the requirements for Linked Data integration, accompanied by a concerted effort to foster extensive collaboration within the {{ "YCBA" | abbr | safe }} unit. In particular, the scope of authority control procedures at {{ "YCBA" | abbr | safe }} encompasses all collections, further emphasising the need for extensive collaboration. In addition, collaborative efforts extend beyond the {{ "YCBA" | abbr | safe }} unit to include partnerships with external services and inter-unit collaborations between the {{ "YCBA" | abbr | safe }} and the {{ "YUAG" | abbr | safe }}. This collaborative approach is particularly evident in the joint exhibitions mounted by the two units.
+
+[Figure 8.2](#fig:lux-pipeline) depicts the overall data transformation, reconciliation, enrichment and publication workflow for LUX. The base records come from both internal and external sources, with internal records being harvested through the {{ "IIIF" | abbr | safe }} Change Discovery {{ "API" | abbr | safe }} [see @raemyAnalysisUsabilityAutomatically2024]. The processes (represented by diamonds) are described hereafter. The source code of the pipeline, which notably includes the identifier map of equivalencies and their associated indexes, was also released on GitHub in March 2024[^342].
+
+<figure id="fig:lux-pipeline" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/lux-arch-simple.png"
+alt="LUX Data Pipeline and Architecture"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.2</strong>:
+ LUX Data Pipeline and Architecture
+</figcaption>
+</figure>
+
+- **Harvest**:   It runs nightly and is triggered by an operating system level     scheduler to poll each stream to find and retrieve records that have     changed since the previous harvest.
+- **Transform**:   The records are passed through source specific transformation     routines in order to either map from arbitrary data formats, or to     validate and clean up records already provided in Linked Art.
+- **Reconcile**:   This process is conducted to discover further identities from the     various datasets to be able to collect all information about a     particular entity eventually into a single record.
+- **Re-Identify**:   It maps the original {{ "URI" | abbr | safe }}s of the records to the internal     identifiers.
+- **Merge**:   The records from multiple sources that have been mapped to the same     identifier are merged together to form the single record.
+- **Load**:   The resulting dataset is then annotated with some additional     features for indexing and exported to MarkLogic.
+
+[Figure 8.3](#fig:lux-pipeline-annotated) shows an annotated version of the data pipeline, detailing specific Python scripts required for each step of the process or for handling different datasets. For example, when mapping and establishing dependencies, it's necessary to consider the different systems used by different units, such as {{ "ILS" | abbr | safe }} and {{ "TMS" | abbr | safe }}. A specific example is the {{ "YCBA" | abbr | safe }}, where data harvesting moves from {{ "LIDO" | abbr | safe }} format to Linked Art. In addition, the middle tier of the architecture manages four separate instances of LUX -- primary, backup, development and sandbox -- each customised for specific operational needs. The platform uses code libraries such as LinkedArt.js (JavaScript) and Cromulent (a Python library), which include built-in validation and convenience functions [@sanderson_linked_2024]. These tools exemplify the level of engineering sophistication of the LUX platform, guaranteeing its adaptability and efficiency in a variety of data integration scenarios.
+
+<figure id="fig:lux-pipeline-annotated" style="margin: 0 auto; text-align: center;">
+ <img
+src="data/Figures/lux-arch-annotated.png"
+alt="Annotated LUX Data Pipeline and Architecture"
+style="width: 100%; display: block; margin: 0 auto;" />
+<figcaption>
+<strong>Figure 8.3</strong>:
+ Annotated LUX Data Pipeline and Architecture
+</figcaption>
+</figure>
+
+This integration significantly enhances the record by combining knowledge from different Yale units, the Getty's {{ "ULAN" | abbr | safe }}, European national libraries and other external sources. This is an example of the positive impact and improvement that can be achieved by linking disparate data sources. The linking process is automated within the data processing code, using equivalent {{ "URI" | abbr | safe }}s and intelligent matching of names associated with people, places and things. However, matching and merging data into a single LUX record can be a complex task. Data quality is affected by human imperfections, as all data is derived from human input. As a result, efforts are constantly being made to refine and improve the matching process as part of a continuous improvement process.
+
+Having discussed the technology behind the LUX platform, I now turn to the perspectives of a few of the Yale staff who worked on it. The next section is an account of interviews conducted in 2023 with team members involved in the development of LUX, offering a reflection on the project shortly after its official launch, their experiences, the challenges they faced, and the results of their efforts. It provides a personal account of the collaboration and technological development that went into LUX.
+
+#### 8.1.3 Interviews {id="subsec:lux-interviews"}
+
+In May 2023, a number of interviews were conducted with 20 individuals associated with the LUX project at Yale University[^343]. These interviews, which included both one-on-one and group sessions with up to four participants, took place over nine separate sessions. Two of these sessions were conducted via Zoom to accommodate remote participants, while the remaining seven were held face-to-face on the Yale campus in New Haven, CT, USA. Each interview was designed to last approximately 45 minutes and prior to these sessions, each participant was provided with a consent form and a prepared questionnaire to streamline the discussion and ensure that all relevant topics were adequately covered.
+
+The consent form explained the aims of the study, the voluntary nature of their participation, their right to withdraw at any time, and detailed the process of audio recording and verbatim transcription for analysis as part of my PhD. It emphasised that the data collected would be stored securely, accessible only to myself, and could be used for future research with all identifying information removed or pseudonymised to ensure confidentiality. One copy of the transcript was also given to all participants to review and confirm their comfort with the recorded content.
+
+To further protect the integrity of participants, those who agreed to have their names disclosed and their statements published underwent a secondary verification process. This process allowed them to review and amend their contributions in order to ensure accuracy and satisfaction with the representation of their views. Of the 20 participants, thirteen agreed that their names and any quotes from them could be published in this thesis or any related report.
+
+##### 8.1.3.1 Themes and Questions {id="subsubsec:themes-questions"}
+
+The interview questions were systematically organised around four main themes: Mission & Values, Collaboration, Technology and Principles. This organisation helped to guide the interviews, although not all questions were asked of each participant. Instead, the selection of questions was specifically tailored to the expertise and role of each interviewee, allowing for more focused and meaningful discussions. For example, technical questions about the infrastructure or data interoperability of the platform were directed at software developers and data engineers, while broader questions about the impact and overarching values of LUX were asked of a wider audience. This approach ensured that each session was both focused and adaptable, providing comprehensive feedback on both the operational and strategic dimensions of the LUX platform, as detailed in [Table 8.1](#tab:lux-interview-questions).
+
+<figure id="tab:lux-interview-questions" style="text-align: center;">
+ <figcaption><strong>Table 8.1</strong>: LUX Interview Questions</figcaption>
+<table style="margin: 1em auto;">
+<thead>
+<tr>
+<th><strong>Topic</strong></th>
+<th><strong>Questions</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mission & Values</td>
+<td>1) How would you define the LUX platform in a few words?<br>
+2) What impact has LUX had internally and/or outside Yale?<br>
+3) What does LUX do that previous systems haven't?</td>
+</tr>
+<tr>
+<td>Collaboration</td>
+<td>4) Has LUX succeeded in bringing together people from different units at Yale? Were you equipped with all the necessary tools or methods to work together?<br>
+5) How did you manage to build consensus? Can you give me an example of a successful and unsuccessful scenario of consensus building?<br>
+6) Has the LUX platform brought you closer to national or international communities and working groups (such as LD4, IIIF or Linked Art)?</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>7) Infrastructure a) For everyone: What do you find innovative about the technological foundation you have deployed?<br>
+7) Infrastructure b) For software developers and data engineers: Can you explain the steps involved in designing the LUX data pipeline?<br>
+7) Infrastructure c) For software developers: How do you plan to measure usage of the system?<br>
+8) Data Usability a) For everyone: To what extent is the data on the LUX platform easily reusable (on the user interface or/and with the APIs)?<br>
+8) Data Usability b) For software developers and data engineers: How usable was the data for building LUX?<br>
+8) Data Usability c) For software developers and data engineers: How can you ensure data concurrency and consistency?<br>
+9) Interoperability a) For everyone: How do you assess the mapping process that has been done to expose the metadata in Linked Art? Would you have used other standards and/or serialisation formats?<br>
+9) Interoperability b) For software developers: How much computational effort is required to generate IIIF and Linked Art resources?<br>
+9) Interoperability c) For software developers, metadata experts, data engineers, and semantic architects: How to assess the semantic interoperability of the data produced for LUX? How to ensure that the data can be easily reconciled with other datasets?</td>
+</tr>
+<tr>
+<td>Principles</td>
+<td>10) The LOUD standards, which include the IIIF Presentation API and Linked Art, have their own design principles and LUX is based on the FAIR data Principles and SHARED technical principles.<br>
+a) Have these principles provided you with any real guidance?<br>
+b) Which of these principles do you feel have been achieved?<br>
+c) Are there any other principles (or norms, best practices) that you feel are relevant to LUX?</td>
+</tr>
+<tr>
+<td>Misc</td>
+<td>Further comments</td>
+</tr>
+</tbody>
+</table>
+</figure>
+
+A dual method of capturing data was adopted during the interviews: I transcribed key points directly into a spreadsheet for real-time analysis and tracking, while simultaneously recording the interviews for comprehensive documentation. This approach allowed for immediate adjustments to the questioning process - questions could be rephrased or redirected on-the-fly based on the flow of the conversation and preliminary findings from the real-time notes.
+
+To convert the recorded audio into text,, Whisper[^344], an {{ "ASR" | abbr | safe }} system, was used. Whisper is designed to provide robust and accurate speech-to-text capabilities and supports multiple languages. It has been trained on a wide range of data collected from the internet and has shown considerable ability to understand different types of accents and dialects, making it an ideal choice for transcribing the varied responses of the interview participants [@radford_robust_2022]. The transcription process was facilitated using the {{ "CLI" | abbr | safe }}. The specific commands executed to transcribe the interviews from audio files into text are detailed in [Code Snippet 8.1](#lst:whisper-cl).
+
+<figure id="lst:whisper-cl" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.1:</strong> Command to Transcribe the Interviews into Audio Files Using Whisper
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-bash">
+~ % for f in *.wav ; do whisper $f --fp16 False ; done
+</code></pre>
+</div>
+</figure>
+
+This sequence is designed to systematically process each `.wav` file located in a specified directory to transcribe the audio content into plain text. It is a Bash loop that iterates over all `.wav` audio files. For each file, it invokes Whisper with the parameter `–fp16 False`, which specifies that the floating point precision should be maintained at 32 bits for better accuracy during the transcription process. This option is particularly useful when the quality of audio files varies or when the highest possible accuracy is required, as it ensures the neural network computations retain more information during processing.
+
+The command does not specify a particular model, which means it defaults to the `base` model unless otherwise configured. This model strikes a balance between speed and accuracy, making it suitable for general purposes where the audio quality is reasonable and the content does not require intensely detailed linguistic analysis. Each transcription is then saved in a separate text file corresponding to its `.wav` file, ensuring that the data remains organised and each session's content is easily accessible for further review and analysis. Whisper automatically detected that the recordings were in English and adjusted its processing to optimise for English language transcription.
+
+Once transcribed, the raw text files were converted into a more manageable format for content analysis. The conversion process involved formatting the transcribed text into `.md` files, which are easier to handle and annotate than plain text files. This was achieved by using the `sed` command to insert newline characters between successive blank lines in the text files, effectively creating a new paragraph for each spoken segment. The `awk` utility was then used to ensure proper line spacing in the final Markdown documents. The command used for this conversion is shown in [Code Snippet 8.2](#lst:md-newlines).
+
+<figure id="lst:md-newlines" style="text-align: center;">
+ <figcaption>
+<strong>Code Snippet 8.2:</strong> Command to Convert Text files into Markdown with New Lines
+</figcaption>
+<div style="display: inline-block; text-align: left;">
+<pre><code class="language-bash">
+~ % sed -e 's/^$/\n/g' transcript.txt \
+  | awk '{ printf "%s\n\n", $0 }' > transcript.md
+</code></pre>
+</div>
+</figure>
+
+These Markdown files then served as the primary source for detailed analysis, allowing easy navigation through the interview content and facilitating data management and retrieval.
+
+##### 8.1.3.2 Findings {id="subsubsec:interview-findings"}
+
+Upon reviewing the transcriptions, the interviews revealed a rich description and perception of LUX. The following passages provide an overview of these findings, supported by selected quotes from participants. This is followed by a distant reading process using topic modelling to uncover further threads of interest.
+
+LUX is perceived as a ground-breaking search and discovery tool that brings together disparate {{ "CH" | abbr | safe }} data, enabling users to explore and discover connections between collection items. The platform is seen as having transformative potential for teaching, learning and research. Internally, it has fostered collaboration, increased the visibility of participating units, and demonstrated the feasibility of integrating current technology. Externally, LUX has attracted significant interest from other institutions, highlighting its potential impact on a wider scale.
+
+Emmanuelle Delmas-Glass, Head of Collections Information Access at {{ "YCBA" | abbr | safe }}, expressed some nuanced concerns:
+
+> I do have concerns about how LUX is perceived at times and its positioning as a highly sophisticated technical tool. While it certainly possesses advanced capabilities, it is important to remember that it is not solely defined by its technical complexity <br/> Emmanuelle Delmas-Glass, Head of Collections Information Access, {{ "YCBA" | abbr | safe }}
+
+Collaboration across units at Yale has been a notable success of the LUX project, fostering interactions between libraries and museums. However, challenges in decision-making have been identified, particularly around the issue of ownership. Despite Susan Gibbons' leadership, the question of who owns LUX remains unresolved. Efforts to promote LUX through training and campus discussions have faced hurdles in terms of resource allocation and division of responsibilities. The impact of COVID-19 has been unexpectedly positive, increasing participation and trust through virtual meetings. Heather White, User Experience Designer at {{ "ITS" | abbr | safe }}, highlighted the project's dedication to sustainable development:
+
+> Unlike previous projects at Yale, LUX stands out as the first one with a post-launch plan, demonstrating a commitment to sustainability and ongoing development. This is in stark contrast to the common practice of addressing issues and implementing requested features on an ad hoc basis without a clear roadmap. LUX, on the other hand, has upcoming releases and planned features that were not initially included, indicating a long-term staffing and development strategy. However, it is worth noting that, similar to most projects at Yale, there is still a lack of dedicated product management. <br/> Heather White, User Experience Designer, {{ "ITS" | abbr | safe }}
+
+The consensus-building process for mapping metadata in Linked Art, while generally successful, faced some disagreements and challenges, particularly between data owners and mapping teams. The iterative, collaborative process involving Linked Art and {{ "JSON-LD" | abbr | safe }} proved beneficial. Future projects could benefit from consolidating collaborative norms and achieving coherence in both technical and social aspects. Long-term support and prioritisation of LUX amidst staff turnover and changing institutional priorities requires careful planning and commitment. Peter Clarke, a Full Stack Engineer at {{ "ITS" | abbr | safe }}, shared his experience with Linked Data:
+
+> Working with Linked Data was an interesting experience for me, as it revealed the fascinating connections that can be discovered across different products. It provided me with valuable exposure to triples and expanded my understanding of document databases and JSON-based indexing. This shift in technology, particularly in how we handle data, has been the most significant change for me personally <br/> Peter Clarke, Full Stack Engineer, {{ "ITS" | abbr | safe }}
+
+Key individuals played a pivotal role in the success of LUX. Susan Gibbons' high-level support as Vice Provost facilitated trust and established LUX as a layer of discovery without replacing existing units. Sarah Prown's role as project manager was central to fostering collaboration and audience engagement, with norms and boundaries that built trust. Robert Sanderson's facilitation and collaboration with developers was also significant, despite some challenges in communicating the potential of Linked Art. His strategic role, particularly with a documented {{ "API" | abbr | safe }}, is expected to encourage future cross-collection projects such as hackathons.
 
 (...)
 
