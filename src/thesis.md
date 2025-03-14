@@ -4685,13 +4685,13 @@ To conclude this chapter, I have, with the help of my colleagues, as well as mem
 
 > The LUX initiative has created a model of collegial and productive collaboration that colleagues at Yale can look to. This collaborative approach extends beyond Yale, and I hope it has a trickle-down effect on the thinking of those who develop systems for libraries and museums. It remains to be seen how this initiative will influence the broader community and shape the future of museum system development.<br/> Heather Gendron, Director, Robert B. Haas Family Arts Library, {{ "YUL" | abbr | safe }}
 
-This chapter initiates the third and final empirical investigation of the thesis, exploring the application of {{ "LOUD" | abbr | safe }} specifications on the LUX platform at Yale University, as detailed in [Section 8.1](#sec:large-scale-loud). Additionally, it examines the consistency of Linked Art and {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources within LUX, as discussed in [Section 8.2]().
+This chapter initiates the third and final empirical investigation of the thesis, exploring the application of {{ "LOUD" | abbr | safe }} specifications on the LUX platform at Yale University, as detailed in [Section 8.1](#sec:large-scale-loud). Additionally, it examines the consistency of Linked Art and {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} resources within LUX, as discussed in [Section 8.2](#sec:la-iiif-consistency).
 
 The impetus for this investigation arose from preliminary insights obtained from the {{ "PIA" | abbr | safe }} research project, which suggested that relying almost exclusively on those empirical findings may not fully capture the complexities of developing and sustaining {{ "LOUD" | abbr | safe }}-compatible infrastructures. Following an important PhD midway meeting in February 2023 [@raemy_linked_2023], which underscored the need for more practical engagement, I arranged a ten-day visit to Yale in May 2023. This visit, a direct follow-up to an in-person Linked Art meeting, aimed to deepen my understanding of the specific challenges and strategies involved in implementing {{ "LOUD" | abbr | safe }}.
 
 The overarching goal of this investigation is to illustrate the diverse practices Yale has undertaken in its extensive adoption of {{ "LOUD" | abbr | safe }} standards, and to identify the ongoing challenges posed by specialised skill requirements and resource constraints within {{ "CHI" | abbr | safe }}s. The study aims to demonstrate how overcoming these challenges and ensuring the overall alignment of Linked Art and {{ "IIIF" | abbr | safe }} across the LUX platform and further afield can significantly advance shared methodologies and accessibility. This in turn could facilitate wider and more effective use and sharing of data, underlining the critical role of {{ "LOUD" | abbr | safe }} norms in the development of data stewardship in the {{ "CH" | abbr | safe }} sector.
 
-As with the previous chapters, the findings of this research are compiled in [Section 8.3](). This section provides a comprehensive summary and delves into the findings regarding the use of {{ "LOUD" | abbr | safe }} standards at Yale, as well as examining how well their resources align with the Linked Art and {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }}s. The chapter culminates in [Section 8.4](), which offers forward-looking perspectives for Yale and other {{ "CHI" | abbr | safe }}s. This final section reflects on the lessons learned during the course of the study and discusses potential strategies. It also considers the wider implications for the {{ "CH" | abbr | safe }} sector, suggesting ways in which institutions might address similar challenges and seek to improve semantic interoperability through community and local socio-technical practices.
+As with the previous chapters, the findings of this research are compiled in [Section 8.3](#sec:synthesis-insights-8). This section provides a comprehensive summary and delves into the findings regarding the use of {{ "LOUD" | abbr | safe }} standards at Yale, as well as examining how well their resources align with the Linked Art and {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }}s. The chapter culminates in [Section 8.4](#sec:perspectives-8), which offers forward-looking perspectives for Yale and other {{ "CHI" | abbr | safe }}s. This final section reflects on the lessons learned during the course of the study and discusses potential strategies. It also considers the wider implications for the {{ "CH" | abbr | safe }} sector, suggesting ways in which institutions might address similar challenges and seek to improve semantic interoperability through community and local socio-technical practices.
 
 
 ### 8.1 Large-Scale Deployment of LOUD at Yale {id="sec:large-scale-loud"} 
@@ -4900,15 +4900,37 @@ Key individuals played a pivotal role in the success of LUX. Susan Gibbons' high
 
 (...)
 
-### 8.2
+### 8.2 Linked Art and IIIF Consistency {id="sec:la-iiif-consistency"}
+
+This section addresses the second, more technical, objective of the investigation around LUX. It is divided into two parts. Subsection [8.2.1](#subsec:consistency-tools) presents the available software tools used to validate Linked Art and {{ "IIIF" | abbr | safe }} resources. The second part, [8.2.2](#subsec:consistency-lux), examines how some of these tools were applied to verify the {{ "LOUD" | abbr | safe }} consistency of a portion of the resources available on the platform.
+
+#### 8.2.1 Ensuring Compliance: Tools and Validators {id="subsec:consistency-tools"}
+
+Verifying the compliance of {{ "JSON-LD" | abbr | safe }} documents can be done at several levels: first, from a purely syntactic perspective; then by checking if the `@ context` is correct, meaning whether the correct properties and patterns (lists, arrays, and path construction) are used; and finally, by ensuring that the values of the elements within are correct. The latter is more complex when external controlled vocabularies are used, as is the case with Linked Art. Although certain terms are recurrent and some are mandatory or recommended, such as {{ "AAT" | abbr | safe }} terms, there is always some leeway for institutions implementing the {{ "API" | abbr | safe }}.
+
+In this dissertation, I am primarily concerned with the second level, which unfortunately only partially addresses full validation at the level of semantic interoperability. However, the tools for this level are available and maintained. This validation process involves ensuring that the {{ "JSON-LD" | abbr | safe }} structure is correct, which includes validating that the `@ context`, properties, and patterns adhere to the expected formats. This ensures that data can be hopefully interpreted and integrated across different systems.
+
+Within Linked Art, two validators have been created: the first is a {{ "JSON" | abbr | safe }} validator[^347] testing resource compliance according to various entities, and the second is a {{ "SHACL" | abbr | safe }} validator[^348]. The former is still maintained, while the latter, though a commendable individual effort, hasn't been updated to accommodate all community needs.
+
+Regarding validation and schema consistency, there are some affordances that have been allowed by the Linked Art community which can be found in the Linked Art {{ "JSON" | abbr | safe }} Validator and not directly in the schema documentation, such as having internal additional properties starting with underscores. For instance, LUX does this by appending `_links`, borrowed from {{ "HAL" | abbr | safe }}.
+
+For {{ "IIIF" | abbr | safe }}, the available validation tools cover both the Image {{ "API" | abbr | safe }} and the Presentation {{ "API" | abbr | safe }}. The Image {{ "API" | abbr | safe }} validator[^349] supports all major versions of the {{ "API" | abbr | safe }} and thoroughly tests the server's behaviour in delivering images, not just the quality of the images themselves. This validator can detect most potential issues by requiring the upload of a specific test image. It is available as a Python package, allowing integration into pipelines for automated testing.
+
+The IIIF Presentation {{ "API" | abbr | safe }} validator[^350] works similarly by parsing resources (such as Manifest and Collection) and detecting common issues, particularly related to {{ "JSON-LD" | abbr | safe }}. While it ensures that the manifests are correctly structured, it does not verify the existence of referenced images. This validator can be used from its homepage, by making {{ "JSON" | abbr | safe }} requests, or by running it locally[^351]. It is important to note that a valid Manifest or Collection does not guarantee that all its functionalities -- patterns -- will be properly displayed by {{ "IIIF" | abbr | safe }} viewers or players. Complex manifests might be valid but may not be fully supported by all clients, which might not yet have the capacity to render all the features[^352]. Conversely, non-compliant manifests could still be partially or fully understood by some clients, which might not need to interpret every aspect of a resource.
+
+Tripoli, an unofficial validator for the {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} 2.1, written in Python, provided an {{ "API" | abbr | safe }} for integrating {{ "IIIF" | abbr | safe }} validation into code. However, it has not been updated since 2017. Hyperion, a collection of NPM packages including a validator for version 3.0 of the {{ "IIIF" | abbr | safe }} Presentation API, has been integrated into the {{ "IIIF" | abbr | safe }} Commons initiative. Its dedicated validator functionality is now part of parsers and other helpers.
+
+These tools ensure that {{ "IIIF" | abbr | safe }} services and resources are compliant with the standards, although some validators, such as Tripoli, are outdated. Despite these challenges, the tools provided by {{ "IIIF-C" | abbr | safe }} and the integrated functionalities within the {{ "IIIF" | abbr | safe }} Commons initiative support validation and help maintain the integrity and interoperability of {{ "IIIF" | abbr | safe }} resources. For validating them, I chose to leverage the official {{ "IIIF-C" | abbr | safe }} validators as described in the following subsection.
+
+#### 8.2.2 LUX Data Consistency {id="subsec:consistency-lux"}
 
 (...)
 
-### 8.3
+### 8.3 Synthesis and Insights {id="sec:synthesis-insights-8"}
 
 (...)
 
-### 8.4
+### 8.4 Perspectives {id="sec:perspectives-8"}
 
 (...)
 
