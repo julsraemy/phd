@@ -112,3 +112,7 @@ I have given a lot of presentations during my PhD. On this website you can find 
 ## Report
 
 Raemy, J. A. (2023). _Characterising the IIIF and Linked Art Communities: Survey report_ (p. 29) [Report]. University of Basel. https://hal.science/hal-04162572
+
+## Thesis
+
+Raemy, J. A. (2024). _Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability_ [Doctoral Thesis, University of Basel]. https://doi.org/10.5451/unibas-ep96807
