@@ -27,11 +27,9 @@ keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Sw
 
 PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' ({{ "G3S" | abbr | safe }}) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)).
 
-This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807 as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
+This page hosts a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easier access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807 as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
 
-<p style="font-size: 1.5em; color: gray; text-align: center;"> 📋 Content Ready 🎨 Design Upgrade in Progress (please be patient ⌛)</p>
-
-##### Author 
+##### Author {id="authors"}
 
 - Dr. Julien A. Raemy (University of Basel) <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
@@ -63,7 +61,8 @@ Key empirical findings indicate that {{ "LOUD" | abbr | safe }} enhances the dis
 
 {{ "LOUD" | abbr | safe }} should lead efforts to improve the accessibility and usability of {{ "CH" | abbr | safe }} data. The community-driven methodologies of {{ "IIIF" | abbr | safe }} and Linked Art inherently foster collaboration and transparency, making these standards essential tools in evolving data management practices. Even for institutions and projects that do not adopt these specifications, the socio-technical practices of {{ "LOUD" | abbr | safe }} offer vital insights into effective digital stewardship and strategies for community engagement.
 
-**Keywords**: Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model
+### Keywords {id="keywords"}
+Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model
 
 ## Table of Contents {id="toc"}
 
@@ -1533,9 +1532,9 @@ Deduction of entity class membership is an essential aspect of {{ "KR" | abbr | 
  but text is left-aligned inside. -->
 <div style="display: inline-block; text-align: left;">
 <pre><code class="language-turtle">
-@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns> .
-@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@ prefix schema: <http://schema.org/> .
+@ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt; .
+@ prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@ prefix schema: &lt;http://schema.org/&gt; .
 
 schema:Person rdf:type rdfs:Class .
 schema:Place rdf:type rdfs:Class .

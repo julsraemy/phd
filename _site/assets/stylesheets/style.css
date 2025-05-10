@@ -46,45 +46,37 @@
 
 @import url('https://fonts.cdnfonts.com/css/cmu-bright');
 
+/* Base Body Styling with LNCS */
 body {
-    font-family: 'CMUSansSerif', 'Segoe UI', Tahoma, Verdana, sans-serif;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0 20px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Reset and Base Styles */
-h1, h2, h3, h4, h5, h6, figure, figcaption {
-    font-family: "CMUSerif-Bold";
-    margin: 0;
+    color: #000000;
+    font-family: "CMUSerif-Roman", "GNU Unifont", "FreeSerif", "Segoe UI Symbol", serif;
+    font-size: 125%;
+    line-height: 1.231;
+    position: relative;
+    margin: 0 auto;
     padding: 0;
+    background-color: #f4f4f4;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
-h1 { font-size: 1.8em; margin-bottom: 10px; }
-h2 { font-size: 1.6em; }
-h3 { font-size: 1.4em; }
-h4 { font-size: 1.3em; }
-h5 { font-size: 1.2em; }
-h6 { font-size: 1.1em; }
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Navigation Bar */
+/* Preserve the navigation styling while keeping it above the LNCS content */
 nav {
     background: #333;
     color: #fff;
     padding: 10px 20px;
     position: relative;
     font-family: "CMU Bright";
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 .nav-trigger {
-    display: none; /* This will still only show in mobile view */
+    display: none;
     background: #333;
     color: #fff;
     padding: 10px 20px;
@@ -92,10 +84,9 @@ nav {
     width: 100%;
     text-align: left;
     cursor: pointer;
-    font-family: 'CMU Bright', 'Segoe UI', Tahoma, Verdana, sans-serif; /* Match the font family */
-    font-size: 1.35em; /* Match the font size, adjust as necessary */
+    font-family: 'CMU Bright', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.35em;
 }
-
 
 .nav-trigger:after {
     content: '\25BC';
@@ -118,7 +109,6 @@ nav ul li {
     font-size: 1.35em; 
 }
 
-/* Navigation Bar Item Spacing for Larger Screens */
 nav ul li:not(:first-child) {
     margin-left: 60px; 
 }
@@ -132,20 +122,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-#map {
-    height: 400px; /* Fixed height or use vh for responsive height */
-    width: 100%; /* Full width to make it responsive */
-    margin: 0 auto; /* Center align if there's a max-width */
-    max-width: 960px; /* Optional: limit the size of the map */
-}
-
-@media (max-width: 768px) {
-    #map {
-        height: 300px; /* Smaller height on smaller devices */
-    }
-}
-
-
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
     .nav-trigger {
@@ -153,27 +129,109 @@ nav ul li a:hover {
     }
 
     nav ul.collapsed {
-        display: none; /* Hide when collapsed */
+        display: none;
     }
 
     nav ul {
-        display: block; /* Default state, shown */
+        display: block;
     }
 
     nav ul li,
-    nav ul li:not(:first-child) { /* This targets all li elements, including the first child */
+    nav ul li:not(:first-child) {
         display: block;
-        margin-left: 0; /* Ensure no left margin is applied */
-        padding: 10px 0; /* Consistent padding for all items */
-        text-align: left; /* Align text for all items uniformly */
-        width: 100%; /* Ensure full width for easier tapping on mobile */
+        margin-left: 0;
+        padding: 10px 0;
+        text-align: left;
+        width: 100%;
     }
 
     nav ul li a {
         display: block;
-        margin: 0 20px; /* Add margin */
-        color: white; /* Ensure text color is white */
+        margin: 0 20px;
+        color: white;
     }
+}
+
+/* Main Content with LNCS Styling */
+main {
+    max-width: 55em;
+    margin: 0 auto;
+    padding: 2.5em 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* LNCS Typography */
+h1, h2, h3, h4, strong, dt, figcaption:before, caption:before, #subtitle {
+    font-family: "CMUSerif-Bold", serif;
+}
+
+h5, h6, em, cite, dfn, address {
+    font-family: "CMUSerif-Italic", serif;
+}
+
+code, code strong, samp, samp strong, pre, kbd, button {
+    font-family: "CMUTypewriter-Regular", monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+    page-break-after: avoid;
+    line-height: 1.231;
+}
+
+h1 {
+    font-size: 1.4615em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.231em;
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-size: 1em;
+    margin-top: 1em;
+    display: inline;
+}
+
+h5 {
+    font-size: 1em;
+    display: inline;
+    font-weight: normal;
+}
+
+/* Paragraph styling */
+p {
+    text-indent: 1em;
+    margin-bottom: 0.5em;
+    text-align: justify;
+}
+
+/* Remove text-indent for paragraphs after headings */
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+div > p:first-child,
+dl + p,
+ul + p,
+figure + p,
+audio + p,
+video + p,
+iframe + p,
+blockquote p {
+    text-indent: 0;
 }
 
 /* Link Styles */
@@ -186,182 +244,357 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header, Paragraphs, Container */
-header {
-    background: transparent; /* No background color for the header */
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
+/* Automatic Section Numbering */
+main section:not(#abstract):not(#document-status):not(#keywords):not(#references):not(#categories-and-subject-descriptors):not(#general-terms):not(#appendix):not(#contact-us) {
+    counter-increment: section;
+    counter-reset: sub-section;
 }
 
-p {
-    margin-top: 10px;
+main section:not(#abstract):not(#document-status):not(#keywords):not(#references):not(#categories-and-subject-descriptors):not(#general-terms):not(#appendix):not(#contact-us) section {
+    counter-increment: sub-section;
+    counter-reset: sub-sub-section;
 }
 
-/* Targeting inline code elements */
+main section:not(#abstract):not(#document-status):not(#keywords):not(#references):not(#categories-and-subject-descriptors):not(#general-terms):not(#appendix):not(#contact-us) section section {
+    counter-increment: sub-sub-section;
+}
+
+main section:not(#abstract):not(#document-status):not(#keywords):not(#references):not(#categories-and-subject-descriptors):not(#general-terms):not(#appendix):not(#contact-us):not([id^=table-of-]) > h2:before {
+    content: counter(section) "\00a0\00a0\00a0\00a0";
+}
+
+main section:not(#abstract):not(#document-status):not(#keywords):not(#references):not(#categories-and-subject-descriptors):not(#general-terms):not(#appendix):not(#contact-us) section > h3:before {
+    content: counter(section) "." counter(sub-section) "\00a0\00a0\00a0";
+}
+
+main section:not(#abstract):not(#document-status):not(#keywords):not(#references):not(#categories-and-subject-descriptors):not(#general-terms):not(#appendix):not(#contact-us) section section > h4:before {
+    content: counter(section) "." counter(sub-section) "." counter(sub-sub-section) "\00a0\00a0";
+}
+
+/* Code Styling */
 code {
-    font-family: 'Fira Code', monospace; /* Using Fira Code font as an example */
-    font-size: 0.75em; /* Slightly smaller font size for readability */
-    background-color: #f9f9f9; /* Light grey background for contrast */
-    padding: 0.2em 0.4em; /* Padding around the text for spacing */
-    border-radius: 4px; /* Rounded corners for aesthetic */
-    color: #d63384; /* Changing the text color for distinction */
-    margin: 0 0.1em; /* Optional: Adds a slight space around inline code */
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875em;
+    background-color: #f9f9f9;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    color: #d63384;
 }
 
 pre {
-    position: relative;
-    font-family: 'Fira Code', monospace;
-    line-height: 1;
-    overflow-x: auto;
-    background-color: #f9f9f9; /* Background covers full container */
-    padding-left: 50px; /* Adjust based on the width of your line numbers */
-    border-radius: 4px;
+    margin: 1em 0;
+    font-size: 0.875em;
+    overflow: auto;
+    background-color: #f9f9f9;
+    padding: 0.5em;
+    border: 1px solid #000;
+}
+
+/* Blockquote styling */
+blockquote {
+    padding-left: 1em;
+    border-left: 0.25em solid #ccc;
     margin: 1em 0;
 }
 
-.line-numbers-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: right;
-    padding-right: 10px; /* Space from the container edge, adjust if needed */
-    user-select: none;
-    color: #999;
-    /* Ensure it doesn't carry a background */
-    background-color: transparent;
-}
-
-.line-numbers-container span {
-    display: block;
-    line-height: 1;
-    /* No additional padding or margin that could affect alignment */
-}
-
-pre > code::first-line {
-    background-color: yellow; /* Temporary: For visual inspection */
-}
-
-blockquote {
-    margin: 20px 0;
-    padding: 20px;
-    position: relative;
-    font-family: Georgia, serif;
-    font-size: 0.9em;
-    line-height: 1.5;
-    font-style: italic;
-    background-color: #f9f9f9;
-    border-left: 8px solid #333; /* Change color to match your theme */
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1); /* subtle shadow */
-}
-
-blockquote::before,
-blockquote::after {
-    font-family: Arial, sans-serif;
-    line-height: 0;
-    position: absolute;
-    color: #007bff; /* Match vertical line color */
-}
-
-blockquote cite {
-    display: block;
-    margin-top: 10px;
-    font-style: normal;
-    text-align: right;
-    font-size: 14px;
-}
-
-@media (max-width: 600px) {
-    blockquote {
-        padding: 15px;
-        margin: 15px 0;
-    }
-}
-
+/* Tables */
 table {
-    width: 100%; /* Make the table stretch to the full container width */
-    border-collapse: collapse; /* Collapse borders between table cells */
-    margin: 20px 0; /* Add some vertical space around the table */
+    width: 100%;
+    margin-top: 1em;
+    text-align: left;
+    border-collapse: collapse;
 }
 
-table th, table td {
-    border: 1px solid #ddd; /* Light grey border for each cell */
-    text-align: left; /* Align text to the left; adjust as needed */
-    padding: 8px; /* Add some padding inside each cell for spacing */
+table + table {
+    margin-top: 2em;
 }
 
-table th {
-    background-color: #f2f2f2; /* Light background for header cells */
-    color: #333; /* Dark text for contrast */
+caption {
+    text-align: left;
+    font-size: 0.923em;
+    border-bottom: 2pt solid #000;
+    padding: 0 0.25em 0.25em;
 }
 
-/* Zebra striping for rows */
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+thead {
+    border-bottom: 1pt solid #000;
 }
 
-/* Hover effect for rows */
-table tr:hover {
-    background-color: #eaeaea;
+tbody {
+    border-bottom: 2pt solid #000;
 }
 
+th, td {
+    padding: 0.25em;
+    vertical-align: baseline;
+    font-size: 0.923em;
+}
+
+table ul,
+table ol,
+table li,
+table p,
+table dd {
+    margin: 0;
+    text-align: left;
+}
+
+th {
+    font-weight: normal;
+}
+
+/* Figures and captions */
 figure {
-    text-align: center; /* Center-align the content of the figure */
-    margin: 20px auto; /* Add some vertical space and auto margins for horizontal centering */
-    max-width: 960px; /* Limit the width of figures */
-}
-
-figure img {
-    max-width: 100%; /* Ensure the image is responsive and fits its container */
-    height: auto; /* Maintain the aspect ratio of the image */
-}
-
-figcaption {
-    margin-top: 8px; /* Space between the image and its caption */
-    color: #666; /* A lighter text color for the caption */
-    font-style: italic; /* Italicize the caption for differentiation */
-}
-
-.text-center {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
     text-align: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center; /* Horizontally center the children (including iframe) */
-    align-items: center; /* Vertically center the children (optional) */
-    height: 100%; /* Set a height if you want vertical centering */
+figure pre,
+figcaption {
+    text-align: left;
 }
 
+figure object,
+figure img,
+figure pre {
+    margin-bottom: 1em;
+}
+
+/* Figure caption counters */
+html {
+    counter-reset: figcaption 0;
+}
+
+body {
+    counter-reset: listing 0;
+}
+
+article {
+    counter-reset: caption 0;
+}
+
+figure:not([class~="listing"]):not([class~="equation"]) figcaption {
+    counter-increment: figcaption;
+}
+
+figure.listing {
+    counter-increment: listing;
+}
+
+figure.equation {
+    counter-increment: equation;
+}
+
+caption {
+    counter-increment: caption;
+}
+
+figure.equation:after {
+    content: "(" counter(equation) ")";
+    line-height: 0;
+    position: absolute;
+    top: 45%;
+    right: 0;
+}
+
+figcaption:before {
+    content: "Fig. " counter(figcaption) ". ";
+}
+
+figure.listing figcaption:before {
+    content: "Listing " counter(listing) ". ";
+}
+
+caption:before {
+    content: "Table " counter(caption) ". ";
+}
+
+/* Lists */
+ol, ul, dd, table {
+    margin-bottom: 1em;
+}
+
+#abstract, ol, ul, p, dd {
+    text-align: justify;
+}
+
+/* Bibliography */
 #bibliography {
     margin-top: 2em;
     font-size: 0.8em;
     padding-top: 1em;
     border-top: 1px solid #ccc;
 }
+
 #bibliography h2 {
     font-size: 1.6em;
     margin-bottom: 0.3em;
 }
 
-/* Make the entire footnotes section smaller */
+/* References */
+#references {
+    clear: both;
+}
+
+#references ol {
+    counter-reset: list-order;
+    text-align: left;
+}
+
+#references ol li {
+    counter-increment: list-order;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-left: 1.1em;
+    font-size: 0.923em;
+}
+
+#references ol li:before {
+    content: counter(list-order) ". ";
+    margin-left: -1.1em;
+}
+
+/* Abstract */
+#abstract {
+    margin-bottom: 2em;
+}
+
+#abstract h2 {
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+#abstract h2:before {
+    content: "";
+}
+
+#abstract p {
+    text-align: justify;
+}
+
+/* Keywords */
+#keywords {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 0.923em;
+}
+
+#keywords h2 {
+    display: inline;
+    font-size: 1em;
+}
+
+#keywords h2:before {
+    content: "";
+}
+
+#keywords h2:after {
+    content: ":";
+}
+
+#keywords ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#keywords li {
+    display: inline;
+}
+
+#keywords li:before {
+    content: "\2022\0020";
+}
+
+#keywords li:first-child:before {
+    content: "\0020";
+}
+
+/* Authors */
+#authors, .authors {
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+#authors dt,
+.authors dt {
+    display: none;
+}
+
+#authors p {
+    text-align: center;
+}
+
+/* Footnotes */
 .footnotes, 
 .footnotes .footnotes-list, 
 .footnotes .footnote-item, 
 .footnotes p {
-  font-size: 0.93em;
+    font-size: 0.93em;
 }
 
-/* Hide the horizontal line separator */
 hr.footnotes-sep {
-  display: none;
-  border: none; /* Just in case */
+    display: none;
+    border: none;
 }
 
+/* Footer */
 footer {
-    margin-top: 40px;
+    margin-top: 2em;
     margin-bottom: 10px;
+    padding: 1em 0;
     line-height: 1.4;
     text-align: center;
     font-size: 0.75em;
+}
+
+/* Map */
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 300px;
+    }
+    
+    nav ul li,
+    nav ul li:not(:first-child) {
+        display: block;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+    
+    nav ul li a {
+        display: block;
+    }
+}
+
+/* Controls for font size */
+#controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#controls button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#controls button:hover {
+    background-color: #555;
 }
