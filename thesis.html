@@ -155,9 +155,8 @@ LOUD should lead efforts to improve the accessibility and usability of CH data. 
     <main>
     <h1 id="linked-open-usable-data-for-cultural-heritage%3A-perspectives-on-community-practices-and-semantic-interoperability" tabindex="-1">Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability</h1>
 <p>PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences’ (<abbr title="University of Basel's Graduate School of Social Sciences">G3S</abbr>) doctoral programme. It was successfully defended on 18 November 2024 (<a href="https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html" target="_blank" rel="noopener noreferrer">slides</a>).</p>
-<p>This page will host a lightweight <abbr title="Hypertext Markup Language">HTML</abbr> version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel’s repository: <a href="https://doi.org/10.5451/unibas-ep96807" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep96807</a> as well as on the Swiss National Library’s catalogue: <a href="https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487" target="_blank" rel="noopener noreferrer">https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487</a>.</p>
-<p style="font-size: 1.5em; color: gray; text-align: center;"> 📋 Content Ready 🎨 Design Upgrade in Progress (please be patient ⌛)</p>
-<h5 id="author" tabindex="-1">Author</h5>
+<p>This page hosts a lightweight <abbr title="Hypertext Markup Language">HTML</abbr> version of my thesis, optimised for easier access and readability. The PDF version (e-dissertation) is available on the University of Basel’s repository: <a href="https://doi.org/10.5451/unibas-ep96807" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep96807</a> as well as on the Swiss National Library’s catalogue: <a href="https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487" target="_blank" rel="noopener noreferrer">https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487</a>.</p>
+<h5 id="authors" tabindex="-1">Author</h5>
 <ul>
 <li>Dr. Julien A. Raemy (University of Basel) <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
 <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">
@@ -183,7 +182,8 @@ https://orcid.org/0000-0003-4441-6852
 <p>The core methodology of this thesis is an actor- and practice-centered inquiry, focusing on a detailed examination of specific cosmologies within <abbr title="Linked Open Usable Data">LOUD</abbr>-driven communities, <abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr>, and LUX. This micro-perspective approach provides rich empirical evidence to unravel the intricate web of cultural processes and constellations in these contexts.</p>
 <p>Key empirical findings indicate that <abbr title="Linked Open Usable Data">LOUD</abbr> enhances the discoverability and integration of data in <abbr title="Cultural Heritage">CH</abbr>, requiring community-driven consensus on model interoperability. However, significant challenges include engaging marginalized groups, sustaining long-term participation, and balancing technological and social factors. Strategic use of technology and the capture of digital materiality are critical, but <abbr title="Linked Open Usable Data">LOUD</abbr> also poses challenges related to resource investment, data consistency, and the broader implementation of complex patterns.</p>
 <p><abbr title="Linked Open Usable Data">LOUD</abbr> should lead efforts to improve the accessibility and usability of <abbr title="Cultural Heritage">CH</abbr> data. The community-driven methodologies of <abbr title="International Image Interoperability Framework">IIIF</abbr> and Linked Art inherently foster collaboration and transparency, making these standards essential tools in evolving data management practices. Even for institutions and projects that do not adopt these specifications, the socio-technical practices of <abbr title="Linked Open Usable Data">LOUD</abbr> offer vital insights into effective digital stewardship and strategies for community engagement.</p>
-<p><strong>Keywords</strong>: Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model</p>
+<h3 id="keywords" tabindex="-1">Keywords</h3>
+<p>Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model</p>
 <h2 id="toc" tabindex="-1">Table of Contents</h2>
 <ol>
 <li><a href="#cha:intro">Introduction</a></li>
@@ -1238,9 +1238,9 @@ BIND(CONCAT(?givenName, " ", ?familyName) AS ?name)
  but text is left-aligned inside. -->
 <div style="display: inline-block; text-align: left;">
 <pre><code class="language-turtle">
-@ prefix rdf: <http: www.w3.org="" 1999="" 02="" 22-rdf-syntax-ns=""> .
-@ prefix rdfs: <http: www.w3.org="" 2000="" 01="" rdf-schema#=""> .
-@ prefix schema: <http: schema.org=""> .
+@ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt; .
+@ prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@ prefix schema: &lt;http://schema.org/&gt; .
 <p>schema:Person rdf:type rdfs:Class .
 schema:Place rdf:type rdfs:Class .</p>
 <p>schema:givenName rdf:type rdf:Property ;
@@ -1252,7 +1252,7 @@ rdfs:range rdfs:Literal .</p>
 <p>schema:birthPlace rdf:type rdf:Property ;
 rdfs:domain schema:Person ;
 rdfs:range schema:Place .</p>
-</http:></http:></http:></code><p><code class="language-turtle">schema:name rdf:type rdf:Property ;
+</code><p><code class="language-turtle">schema:name rdf:type rdf:Property ;
 rdfs:domain schema:Place ;
 rdfs:range rdfs:Literal .
 </code></p></pre><p></p>
@@ -5578,7 +5578,6 @@ passage found in his book <em>‘We have never been modern’</em>. <a href="#fn
         Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50"></a>
     </footer>
     <script src="/js/accordion.js"></script>
-    <script src="/js/line-numbers.js"></script>
     <script src="/js/leaflet-iiif-init.js"></script>
     <script src="/js/font-size.js"></script>
     <!-- Google tag (gtag.js) -->
