@@ -226,7 +226,7 @@ Each endpoint is supported by detailed documentation, including the required and
 These three systems are complementary and can be used either separately or in conjunction.
 
 <figure>
-  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure">
+  <img src="https://julsraemy.ch/prezi/assets/loud-infra-example.jpg" alt="LOUD-Driven Infrastructure" style="max-width: 100%; height: auto;">
   <figcaption>LOUD-Driven Infrastructure [Felsing et al. 2023]</figcaption>
 </figure>
 

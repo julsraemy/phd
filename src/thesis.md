@@ -27,25 +27,39 @@ keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Sw
 
 PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' ({{ "G3S" | abbr | safe }}) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)).
 
-This page hosts a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easier access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807 as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
+This page hosts a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easier access and readability (_mindful of digital limitations and with some trade-offs_). The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807 as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
 
-##### Author {id="authors"}
+<div id="authors">
+  <h3>Dr. Julien A. Raemy</h3>
+  <p>University of Basel, Basel, Switzerland</p>
+  <p>
+    <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
+      <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
+      https://orcid.org/0000-0002-4711-5759
+    </a>
+  </p>
+</div>
 
-- Dr. Julien A. Raemy (University of Basel) <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
-<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
-https://orcid.org/0000-0002-4711-5759
-</a>
-
-##### Supervisors 
-- Prof. Dr. Peter Fornaro (University of Basel) <a href="https://orcid.org/0000-0003-1485-4923" target="_blank">
-<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
-https://orcid.org/0000-0003-1485-4923
-</a>
-- Prof. Dr. Walter Leimgruber (University of Basel) 
-- Dr. Robert Sanderson (Yale University) <a href="https://orcid.org/0000-0003-4441-6852" target="_blank">
-<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
-https://orcid.org/0000-0003-4441-6852
-</a>
+<div id="supervisors">
+  <h3>Supervisors</h3>
+  <ul>
+    <li>
+      Prof. Dr. Peter Fornaro (University of Basel) 
+      <a href="https://orcid.org/0000-0003-1485-4923" target="_blank">
+        <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
+        https://orcid.org/0000-0003-1485-4923
+      </a>
+    </li>
+    <li>Prof. Dr. Walter Leimgruber (University of Basel)</li>
+    <li>
+      Dr. Robert Sanderson (Yale University) 
+      <a href="https://orcid.org/0000-0003-4441-6852" target="_blank">
+        <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
+        https://orcid.org/0000-0003-4441-6852
+      </a>
+    </li>
+  </ul>
+</div>
 
 ## Abstract {id="abstract"}
 
@@ -633,7 +647,7 @@ In libraries, several metadata standards have played crucial roles in organising
   
   <!-- Wrap the code block in a container that is displayed inline-block,
        centered as part of the figure, but left-aligned inside. -->
-  <div style="display: inline-block; text-align: left;">
+  <div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
     <pre><code class="language-MARC21">
 leader  01424nam a2200397 c 4500
 001 991170746542405501
@@ -902,7 +916,7 @@ Taxonomies employ hierarchical classifications to systematically categorise info
   </figcaption>
   
   <!-- This inline-block container is centered overall, but text is left-aligned. -->
-  <div style="display: inline-block; text-align: left;">
+  <div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
     <pre><code class="language-marc21">
 Chemistry
     Physical Chemistry
@@ -1474,7 +1488,7 @@ Following on from the components outlined in [Figure 3.17](#fig:semweb-cake), I 
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code>
 @ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @ prefix schema: <http://schema.org/> .
@@ -1500,7 +1514,7 @@ To query {{ "RDF" | abbr | safe }}-based graphs, {{ "SPARQL" | abbr | safe }} is
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-sparql">
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX schema: <http://schema.org/>
@@ -1530,7 +1544,7 @@ Deduction of entity class membership is an essential aspect of {{ "KR" | abbr | 
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-turtle">
 @ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt; .
 @ prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -1570,7 +1584,7 @@ Indeed, for modelling ontologies in the Semantic Web, {{ "OWL" | abbr | safe }} 
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-turtle">
 @ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @ prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -1629,7 +1643,7 @@ Turning to {{ "SHACL" | abbr | safe }}, a {{ "W3C" | abbr | safe }} standard def
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-turtle">
 @ prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @ prefix schema: &lt;http://schema.org/&gt; .
@@ -2368,7 +2382,7 @@ The {{ "IIIF" | abbr | safe }} Manifest plays a key role as it encapsulates the 
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "http://iiif.io/api/presentation/3/context.json",
@@ -2468,7 +2482,7 @@ Central to the {{ "API" | abbr | safe }}'s utility is its ability to allow conte
  <figcaption>
 <strong>Code Snippet 3.11:</strong> Example of a Level 2 Activity Compliant with the IIIF Change Discovery API @appleby_iiif_2021
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "type": "Create",
@@ -2600,7 +2614,7 @@ The model outlines various components of an annotation [@sanderson_web_2017]:
  <figcaption>
 <strong>Code Snippet 3.12:</strong> Example of Basic Annotation According to WADM @sanderson_web_2017
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "http://www.w3.org/ns/anno.jsonld",
@@ -2621,7 +2635,7 @@ Annotations can link to different types of resources, including external web res
  <figcaption>
 <strong>Code Snippet 3.13:</strong> Example of an Annotation According to WADM with a motivation and a purpose @sanderson_web_2017
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "http://www.w3.org/ns/anno.jsonld",
@@ -2737,7 +2751,7 @@ The {{ "JSON-LD" | abbr | safe }} serialisation displayed in [Code Snippet 3.14]
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "https://linked.art/ns/v1/linked-art.json",
@@ -2773,7 +2787,7 @@ Linked Art categorises controlled vocabulary terms[^206] into three distinct cla
  <figcaption>
 <strong>Code Snippet 3.15:</strong> The Night Watch: Representation in the Linked Art Data Model Including Names; Identifiers; and Statements
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "https://linked.art/ns/v1/linked-art.json",
@@ -2858,7 +2872,7 @@ Furthermore, Linked Art incorporates a minimal `TimeSpan` model for activities, 
  <figcaption>
 <strong>Code Snippet 3.16:</strong> The Night Watch: Representation in the Linked Art Data Model Including Activities and Timespans
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "https://linked.art/ns/v1/linked-art.json",
@@ -4206,7 +4220,7 @@ The example {{ "URL" | abbr | safe }}s point to the same image. Locating these i
  <figcaption>
 <strong>Code Snippet 7.1:</strong> SPARQL Query Executed on the DaSCH Fuseki Instance to Retrieve and Construct IIIF Image API URLs
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-txt">
 PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -4301,7 +4315,7 @@ style="width: 100%; display: block; margin: 0 auto;" />
  <figcaption>
 <strong>Code Snippet 7.2:</strong> Example of Machine-generated Annotations in a IIIF setting from PIA
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "http://iiif.io/api/presentation/3/context.json",
@@ -4370,7 +4384,7 @@ As a practical application of this methodology, [Code Snippet 7.3](#lst:pia-iiif
  <figcaption>
 <strong>Code Snippet 7.3:</strong> IIIF Manifest with Two Images Painted onto the Same Canvas
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "id": "https://julsraemy.ch/hostiiing/manifests/SGV_10A_00050_layers/canvas/p3",
@@ -4447,7 +4461,7 @@ Through the initial workflow, the {{ "IIIF" | abbr | safe }} Change Discovery {{
  <figcaption>
 <strong>Code Snippet 7.4:</strong> PIA IIIF Change Discovery API
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "http://iiif.io/api/discovery/1/context.json",
@@ -4495,7 +4509,7 @@ An example of a `HumanMadeObject` boilerplate for integration with the Linked Ar
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "@ context": "https://linked.art/ns/v1/linked-art.json", 
@@ -4571,7 +4585,7 @@ style="width: 100%; display: block; margin: 0 auto;" />
  <figcaption>
 <strong>Code Snippet 7.6:</strong> Turtle Snippet of the Ernst Brunner Thesaurus: <code>Brauch</code>
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-turtle">
 brunner:04 a skos:Concept ;
   skos:prefLabel "Brauch"@de ;
@@ -4850,7 +4864,7 @@ To convert the recorded audio into text,, Whisper[^344], an {{ "ASR" | abbr | sa
  <figcaption>
 <strong>Code Snippet 8.1:</strong> Command to Transcribe the Interviews into Audio Files Using Whisper
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-bash">
 ~ % for f in *.wav ; do whisper $f --fp16 False ; done
 </code></pre>
@@ -4867,7 +4881,7 @@ Once transcribed, the raw text files were converted into a more manageable forma
  <figcaption>
 <strong>Code Snippet 8.2:</strong> Command to Convert Text files into Markdown with New Lines
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-bash">
 ~ % sed -e 's/^$/\n/g' transcript.txt \
   | awk '{ printf "%s\n\n", $0 }' > transcript.md
@@ -5004,7 +5018,7 @@ The validation process was conducted using a Python script that was forked and a
  <figcaption>
 <strong>Code Snippet 8.3:</strong> Validating a Linked Art Resource: Example Concept
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-bash">
 ----------------------- Processing: https://linked.art/example/concept/0
   Validation failed. Validation errors:
@@ -5022,7 +5036,7 @@ The validation process was conducted using a Python script that was forked and a
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-bash">
 ---------------------------------- Processing: https://lux.collections.yale.edu/data/concept/000052b6-a350-4bcb-afca-15dceb72920a
   Validated!
@@ -5237,7 +5251,7 @@ In this subsection, I will evaluate the {{ "IIIF" | abbr | safe }} Presentation 
 </figcaption>
  <!-- Wrap the code block in a container that is centered overall,
  but text is left-aligned inside. -->
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-bash">
 curl "http://localhost:8080/validate?version=<2.1|3.0>&url=<iiif-resource-url>"
 </code></pre>
@@ -5250,7 +5264,7 @@ The results are returned as {{ "JSON" | abbr | safe }}, as shown in [Code Snippe
  <figcaption>
 <strong>Code Snippet 8.6:</strong> JSON Responses against the Presentation API Validator: V2.1 Resource
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "okay": 1,
@@ -5273,7 +5287,7 @@ The results are returned as {{ "JSON" | abbr | safe }}, as shown in [Code Snippe
  <figcaption>
 <strong>Code Snippet 8.7:</strong> JSON Responses against the Presentation API Validator: V3.0 Resource
 </figcaption>
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; max-width: 100%; height: auto;">
 <pre><code class="language-json">
 {
   "okay": 0,
@@ -5377,7 +5391,7 @@ The outputs are then saved into a consolidated {{ "JSONL" | abbr | safe }} file,
 </table>
 </figure>
 
-Using the shell script, $100$ Manifests per version and per unit were crawled. Since {{ "YUL" | abbr | safe }} only had {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} 3.0, a total of $700$ {{ "URL" | abbr | safe }}s potentially discoverable on LUX were parsed with the validator. This resulted in the following outcomes:
+Using the shell script, 100 Manifests per version and per unit were crawled. Since {{ "YUL" | abbr | safe }} only had {{ "IIIF" | abbr | safe }} Presentation {{ "API" | abbr | safe }} 3.0, a total of 700 {{ "URL" | abbr | safe }}s potentially discoverable on LUX were parsed with the validator. This resulted in the following outcomes:
 
 - V2.1 Manifests from {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "YPM" | abbr | safe }}:   These Manifests all validated successfully but had the following     warnings: the remote server did not use the requested gzip transfer     compression, which can significantly slow down access to the     resources. Gzip[^360] compression reduces the size of the data being     transferred, thereby speeding up the download process and reducing     the load on network bandwidth. Additionally, the warnings included     non-standard field `rendering` on resource of type `sc:Canvas`, and     resource type `dctypes:Image` should have `format` set.
 - V3.0 Manifests from {{ "YCBA" | abbr | safe }}, {{ "YUAG" | abbr | safe }}, and {{ "YPM" | abbr | safe }}:   These Manifests were all invalid and had minor error issues: the     `logo` property was not properly structured as it should be embedded     within the provider; the {{ "URL" | abbr | safe }} to Creative Commons should be     {{ "HTTP" | abbr | safe }} rather     than {{ "HTTPS" | abbr | safe }}[^361]; and in some     {{ "YUAG" | abbr | safe }}     Manifests, the language map construction was not leveraged     correctly, as `en` cannot be an array.
