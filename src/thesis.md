@@ -27,7 +27,7 @@ keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Sw
 
 PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' ({{ "G3S" | abbr | safe }}) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)).
 
-This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807. 
+This page will host a lightweight {{ "HTML" | abbr | safe }} version of my thesis, optimised for easy access and readability. The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807 as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
 
 <p style="font-size: 1.5em; color: gray; text-align: center;"> 📋 Content Ready 🎨 Design Upgrade in Progress (please be patient ⌛)</p>
 
