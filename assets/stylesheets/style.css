@@ -154,7 +154,7 @@ nav ul li a:hover {
 
 /* Main Content with LNCS Styling */
 main {
-    max-width: 55em;
+    max-width: 60em;
     margin: 0 auto;
     padding: 2.5em 1em;
     background-color: white;
@@ -343,7 +343,7 @@ th {
     font-weight: normal;
 }
 
-/* Figures and captions */
+/* Figures and captions - with "Fig." prefix but NO COUNTING */
 figure {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -362,49 +362,19 @@ figure pre {
     margin-bottom: 1em;
 }
 
-/* Figure caption counters */
-html {
-    counter-reset: figcaption 0;
+/* Figure caption with "Fig." prefix but no counting */
+figcaption:before {
+    content: "";
 }
 
-body {
-    counter-reset: listing 0;
+/* We're keeping the listing prefix */
+figure.listing figcaption:before {
+    content: "Listing ";
 }
 
-article {
-    counter-reset: caption 0;
-}
-
-figure:not([class~="listing"]):not([class~="equation"]) figcaption {
-    counter-increment: figcaption;
-}
-
-figure.listing {
-    counter-increment: listing;
-}
-
-figure.equation {
-    counter-increment: equation;
-}
-
+/* Table caption still using counter */
 caption {
     counter-increment: caption;
-}
-
-figure.equation:after {
-    content: "(" counter(equation) ")";
-    line-height: 0;
-    position: absolute;
-    top: 45%;
-    right: 0;
-}
-
-figcaption:before {
-    content: "Fig. " counter(figcaption) ". ";
-}
-
-figure.listing figcaption:before {
-    content: "Listing " counter(listing) ". ";
 }
 
 caption:before {
@@ -514,19 +484,48 @@ ol, ul, dd, table {
     content: "\0020";
 }
 
-/* Authors */
-#authors, .authors {
-    margin: 0 auto 2em;
+/* Author Section Styling  */
+
+#authors {
+    margin: 0 auto 1.5em;
     text-align: center;
 }
 
-#authors dt,
-.authors dt {
-    display: none;
+#authors h3 {
+    margin-bottom: 0.3em;
+    text-align: center;
 }
 
 #authors p {
+    margin: 0.3em 0;
     text-align: center;
+}
+
+#supervisors {
+    margin: 2em 0;
+    text-align: center;
+}
+
+#supervisors h3 {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+#supervisors ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#supervisors li {
+    margin: 0.5em 0;
+    text-align: center; /* Explicitly center the list items */
+}
+
+#authors a img,
+#supervisors a img {
+    vertical-align: middle;
+    margin-right: 0.3em;
 }
 
 /* Footnotes */
