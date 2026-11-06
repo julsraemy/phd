@@ -1,9 +1,56 @@
 cff-version: 1.2.0
-message: "If you cite this repository, please cite it as below."
+message: "If you use this repository, please cite the thesis as below."
+type: software
+title: "Linked Open Usable Data for Cultural Heritage: Website and HTML Version of the PhD Thesis"
+abstract: >-
+  Source of https://phd.julsraemy.ch, the companion website of the PhD thesis
+  "Linked Open Usable Data for Cultural Heritage: Perspectives on Community
+  Practices and Semantic Interoperability" (University of Basel, 2024). It
+  provides an HTML version of the thesis with linked citations, acronyms and
+  footnotes, full-text search, embedded IIIF viewers, and the related research
+  outcomes.
 authors:
-- family-names: "Raemy"
-  given-names: "Julien Antoine"
-  orcid: "https://orcid.org/0000-0002-4711-5759"
-title: "Linked Open Usable Data for Cultural Heritage"
-date-released: 2024-03-18
-url: "https://github.com/julsraemy/phd"
+  - family-names: "Raemy"
+    given-names: "Julien Antoine"
+    orcid: "https://orcid.org/0000-0002-4711-5759"
+    affiliation: "University of Basel"
+repository-code: "https://github.com/julsraemy/phd"
+url: "https://phd.julsraemy.ch"
+license: MIT
+date-released: 2026-11-06
+keywords:
+  - "Linked Open Usable Data"
+  - "LOUD"
+  - "IIIF"
+  - "Linked Art"
+  - "Web Annotation Data Model"
+  - "Cultural Heritage"
+  - "Semantic Interoperability"
+  - "Community Practices"
+  - "Digital Humanities"
+preferred-citation:
+  type: thesis
+  title: "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+  authors:
+    - family-names: "Raemy"
+      given-names: "Julien Antoine"
+      orcid: "https://orcid.org/0000-0002-4711-5759"
+  thesis-type: "PhD thesis"
+  institution:
+    name: "University of Basel"
+    city: "Basel"
+    country: "CH"
+  year: 2024
+  date-published: 2024-12-23
+  doi: "10.5451/unibas-ep96807"
+  url: "https://hdl.handle.net/20.500.14716/148352"
+  identifiers:
+    - type: url
+      value: "https://hdl.handle.net/20.500.14716/148352"
+      description: "Handle (edoc, University of Basel)"
+    - type: doi
+      value: "10.5451/unibas-ep96807"
+      description: "DOI"
+    - type: url
+      value: "https://phd.julsraemy.ch/thesis.html"
+      description: "HTML version"
