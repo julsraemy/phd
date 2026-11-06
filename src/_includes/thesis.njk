@@ -11,21 +11,21 @@ bodyClass: thesis-page
   </aside>
   <div class="toc-backdrop" hidden></div>
 
-  <article class="thesis-content">
-    {% if page.url != "/thesis.html" %}<p class="thesis-breadcrumb"><a href="/thesis.html">Linked Open Usable Data for Cultural Heritage</a>{% if chapter %} · Chapter {{ chapter }}{% endif %}</p>{% endif %}
+  <article class="thesis-content" data-pagefind-body data-pagefind-filter="section:Thesis">
+    {% if page.url != "/thesis.html" %}<p class="thesis-breadcrumb" data-pagefind-ignore><a href="/thesis.html">Linked Open Usable Data for Cultural Heritage</a>{% if chapter %} · Chapter {{ chapter }}{% endif %}</p>{% endif %}
     {{ content | safe }}
 
     {% if not noReferences %}
     {%- set bib = content | bibliography -%}
     {% if bib %}
-    <section class="chapter-references" aria-labelledby="references">
+    <section class="chapter-references" aria-labelledby="references" data-pagefind-ignore>
       <h2 id="references">References</h2>
       {{ bib | safe }}
     </section>
     {% endif %}
     {% endif %}
 
-    <nav class="thesis-pager" aria-label="Chapter navigation">
+    <nav class="thesis-pager" aria-label="Chapter navigation" data-pagefind-ignore>
       {% if pageIndex > 0 %}{% set prev = toc.pages[pageIndex - 1] %}
       <a class="pager-prev" href="{{ prev.url }}" rel="prev"><span>Previous</span>{{ prev.title }}</a>
       {% endif %}

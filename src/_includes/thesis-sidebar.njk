@@ -28,6 +28,11 @@
 {%- endmacro -%}
 <nav class="toc-nav" aria-label="Thesis contents">
   <p class="toc-heading"><a href="/thesis.html">LOUD for Cultural Heritage</a></p>
+  <form class="toc-search" action="/search.html" method="get" role="search">
+    <input type="hidden" name="section" value="Thesis">
+    <label for="toc-search-input" class="visually-hidden">Search the thesis</label>
+    <input id="toc-search-input" type="search" name="q" placeholder="Search the thesis…" autocomplete="off">
+  </form>
   <ol class="toc-list">
     <li class="toc-front{% if page.url == '/thesis.html' %} is-current{% endif %}"><a href="/thesis.html"{% if page.url == '/thesis.html' %} aria-current="page"{% endif %}><span class="toc-text">Title &amp; Abstract</span></a></li>
     {%- for p in thesisToc.front %}{{ tocItem(p, "toc-front") }}{% endfor %}

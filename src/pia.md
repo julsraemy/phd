@@ -5,6 +5,7 @@ description: "Participatory Knowledge Practices in Analogue and Digital Image Ar
 keywords: "Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts"
 date: "2024-02-29"
 schemaType: "WebPage"
+viewers: true
 permalink: "/pia.html"
 ---
 
@@ -24,13 +25,11 @@ SGV_05 Atlas of Swiss Folklore consists of 292 maps and 1,000 pages of commentar
 
 SGV_10 Kreis Family comprises approximately 20,000 photographic objects, with a quarter organised into 93 photo albums. This collection, spanning from the 1850s to the 1980s, belonged to a wealthy Basel family and was acquired by CAS in 1991. Despite its initial disorganisation, CAS meticulously catalogued and preserved the collection, which offers a detailed insight into urban bourgeois culture and the development of private photography over a century. The materials range from prints to negatives, in various formats and techniques, from daguerreotypes to modern paper prints. While some were digitised in 2014, most of the work was completed during the PIA project.
 
-<div class="container">
-    <iframe src="https://projectmirador.org/embed/?iiif-content=https://julsraemy.ch/hostiiing/manifests/SGV_10A_00050_layers.json" title="Mirador viewer showing a layered photo album page (SGV_10A_00050) from the Kreis Family collection" width="800" height="600" loading="lazy" allowfullscreen>You need an iFrame capable browser to view this.</iframe>
-</div>
+{% mirador "https://julsraemy.ch/hostiiing/manifests/SGV_10A_00050_layers.json", "Layered photo album page SGV_10A_00050 from the Kreis Family collection" %}
 
 
 ## Ernst Brunner
 
 SGV_12 Ernst Brunner is a collection of about 48,000 negatives and 20,000 prints donated to the CAS archives by Ernst Brunner, a self-taught photojournalist active mainly in the 1930s and 1940s. His work, which documents Swiss society's rural and urban life, is highly regarded. Brunner, who initially worked as a carpenter influenced by the Bauhaus and Neues Bauen movements, became a key visual chronicler of his era. While the black and white negatives were digitised between 2014 and 2018, the prints selected by Brunner were digitised at the end of the PIA research project.
 
-<div id="map" alt="Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589. Alte Bildnummer: DL 89. https://archiv.sgv-sstp.ch/resource/430824" data-iiif-url="https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx/info.json" style="height: 400px; width: 100%;">Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589</div>
+{% iiifImage "https://iiif.dasch.swiss/0812/276uIbjSulF-k5RrtYZ3LUA.jpx/info.json", "Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589", "Brunner, Ernst. [Ringtanz während der Masüras auf der Alp Sura]. Guarda, 1939. Black and White Negative, 6x6cm. SGV_12 Ernst Brunner. SGV_12N_08589. Alte Bildnummer: DL 89. https://archiv.sgv-sstp.ch/resource/430824" %}

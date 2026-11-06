@@ -169,6 +169,20 @@ module.exports = function(eleventyConfig) {
         }).join("") + `</div>`;
     });
 
+    // IIIF viewers (pages need `viewers: true` in their front matter to load /js/viewers.js)
+    eleventyConfig.addShortcode("mirador", function(manifest, caption) {
+        const embed = `https://projectmirador.org/embed/?iiif-content=${encodeURIComponent(manifest)}`;
+        return `<figure class="iiif-viewer iiif-mirador" data-manifest="${escapeHtml(manifest)}" data-embed="${escapeHtml(embed)}" data-title="${escapeHtml("Mirador: " + caption)}">`
+            + `<div class="viewer-frame"><button class="viewer-load" type="button">Load the IIIF viewer (Mirador)</button></div>`
+            + `<figcaption>${caption} · <a href="${escapeHtml(embed)}" target="_blank" rel="noopener noreferrer">Open in Mirador</a>`
+            + ` · <a href="${escapeHtml(manifest)}" target="_blank" rel="noopener noreferrer">IIIF Manifest</a></figcaption></figure>`;
+    });
+    eleventyConfig.addShortcode("iiifImage", function(info, caption, label) {
+        return `<figure class="iiif-viewer iiif-image" data-info="${escapeHtml(info)}">`
+            + `<div class="viewer-frame" role="img" aria-label="${escapeHtml(label || caption)}"></div>`
+            + `<figcaption>${caption} · Zoomable image (IIIF Image API): <a href="${escapeHtml(info)}" target="_blank" rel="noopener noreferrer">info.json</a></figcaption></figure>`;
+    });
+
     // Research outputs (/research.html): APA reference + COinS per item, JSON-LD graph
     eleventyConfig.addShortcode("researchItem", id => research.item(id));
     eleventyConfig.addShortcode("researchJsonLd", () => research.jsonLd());

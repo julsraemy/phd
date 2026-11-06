@@ -40,17 +40,8 @@
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Leaflet-IIIF -->
-    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
+    <!-- Theme: apply a saved light/dark choice before first paint -->
+    <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="https://julsraemy.ch/favicon-96x96.png" sizes="96x96" />
@@ -113,38 +104,47 @@
     </script>
 </head>
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
-    <nav>
-        <button class="nav-trigger">Menu</button>
-        <ul class="collapsed">
-            <li><a href="/">Home</a></li>
-            <li><a href="/loud.html">LOUD</a></li>
-            <li><a href="/thesis.html">PhD Thesis</a></li>
-            <li><a href="/research.html">Research Outcomes</a></li>
-            <li><a href="/pia.html">PIA</a></li>
+    <a class="skip-link" href="#content">Skip to content</a>
+    {%- set navItems = [
+        ["/", "Home"], ["/loud.html", "LOUD"], ["/thesis.html", "PhD Thesis"],
+        ["/research.html", "Research Outcomes"], ["/pia.html", "PIA"], ["/search.html", "Search"]
+    ] %}
+    <nav class="site-nav" aria-label="Site">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+        <ul id="site-menu" class="collapsed">
+            {%- for item in navItems %}
+            {%- set active = (page.url == item[0]) or (item[0] == "/thesis.html" and page.url.startsWith("/thesis/")) %}
+            <li><a href="{{ item[0] }}"{% if active %} aria-current="page"{% endif %}>{{ item[1] }}</a></li>
+            {%- endfor %}
         </ul>
+        <div id="controls" role="group" aria-label="Display settings">
+            <button id="font-decrease" type="button" title="Smaller text" aria-label="Smaller text">A−</button>
+            <button id="font-increase" type="button" title="Larger text" aria-label="Larger text">A+</button>
+            <button id="theme-toggle" type="button" title="Switch between light and dark mode" aria-label="Dark mode" aria-pressed="false">◐</button>
+        </div>
     </nav>
 
-    <!-- Theme and Font Size Controls -->
-    <div id="controls">
-        <button id="font-increase">A+</button>
-        <button id="font-decrease">A-</button>
-    </div>
-    
-    <header>
-        <!-- Header content here -->
-    </header>
-    
-    <main>
+    {#- Search index (Pagefind): thesis pages index their <article>, other pages <main> #}
+    {%- set indexMain = bodyClass != "thesis-page" and page.url != "/404.html" and not noSearchIndex %}
+    <main id="content"{% if indexMain %} data-pagefind-body data-pagefind-filter="section:Website"{% endif %}>
     {{ content | references | safe }}
     </main>
-
 
     <footer>
         Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50" /></a>
     </footer>
-    <script src="/js/accordion.js"></script>
-    <script src="/js/leaflet-iiif-init.js"></script>
-    <script src="/js/font-size.js"></script>
+    <script src="/js/site.js"></script>
+    {%- if viewers %}
+    <script src="/js/viewers.js" defer></script>
+    {%- endif %}
+    <script type="module">
+        // Highlight search terms when arriving from a search result
+        if (new URLSearchParams(location.search).has("highlight")) {
+            import("/pagefind/pagefind-highlight.js")
+                .then(() => new PagefindHighlight({ highlightParam: "highlight" }))
+                .catch(() => {});
+        }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNJQKJHNDF"></script>
     <script>

@@ -5,6 +5,7 @@ description: "Linked Open Usable Data (LOUD), its design principles and its stan
 keywords: "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
 date: "2024-12-04"
 schemaType: "WebPage"
+viewers: true
 permalink: "/loud.html"
 ---
 
@@ -110,9 +111,7 @@ The suite of IIIF-compliant software encompasses a diverse range of tools, each 
 
 The embedded viewer below is [Mirador](https://projectmirador.org), a powerful IIIF-compliant client. Stanford University played a pivotal role in rebuilding it, marking a key milestone that exemplifies the spirit of community-driven effort within the IIIF initiative. This endeavour, which has since been placed in the hands of the community, was later augmented through a collaborative partnership with Harvard University Library. The cooperative dynamics and collective contributions fundamental to the success and advancement of IIIF are clearly reflected in the widespread adoption and continued development of Mirador.
 
-<div class="container">
-<iframe src="https://projectmirador.org/embed/?iiif-content=https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json" title="Mirador viewer showing the IIIF Cookbook recipe ‘Simple Annotation — Tagging’" width="800" height="600" loading="lazy" allowfullscreen>You need an iFrame capable browser to view this.</iframe>
-</div>
+{% mirador "https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json", "IIIF Cookbook recipe ‘Simple Annotation — Tagging’: a picture of Göttingen with a tag annotation" %}
 
 ### Web Annotation Data Model
 

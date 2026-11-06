@@ -4,7 +4,8 @@
   "description": "A website for showcasing my PhD thesis – Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability – and related research outcomes",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy && npm run search-index",
+    "search-index": "pagefind --site _site"
   },
   "license": "MIT",
   "dependencies": {
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "pagefind": "^1.6.0"
   }
 }
