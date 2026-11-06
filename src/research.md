@@ -52,9 +52,9 @@ CAS Data Model was redesigned for the database migration to the DaSCH Service Pl
 
 ### IIIF Manifests Generation
 
-{% researchItem "raemy_daschiiify_2024" %}
+{% researchItem "raemy_iiif-photoalbum_2026" %}
 
-{% researchItem "raemy_iiif-photoalbum_2023" %}
+{% researchItem "raemy_daschiiify_2024" %}
 
 ### PhD Data Model
 
