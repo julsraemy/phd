@@ -6,6 +6,6 @@ order: 2
 
 # Acronyms {id="acronyms"}
 
-Acronyms used throughout the thesis. In the text, the first occurrence of an acronym on each page links here; hovering over any acronym shows its full form.
+The full forms of all acronyms used in the thesis. In this HTML version, the first occurrence of each acronym on a page is shown as a link to this list, and hovering over any acronym with a mouse displays its full form.
 
 {% acronymList %}

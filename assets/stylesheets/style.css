@@ -934,16 +934,16 @@ abbr[title] {
 }
 
 a.acronym-first {
-    color: inherit;
+    color: #007bff;
     text-decoration: none;
 }
 
 a.acronym-first abbr[title] {
-    text-decoration: underline dotted #8a8a8a;
+    text-decoration: underline dotted;
     text-underline-offset: 0.18em;
 }
 
-a.acronym-first:hover abbr[title] { text-decoration-color: #0b57d0; }
+a.acronym-first:hover abbr[title] { text-decoration-style: solid; }
 
 /* Bibliography entries (chapter references and full bibliography) */
 .csl-entry {
