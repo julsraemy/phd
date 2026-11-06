@@ -5,6 +5,7 @@ description: "Research Outcomes related to my PhD thesis titled Linked Open Usab
 keywords: "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
 date: "2024-12-06"
 schemaType: "WebPage"
+bodyClass: "research-page"
 permalink: "/research.html"
 ---
 
@@ -14,30 +15,32 @@ The main focus of this four-year endeavour was, of course, the completion of the
 
 _The research outcomes related to the PhD are organised alphabetically by category, with the most recent ones listed first within each category._
 
+All references on this page carry embedded metadata: with the [Zotero Connector](https://www.zotero.org/download/connectors), you can save any or all of them to your library in one click. You can also download the full list as [CSL-JSON](/data/research.json) and import it into Zotero (_File → Import…_) or any other reference manager. For my research beyond the scope of the PhD thesis, see my full list of [publications](https://julsraemy.ch/publications/).
+
 ## Book Chapter
 
-Raemy, J. A., & Sanderson, R. (2024). Analysis of the Usability of Automatically Enriched Cultural Heritage Data. In F. Moral-Andrés, E. Merino-Gómez, & P. Reviriego (Eds.), _Decoding Cultural Heritage: A Critical Dissection and Taxonomy of Human Creativity through Digital Tools_ (pp. 69–93). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-57675-1_4
+{% researchItem "raemy_usability_2024" %}
 
 
 ## Conference Papers
 
-Raemy, J. A., Gray, T., Collinson, A., & Page, K. R. (2023). Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow. In A. Baillot, W. Scholger, T. Tasovac, & G. Vogeler (Eds.), _Digital Humanities 2023 Book of Abstracts_ (Vol. 2023, pp. 515–516). Alliance of Digital Humanities Organizations (ADHO). https://doi.org/10.5451/unibas-ep95099
+{% researchItem "raemy_enabling_2023" %}
 
-Felsing, U., Fornaro, P., Frischknecht, M., & Raemy, J. A. (2023). Community and Interoperability at the Core of Sustaining Image Archives. _Digital Humanities in the Nordic and Baltic Countries Publications_, 5(1), 40–54. https://doi.org/10.5617/dhnbpub.10649
+{% researchItem "felsing_community_2023" %}
 
-Manz, M. C., Raemy, J. A., & Fornaro, P. (2023). Recommended 3D Workflow for Digital Heritage Practices. _Archiving Conference_, 20, 23–28. https://doi.org/10.2352/issn.2168-3204.2023.20.1.5
+{% researchItem "manz_recommended_2023" %}
 
-Raemy, J. A., & Gautschy, R. (2023). Élaboration d’un processus pour les images 3D reposant sur IIIF. In S. Gabay, E. Leblanc, N. Carboni, R. Suciu, G. Lini, M. Barras, & F. Idmhand (Eds.), _Recueil des communications du 4e colloque Humanistica_ (pp. 1–3). Humanistica, l’association francophone des humanités numériques/digitales. https://doi.org/10.5451/unibas-ep94862
+{% researchItem "raemy_elaboration_2023" %}
 
-Raemy, J. A. (2022). Améliorer la valorisation des données du patrimoine culturel grâce au Linked Open Usable Data (LOUD). In N. Lasolle, O. Bruneau, & J. Lieber (Eds.), _Actes des journées humanités numériques et Web sémantique_ (pp. 132–149). Les Archives Henri-Poincaré - Philosophie et Recherches sur les Sciences et les Technologies (AHP-PReST); Laboratoire lorrain de recherche en informatique et ses applications (LORIA). https://doi.org/10.5451/unibas-ep89725
+{% researchItem "raemy_ameliorer_2022" %}
 
-Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creation of a Participatory Archive Platform. In Y. Hou (Ed.), _Human Factors in Digital Humanities_ (pp. 1–5). Institut des humanités digitales. https://doi.org/10.5451/unibas-ep87517
+{% researchItem "raemy_applying_2021" %}
 
 ## Data Curation and Analysis
 
-Raemy, J. A. (2024). _The LOUD Social Fabrics_ [Computer software]. https://github.com/julsraemy/loud-socialfabrics/
+{% researchItem "raemy_loud-socialfabrics_2024" %}
 
-Raemy, J. A. (2024). _LOUD Consistency_ [Computer software]. https://github.com/julsraemy/loud-consistency
+{% researchItem "raemy_loud-consistency_2024" %}
 
 ## Data Modelling
 
@@ -49,15 +52,15 @@ CAS Data Model was redesigned for the database migration to the DaSCH Service Pl
 
 ### IIIF Manifests Generation
 
-Raemy, J. A. (2024). _daschiiify_ (Version 0.2.0) [Computer software]. https://github.com/dasch-swiss/daschiiify
+{% researchItem "raemy_daschiiify_2024" %}
 
-Raemy, J. A. (2023). _iiif-photoalbum_ (Version 0.1.0) [Computer software]. https://github.com/participatory-Image-Archives/iiif-photoalbum
+{% researchItem "raemy_iiif-photoalbum_2023" %}
 
 ### PhD Data Model
 
 **Metamodel done in Linked Art, to be updated**
 
-Raemy, J. A. (2023). _Linked Art Modelling_ [Computer software]. https://doi.org/10.5281/zenodo.7309787
+{% researchItem "raemy_linked-art-modelling_2023" %}
 
 ### Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) Data Model
 
@@ -67,15 +70,15 @@ A controlled vocabulary done in Simple Knowledge Organization System (SKOS), usi
 
 **PIA Data Model**
 
-Demleitner, A., & Raemy, J. A. (2024). _PIA Data Model_ (0.9) [Computer software]. https://doi.org/10.5281/zenodo.5142605
+{% researchItem "demleitner_pia-data-model_2024" %}
 
 **PIA Linked Art Data Model**
 
-Raemy, J. A. (2022). _PIA Linked Art_ (Version 0.1.0) [Computer software]. https://github.com/Participatory-Image-Archives/linkedart
+{% researchItem "raemy_pia-linked-art_2022" %}
 
 ## Journal Article
 
-Cornut, M., Raemy, J. A., & Spiess, F. (2023). Annotations as Knowledge Practices in Image Archives: Application of Linked Open Usable Data and Machine Learning. _Journal on Computing and Cultural Heritage_, 16(4), 1–19. https://doi.org/10.1145/3625301
+{% researchItem "cornut_annotations_2023" %}
 
 ## Lectures
 
@@ -89,21 +92,21 @@ With Murielle Cornut, PhD Candidate in Cultural Anthropology at the time, we tau
 
 ## (Meta)data Aggregation
 
-Raemy, J. A. (2023). _e-periodica OAI-PMH - Ethnology and Folklore_ (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.7777797
+{% researchItem "raemy_e-periodica_2023" %}
 
 ## Posters
 
-Raemy, J. A., Gray, T., Collinson, A., & Page, K. R. (2023, July 12). Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow (Poster). _Digital Humanities 2023 Posters_. Digital Humanities 2023, Graz, Austria. https://doi.org/10.5281/zenodo.7878358
+{% researchItem "raemy_enabling-poster_2023" %}
 
-Raemy, J. A., & Gautschy, R. (2023, June 28). Élaboration d’un processus pour les images 3D reposant sur IIIF (Poster). _Colloque Humanistica 2023_, Genève, Suisse. https://doi.org/10.5281/zenodo.7927862
+{% researchItem "raemy_elaboration-poster_2023" %}
 
-Raemy, J. A. (2022, October 20). Back and Forth from Boundary Objects to IIIF Resources: The Recipes of a Community-driven Initiative Specifying Standards. _DARIAH-CH Study Day 2022 Posters_. DARIAH-CH Study Day, Mendrisio, Switzerland. https://doi.org/10.5281/zenodo.7015256
+{% researchItem "raemy_back-and-forth_2022" %}
 
 ## Preprints
 
-Raemy, J. A., & Demleitner, A. (2023). _Implementation of the IIIF Presentation API 3.0 based on Software Support: Use Case of an Incremental IIIF Deployment within a Citizen Science Project_. arXiv. https://doi.org/10.48550/ARXIV.2312.11116
+{% researchItem "raemy_implementation_2023" %}
 
-Raemy, J. A., & Sanderson, R. (2023). _Analysis of the Usability of Automatically Enriched Cultural Heritage Data_. arXiv. https://doi.org/10.48550/arXiv.2309.16635
+{% researchItem "raemy_analysis_2023" %}
 
 ## Presentations
 
@@ -111,8 +114,10 @@ I have given a lot of presentations during my PhD. On this website you can find 
 
 ## Report
 
-Raemy, J. A. (2023). _Characterising the IIIF and Linked Art Communities: Survey report_ (p. 29) [Report]. University of Basel. https://hal.science/hal-04162572
+{% researchItem "raemy_characterising_2023" %}
 
 ## Thesis
 
-Raemy, J. A. (2024). _Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability_ [Doctoral Thesis, University of Basel]. https://hdl.handle.net/20.500.14716/148352
+{% researchItem "raemy_loud_2024" %}
+
+{% researchJsonLd %}

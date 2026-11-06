@@ -6,14 +6,15 @@ const markdownItAnchor = require("markdown-it-anchor");
 const { JSDOM } = require("jsdom");
 // Helper modules are (re)loaded at the start of every build so that edits to
 // them take effect in the dev server (Node would otherwise keep them cached).
-const HELPERS = ["./src/data/acronyms.json", "./src/_data/thesisToc.js", "./src/utils/citations.js", "./src/utils/acronyms.js"];
-let acronyms, thesisToc, citations, markAcronyms, acronymListHtml;
+const HELPERS = ["./src/data/acronyms.json", "./src/_data/thesisToc.js", "./src/utils/citations.js", "./src/utils/acronyms.js", "./src/data/research.json", "./src/utils/research.js"];
+let acronyms, thesisToc, citations, markAcronyms, acronymListHtml, research;
 function loadHelpers() {
     for (const mod of HELPERS) delete require.cache[require.resolve(mod)];
     acronyms = require("./src/data/acronyms.json");
     thesisToc = require("./src/_data/thesisToc.js");
     citations = require("./src/utils/citations.js");
     ({ markAcronyms, acronymListHtml } = require("./src/utils/acronyms.js"));
+    research = require("./src/utils/research.js");
 }
 loadHelpers();
 
@@ -168,6 +169,10 @@ module.exports = function(eleventyConfig) {
         }).join("") + `</div>`;
     });
 
+    // Research outputs (/research.html): APA reference + COinS per item, JSON-LD graph
+    eleventyConfig.addShortcode("researchItem", id => research.item(id));
+    eleventyConfig.addShortcode("researchJsonLd", () => research.jsonLd());
+
     eleventyConfig.addFilter("indexByUrl", (pages, url) => pages.findIndex(p => p.url === url));
 
     // Legacy filter: sources now use plain acronyms (marked up automatically)
@@ -196,6 +201,7 @@ module.exports = function(eleventyConfig) {
     // ------------------------------------------------------------------------
     eleventyConfig.addWatchTarget("./src/utils/");
     eleventyConfig.addWatchTarget("./src/data/acronyms.json");
+    eleventyConfig.addWatchTarget("./src/data/research.json");
 
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addPassthroughCopy({"src/data": "data"});

@@ -943,9 +943,6 @@ a.acronym abbr[title] {
     text-underline-offset: 0.18em;
 }
 
-a.acronym-first { color: #007bff; }
-a.acronym-first abbr[title] { text-decoration-color: currentColor; }
-
 a.acronym:hover { color: #0b57d0; }
 a.acronym:hover abbr[title] { text-decoration-style: solid; text-decoration-color: currentColor; }
 
@@ -1031,4 +1028,14 @@ a.acronym:hover abbr[title] { text-decoration-style: solid; text-decoration-colo
     .figure-list li { grid-template-columns: 1fr; gap: 0.1em; }
     .acronym-list { grid-template-columns: 1fr; }
     .acronym-list dd { margin-bottom: 0.5em; }
+}
+
+/* Research outputs (/research.html): no thesis-style first-line indents */
+.research-page main p { text-indent: 0; }
+
+.research-page main p.research-item {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    text-align: left;
+    overflow-wrap: anywhere;
 }
