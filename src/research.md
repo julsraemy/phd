@@ -15,7 +15,7 @@ The main focus of this four-year endeavour was, of course, the completion of the
 
 _The research outcomes related to the PhD are organised alphabetically by category, with the most recent ones listed first within each category._
 
-All references on this page carry embedded metadata: with the [Zotero Connector](https://www.zotero.org/download/connectors), you can save any or all of them to your library in one click. You can also download the full list as [CSL-JSON](/data/research.json) and import it into Zotero (_File → Import…_) or any other reference manager. For my research beyond the scope of the PhD thesis, see my full list of [publications](https://julsraemy.ch/publications/).
+A [CSL-JSON version](/data/research.json) of all the references on this page is also available. For my research beyond the scope of the PhD thesis, see my full list of [publications](https://julsraemy.ch/publications/).
 
 ## Book Chapter
 
