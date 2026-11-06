@@ -23,13 +23,13 @@ Linked Open Data (LOD) has been pivotal in fostering a web of openly connected d
 
 [JSON-LD](https://json-ld.org/) is a modern web standard designed to simplify the encoding of linked data using the widely known JSON format. As a compact and easy-to-manage data format, JSON-LD enhances the ability to share structured data across disparate systems on the Web, while embedding rich semantic capabilities. It achieves this by allowing data to be serialised in a way that is compatible with traditional JSON, yet interpretable by RDF-based semantic processing tools.
 
-At its core, JSON-LD introduces a context (`@ context`) that maps terms in a JSON document to Internationalised Resource Identifiers (IRIs) used in RDF vocabularies. This mapping allows JSON documents to be interpreted as RDF graphs, facilitating the integration of structured data into the Semantic Web without requiring developers to depart from familiar JSON syntax. The design of JSON-LD aims to bridge the gap between the ease of use of JSON and the rich data connectivity and interoperability offered by RDF. The development of JSON-LD was motivated by the need to make linked data more accessible to Web developers and to encourage wider adoption of Semantic Web technologies. By embedding semantic annotations directly into JSON, JSON-LD enables developers to contribute to the linked data cloud with a minimal learning curve, accelerating the growth of a semantically rich, interconnected web of data.
+At its core, JSON-LD introduces a context (`@context`) that maps terms in a JSON document to Internationalised Resource Identifiers (IRIs) used in RDF vocabularies. This mapping allows JSON documents to be interpreted as RDF graphs, facilitating the integration of structured data into the Semantic Web without requiring developers to depart from familiar JSON syntax. The design of JSON-LD aims to bridge the gap between the ease of use of JSON and the rich data connectivity and interoperability offered by RDF. The development of JSON-LD was motivated by the need to make linked data more accessible to Web developers and to encourage wider adoption of Semantic Web technologies. By embedding semantic annotations directly into JSON, JSON-LD enables developers to contribute to the linked data cloud with a minimal learning curve, accelerating the growth of a semantically rich, interconnected web of data.
 
 Per the [JSON-LD 1.1. specification](https://www.w3.org/TR/json-ld11/): 
 
 > JSON-LD is a concrete RDF syntax as described in [RDF11-CONCEPTS](https://www.w3.org/TR/rdf11-concepts/). Hence, a JSON-LD document is both an RDF document and a JSON document and correspondingly represents an instance of an RDF data model. However, JSON-LD also extends the RDF data model to optionally allow JSON-LD to serialize generalized RDF Datasets.
 
-The strategic adoption of JSON-LD as a means to reconcile the simplicity of JSON with the descriptive power of RDF has sparked an insightful debate about its practical implications and its classification as a polyglot format. A [blog post by Tess O'Connor](https://tess.oconnor.cx/2023/09/polyglots-and-interoperability) outlines several challenges that emerge from this approach, including issues related to dual data models, algorithmic complexity, and the potential brittleness and performance impacts of JSON-LD's `@ context` mechanism. To address these challenges, a strategic focus on simplicity and clarity is advocated. Adopting a straightforward JSON format that doesn't require knowledge of RDF can simplify interactions and improve the appeal and usability of the data. In addition, creating canonical mappings from JSON to RDF addresses the needs of RDF users while maintaining the accessibility of the base format. In addition, the adoption of stable sets of `@ context` is critical for consistent data exchange.
+The strategic adoption of JSON-LD as a means to reconcile the simplicity of JSON with the descriptive power of RDF has sparked an insightful debate about its practical implications and its classification as a polyglot format. A [blog post by Tess O'Connor](https://tess.oconnor.cx/2023/09/polyglots-and-interoperability) outlines several challenges that emerge from this approach, including issues related to dual data models, algorithmic complexity, and the potential brittleness and performance impacts of JSON-LD's `@context` mechanism. To address these challenges, a strategic focus on simplicity and clarity is advocated. Adopting a straightforward JSON format that doesn't require knowledge of RDF can simplify interactions and improve the appeal and usability of the data. In addition, creating canonical mappings from JSON to RDF addresses the needs of RDF users while maintaining the accessibility of the base format. In addition, the adoption of stable sets of `@context` is critical for consistent data exchange.
 
 However, this polyglot characterisation of JSON-LD has been met with counter-arguments, [such as those from 
 Pierre-Antoine Champin](https://github.com/w3ctag/design-principles/issues/239#issuecomment-1762316158), that offer a different perspective. Critics argue that JSON-LD should not be considered a polyglot format in the strictest sense because it operates on a "JSON then JSON-LD" basis rather than an "either/or" scenario. In this view, any JSON-LD processor first interprets the document as JSON before applying the JSON-LD layer, similar to how other JSON formats, such as GeoJSON, encode specific types of information beyond the basic JSON structures. This process does not make these formats polyglots, but rather extensions of JSON that provide mappings to more complex data models, thus emphasising JSON-LD's role in simplifying the transition to semantically enriched data on the web.
@@ -111,7 +111,7 @@ The suite of IIIF-compliant software encompasses a diverse range of tools, each 
 The embedded viewer below is [Mirador](https://projectmirador.org), a powerful IIIF-compliant client. Stanford University played a pivotal role in rebuilding it, marking a key milestone that exemplifies the spirit of community-driven effort within the IIIF initiative. This endeavour, which has since been placed in the hands of the community, was later augmented through a collaborative partnership with Harvard University Library. The cooperative dynamics and collective contributions fundamental to the success and advancement of IIIF are clearly reflected in the widespread adoption and continued development of Mirador.
 
 <div class="container">
-<iframe src="https://mirador-dev.netlify.app/__tests__/integration/mirador/" width="800" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" id="frame" allowfullscreen="">You need an iFrame capable browser to view this.</iframe>
+<iframe src="https://projectmirador.org/embed/?iiif-content=https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json" title="Mirador viewer showing the IIIF Cookbook recipe ‘Simple Annotation — Tagging’" width="800" height="600" loading="lazy" allowfullscreen>You need an iFrame capable browser to view this.</iframe>
 </div>
 
 ### Web Annotation Data Model
@@ -122,12 +122,12 @@ Here is an example of machine-generated annotations in a IIIF setting. The JSON-
 
 ```json
 {
-  "@ context": "http://iiif.io/api/presentation/3/context.json",
+  "@context": "http://iiif.io/api/presentation/3/context.json",
   "id": "https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list.json",
   "type": "AnnotationPage",
   "items": [
     {
-      "@ context": "http://www.w3.org/ns/anno.jsonld",
+      "@context": "http://www.w3.org/ns/anno.jsonld",
       "id": "https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list/annotation-436121.json",
       "motivation": "commenting",
       "type": "Annotation",

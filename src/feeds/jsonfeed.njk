@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
     }
   ],
   "items": [
-    {% for item in collections.sitePages %}
+    {% for item in collections.feedPages %}
     {
       "id": "{{ site.url }}{{ item.url | url }}",
       "url": "{{ site.url }}{{ item.url | url }}",

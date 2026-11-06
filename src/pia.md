@@ -25,7 +25,7 @@ SGV_05 Atlas of Swiss Folklore consists of 292 maps and 1,000 pages of commentar
 SGV_10 Kreis Family comprises approximately 20,000 photographic objects, with a quarter organised into 93 photo albums. This collection, spanning from the 1850s to the 1980s, belonged to a wealthy Basel family and was acquired by {{ "CAS" | abbr | safe }} in 1991. Despite its initial disorganisation, {{ "CAS" | abbr | safe }} meticulously catalogued and preserved the collection, which offers a detailed insight into urban bourgeois culture and the development of private photography over a century. The materials range from prints to negatives, in various formats and techniques, from daguerreotypes to modern paper prints. While some were digitised in 2014, most of the work was completed during the PIA project.
 
 <div class="container">
-    <iframe src="https://projectmirador.org/embed/?iiif-content=https://julsraemy.ch/hostiiing/manifests/SGV_10A_00050_layers.json" width="800" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" id="frame" allowfullscreen="">You need an iFrame capable browser to view this.</iframe>
+    <iframe src="https://projectmirador.org/embed/?iiif-content=https://julsraemy.ch/hostiiing/manifests/SGV_10A_00050_layers.json" title="Mirador viewer showing a layered photo album page (SGV_10A_00050) from the Kreis Family collection" width="800" height="600" loading="lazy" allowfullscreen>You need an iFrame capable browser to view this.</iframe>
 </div>
 
 

@@ -1,0 +1,38 @@
+---
+layout: layout.njk
+bodyClass: thesis-page
+---
+{%- set toc = thesisToc -%}
+{%- set pageIndex = toc.pages | indexByUrl(page.url) -%}
+<div class="thesis-shell">
+  <button class="toc-toggle" type="button" aria-controls="thesis-sidebar" aria-expanded="false">Contents</button>
+  <aside id="thesis-sidebar" class="thesis-sidebar">
+    {% include "thesis-sidebar.njk" %}
+  </aside>
+  <div class="toc-backdrop" hidden></div>
+
+  <article class="thesis-content">
+    {% if chapter %}<p class="thesis-breadcrumb"><a href="/thesis.html">Linked Open Usable Data for Cultural Heritage</a> · Chapter {{ chapter }}</p>{% endif %}
+    {{ content | safe }}
+
+    {% if chapter %}
+    {%- set bib = content | bibliography -%}
+    {% if bib %}
+    <section id="bibliography" class="chapter-references">
+      <h2 id="references">References</h2>
+      {{ bib | safe }}
+    </section>
+    {% endif %}
+    {% endif %}
+
+    <nav class="thesis-pager" aria-label="Chapter navigation">
+      {% if pageIndex > 0 %}{% set prev = toc.pages[pageIndex - 1] %}
+      <a class="pager-prev" href="{{ prev.url }}" rel="prev"><span>Previous</span>{{ prev.title }}</a>
+      {% endif %}
+      {% if pageIndex >= 0 and pageIndex < toc.pages.length - 1 %}{% set next = toc.pages[pageIndex + 1] %}
+      <a class="pager-next" href="{{ next.url }}" rel="next"><span>{% if pageIndex == 0 %}Start reading{% else %}Next{% endif %}</span>{{ next.title }}</a>
+      {% endif %}
+    </nav>
+  </article>
+</div>
+<script src="/js/thesis.js" defer></script>

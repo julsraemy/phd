@@ -13,7 +13,7 @@
     <meta name="DC.creator" content="Raemy, Julien Antoine">
     <meta name="DC.date" content="{{ date }}">
     <meta name="DC.type" content="{{ schemaType }}">
-    <meta name="DC.identifier" content="{{ site.url }}{{ permalink }}">
+    <meta name="DC.identifier" content="{{ site.url }}{{ page.url }}">
     <!-- Conditional DOI Identifier -->
     {% if doi %}
     <meta name="DC.identifier" content="https://doi.org/{{ doi }}">
@@ -31,7 +31,7 @@
     {% endif %}
 
     <!-- Title and CSS -->
-    <title>{{ title }}</title>
+    <title>{% if chapter %}{{ chapter }}. {{ title }} · Linked Open Usable Data for Cultural Heritage{% else %}{{ title }}{% endif %}</title>
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
@@ -68,56 +68,67 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
-        "@type": "{{ schemaType }}",
-        "name": "{{ title }}",
-        "author": {
+        "@context": "https://schema.org",
+        "@type": {{ (schemaType or "WebPage") | dump | safe }},
+        "name": {{ title | dump | safe }},
+        "url": {{ (site.url + page.url) | dump | safe }},
+        {% if doi %}"identifier": {{ ("https://doi.org/" + doi) | dump | safe }},
+        {% endif %}{% if chapter %}"isPartOf": {
+            "@type": "Thesis",
+            "name": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
+            "url": "{{ site.url }}/thesis.html"
+        },
+        {% endif %}"author": {
             "@type": "Person",
+            "@id": "https://julsraemy.ch/#person",
+            "name": "Julien Antoine Raemy",
+            "alternateName": "Julien A. Raemy",
             "givenName": "Julien Antoine",
             "familyName": "Raemy",
-            "gender": "Male",
-            "nationality": "Swiss",
-            "url": "https://julsraemy.ch",
+            "url": "https://julsraemy.ch/",
+            "jobTitle": "Semantic Architect and Project Manager",
+            "worksFor": { "@type": "Organization", "name": "docuteam", "url": "https://www.docuteam.ch/" },
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Walter Benjamin Kolleg / Digital Humanities Center",
+                "url": "https://www.dh.unibe.ch/",
+                "parentOrganization": {
+                    "@type": "CollegeOrUniversity",
+                    "@id": "https://ror.org/02k7v4d05",
+                    "name": "University of Bern"
+                }
+            },
             "alumniOf": [
+                { "@type": "CollegeOrUniversity", "@id": "https://ror.org/02s6k3f65", "name": "University of Basel" },
                 {
-                "@type": "EducationalOrganization",
-                "name": "University of Basel",
-                "location": "Basel, Switzerland",
-                "url": "https://www.unibas.ch/",
-                "sameAs": "https://ror.org/02s6k3f65"
+                    "@type": "CollegeOrUniversity",
+                    "name": "Haute école de gestion de Genève",
+                    "parentOrganization": { "@type": "CollegeOrUniversity", "@id": "https://ror.org/01xkakk17", "name": "HES-SO University of Applied Sciences and Arts Western Switzerland" }
                 }
             ],
-            "affiliation": [
-                {
-                "@type": "ArchiveOrganization",
-                "name": "Swiss Federal Archives",
-                "location": "Bern, Switzerland",
-                "url": "https://www.bar.admin.ch/",
-                "sameAs": "https://ror.org/00t6xza10"
-                }, 
-                {
-                "@type": "EducationalOrganization",
-                "name": "University of Bern",
-                "location": "Bern, Switzerland",
-                "url": "https://www.unibe.ch/",
-                "sameAs": "https://ror.org/02k7v4d05"
-                } 
-            ],
+            "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0000-0002-4711-5759" },
             "sameAs": [
-                "https://orcid.org/0000-0002-4711-5759", 
-                "https://phd.julsraemy.ch", 
+                "https://orcid.org/0000-0002-4711-5759",
+                "https://www.wikidata.org/wiki/Q59286487",
                 "https://hcommons.social/@julsraemy",
+                "https://www.linkedin.com/in/julienaraemy/",
+                "https://www.researchgate.net/profile/Julien_Raemy",
+                "https://www.zotero.org/julsraemy",
                 "https://scholar.google.ch/citations?user=pGROUG0AAAAJ",
-                "https://www.linkedin.com/in/julienaraemy/"
+                "https://viaf.org/viaf/1239155284804887060759/",
+                "https://www.semanticscholar.org/author/Julien-A.-Raemy/72004221"
             ]
         },
-        "datePublished": "{{ page.date }}",
-        "description": "{{ description }}",
-        "keywords": "{{ keywords }}"
+        {% if university %}"sourceOrganization": { "@type": "CollegeOrUniversity", "@id": "https://ror.org/02s6k3f65", "name": {{ university | dump | safe }} },
+        {% endif %}"datePublished": {{ (page.date.toISOString() | truncate(10, true, "")) | dump | safe }},
+        "description": {{ (description or "") | dump | safe }},
+        "keywords": {{ (keywords or "") | dump | safe }},
+        "inLanguage": "en",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
     }
     </script>
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     <nav>
         <button class="nav-trigger">Menu</button>
         <ul class="collapsed">
@@ -141,12 +152,6 @@
     
     <main>
     {{ content | references | safe }}
-    {% if page.inputPath == "./src/thesis.md" %}
-        <section id="bibliography">
-            <h2>Bibliography</h2>
-            {{ content | bibliography | safe }}
-        </section>
-    {% endif %}
     </main>
 
 

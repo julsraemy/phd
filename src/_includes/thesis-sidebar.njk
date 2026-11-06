@@ -1,0 +1,32 @@
+<nav class="toc-nav" aria-label="Thesis contents">
+  <p class="toc-heading"><a href="/thesis.html">LOUD for Cultural Heritage</a></p>
+  <ol class="toc-list">
+    <li class="toc-front{% if page.url == '/thesis.html' %} is-current{% endif %}"><a href="/thesis.html"{% if page.url == '/thesis.html' %} aria-current="page"{% endif %}>Title &amp; Abstract</a></li>
+    {%- for ch in thesisToc.chapters %}
+    {%- set current = (ch.url == page.url) %}
+    <li class="toc-chapter{% if current %} is-current{% endif %}">
+      {%- if ch.sections.length %}
+      <details{% if current %} open{% endif %}>
+        <summary><a href="{{ ch.url }}"{% if current %} aria-current="page"{% endif %}><span class="toc-num">{{ ch.num }}</span><span class="toc-text">{{ ch.title }}</span></a></summary>
+        <ol>
+          {%- for s in ch.sections %}
+          <li><a href="{{ s.url }}" data-target="{{ s.id }}"><span class="toc-num">{{ s.num }}</span><span class="toc-text">{{ s.title }}</span></a>
+            {%- if current and s.children.length %}
+            <ol>
+              {%- for c in s.children %}
+              <li><a href="{{ c.url }}" data-target="{{ c.id }}"><span class="toc-num">{{ c.num }}</span><span class="toc-text">{{ c.title }}</span></a></li>
+              {%- endfor %}
+            </ol>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ol>
+      </details>
+      {%- else %}
+      <a href="{{ ch.url }}"{% if current %} aria-current="page"{% endif %}><span class="toc-num">{{ ch.num }}</span><span class="toc-text">{{ ch.title }}</span></a>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="toc-pdf"><a href="https://doi.org/10.5451/unibas-ep96807">PDF version (edoc)</a></p>
+</nav>
