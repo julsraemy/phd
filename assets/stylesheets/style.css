@@ -976,6 +976,9 @@ a.cite:focus-visible {
 
 .cite-preview .csl-entry + .csl-entry { margin-top: 0.6em; }
 .cite-preview .csl-entry { padding-left: 0; text-indent: 0; }
+.cite-preview.is-footnote p { margin: 0; text-indent: 0; text-align: left; overflow-wrap: anywhere; }
+.cite-preview.is-footnote p + p { margin-top: 0.5em; }
+.cite-preview .fn-preview-label { font-weight: 600; color: var(--text-muted); }
 
 /* Acronyms: hover shows the full form; only the first one per page is underlined */
 abbr[title] {
