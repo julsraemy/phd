@@ -1,8 +1,8 @@
 // Automatic acronym markup, driven by src/data/acronyms.json.
 //
 // Sources contain plain text ("IIIF", "APIs"); at build time every occurrence in
-// the page body becomes <abbr title="…">. The first occurrence on a page also
-// links to the Acronyms page. Code, links, headings and bibliography entries
+// the page body becomes <abbr title="…"> linking to the Acronyms page; the
+// first occurrence on a page is highlighted. Code, links, headings and bibliography entries
 // are left untouched.
 const acronyms = require("../data/acronyms.json");
 
@@ -17,7 +17,7 @@ const HAS_MATCH = new RegExp(PATTERN.source); // non-global: no lastIndex state
 
 const anchorId = key => "acr-" + key.replace(/[^A-Za-z0-9]+/g, "-");
 
-function markAcronyms(document, root, { linkFirst = true } = {}) {
+function markAcronyms(document, root, { link = true } = {}) {
     if (!root) return 0;
     const NodeFilter = document.defaultView.NodeFilter;
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -39,12 +39,13 @@ function markAcronyms(document, root, { linkFirst = true } = {}) {
             const abbr = document.createElement("abbr");
             abbr.title = acronyms[key];
             abbr.textContent = key;
-            if (linkFirst && !seen.has(key)) {
-                const a = document.createElement("a");
-                a.className = "acronym-first";
-                a.href = `${ACRONYMS_PAGE}#${anchorId(key)}`;
-                a.append(abbr);
-                frag.append(a);
+            if (link) {
+                // every occurrence links to the list; the first one per page stands out
+                const link = document.createElement("a");
+                link.className = seen.has(key) ? "acronym" : "acronym acronym-first";
+                link.href = `${ACRONYMS_PAGE}#${anchorId(key)}`;
+                link.append(abbr);
+                frag.append(link);
             } else {
                 frag.append(abbr);
             }

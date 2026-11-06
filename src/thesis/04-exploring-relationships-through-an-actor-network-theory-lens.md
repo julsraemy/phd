@@ -8,7 +8,7 @@ chapterId: "cha:theoretical"
 
 > As Jim Clifford taught me, we need stories (and theories) that are just big enough to gather up the complexities and keep the edges open and greedy for surprising new and old connections. [@haraway_staying_2016 p. 101]
 
-This chapter serves as the theoretical framework of the dissertation, and its primary goals are to elucidate the theoretical underpinnings and provide a comprehensive toolbox for addressing the identified problem. In the preceding literature review chapter, I highlighted the issue that necessitates attention around interlinking CH. The theoretical framework, sometimes referred to as the ‘toolbox’, which can be likened to ‘tools’ the that will be employed to understand and address this problem.
+This chapter serves as the theoretical framework of the dissertation, and its primary goals are to elucidate the theoretical underpinnings and provide a comprehensive toolbox for addressing the identified problem. In the preceding literature review chapter, I highlighted the issue that necessitates attention around interlinking CH. The theoretical framework, sometimes referred to as the ‘toolbox’, which can be likened to the ‘tools’ that will be employed to understand and address this problem.
 
 Here, the primary purpose of this chapter is to offer an in-depth exploration of the tools -- which comprises various theories, propositions, and concepts -- delineating their characteristics, behaviours, historical applications, interrelationships, relevance to the study's objectives, and potential limitations. Subsequently, the next chapter will elucidate how these tools will be operationalised in the research process.
 

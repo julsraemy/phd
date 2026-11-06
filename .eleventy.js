@@ -84,7 +84,7 @@ module.exports = function(eleventyConfig) {
         const dom = new JSDOM(content);
         const document = dom.window.document;
         const root = document.querySelector(".thesis-content") || document.querySelector("main");
-        markAcronyms(document, root, { linkFirst: isThesisPage(url) });
+        markAcronyms(document, root, { link: isThesisPage(url) });
         return dom.serialize();
     });
 
