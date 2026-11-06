@@ -213,11 +213,7 @@ The individuals I have met and the knowledge shared in these vibrant communities
 
 [^9]: Salsah: <https://www.salsah.org/>
 
-[^10]: CAS photo
-    archive website: <https://archiv.sgv-sstp.ch/>\
-    The newer CAS
-    multimedia archive is also accessible at
-    <https://www.ekws.ch/de/archiv>
+[^10]: CAS photo archive website: <https://www.ekws.ch/de/archiv>
 
 [^11]: The considerable size of the ASV collection, which includes over
     90,000 analogue objects, reflects not just the work of the main
