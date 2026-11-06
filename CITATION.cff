@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the thesis as below."
+message: "If you use this repository, please cite it as below."
 type: software
 title: "Linked Open Usable Data for Cultural Heritage: Website and HTML Version of the PhD Thesis"
 abstract: >-
@@ -28,29 +28,19 @@ keywords:
   - "Semantic Interoperability"
   - "Community Practices"
   - "Digital Humanities"
-preferred-citation:
-  type: thesis
-  title: "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
-  authors:
-    - family-names: "Raemy"
-      given-names: "Julien Antoine"
-      orcid: "https://orcid.org/0000-0002-4711-5759"
-  thesis-type: "PhD thesis"
-  institution:
-    name: "University of Basel"
-    city: "Basel"
-    country: "CH"
-  year: 2024
-  date-published: 2024-12-23
-  doi: "10.5451/unibas-ep96807"
-  url: "https://hdl.handle.net/20.500.14716/148352"
-  identifiers:
-    - type: url
-      value: "https://hdl.handle.net/20.500.14716/148352"
-      description: "Handle (edoc, University of Basel)"
-    - type: doi
-      value: "10.5451/unibas-ep96807"
-      description: "DOI"
-    - type: url
-      value: "https://phd.julsraemy.ch/thesis.html"
-      description: "HTML version"
+references:
+  - type: thesis
+    title: "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+    authors:
+      - family-names: "Raemy"
+        given-names: "Julien Antoine"
+        orcid: "https://orcid.org/0000-0002-4711-5759"
+    thesis-type: "PhD thesis"
+    institution:
+      name: "University of Basel"
+      city: "Basel"
+      country: "CH"
+    year: 2024
+    date-published: 2024-12-23
+    doi: "10.5451/unibas-ep96807"
+    url: "https://hdl.handle.net/20.500.14716/148352"
