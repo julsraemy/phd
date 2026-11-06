@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability">
@@ -12,7 +14,10 @@
     <meta name="DC.date" content="2024-12-06">
     <meta name="DC.type" content="WebPage">
     <meta name="DC.identifier" content="https://phd.julsraemy.ch/research.html">
-    <!-- Conditional DOI Identifier -->
+    <!-- Persistent identifiers of the thesis: Handle (primary) and DOI -->
+    
+    
+    
     
     <meta name="DC.description" content="Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability">
     <meta name="DC.subject" content="Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline">
@@ -25,32 +30,23 @@
     <!-- Title and CSS -->
     <title>LOUD for Cultural Heritage – Research Outcomes</title>
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Leaflet-IIIF -->
-    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
+    <!-- Theme: apply a saved light/dark choice before first paint -->
+    <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="https://julsraemy.ch/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="https://julsraemy.ch/favicon.svg">
-    <link rel="shortcut icon" href="https://julsraemy.ch/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://julsraemy.ch/apple-touch-icon.png">
-    <link rel="manifest" href="https://julsraemy.ch/site.webmanifest">
+    <link rel="icon" type="image/png" href="https://julsraemy.ch/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://julsraemy.ch/favicon.svg" />
+    <link rel="shortcut icon" href="https://julsraemy.ch/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://julsraemy.ch/apple-touch-icon.png" />
+    <link rel="manifest" href="https://julsraemy.ch/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
 
     <!-- Me -->
-    <link rel="me" href="https://hcommons.social/@julsraemy">
+    <link rel="me" href="https://hcommons.social/@julsraemy" />
     <link rel="me" href="https://www.wikidata.org/entity/Q59286487">
     <link rel="me" href="https://orcid.org/0000-0002-4711-5759">
     <link rel="me" href="https://scholar.google.ch/citations?user=pGROUG0AAAAJ">
@@ -60,151 +56,868 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
+        "@context": [
+            "https://schema.org",
+            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
+        ],
         "@type": "WebPage",
+        "@id": "https://phd.julsraemy.ch/research.html",
         "name": "LOUD for Cultural Heritage – Research Outcomes",
+        "url": "https://phd.julsraemy.ch/research.html",
         "author": {
             "@type": "Person",
-            "givenName": "Julien Antoine",
-            "familyName": "Raemy",
-            "gender": "Male",
-            "nationality": "Swiss",
-            "url": "https://julsraemy.ch",
-            "alumniOf": [
-                {
-                "@type": "EducationalOrganization",
-                "name": "University of Basel",
-                "location": "Basel, Switzerland",
-                "url": "https://www.unibas.ch/",
-                "sameAs": "https://ror.org/02s6k3f65"
-                }
-            ],
-            "affiliation": [
-                {
-                "@type": "ArchiveOrganization",
-                "name": "Swiss Federal Archives",
-                "location": "Bern, Switzerland",
-                "url": "https://www.bar.admin.ch/",
-                "sameAs": "https://ror.org/00t6xza10"
-                }, 
-                {
-                "@type": "EducationalOrganization",
-                "name": "University of Bern",
-                "location": "Bern, Switzerland",
-                "url": "https://www.unibe.ch/",
-                "sameAs": "https://ror.org/02k7v4d05"
-                } 
-            ],
-            "sameAs": [
-                "https://orcid.org/0000-0002-4711-5759", 
-                "https://phd.julsraemy.ch", 
-                "https://hcommons.social/@julsraemy",
-                "https://scholar.google.ch/citations?user=pGROUG0AAAAJ",
-                "https://www.linkedin.com/in/julienaraemy/"
-            ]
+            "@id": "https://julsraemy.ch/#person",
+            "name": "Julien Antoine Raemy",
+            "identifier": "https://orcid.org/0000-0002-4711-5759",
+            "seeAlso": "https://julsraemy.ch/me.json"
         },
-        "datePublished": "Fri Dec 06 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+        "datePublished": "2024-12-06",
         "description": "Research Outcomes related to my PhD thesis titled Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
-        "keywords": "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline"
+        "keywords": "Research Outcomes, Journal Article, Conference Paper, Book Chapter, Data Curation, Data Modelling, Software, Data Pipeline",
+        "inLanguage": "en",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
     }
     </script>
 </head>
-<body>
-    <nav>
-        <button class="nav-trigger">Menu</button>
-        <ul class="collapsed">
+<body class="research-page">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <nav class="site-nav" aria-label="Site">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+        <ul id="site-menu" class="collapsed">
             <li><a href="/">Home</a></li>
             <li><a href="/loud.html">LOUD</a></li>
             <li><a href="/thesis.html">PhD Thesis</a></li>
-            <li><a href="/research.html">Research Outcomes</a></li>
+            <li><a href="/research.html" aria-current="page">Research Outcomes</a></li>
             <li><a href="/pia.html">PIA</a></li>
         </ul>
+        <div id="controls" role="group" aria-label="Search and display settings">
+            <a id="search-link" href="/search.html" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+            <button id="font-decrease" type="button" title="Smaller text" aria-label="Smaller text">A−</button>
+            <button id="font-increase" type="button" title="Larger text" aria-label="Larger text">A+</button>
+            <button id="theme-toggle" type="button" title="Switch between light and dark mode" aria-label="Dark mode" aria-pressed="false">◐</button>
+        </div>
     </nav>
-
-    <!-- Theme and Font Size Controls -->
-    <div id="controls">
-        <button id="font-increase">A+</button>
-        <button id="font-decrease">A-</button>
-    </div>
-    
-    <header>
-        <!-- Header content here -->
-    </header>
-    
-    <main>
+    <main id="content" data-pagefind-body data-pagefind-filter="section:Website">
     <h1 id="research-outcomes" tabindex="-1">Research Outcomes</h1>
 <p>The main focus of this four-year endeavour was, of course, the completion of the <a href="thesis.html">dissertation</a>, submitted as a monograph. In addition, contributions were made through the publication of articles in peer-reviewed journals and conference proceedings, as well as writing a book chapter. Further essential activities included developing scripts for data collection and analysis, building data pipeline workflows, and designing and implementing data models, with a particular emphasis on using <a href="loud.html">Linked Open Usable Data</a> (LOUD) standards such as Linked Art, a metadata application profile for describing cultural heritage.</p>
-<p><em>The research outcomes related to the PhD are organised alphabetically by category, with the most recent ones listed first within each category.</em></p>
+<p>A <a href="/data/research.json">CSL-JSON version</a> of all the references on this page is also available. For my research beyond the scope of the PhD thesis, see my full list of <a href="https://julsraemy.ch/publications/" target="_blank" rel="noopener noreferrer">publications</a>.</p>
+<p>The research outcomes related to the PhD are organised alphabetically by category, with the most recent ones listed first within each category.</p>
 <h2 id="book-chapter" tabindex="-1">Book Chapter</h2>
-<p>Raemy, J. A., &amp; Sanderson, R. (2024). Analysis of the Usability of Automatically Enriched Cultural Heritage Data. In F. Moral-Andrés, E. Merino-Gómez, &amp; P. Reviriego (Eds.), <em>Decoding Cultural Heritage: A Critical Dissection and Taxonomy of Human Creativity through Digital Tools</em> (pp. 69–93). Springer Nature Switzerland. <a href="https://doi.org/10.1007/978-3-031-57675-1_4" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/978-3-031-57675-1_4</a></p>
+<p class="research-item" id="raemy_usability_2024">Raemy, J. A., &#38; Sanderson, R. (2024). Analysis of the Usability of Automatically Enriched Cultural Heritage Data. In F. Moral-Andrés, E. Merino-Gómez, &#38; P. Reviriego (Eds.), <i>Decoding Cultural Heritage: A Critical Dissection and Taxonomy of Human Creativity through Digital Tools</i> (pp. 69–93). Springer Nature Switzerland. <a href="https://doi.org/10.1007/978-3-031-57675-1_4" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/978-3-031-57675-1_4</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Analysis+of+the+Usability+of+Automatically+Enriched+Cultural+Heritage+Data&amp;rft.btitle=Decoding+Cultural+Heritage%3A+A+Critical+Dissection+and+Taxonomy+of+Human+Creativity+through+Digital+Tools&amp;rft.date=2024&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Robert+Sanderson&amp;rft.pages=69%E2%80%9393&amp;rft.pub=Springer+Nature+Switzerland&amp;rft.place=Cham&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-031-57675-1_4&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1007%2F978-3-031-57675-1_4"></span></p>
 <h2 id="conference-papers" tabindex="-1">Conference Papers</h2>
-<p>Raemy, J. A., Gray, T., Collinson, A., &amp; Page, K. R. (2023). Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow. In A. Baillot, W. Scholger, T. Tasovac, &amp; G. Vogeler (Eds.), <em>Digital Humanities 2023 Book of Abstracts</em> (Vol. 2023, pp. 515–516). Alliance of Digital Humanities Organizations (ADHO). <a href="https://doi.org/10.5451/unibas-ep95099" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep95099</a></p>
-<p>Felsing, U., Fornaro, P., Frischknecht, M., &amp; Raemy, J. A. (2023). Community and Interoperability at the Core of Sustaining Image Archives. <em>Digital Humanities in the Nordic and Baltic Countries Publications</em>, 5(1), 40–54. <a href="https://doi.org/10.5617/dhnbpub.10649" target="_blank" rel="noopener noreferrer">https://doi.org/10.5617/dhnbpub.10649</a></p>
-<p>Manz, M. C., Raemy, J. A., &amp; Fornaro, P. (2023). Recommended 3D Workflow for Digital Heritage Practices. <em>Archiving Conference</em>, 20, 23–28. <a href="https://doi.org/10.2352/issn.2168-3204.2023.20.1.5" target="_blank" rel="noopener noreferrer">https://doi.org/10.2352/issn.2168-3204.2023.20.1.5</a></p>
-<p>Raemy, J. A., &amp; Gautschy, R. (2023). Élaboration d’un processus pour les images 3D reposant sur IIIF. In S. Gabay, E. Leblanc, N. Carboni, R. Suciu, G. Lini, M. Barras, &amp; F. Idmhand (Eds.), <em>Recueil des communications du 4e colloque Humanistica</em> (pp. 1–3). Humanistica, l’association francophone des humanités numériques/digitales. <a href="https://doi.org/10.5451/unibas-ep94862" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep94862</a></p>
-<p>Raemy, J. A. (2022). Améliorer la valorisation des données du patrimoine culturel grâce au Linked Open Usable Data (LOUD). In N. Lasolle, O. Bruneau, &amp; J. Lieber (Eds.), <em>Actes des journées humanités numériques et Web sémantique</em> (pp. 132–149). Les Archives Henri-Poincaré - Philosophie et Recherches sur les Sciences et les Technologies (AHP-PReST); Laboratoire lorrain de recherche en informatique et ses applications (LORIA). <a href="https://doi.org/10.5451/unibas-ep89725" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep89725</a></p>
-<p>Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creation of a Participatory Archive Platform. In Y. Hou (Ed.), <em>Human Factors in Digital Humanities</em> (pp. 1–5). Institut des humanités digitales. <a href="https://doi.org/10.5451/unibas-ep87517" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep87517</a></p>
+<p class="research-item" id="raemy_enabling_2023">Raemy, J. A., Gray, T., Collinson, A., &#38; Page, K. R. (2023). Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow. In A. Baillot, W. Scholger, T. Tasovac, &#38; G. Vogeler (Eds.), <i>Digital Humanities 2023 Book of Abstracts</i> (Vol. 2023, pp. 515–516). Alliance of Digital Humanities Organizations (ADHO). <a href="https://doi.org/10.5451/unibas-ep95099" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep95099</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=proceeding&amp;rft.atitle=Enabling+Participatory+Data+Perspectives+for+Image+Archives+through+a+Linked+Art+Workflow&amp;rft.btitle=Digital+Humanities+2023+Book+of+Abstracts&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Tanya+Gray&amp;rft.au=Alwyn+Collinson&amp;rft.au=Kevin+R.+Page&amp;rft.volume=2023&amp;rft.pages=515%E2%80%93516&amp;rft.pub=Alliance+of+Digital+Humanities+Organizations+%28ADHO%29&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5451%2Funibas-ep95099&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5451%2Funibas-ep95099"></span></p>
+<p class="research-item" id="felsing_community_2023">Felsing, U., Fornaro, P., Frischknecht, M., &#38; Raemy, J. A. (2023). Community and Interoperability at the Core of Sustaining Image Archives. <i>Digital Humanities in the Nordic and Baltic Countries Publications</i>, <i>5</i>(1), 40–54. <a href="https://doi.org/10.5617/dhnbpub.10649" target="_blank" rel="noopener noreferrer">https://doi.org/10.5617/dhnbpub.10649</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Community+and+Interoperability+at+the+Core+of+Sustaining+Image+Archives&amp;rft.jtitle=Digital+Humanities+in+the+Nordic+and+Baltic+Countries+Publications&amp;rft.date=2023&amp;rft.au=Ulrike+Felsing&amp;rft.au=Peter+Fornaro&amp;rft.au=Max+Frischknecht&amp;rft.au=Julien+Antoine+Raemy&amp;rft.volume=5&amp;rft.issue=1&amp;rft.pages=40%E2%80%9354&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5617%2Fdhnbpub.10649&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5617%2Fdhnbpub.10649"></span></p>
+<p class="research-item" id="manz_recommended_2023">Manz, M. C., Raemy, J. A., &#38; Fornaro, P. (2023). Recommended 3D Workflow for Digital Heritage Practices. <i>Archiving Conference</i>, <i>20</i>, 23–28. <a href="https://doi.org/10.2352/issn.2168-3204.2023.20.1.5" target="_blank" rel="noopener noreferrer">https://doi.org/10.2352/issn.2168-3204.2023.20.1.5</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=proceeding&amp;rft.atitle=Recommended+3D+Workflow+for+Digital+Heritage+Practices&amp;rft.btitle=Archiving+Conference&amp;rft.date=2023&amp;rft.au=Marian+Clemens+Manz&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Peter+Fornaro&amp;rft.volume=20&amp;rft.pages=23%E2%80%9328&amp;rft.pub=Society+for+Imaging+Science+and+Technology&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.2352%2Fissn.2168-3204.2023.20.1.5&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.2352%2Fissn.2168-3204.2023.20.1.5"></span></p>
+<p class="research-item" id="raemy_elaboration_2023">Raemy, J. A., &#38; Gautschy, R. (2023). Élaboration d’un processus pour les images 3D reposant sur IIIF. In S. Gabay, E. Leblanc, N. Carboni, R. Suciu, G. Lini, M. Barras, &#38; F. Idmhand (Eds.), <i>Recueil des communications du 4e colloque Humanistica</i> (pp. 1–3). Humanistica, l’association francophone des humanités numériques/digitales. <a href="https://doi.org/10.5451/unibas-ep94862" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep94862</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=proceeding&amp;rft.atitle=%C3%89laboration+d%E2%80%99un+processus+pour+les+images+3D+reposant+sur+IIIF&amp;rft.btitle=Recueil+des+communications+du+4e+colloque+Humanistica&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Rita+Gautschy&amp;rft.pages=1%E2%80%933&amp;rft.pub=Humanistica%2C+l%E2%80%99association+francophone+des+humanit%C3%A9s+num%C3%A9riques%2Fdigitales&amp;rft.language=fr&amp;rft_id=info%3Adoi%2F10.5451%2Funibas-ep94862&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5451%2Funibas-ep94862"></span></p>
+<p class="research-item" id="raemy_ameliorer_2022">Raemy, J. A. (2022). Améliorer la valorisation des données du patrimoine culturel grâce au Linked Open Usable Data (LOUD). In N. Lasolle, O. Bruneau, &#38; J. Lieber (Eds.), <i>Actes des journées humanités numériques et Web sémantique</i> (pp. 132–149). Les Archives Henri-Poincaré - Philosophie et Recherches sur les Sciences et les Technologies (AHP-PReST); Laboratoire lorrain de recherche en informatique et ses applications (LORIA). <a href="https://doi.org/10.5451/unibas-ep89725" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep89725</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=proceeding&amp;rft.atitle=Am%C3%A9liorer+la+valorisation+des+donn%C3%A9es+du+patrimoine+culturel+gr%C3%A2ce+au+Linked+Open+Usable+Data+%28LOUD%29&amp;rft.btitle=Actes+des+journ%C3%A9es+humanit%C3%A9s+num%C3%A9riques+et+Web+s%C3%A9mantique&amp;rft.date=2022&amp;rft.au=Julien+Antoine+Raemy&amp;rft.pages=132%E2%80%93149&amp;rft.pub=Les+Archives+Henri-Poincar%C3%A9+-+Philosophie+et+Recherches+sur+les+Sciences+et+les+Technologies+%28AHP-PReST%29%3B+Laboratoire+lorrain+de+recherche+en+informatique+et+ses+applications+%28LORIA%29&amp;rft.place=Nancy&amp;rft.language=fr&amp;rft_id=info%3Adoi%2F10.5451%2Funibas-ep89725&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5451%2Funibas-ep89725"></span></p>
+<p class="research-item" id="raemy_applying_2021">Raemy, J. A. (2021). Applying Effective Data Modelling Approaches for the Creation of a Participatory Archive Platform. In Y. Hou (Ed.), <i>Human Factors in Digital Humanities</i> (pp. 1–5). Institut des humanités digitales. <a href="https://doi.org/10.5451/unibas-ep87517" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep87517</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=proceeding&amp;rft.atitle=Applying+Effective+Data+Modelling+Approaches+for+the+Creation+of+a+Participatory+Archive+Platform&amp;rft.btitle=Human+Factors+in+Digital+Humanities&amp;rft.date=2021&amp;rft.au=Julien+Antoine+Raemy&amp;rft.pages=1%E2%80%935&amp;rft.pub=Institut+des+humanit%C3%A9s+digitales&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5451%2Funibas-ep87517&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5451%2Funibas-ep87517"></span></p>
 <h2 id="data-curation-and-analysis" tabindex="-1">Data Curation and Analysis</h2>
-<p>Raemy, J. A. (2024). <em>The LOUD Social Fabrics</em> [Computer software]. <a href="https://github.com/julsraemy/loud-socialfabrics/" target="_blank" rel="noopener noreferrer">https://github.com/julsraemy/loud-socialfabrics/</a></p>
-<p>Raemy, J. A. (2024). <em>LOUD Consistency</em> [Computer software]. <a href="https://github.com/julsraemy/loud-consistency" target="_blank" rel="noopener noreferrer">https://github.com/julsraemy/loud-consistency</a></p>
+<p class="research-item" id="raemy_loud-socialfabrics_2024">Raemy, J. A. (2024). <i>The LOUD Social Fabrics</i> [Computer software]. <a href="https://github.com/julsraemy/loud-socialfabrics/" target="_blank" rel="noopener noreferrer">https://github.com/julsraemy/loud-socialfabrics/</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=The+LOUD+Social+Fabrics&amp;rft.date=2024&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjulsraemy%2Floud-socialfabrics%2F"></span></p>
+<p class="research-item" id="raemy_loud-consistency_2024">Raemy, J. A. (2024). <i>LOUD Consistency</i> [Computer software]. <a href="https://github.com/julsraemy/loud-consistency" target="_blank" rel="noopener noreferrer">https://github.com/julsraemy/loud-consistency</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=LOUD+Consistency&amp;rft.date=2024&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjulsraemy%2Floud-consistency"></span></p>
 <h2 id="data-modelling" tabindex="-1">Data Modelling</h2>
 <p>As an integral part of both my doctoral research and active engagement in the PIA research project, I dedicated substantial efforts to data modelling.</p>
 <h3 id="cultural-anthropology-switzerland-(cas)-data-model" tabindex="-1">Cultural Anthropology Switzerland (CAS) Data Model</h3>
 <p>CAS Data Model was redesigned for the database migration to the DaSCH Service Platform (DSP). Its JSON-LD representation is available at <a href="https://api.dasch.swiss/ontology/0812/ekws/v2" target="_blank" rel="noopener noreferrer">https://api.dasch.swiss/ontology/0812/ekws/v2</a>.</p>
 <h3 id="iiif-manifests-generation" tabindex="-1">IIIF Manifests Generation</h3>
-<p>Raemy, J. A. (2024). <em>daschiiify</em> (Version 0.2.0) [Computer software]. <a href="https://github.com/dasch-swiss/daschiiify" target="_blank" rel="noopener noreferrer">https://github.com/dasch-swiss/daschiiify</a></p>
-<p>Raemy, J. A. (2023). <em>iiif-photoalbum</em> (Version 0.1.0) [Computer software]. <a href="https://github.com/participatory-Image-Archives/iiif-photoalbum" target="_blank" rel="noopener noreferrer">https://github.com/participatory-Image-Archives/iiif-photoalbum</a></p>
+<p class="research-item" id="raemy_iiif-photoalbum_2026">Raemy, J. A. (2026). <i>iiif-photoalbum</i> (Version 1.2.0) [Computer software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.23794320" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.23794320</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=iiif-photoalbum&amp;rft.date=2026&amp;rft.au=Julien+Antoine+Raemy&amp;rft.pub=Zenodo&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.23794320&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.23794320"></span></p>
+<p class="research-item" id="raemy_daschiiify_2024">Raemy, J. A. (2024). <i>daschiiify</i> (Version 0.2.0) [Computer software]. <a href="https://github.com/dasch-swiss/daschiiify" target="_blank" rel="noopener noreferrer">https://github.com/dasch-swiss/daschiiify</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=daschiiify&amp;rft.date=2024&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=https%3A%2F%2Fgithub.com%2Fdasch-swiss%2Fdaschiiify"></span></p>
 <h3 id="phd-data-model" tabindex="-1">PhD Data Model</h3>
 <p><strong>Metamodel done in Linked Art, to be updated</strong></p>
-<p>Raemy, J. A. (2023). <em>Linked Art Modelling</em> [Computer software]. <a href="https://doi.org/10.5281/zenodo.7309787" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7309787</a></p>
+<p class="research-item" id="raemy_linked-art-modelling_2023">Raemy, J. A. (2023). <i>Linked Art Modelling</i> [Computer software]. <a href="https://doi.org/10.5281/zenodo.7309787" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7309787</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=Linked+Art+Modelling&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.7309787&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.7309787"></span></p>
 <h3 id="participatory-knowledge-practices-in-analogue-and-digital-image-archives-(pia)-data-model" tabindex="-1">Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) Data Model</h3>
 <p><strong>Ernst Brunner Thesaurus</strong></p>
 <p>A controlled vocabulary done in Simple Knowledge Organization System (SKOS), using <a href="https://github.com/skohub-io/skohub-docker-vocabs" target="_blank" rel="noopener noreferrer">SkoHub Docker Vocabs</a>, for the preferred terms used by the photographer Ernst Brunner. It is published at <a href="https://n2t.net/ark:/19156/tkt42/" target="_blank" rel="noopener noreferrer">https://n2t.net/ark:/19156/tkt42/</a>.</p>
 <p><strong>PIA Data Model</strong></p>
-<p>Demleitner, A., &amp; Raemy, J. A. (2024). <em>PIA Data Model</em> (0.9) [Computer software]. <a href="https://doi.org/10.5281/zenodo.5142605" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.5142605</a></p>
+<p class="research-item" id="demleitner_pia-data-model_2024">Demleitner, A., &#38; Raemy, J. A. (2024). <i>PIA Data Model</i> (Version 0.9) [Computer software]. <a href="https://doi.org/10.5281/zenodo.5142605" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.5142605</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=PIA+Data+Model&amp;rft.date=2024&amp;rft.au=Adrian+Demleitner&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.5142605&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.5142605"></span></p>
 <p><strong>PIA Linked Art Data Model</strong></p>
-<p>Raemy, J. A. (2022). <em>PIA Linked Art</em> (Version 0.1.0) [Computer software]. <a href="https://github.com/Participatory-Image-Archives/linkedart" target="_blank" rel="noopener noreferrer">https://github.com/Participatory-Image-Archives/linkedart</a></p>
+<p class="research-item" id="raemy_pia-linked-art_2022">Raemy, J. A. (2022). <i>PIA Linked Art</i> (Version 0.1.0) [Computer software]. <a href="https://github.com/Participatory-Image-Archives/linkedart" target="_blank" rel="noopener noreferrer">https://github.com/Participatory-Image-Archives/linkedart</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=PIA+Linked+Art&amp;rft.date=2022&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=https%3A%2F%2Fgithub.com%2FParticipatory-Image-Archives%2Flinkedart"></span></p>
 <h2 id="journal-article" tabindex="-1">Journal Article</h2>
-<p>Cornut, M., Raemy, J. A., &amp; Spiess, F. (2023). Annotations as Knowledge Practices in Image Archives: Application of Linked Open Usable Data and Machine Learning. <em>Journal on Computing and Cultural Heritage</em>, 16(4), 1–19. <a href="https://doi.org/10.1145/3625301" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3625301</a></p>
+<p class="research-item" id="cornut_annotations_2023">Cornut, M., Raemy, J. A., &#38; Spiess, F. (2023). Annotations as Knowledge Practices in Image Archives: Application of Linked Open Usable Data and Machine Learning. <i>Journal on Computing and Cultural Heritage</i>, <i>16</i>(4), 1–19. <a href="https://doi.org/10.1145/3625301" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3625301</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Annotations+as+Knowledge+Practices+in+Image+Archives%3A+Application+of+Linked+Open+Usable+Data+and+Machine+Learning&amp;rft.jtitle=Journal+on+Computing+and+Cultural+Heritage&amp;rft.date=2023&amp;rft.au=Murielle+Cornut&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Florian+Spiess&amp;rft.volume=16&amp;rft.issue=4&amp;rft.pages=1%E2%80%9319&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.1145%2F3625301&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1145%2F3625301"></span></p>
 <h2 id="lectures" tabindex="-1">Lectures</h2>
 <h3 id="spring-semester-2024" tabindex="-1">Spring Semester 2024</h3>
 <p>Within the PIA research project, we organised a lecture series during the spring semester 2024 where I gave a 2-hour presentation in one of the lessons: <a href="https://vorlesungsverzeichnis.unibas.ch/de/vorlesungsverzeichnis?vvnr=70931-01" target="_blank" rel="noopener noreferrer">70931-01 – Vorlesung: PIA. Partizipative Wissenspraktiken in analogen und digitalen Bildarchiven</a></p>
 <h3 id="spring-semester-2023" tabindex="-1">Spring Semester 2023</h3>
 <p>With Murielle Cornut, PhD Candidate in Cultural Anthropology at the time, we taught a 30-hour course during the spring semester 2023 at the University of Basel: <a href="https://vorlesungsverzeichnis.unibas.ch/de/vorlesungsverzeichnis?vvnr=67853-01" target="_blank" rel="noopener noreferrer">67853-01 - Practical course: Bist du sicher, dass du dieses Foto löschen möchtest? Private Fotopraxis im Archivkontext</a></p>
 <h2 id="(meta)data-aggregation" tabindex="-1">(Meta)data Aggregation</h2>
-<p>Raemy, J. A. (2023). <em>e-periodica OAI-PMH - Ethnology and Folklore</em> (Version 1.0.0) [Computer software]. <a href="https://doi.org/10.5281/zenodo.7777797" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7777797</a></p>
+<p class="research-item" id="raemy_e-periodica_2023">Raemy, J. A. (2023). <i>e-periodica OAI-PMH - Ethnology and Folklore</i> (Version 1.0.0) [Computer software]. <a href="https://doi.org/10.5281/zenodo.7777797" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7777797</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=e-periodica+OAI-PMH+-+Ethnology+and+Folklore&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.7777797&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.7777797"></span></p>
 <h2 id="posters" tabindex="-1">Posters</h2>
-<p>Raemy, J. A., Gray, T., Collinson, A., &amp; Page, K. R. (2023, July 12). Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow (Poster). <em>Digital Humanities 2023 Posters</em>. Digital Humanities 2023, Graz, Austria. <a href="https://doi.org/10.5281/zenodo.7878358" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7878358</a></p>
-<p>Raemy, J. A., &amp; Gautschy, R. (2023, June 28). Élaboration d’un processus pour les images 3D reposant sur IIIF (Poster). <em>Colloque Humanistica 2023</em>, Genève, Suisse. <a href="https://doi.org/10.5281/zenodo.7927862" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7927862</a></p>
-<p>Raemy, J. A. (2022, October 20). Back and Forth from Boundary Objects to IIIF Resources: The Recipes of a Community-driven Initiative Specifying Standards. <em>DARIAH-CH Study Day 2022 Posters</em>. DARIAH-CH Study Day, Mendrisio, Switzerland. <a href="https://doi.org/10.5281/zenodo.7015256" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7015256</a></p>
+<p class="research-item" id="raemy_enabling-poster_2023">Raemy, J. A., Gray, T., Collinson, A., &#38; Page, K. R. (2023, July 12). <i>Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow</i> [Poster]. Digital Humanities 2023, Graz, Austria. <a href="https://doi.org/10.5281/zenodo.7878358" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7878358</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=Enabling+Participatory+Data+Perspectives+for+Image+Archives+through+a+Linked+Art+Workflow&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Tanya+Gray&amp;rft.au=Alwyn+Collinson&amp;rft.au=Kevin+R.+Page&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.7878358&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.7878358"></span></p>
+<p class="research-item" id="raemy_elaboration-poster_2023">Raemy, J. A., &#38; Gautschy, R. (2023, June 28). <i>Élaboration d’un processus pour les images 3D reposant sur IIIF</i> [Poster]. Colloque Humanistica 2023, Genève, Suisse. <a href="https://doi.org/10.5281/zenodo.7927862" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7927862</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=%C3%89laboration+d%E2%80%99un+processus+pour+les+images+3D+reposant+sur+IIIF&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Rita+Gautschy&amp;rft.language=fr&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.7927862&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.7927862"></span></p>
+<p class="research-item" id="raemy_back-and-forth_2022">Raemy, J. A. (2022, October 20). <i>Back and Forth from Boundary Objects to IIIF Resources: The Recipes of a Community-driven Initiative Specifying Standards</i> [Poster]. DARIAH-CH Study Day 2022, Mendrisio, Switzerland. <a href="https://doi.org/10.5281/zenodo.7015256" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.7015256</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=Back+and+Forth+from+Boundary+Objects+to+IIIF+Resources%3A+The+Recipes+of+a+Community-driven+Initiative+Specifying+Standards&amp;rft.date=2022&amp;rft.au=Julien+Antoine+Raemy&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.5281%2Fzenodo.7015256&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.5281%2Fzenodo.7015256"></span></p>
 <h2 id="preprints" tabindex="-1">Preprints</h2>
-<p>Raemy, J. A., &amp; Demleitner, A. (2023). <em>Implementation of the IIIF Presentation API 3.0 based on Software Support: Use Case of an Incremental IIIF Deployment within a Citizen Science Project</em>. arXiv. <a href="https://doi.org/10.48550/ARXIV.2312.11116" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/ARXIV.2312.11116</a></p>
-<p>Raemy, J. A., &amp; Sanderson, R. (2023). <em>Analysis of the Usability of Automatically Enriched Cultural Heritage Data</em>. arXiv. <a href="https://doi.org/10.48550/arXiv.2309.16635" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2309.16635</a></p>
+<p class="research-item" id="raemy_implementation_2023">Raemy, J. A., &#38; Demleitner, A. (2023). <i>Implementation of the IIIF Presentation API 3.0 based on Software Support: Use Case of an Incremental IIIF Deployment within a Citizen Science Project</i> (Preprint 2312.11116). arXiv. <a href="https://doi.org/10.48550/arXiv.2312.11116" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2312.11116</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=Implementation+of+the+IIIF+Presentation+API+3.0+based+on+Software+Support%3A+Use+Case+of+an+Incremental+IIIF+Deployment+within+a+Citizen+Science+Project&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Adrian+Demleitner&amp;rft.pub=arXiv&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.48550%2FarXiv.2312.11116&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.48550%2FarXiv.2312.11116"></span></p>
+<p class="research-item" id="raemy_analysis_2023">Raemy, J. A., &#38; Sanderson, R. (2023). <i>Analysis of the Usability of Automatically Enriched Cultural Heritage Data</i> (Preprint 2309.16635). arXiv. <a href="https://doi.org/10.48550/arXiv.2309.16635" target="_blank" rel="noopener noreferrer">https://doi.org/10.48550/arXiv.2309.16635</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=document&amp;rft.btitle=Analysis+of+the+Usability+of+Automatically+Enriched+Cultural+Heritage+Data&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.au=Robert+Sanderson&amp;rft.pub=arXiv&amp;rft.language=en&amp;rft_id=info%3Adoi%2F10.48550%2FarXiv.2309.16635&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.48550%2FarXiv.2309.16635"></span></p>
 <h2 id="presentations" tabindex="-1">Presentations</h2>
 <p>I have given a lot of presentations during my PhD. On this website you can find a list of all the self-hosted presentations I have created since November 2022 using Marp (Markdown Presentation Ecosystem): <a href="https://julsraemy.ch/prezi" target="_blank" rel="noopener noreferrer">https://julsraemy.ch/prezi</a></p>
 <h2 id="report" tabindex="-1">Report</h2>
-<p>Raemy, J. A. (2023). <em>Characterising the IIIF and Linked Art Communities: Survey report</em> (p. 29) [Report]. University of Basel. <a href="https://hal.science/hal-04162572" target="_blank" rel="noopener noreferrer">https://hal.science/hal-04162572</a></p>
+<p class="research-item" id="raemy_characterising_2023">Raemy, J. A. (2023). <i>Characterising the IIIF and Linked Art Communities: Survey report</i> [Report]. University of Basel. <a href="https://hal.science/hal-04162572" target="_blank" rel="noopener noreferrer">https://hal.science/hal-04162572</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=Characterising+the+IIIF+and+Linked+Art+Communities%3A+Survey+report&amp;rft.date=2023&amp;rft.au=Julien+Antoine+Raemy&amp;rft.pub=University+of+Basel&amp;rft.language=en&amp;rft_id=https%3A%2F%2Fhal.science%2Fhal-04162572"></span></p>
 <h2 id="thesis" tabindex="-1">Thesis</h2>
-<p>Raemy, J. A. (2024). <em>Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability</em> [Doctoral Thesis, University of Basel]. <a href="https://doi.org/10.5451/unibas-ep96807" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep96807</a></p>
+<p class="research-item" id="raemy_loud_2024">Raemy, J. A. (2024). <i>Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability</i> [Doctoral Thesis, University of Basel]. <a href="https://hdl.handle.net/20.500.14716/148352" target="_blank" rel="noopener noreferrer">https://hdl.handle.net/20.500.14716/148352</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.title=Linked+Open+Usable+Data+for+Cultural+Heritage%3A+Perspectives+on+Community+Practices+and+Semantic+Interoperability&amp;rft.inst=University+of+Basel&amp;rft.degree=PhD+dissertation&amp;rft.date=2024&amp;rft.au=Julien+Antoine+Raemy&amp;rft.place=Basel&amp;rft.language=en&amp;rft_id=https%3A%2F%2Fhdl.handle.net%2F20.500.14716%2F148352"></span></p>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Chapter",
+      "@id": "https://doi.org/10.1007/978-3-031-57675-1_4",
+      "name": "Analysis of the Usability of Automatically Enriched Cultural Heritage Data",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Robert Sanderson",
+          "givenName": "Robert",
+          "familyName": "Sanderson"
+        }
+      ],
+      "datePublished": "2024",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.1007/978-3-031-57675-1_4",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1007/978-3-031-57675-1_4"
+      },
+      "pagination": "69–93",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Decoding Cultural Heritage: A Critical Dissection and Taxonomy of Human Creativity through Digital Tools",
+        "editor": [
+          {
+            "@type": "Person",
+            "name": "Fernando Moral-Andrés",
+            "givenName": "Fernando",
+            "familyName": "Moral-Andrés"
+          },
+          {
+            "@type": "Person",
+            "name": "Elena Merino-Gómez",
+            "givenName": "Elena",
+            "familyName": "Merino-Gómez"
+          },
+          {
+            "@type": "Person",
+            "name": "Pedro Reviriego",
+            "givenName": "Pedro",
+            "familyName": "Reviriego"
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Springer Nature Switzerland"
+        }
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5451/unibas-ep95099",
+      "name": "Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Tanya Gray",
+          "givenName": "Tanya",
+          "familyName": "Gray"
+        },
+        {
+          "@type": "Person",
+          "name": "Alwyn Collinson",
+          "givenName": "Alwyn",
+          "familyName": "Collinson"
+        },
+        {
+          "@type": "Person",
+          "name": "Kevin R. Page",
+          "givenName": "Kevin R.",
+          "familyName": "Page"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5451/unibas-ep95099",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5451/unibas-ep95099"
+      },
+      "pagination": "515–516",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Digital Humanities 2023 Book of Abstracts",
+        "editor": [
+          {
+            "@type": "Person",
+            "name": "Anne Baillot",
+            "givenName": "Anne",
+            "familyName": "Baillot"
+          },
+          {
+            "@type": "Person",
+            "name": "Walter Scholger",
+            "givenName": "Walter",
+            "familyName": "Scholger"
+          },
+          {
+            "@type": "Person",
+            "name": "Toma Tasovac",
+            "givenName": "Toma",
+            "familyName": "Tasovac"
+          },
+          {
+            "@type": "Person",
+            "name": "Georg Vogeler",
+            "givenName": "Georg",
+            "familyName": "Vogeler"
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Alliance of Digital Humanities Organizations (ADHO)"
+        },
+        "volumeNumber": "2023"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5617/dhnbpub.10649",
+      "name": "Community and Interoperability at the Core of Sustaining Image Archives",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Ulrike Felsing",
+          "givenName": "Ulrike",
+          "familyName": "Felsing"
+        },
+        {
+          "@type": "Person",
+          "name": "Peter Fornaro",
+          "givenName": "Peter",
+          "familyName": "Fornaro"
+        },
+        {
+          "@type": "Person",
+          "name": "Max Frischknecht",
+          "givenName": "Max",
+          "familyName": "Frischknecht"
+        },
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5617/dhnbpub.10649",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5617/dhnbpub.10649"
+      },
+      "pagination": "40–54",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Digital Humanities in the Nordic and Baltic Countries Publications"
+      },
+      "volumeNumber": "5",
+      "issueNumber": "1"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.2352/issn.2168-3204.2023.20.1.5",
+      "name": "Recommended 3D Workflow for Digital Heritage Practices",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Marian Clemens Manz",
+          "givenName": "Marian Clemens",
+          "familyName": "Manz"
+        },
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Peter Fornaro",
+          "givenName": "Peter",
+          "familyName": "Fornaro"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.2352/issn.2168-3204.2023.20.1.5",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.2352/issn.2168-3204.2023.20.1.5"
+      },
+      "pagination": "23–28",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Archiving Conference",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Society for Imaging Science and Technology"
+        },
+        "volumeNumber": "20"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5451/unibas-ep94862",
+      "name": "Élaboration d’un processus pour les images 3D reposant sur IIIF",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Rita Gautschy",
+          "givenName": "Rita",
+          "familyName": "Gautschy"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "fr",
+      "url": "https://doi.org/10.5451/unibas-ep94862",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5451/unibas-ep94862"
+      },
+      "pagination": "1–3",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Recueil des communications du 4e colloque Humanistica",
+        "editor": [
+          {
+            "@type": "Person",
+            "name": "Simon Gabay",
+            "givenName": "Simon",
+            "familyName": "Gabay"
+          },
+          {
+            "@type": "Person",
+            "name": "Elina Leblanc",
+            "givenName": "Elina",
+            "familyName": "Leblanc"
+          },
+          {
+            "@type": "Person",
+            "name": "Nicola Carboni",
+            "givenName": "Nicola",
+            "familyName": "Carboni"
+          },
+          {
+            "@type": "Person",
+            "name": "R. Suciu",
+            "givenName": "R.",
+            "familyName": "Suciu"
+          },
+          {
+            "@type": "Person",
+            "name": "G. Lini",
+            "givenName": "G.",
+            "familyName": "Lini"
+          },
+          {
+            "@type": "Person",
+            "name": "Marie Barras",
+            "givenName": "Marie",
+            "familyName": "Barras"
+          },
+          {
+            "@type": "Person",
+            "name": "Fatiha Idmhand",
+            "givenName": "Fatiha",
+            "familyName": "Idmhand"
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Humanistica, l’association francophone des humanités numériques/digitales"
+        }
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5451/unibas-ep89725",
+      "name": "Améliorer la valorisation des données du patrimoine culturel grâce au Linked Open Usable Data (LOUD)",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2022",
+      "inLanguage": "fr",
+      "url": "https://doi.org/10.5451/unibas-ep89725",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5451/unibas-ep89725"
+      },
+      "pagination": "132–149",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Actes des journées humanités numériques et Web sémantique",
+        "editor": [
+          {
+            "@type": "Person",
+            "name": "Nicolas Lasolle",
+            "givenName": "Nicolas",
+            "familyName": "Lasolle"
+          },
+          {
+            "@type": "Person",
+            "name": "Olivier Bruneau",
+            "givenName": "Olivier",
+            "familyName": "Bruneau"
+          },
+          {
+            "@type": "Person",
+            "name": "Jean Lieber",
+            "givenName": "Jean",
+            "familyName": "Lieber"
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Les Archives Henri-Poincaré - Philosophie et Recherches sur les Sciences et les Technologies (AHP-PReST); Laboratoire lorrain de recherche en informatique et ses applications (LORIA)"
+        }
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5451/unibas-ep87517",
+      "name": "Applying Effective Data Modelling Approaches for the Creation of a Participatory Archive Platform",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2021",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5451/unibas-ep87517",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5451/unibas-ep87517"
+      },
+      "pagination": "1–5",
+      "isPartOf": {
+        "@type": "Book",
+        "name": "Human Factors in Digital Humanities",
+        "editor": [
+          {
+            "@type": "Person",
+            "name": "Yumeng Hou",
+            "givenName": "Yumeng",
+            "familyName": "Hou"
+          }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "Institut des humanités digitales"
+        }
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/julsraemy/loud-socialfabrics/",
+      "name": "The LOUD Social Fabrics",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2024",
+      "inLanguage": "en",
+      "url": "https://github.com/julsraemy/loud-socialfabrics/",
+      "codeRepository": "https://github.com/julsraemy/loud-socialfabrics/"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/julsraemy/loud-consistency",
+      "name": "LOUD Consistency",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2024",
+      "inLanguage": "en",
+      "url": "https://github.com/julsraemy/loud-consistency",
+      "codeRepository": "https://github.com/julsraemy/loud-consistency"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/dasch-swiss/daschiiify",
+      "name": "daschiiify",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2024",
+      "inLanguage": "en",
+      "url": "https://github.com/dasch-swiss/daschiiify",
+      "softwareVersion": "0.2.0",
+      "codeRepository": "https://github.com/dasch-swiss/daschiiify"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/zenodo.23794320",
+      "name": "iiif-photoalbum",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2026",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5281/zenodo.23794320",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.23794320"
+      },
+      "softwareVersion": "1.2.0",
+      "codeRepository": "https://github.com/participatory-Image-Archives/iiif-photoalbum"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/zenodo.7309787",
+      "name": "Linked Art Modelling",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5281/zenodo.7309787",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.7309787"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/zenodo.5142605",
+      "name": "PIA Data Model",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Adrian Demleitner",
+          "givenName": "Adrian",
+          "familyName": "Demleitner"
+        },
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2024",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5281/zenodo.5142605",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.5142605"
+      },
+      "softwareVersion": "0.9"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/Participatory-Image-Archives/linkedart",
+      "name": "PIA Linked Art",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2022",
+      "inLanguage": "en",
+      "url": "https://github.com/Participatory-Image-Archives/linkedart",
+      "softwareVersion": "0.1.0",
+      "codeRepository": "https://github.com/Participatory-Image-Archives/linkedart"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1145/3625301",
+      "name": "Annotations as Knowledge Practices in Image Archives: Application of Linked Open Usable Data and Machine Learning",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Murielle Cornut",
+          "givenName": "Murielle",
+          "familyName": "Cornut"
+        },
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Florian Spiess",
+          "givenName": "Florian",
+          "familyName": "Spiess"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.1145/3625301",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.1145/3625301"
+      },
+      "pagination": "1–19",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Journal on Computing and Cultural Heritage"
+      },
+      "volumeNumber": "16",
+      "issueNumber": "4"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/zenodo.7777797",
+      "name": "e-periodica OAI-PMH - Ethnology and Folklore",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5281/zenodo.7777797",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.7777797"
+      },
+      "softwareVersion": "1.0.0"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/zenodo.7878358",
+      "name": "Enabling Participatory Data Perspectives for Image Archives through a Linked Art Workflow",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Tanya Gray",
+          "givenName": "Tanya",
+          "familyName": "Gray"
+        },
+        {
+          "@type": "Person",
+          "name": "Alwyn Collinson",
+          "givenName": "Alwyn",
+          "familyName": "Collinson"
+        },
+        {
+          "@type": "Person",
+          "name": "Kevin R. Page",
+          "givenName": "Kevin R.",
+          "familyName": "Page"
+        }
+      ],
+      "datePublished": "2023-07-12",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5281/zenodo.7878358",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.7878358"
+      },
+      "genre": "Poster",
+      "recordedAt": {
+        "@type": "Event",
+        "name": "Digital Humanities 2023",
+        "location": "Graz, Austria"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/zenodo.7927862",
+      "name": "Élaboration d’un processus pour les images 3D reposant sur IIIF",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Rita Gautschy",
+          "givenName": "Rita",
+          "familyName": "Gautschy"
+        }
+      ],
+      "datePublished": "2023-06-28",
+      "inLanguage": "fr",
+      "url": "https://doi.org/10.5281/zenodo.7927862",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.7927862"
+      },
+      "genre": "Poster",
+      "recordedAt": {
+        "@type": "Event",
+        "name": "Colloque Humanistica 2023",
+        "location": "Genève, Suisse"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.5281/zenodo.7015256",
+      "name": "Back and Forth from Boundary Objects to IIIF Resources: The Recipes of a Community-driven Initiative Specifying Standards",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2022-10-20",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.5281/zenodo.7015256",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.7015256"
+      },
+      "genre": "Poster",
+      "recordedAt": {
+        "@type": "Event",
+        "name": "DARIAH-CH Study Day 2022",
+        "location": "Mendrisio, Switzerland"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.48550/arXiv.2312.11116",
+      "name": "Implementation of the IIIF Presentation API 3.0 based on Software Support: Use Case of an Incremental IIIF Deployment within a Citizen Science Project",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Adrian Demleitner",
+          "givenName": "Adrian",
+          "familyName": "Demleitner"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.48550/arXiv.2312.11116",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.48550/arXiv.2312.11116"
+      },
+      "genre": "Preprint",
+      "publisher": {
+        "@type": "Organization",
+        "name": "arXiv"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.48550/arXiv.2309.16635",
+      "name": "Analysis of the Usability of Automatically Enriched Cultural Heritage Data",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Robert Sanderson",
+          "givenName": "Robert",
+          "familyName": "Sanderson"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://doi.org/10.48550/arXiv.2309.16635",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.48550/arXiv.2309.16635"
+      },
+      "genre": "Preprint",
+      "publisher": {
+        "@type": "Organization",
+        "name": "arXiv"
+      }
+    },
+    {
+      "@type": "Report",
+      "@id": "https://hal.science/hal-04162572",
+      "name": "Characterising the IIIF and Linked Art Communities: Survey report",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2023",
+      "inLanguage": "en",
+      "url": "https://hal.science/hal-04162572",
+      "genre": "Report",
+      "publisher": {
+        "@type": "Organization",
+        "name": "University of Basel"
+      },
+      "numberOfPages": "29"
+    },
+    {
+      "@type": "Thesis",
+      "@id": "https://hdl.handle.net/20.500.14716/148352",
+      "name": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
+      "author": [
+        {
+          "@id": "https://julsraemy.ch/#person"
+        }
+      ],
+      "datePublished": "2024-12-23",
+      "inLanguage": "en",
+      "url": "https://hdl.handle.net/20.500.14716/148352",
+      "genre": "Doctoral Thesis",
+      "sourceOrganization": {
+        "@type": "CollegeOrUniversity",
+        "@id": "https://ror.org/02s6k3f65",
+        "name": "University of Basel"
+      }
+    }
+  ]
+}
+</script>
 
-    
     </main>
 
-
     <footer>
-        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50"></a>
+        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50" /></a>
     </footer>
-    <script src="/js/accordion.js"></script>
-    <script src="/js/leaflet-iiif-init.js"></script>
-    <script src="/js/font-size.js"></script>
+    <script src="/js/site.js"></script>
+    <script type="module">
+        // Highlight search terms when arriving from a search result
+        if (new URLSearchParams(location.search).has("highlight")) {
+            import("/pagefind/pagefind-highlight.js")
+                .then(() => new PagefindHighlight({ highlightParam: "highlight" }))
+                .catch(() => {});
+        }
+    </script>
     <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TNJQKJHNDF"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNJQKJHNDF"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TNJQKJHNDF');
     </script>
-
-
-</body></html>
+</body>
+</html>

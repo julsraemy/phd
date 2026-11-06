@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model.">
@@ -12,7 +14,10 @@
     <meta name="DC.date" content="2024-12-04">
     <meta name="DC.type" content="WebPage">
     <meta name="DC.identifier" content="https://phd.julsraemy.ch/loud.html">
-    <!-- Conditional DOI Identifier -->
+    <!-- Persistent identifiers of the thesis: Handle (primary) and DOI -->
+    
+    
+    
     
     <meta name="DC.description" content="Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model.">
     <meta name="DC.subject" content="Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns">
@@ -25,32 +30,23 @@
     <!-- Title and CSS -->
     <title>LOUD for Cultural Heritage – Linked Open Usable Data</title>
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Leaflet-IIIF -->
-    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/v2.0.1/leaflet-iiif.js"></script>
+    <!-- Theme: apply a saved light/dark choice before first paint -->
+    <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="https://julsraemy.ch/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="https://julsraemy.ch/favicon.svg">
-    <link rel="shortcut icon" href="https://julsraemy.ch/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://julsraemy.ch/apple-touch-icon.png">
-    <link rel="manifest" href="https://julsraemy.ch/site.webmanifest">
+    <link rel="icon" type="image/png" href="https://julsraemy.ch/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://julsraemy.ch/favicon.svg" />
+    <link rel="shortcut icon" href="https://julsraemy.ch/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://julsraemy.ch/apple-touch-icon.png" />
+    <link rel="manifest" href="https://julsraemy.ch/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
 
     <!-- Me -->
-    <link rel="me" href="https://hcommons.social/@julsraemy">
+    <link rel="me" href="https://hcommons.social/@julsraemy" />
     <link rel="me" href="https://www.wikidata.org/entity/Q59286487">
     <link rel="me" href="https://orcid.org/0000-0002-4711-5759">
     <link rel="me" href="https://scholar.google.ch/citations?user=pGROUG0AAAAJ">
@@ -60,78 +56,48 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
+        "@context": [
+            "https://schema.org",
+            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
+        ],
         "@type": "WebPage",
+        "@id": "https://phd.julsraemy.ch/loud.html",
         "name": "LOUD for Cultural Heritage – Linked Open Usable Data",
+        "url": "https://phd.julsraemy.ch/loud.html",
         "author": {
             "@type": "Person",
-            "givenName": "Julien Antoine",
-            "familyName": "Raemy",
-            "gender": "Male",
-            "nationality": "Swiss",
-            "url": "https://julsraemy.ch",
-            "alumniOf": [
-                {
-                "@type": "EducationalOrganization",
-                "name": "University of Basel",
-                "location": "Basel, Switzerland",
-                "url": "https://www.unibas.ch/",
-                "sameAs": "https://ror.org/02s6k3f65"
-                }
-            ],
-            "affiliation": [
-                {
-                "@type": "ArchiveOrganization",
-                "name": "Swiss Federal Archives",
-                "location": "Bern, Switzerland",
-                "url": "https://www.bar.admin.ch/",
-                "sameAs": "https://ror.org/00t6xza10"
-                }, 
-                {
-                "@type": "EducationalOrganization",
-                "name": "University of Bern",
-                "location": "Bern, Switzerland",
-                "url": "https://www.unibe.ch/",
-                "sameAs": "https://ror.org/02k7v4d05"
-                } 
-            ],
-            "sameAs": [
-                "https://orcid.org/0000-0002-4711-5759", 
-                "https://phd.julsraemy.ch", 
-                "https://hcommons.social/@julsraemy",
-                "https://scholar.google.ch/citations?user=pGROUG0AAAAJ",
-                "https://www.linkedin.com/in/julienaraemy/"
-            ]
+            "@id": "https://julsraemy.ch/#person",
+            "name": "Julien Antoine Raemy",
+            "identifier": "https://orcid.org/0000-0002-4711-5759",
+            "seeAlso": "https://julsraemy.ch/me.json"
         },
-        "datePublished": "Wed Dec 04 2024 00:00:00 GMT+0000 (Coordinated Universal Time)",
+        "datePublished": "2024-12-04",
         "description": "Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model.",
-        "keywords": "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns"
+        "keywords": "Robert Sanderson, LOUD Design Principles, JSON-LD, The right Abstraction for the audience, Few Barriers to entry, Comprehensible by introspection, Documentation with working examples, Few Exceptions, instead many consistent patterns",
+        "inLanguage": "en",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
     }
     </script>
 </head>
 <body>
-    <nav>
-        <button class="nav-trigger">Menu</button>
-        <ul class="collapsed">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <nav class="site-nav" aria-label="Site">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+        <ul id="site-menu" class="collapsed">
             <li><a href="/">Home</a></li>
-            <li><a href="/loud.html">LOUD</a></li>
+            <li><a href="/loud.html" aria-current="page">LOUD</a></li>
             <li><a href="/thesis.html">PhD Thesis</a></li>
             <li><a href="/research.html">Research Outcomes</a></li>
             <li><a href="/pia.html">PIA</a></li>
         </ul>
+        <div id="controls" role="group" aria-label="Search and display settings">
+            <a id="search-link" href="/search.html" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></a>
+            <button id="font-decrease" type="button" title="Smaller text" aria-label="Smaller text">A−</button>
+            <button id="font-increase" type="button" title="Larger text" aria-label="Larger text">A+</button>
+            <button id="theme-toggle" type="button" title="Switch between light and dark mode" aria-label="Dark mode" aria-pressed="false">◐</button>
+        </div>
     </nav>
-
-    <!-- Theme and Font Size Controls -->
-    <div id="controls">
-        <button id="font-increase">A+</button>
-        <button id="font-decrease">A-</button>
-    </div>
-    
-    <header>
-        <!-- Header content here -->
-    </header>
-    
-    <main>
+    <main id="content" data-pagefind-body data-pagefind-filter="section:Website">
     <style type="text/css">
     ol { list-style-type: upper-alpha; }
 </style>
@@ -140,12 +106,12 @@
 <p>Linked Open Data (LOD) has been pivotal in fostering a web of openly connected datasets. The progression to Linked Open Usable Data (LOUD) underscores an evolution towards making data not just accessible and linked but also readily usable for a broader audience, particularly software developers. This shift is propelled by the understanding that data’s real value is unlocked through its usage. LOUD aims to enhance scalability, both from technical perspectives and in terms of data production and adoption, making data more interconnected and thus more useful.</p>
 <h2 id="javascript-object-notation-for-linked-data-(json-ld)" tabindex="-1">JavaScript Object Notation for Linked Data (JSON-LD)</h2>
 <p><a href="https://json-ld.org/" target="_blank" rel="noopener noreferrer">JSON-LD</a> is a modern web standard designed to simplify the encoding of linked data using the widely known JSON format. As a compact and easy-to-manage data format, JSON-LD enhances the ability to share structured data across disparate systems on the Web, while embedding rich semantic capabilities. It achieves this by allowing data to be serialised in a way that is compatible with traditional JSON, yet interpretable by RDF-based semantic processing tools.</p>
-<p>At its core, JSON-LD introduces a context (<code>@ context</code>) that maps terms in a JSON document to Internationalised Resource Identifiers (IRIs) used in RDF vocabularies. This mapping allows JSON documents to be interpreted as RDF graphs, facilitating the integration of structured data into the Semantic Web without requiring developers to depart from familiar JSON syntax. The design of JSON-LD aims to bridge the gap between the ease of use of JSON and the rich data connectivity and interoperability offered by RDF. The development of JSON-LD was motivated by the need to make linked data more accessible to Web developers and to encourage wider adoption of Semantic Web technologies. By embedding semantic annotations directly into JSON, JSON-LD enables developers to contribute to the linked data cloud with a minimal learning curve, accelerating the growth of a semantically rich, interconnected web of data.</p>
+<p>At its core, JSON-LD introduces a context (<code>@context</code>) that maps terms in a JSON document to Internationalised Resource Identifiers (IRIs) used in RDF vocabularies. This mapping allows JSON documents to be interpreted as RDF graphs, facilitating the integration of structured data into the Semantic Web without requiring developers to depart from familiar JSON syntax. The design of JSON-LD aims to bridge the gap between the ease of use of JSON and the rich data connectivity and interoperability offered by RDF. The development of JSON-LD was motivated by the need to make linked data more accessible to Web developers and to encourage wider adoption of Semantic Web technologies. By embedding semantic annotations directly into JSON, JSON-LD enables developers to contribute to the linked data cloud with a minimal learning curve, accelerating the growth of a semantically rich, interconnected web of data.</p>
 <p>Per the <a href="https://www.w3.org/TR/json-ld11/" target="_blank" rel="noopener noreferrer">JSON-LD 1.1. specification</a>:</p>
 <blockquote>
 <p>JSON-LD is a concrete RDF syntax as described in <a href="https://www.w3.org/TR/rdf11-concepts/" target="_blank" rel="noopener noreferrer">RDF11-CONCEPTS</a>. Hence, a JSON-LD document is both an RDF document and a JSON document and correspondingly represents an instance of an RDF data model. However, JSON-LD also extends the RDF data model to optionally allow JSON-LD to serialize generalized RDF Datasets.</p>
 </blockquote>
-<p>The strategic adoption of JSON-LD as a means to reconcile the simplicity of JSON with the descriptive power of RDF has sparked an insightful debate about its practical implications and its classification as a polyglot format. A <a href="https://tess.oconnor.cx/2023/09/polyglots-and-interoperability" target="_blank" rel="noopener noreferrer">blog post by Tess O’Connor</a> outlines several challenges that emerge from this approach, including issues related to dual data models, algorithmic complexity, and the potential brittleness and performance impacts of JSON-LD’s <code>@ context</code> mechanism. To address these challenges, a strategic focus on simplicity and clarity is advocated. Adopting a straightforward JSON format that doesn’t require knowledge of RDF can simplify interactions and improve the appeal and usability of the data. In addition, creating canonical mappings from JSON to RDF addresses the needs of RDF users while maintaining the accessibility of the base format. In addition, the adoption of stable sets of <code>@ context</code> is critical for consistent data exchange.</p>
+<p>The strategic adoption of JSON-LD as a means to reconcile the simplicity of JSON with the descriptive power of RDF has sparked an insightful debate about its practical implications and its classification as a polyglot format. A <a href="https://tess.oconnor.cx/2023/09/polyglots-and-interoperability" target="_blank" rel="noopener noreferrer">blog post by Tess O’Connor</a> outlines several challenges that emerge from this approach, including issues related to dual data models, algorithmic complexity, and the potential brittleness and performance impacts of JSON-LD’s <code>@context</code> mechanism. To address these challenges, a strategic focus on simplicity and clarity is advocated. Adopting a straightforward JSON format that doesn’t require knowledge of RDF can simplify interactions and improve the appeal and usability of the data. In addition, creating canonical mappings from JSON to RDF addresses the needs of RDF users while maintaining the accessibility of the base format. In addition, the adoption of stable sets of <code>@context</code> is critical for consistent data exchange.</p>
 <p>However, this polyglot characterisation of JSON-LD has been met with counter-arguments, <a href="https://github.com/w3ctag/design-principles/issues/239#issuecomment-1762316158" target="_blank" rel="noopener noreferrer">such as those from
 Pierre-Antoine Champin</a>, that offer a different perspective. Critics argue that JSON-LD should not be considered a polyglot format in the strictest sense because it operates on a “JSON then JSON-LD” basis rather than an “either/or” scenario. In this view, any JSON-LD processor first interprets the document as JSON before applying the JSON-LD layer, similar to how other JSON formats, such as GeoJSON, encode specific types of information beyond the basic JSON structures. This process does not make these formats polyglots, but rather extensions of JSON that provide mappings to more complex data models, thus emphasising JSON-LD’s role in simplifying the transition to semantically enriched data on the web.</p>
 <p>Building upon this understanding, the LOUD design principles emerge as guiding forces in the quest to make data not only accessible and interconnected but fundamentally usable and intuitive for developers and end-users alike.</p>
@@ -192,49 +158,47 @@ Pierre-Antoine Champin</a>, that offer a different perspective. Critics argue th
 <p>These APIs, central to the IIIF ecosystem, underscore the initiative’s commitment to interoperability, flexibility, and a user-centric approach in the handling and presentation of digital images and their associated metadata. The widespread adoption of these APIs by numerous institutions around the world highlights their robustness and utility.</p>
 <p>The suite of IIIF-compliant software encompasses a diverse range of tools, each catering to specific aspects of the framework. Central to this suite are image servers, predominantly tailored to align with the IIIF Image API, such as <a href="https://iipimage.sourceforge.io/" target="_blank" rel="noopener noreferrer">IIPImage</a>, <a href="https://cantaloupe-project.github.io/" target="_blank" rel="noopener noreferrer">Cantaloupe</a>, or <a href="https://sipi.io/" target="_blank" rel="noopener noreferrer">SIPI</a>. Complementing these servers are image viewers, designed to be compatible with either the Image API alone, like <a href="https://openseadragon.github.io/" target="_blank" rel="noopener noreferrer">OpenSeadragon (OSD)</a> and <a href="https://github.com/mejackreed/Leaflet-IIIF" target="_blank" rel="noopener noreferrer">Leaflet-IIIF</a>, or with both of the core IIIF APIs. With the release of version 3.0 of the Presentation API, A/V players have also been developed, which frequently comply with the Image API as well. Examples of known clients that support the Image and Presentation APIs 3.0 are <a href="https://projectmirador.org" target="_blank" rel="noopener noreferrer">Mirador</a>, the <a href="https://universalviewer.io/" target="_blank" rel="noopener noreferrer">Universal Viewer (UV)</a>, <a href="https://ncsu-libraries.github.io/annona/multistoryboard/" target="_blank" rel="noopener noreferrer">Annona</a>, <a href="https://samvera-labs.github.io/clover-iiif/" target="_blank" rel="noopener noreferrer">Clover</a>, and <a href="https://iiif-react-media-player.netlify.app/" target="_blank" rel="noopener noreferrer">Ramp</a>. As support and behaviour vary, a dedicated <a href="https://iiif.io/api/cookbook/recipe/matrix/" target="_blank" rel="noopener noreferrer">IIIF 3.0 Viewer Matrix</a> was created.</p>
 <p>The embedded viewer below is <a href="https://projectmirador.org" target="_blank" rel="noopener noreferrer">Mirador</a>, a powerful IIIF-compliant client. Stanford University played a pivotal role in rebuilding it, marking a key milestone that exemplifies the spirit of community-driven effort within the IIIF initiative. This endeavour, which has since been placed in the hands of the community, was later augmented through a collaborative partnership with Harvard University Library. The cooperative dynamics and collective contributions fundamental to the success and advancement of IIIF are clearly reflected in the widespread adoption and continued development of Mirador.</p>
-<div class="container">
-<iframe src="https://mirador-dev.netlify.app/__tests__/integration/mirador/" width="800" height="600" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" id="frame" allowfullscreen="">You need an iFrame capable browser to view this.</iframe>
-</div>
+<figure class="iiif-viewer iiif-mirador" data-manifest="https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json" data-embed="https://projectmirador.org/embed/?iiif-content=https%3A%2F%2Fiiif.io%2Fapi%2Fcookbook%2Frecipe%2F0021-tagging%2Fmanifest.json" data-title="Mirador: IIIF Cookbook recipe ‘Simple Annotation — Tagging’: a picture of Göttingen with a tag annotation"><div class="viewer-frame"><button class="viewer-load" type="button">Load the IIIF viewer (Mirador)</button></div><figcaption>IIIF Cookbook recipe ‘Simple Annotation — Tagging’: a picture of Göttingen with a tag annotation · <a href="https://projectmirador.org/embed/?iiif-content=https%3A%2F%2Fiiif.io%2Fapi%2Fcookbook%2Frecipe%2F0021-tagging%2Fmanifest.json" target="_blank" rel="noopener noreferrer">Open in Mirador</a> · <a href="https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json" target="_blank" rel="noopener noreferrer">IIIF Manifest</a></figcaption></figure>
 <h3 id="web-annotation-data-model" tabindex="-1">Web Annotation Data Model</h3>
 <p>The <a href="https://www.w3.org/TR/annotation-model/" target="_blank" rel="noopener noreferrer">Web Annotation Data Model</a> is a W3C standard that provides an extensible and interoperable framework for creating and sharing annotations across various platforms. It defines relationships between resources using an RDF graph, which includes key components such as the <code>annotation</code>, a web resource, the <code>body</code>, and the <code>target</code>. This model allows a single comment to be associated with multiple resources, enhancing the semantic integration of data across the web. The Web Annotation Working Group, which was chartered from August 2014 to October 2016 and extended to February 2017, played a pivotal role in developing and officially vetting this specification as a standard.</p>
 <p>Here is an example of machine-generated annotations in a IIIF setting. The JSON-LD snippet represents an <code>AnnotationPage</code> that contains one or more annotations related to a particular IIIF resource.</p>
 <pre><code class="language-json">{
-  "@ context": "http://iiif.io/api/presentation/3/context.json",
-  "id": "https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list.json",
-  "type": "AnnotationPage",
-  "items": [
+  &quot;@context&quot;: &quot;http://iiif.io/api/presentation/3/context.json&quot;,
+  &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list.json&quot;,
+  &quot;type&quot;: &quot;AnnotationPage&quot;,
+  &quot;items&quot;: [
     {
-      "@ context": "http://www.w3.org/ns/anno.jsonld",
-      "id": "https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list/annotation-436121.json",
-      "motivation": "commenting",
-      "type": "Annotation",
-      "body": [
+      &quot;@context&quot;: &quot;http://www.w3.org/ns/anno.jsonld&quot;,
+      &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/annotations/SGV_12N_08589-p1-list/annotation-436121.json&quot;,
+      &quot;motivation&quot;: &quot;commenting&quot;,
+      &quot;type&quot;: &quot;Annotation&quot;,
+      &quot;body&quot;: [
         {
-          "type": "TextualBody",
-          "value": "person",
-          "purpose": "commenting"
+          &quot;type&quot;: &quot;TextualBody&quot;,
+          &quot;value&quot;: &quot;person&quot;,
+          &quot;purpose&quot;: &quot;commenting&quot;
         },
         {
-          "type": "TextualBody",
-          "value": "Object Detection (vitrivr)",
-          "purpose": "tagging"
+          &quot;type&quot;: &quot;TextualBody&quot;,
+          &quot;value&quot;: &quot;Object Detection (vitrivr)&quot;,
+          &quot;purpose&quot;: &quot;tagging&quot;
         },
         {
-          "type": "TextualBody",
-          "value": "&lt;br&gt;&lt;small&gt;Detection score: 0.9574&lt;/small&gt;",
-          "purpose": "commenting"
+          &quot;type&quot;: &quot;TextualBody&quot;,
+          &quot;value&quot;: &quot;&lt;br&gt;&lt;small&gt;Detection score: 0.9574&lt;/small&gt;&quot;,
+          &quot;purpose&quot;: &quot;commenting&quot;
         }
       ],
-      "target": {
-        "source": "https://iiif.participatory-archives.ch/SGV_12N_08589/canvas/p1",
-        "selector": {
-          "type": "FragmentSelector",
-          "conformsTo": "http://www.w3.org/TR/media-frags/",
-          "value": "xywh=319,2942,463,523"
+      &quot;target&quot;: {
+        &quot;source&quot;: &quot;https://iiif.participatory-archives.ch/SGV_12N_08589/canvas/p1&quot;,
+        &quot;selector&quot;: {
+          &quot;type&quot;: &quot;FragmentSelector&quot;,
+          &quot;conformsTo&quot;: &quot;http://www.w3.org/TR/media-frags/&quot;,
+          &quot;value&quot;: &quot;xywh=319,2942,463,523&quot;
         },
-        "dcterms:isPartOf": {
-          "type": "Manifest",
-          "id": "https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json"
+        &quot;dcterms:isPartOf&quot;: {
+          &quot;type&quot;: &quot;Manifest&quot;,
+          &quot;id&quot;: &quot;https://iiif.participatory-archives.ch/SGV_12N_08589/manifest.json&quot;
         }
       }
     },
@@ -317,24 +281,28 @@ Pierre-Antoine Champin</a>, that offer a different perspective. Critics argue th
 </figure>
 <p>A LOUD ecosystem is characterised by an emphasis on interoperability between independently developed systems. This approach to design and implementation promotes semantic interoperability, ensuring that data can be understood and used across platforms and applications without the need for centralised coordination. By adhering to the LOUD principles, systems can communicate more effectively and share data in a way that is meaningful and useful to a wide range of users. This level of interoperability supports the creation of a more integrated and accessible digital environment, where data from different sources can be seamlessly connected and used for a variety of purposes.</p>
 
-    
     </main>
 
-
     <footer>
-        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50"></a>
+        Created by <a href="https://julsraemy.ch" target="_blank">Julien Antoine Raemy</a> using <a href="https://www.11ty.dev/" target="_blank">11ty</a>, a static site generator. All content is released and distributed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International Licence (CC BY 4.0) <img alt="Creative Commons BY 4.0" src="https://julsraemy.ch/prezi/assets/cc-by.svg" width="50" /></a>
     </footer>
-    <script src="/js/accordion.js"></script>
-    <script src="/js/leaflet-iiif-init.js"></script>
-    <script src="/js/font-size.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/js/viewers.js" defer></script>
+    <script type="module">
+        // Highlight search terms when arriving from a search result
+        if (new URLSearchParams(location.search).has("highlight")) {
+            import("/pagefind/pagefind-highlight.js")
+                .then(() => new PagefindHighlight({ highlightParam: "highlight" }))
+                .catch(() => {});
+        }
+    </script>
     <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TNJQKJHNDF"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNJQKJHNDF"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TNJQKJHNDF');
     </script>
-
-
-</body></html>
+</body>
+</html>

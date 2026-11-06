@@ -31,9 +31,121 @@
     
         <url>
             <loc>https://phd.julsraemy.ch/thesis.html</loc>
-            <lastmod>2024-11-18T00:00:00.000Z</lastmod>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/01-introduction.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/02-context.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/03-interlinking-cultural-heritage-data.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/04-exploring-relationships-through-an-actor-network-theory-lens.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/05-research-scope-and-methodology.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/06-the-social-fabrics-of-iiif-and-linked-art.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/07-pia-as-a-laboratory.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/08-yales-lux-and-loud-consistency.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/09-discussion.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/10-conclusion.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/acknowledgements.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/acronyms.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/appendix-a.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/appendix-b.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/bibliography.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    
+        <url>
+            <loc>https://phd.julsraemy.ch/thesis/lists.html</loc>
+            <lastmod>2024-12-23T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
         </url>
     
 </urlset>

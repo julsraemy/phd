@@ -46,16 +46,87 @@
 
 @import url('https://fonts.cdnfonts.com/css/cmu-bright');
 
+/* ==========================================================================
+   Colour themes: light (default) and dark (system setting or toggle)
+   ========================================================================== */
+:root {
+    color-scheme: light;
+    --bg: #f4f4f4;
+    --surface: #ffffff;
+    --text: #000000;
+    --text-soft: #333333;
+    --text-muted: #666666;
+    --text-faint: #b0b0b0;
+    --rule: #e3e3e3;
+    --rule-strong: #000000;
+    --link: #007bff;
+    --link-strong: #0b57d0;
+    --link-faint: rgba(0, 123, 255, 0.35);
+    --hover-bg: #f1f4f8;
+    --active-bg: #e8f0fe;
+    --mark: #fff6cc;
+    --code-bg: #f9f9f9;
+    --code-text: #d63384;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.15);
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #15171a;
+    --surface: #1e2125;
+    --text: #e6e6e6;
+    --text-soft: #d0d0d0;
+    --text-muted: #a0a4aa;
+    --text-faint: #6f747a;
+    --rule: #34383e;
+    --rule-strong: #8a8f96;
+    --link: #6cb2ff;
+    --link-strong: #9ccbff;
+    --link-faint: rgba(108, 178, 255, 0.4);
+    --hover-bg: #2a2e34;
+    --active-bg: #23344d;
+    --mark: #5a4a12;
+    --code-bg: #262a30;
+    --code-text: #f28fbf;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --shadow-strong: rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #15171a;
+        --surface: #1e2125;
+        --text: #e6e6e6;
+        --text-soft: #d0d0d0;
+        --text-muted: #a0a4aa;
+        --text-faint: #6f747a;
+        --rule: #34383e;
+        --rule-strong: #8a8f96;
+        --link: #6cb2ff;
+        --link-strong: #9ccbff;
+        --link-faint: rgba(108, 178, 255, 0.4);
+        --hover-bg: #2a2e34;
+        --active-bg: #23344d;
+        --mark: #5a4a12;
+        --code-bg: #262a30;
+        --code-text: #f28fbf;
+        --shadow: rgba(0, 0, 0, 0.4);
+        --shadow-strong: rgba(0, 0, 0, 0.6);
+    }
+}
+
 /* Base Body Styling with LNCS */
 body {
-    color: #000000;
+    color: var(--text);
     font-family: "CMUSerif-Roman", "GNU Unifont", "FreeSerif", "Segoe UI Symbol", serif;
     font-size: 125%;
     line-height: 1.231;
     position: relative;
     margin: 0 auto;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--bg);
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
@@ -63,7 +134,7 @@ body {
 }
 
 /* Preserve the navigation styling while keeping it above the LNCS content */
-nav {
+body > nav {
     background: #333;
     color: #fff;
     padding: 10px 20px;
@@ -97,28 +168,28 @@ nav {
     content: '\25B2';
 }
 
-nav ul {
+body > nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: left;
 }
 
-nav ul li {
+body > nav ul li {
     display: inline-block;
     font-size: 1.35em; 
 }
 
-nav ul li:not(:first-child) {
+body > nav ul li:not(:first-child) {
     margin-left: 60px; 
 }
 
-nav ul li a {
+body > nav ul li a {
     color: white;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+body > nav ul li a:hover {
     text-decoration: underline;
 }
 
@@ -128,16 +199,16 @@ nav ul li a:hover {
         display: block;
     }
 
-    nav ul.collapsed {
+    body > nav ul.collapsed {
         display: none;
     }
 
-    nav ul {
+    body > nav ul {
         display: block;
     }
 
-    nav ul li,
-    nav ul li:not(:first-child) {
+    body > nav ul li,
+    body > nav ul li:not(:first-child) {
         display: block;
         margin-left: 0;
         padding: 10px 0;
@@ -145,7 +216,7 @@ nav ul li a:hover {
         width: 100%;
     }
 
-    nav ul li a {
+    body > nav ul li a {
         display: block;
         margin: 0 20px;
         color: white;
@@ -157,8 +228,8 @@ main {
     max-width: 60em;
     margin: 0 auto;
     padding: 2.5em 1em;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--surface);
+    box-shadow: 0 0 10px var(--shadow);
 }
 
 /* LNCS Typography */
@@ -236,7 +307,7 @@ blockquote p {
 
 /* Link Styles */
 a {
-    color: #007bff;
+    color: var(--link);
     text-decoration: none;
 }
 
@@ -275,25 +346,25 @@ main section:not(#abstract):not(#document-status):not(#keywords):not(#references
 code {
     font-family: 'Fira Code', monospace;
     font-size: 0.875em;
-    background-color: #f9f9f9;
+    background-color: var(--code-bg);
     padding: 0.2em 0.4em;
     border-radius: 3px;
-    color: #d63384;
+    color: var(--code-text);
 }
 
 pre {
     margin: 1em 0;
     font-size: 0.875em;
     overflow: auto;
-    background-color: #f9f9f9;
+    background-color: var(--code-bg);
     padding: 0.5em;
-    border: 1px solid #000;
+    border: 1px solid var(--rule-strong);
 }
 
 /* Blockquote styling */
 blockquote {
     padding-left: 1em;
-    border-left: 0.25em solid #ccc;
+    border-left: 0.25em solid var(--rule);
     margin: 1em 0;
 }
 
@@ -312,16 +383,16 @@ table + table {
 caption {
     text-align: left;
     font-size: 0.923em;
-    border-bottom: 2pt solid #000;
+    border-bottom: 2pt solid var(--rule-strong);
     padding: 0 0.25em 0.25em;
 }
 
 thead {
-    border-bottom: 1pt solid #000;
+    border-bottom: 1pt solid var(--rule-strong);
 }
 
 tbody {
-    border-bottom: 2pt solid #000;
+    border-bottom: 2pt solid var(--rule-strong);
 }
 
 th, td {
@@ -388,19 +459,6 @@ ol, ul, dd, table {
 
 #abstract, ol, ul, p, dd {
     text-align: justify;
-}
-
-/* Bibliography */
-#bibliography {
-    margin-top: 2em;
-    font-size: 0.8em;
-    padding-top: 1em;
-    border-top: 1px solid #ccc;
-}
-
-#bibliography h2 {
-    font-size: 1.6em;
-    margin-bottom: 0.3em;
 }
 
 /* References */
@@ -551,27 +609,16 @@ footer {
     font-size: 0.75em;
 }
 
-/* Map */
-#map {
-    height: 400px;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 960px;
-}
-
+/* Small screens: stacked menu */
 @media (max-width: 768px) {
-    #map {
-        height: 300px;
-    }
-    
-    nav ul li,
-    nav ul li:not(:first-child) {
+    body > nav ul li,
+    body > nav ul li:not(:first-child) {
         display: block;
         margin-left: 0;
         padding: 10px 0;
     }
     
-    nav ul li a {
+    body > nav ul li a {
         display: block;
     }
 }
@@ -596,4 +643,686 @@ footer {
 
 #controls button:hover {
     background-color: #555;
+}
+/* ==========================================================================
+   Thesis layout (thesis.html + /thesis/*.html)
+   ========================================================================== */
+
+.thesis-page main {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.thesis-shell {
+    display: grid;
+    grid-template-columns: 19rem minmax(0, 1fr);
+    gap: 2rem;
+    max-width: 82rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 0;
+    align-items: start;
+}
+
+.thesis-content {
+    background: var(--surface);
+    box-shadow: 0 0 10px var(--shadow);
+    padding: 2.5em 3em;
+    max-width: 52em;
+    min-width: 0;
+}
+
+.thesis-content :is(h1, h2, h3, h4, h5, figure, li)[id] {
+    scroll-margin-top: 1.5rem;
+}
+
+.thesis-breadcrumb {
+    font-family: "CMU Bright", sans-serif;
+    font-size: 0.8em;
+    color: var(--text-muted);
+    text-indent: 0;
+    text-align: left;
+    margin: 0 0 1.5em;
+}
+
+.thesis-breadcrumb a { color: var(--text-muted); }
+
+/* Sidebar ------------------------------------------------------------------ */
+.thesis-sidebar {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--surface);
+    box-shadow: 0 0 10px var(--shadow);
+    padding: 1rem 0.75rem 1rem 1rem;
+    font-family: "CMU Bright", "Segoe UI", Tahoma, sans-serif;
+    font-size: 0.78em;
+    line-height: 1.35;
+    hyphens: none;
+}
+
+.toc-heading {
+    font-weight: bold;
+    text-indent: 0;
+    text-align: left;
+    margin: 0 0 0.75em;
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid var(--rule);
+}
+
+.toc-heading a { color: var(--text); }
+
+.thesis-sidebar ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.thesis-sidebar ol ol { padding-left: 1.6em; }
+.thesis-sidebar ol ol ol { padding-left: 1.2em; font-size: 0.95em; }
+
+.thesis-sidebar li { margin: 0; }
+
+.thesis-sidebar a {
+    display: flex;
+    gap: 0.45em;
+    color: var(--text-soft);
+    padding: 0.25em 0.4em;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.thesis-sidebar a:hover { background: var(--hover-bg); color: var(--text); text-decoration: none; }
+
+.toc-num {
+    flex: none;
+    min-width: 1.4em;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.thesis-sidebar ol ol .toc-num { min-width: 2em; }
+.thesis-sidebar ol ol ol .toc-num { min-width: 2.6em; }
+
+.thesis-sidebar details > summary {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.thesis-sidebar details > summary::-webkit-details-marker { display: none; }
+
+.thesis-sidebar details > summary::before {
+    content: "\25B8";
+    flex: none;
+    width: 1em;
+    color: var(--text-muted);
+    transition: transform 0.15s;
+}
+
+.thesis-sidebar details[open] > summary::before { transform: rotate(90deg); }
+
+.thesis-sidebar details > summary > a { flex: 1; }
+
+.toc-front > a,
+.toc-chapter > a { margin-left: 1em; }
+
+.toc-chapter { margin-top: 0.15em; }
+
+.thesis-sidebar a[aria-current="page"] {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.thesis-sidebar a.is-active {
+    background: var(--active-bg);
+    color: var(--link-strong);
+}
+
+.thesis-sidebar a.is-active .toc-num { color: var(--link-strong); }
+
+.toc-pdf {
+    text-indent: 0;
+    margin: 1em 0 0;
+    padding-top: 0.6em;
+    border-top: 1px solid var(--rule);
+}
+
+/* Mobile drawer -------------------------------------------------------------- */
+.toc-toggle,
+.toc-backdrop { display: none; }
+
+@media (max-width: 960px) {
+    .thesis-shell {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0;
+    }
+
+    .thesis-content { padding: 1.75em 1.25em; box-shadow: none; }
+
+    .toc-toggle {
+        display: block;
+        position: fixed;
+        left: 1rem;
+        bottom: 1rem;
+        z-index: 1001;
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        padding: 0.6em 1.1em;
+        font-family: "CMU Bright", sans-serif;
+        font-size: 0.85em;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .toc-toggle::before { content: "\2630\00a0\00a0"; }
+
+    .thesis-sidebar {
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: min(22rem, 85vw);
+        max-height: none;
+        z-index: 1002;
+        transform: translateX(-105%);
+        transition: transform 0.2s ease-out;
+        font-size: 0.85em;
+    }
+
+    .toc-open .thesis-sidebar { transform: none; }
+
+    .toc-backdrop:not([hidden]) {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1001;
+        background: rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* Table of contents on thesis.html ------------------------------------------ */
+.thesis-toc > ol {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.thesis-toc > ol > li {
+    margin: 0.6em 0;
+    font-family: "CMUSerif-Bold", serif;
+}
+
+.thesis-toc ol ol {
+    list-style: none;
+    padding-left: 1.9em;
+    margin: 0.2em 0 0;
+    font-family: "CMUSerif-Roman", serif;
+}
+
+.thesis-toc a { display: inline-flex; gap: 0.5em; }
+.thesis-toc .toc-num { color: var(--text-muted); min-width: 1.4em; }
+.thesis-toc ol ol .toc-num { min-width: 2em; }
+
+/* Chapter references ---------------------------------------------------------- */
+.chapter-references {
+    margin-top: 3em;
+}
+
+.chapter-references h2 {
+    font-size: 1.231em !important;
+}
+
+.bibliography-entry {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 0.5em;
+    overflow-wrap: anywhere;
+}
+
+/* Footnotes (per chapter, numbered as in the source) ------------------------- */
+.thesis-content .footnotes {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--rule);
+}
+
+.thesis-content .footnotes::before {
+    content: "Notes";
+    display: block;
+    font-family: "CMUSerif-Bold", serif;
+    font-size: 1.231em;
+    margin-bottom: 0.5em;
+}
+
+.footnotes-list { padding-left: 2.5em; }
+.footnote-item p { text-indent: 0; text-align: left; overflow-wrap: anywhere; }
+.footnote-item:target,
+.footnote-ref a:target { background: var(--mark); }
+.footnote-ref a { text-decoration: none; }
+
+/* Prev / next ------------------------------------------------------------------ */
+.thesis-pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--rule);
+    font-family: "CMU Bright", sans-serif;
+}
+
+.thesis-pager a {
+    display: flex;
+    flex-direction: column;
+    max-width: 48%;
+    padding: 0.6em 0.9em;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+}
+
+.thesis-pager a:hover { border-color: var(--link); text-decoration: none; }
+.thesis-pager span { font-size: 0.75em; color: var(--text-muted); }
+.pager-next { margin-left: auto; text-align: right; }
+
+/* Wide content should scroll on its own rather than widening the page */
+.thesis-content pre,
+.thesis-content table { max-width: 100%; }
+.thesis-content figure > div { max-width: 100%; overflow-x: auto; }
+.thesis-content img { max-width: 100%; height: auto; }
+
+/* Headings are numbered in the source; disable the LNCS auto-counters here */
+.thesis-content section > :is(h2, h3, h4)::before { content: none !important; }
+
+
+/* ==========================================================================
+   Phase 2: citations, acronyms, front/back matter
+   ========================================================================== */
+
+/* Citations: linked to their bibliography entry, previewed on hover */
+a.cite {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-faint);
+}
+
+a.cite:hover,
+a.cite:focus-visible {
+    color: var(--link-strong);
+    border-bottom-color: var(--link-strong);
+    text-decoration: none;
+}
+
+.cite-preview {
+    position: absolute;
+    z-index: 1100;
+    max-width: min(32rem, calc(100vw - 2rem));
+    padding: 0.75em 1em;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    box-shadow: 0 6px 20px var(--shadow-strong);
+    font-size: 0.8em;
+    line-height: 1.4;
+    text-align: left;
+    hyphens: none;
+}
+
+.cite-preview .csl-entry + .csl-entry { margin-top: 0.6em; }
+.cite-preview .csl-entry { padding-left: 0; text-indent: 0; }
+
+/* Acronyms: hover shows the full form; only the first one per page is underlined */
+abbr[title] {
+    text-decoration: none;
+    cursor: help;
+}
+
+a.acronym {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.acronym abbr[title] {
+    text-decoration: underline dotted var(--text-faint);
+    text-underline-offset: 0.18em;
+}
+
+a.acronym:hover { color: var(--link-strong); }
+a.acronym:hover abbr[title] { text-decoration-style: solid; text-decoration-color: currentColor; }
+
+/* Bibliography entries (chapter references and full bibliography) */
+.csl-entry {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 0.55em;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.chapter-references .csl-entry,
+.bibliography-full .csl-entry { font-size: 0.85em; }
+
+.csl-entry:target {
+    background: var(--mark);
+    outline: 4px solid var(--mark);
+}
+
+/* Acronyms page */
+.acronym-list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.3em 1.5em;
+    margin: 1.5em 0;
+}
+
+.acronym-list dt { font-family: "CMUSerif-Bold", serif; scroll-margin-top: 1.5rem; }
+.acronym-list dd { margin: 0; }
+.acronym-list dt:target,
+.acronym-list dt:target + dd { background: var(--mark); }
+
+/* Lists of figures, tables and code snippets */
+.figure-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.figure-list li {
+    display: grid;
+    grid-template-columns: 8.5em 1fr;
+    gap: 0.75em;
+    padding: 0.3em 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.figure-num { white-space: nowrap; }
+
+/* Appendix B */
+.appendix-figure {
+    margin: 2.5em 0;
+}
+
+.appendix-figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+}
+
+/* ToC on thesis.html: front/back matter without numbers */
+.thesis-toc .toc-matter > li {
+    margin: 0.35em 0;
+    font-family: "CMUSerif-Roman", serif;
+}
+
+.thesis-toc .toc-matter { margin: 1em 0; }
+
+/* Sidebar groups */
+.thesis-sidebar .toc-main {
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+}
+
+.toc-back > a,
+.toc-front > details > summary > a { margin-left: 0; }
+.toc-back > a { margin-left: 1em; }
+
+@media (max-width: 600px) {
+    .figure-list li { grid-template-columns: 1fr; gap: 0.1em; }
+    .acronym-list { grid-template-columns: 1fr; }
+    .acronym-list dd { margin-bottom: 0.5em; }
+}
+
+/* Research outputs (/research.html): no thesis-style first-line indents */
+.research-page main p { text-indent: 0; }
+
+.research-page main p.research-item {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   Phase 3: navigation bar, search, dark-mode details, print
+   ========================================================================== */
+
+/* Menu bar: links on the left, display controls on the right (one row) */
+body > nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+body > nav ul { flex: 1 1 auto; }
+
+body > nav ul li a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+#controls {
+    position: static;
+    display: flex;
+    gap: 0.35rem;
+    margin-left: auto;
+}
+
+#controls button {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 0.45em 0.6em;
+    border: 1px solid #555;
+}
+
+@media screen and (max-width: 768px) {
+    body > nav { padding: 6px 12px; }
+    .nav-trigger { width: auto; padding: 8px 4px; }
+    .nav-trigger:after { margin-left: 0.6em; float: none; }
+    body > nav ul { order: 3; flex-basis: 100%; }
+}
+
+/* Skip link, visible only on keyboard focus */
+.skip-link {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    transform: translateY(-200%);
+    z-index: 2000;
+    padding: 0.5em 1em;
+    background: var(--surface);
+    color: var(--link);
+    border: 2px solid var(--link);
+    border-radius: 4px;
+}
+
+.skip-link:focus { transform: none; }
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Search field in the thesis sidebar */
+.toc-search { margin: 0 0 0.75em; }
+
+.toc-search input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.45em 0.6em;
+    font: inherit;
+    font-size: 1em;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+}
+
+/* Search page (Pagefind Component UI) */
+.search-ui {
+    --pf-font: "CMU Bright", "Segoe UI", Tahoma, sans-serif;
+    --pf-text: var(--text);
+    --pf-text-secondary: var(--text-soft);
+    --pf-text-muted: var(--text-muted);
+    --pf-background: var(--surface);
+    --pf-border: var(--rule);
+    --pf-border-focus: var(--link);
+    --pf-hover: var(--hover-bg);
+    --pf-mark: var(--mark);
+    --pf-outline-focus: var(--link);
+    margin-top: 1.5em;
+    text-align: left;
+    hyphens: none;
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.75em;
+}
+
+.search-bar pagefind-input { flex: 1 1 20rem; }
+
+/* Figures are mostly drawn on white: keep them on white in dark mode */
+:root[data-theme="dark"] figure img,
+:root[data-theme="dark"] .appendix-figure img {
+    background: #fff;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) figure img,
+    :root:not([data-theme="light"]) .appendix-figure img {
+        background: #fff;
+        padding: 4px;
+        border-radius: 3px;
+    }
+}
+
+/* Theme toggle shows the current state */
+#theme-toggle[aria-pressed="true"] { background: #555; }
+
+/* Search button in the menu bar, styled like the display buttons */
+#search-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45em 0.6em;
+    color: #fff;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 3px;
+    line-height: 1;
+}
+
+#search-link:hover,
+#search-link[aria-current="page"] { background: #555; text-decoration: none; }
+
+/* IIIF viewers ({% mirador %} and {% iiifImage %} shortcodes) */
+.iiif-viewer { margin: 1.5em 0; }
+
+.iiif-viewer .viewer-frame {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    max-height: 80vh;
+    background: var(--code-bg) center / contain no-repeat;
+    border: 1px solid var(--rule);
+    overflow: hidden;
+}
+
+.iiif-viewer .viewer-frame.is-loaded { background: #000; }
+.iiif-image .viewer-frame.is-loaded { background: var(--surface); }
+
+.iiif-viewer iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.viewer-load {
+    font-family: "CMU Bright", "Segoe UI", Tahoma, sans-serif;
+    font-size: 0.9rem;
+    padding: 0.7em 1.2em;
+    color: #fff;
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.viewer-load::before { content: "\25B6\00a0\00a0"; }
+.viewer-load:hover { background: #000; }
+
+.iiif-viewer figcaption {
+    font-size: 0.85em;
+    margin-top: 0.5em;
+    text-align: left;
+}
+
+/* ==========================================================================
+   Print
+   ========================================================================== */
+@media print {
+    :root, :root[data-theme="dark"] {
+        --bg: #fff; --surface: #fff; --text: #000; --text-soft: #000; --text-muted: #444;
+        --link: #000; --link-strong: #000; --rule: #bbb; --rule-strong: #000;
+        --code-bg: #fff; --code-text: #000; --mark: transparent; color-scheme: light;
+    }
+
+    body { font-size: 11pt; background: #fff; }
+
+    body > nav, #controls, .skip-link, .thesis-sidebar, .toc-toggle, .toc-backdrop,
+    .thesis-pager, .thesis-breadcrumb, .cite-preview, .toc-search, footer,
+    .viewer-load, .footnote-backref { display: none !important; }
+
+    main, .thesis-page main, .thesis-content {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        background: #fff;
+    }
+
+    .thesis-shell { display: block; padding: 0; max-width: none; }
+
+    a, a.cite, a.acronym { color: #000; text-decoration: none; border: none; }
+    a.acronym abbr[title] { text-decoration: none; }
+
+    /* Show the target of external links whose text is not already the URL */
+    .thesis-content p a[href^="http"]:not(.cite):not(.bare-url)::after,
+    main > p a[href^="http"]:not(.bare-url)::after {
+        content: " <" attr(href) ">";
+        font-size: 0.85em;
+        overflow-wrap: anywhere;
+    }
+
+    h1, h2, h3, h4 { break-after: avoid; }
+    figure, pre, table, .csl-entry { break-inside: avoid; }
+    img { max-width: 100% !important; background: none !important; padding: 0 !important; }
+    pre { white-space: pre-wrap; border: 1px solid #999; }
+    .footnotes, .chapter-references { break-before: auto; }
 }
