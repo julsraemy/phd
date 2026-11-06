@@ -17,7 +17,7 @@ npm run build      # build the site into _site/ and create the search index
 npm start          # serve on http://localhost:8080/ and rebuild on changes
 ```
 
-Run `npm run build` at least once before `npm start`, so that the search index exists (`npm run search-index` refreshes it). Pushing to `main` builds and deploys the site to GitHub Pages (`.github/workflows/deploy.yml`); `_site/` is not committed.
+Run `npm run build` at least once before `npm start`, so that the search index exists (`npm run search-index` refreshes it). After editing `.eleventy.js` itself, restart `npm start`: the dev server can otherwise keep serving pages built with the old configuration. Pushing to `main` builds and deploys the site to GitHub Pages (`.github/workflows/deploy.yml`); `_site/` is not committed.
 
 ## Where things are
 
