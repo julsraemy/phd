@@ -68,62 +68,39 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": [
+            "https://schema.org",
+            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
+        ],
         "@type": {{ (schemaType or "WebPage") | dump | safe }},
+        "@id": {{ (site.url + page.url) | dump | safe }},
         "name": {{ title | dump | safe }},
         "url": {{ (site.url + page.url) | dump | safe }},
-        {% if doi %}"identifier": {{ ("https://doi.org/" + doi) | dump | safe }},
-        {% endif %}{% if chapter %}"isPartOf": {
+        {% if chapter %}"position": {{ chapter }},
+        "isPartOf": {
             "@type": "Thesis",
+            "@id": "{{ site.url }}/thesis.html",
             "name": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
-            "url": "{{ site.url }}/thesis.html"
+            "identifier": "https://doi.org/10.5451/unibas-ep96807"
         },
+        {% elif doi %}"identifier": {{ ("https://doi.org/" + doi) | dump | safe }},
         {% endif %}"author": {
             "@type": "Person",
             "@id": "https://julsraemy.ch/#person",
             "name": "Julien Antoine Raemy",
-            "alternateName": "Julien A. Raemy",
-            "givenName": "Julien Antoine",
-            "familyName": "Raemy",
-            "url": "https://julsraemy.ch/",
-            "jobTitle": "Semantic Architect and Project Manager",
-            "worksFor": { "@type": "Organization", "name": "docuteam", "url": "https://www.docuteam.ch/" },
-            "affiliation": {
-                "@type": "Organization",
-                "name": "Walter Benjamin Kolleg / Digital Humanities Center",
-                "url": "https://www.dh.unibe.ch/",
-                "parentOrganization": {
-                    "@type": "CollegeOrUniversity",
-                    "@id": "https://ror.org/02k7v4d05",
-                    "name": "University of Bern"
-                }
-            },
-            "alumniOf": [
-                { "@type": "CollegeOrUniversity", "@id": "https://ror.org/02s6k3f65", "name": "University of Basel" },
-                {
-                    "@type": "CollegeOrUniversity",
-                    "name": "Haute école de gestion de Genève",
-                    "parentOrganization": { "@type": "CollegeOrUniversity", "@id": "https://ror.org/01xkakk17", "name": "HES-SO University of Applied Sciences and Arts Western Switzerland" }
-                }
-            ],
-            "identifier": { "@type": "PropertyValue", "propertyID": "ORCID", "value": "0000-0002-4711-5759" },
-            "sameAs": [
-                "https://orcid.org/0000-0002-4711-5759",
-                "https://www.wikidata.org/wiki/Q59286487",
-                "https://hcommons.social/@julsraemy",
-                "https://www.linkedin.com/in/julienaraemy/",
-                "https://www.researchgate.net/profile/Julien_Raemy",
-                "https://www.zotero.org/julsraemy",
-                "https://scholar.google.ch/citations?user=pGROUG0AAAAJ",
-                "https://viaf.org/viaf/1239155284804887060759/",
-                "https://www.semanticscholar.org/author/Julien-A.-Raemy/72004221"
-            ]
+            "identifier": "https://orcid.org/0000-0002-4711-5759",
+            "seeAlso": "https://julsraemy.ch/me.json"
         },
-        {% if university %}"sourceOrganization": { "@type": "CollegeOrUniversity", "@id": "https://ror.org/02s6k3f65", "name": {{ university | dump | safe }} },
+        {% if university %}"sourceOrganization": {
+            "@type": "CollegeOrUniversity",
+            "@id": "https://ror.org/02s6k3f65",
+            "name": {{ university | dump | safe }},
+            "url": "https://www.unibas.ch/"
+        },
         {% endif %}"datePublished": {{ (page.date.toISOString() | truncate(10, true, "")) | dump | safe }},
         "description": {{ (description or "") | dump | safe }},
-        "keywords": {{ (keywords or "") | dump | safe }},
-        "inLanguage": "en",
+        {% if keywords %}"keywords": {{ keywords | dump | safe }},
+        {% endif %}"inLanguage": "en",
         "license": "https://creativecommons.org/licenses/by/4.0/"
     }
     </script>

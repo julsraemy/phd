@@ -4,10 +4,18 @@ const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
 const markdownItAnchor = require("markdown-it-anchor");
 const { JSDOM } = require("jsdom");
-const acronyms = require("./src/data/acronyms.json");
-const thesisToc = require("./src/_data/thesisToc.js");
-const citations = require("./src/utils/citations.js");
-const { markAcronyms, acronymListHtml } = require("./src/utils/acronyms.js");
+// Helper modules are (re)loaded at the start of every build so that edits to
+// them take effect in the dev server (Node would otherwise keep them cached).
+const HELPERS = ["./src/data/acronyms.json", "./src/_data/thesisToc.js", "./src/utils/citations.js", "./src/utils/acronyms.js"];
+let acronyms, thesisToc, citations, markAcronyms, acronymListHtml;
+function loadHelpers() {
+    for (const mod of HELPERS) delete require.cache[require.resolve(mod)];
+    acronyms = require("./src/data/acronyms.json");
+    thesisToc = require("./src/_data/thesisToc.js");
+    citations = require("./src/utils/citations.js");
+    ({ markAcronyms, acronymListHtml } = require("./src/utils/acronyms.js"));
+}
+loadHelpers();
 
 function escapeHtml(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -66,7 +74,7 @@ module.exports = function(eleventyConfig) {
     // ------------------------------------------------------------------------
     // Citations (src/utils/citations.js)
     // ------------------------------------------------------------------------
-    eleventyConfig.on("eleventy.before", () => citations.reset());
+    eleventyConfig.on("eleventy.before", () => { loadHelpers(); citations.reset(); });
     eleventyConfig.addFilter("references", text => citations.renderCitations(text));
     eleventyConfig.addFilter("bibliography", text => citations.bibliographyFor(text));
     eleventyConfig.addShortcode("fullBibliography", () =>
@@ -186,6 +194,9 @@ module.exports = function(eleventyConfig) {
     // ------------------------------------------------------------------------
     // Static files and global data
     // ------------------------------------------------------------------------
+    eleventyConfig.addWatchTarget("./src/utils/");
+    eleventyConfig.addWatchTarget("./src/data/acronyms.json");
+
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addPassthroughCopy({"src/data": "data"});
     eleventyConfig.addPassthroughCopy("src/404.md");
