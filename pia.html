@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) is a project funded by the Swiss National Science Foundation (SNSF) under the Sinergia funding scheme from February 2021 to January 2025.">
-    <meta name="keywords" content="Linked Open Usable Data, LOUD, IIIF, International Image Interoperability Framework, Linked Art, Web Annotation Data Model, W3C, Digital Humanities, Cultural Heritage, Linked Data, Semantic Interoperability, Community Practices, PhD, LUX: Yale Collections Discovery, University of Basel, Cultural Anthropology Switzerland, PIA, Participatory Knowledge Practices in Analogue and Digital Image Archives, Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts">
+    <meta name="keywords" content="Linked Open Usable Data, LOUD, IIIF, International Image Interoperability Framework, Linked Art, Web Annotation Data Model, W3C, Digital Humanities, Cultural Heritage, Linked Data, Semantic Interoperability, Community Practices, PhD, LUX: Yale Collections Discovery, University of Basel, Cultural Anthropology Switzerland, PIA, Participatory Knowledge Practices in Analogue and Digital Image Archives, Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogeneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts">
     <meta name="author" content="Julien A. Raemy">
     <meta name="last-modified" content="2024-02-29T00:00:00.000Z">
 
@@ -18,7 +18,7 @@
     
     
     <meta name="DC.description" content="Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) is a project funded by the Swiss National Science Foundation (SNSF) under the Sinergia funding scheme from February 2021 to January 2025.">
-    <meta name="DC.subject" content="Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts">
+    <meta name="DC.subject" content="Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogeneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts">
     <meta name="DC.language" content="en">
     <meta name="DC.format" content="text/html">
     <meta name="DC.rights" content="https://creativecommons.org/licenses/by/4.0/">
@@ -54,24 +54,33 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": [
-            "https://schema.org",
-            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
-        ],
+        "@context": "https://schema.org",
         "@type": "WebPage",
         "@id": "https://phd.julsraemy.ch/pia.html",
         "name": "LOUD for Cultural Heritage – Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)",
         "url": "https://phd.julsraemy.ch/pia.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://phd.julsraemy.ch/",
+            "name": "LOUD for Cultural Heritage",
+            "url": "https://phd.julsraemy.ch/"
+        },
         "author": {
             "@type": "Person",
             "@id": "https://julsraemy.ch/#person",
             "name": "Julien Antoine Raemy",
             "identifier": "https://orcid.org/0000-0002-4711-5759",
-            "seeAlso": "https://julsraemy.ch/me.json"
+            "sameAs": "https://orcid.org/0000-0002-4711-5759",
+            "url": "https://julsraemy.ch",
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "@id": "https://julsraemy.ch/me.json",
+                "encodingFormat": "application/ld+json"
+            }
         },
         "datePublished": "2024-02-29",
         "description": "Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA) is a project funded by the Swiss National Science Foundation (SNSF) under the Sinergia funding scheme from February 2021 to January 2025.",
-        "keywords": "Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts",
+        "keywords": "Swiss National Science Foundation, Sinergia, SNSF, Research Project, Citizen Science, Participation, Accessibility, Heterogeneity, Materiality, Interoperability, Affinities, Artificial Intelligence, Bias Management, Institute for Cultural Anthropology and European Ethnology, Digital Humanities Lab, Bern University of the Arts",
         "inLanguage": "en",
         "license": "https://creativecommons.org/licenses/by/4.0/"
     }

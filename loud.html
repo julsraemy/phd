@@ -56,20 +56,29 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": [
-            "https://schema.org",
-            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
-        ],
+        "@context": "https://schema.org",
         "@type": "WebPage",
         "@id": "https://phd.julsraemy.ch/loud.html",
         "name": "LOUD for Cultural Heritage – Linked Open Usable Data",
         "url": "https://phd.julsraemy.ch/loud.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://phd.julsraemy.ch/",
+            "name": "LOUD for Cultural Heritage",
+            "url": "https://phd.julsraemy.ch/"
+        },
         "author": {
             "@type": "Person",
             "@id": "https://julsraemy.ch/#person",
             "name": "Julien Antoine Raemy",
             "identifier": "https://orcid.org/0000-0002-4711-5759",
-            "seeAlso": "https://julsraemy.ch/me.json"
+            "sameAs": "https://orcid.org/0000-0002-4711-5759",
+            "url": "https://julsraemy.ch",
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "@id": "https://julsraemy.ch/me.json",
+                "encodingFormat": "application/ld+json"
+            }
         },
         "datePublished": "2024-12-04",
         "description": "Linked Open Usable Data (LOUD), its design principles and its standards: International Image Interoperability Framework (IIIF), Linked Art, Web Annotation Data Model.",

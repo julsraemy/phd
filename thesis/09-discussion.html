@@ -62,10 +62,7 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": [
-            "https://schema.org",
-            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
-        ],
+        "@context": "https://schema.org",
         "@type": "Chapter",
         "@id": "https://phd.julsraemy.ch/thesis/09-discussion.html",
         "name": "Discussion",
@@ -83,7 +80,13 @@
             "@id": "https://julsraemy.ch/#person",
             "name": "Julien Antoine Raemy",
             "identifier": "https://orcid.org/0000-0002-4711-5759",
-            "seeAlso": "https://julsraemy.ch/me.json"
+            "sameAs": "https://orcid.org/0000-0002-4711-5759",
+            "url": "https://julsraemy.ch",
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "@id": "https://julsraemy.ch/me.json",
+                "encodingFormat": "application/ld+json"
+            }
         },
         "sourceOrganization": {
             "@type": "CollegeOrUniversity",
