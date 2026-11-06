@@ -1,4 +1,3 @@
-const path = require('path');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
@@ -7,39 +6,22 @@ const markdownItAnchor = require("markdown-it-anchor");
 const { JSDOM } = require("jsdom");
 const acronyms = require("./src/data/acronyms.json");
 const thesisToc = require("./src/_data/thesisToc.js");
-
-// Citeproc internals (eleventy-plugin-citeproc), used directly so that code can
-// be shielded from citation processing (see `shieldCode` below).
-const getCsl = require("eleventy-plugin-citeproc/src/csl");
-const citeReferences = require("eleventy-plugin-citeproc/src/references");
-const citeBibliography = require("eleventy-plugin-citeproc/src/bibliography");
-
-// Temporarily replace <pre> and <code> elements with placeholders so that
-// `@context`, `@prefix`, e-mail-like strings etc. are never read as citations.
-function shieldCode(fn) {
-    return function (text, ...args) {
-        if (typeof text !== "string") return fn(text, ...args);
-        const store = [];
-        const masked = text.replace(/<(pre|code)\b[^>]*>[\s\S]*?<\/\1>/g, m => {
-            store.push(m);
-            return `\u0000CODE${store.length - 1}\u0000`;
-        });
-        const out = fn(masked, ...args);
-        return typeof out === "string"
-            ? out.replace(/\u0000CODE(\d+)\u0000/g, (_, i) => store[i])
-            : out;
-    };
-}
+const citations = require("./src/utils/citations.js");
+const { markAcronyms, acronymListHtml } = require("./src/utils/acronyms.js");
 
 function escapeHtml(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
+const isThesisPage = url => url === "/thesis.html" || url.startsWith("/thesis/");
+
 module.exports = function(eleventyConfig) {
     // RSS Feed
     eleventyConfig.addPlugin(pluginRss);
 
-    // Markdown Configuration
+    // ------------------------------------------------------------------------
+    // Markdown
+    // ------------------------------------------------------------------------
     const markdownLibrary = markdownIt({
         html: true,
         linkify: true,
@@ -63,11 +45,10 @@ module.exports = function(eleventyConfig) {
         return `<li id="fn${id}" class="footnote-item"${value}>`;
     };
 
-    // Custom rule for opening external links in a new tab
+    // Open external links in a new tab
     const defaultRender = markdownLibrary.renderer.rules.link_open || function(tokens, idx, options, env, self) {
         return self.renderToken(tokens, idx, options);
     };
-
     markdownLibrary.renderer.rules.link_open = function(tokens, idx, options, env, self) {
         const hrefIndex = tokens[idx].attrIndex('href');
         if (hrefIndex >= 0) {
@@ -82,55 +63,33 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setLibrary("md", markdownLibrary);
 
-    // Citations and bibliographies (code blocks are shielded)
-    const csl = getCsl({
-        bibliographicStylePath: path.join(__dirname, 'src/utils/apa-no-initials.csl'),
-        bibliographicLocalizationPath: path.join(__dirname, 'src/utils/locales-en-GB.xml'),
-        bibliographicDataPath: path.join(__dirname, 'src/utils/bib-data.json'),
-        deduplicate: true,
-        sort: true
-    });
-    eleventyConfig.addFilter("references", shieldCode(text => citeReferences(text, csl)));
-    eleventyConfig.addFilter("bibliography", shieldCode((text, options) => citeBibliography(text, csl, options)));
+    // ------------------------------------------------------------------------
+    // Citations (src/utils/citations.js)
+    // ------------------------------------------------------------------------
+    eleventyConfig.on("eleventy.before", () => citations.reset());
+    eleventyConfig.addFilter("references", text => citations.renderCitations(text));
+    eleventyConfig.addFilter("bibliography", text => citations.bibliographyFor(text));
+    eleventyConfig.addShortcode("fullBibliography", () =>
+        `<div class="bibliography-full">${citations.fullBibliography().replace(/\n/g, "")}</div>`);
 
-    eleventyConfig.addTransform("handleCitations", function(content, outputPath) {
+    // ------------------------------------------------------------------------
+    // Post-processing of rendered pages
+    // ------------------------------------------------------------------------
+
+    // Acronyms: <abbr> on every occurrence, first one per page links to the list
+    eleventyConfig.addTransform("acronyms", function(content, outputPath) {
         if (!outputPath?.endsWith(".html")) return content;
-        if (!content.includes('id="bibliography"')) return content;
-
+        const url = this.page.url;
+        if (!isThesisPage(url) && url !== "/pia.html") return content;
         const dom = new JSDOM(content);
         const document = dom.window.document;
-        const bibliography = document.querySelector("#bibliography");
-
-        if (bibliography) {
-            const citationsArray = Array.from(bibliography.querySelectorAll(".bibliography-entry"));
-            const uniqueCitations = new Map();
-
-            citationsArray.forEach(citation => {
-                const citationText = citation.textContent.trim();
-                if (citationText && !uniqueCitations.has(citationText)) {
-                    uniqueCitations.set(citationText, citation.cloneNode(true));
-                }
-            });
-
-            const heading = bibliography.querySelector("h2")?.outerHTML || "";
-            bibliography.innerHTML = heading;
-            Array.from(uniqueCitations.values())
-                .sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim()))
-                .forEach(citation => {
-                    citation.removeAttribute("id"); // proper per-entry anchors come in phase 2
-                    citation.innerHTML = citation.innerHTML.replace(
-                        /(^|[^"'>])(https?:\/\/[^\s<]+)/g,
-                        '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>'
-                    );
-                    bibliography.appendChild(citation);
-                });
-        }
-
+        const root = document.querySelector(".thesis-content") || document.querySelector("main");
+        markAcronyms(document, root, { linkFirst: isThesisPage(url) });
         return dom.serialize();
     });
 
-    // Rewrite in-thesis links (#sec:..., /thesis.html#cha:...) so they point to
-    // the chapter page that actually contains the target id.
+    // Rewrite in-thesis links (#sec:..., /thesis.html#cha:..., #ref-key) so they
+    // point to the page that actually contains the target id.
     eleventyConfig.addTransform("thesisCrossRefs", function(content, outputPath) {
         if (!outputPath?.endsWith(".html")) return content;
         const { ids } = thesisToc();
@@ -142,28 +101,75 @@ module.exports = function(eleventyConfig) {
             let target;
             try { target = decodeURIComponent(id); } catch { target = id; }
             if (!prefix && local.has(target)) return match;
-            const page = ids[target];
+            const page = target.startsWith("ref-") ? citations.BIB_PAGE : ids[target];
             if (!page || (page === url && !prefix)) return match;
             return `href="${page}#${id}"`;
         });
     });
 
-    // Table of contents on /thesis.html (rendered as one compact HTML block so
+    // ------------------------------------------------------------------------
+    // Generated thesis content (each returns one compact HTML block so that
     // Markdown does not interfere with it)
+    // ------------------------------------------------------------------------
+    const tocLink = (item) =>
+        `<a href="${item.url}">${item.num ? `<span class="toc-num">${item.num}</span> ` : ""}${escapeHtml(item.title)}</a>`;
+
+    // Table of contents on /thesis.html
     eleventyConfig.addShortcode("thesisToc", function() {
-        const { chapters } = thesisToc();
-        const items = chapters.map(ch => {
-            const sections = ch.sections.length
-                ? `<ol>${ch.sections.map(s => `<li><a href="${s.url}"><span class="toc-num">${s.num}</span> ${escapeHtml(s.title)}</a></li>`).join("")}</ol>`
-                : "";
-            return `<li><a href="${ch.url}"><span class="toc-num">${ch.num}</span> ${escapeHtml(ch.title)}</a>${sections}</li>`;
+        const { front, chapters, back } = thesisToc();
+        const list = (items, withSections) => items.map(ch => {
+            const sections = withSections && ch.sections.length
+                ? `<ol>${ch.sections.map(s => `<li>${tocLink(s)}</li>`).join("")}</ol>` : "";
+            return `<li>${tocLink(ch)}${sections}</li>`;
         }).join("");
-        return `<nav class="thesis-toc" aria-label="Table of contents"><ol>${items}</ol></nav>`;
+        return `<nav class="thesis-toc" aria-label="Table of contents">`
+            + `<ol class="toc-matter">${list(front, false)}</ol>`
+            + `<ol>${list(chapters, true)}</ol>`
+            + `<ol class="toc-matter">${list(back, false)}</ol></nav>`;
+    });
+
+    // Acronyms page
+    eleventyConfig.addShortcode("acronymList", () => acronymListHtml());
+
+    // Lists of figures, tables and code snippets
+    eleventyConfig.addShortcode("figureLists", function() {
+        const { figures } = thesisToc();
+        const sections = [
+            ["figures", "List of Figures", "Figure"],
+            ["tables", "List of Tables", "Table"],
+            ["code-snippets", "List of Code Snippets", "Code Snippet"],
+        ];
+        return sections.map(([id, title, kind]) => {
+            const items = figures.filter(f => f.kind === kind).map(f =>
+                `<li><a class="figure-num" href="${f.url}">${kind} ${f.num}</a><span class="figure-caption">${f.caption}</span></li>`);
+            return `<section class="figure-list-section"><h2 id="${id}">${title}</h2><ol class="figure-list">${items.join("")}</ol></section>`;
+        }).join("");
+    });
+
+    // Appendix B: enlarged versions of figures, given as "fig:id" arguments
+    eleventyConfig.addShortcode("appendixFigures", function(...ids) {
+        const { figures } = thesisToc();
+        return `<div class="appendix-figures">` + ids.map((id, i) => {
+            const f = figures.find(x => x.id === id);
+            if (!f) throw new Error(`appendixFigures: unknown figure ${id}`);
+            const n = `B.${i + 1}`;
+            return `<figure id="fig:appendix-${n}" class="appendix-figure">`
+                + `<a href="${f.img}" target="_blank" rel="noopener" title="Open the full-size image">`
+                + `<img src="${f.img}" alt="${escapeHtml(f.alt || "")}" loading="lazy"></a>`
+                + `<figcaption><strong>Figure ${n}</strong>: Enlarged view of <a href="${f.url}">Figure ${f.num}</a>: ${f.caption}</figcaption></figure>`;
+        }).join("") + `</div>`;
     });
 
     eleventyConfig.addFilter("indexByUrl", (pages, url) => pages.findIndex(p => p.url === url));
 
-    // Custom Collections
+    // Legacy filter: sources now use plain acronyms (marked up automatically)
+    eleventyConfig.addFilter("abbr", function(key) {
+        return acronyms[key] ? `<abbr title="${escapeHtml(acronyms[key])}">${key}</abbr>` : key;
+    });
+
+    // ------------------------------------------------------------------------
+    // Collections
+    // ------------------------------------------------------------------------
     eleventyConfig.addCollection("sitePages", function(collectionApi) {
         return collectionApi.getAll().filter(function(item) {
             // Exclude specific pages like 404 and all pages under /s/
@@ -177,15 +183,9 @@ module.exports = function(eleventyConfig) {
             !item.url.startsWith('/s/') && !item.url.startsWith('/thesis/') && item.url !== '/404.html');
     });
 
-    // Abbr
-    eleventyConfig.addFilter("abbr", function(key) {
-        if (acronyms[key]) {
-          return `<abbr title="${acronyms[key]}">${key}</abbr>`;
-        }
-        return key;
-      });
-
-    // Static File Copying
+    // ------------------------------------------------------------------------
+    // Static files and global data
+    // ------------------------------------------------------------------------
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addPassthroughCopy({"src/data": "data"});
     eleventyConfig.addPassthroughCopy("src/404.md");
@@ -193,7 +193,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
     eleventyConfig.addPassthroughCopy("src/js");
 
-    // Global Site Data
     eleventyConfig.addGlobalData("site", {
         "url": "https://phd.julsraemy.ch"
     });

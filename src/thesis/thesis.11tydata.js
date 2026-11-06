@@ -10,6 +10,6 @@ module.exports = {
     changeFreq: "monthly",
     sitemapPriority: "0.8",
     eleventyComputed: {
-        description: data => `Chapter ${data.chapter} – ${data.title} – of the PhD thesis "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability" by Julien A. Raemy (University of Basel, 2024).`
+        description: data => `${data.chapter ? `Chapter ${data.chapter}: ` : ""}${data.title} – from the PhD thesis "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability" by Julien A. Raemy (University of Basel, 2024).`
     }
 };

@@ -12,13 +12,13 @@ bodyClass: thesis-page
   <div class="toc-backdrop" hidden></div>
 
   <article class="thesis-content">
-    {% if chapter %}<p class="thesis-breadcrumb"><a href="/thesis.html">Linked Open Usable Data for Cultural Heritage</a> · Chapter {{ chapter }}</p>{% endif %}
+    {% if page.url != "/thesis.html" %}<p class="thesis-breadcrumb"><a href="/thesis.html">Linked Open Usable Data for Cultural Heritage</a>{% if chapter %} · Chapter {{ chapter }}{% endif %}</p>{% endif %}
     {{ content | safe }}
 
-    {% if chapter %}
+    {% if not noReferences %}
     {%- set bib = content | bibliography -%}
     {% if bib %}
-    <section id="bibliography" class="chapter-references">
+    <section class="chapter-references" aria-labelledby="references">
       <h2 id="references">References</h2>
       {{ bib | safe }}
     </section>

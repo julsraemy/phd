@@ -390,19 +390,6 @@ ol, ul, dd, table {
     text-align: justify;
 }
 
-/* Bibliography */
-#bibliography {
-    margin-top: 2em;
-    font-size: 0.8em;
-    padding-top: 1em;
-    border-top: 1px solid #ccc;
-}
-
-#bibliography h2 {
-    font-size: 1.6em;
-    margin-bottom: 0.3em;
-}
-
 /* References */
 #references {
     clear: both;
@@ -902,4 +889,142 @@ footer {
     aspect-ratio: 4 / 3;
     margin: 1em auto;
     border: 1px solid #ddd;
+}
+
+/* ==========================================================================
+   Phase 2: citations, acronyms, front/back matter
+   ========================================================================== */
+
+/* Citations: linked to their bibliography entry, previewed on hover */
+a.cite {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 123, 255, 0.35);
+}
+
+a.cite:hover,
+a.cite:focus-visible {
+    color: #0b57d0;
+    border-bottom-color: #0b57d0;
+    text-decoration: none;
+}
+
+.cite-preview {
+    position: absolute;
+    z-index: 1100;
+    max-width: min(32rem, calc(100vw - 2rem));
+    padding: 0.75em 1em;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    font-size: 0.8em;
+    line-height: 1.4;
+    text-align: left;
+    hyphens: none;
+}
+
+.cite-preview .csl-entry + .csl-entry { margin-top: 0.6em; }
+.cite-preview .csl-entry { padding-left: 0; text-indent: 0; }
+
+/* Acronyms: hover shows the full form; only the first one per page is underlined */
+abbr[title] {
+    text-decoration: none;
+    cursor: help;
+}
+
+a.acronym-first {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.acronym-first abbr[title] {
+    text-decoration: underline dotted #8a8a8a;
+    text-underline-offset: 0.18em;
+}
+
+a.acronym-first:hover abbr[title] { text-decoration-color: #0b57d0; }
+
+/* Bibliography entries (chapter references and full bibliography) */
+.csl-entry {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 0.55em;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.chapter-references .csl-entry,
+.bibliography-full .csl-entry { font-size: 0.85em; }
+
+.csl-entry:target {
+    background: #fff6cc;
+    outline: 4px solid #fff6cc;
+}
+
+/* Acronyms page */
+.acronym-list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.3em 1.5em;
+    margin: 1.5em 0;
+}
+
+.acronym-list dt { font-family: "CMUSerif-Bold", serif; scroll-margin-top: 1.5rem; }
+.acronym-list dd { margin: 0; }
+.acronym-list dt:target,
+.acronym-list dt:target + dd { background: #fff6cc; }
+
+/* Lists of figures, tables and code snippets */
+.figure-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.figure-list li {
+    display: grid;
+    grid-template-columns: 8.5em 1fr;
+    gap: 0.75em;
+    padding: 0.3em 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.figure-num { white-space: nowrap; }
+
+/* Appendix B */
+.appendix-figure {
+    margin: 2.5em 0;
+}
+
+.appendix-figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+/* ToC on thesis.html: front/back matter without numbers */
+.thesis-toc .toc-matter > li {
+    margin: 0.35em 0;
+    font-family: "CMUSerif-Roman", serif;
+}
+
+.thesis-toc .toc-matter { margin: 1em 0; }
+
+/* Sidebar groups */
+.thesis-sidebar .toc-main {
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.toc-back > a,
+.toc-front > details > summary > a { margin-left: 0; }
+.toc-back > a { margin-left: 1em; }
+
+@media (max-width: 600px) {
+    .figure-list li { grid-template-columns: 1fr; gap: 0.1em; }
+    .acronym-list { grid-template-columns: 1fr; }
+    .acronym-list dd { margin-bottom: 0.5em; }
 }

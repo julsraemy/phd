@@ -52,3 +52,56 @@
     }, { passive: true });
     update();
 })();
+
+// Citation previews: hovering (or focusing) a citation shows its bibliography
+// entry. Entries come from the page itself, or from the full bibliography page.
+(function () {
+    const links = document.querySelectorAll("a.cite[data-refs]");
+    if (!links.length || !window.matchMedia("(hover: hover)").matches) return;
+
+    let remote = null; // Promise<Document> for /thesis/bibliography.html
+    function entry(id) {
+        const local = document.getElementById("ref-" + id);
+        if (local) return Promise.resolve(local);
+        remote = remote || fetch("/thesis/bibliography.html")
+            .then(r => r.text())
+            .then(html => new DOMParser().parseFromString(html, "text/html"));
+        return remote.then(doc => doc.getElementById("ref-" + id));
+    }
+
+    const box = document.createElement("div");
+    box.className = "cite-preview";
+    box.setAttribute("role", "tooltip");
+    box.hidden = true;
+    document.body.append(box);
+
+    let current = null, hideTimer = null;
+    function hide() { box.hidden = true; current = null; }
+    function scheduleHide() { clearTimeout(hideTimer); hideTimer = setTimeout(hide, 200); }
+
+    async function show(link) {
+        clearTimeout(hideTimer);
+        if (current === link) return;
+        current = link;
+        const ids = link.dataset.refs.split(" ");
+        const entries = (await Promise.all(ids.map(entry))).filter(Boolean);
+        if (current !== link || !entries.length) return;
+        box.replaceChildren(...entries.map(e => { const c = e.cloneNode(true); c.removeAttribute("id"); return c; }));
+        box.hidden = false;
+        const r = link.getBoundingClientRect();
+        const left = Math.min(window.scrollX + r.left, window.scrollX + document.documentElement.clientWidth - box.offsetWidth - 16);
+        const below = r.bottom + box.offsetHeight + 12 < window.innerHeight;
+        box.style.left = Math.max(window.scrollX + 8, left) + "px";
+        box.style.top = (below ? window.scrollY + r.bottom + 6 : window.scrollY + r.top - box.offsetHeight - 6) + "px";
+    }
+
+    links.forEach(link => {
+        link.addEventListener("mouseenter", () => show(link));
+        link.addEventListener("mouseleave", scheduleHide);
+        link.addEventListener("focus", () => show(link));
+        link.addEventListener("blur", scheduleHide);
+    });
+    box.addEventListener("mouseenter", () => clearTimeout(hideTimer));
+    box.addEventListener("mouseleave", scheduleHide);
+    document.addEventListener("keydown", e => { if (e.key === "Escape") hide(); });
+})();
