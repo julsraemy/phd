@@ -793,6 +793,7 @@ footer {
     padding-top: 0.6em;
     border-top: 1px solid var(--rule);
 }
+.toc-la { text-indent: 0; margin: 0.3em 0 0; }
 
 /* Mobile drawer -------------------------------------------------------------- */
 .toc-toggle,
@@ -906,6 +907,7 @@ footer {
 .footnote-item:target,
 .footnote-ref a:target { background: var(--mark); }
 .footnote-ref a { text-decoration: none; }
+.footnote-item[data-label] { list-style-type: var(--fn-marker); }
 
 /* Prev / next ------------------------------------------------------------------ */
 .thesis-pager {

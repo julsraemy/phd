@@ -60,6 +60,11 @@
     <link rel="me" href="https://scholar.google.ch/citations?user=pGROUG0AAAAJ">
     <link rel="me" href="https://www.linkedin.com/in/julienaraemy/">
     <link rel="me" href="https://www.researchgate.net/profile/Julien_Raemy">
+    {%- if page.url == "/thesis.html" %}
+    <link rel="alternate" type="application/ld+json" title="Linked Art (LinguisticObject)" href="{{ site.url }}/linked-art/text/thesis.json">
+    {%- elif chapter %}
+    <link rel="alternate" type="application/ld+json" title="Linked Art (LinguisticObject)" href="{{ site.url }}/linked-art/text/thesis/{{ page.fileSlug }}.json">
+    {%- endif %}
 
     <!-- Schema.org -->
     <script type="application/ld+json">

@@ -50,8 +50,11 @@ module.exports = function(eleventyConfig) {
     };
     markdownLibrary.renderer.rules.footnote_open = (tokens, idx, options, env, slf) => {
         const id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
-        const value = /^\d+$/.test(id) ? ` value="${id}"` : "";
-        return `<li id="fn${id}" class="footnote-item"${value}>`;
+        // Numeric labels keep their number; others (e.g. [^*], editorial notes
+        // added after publication) are shown with their own marker
+        const attrs = /^\d+$/.test(id) ? ` value="${id}"`
+            : ` data-label="${id}" style="--fn-marker: '${id} '"`;
+        return `<li id="fn${id}" class="footnote-item"${attrs}>`;
     };
 
     // Open external links in a new tab
@@ -76,6 +79,11 @@ module.exports = function(eleventyConfig) {
     // Citations (src/utils/citations.js)
     // ------------------------------------------------------------------------
     eleventyConfig.on("eleventy.before", () => { loadHelpers(); citations.reset(); });
+    // Linked Art chapter records get the chapter's full text from the built pages
+    eleventyConfig.on("eleventy.after", ({ dir }) => {
+        delete require.cache[require.resolve("./src/utils/linked-art-content.js")];
+        require("./src/utils/linked-art-content.js").addChapterText(dir.output);
+    });
     eleventyConfig.addFilter("references", text => citations.renderCitations(text));
     eleventyConfig.addFilter("bibliography", text => citations.bibliographyFor(text));
     eleventyConfig.addShortcode("fullBibliography", () =>
@@ -235,7 +243,7 @@ module.exports = function(eleventyConfig) {
             includes: "_includes",
             data: "_data"
         },
-        templateFormats: ["md", "njk", "html", "liquid"],
+        templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
         dataTemplateEngine: "njk",

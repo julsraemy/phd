@@ -30,6 +30,8 @@ PhD Thesis in Digital Humanities, completed as part of the Graduate School of So
 
 This page hosts a lightweight HTML version of my thesis, optimised for easier access and readability (_mindful of digital limitations and with some trade-offs_). The PDF version (e-dissertation) is available on the University of Basel's repository, edoc: https://hdl.handle.net/20.500.14716/148352 (also available via the DOI https://doi.org/10.5451/unibas-ep96807), as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
 
+For machines, the thesis and each of its chapters (full text included) are also available as [Linked Art](https://linked.art/) JSON-LD: https://phd.julsraemy.ch/linked-art/text/thesis.json.
+
 <div id="authors">
   <h3>Dr. Julien A. Raemy</h3>
   <p>University of Basel, Basel, Switzerland</p>

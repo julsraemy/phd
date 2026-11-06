@@ -44,4 +44,6 @@
     {%- for p in thesisToc.back %}{{ tocItem(p, "toc-back") }}{% endfor %}
   </ol>
   <p class="toc-pdf"><a href="https://hdl.handle.net/20.500.14716/148352" target="_blank" rel="noopener noreferrer">PDF version (edoc)</a></p>
+  {%- set laRecord = ("/linked-art/text/thesis/" + page.fileSlug + ".json") if chapter else "/linked-art/text/thesis.json" %}
+  <p class="toc-la"><a href="{{ laRecord }}" target="_blank" rel="noopener" type="application/ld+json" title="Linked Art record (LinguisticObject) of {{ 'this chapter' if chapter else 'the thesis' }}">Linked Art (JSON-LD)</a></p>
 </nav>
