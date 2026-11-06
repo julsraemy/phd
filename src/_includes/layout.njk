@@ -64,10 +64,7 @@
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": [
-            "https://schema.org",
-            { "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" } }
-        ],
+        "@context": "https://schema.org",
         "@type": {{ (schemaType or "WebPage") | dump | safe }},
         "@id": {{ (site.url + page.url) | dump | safe }},
         "name": {{ title | dump | safe }},
@@ -82,12 +79,24 @@
         },
         {% elif handle %}"identifier": ["https://hdl.handle.net/{{ handle }}"{% if doi %}, "https://doi.org/{{ doi }}"{% endif %}],
         "sameAs": "https://hdl.handle.net/{{ handle }}",
+        {% elif page.url != "/" %}"isPartOf": {
+            "@type": "WebSite",
+            "@id": "{{ site.url }}/",
+            "name": "LOUD for Cultural Heritage",
+            "url": "{{ site.url }}/"
+        },
         {% endif %}"author": {
             "@type": "Person",
             "@id": "https://julsraemy.ch/#person",
             "name": "Julien Antoine Raemy",
             "identifier": "https://orcid.org/0000-0002-4711-5759",
-            "seeAlso": "https://julsraemy.ch/me.json"
+            "sameAs": "https://orcid.org/0000-0002-4711-5759",
+            "url": "https://julsraemy.ch",
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "@id": "https://julsraemy.ch/me.json",
+                "encodingFormat": "application/ld+json"
+            }
         },
         {% if university %}"sourceOrganization": {
             "@type": "CollegeOrUniversity",
