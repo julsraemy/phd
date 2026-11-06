@@ -34,6 +34,18 @@
     {% if university %}
     <meta name="DC.publisher" content="{{ university }}">
     {% endif %}
+    {% if isThesisPart %}
+    <!-- Highwire Press tags (Zotero, Google Scholar): each part is a section of the thesis -->
+    <meta name="citation_title" content="{{ title }}">
+    <meta name="citation_author" content="Raemy, Julien Antoine">
+    <meta name="citation_publication_date" content="{{ date | replace('-', '/') }}">
+    <meta name="citation_book_title" content="Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability">
+    <meta name="citation_publisher" content="{{ university }}">
+    <meta name="citation_language" content="en">
+    <meta name="citation_abstract" content="{{ description }}">
+    <meta name="citation_public_url" content="{{ site.url }}{{ page.url }}">
+    {% for kw in keywords.split('; ') %}<meta name="citation_keywords" content="{{ kw }}">
+    {% endfor %}{% endif %}
 
     <!-- Title and CSS -->
     <title>{% if chapter %}{{ chapter }}. {{ title }} · Linked Open Usable Data for Cultural Heritage{% else %}{{ title }}{% endif %}</title>
