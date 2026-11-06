@@ -15,11 +15,13 @@
     <meta name="DC.type" content="{{ schemaType }}">
     <meta name="DC.identifier" content="{{ site.url }}{{ page.url }}">
     <!-- Persistent identifiers of the thesis: Handle (primary) and DOI -->
+    {% set isThesisPart = page.url.startsWith("/thesis/") %}
+    {% set pidMeta = "DC.relation.isPartOf" if isThesisPart else "DC.identifier" %}
     {% if handle %}
-    <meta name="DC.identifier" content="https://hdl.handle.net/{{ handle }}">
+    <meta name="{{ pidMeta }}" content="https://hdl.handle.net/{{ handle }}">
     {% endif %}
     {% if doi %}
-    <meta name="DC.identifier" content="https://doi.org/{{ doi }}">
+    <meta name="{{ pidMeta }}" content="https://doi.org/{{ doi }}">
     {% endif %}
     <meta name="DC.description" content="{{ description }}">
     <meta name="DC.subject" content="{{ keywords }}">
@@ -79,8 +81,8 @@
         "@id": {{ (site.url + page.url) | dump | safe }},
         "name": {{ title | dump | safe }},
         "url": {{ (site.url + page.url) | dump | safe }},
-        {% if chapter %}"position": {{ chapter }},
-        "isPartOf": {
+        {% if page.url.startsWith("/thesis/") %}{% if chapter %}"position": {{ chapter }},
+        {% endif %}"isPartOf": {
             "@type": "Thesis",
             "@id": "{{ site.url }}/thesis.html",
             "name": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",

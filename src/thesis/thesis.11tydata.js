@@ -2,7 +2,6 @@
 module.exports = {
     layout: "thesis.njk",
     permalink: "/thesis/{{ page.fileSlug }}.html",
-    schemaType: "Chapter",
     place: "Basel, Switzerland",
     university: "University of Basel",
     date: "2024-12-23",
@@ -11,6 +10,8 @@ module.exports = {
     changeFreq: "monthly",
     sitemapPriority: "0.8",
     eleventyComputed: {
+        // Chapters are schema:Chapter; front/back matter pages are generic parts
+        schemaType: data => data.chapter ? "Chapter" : "CreativeWork",
         description: data => `${data.chapter ? `Chapter ${data.chapter}: ` : ""}${data.title} – from the PhD thesis "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability" by Julien A. Raemy (University of Basel, 2024).`
     }
 };
