@@ -13,9 +13,9 @@ permalink: "/research.html"
 
 The main focus of this four-year endeavour was, of course, the completion of the [dissertation](thesis.html), submitted as a monograph. In addition, contributions were made through the publication of articles in peer-reviewed journals and conference proceedings, as well as writing a book chapter. Further essential activities included developing scripts for data collection and analysis, building data pipeline workflows, and designing and implementing data models, with a particular emphasis on using [Linked Open Usable Data](loud.html) (LOUD) standards such as Linked Art, a metadata application profile for describing cultural heritage.
 
-_The research outcomes related to the PhD are organised alphabetically by category, with the most recent ones listed first within each category._
-
 A [CSL-JSON version](/data/research.json) of all the references on this page is also available. For my research beyond the scope of the PhD thesis, see my full list of [publications](https://julsraemy.ch/publications/).
+
+The research outcomes related to the PhD are organised alphabetically by category, with the most recent ones listed first within each category.
 
 ## Book Chapter
 
