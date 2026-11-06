@@ -1,0 +1,56 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://phd.julsraemy.ch/linked-art/person/julsraemy.json",
+  "type": "Person",
+  "_label": "Julien Antoine Raemy",
+  "identified_by": [
+    {
+      "type": "Name",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ],
+      "content": "Julien Antoine Raemy"
+    }
+  ],
+  "equivalent": [
+    {
+      "id": "https://orcid.org/0000-0002-4711-5759",
+      "type": "Person",
+      "_label": "Julien Antoine Raemy"
+    },
+    {
+      "id": "https://julsraemy.ch/#person",
+      "type": "Person",
+      "_label": "Julien Antoine Raemy"
+    }
+  ],
+  "subject_of": [
+    {
+      "type": "LinguisticObject",
+      "digitally_carried_by": [
+        {
+          "type": "DigitalObject",
+          "_label": "Personal website",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300264578",
+              "type": "Type",
+              "_label": "Web Page"
+            }
+          ],
+          "format": "text/html",
+          "access_point": [
+            {
+              "id": "https://julsraemy.ch",
+              "type": "DigitalObject"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

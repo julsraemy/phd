@@ -1,0 +1,192 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://phd.julsraemy.ch/linked-art/text/thesis.json",
+  "type": "LinguisticObject",
+  "_label": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028028",
+      "type": "Type",
+      "_label": "Thesis",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ],
+      "content": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+    },
+    {
+      "type": "Identifier",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417432",
+          "type": "Type",
+          "_label": "Digital Object Identifier"
+        }
+      ],
+      "content": "10.5451/unibas-ep96807"
+    },
+    {
+      "type": "Identifier",
+      "_label": "Handle",
+      "content": "20.500.14716/148352"
+    }
+  ],
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300026032",
+          "type": "Type",
+          "_label": "Abstract",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ],
+      "content": "Digital technologies have fundamentally transformed how Cultural Heritage (CH) collections are accessed and engaged with. Linked Open Usable Data (LOUD) specifications, including the International Image Interoperability Framework (IIIF) Presentation API 3.0, Linked Art, and the Web Annotation Data Model (WADM), have emerged as web standards to facilitate the description and dissemination of these valuable resources. Despite the widespread adoption of IIIF, implementing LOUD specifications, particularly in combination, remains challenging. This is especially evident in the development and assessment of infrastructures, or sites of assemblage, that support these standards.\nThis research is guided by two perspectives: community practices and semantic interoperability. The first perspective assesses how organizations, individuals, and apparatuses engage with and contribute to the consensus-making processes surrounding LOUD. By examining these practices, the social fabrics of the LOUD ecosystem can be better understood. The second perspective focuses on making data meaningful to machines in a standardized, interoperable manner that promotes the exchange of well-formed information. This research is grounded in the SNSF-funded project, *Participatory Knowledge Practices in Analogue and Digital Image Archives* (PIA) (2021–2025), which aims to develop a citizen science platform for three photographic collections from the Cultural Anthropology Switzerland (CAS) archives. Actor-Network Theory (ANT) forms the theoretical foundation, aiming to describe the collaborative structures of the LOUD ecosystem and emphasize the role of non-human actors.\nBeyond its implementation within the PIA project, this research includes an analysis of the social dynamics within the IIIF and Linked Art communities and an investigation of Yale's Collections Discovery platform, LUX. The research identifies socio-technical requirements for developing specifications aligned with LOUD principles. It also examines how the implementation of LOUD standards in PIA highlights their potential benefits and limitations in facilitating data reuse and broader participation. Additionally, it explores Yale University's large-scale deployment of LOUD standards, emphasizing the importance of ensuring consistency between Linked Art and IIIF resources within the LUX platform for the CH domain.\nThe core methodology of this thesis is an actor- and practice-centered inquiry, focusing on a detailed examination of specific cosmologies within LOUD-driven communities, PIA, and LUX. This micro-perspective approach provides rich empirical evidence to unravel the intricate web of cultural processes and constellations in these contexts.\nKey empirical findings indicate that LOUD enhances the discoverability and integration of data in CH, requiring community-driven consensus on model interoperability. However, significant challenges include engaging marginalized groups, sustaining long-term participation, and balancing technological and social factors. Strategic use of technology and the capture of digital materiality are critical, but LOUD also poses challenges related to resource investment, data consistency, and the broader implementation of complex patterns.\nLOUD should lead efforts to improve the accessibility and usability of CH data. The community-driven methodologies of IIIF and Linked Art inherently foster collaboration and transparency, making these standards essential tools in evolving data management practices. Even for institutions and projects that do not adopt these specifications, the socio-technical practices of LOUD offer vital insights into effective digital stewardship and strategies for community engagement.",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388277",
+          "type": "Language",
+          "_label": "English"
+        }
+      ]
+    }
+  ],
+  "equivalent": [
+    {
+      "id": "https://hdl.handle.net/20.500.14716/148352",
+      "type": "LinguisticObject",
+      "_label": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+    },
+    {
+      "id": "https://doi.org/10.5451/unibas-ep96807",
+      "type": "LinguisticObject",
+      "_label": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+    }
+  ],
+  "language": [
+    {
+      "id": "http://vocab.getty.edu/aat/300388277",
+      "type": "Language",
+      "_label": "English"
+    }
+  ],
+  "created_by": {
+    "type": "Creation",
+    "carried_out_by": [
+      {
+        "id": "https://phd.julsraemy.ch/linked-art/person/julsraemy.json",
+        "type": "Person",
+        "_label": "Julien Antoine Raemy"
+      }
+    ],
+    "timespan": {
+      "type": "TimeSpan",
+      "_label": "2021–2024",
+      "begin_of_the_begin": "2021-02-01T00:00:00Z",
+      "end_of_the_end": "2024-12-23T23:59:59Z"
+    }
+  },
+  "used_for": [
+    {
+      "type": "Activity",
+      "_label": "Publication of the thesis",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054686",
+          "type": "Type",
+          "_label": "Publishing"
+        }
+      ],
+      "timespan": {
+        "type": "TimeSpan",
+        "_label": "2024-12-23",
+        "begin_of_the_begin": "2024-12-23T00:00:00Z",
+        "end_of_the_end": "2024-12-23T23:59:59Z"
+      },
+      "took_place_at": [
+        {
+          "id": "http://www.wikidata.org/entity/Q78",
+          "type": "Place",
+          "_label": "Basel"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "id": "https://ror.org/02s6k3f65",
+          "type": "Group",
+          "_label": "University of Basel"
+        }
+      ]
+    }
+  ],
+  "subject_of": [
+    {
+      "type": "LinguisticObject",
+      "digitally_carried_by": [
+        {
+          "type": "DigitalObject",
+          "_label": "HTML version",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300264578",
+              "type": "Type",
+              "_label": "Web Page"
+            }
+          ],
+          "format": "text/html",
+          "access_point": [
+            {
+              "id": "https://phd.julsraemy.ch/thesis.html",
+              "type": "DigitalObject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "digitally_carried_by": [
+        {
+          "type": "DigitalObject",
+          "_label": "PDF version (edoc, University of Basel)",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300264578",
+              "type": "Type",
+              "_label": "Web Page"
+            }
+          ],
+          "format": "text/html",
+          "access_point": [
+            {
+              "id": "https://hdl.handle.net/20.500.14716/148352",
+              "type": "DigitalObject"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
