@@ -31,6 +31,17 @@ Run `npm run build` at least once before `npm start`, so that the search index e
 | Layouts and sidebar | `src/_includes/` |
 | Build logic (citations, acronyms, ToC, viewers…) | `.eleventy.js`, `src/utils/`, `src/_data/thesisToc.js` |
 | Styles and scripts | `assets/stylesheets/style.css`, `src/js/` |
+| Linked Art records (see below) | `src/linked-art.11ty.js`, `src/utils/linked-art-content.js` |
+
+## Linked Art
+
+The thesis and its chapters are also published as [Linked Art](https://linked.art/) JSON-LD, following the Linked Art API 1.0:
+
+- `/linked-art/text/thesis.json`: the thesis (`LinguisticObject`, classified as Thesis), with its abstract, DOI, Handle and publication;
+- `/linked-art/text/thesis/<chapter>.json`: each chapter (`part_of` the thesis), with its full text as HTML in `content`;
+- `/linked-art/person/julsraemy.json`: the author.
+
+The records are generated at build time from the same sources as the HTML pages: their structure is defined in `src/linked-art.11ty.js` (add properties or AAT terms there), and the chapter text is copied from the built pages by `src/utils/linked-art-content.js`. Each thesis page links to its record (“Linked Art (JSON-LD)” in the sidebar and a `<link rel="alternate">` in its head).
 
 ## Writing conventions
 
