@@ -115,4 +115,4 @@ Raemy, J. A. (2023). _Characterising the IIIF and Linked Art Communities: Survey
 
 ## Thesis
 
-Raemy, J. A. (2024). _Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability_ [Doctoral Thesis, University of Basel]. https://doi.org/10.5451/unibas-ep96807
+Raemy, J. A. (2024). _Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability_ [Doctoral Thesis, University of Basel]. https://hdl.handle.net/20.500.14716/148352

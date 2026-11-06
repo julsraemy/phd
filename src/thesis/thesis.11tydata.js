@@ -6,6 +6,7 @@ module.exports = {
     place: "Basel, Switzerland",
     university: "University of Basel",
     date: "2024-12-23",
+    handle: "20.500.14716/148352",
     doi: "10.5451/unibas-ep96807",
     changeFreq: "monthly",
     sitemapPriority: "0.8",

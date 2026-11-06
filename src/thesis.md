@@ -18,6 +18,7 @@ schemaType: "Thesis"
 place: "Basel, Switzerland"
 university: "University of Basel"
 date: "2024-12-23"
+handle: "20.500.14716/148352"
 doi: "10.5451/unibas-ep96807"
 permalink: "/thesis.html"
 keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model"
@@ -27,7 +28,7 @@ keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Sw
 
 PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' (G3S) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)).
 
-This page hosts a lightweight HTML version of my thesis, optimised for easier access and readability (_mindful of digital limitations and with some trade-offs_). The PDF version (e-dissertation) is available on the University of Basel's repository: https://doi.org/10.5451/unibas-ep96807 as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
+This page hosts a lightweight HTML version of my thesis, optimised for easier access and readability (_mindful of digital limitations and with some trade-offs_). The PDF version (e-dissertation) is available on the University of Basel's repository, edoc: https://hdl.handle.net/20.500.14716/148352 (also available via the DOI https://doi.org/10.5451/unibas-ep96807), as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
 
 <div id="authors">
   <h3>Dr. Julien A. Raemy</h3>
