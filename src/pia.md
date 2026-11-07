@@ -11,7 +11,7 @@ permalink: "/pia.html"
 
 # Participatory Knowledge Practices in Analogue and Digital Image Archives (PIA)
 
-[Participatory Knowledge Practices in Analogue and Digital Image Archives](https://about.participatory-archives.ch) (PIA) is a project funded by the Swiss National Science Foundation (SNSF) [under the Sinergia funding scheme](https://data.snf.ch/grants/grant/193788) from February 2021 to January 2025.
+[Participatory Knowledge Practices in Analogue and Digital Image Archives](https://about.participatory-archives.ch) (PIA) is a project funded by the Swiss National Science Foundation (SNSF) [under the Sinergia funding scheme](https://data.snf.ch/grants/grant/193788) from February 2021 to January 2025 (and eventually extended to August 2025).
 
 The PIA project wanted to bridge the realms of data and tangible objects through an interdisciplinary approach, bringing together cultural anthropology, technology and design to examine both analogue and digital archives. It explored participatory knowledge practices within image archives, encourages collaboration across disciplines, and develops digital tools to help contextualise and connect images. This initiative aimed to improve the preservation and sharing of knowledge by inviting both the scholarly community and the public to actively participate in understanding its history and current practices. Through workshops and user interviews, the project identified new needs in digital and process-oriented knowledge creation.
 
