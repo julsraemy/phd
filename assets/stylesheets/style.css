@@ -674,6 +674,20 @@ footer {
     min-width: 0;
 }
 
+/* Large screens ---------------------------------------------------------------
+   Above 1440px the text grows with the viewport (20px → 28px at 2560px) and the
+   text column takes the width of the screen (the thesis column fills what the
+   sidebar leaves). Phones, tablets and laptops are not affected. */
+@media (min-width: 1440px) {
+    body { font-size: clamp(1.25rem, 0.5rem + 0.78vw, 1.75rem); }
+    main { max-width: min(92vw, 90em); }
+    .thesis-shell {
+        max-width: max(82rem, 86vw);
+        grid-template-columns: 15em minmax(0, 1fr);
+    }
+    .thesis-content { max-width: none; }
+}
+
 .thesis-content :is(h1, h2, h3, h4, h5, figure, li)[id] {
     scroll-margin-top: 1.5rem;
 }
