@@ -686,6 +686,15 @@ footer {
         grid-template-columns: 15em minmax(0, 1fr);
     }
     .thesis-content { max-width: none; }
+    /* Images are sized in % of their figure (inline styles): cap the figure
+       (≈ 1250px) so images keep a reasonable size and their proportions
+       instead of growing with the column (tables and code are not capped) */
+    figure:has(img):not(.appendix-figure) {
+        max-width: 78rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Appendix B shows enlarged figures: they fill the column */
 }
 
 .thesis-content :is(h1, h2, h3, h4, h5, figure, li)[id] {
