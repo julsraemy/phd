@@ -87,6 +87,28 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("references", text => citations.renderCitations(text));
     eleventyConfig.addFilter("bibliography", text => citations.bibliographyFor(text));
     eleventyConfig.addShortcode("citationReferences", () => citations.citationReferences());
+    // COinS for thesis parts (chapters, front and back matter): Zotero saves them
+    // as a Book Section of the thesis; Google Scholar ignores COinS
+    eleventyConfig.addShortcode("thesisPartCoins", function (title, url, description, keywords) {
+        const p = new URLSearchParams();
+        p.append("ctx_ver", "Z39.88-2004");
+        p.append("rft_val_fmt", "info:ofi/fmt:kev:mtx:book");
+        p.append("rft.genre", "bookitem");
+        p.append("rft.atitle", title);
+        p.append("rft.btitle", "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability");
+        p.append("rft.aulast", "Raemy");
+        p.append("rft.aufirst", "Julien Antoine");
+        p.append("rft.date", "2024-12-23");
+        p.append("rft.pub", "University of Basel");
+        p.append("rft.place", "Basel");
+        p.append("rft.language", "en");
+        p.append("rft.rights", "CC BY 4.0");
+        p.append("rft.description", description);
+        for (const kw of String(keywords || "").split("; ").filter(Boolean)) p.append("rft.subject", kw);
+        p.append("rft_id", url);
+        const title_ = p.toString().replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+        return `<span class="Z3988" title="${title_}"></span>`;
+    });
     eleventyConfig.addShortcode("fullBibliography", () =>
         `<div class="bibliography-full">${citations.fullBibliography().replace(/\n/g, "")}</div>`);
 
