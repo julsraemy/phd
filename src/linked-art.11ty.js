@@ -14,6 +14,7 @@ const CONTEXT = "https://linked.art/ns/v1/linked-art.json";
 const HANDLE = "https://hdl.handle.net/20.500.14716/148352";
 const DOI = "10.5451/unibas-ep96807";
 const PUBLISHED = "2024-12-23";
+const URN = "urn:nbn:ch:bel-bau-diss155487";
 
 const THESIS_ID = `${BASE}/text/thesis.json`;
 const PERSON_ID = `${BASE}/person/julsraemy.json`;
@@ -77,9 +78,10 @@ function thesisRecord(abstract) {
             name(title),
             { type: "Identifier", classified_as: [DOI_TYPE], content: DOI },
             { type: "Identifier", _label: "Handle", content: HANDLE.replace("https://hdl.handle.net/", "") },
+            { type: "Identifier", _label: "URN:NBN", content: URN },
         ],
         referred_to_by: abstract ? [{ type: "LinguisticObject", classified_as: [ABSTRACT], content: abstract, language: [ENGLISH] }] : undefined,
-        equivalent: [ref(HANDLE, "LinguisticObject", title), ref(`https://doi.org/${DOI}`, "LinguisticObject", title)],
+        equivalent: [ref(HANDLE, "LinguisticObject", title), ref(`https://doi.org/${DOI}`, "LinguisticObject", title), ref(`https://nbn-resolving.org/${URN}`, "LinguisticObject", title)],
         language: [ENGLISH],
         created_by: {
             type: "Creation",

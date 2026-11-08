@@ -7,6 +7,7 @@ module.exports = {
     date: "2024-12-23",
     handle: "20.500.14716/148352",
     doi: "10.5451/unibas-ep96807",
+    urn: "urn:nbn:ch:bel-bau-diss155487",
     // Same keywords as the thesis (src/thesis.md), for the citation metadata
     keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model",
     changeFreq: "monthly",

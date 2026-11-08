@@ -14,7 +14,7 @@
     <meta name="DC.date" content="{{ date }}">
     <meta name="DC.type" content="{{ schemaType }}">
     <meta name="DC.identifier" content="{{ site.url }}{{ page.url }}">
-    <!-- Persistent identifiers of the thesis: Handle (primary) and DOI -->
+    <!-- Persistent identifiers of the thesis: Handle (primary), DOI and URN:NBN -->
     {% set isThesisPart = page.url.startsWith("/thesis/") %}
     {% set pidMeta = "DC.relation.isPartOf" if isThesisPart else "DC.identifier" %}
     {% if handle %}
@@ -22,6 +22,9 @@
     {% endif %}
     {% if doi %}
     <meta name="{{ pidMeta }}" content="https://doi.org/{{ doi }}">
+    {% endif %}
+    {% if urn %}
+    <meta name="{{ pidMeta }}" content="{{ urn }}">
     {% endif %}
     <meta name="DC.description" content="{{ description }}">
     <meta name="DC.subject" content="{{ keywords }}">
@@ -91,10 +94,10 @@
             "@type": "Thesis",
             "@id": "{{ site.url }}/thesis.html",
             "name": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability",
-            "identifier": ["https://hdl.handle.net/20.500.14716/148352", "https://doi.org/10.5451/unibas-ep96807"],
+            "identifier": ["https://hdl.handle.net/20.500.14716/148352", "https://doi.org/10.5451/unibas-ep96807", "urn:nbn:ch:bel-bau-diss155487"],
             "sameAs": "https://hdl.handle.net/20.500.14716/148352"
         },
-        {% elif handle %}"identifier": ["https://hdl.handle.net/{{ handle }}"{% if doi %}, "https://doi.org/{{ doi }}"{% endif %}],
+        {% elif handle %}"identifier": ["https://hdl.handle.net/{{ handle }}"{% if doi %}, "https://doi.org/{{ doi }}"{% endif %}{% if urn %}, {{ urn | dump | safe }}{% endif %}],
         "sameAs": "https://hdl.handle.net/{{ handle }}",
         {% elif page.url != "/" %}"isPartOf": {
             "@type": "WebSite",

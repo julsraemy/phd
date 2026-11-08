@@ -20,13 +20,14 @@ university: "University of Basel"
 date: "2024-12-23"
 handle: "20.500.14716/148352"
 doi: "10.5451/unibas-ep96807"
+urn: "urn:nbn:ch:bel-bau-diss155487"
 permalink: "/thesis.html"
 keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model"
 ---
 
 # Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability
 
-PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' (G3S) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)).
+PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences' (G3S) doctoral programme. It was successfully defended on 18 November 2024 ([slides](https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html)) and published on 23 December 2024.
 
 This page hosts a lightweight HTML version of my thesis, optimised for easier access and readability (_mindful of digital limitations and with some trade-offs_). The PDF version (e-dissertation) is available on the University of Basel's repository, edoc: https://hdl.handle.net/20.500.14716/148352 (also available via the DOI https://doi.org/10.5451/unibas-ep96807), as well as on the Swiss National Library's catalogue: https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487.  
 
@@ -35,6 +36,7 @@ For machines, the thesis and each of its chapters (full text included) are also 
 <div id="authors">
   <h3>Dr. Julien A. Raemy</h3>
   <p>University of Basel, Basel, Switzerland</p>
+  <p class="thesis-year">2024</p>
   <p>
     <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
       <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
