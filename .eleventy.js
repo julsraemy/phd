@@ -86,6 +86,7 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.addFilter("references", text => citations.renderCitations(text));
     eleventyConfig.addFilter("bibliography", text => citations.bibliographyFor(text));
+    eleventyConfig.addShortcode("citationReferences", () => citations.citationReferences());
     eleventyConfig.addShortcode("fullBibliography", () =>
         `<div class="bibliography-full">${citations.fullBibliography().replace(/\n/g, "")}</div>`);
 

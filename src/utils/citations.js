@@ -175,6 +175,44 @@ function fullBibliography() {
     return order.map(id => html[id]).join("\n");
 }
 
+// Google Scholar: one <meta name="citation_reference"> per bibliography entry,
+// in Highwire Press "field=value; field=value" form.
+// See https://scholar.google.com/intl/en/scholar/inclusion.html#indexing
+function citationReferences() {
+    const { order } = init();
+    const clean = v => String(v).replace(/<[^>]+>/g, "").replace(/;/g, ",").replace(/\s+/g, " ").trim();
+    const name = p => p.literal || [p.family, p.given].filter(Boolean).join(", ");
+    const CONTAINER = {
+        "article-journal": "citation_journal_title",
+        "chapter": "citation_inbook_title",
+        "paper-conference": "citation_conference_title",
+    };
+    return order.map(id => {
+        const e = LIBRARY[id];
+        const f = [];
+        const add = (k, v) => { if (v !== undefined && v !== null && String(v).trim()) f.push(`${k}=${clean(v)}`); };
+        add("citation_title", e.title);
+        for (const p of (e.author && e.author.length ? e.author : e.editor || [])) add("citation_author", name(p));
+        const parts = e.issued && e.issued["date-parts"];
+        const year = parts && parts[0] && parts[0][0] ? parts[0][0] : e.issued && (e.issued.literal || e.issued.raw);
+        add("citation_publication_date", year);
+        if (CONTAINER[e.type]) add(CONTAINER[e.type], e["container-title"]);
+        if (e.type === "thesis") add("citation_dissertation_institution", e.publisher);
+        else if (e.type === "report") add("citation_technical_report_institution", e.publisher);
+        else add("citation_publisher", e.publisher);
+        add("citation_volume", e.volume);
+        add("citation_issue", e.issue);
+        if (e.page) {
+            const [first, last] = String(e.page).split(/[-–]/);
+            add("citation_firstpage", first);
+            add("citation_lastpage", last);
+        }
+        add("citation_isbn", e.ISBN);
+        add("citation_doi", e.DOI);
+        return `<meta name="citation_reference" content="${escapeAttr(f.join("; "))}">`;
+    }).join("\n    ");
+}
+
 function reset() { state = null; }
 
-module.exports = { renderCitations, bibliographyFor, fullBibliography, citedKeysIn, reset, BIB_PAGE };
+module.exports = { renderCitations, bibliographyFor, fullBibliography, citationReferences, citedKeysIn, reset, BIB_PAGE };
