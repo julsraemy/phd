@@ -680,9 +680,9 @@ footer {
    sidebar leaves). Phones, tablets and laptops are not affected. */
 @media (min-width: 1440px) {
     body { font-size: clamp(1.25rem, 0.5rem + 0.78vw, 1.75rem); }
-    main { max-width: min(92vw, 90em); }
+    main { max-width: min(89vw, 90em); }
     .thesis-shell {
-        max-width: max(82rem, 86vw);
+        max-width: max(82rem, 83vw);
         grid-template-columns: 15em minmax(0, 1fr);
     }
     .thesis-content { max-width: none; }
