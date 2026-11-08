@@ -44,4 +44,17 @@
     document.querySelectorAll('main a[href^="http"]').forEach(a => {
         if (a.textContent.includes("://") || a.textContent.trim().startsWith("www.")) a.classList.add("bare-url");
     });
+
+    // --- Back to top (shown once the page has been scrolled down) -------------
+    const toTop = document.querySelector(".back-to-top");
+    if (toTop) {
+        const toggleTop = () => { toTop.hidden = window.scrollY < 600; };
+        window.addEventListener("scroll", toggleTop, { passive: true });
+        toTop.addEventListener("click", () => {
+            const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
+            document.getElementById("content")?.focus({ preventScroll: true });
+        });
+        toggleTop();
+    }
 })();
