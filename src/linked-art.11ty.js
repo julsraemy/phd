@@ -40,6 +40,14 @@ const PUBLISHING = aat("300054686", "Publishing");
 const WEB_PAGE = aat("300264578", "Web Page");
 const ENGLISH = { id: "http://vocab.getty.edu/aat/300388277", type: "Language", _label: "English" };
 
+// Rights pattern: the text is subject_to a Right classified by the licence URI
+const CC_BY = {
+    type: "Right",
+    _label: "Licence: CC BY 4.0",
+    classified_as: [{ id: "https://creativecommons.org/licenses/by/4.0/", type: "Type", _label: "CC BY 4.0" }],
+    identified_by: [{ type: "Name", classified_as: [aat("300404669", "Display Title")], content: "Creative Commons Attribution 4.0 International (CC BY 4.0)" }],
+};
+
 // --- Shared structures ----------------------------------------------------------
 const name = (content, type = PRIMARY_NAME) => ({ type: "Name", classified_as: [type], content });
 const ref = (id, type, label) => ({ id, type, _label: label });
@@ -83,6 +91,7 @@ function thesisRecord(abstract) {
         referred_to_by: abstract ? [{ type: "LinguisticObject", classified_as: [ABSTRACT], content: abstract, language: [ENGLISH] }] : undefined,
         equivalent: [ref(HANDLE, "LinguisticObject", title), ref(`https://doi.org/${DOI}`, "LinguisticObject", title), ref(`https://nbn-resolving.org/${URN}`, "LinguisticObject", title)],
         language: [ENGLISH],
+        subject_to: [CC_BY],
         created_by: {
             type: "Creation",
             carried_out_by: [PERSON_REF],
@@ -117,6 +126,7 @@ function chapterRecord(c) {
             { type: "Identifier", classified_as: [SORT_VALUE], content: String(c.num).padStart(2, "0") },
         ],
         language: [ENGLISH],
+        subject_to: [CC_BY],
         part_of: [ref(THESIS_ID, "LinguisticObject", "Linked Open Usable Data for Cultural Heritage")],
         created_by: { type: "Creation", carried_out_by: [PERSON_REF] },
         subject_of: [webPage(`${SITE}${c.url}`, `HTML version of chapter ${c.num}`)],

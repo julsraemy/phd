@@ -36,7 +36,7 @@ For machines, the thesis and each of its chapters (full text included) are also 
 <div id="authors">
   <h3>Dr. Julien A. Raemy</h3>
   <p>University of Basel, Basel, Switzerland</p>
-  <p class="thesis-year">2024</p>
+  <p class="thesis-year">2024 · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a></p>
   <p>
     <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
       <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />
