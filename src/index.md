@@ -20,7 +20,7 @@ Explore the [HTML version of my thesis](thesis.html) alongside the [research out
 💻 Research & Writing: February 2021 - July 2024 <br/>
 📄 Dissertation Submitted: 5 August 2024  <br/>
 🎤 Oral Examination: 18 November 2024  <br/>
-🎓  Publication: 23 December 2024 | [HTML](thesis.html) / [PDF](https://hdl.handle.net/20.500.14716/148352)
+🎓 Publication: 23 December 2024, in [HTML](thesis.html) on this site and as a [PDF](https://hdl.handle.net/20.500.14716/148352) on edoc, the University of Basel's repository
 
 ## Context
 
