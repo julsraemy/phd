@@ -818,6 +818,31 @@ footer {
 }
 .toc-la { text-indent: 0; margin: 0.3em 0 0; }
 
+/* Back to top --------------------------------------------------------------- */
+.back-to-top {
+    position: fixed;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    z-index: 1000;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--link);
+    box-shadow: 0 2px 8px var(--shadow-strong);
+    color: #fff;
+    font-family: "CMU Bright", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.back-to-top:hover,
+.back-to-top:focus-visible { filter: brightness(0.9); transform: translateY(-2px); }
+.back-to-top[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { .back-to-top { transition: none; } }
+
 /* Mobile drawer -------------------------------------------------------------- */
 .toc-toggle,
 .toc-backdrop { display: none; }
@@ -993,7 +1018,7 @@ a.cite:focus-visible {
     border: 1px solid var(--rule);
     border-radius: 6px;
     box-shadow: 0 6px 20px var(--shadow-strong);
-    font-size: 0.8em;
+    font-size: max(1rem, 0.65em); /* 16px on most screens, ≈18px at 2560px */
     line-height: 1.4;
     text-align: left;
     hyphens: none;
@@ -1325,7 +1350,7 @@ body > nav ul li a[aria-current="page"] {
 
     body > nav, #controls, .skip-link, .thesis-sidebar, .toc-toggle, .toc-backdrop,
     .thesis-pager, .thesis-breadcrumb, .cite-preview, .toc-search, footer,
-    .viewer-load, .footnote-backref { display: none !important; }
+    .viewer-load, .footnote-backref, .back-to-top { display: none !important; }
 
     main, .thesis-page main, .thesis-content {
         max-width: none;
