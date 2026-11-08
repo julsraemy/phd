@@ -44,6 +44,11 @@
       "type": "Identifier",
       "_label": "Handle",
       "content": "20.500.14716/148352"
+    },
+    {
+      "type": "Identifier",
+      "_label": "URN:NBN",
+      "content": "urn:nbn:ch:bel-bau-diss155487"
     }
   ],
   "referred_to_by": [
@@ -81,6 +86,11 @@
     },
     {
       "id": "https://doi.org/10.5451/unibas-ep96807",
+      "type": "LinguisticObject",
+      "_label": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
+    },
+    {
+      "id": "https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487",
       "type": "LinguisticObject",
       "_label": "Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability"
     }
