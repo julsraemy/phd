@@ -126,8 +126,13 @@
             "@type": "CollegeOrUniversity",
             "@id": "https://ror.org/02s6k3f65",
             "name": {{ university | dump | safe }},
-            "url": "https://www.unibas.ch/"
+            "url": "https://www.unibas.ch/"{% if programme %},
+            "department": {
+                "@type": "EducationalOrganization",
+                "name": {{ programme | dump | safe }}
+            }{% endif %}
         },
+        {% endif %}{% if degree %}"inSupportOf": {{ degree | dump | safe }},
         {% endif %}"datePublished": {{ (page.date.toISOString() | truncate(10, true, "")) | dump | safe }},
         "description": {{ (description or "") | dump | safe }},
         {% if keywords %}"keywords": {{ keywords | dump | safe }},
