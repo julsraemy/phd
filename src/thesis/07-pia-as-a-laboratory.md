@@ -138,7 +138,7 @@ As shown in [Table 7.1](#tab:images-basic-metadata), approximately 40% of the im
 <td>2,377</td>
 <td>3.97%</td>
 </tr>
-<tr style="border-top: 2px solid #000; font-weight: bold; background-color: #f5f5f5;">
+<tr class="row-total">
 <td>Total images count</td>
 <td>59,893</td>
 <td>100.00%</td>

@@ -1578,7 +1578,7 @@ In Google Scholar, 60 results were returned, with 41 deemed relevant. Semantic S
 <td>4</td>
 <td>2</td>
 </tr>
-<tr style="border-top: 2px solid #000; font-weight: bold; background-color: #f5f5f5;">
+<tr class="row-total">
 <td>Total</td>
 <td>89</td>
 <td>48</td>
@@ -1771,7 +1771,7 @@ As of mid-November 2023, the systematic review yielded a total of 46 results, co
 <td>Google Scholar</td>
 <td>&alpha;<sub>1</sub></td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@raemy_applying_2021]</td>
 <td>Conference Paper</td>
 <td>eng</td>
@@ -1820,7 +1820,7 @@ As of mid-November 2023, the systematic review yielded a total of 46 results, co
 <td>Google Scholar</td>
 <td>&alpha;<sub>4</sub></td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@raemy_ameliorer_2022]</td>
 <td>Conference Paper</td>
 <td>fre</td>
@@ -1848,14 +1848,14 @@ As of mid-November 2023, the systematic review yielded a total of 46 results, co
 <td>Google Scholar</td>
 <td>&alpha;<sub>1</sub></td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>@cornut_annotations_2023</td>
 <td>Journal Article</td>
 <td>eng</td>
 <td>Google Scholar</td>
 <td>&alpha;<sub>3</sub>, &beta;</td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@felsing_community_2023]</td>
 <td>Conference Paper</td>
 <td>eng</td>
@@ -1869,7 +1869,7 @@ As of mid-November 2023, the systematic review yielded a total of 46 results, co
 <td>Zenodo</td>
 <td>&alpha;<sub>1</sub></td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@manz_recommended_2023]</td>
 <td>Conference Paper</td>
 <td>eng</td>
@@ -1883,28 +1883,28 @@ As of mid-November 2023, the systematic review yielded a total of 46 results, co
 <td>Google Scholar</td>
 <td>&alpha;<sub>3</sub></td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@raemy_characterising_2023]</td>
 <td>Report</td>
 <td>eng</td>
 <td>Google Scholar</td>
 <td>&alpha;<sub>2</sub>, &beta;</td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@raemy_elaboration_2023]</td>
 <td>Conference Paper</td>
 <td>fre</td>
 <td>Google Scholar</td>
 <td>&alpha;<sub>1</sub>, &beta;</td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@raemy_enabling_2023]</td>
 <td>Conference Paper</td>
 <td>eng</td>
 <td>Google Scholar</td>
 <td>&alpha;<sub>1</sub>, &beta;</td>
 </tr>
-<tr style="background-color: #FFFFCC;">
+<tr class="row-highlight">
 <td>[@raemy_analysis_2023]</td>
 <td>Pre-print</td>
 <td>eng</td>
