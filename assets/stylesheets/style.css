@@ -1462,6 +1462,8 @@ mark {
 .thesis-meta dd {
     grid-column: 2;
     margin: 0;
+    text-align: left;
+    hyphens: none;
 }
 
 .thesis-meta .orcid {
@@ -1478,6 +1480,8 @@ mark {
     .thesis-meta { grid-template-columns: 1fr; gap: 0; }
     .thesis-meta dt, .thesis-meta dd { grid-column: 1; }
     .thesis-meta dt { text-align: left; padding-top: 0.6em; }
+    .thesis-meta div:first-child dt { padding-top: 0; }
+    .thesis-meta dd + dd { margin-top: 0.2em; }
 }
 
 /* On the thesis landing page the ids sit on the headings themselves,
