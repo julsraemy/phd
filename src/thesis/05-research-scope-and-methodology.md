@@ -8,7 +8,7 @@ chapterId: "cha:scope"
 
 This chapter delineates the Research Scope and Methodology, laying the groundwork for the empirical exploration within this thesis.
 
-Structured into five key sections, this chapter outlines the methodological framework adopted to explore the purposes of the research and specifies the systematic approach used to consider the outcomes. It initiates with the presentation of research questions in [Section 5.1](#sec:rq) and hypotheses in [Section 5.2](#sec:hyp) that are crucial for evaluating LOUD within the CH context. Following this, [Section 5.3](#sec:obj) details the objectives aimed to be achieved based on the research findings. The methodology, elaborated in [Section 5.4](#sec:methodo), encompasses the research methods, data creation, collection, curation, modelling, analysis, alongside considerations of limitations and ethics. The final section, [5.5](#sec:contribution-dh), defines some of the scholarly implications of the thesis, highlighting its substantial contributions to DH and the broader field of the humanities. This discourse encapsulates the implications of the research, affirming its value and positioning within the scholarly community.
+Structured into five key sections, this chapter outlines the methodological framework adopted to explore the purposes of the research and specifies the systematic approach used to consider the outcomes. It initiates with the presentation of research questions in [Section 5.1](#sec:rq) and hypotheses in [Section 5.2](#sec:hyp) that are crucial for evaluating LOUD within the CH context. Following this, [Section 5.3](#sec:obj) details the objectives aimed to be achieved based on the research findings. The methodology, elaborated in [Section 5.4](#sec:methodo), encompasses the research methods, data creation, collection, curation, modelling, analysis, alongside considerations of limitations and ethics. The final section, [Section 5.5](#sec:contribution-dh), defines some of the scholarly implications of the thesis, highlighting its substantial contributions to DH and the broader field of the humanities. This discourse encapsulates the implications of the research, affirming its value and positioning within the scholarly community.
 
 Throughout this thesis, the two pivotal perspectives, *Community Practices* and *Semantic Interoperability*, serve as threads interwoven across chapters. While certain research questions, hypotheses, and objectives are specifically aligned with one perspective, others bridge both, showcasing their interconnected relevance.
 
@@ -54,7 +54,7 @@ These objectives are explored extensively in three empirical chapters, offering 
 
 This section is designed to rigorously address several pivotal questions that underpin the research approach, reflecting on the epistemological and ontological stances guiding this study. It explores the selection and application of data collection tools, detailing their relevance and the implications of their use, alongside the timing and demographic details of data collection. This section also looks at the analytical tools used, discussing their significance, implications and any ethical considerations that arose.
 
-The methodology of this research is streamlined into three parts. This consolidation provides a holistic overview, starting with an outline of the research methods presented in each of the empirical chapters in [5.4.1](#subsec:outline), through a combined exploration of data creation, collection, curation and modelling, to an examination of data analysis. The section concludes by addressing the overall limitations and ethical considerations of the research in [5.4.2](#subsec:overall-limitations) and [5.4.3](#subsec:ethical-considerations), ensuring a careful and ethically sound approach to the study of LOUD.
+The methodology of this research is streamlined into three parts. This consolidation provides a holistic overview, starting with an outline of the research methods presented in each of the empirical chapters in [Subsection 5.4.1](#subsec:outline), through a combined exploration of data creation, collection, curation and modelling, to an examination of data analysis. The section concludes by addressing the overall limitations and ethical considerations of the research in [Subsection 5.4.2](#subsec:overall-limitations) and [Subsection 5.4.3](#subsec:ethical-considerations), ensuring a careful and ethically sound approach to the study of LOUD.
 
 ### 5.4.1 Outline of the Research Methods {id="subsec:outline"}
 
@@ -64,7 +64,7 @@ At its core, this thesis seeks to unravel the intricate web of cultural processe
 
 The attempt to understand a particular cosmology requires immersion in the practices and dynamics of the communities at its heart. Inspired by @latour_laboratory_1986, this research situates itself within the vibrant ecosystems of the IIIF and Linked Art communities. As an active participant, the research reflects the intricacies of a laboratory where the fusion of practices unfolds, providing a rich tapestry of insights into the research objectives.
 
-Embracing the role of a ‘praxiographer’ [^228], in the vein of @mol_body_2002, this exploration goes beyond mere observation. It addresses the ‘doing’ of research, emphasising the situated, embodied practices that shape knowledge production. This praxiographic lens foregrounds the complex, often tacit, processes through which the communities' cosmologies are enacted and understood. It acknowledges that these practices are not just observed but are actively participated in, thereby crafting a nuanced narrative of the research landscape. This approach aligns with Mol's advocacy for a more embodied and engaged form of inquiry, one that recognises the researcher as an integral component of the knowledge ecosystem, contributing to and being shaped by the evolving dynamics of community practices.
+Embracing the role of a ‘praxiographer’ [^231], in the vein of @mol_body_2002, this exploration goes beyond mere observation. It addresses the ‘doing’ of research, emphasising the situated, embodied practices that shape knowledge production. This praxiographic lens foregrounds the complex, often tacit, processes through which the communities' cosmologies are enacted and understood. It acknowledges that these practices are not just observed but are actively participated in, thereby crafting a nuanced narrative of the research landscape. This approach aligns with Mol's advocacy for a more embodied and engaged form of inquiry, one that recognises the researcher as an integral component of the knowledge ecosystem, contributing to and being shaped by the evolving dynamics of community practices.
 
 Recognising the transformative potential of digital methods, this study echoes @venturini_social_2009's call as well for a paradigm shift. It emphasises the need to fuse digital tools and data with traditional approaches, thereby enriching micro-analyses of interactions with insights into broader macro-structures. This not only challenges existing methodologies, but also invites a reappraisal of the dichotomies that have long governed the social sciences and humanities at large, and argues for a deeper engagement with the complexities of the digital sphere.
 
@@ -84,21 +84,21 @@ As outlined in [Table 5.1](#tab:research-axes), the empirical chapters are metic
 </thead>
 <tbody>
 <tr>
-<td>Chapter 6</td>
+<td><a href="#cha:social-fabrics">Chapter 6</a></td>
 <td>Assessment of Practices in IIIF and Linked Art Communities</td>
 <td>YES</td>
 <td>To some extent</td>
 <td>RQ01/HYP01 – OBJ01.1, OBJ01.2</td>
 </tr>
 <tr>
-<td>Chapter 7</td>
+<td><a href="#cha:pia-laboratory">Chapter 7</a></td>
 <td>Deployment of LOUD within PIA</td>
 <td>To some extent</td>
 <td>YES</td>
 <td>RQ02/HYP02 – OBJ02</td>
 </tr>
 <tr>
-<td>Chapter 8</td>
+<td><a href="#cha:lux-consistency">Chapter 8</a></td>
 <td>Review of a Large-Scale LOUD Implementation and Data Consistency within LUX</td>
 <td>YES</td>
 <td>YES</td>
@@ -143,11 +143,11 @@ style="width: 100%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-For the first objective, which is to analyse capacity-building and advocacy initiatives within the IIIF and Linked Art communities, data was collected from - generically referred to here as - guidelines on each initiative's website, such as cookbook recipes to help create resources and principles, as well as meeting minutes produced in Google Docs and GitHub issues. The meeting minutes from Google Docs were extracted with the help of a tool and a series of Python scripts. As for the guidelines, a matrix was prepared for the qualitative data, while the more quantitative data was extracted using the GitHub API. A first analysis was performed by aggregating and structuring all the data in CSV files according to the levels of abstraction discussed in the previous chapter, here in terms of category (e.g. viewer, type of support, JSON similarity, etc.). Further analysis was carried out using NetworkX[^229], a sophisticated Python library designed for the analysis of networks between social entities and their information exchange [@hagberg_exploring_2008]. This tool allows the generation of visual representations that aim to achieve the goals of SNA. SNA is understood here more as an analytical goal realised through visual means than as a methodological tool [see @akhtar_social_2014]. It complements the theoretical framework based on ANT, enriching it with a quantitative and visual approach to studying the interconnectedness of actors and the influence of these connections on the distribution of information and resources. By incorporating SNA, this research seeks to uncover the rich network of relationships and patterns between actors within LOUD ecosystems, with visualisations that can be effectively realised through tools such as Gephi[^230], a network analysis and visualisation software [@bastian_gephi_2009]. For GitHub issues, a case study was conducted to show how an issue going through the IIIF review process works.
+For the first objective, which is to analyse capacity-building and advocacy initiatives within the IIIF and Linked Art communities, data was collected from - generically referred to here as - guidelines on each initiative's website, such as cookbook recipes to help create resources and principles, as well as meeting minutes produced in Google Docs and GitHub issues. The meeting minutes from Google Docs were extracted with the help of a tool and a series of Python scripts. As for the guidelines, a matrix was prepared for the qualitative data, while the more quantitative data was extracted using the GitHub API. A first analysis was performed by aggregating and structuring all the data in CSV files according to the levels of abstraction discussed in the previous chapter, here in terms of category (e.g. viewer, type of support, JSON similarity, etc.). Further analysis was carried out using NetworkX[^232], a sophisticated Python library designed for the analysis of networks between social entities and their information exchange [@hagberg_exploring_2008]. This tool allows the generation of visual representations that aim to achieve the goals of SNA. SNA is understood here more as an analytical goal realised through visual means than as a methodological tool [see @akhtar_social_2014]. It complements the theoretical framework based on ANT, enriching it with a quantitative and visual approach to studying the interconnectedness of actors and the influence of these connections on the distribution of information and resources. By incorporating SNA, this research seeks to uncover the rich network of relationships and patterns between actors within LOUD ecosystems, with visualisations that can be effectively realised through tools such as Gephi[^233], a network analysis and visualisation software [@bastian_gephi_2009]. For GitHub issues, a case study was conducted to show how an issue going through the IIIF review process works.
 
-As for the second objective, it consists of analysing the adoption surveys that have been carried out within the IIIF community over the years on the adoption of its specifications and creating my own survey on LOUD's socio-technical characteristics. For the latter, Google Forms was used and the raw data has been made available after a pseudonymisation stage. Graphs and statistics were created using Python, in particular using its pandas library[^231], as well as employing RStudio[^232] to produce various files for publication in a final report. 
+As for the second objective, it consists of analysing the adoption surveys that have been carried out within the IIIF community over the years on the adoption of its specifications and creating my own survey on LOUD's socio-technical characteristics. For the latter, Google Forms was used and the raw data has been made available after a pseudonymisation stage. Graphs and statistics were created using Python, in particular using its pandas library[^234], as well as employing RStudio[^235] to produce various files for publication in a final report. 
 
-Finally, the main scripts and outcomes of this empirical research were made available through a GitHub repository[^233].
+Finally, the main scripts and outcomes of this empirical research were made available through a GitHub repository[^236].
 
 #### 5.4.1.2 Deployment of LOUD within PIA {id="subsubsec:outline-chap2"}
 
@@ -164,7 +164,7 @@ style="width: 100%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-In keeping with the chapter's title, it describes a laboratory effort focused on creating and transforming data into resources that conform to LOUD standards. Initially, data was extracted from Salsah[^234], a digital platform developed by DaSCH that stores images and metadata from the CAS photographic archives. This involved using a Python script to extract CSV, JSON and TIFF files. The process required specific image conversion steps -- TIFF to JPEG2000 -- to facilitate their distribution via SIPI, a IIIF Image API server developed by the DHLab. In addition, the IIIF Presentation API 3.0 and Change Discovery API 1.0 resources were generated by an early-stage micro service. In parallel with the development of Linked Art data, a workflow prototype[^235] was created in collaboration with members of the University of Oxford, based on a preliminary JSON API designed for the PIA project. At the same time, a revised data model was developed to ensure compatibility with the requirements of DSP, setting the stage for the migration of (meta)data from Salsah. This foundational work enabled the subsequent updating of resources to conform to the Linked Art standard, taking advantage of the established workflow.
+In keeping with the chapter's title, it describes a laboratory effort focused on creating and transforming data into resources that conform to LOUD standards. Initially, data was extracted from Salsah[^237], a digital platform developed by DaSCH that stores images and metadata from the CAS photographic archives. This involved using a Python script to extract CSV, JSON and TIFF files. The process required specific image conversion steps -- TIFF to JPEG2000 -- to facilitate their distribution via SIPI, a IIIF Image API server developed by the DHLab. In addition, the IIIF Presentation API 3.0 and Change Discovery API 1.0 resources were generated by an early-stage micro service. In parallel with the development of Linked Art data, a workflow prototype[^238] was created in collaboration with members of the University of Oxford, based on a preliminary JSON API designed for the PIA project. At the same time, a revised data model was developed to ensure compatibility with the requirements of DSP, setting the stage for the migration of (meta)data from Salsah. This foundational work enabled the subsequent updating of resources to conform to the Linked Art standard, taking advantage of the established workflow.
 
 #### 5.4.1.3 Review of a Large-Scale LOUD Implementation and Data Consistency within LUX {id="subsubsec:outline-chap3"}
 
@@ -181,9 +181,9 @@ style="width: 100%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-The first objective was to document the collaborative efforts of Yale employees involved in the development of LUX. To achieve this, I conducted both group and one-on-one interviews and recorded these discussions. These recordings were first transcribed using Whisper[^236], an advanced speech recognition tool developed by OpenAI. To ensure accuracy, I meticulously checked and amended the transcriptions. I then performed thematic analysis on the transcripts, now formatted as CSV files, and consolidated the revised verbatim transcripts into a Markdown document. This extensive process provided the basis for writing a report comprising selected quotes, as well as an analysis using simple topic modelling to extract key themes [see @benabdelkrim_opening_2020], which provides distant reading insights.
+The first objective was to document the collaborative efforts of Yale employees involved in the development of LUX. To achieve this, I conducted both group and one-on-one interviews and recorded these discussions. These recordings were first transcribed using Whisper[^239], an advanced speech recognition tool developed by OpenAI. To ensure accuracy, I meticulously checked and amended the transcriptions. I then performed thematic analysis on the transcripts, now formatted as CSV files, and consolidated the revised verbatim transcripts into a Markdown document. This extensive process provided the basis for writing a report comprising selected quotes, as well as an analysis using simple topic modelling to extract key themes [see @benabdelkrim_opening_2020], which provides distant reading insights.
 
-The second objective was to verify the consistency of Linked Art and IIIF resources. Once the data had been collected, an effort was made templating the identified patterns by selecting various resources qualitatively and validating them quantitatively using a JSON validator. For IIIF resources, the Presentation API Validator[^237] designed by IIIF-C was leveraged. All of this data, along with the scripts, was compiled and analysed onto a GitHub repository[^238].
+The second objective was to verify the consistency of Linked Art and IIIF resources. Once the data had been collected, an effort was made templating the identified patterns by selecting various resources qualitatively and validating them quantitatively using a JSON validator. For IIIF resources, the Presentation API Validator[^240] designed by IIIF-C was leveraged. All of this data, along with the scripts, was compiled and analysed onto a GitHub repository[^241].
 
 ### 5.4.2 Overall Limitations {id="subsec:overall-limitations"}
 
@@ -191,7 +191,7 @@ The overall limitations of this thesis cover several key areas, reflecting the c
 
 The extent of initiatives and infrastructure supporting LOUD standards is another critical limitation. The variability in support and implementation across platforms and projects may affect the generalisation of the study's findings, suggesting the need for broader engagement and standardisation efforts amongst CH practitioners. Moreover, the influence of platforms' formatting power on the dissemination and reception of LOUD standards cannot be overlooked @boullier_medialab_2018, highlighting the need for a nuanced understanding of how platform-specific affordances shape scholarly communication and knowledge exchange. Moreover, according to @nyhan_pursuing_2023, at ‘a low-tech end of scholarship’, the integration of LOUD within DH faces challenges despite its seemingly low-tech orientation in practice and tool adoption. This situation echoes McCarty's discussion of the need for a ‘combinatorial habit of mind and machine’, suggesting that while some of the tools developed by the wider IIIF community are accessible, they still require a significant level of technical expertise. It emphasises the importance of harmonising traditional scholarly methods with digital tools to enrich humanistic research, and urges a critical evaluation of the limitations and potential of digital tools to ensure that they complement rather than constrain scholarly inquiry.
 
-Obtaining data from individuals and their CHIs through generic investigation echoes @bourdieu_homo_1988's theory of fields[^239] and therefore may not capture the full socio-technical landscape of LOUD ecosystems. This approach may overlook the wider range of actors and their interactions that are crucial for a holistic understanding of the impact of LOUD.
+Obtaining data from individuals and their CHIs through generic investigation echoes @bourdieu_homo_1988's theory of fields[^242] and therefore may not capture the full socio-technical landscape of LOUD ecosystems. This approach may overlook the wider range of actors and their interactions that are crucial for a holistic understanding of the impact of LOUD.
 
 The implementation of LOUD standards and practices within the PIA project served as an experimental ground for testing the semantic model and data reuse in a participatory manner, revealing the gap between theoretical constructs and their practical implementation. This discrepancy underscores the challenges of deploying layered data models in real-world interfaces, and highlights potential limitations in empirical validation and UX insights.
 
@@ -215,37 +215,39 @@ My thesis aims to contribute to the humanities, increasingly digital, by situati
 
 CH resources, documented and preserved by cross-border memory institutions, are increasingly interconnected through digital platforms. The role of web architecture, in particular LOD technologies and henceforth standards conforming to LOUD design principles, is central in this context. The incorporation of shared methodologies, as seen in the IIIF community, exemplifies the socio-technical interactions that are central to the scholarly and heritage domains. These community-driven technologies facilitate not only the description and contextualisation of CH records, but also their integration into scholarly discourse, thus underlining the vital role of community practices and semantic interoperability in improving accessibility, interoperability and engagement within the humanities.
 
-In an effort to transcend the conventional boundaries of academic dissemination, I have decided to produce both a PDF version of the thesis intended for the university's repository and an HTML version of the thesis, and I plan to make the structured data of the dissertation available via Linked Art API endpoints, time permitting.[^*] This endeavour not only embraces the ethos of open scholarship and self-publishing as discussed by @capadisli_linked_2020, but also ventures into experimental territories of knowledge representation. By considering diverse and niche use cases, this work seeks to extend the methodological framework of DH and encourage a broader and more nuanced engagement with LOUD.
+In an effort to transcend the conventional boundaries of academic dissemination, I have decided to produce both a PDF version of the thesis intended for the university's repository and an HTML version of the thesis[^243], and I plan to make the structured data of the dissertation available via Linked Art API endpoints, time permitting.[^*] This endeavour not only embraces the ethos of open scholarship and self-publishing as discussed by @capadisli_linked_2020, but also ventures into experimental territories of knowledge representation. By considering diverse and niche use cases, this work seeks to extend the methodological framework of DH and encourage a broader and more nuanced engagement with LOUD.
 
-[^228]: *‘Praxiography is a concept that describes the particular methodology of practice theory–driven research.’ ‘Praxiography is a concept that describes the particular methodology of practice theory–driven research.’* [@bueger_praxiography_2019]
+[^231]: *‘Praxiography is a concept that describes the particular methodology of practice theory–driven research.’ ‘Praxiography is a concept that describes the particular methodology of practice theory–driven research.’* [@bueger_praxiography_2019]
 
-[^229]: NetworkX: <https://networkx.org/>
+[^232]: NetworkX: <https://networkx.org/>
 
-[^230]: Gephi: <https://gephi.org/>
+[^233]: Gephi: <https://gephi.org/>
 
-[^231]: pandas -- Python Data Analysis Library:
+[^234]: pandas -- Python Data Analysis Library:
     <https://pandas.pydata.org/>
 
-[^232]: RStudio: <https://posit.co/download/rstudio-desktop/>
+[^235]: RStudio: <https://posit.co/download/rstudio-desktop/>
 
-[^233]: The LOUD
+[^236]: The LOUD
     Social Fabrics: <https://github.com/julsraemy/loud-socialfabrics>
 
-[^234]: Salsah:
+[^237]: Salsah:
     <https://web.archive.org/web/20240229093041/https://www.salsah.org/>
 
-[^235]: Linked Art Collection Data Workflow:
+[^238]: Linked Art Collection Data Workflow:
     <https://github.com/tgra/Linked-Art-Collection-Data-Workflow>
 
-[^236]: Whisper: <https://github.com/openai/whisper>
+[^239]: Whisper: <https://github.com/openai/whisper>
 
-[^237]: IIIF
+[^240]: IIIF
     Presentation API Validator:
     <https://presentation-validator.iiif.io/>
 
-[^238]: LOUD
+[^241]: LOUD
     Consistency: <https://github.com/julsraemy/loud-consistency>
 
-[^239]: Bourdieu's theory of fields conceptualises social life as a series of distinct but interrelated arenas or ‘fields’, each with its own rules, structures and forms of capital. Actors within these fields compete for dominance, status and resources, guided by both their ‘habitus’ and the specific capital they possess.
+[^242]: Bourdieu's theory of fields conceptualises social life as a series of distinct but interrelated arenas or ‘fields’, each with its own rules, structures and forms of capital. Actors within these fields compete for dominance, status and resources, guided by both their ‘habitus’ and the specific capital they possess.
+
+[^243]: LOUD for Cultural Heritage – PhD Thesis by Julien A. Raemy: <https://phd.julsraemy.ch>
 
 [^*]: Note added after publication (November 2026): this was carried out afterwards for the HTML version. The thesis and each of its chapters are available as Linked Art Textual Work records (`LinguisticObject`), following the Linked Art API 1.0 and validated against its JSON Schemas: <https://phd.julsraemy.ch/linked-art/text/thesis.json> for the thesis and, for instance, <https://phd.julsraemy.ch/linked-art/text/thesis/05-research-scope-and-methodology.json> for this chapter. The records are generated at build time from the same Markdown sources as these HTML pages, so the two stay aligned: chapters are classified as such (AAT 300311699), linked to the thesis via `part_of` and carry their full text as HTML in the `content` property, while the thesis record carries the abstract, the DOI and Handle, and its publication by the University of Basel. Each HTML page links to its record in the table of contents ("Linked Art (JSON-LD)").

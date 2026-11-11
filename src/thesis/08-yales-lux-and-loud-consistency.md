@@ -19,11 +19,11 @@ As with the previous chapters, the findings of this research are compiled in [Se
 
 ## 8.1 Large-Scale Deployment of LOUD at Yale {id="sec:large-scale-loud"} 
 
-This section examines the use of LOUD at Yale University. It is divided into three parts: the background to the LUX initiative is detailed in [8.1.1](#subsec:lux-background), the technology stack used is outlined in [8.1.2](#subsec:lux-technology), and a series of interviews conducted in 2023 with Yale staff members involved in developing LUX is covered in [8.1.3](#subsec:lux-interviews). This structure provides an account of the deployment, from its conceptualisation to its technological realisation, as well as practical insights from its implementers.
+This section examines the use of LOUD at Yale University. It is divided into three parts: the background to the LUX initiative is detailed in [Section 8.1.1](#subsec:lux-background), the technology stack used is outlined in [Section 8.1.2](#subsec:lux-technology), and a series of interviews conducted in 2023 with Yale staff members involved in developing LUX is covered in [Section 8.1.3](#subsec:lux-interviews). This structure provides an account of the deployment, from its conceptualisation to its technological realisation, as well as practical insights from its implementers.
 
 ### 8.1.1 Background {id="subsec:lux-background"}
 
-The trajectory of the LUX platform[^332] at Yale began over a decade ago, marked by a series of strategic developments aimed at improving digital access and infrastructure across CH units. The journey began in 2008 with the establishment of the Office for Digital Access and Infrastructure and the creation of the first shared DAM system. This system initially connected the collections of YUAG, YCBA and YPM, providing a basic framework for subsequent digital integration efforts. In fact, the development of LUX was built on a series of incremental steps.
+The trajectory of the LUX platform[^335] at Yale began over a decade ago, marked by a series of strategic developments aimed at improving digital access and infrastructure across CH units. The journey began in 2008 with the establishment of the Office for Digital Access and Infrastructure and the creation of the first shared DAM system. This system initially connected the collections of YUAG, YCBA and YPM, providing a basic framework for subsequent digital integration efforts. In fact, the development of LUX was built on a series of incremental steps.
 
 In 2011, Yale University adopted an OA policy and launched its first-generation cross-collection discovery platform, which included digital assets from its major CH collections. This platform was a precursor to the LUX system and demonstrated Yale's commitment to making its vast resources more accessible and connected.
 
@@ -31,9 +31,9 @@ The appointment of Susan Gibbons in 2016 as first Vice Provost for CSC significa
 
 2018 saw the launch of a five-year project to improve access to Yale's collections, supported by initial project funding and an expanded scope to include YUL bibliographic records and archival finding aids. The following year, 2019, was pivotal, with the adoption of IIIF as the image standard for the collections, the beginning of project management, and a significant grant from the Andrew W. Mellon Foundation to support metadata reconciliation and harmonisation efforts.
 
-The proof of concept, based on Blacklight[^333], for LUX in 2020 united data from over 15 million object records into a shared index, marking a major milestone in the project. Despite budget cuts due to the COVID-19 pandemic, the project continued with the refinement of the metadata schema and the addition of Robert Sanderson to lead these efforts[^334].
+The proof of concept, based on Blacklight[^336], for LUX in 2020 united data from over 15 million object records into a shared index, marking a major milestone in the project. Despite budget cuts due to the COVID-19 pandemic, the project continued with the refinement of the metadata schema and the addition of Robert Sanderson to lead these efforts[^337].
 
-Although this proof of concept was an achievement in that it demonstrated the ability to integrate data from all units. However, it also showed that the interface did not meet the functional expectations. As a result, a technology evaluation process called a ‘bake off’ was initiated. Teams of community members from across CHIT - the museums, YUL and ITS - looked at a number of technology stacks and made an informed recommendation within a few months. LUX has been governed by several committees and groups[^335]. The CHIT Steering Committee oversees all strategic decisions, supported by technical and interdisciplinary collaboration teams such as the Cross-Collections Discovery Working Group, Cultural Heritage Information Technology Architecture, the Metadata Working Group, and the Bias Awareness and Responsibility Committee.
+Although this proof of concept was an achievement in that it demonstrated the ability to integrate data from all units. However, it also showed that the interface did not meet the functional expectations. As a result, a technology evaluation process called a ‘bake off’ was initiated. Teams of community members from across CHIT - the museums, YUL and ITS - looked at a number of technology stacks and made an informed recommendation within a few months. LUX has been governed by several committees and groups[^338]. The CHIT Steering Committee oversees all strategic decisions, supported by technical and interdisciplinary collaboration teams such as the Cross-Collections Discovery Working Group, Cultural Heritage Information Technology Architecture, the Metadata Working Group, and the Bias Awareness and Responsibility Committee.
 
 In 2021, after a thorough six-month evaluation of technologies, the LUX project entered the build phase of LUX 1.0. By 2022, all metadata from participating units had been ingested into LUX, and internal reviews of the beta version began, leading to its public release in May 2023.
 
@@ -64,11 +64,11 @@ As noted by @sanderson_lux_2023, LUX functions primarily as an aggregator, with 
 
 The architecture of LUX consists of several interconnected components: data harvesting, data pipeline, back-end database, middle tier and front-end. These components have been integrated according to some of the established standards mentioned earlier, allowing any individual component to be replaced without requiring a complete rewrite of the system. Hosted by Amazon, LUX benefits from the widespread adoption and robust support within the software development community for technologies such as Python, JavaScript, Node.js and React.
 
-Moreover, LUX harnesses the power of an enterprise-class, multi-modal back-end database, increasing its efficiency. To encourage collaboration and knowledge sharing, the code for all components of LUX, including the custom code for MarkLogic[^336], has been made open source and available to the wider community[^337] [see @cahill_open-source_2024].
+Moreover, LUX harnesses the power of an enterprise-class, multi-modal back-end database, increasing its efficiency. To encourage collaboration and knowledge sharing, the code for all components of LUX, including the custom code for MarkLogic[^339], has been made open source and available to the wider community[^340] [see @cahill_open-source_2024].
 
-The LUX platform is characterised by its extensive connections, not only within Yale units, but also beyond, through the inclusion of external data sources during data processing. These sources cover different subject areas and perspectives and are available as Linked Data, enriching the information available to users by matching records in LUX. For example, one of the key processes used to match works and objects is the integration of Wikidata records, providing the ability to make meaningful associations between objects from units, such as those within the YCBA collection, and related works. They also include additional names and terms from authority records and subject headings of libraries like GND[^338], LoC[^339], or the NDL[^340], as well as the VIAF[^341]. This strategic approach requires careful anticipation of the requirements for Linked Data integration, accompanied by a concerted effort to foster extensive collaboration within the YCBA unit. In particular, the scope of authority control procedures at YCBA encompasses all collections, further emphasising the need for extensive collaboration. In addition, collaborative efforts extend beyond the YCBA unit to include partnerships with external services and inter-unit collaborations between the YCBA and the YUAG. This collaborative approach is particularly evident in the joint exhibitions mounted by the two units.
+The LUX platform is characterised by its extensive connections, not only within Yale units, but also beyond, through the inclusion of external data sources during data processing. These sources cover different subject areas and perspectives and are available as Linked Data, enriching the information available to users by matching records in LUX. For example, one of the key processes used to match works and objects is the integration of Wikidata records, providing the ability to make meaningful associations between objects from units, such as those within the YCBA collection, and related works. They also include additional names and terms from authority records and subject headings of libraries like GND[^341], LoC[^342], or the NDL[^343], as well as the VIAF[^344]. This strategic approach requires careful anticipation of the requirements for Linked Data integration, accompanied by a concerted effort to foster extensive collaboration within the YCBA unit. In particular, the scope of authority control procedures at YCBA encompasses all collections, further emphasising the need for extensive collaboration. In addition, collaborative efforts extend beyond the YCBA unit to include partnerships with external services and inter-unit collaborations between the YCBA and the YUAG. This collaborative approach is particularly evident in the joint exhibitions mounted by the two units.
 
-[Figure 8.2](#fig:lux-pipeline) depicts the overall data transformation, reconciliation, enrichment and publication workflow for LUX. The base records come from both internal and external sources, with internal records being harvested through the IIIF Change Discovery API [see @raemyAnalysisUsabilityAutomatically2024]. The processes (represented by diamonds) are described hereafter. The source code of the pipeline, which notably includes the identifier map of equivalencies and their associated indexes, was also released on GitHub in March 2024[^342].
+[Figure 8.2](#fig:lux-pipeline) depicts the overall data transformation, reconciliation, enrichment and publication workflow for LUX. The base records come from both internal and external sources, with internal records being harvested through the IIIF Change Discovery API [see @raemyAnalysisUsabilityAutomatically2024]. The processes (represented by diamonds) are described hereafter. The source code of the pipeline, which notably includes the identifier map of equivalencies and their associated indexes, was also released on GitHub in March 2024[^345].
 
 <figure id="fig:lux-pipeline" style="margin: 0 auto; text-align: center;">
  <img
@@ -107,7 +107,7 @@ Having discussed the technology behind the LUX platform, I now turn to the persp
 
 ### 8.1.3 Interviews {id="subsec:lux-interviews"}
 
-In May 2023, a number of interviews were conducted with 20 individuals associated with the LUX project at Yale University[^343]. These interviews, which included both one-on-one and group sessions with up to four participants, took place over nine separate sessions. Two of these sessions were conducted via Zoom to accommodate remote participants, while the remaining seven were held face-to-face on the Yale campus in New Haven, CT, USA. Each interview was designed to last approximately 45 minutes and prior to these sessions, each participant was provided with a consent form and a prepared questionnaire to streamline the discussion and ensure that all relevant topics were adequately covered.
+In May 2023, a number of interviews were conducted with 20 individuals associated with the LUX project at Yale University[^346]. These interviews, which included both one-on-one and group sessions with up to four participants, took place over nine separate sessions. Two of these sessions were conducted via Zoom to accommodate remote participants, while the remaining seven were held face-to-face on the Yale campus in New Haven, CT, USA. Each interview was designed to last approximately 45 minutes and prior to these sessions, each participant was provided with a consent form and a prepared questionnaire to streamline the discussion and ensure that all relevant topics were adequately covered.
 
 The consent form explained the aims of the study, the voluntary nature of their participation, their right to withdraw at any time, and detailed the process of audio recording and verbatim transcription for analysis as part of my PhD. It emphasised that the data collected would be stored securely, accessible only to myself, and could be used for future research with all identifying information removed or pseudonymised to ensure confidentiality. One copy of the transcript was also given to all participants to review and confirm their comfort with the recorded content.
 
@@ -168,7 +168,7 @@ c) Are there any other principles (or norms, best practices) that you feel are r
 
 A dual method of capturing data was adopted during the interviews: I transcribed key points directly into a spreadsheet for real-time analysis and tracking, while simultaneously recording the interviews for comprehensive documentation. This approach allowed for immediate adjustments to the questioning process - questions could be rephrased or redirected on-the-fly based on the flow of the conversation and preliminary findings from the real-time notes.
 
-To convert the recorded audio into text,, Whisper[^344], an ASR system, was used. Whisper is designed to provide robust and accurate speech-to-text capabilities and supports multiple languages. It has been trained on a wide range of data collected from the internet and has shown considerable ability to understand different types of accents and dialects, making it an ideal choice for transcribing the varied responses of the interview participants [@radford_robust_2022]. The transcription process was facilitated using the CLI. The specific commands executed to transcribe the interviews from audio files into text are detailed in [Code Snippet 8.1](#lst:whisper-cl).
+To convert the recorded audio into text,, Whisper[^347], an ASR system, was used. Whisper is designed to provide robust and accurate speech-to-text capabilities and supports multiple languages. It has been trained on a wide range of data collected from the internet and has shown considerable ability to understand different types of accents and dialects, making it an ideal choice for transcribing the varied responses of the interview participants [@radford_robust_2022]. The transcription process was facilitated using the CLI. The specific commands executed to transcribe the interviews from audio files into text are detailed in [Code Snippet 8.1](#lst:whisper-cl).
 
 <figure id="lst:whisper-cl" style="text-align: center;">
  <figcaption>
@@ -245,7 +245,7 @@ In terms of future potential, there is significant interest in the potential re-
 
 > I believe that a small team of two or three individuals, who are open to exploring new avenues and possess a sense of curiosity, could accomplish it. Ideally, they should have a foundational understanding of core technologies like JavaScript and React, so they can focus on specific requirements without starting from scratch. While MarkLogic is a robust system, the work we’ve already done with it can potentially be leveraged for their use cases, making the process smoother. If someone is interested in a research-oriented system similar to LUX, they could start with a single-node environment or opt for a powerful machine. <br/> Jeff Campbell, Associate Director, Digital Asset Technologies, ITS
 
-After collecting these qualitative findings, I aimed to obtain a distant reading perspective of the interviews using simple topic modelling methods. To do this, I used an online topic extraction tool[^345]. The tool performs the following steps:
+After collecting these qualitative findings, I aimed to obtain a distant reading perspective of the interviews using simple topic modelling methods. To do this, I used an online topic extraction tool[^348]. The tool performs the following steps:
 
 1.  Clean up the text: flatten to ASCII, remove     URLs and     punctuation marks.
 2.  Lemmatisation.
@@ -256,7 +256,7 @@ After collecting these qualitative findings, I aimed to obtain a distant reading
 7.  Apply the parameter chosen by the user: a large value detects a few     large communities, while a small value detects many small clusters.
 8.  Each cluster in the network is identified as a topic. The key terms     in each topic are the n-grams contained in the cluster.
 
-I fed all the raw `.txt` files, which contained no names or identification, into the tool. I set the parameter to detect large topics, limiting the number to ten, and used a special stopword file (e.g. LUX, data) to avoid overcrowding the results. The identified clusters can be seen in [Figure 8.4](#fig:lux-interviews-topics) [^346]:
+I fed all the raw `.txt` files, which contained no names or identification, into the tool. I set the parameter to detect large topics, limiting the number to ten, and used a special stopword file (e.g. LUX, data) to avoid overcrowding the results. The identified clusters can be seen in [Figure 8.4](#fig:lux-interviews-topics) [^349]:
 
 <figure id="fig:lux-interviews-topics" style="margin: 0 auto; text-align: center;">
  <img
@@ -288,7 +288,7 @@ Having explored the qualitative findings and performed a distant reading of the 
 
 ## 8.2 Linked Art and IIIF Consistency {id="sec:la-iiif-consistency"}
 
-This section addresses the second, more technical, objective of the investigation around LUX. It is divided into two parts. Subsection [8.2.1](#subsec:consistency-tools) presents the available software tools used to validate Linked Art and IIIF resources. The second part, [8.2.2](#subsec:consistency-lux), examines how some of these tools were applied to verify the LOUD consistency of a portion of the resources available on the platform.
+This section addresses the second, more technical, objective of the investigation around LUX. It is divided into two parts. [Subsection 8.2.1](#subsec:consistency-tools) presents the available software tools used to validate Linked Art and IIIF resources. The second part, [Subsection 8.2.2](#subsec:consistency-lux), examines how some of these tools were applied to verify the LOUD consistency of a portion of the resources available on the platform.
 
 ### 8.2.1 Ensuring Compliance: Tools and Validators {id="subsec:consistency-tools"}
 
@@ -296,13 +296,13 @@ Verifying the compliance of JSON-LD documents can be done at several levels: fir
 
 In this dissertation, I am primarily concerned with the second level, which unfortunately only partially addresses full validation at the level of semantic interoperability. However, the tools for this level are available and maintained. This validation process involves ensuring that the JSON-LD structure is correct, which includes validating that the `@context`, properties, and patterns adhere to the expected formats. This ensures that data can be hopefully interpreted and integrated across different systems.
 
-Within Linked Art, two validators have been created: the first is a JSON validator[^347] testing resource compliance according to various entities, and the second is a SHACL validator[^348]. The former is still maintained, while the latter, though a commendable individual effort, hasn't been updated to accommodate all community needs.
+Within Linked Art, two validators have been created: the first is a JSON validator[^350] testing resource compliance according to various entities, and the second is a SHACL validator[^351]. The former is still maintained, while the latter, though a commendable individual effort, hasn't been updated to accommodate all community needs.
 
 Regarding validation and schema consistency, there are some affordances that have been allowed by the Linked Art community which can be found in the Linked Art JSON Validator and not directly in the schema documentation, such as having internal additional properties starting with underscores. For instance, LUX does this by appending `_links`, borrowed from HAL.
 
-For IIIF, the available validation tools cover both the Image API and the Presentation API. The Image API validator[^349] supports all major versions of the API and thoroughly tests the server's behaviour in delivering images, not just the quality of the images themselves. This validator can detect most potential issues by requiring the upload of a specific test image. It is available as a Python package, allowing integration into pipelines for automated testing.
+For IIIF, the available validation tools cover both the Image API and the Presentation API. The Image API validator[^352] supports all major versions of the API and thoroughly tests the server's behaviour in delivering images, not just the quality of the images themselves. This validator can detect most potential issues by requiring the upload of a specific test image. It is available as a Python package, allowing integration into pipelines for automated testing.
 
-The IIIF Presentation API validator[^350] works similarly by parsing resources (such as Manifest and Collection) and detecting common issues, particularly related to JSON-LD. While it ensures that the manifests are correctly structured, it does not verify the existence of referenced images. This validator can be used from its homepage, by making JSON requests, or by running it locally[^351]. It is important to note that a valid Manifest or Collection does not guarantee that all its functionalities -- patterns -- will be properly displayed by IIIF viewers or players. Complex manifests might be valid but may not be fully supported by all clients, which might not yet have the capacity to render all the features[^352]. Conversely, non-compliant manifests could still be partially or fully understood by some clients, which might not need to interpret every aspect of a resource.
+The IIIF Presentation API validator[^353] works similarly by parsing resources (such as Manifest and Collection) and detecting common issues, particularly related to JSON-LD. While it ensures that the manifests are correctly structured, it does not verify the existence of referenced images. This validator can be used from its homepage, by making JSON requests, or by running it locally[^354]. It is important to note that a valid Manifest or Collection does not guarantee that all its functionalities -- patterns -- will be properly displayed by IIIF viewers or players. Complex manifests might be valid but may not be fully supported by all clients, which might not yet have the capacity to render all the features[^355]. Conversely, non-compliant manifests could still be partially or fully understood by some clients, which might not need to interpret every aspect of a resource.
 
 Tripoli, an unofficial validator for the IIIF Presentation API 2.1, written in Python, provided an API for integrating IIIF validation into code. However, it has not been updated since 2017. Hyperion, a collection of NPM packages including a validator for version 3.0 of the IIIF Presentation API, has been integrated into the IIIF Commons initiative. Its dedicated validator functionality is now part of parsers and other helpers.
 
@@ -310,19 +310,19 @@ These tools ensure that IIIF services and resources are compliant with the stand
 
 ### 8.2.2 LUX Data Consistency {id="subsec:consistency-lux"}
 
-This subsection discusses the data consistency of a large-scale LOUD application, focusing primarily on Linked Art in [8.2.2.1](#subsubsec:consistency-la) and peripherally on IIIF in [8.2.2.2](#subsubsec:consistency-iiif).
+This subsection discusses the data consistency of a large-scale LOUD application, focusing primarily on Linked Art in [Subsubsection 8.2.2.1](#subsubsec:consistency-la) and peripherally on IIIF in [Subsubsection 8.2.2.2](#subsubsec:consistency-iiif).
 
 The consistency of the Linked Art data was assessed in three different ways: against the `JSON` validator based on the API endpoint constraints, unit-to-unit consistency between YUAG and YCBA, and by comparing concept terms from LUX with Getty's AAT. Finally, the consistency of IIIF Presentation API resources (V2.1 and/or V3.0, depending on their availability across Yale units).
 
 #### 8.2.2.1 Linked Art Consistency {id="subsubsec:consistency-la"}
 
-In May 2023, I received one of the full LUX dataset, i.e. a slice of records which correspond to the highest number of parallel processes possible. It is a JSONL file which is composed of lines of LUX JSON-LD that include Marklogic's rather verbose triples format. The full dataset is about $435$GB uncompressed, or about $45$GB compressed with `gzip`. At the time of verifying the consistency of the data, a downloadable LUX dataset or a custom dataset builder were not available.
+In May 2023, I received one 24<sup>th</sup> of the full LUX dataset, i.e. a slice of records which correspond to the highest number of parallel processes possible. It is a JSONL file which is composed of lines of LUX JSON-LD that include Marklogic's rather verbose triples format. The full dataset is about $435$GB uncompressed, or about $45$GB compressed with `gzip`. At the time of verifying the consistency of the data, a downloadable LUX dataset or a custom dataset builder were not available.
 
 To ensure data consistency across LUX, I conducted in October 2023 an extensive validation of Linked Art data. This process involved testing the Linked Art JSON validator and schemas with data from both the Linked Art API Endpoints and the LUX platform. The goal was to verify if the Linked Art examples and schemas were up-to-date and to validate exemplary data from LUX before a larger scale validation.
 
 Originally, my intention was to check all the resources I received from LUX. However, after testing an initial batch, I found that they all yielded similar results for each entity endpoint. Consequently, I did not continue to check every resource. I communicated the results to Robert Sanderson, who maintains the Linked Art JSON validator, manages the Linked Art website, and also works on LUX, to ensure that the findings were accurate.
 
-The validation process was conducted using a Python script that was forked and adapted with specific arguments from the Linked Art JSON validator[^353]. This script processed data from the examples found on the Linked Art website and LUX, checking for compliance with the respective `JSON` schemas. [Code Snippet 8.3](#lst:la-concept) and [Code Snippet 8.4](#lst:lux-concept) are validation results for a `Concept`[^354]:
+The validation process was conducted using a Python script that was forked and adapted with specific arguments from the Linked Art JSON validator[^356]. This script processed data from the examples found on the Linked Art website and LUX, checking for compliance with the respective `JSON` schemas. [Code Snippet 8.3](#lst:la-concept) and [Code Snippet 8.4](#lst:lux-concept) are validation results for a `Concept`[^357]:
 
 <figure id="lst:la-concept" style="text-align: center;">
  <figcaption>
@@ -353,7 +353,7 @@ The validation process was conducted using a Python script that was forked and a
 
 </figure>
 
-[Table 8.2](#tab:lux-validation-summary) summarises the validation results for different Linked Art endpoints and selected LUX instances. The table includes the status of the JSON schema validation, specific issues identified, and the required actions to achieve consistency. The main validation errors were due to missing identifiers in the Linked Art Endpoint examples and issues with the `identified_by` $\rightarrow$ `Identifier` pattern and the `referred_to_by` property in `Set` instances for the LUX data. All instances that bear the `TBD*` in the table had the same message warning regarding the use of `Identifier` within `identified_by`. It is a pattern that seems correct according to the documentation, informed by the Linked Art core schema[^355] which led to validation errors.
+[Table 8.2](#tab:lux-validation-summary) summarises the validation results for different Linked Art endpoints and selected LUX instances. The table includes the status of the JSON schema validation, specific issues identified, and the required actions to achieve consistency. The main validation errors were due to missing identifiers in the Linked Art Endpoint examples and issues with the `identified_by` $\rightarrow$ `Identifier` pattern and the `referred_to_by` property in `Set` instances for the LUX data. All instances that bear the `TBD*` in the table had the same message warning regarding the use of `Identifier` within `identified_by`. It is a pattern that seems correct according to the documentation, informed by the Linked Art core schema[^358] which led to validation errors.
 
 <figure id="tab:lux-validation-summary" style="text-align: center;">
  <figcaption><strong>Table 8.2</strong>: Validation Summary of Linked Art Example Endpoints and LUX Instances</figcaption>
@@ -439,9 +439,9 @@ The validation process was conducted using a Python script that was forked and a
 
 As part of this Linked Art consistency effort, I received two different spreadsheets from Robert Sanderson. The first contained 113,151 Getty terms from either AAT, TGN, or ULAN that are also present in LUX. The spreadsheet indicated how many times these terms appeared at both YCBA and YUAG. This data was used to check the consistency of concepts between LUX and the Getty Vocabularies, as well as the unit-to-unit consistency of both art museums. The Linked Art endpoints in question are categorised as either `concept` (AAT), `person` (ULAN and occasionally AAT), `group` (ULAN and occasionally AAT), or `place` (TGN and occasionally AAT).
 
-For example, when comparing the term ‘goddesses’ (`aat:300343852`) between the AAT[^356] and LUX endpoints[^357], which is also present in both YCBA and YUAG digital collections, we can observe some differences. The Linked Art representation of the term on the Getty endpoint is loosely consistent with the data model but not with the Linked Art API, whereas LUX strictly follows the `concept` schema. Additionally, some SKOS properties present in the Getty endpoint, such as `skos:inScheme`, are not allowed by either the model or the API. Others, like `skos:narrower`, are permitted in the model but not in the Linked Art API. While it is understandable that Getty wants to maintain the hierarchical structure of a controlled vocabulary in both directions, Linked Art typically constrains this type of relationship in one direction. Therefore, external institutions building upon any of the Getty Vocabularies' Linked Art representations need to do so carefully.
+For example, when comparing the term ‘goddesses’ (`aat:300343852`) between the AAT[^359] and LUX endpoints[^360], which is also present in both YCBA and YUAG digital collections, we can observe some differences. The Linked Art representation of the term on the Getty endpoint is loosely consistent with the data model but not with the Linked Art API, whereas LUX strictly follows the `concept` schema. Additionally, some SKOS properties present in the Getty endpoint, such as `skos:inScheme`, are not allowed by either the model or the API. Others, like `skos:narrower`, are permitted in the model but not in the Linked Art API. While it is understandable that Getty wants to maintain the hierarchical structure of a controlled vocabulary in both directions, Linked Art typically constrains this type of relationship in one direction. Therefore, external institutions building upon any of the Getty Vocabularies' Linked Art representations need to do so carefully.
 
-The second spreadsheet focused on the 27,944 Getty terms that are also present in both of the art museums, either as direct references or after reconciliation through the LUX pipeline. YCBA uses 13,042 concepts and YUAG uses 19,114, with 4,212 terms present in both collections[^358], as illustrated in [Figure 8.5](#fig:vocab-ycba-yuag).
+The second spreadsheet focused on the 27,944 Getty terms that are also present in both of the art museums, either as direct references or after reconciliation through the LUX pipeline. YCBA uses 13,042 concepts and YUAG uses 19,114, with 4,212 terms present in both collections[^361], as illustrated in [Figure 8.5](#fig:vocab-ycba-yuag).
 
 <figure id="fig:vocab-ycba-yuag" style="margin: 0 auto; text-align: center;">
  <img
@@ -635,7 +635,7 @@ The results are returned as JSON, as shown in [Code Snippet 8.6](#lst:curl-resul
 
 </figure>
 
-With the help of a forked version of the Presentation API Validator[^359], I created a shell script to automate the validation of multiple IIIF Presentation API resources using the CLI. The script prompts the user for the unit, version, base URL, starting identifier, and the desired number of valid manifests. It then incrementally generates URLs by adding sequential identifiers to the base URL and sends validation requests to the local instance of the validator for each generated URL. This method was particularly useful as the exact range of identifiers was unknown and, besides, there were no IIIF Collections available from Yale to be parsed.
+With the help of a forked version of the Presentation API Validator[^362], I created a shell script to automate the validation of multiple IIIF Presentation API resources using the CLI. The script prompts the user for the unit, version, base URL, starting identifier, and the desired number of valid manifests. It then incrementally generates URLs by adding sequential identifiers to the base URL and sends validation requests to the local instance of the validator for each generated URL. This method was particularly useful as the exact range of identifiers was unknown and, besides, there were no IIIF Collections available from Yale to be parsed.
 
 The script was designed with embedded logic to handle situations where certain identifiers might result in 404 errors, intending to skip these invalid URLs and continue crawling until the specified number of valid Manifests was attained. However, this logic did not work as intended. Instead of continuing beyond the specified range to achieve the desired count of valid manifests, the script stopped once it reached the end of the specified range, even if it had not yet processed the desired number of valid resources. As a result, some intended validations were skipped and not replaced by additional identifiers.
 
@@ -701,8 +701,8 @@ The outputs are then saved into a consolidated JSONL file, maintaining a structu
 
 Using the shell script, 100 Manifests per version and per unit were crawled. Since YUL only had IIIF Presentation API 3.0, a total of 700 URLs potentially discoverable on LUX were parsed with the validator. This resulted in the following outcomes:
 
-- V2.1 Manifests from YCBA, YUAG, and YPM:   These Manifests all validated successfully but had the following     warnings: the remote server did not use the requested gzip transfer     compression, which can significantly slow down access to the     resources. Gzip[^360] compression reduces the size of the data being     transferred, thereby speeding up the download process and reducing     the load on network bandwidth. Additionally, the warnings included     non-standard field `rendering` on resource of type `sc:Canvas`, and     resource type `dctypes:Image` should have `format` set.
-- V3.0 Manifests from YCBA, YUAG, and YPM:   These Manifests were all invalid and had minor error issues: the     `logo` property was not properly structured as it should be embedded     within the provider; the URL to Creative Commons should be     HTTP rather     than HTTPS[^361]; and in some     YUAG     Manifests, the language map construction was not leveraged     correctly, as `en` cannot be an array.
+- V2.1 Manifests from YCBA, YUAG, and YPM:   These Manifests all validated successfully but had the following     warnings: the remote server did not use the requested gzip transfer     compression, which can significantly slow down access to the     resources. Gzip[^363] compression reduces the size of the data being     transferred, thereby speeding up the download process and reducing     the load on network bandwidth. Additionally, the warnings included     non-standard field `rendering` on resource of type `sc:Canvas`, and     resource type `dctypes:Image` should have `format` set.
+- V3.0 Manifests from YCBA, YUAG, and YPM:   These Manifests were all invalid and had minor error issues: the     `logo` property was not properly structured as it should be embedded     within the provider; the URL to Creative Commons should be     HTTP rather     than HTTPS[^364]; and in some     YUAG     Manifests, the language map construction was not leveraged     correctly, as `en` cannot be an array.
 - V3.0 Manifests from YUL:   These Manifests all validated successfully.
 
 [Figure 8.7](#fig:iiif-lux-validation) shows the distribution of valid Manifests, valid Manifests with warnings, invalid Manifests, and HTTP 404 responses across the different units and versions.
@@ -752,7 +752,7 @@ In conclusion, while LUX's adherence to LOUD standards and schemas is commendabl
 
 This chapter has explored the complexities and achievements of the LUX initiative at Yale, highlighting the importance of cross-unit collaboration, technical innovations, and the adherence to standards. Looking forward, the LUX platform continues to evolve, offering valuable lessons for other institutions in the CH field.
 
-The LUX platform is dedicated to a multi-faceted approach for its development and expansion. Actively collecting user feedback through a form available on each page, the platform leverages this input to continually refine its services and features. Additionally, LUX will broaden its scope by incorporating more collections, including those from renowned institutions like the Paul Mellon Centre in London[^362]. Furthermore, their commitment to updating descriptive metadata aims to enhance the accuracy of collection descriptions and reduce any inherent biases. These efforts are guided by the Bias Awareness and Responsibility Committee, ensuring a more equitable representation of cultural heritage [@metcalfe_hurst_lux_2023 p. 4].
+The LUX platform is dedicated to a multi-faceted approach for its development and expansion. Actively collecting user feedback through a form available on each page, the platform leverages this input to continually refine its services and features. Additionally, LUX will broaden its scope by incorporating more collections, including those from renowned institutions like the Paul Mellon Centre in London[^365]. Furthermore, their commitment to updating descriptive metadata aims to enhance the accuracy of collection descriptions and reduce any inherent biases. These efforts are guided by the Bias Awareness and Responsibility Committee, ensuring a more equitable representation of cultural heritage [@metcalfe_hurst_lux_2023 p. 4].
 
 The integration of external data sources, such as Wikimedia statements for public domain images, introduces new dimensions and challenges to the LUX platform. While enriching the dataset, it also poses issues where queries may return unrelated results due to these external statements. For instance, searching for ‘lightning talk’ might return results related to ‘Bird of paradise’. This highlights the need for ongoing refinement in query handling and data integration processes to maintain relevance and accuracy in search results.
 
@@ -768,39 +768,39 @@ Large-scale Linked Data projects such as LUX need to be enabled by the adoption 
 
 As LUX moves forward, it will continue to focus on user feedback, integrating new collections, and updating metadata to improve accuracy and representation. These efforts will ensure that LUX remains a flagship project for the integration and discovery of CH data leveraging LOUD specifications and their design principles, setting a benchmark for other institutions in the field.
 
-[^332]: LUX: <https://lux.collections.yale.edu/>
+[^335]: LUX: <https://lux.collections.yale.edu/>
 
-[^333]: Blacklight: <https://projectblacklight.org/>
+[^336]: Blacklight: <https://projectblacklight.org/>
 
-[^334]: As a matter of fact, the development and refinement of LUX
+[^337]: As a matter of fact, the development and refinement of LUX
     actually benefited significantly from the effects of the pandemic,
     as meetings were moved to Zoom, increasing productivity and
     inclusiveness [see @bishop_making_2023].
 
-[^335]: LUX - Who We Are: :
+[^338]: LUX - Who We Are: :
     <https://lux.collections.yale.edu/content/who-we-are>
 
-[^336]: MarkLogic: <https://www.marklogic.com>
+[^339]: MarkLogic: <https://www.marklogic.com>
 
-[^337]: LUX code base: <https://github.com/project-lux/>
+[^340]: LUX code base: <https://github.com/project-lux/>
 
-[^338]: GND:
+[^341]: GND:
     <https://gnd.network>
 
-[^339]: LoC Linked
+[^342]: LoC Linked
     Data Service: <https://id.loc.gov>
 
-[^340]: Web NDL
+[^343]: Web NDL
     Authorities: <https://id.ndl.go.jp/auth/ndla> and
     <http://id.ndl.go.jp/auth/ndlsh>
 
-[^341]: VIAF:
+[^344]: VIAF:
     <https://viaf.org>
 
-[^342]: Data Transformation Pipeline Code:
+[^345]: Data Transformation Pipeline Code:
     <https://github.com/project-lux/data-pipeline>
 
-[^343]: The 20 individuals interviewed represented various Yale units: 6
+[^346]: The 20 individuals interviewed represented various Yale units: 6
     from ITS, 2
     from CSC, 8
     from YUL, 1
@@ -808,66 +808,66 @@ As LUX moves forward, it will continue to focus on user feedback, integrating ne
     from YCBA, and
     1 from YPM.
 
-[^344]: Whisper: <https://github.com/openai/whisper/>
+[^347]: Whisper: <https://github.com/openai/whisper/>
 
-[^345]: Topic extraction tool for documents and social media:
+[^348]: Topic extraction tool for documents and social media:
     <https://nocodefunctions.com/topics/topic_extraction_tool.html>
 
-[^346]: The figure can be recreated using the data provided in this
+[^349]: The figure can be recreated using the data provided in this
     Gist, which was fed into Gephi to create this
     SNA-based
     visualisation:
     <https://gist.github.com/julsraemy/027a194a1a1090b249ea08c2d03fbbee>
 
-[^347]: JSON
+[^350]: JSON
     Schema Validation of Linked Art Resources:
     <https://github.com/linked-art/json-validator>
 
-[^348]: SHACL
+[^351]: SHACL
     Linked Art Validator: <https://github.com/linked-art/shacl>
 
-[^349]: IIIF Image
+[^352]: IIIF Image
     API Validator:
     <https://iiif.io/api/image/validator/>
 
-[^350]: IIIF
+[^353]: IIIF
     Presentation API Validator:
     <https://presentation-validator.iiif.io/>
 
-[^351]: Validator for the Presentation API:
+[^354]: Validator for the Presentation API:
     <https://github.com/IIIF/presentation-validator>
 
-[^352]: This is to some of extent documented in the Viewer Matrix:
+[^355]: This is to some of extent documented in the Viewer Matrix:
     <https://iiif.io/api/cookbook/recipe/matrix/>
 
-[^353]: Forked Linked Art JSON Validator:
+[^356]: Forked Linked Art JSON Validator:
     <https://github.com/julsraemy/json-validator>
 
-[^354]: A comprehensive analysis is documented on GitHub at\
+[^357]: A comprehensive analysis is documented on GitHub at\
     <https://github.com/julsraemy/loud-consistency/tree/main/linked-art>.
 
-[^355]: Linked Art Core Schema Definition:
+[^358]: Linked Art Core Schema Definition:
     <https://linked.art/api/1.0/schema/core.json>
 
-[^356]: AAT --
+[^359]: AAT --
     goddesses: <http://vocab.getty.edu/aat/300343852> /
     <https://vocab.getty.edu/aat/300343852.json> (Linked Art)
 
-[^357]: LUX -- goddesses:
+[^360]: LUX -- goddesses:
     <https://lux.collections.yale.edu/data/concept/6891f2d0-455f-47f9-96d6-b718c0a05fe2>
 
-[^358]: A dedicated CSV with the Getty terms found in
+[^361]: A dedicated CSV with the Getty terms found in
     YCBA and
     YUAG can be
     found at
     <https://github.com/julsraemy/loud-consistency/blob/main/linked-art/ycba-yuag-vocab.csv>.
 
-[^359]: Validator for the Presentation API (Fork):
+[^362]: Validator for the Presentation API (Fork):
     <https://github.com/julsraemy/presentation-validator/>
 
-[^360]: GNU Gzip: <https://www.gnu.org/software/gzip/>
+[^363]: GNU Gzip: <https://www.gnu.org/software/gzip/>
 
-[^361]: Although HTTPS URIs are listed as the ‘license deed’ and are recommended
+[^364]: Although HTTPS URIs are listed as the ‘license deed’ and are recommended
     for general usage, the canonical form for machine-readable layers,
     as used in the IIIF Presentation API should be
     HTTP. This is
@@ -876,4 +876,4 @@ As LUX moves forward, it will continue to focus on user feedback, integrating ne
     for software infrastructures. See
     <https://github.com/IIIF/trc/issues/32>
 
-[^362]: Paul Mellon Centre: <https://www.paul-mellon-centre.ac.uk/>
+[^365]: Paul Mellon Centre: <https://www.paul-mellon-centre.ac.uk/>

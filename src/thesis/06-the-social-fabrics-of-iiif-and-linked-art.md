@@ -10,7 +10,7 @@ This chapter unfolds as a foray into the social fabrics of the IIIF and Linked A
 
 With respect to scope, this chapter considers the socio-technical dynamics required to produce specifications that are aligned with the LOUD design principles. The central hypothesis is that although grassroots efforts to forge active communities require substantial and sustained commitment, these efforts typically succeed in the medium to long term. The analysis focuses on how consensus building and advocacy within the IIIF and Linked Art communities promote the adoption of LOUD. It also examines the role of community participation in the evolutionary adoption of these standards.
 
-Most of the (technical) documentation related to this empirical investigation, such as Python scripts, raw data, and diagrams, is made accessible through GitHub[^241]. This open repository serves not only as a resource for replicating and verifying the findings but also exemplifies a commitment to transparency, in keeping with the ethos of the IIIF and Linked Art communities.
+Most of the (technical) documentation related to this empirical investigation, such as Python scripts, raw data, and diagrams, is made accessible through GitHub[^244]. This open repository serves not only as a resource for replicating and verifying the findings but also exemplifies a commitment to transparency, in keeping with the ethos of the IIIF and Linked Art communities.
 
 The chapter begins in [Section 6.1](#sec:iiif-la-foundations), where I delve into some of the foundations of the IIIF and Linked Art communities. The first objective, concerning consensus building and advocacy within these digital communities, is addressed in more detail in [Section 6.2](#sec:consensus). This section unpacks the collaborative strategies and initiatives that are central to promoting standards adoption and community cohesion. Following this, [Section 6.3](#sec:community-participation-loud) focuses on the second objective by analysing community participation and adoption of LOUD standards.
 
@@ -24,7 +24,7 @@ For this potential to be fully realised, however, it is imperative that those wi
 
 In this respect, while specifications serve as the foundational goal, the broader vision of achieving harmony through technology and purpose requires the active participation of community members. They are tasked with fostering an ecosystem where specifications are not only developed and maintained, but brought to life through practical implementation. This requires a commitment to true collaboration within and across community boundaries, and a concerted effort to implement best practices, especially in user interface design. Such a commitment ensures that the integration of vision and execution is not just a theoretical ideal, but a lived reality that reflects the shared aspirations of both IIIF and Linked Art and their respective constituencies.
 
-The complexity of the IIIF community provides a rich area for exploration, in contrast to Linked Art, where community interactions are more streamlined and occur primarily through fortnightly calls[^242]. This complexity is vividly illustrated in [Figure 6.1](#fig:iiif-community-overview), which describes the range of entities within the framework. The decision to focus on IIIF is motivated by its rich constellation of committees, working groups and supporting institutions, providing a deeper dive into the development of digital standards in a robust community setting.
+The complexity of the IIIF community provides a rich area for exploration, in contrast to Linked Art, where community interactions are more streamlined and occur primarily through fortnightly calls[^245]. This complexity is vividly illustrated in [Figure 6.1](#fig:iiif-community-overview), which describes the range of entities within the framework. The decision to focus on IIIF is motivated by its rich constellation of committees, working groups and supporting institutions, providing a deeper dive into the development of digital standards in a robust community setting.
 
 <figure id="fig:iiif-community-overview" style="margin: 0 auto; text-align: center;">
  <img
@@ -47,7 +47,7 @@ The following sections explore in more depth the processes of consensus building
 
 The analysis examines the mechanisms of capacity building and advocacy within the IIIF and Linked Art communities, focusing on three key areas.
 
-Initial research centres on [6.2.1](#subsec:meetings), exploring the different types of meetings that play a crucial role in both community engagement and the wider collaborative process, with illustrations from the IIIF Discovery TSG and Linked Art meeting minutes. Attention then shifts to [6.2.2](#subsec:gh-issues), highlighting the role of GitHub in facilitating code and use case documentation, particularly within TRC, as a testament to the community's collaborative spirit and commitment to transparency. Finally, [6.2.3](#subsec:guidelines) examines community guidelines and best practice efforts, discussing how each community provides resources that transcend the standards, such as the IIIF cookbook recipes and Linked Art patterns, to guide and encourage further community contributions and foster interoperability.
+Initial research centres on [Subsection 6.2.1](#subsec:meetings), exploring the different types of meetings that play a crucial role in both community engagement and the wider collaborative process, with illustrations from the IIIF Discovery TSG and Linked Art meeting minutes. Attention then shifts to [Subsection 6.2.2](#subsec:gh-issues), highlighting the role of GitHub in facilitating code and use case documentation, particularly within TRC, as a testament to the community's collaborative spirit and commitment to transparency. Finally, [Subsection 6.2.3](#subsec:guidelines) examines community guidelines and best practice efforts, discussing how each community provides resources that transcend the standards, such as the IIIF cookbook recipes and Linked Art patterns, to guide and encourage further community contributions and foster interoperability.
 
 ### 6.2.1 Types of Meetings and Engagement Opportunities {id="subsec:meetings"}
 
@@ -58,19 +58,19 @@ A foundational element of these meetings is the ongoing, mostly asynchronous, co
 
 In addition to virtual sessions, face-to-face meetings provide invaluable opportunities for deeper engagement. Within IIIF, the annual conference acts as a catalyst for stakeholders to meet -- whether as part of the official programme or in parallel sessions. In addition, ad-hoc in-person meetings have also been instrumental in driving significant progress, such as the inclusion of audiovisual resources in the Presentation API 3.0 and the ongoing efforts to include 3D materials in the forthcoming version of this specification.
 
-The Linked Art initiative, although newer, has held five major face-to-face meetings, three before the COVID-19 pandemic and two in 2023. The fourth meeting, held in New Haven, CT, USA, focused on resolving outstanding issues to finalise the first version of the standard. The practical implications of developing the Linked Art API, alongside the deployment of the LUX platform, illustrate the tangible outcomes of these meetings. Many discussed issues were long-standing, exacerbated by the pandemic. For instance, discussions around rights statements[^244] and API Displacements and/or Transclusions[^245] have highlighted the evolving requirements and challenges faced by the community. It also became clear that discussions on identity -- encompassing nationality, gender, and ethnicity -- had matured, enabling new insights and considerations. These discussions are delicate, often challenged by inherent biases and assumptions in metadata assignment, highlighting the need for a more inclusive and diverse approach to identity representation within CH.
+The Linked Art initiative, although newer, has held five major face-to-face meetings, three before the COVID-19 pandemic and two in 2023. The fourth meeting, held in New Haven, CT, USA, focused on resolving outstanding issues to finalise the first version of the standard. The practical implications of developing the Linked Art API, alongside the deployment of the LUX platform, illustrate the tangible outcomes of these meetings. Many discussed issues were long-standing, exacerbated by the pandemic. For instance, discussions around rights statements[^247] and API Displacements and/or Transclusions[^248] have highlighted the evolving requirements and challenges faced by the community. It also became clear that discussions on identity -- encompassing nationality, gender, and ethnicity -- had matured, enabling new insights and considerations. These discussions are delicate, often challenged by inherent biases and assumptions in metadata assignment, highlighting the need for a more inclusive and diverse approach to identity representation within CH.
 
-Furthermore, while discussions about extending the CIDOC-CRM hierarchy to include new properties or classes - such as the `Transfer` class and the inclusion of non-human actors - take place within the broader CRM-SIG, Linked Art approaches these considerations from a different perspective[^246]. Unlike CRM-SIG, where ontological purity is a major concern, Linked Art prioritises more practical applicability and flexibility in modelling CH data. This leads to decisions where Linked Art has, for pragmatic reasons, created its own classes and leveraged existing classes designed for human entities to encompass non-human actors. This approach, while departing from strict ontological standards, aims to address immediate modelling needs within the community, recognising that it may occasionally compromise semantic interoperability for the sake of broader and more inclusive data representation practices.
+Furthermore, while discussions about extending the CIDOC-CRM hierarchy to include new properties or classes - such as the `Transfer` class and the inclusion of non-human actors - take place within the broader CRM-SIG, Linked Art approaches these considerations from a different perspective[^249]. Unlike CRM-SIG, where ontological purity is a major concern, Linked Art prioritises more practical applicability and flexibility in modelling CH data. This leads to decisions where Linked Art has, for pragmatic reasons, created its own classes and leveraged existing classes designed for human entities to encompass non-human actors. This approach, while departing from strict ontological standards, aims to address immediate modelling needs within the community, recognising that it may occasionally compromise semantic interoperability for the sake of broader and more inclusive data representation practices.
 
-Transitioning from these theoretical and practical considerations, I delve into detailed case studies of community interactions as this section explores specific series of meetings by looking at the notes taken during them -- in [6.2.1.1](#subsubsec:iiif-tsg-meetings) meetings from the IIIF Discovery TSG[^247], a completed IIIF group, and in [6.2.1.2](#subsubsec:la-meetings) the ongoing fortnightly meetings of the Linked Art initiative.
+Transitioning from these theoretical and practical considerations, I delve into detailed case studies of community interactions as this section explores specific series of meetings by looking at the notes taken during them -- in [Subsubsection 6.2.1.1](#subsubsec:iiif-tsg-meetings) meetings from the IIIF Discovery TSG[^250], a completed IIIF group, and in [Subsubsection 6.2.1.2](#subsubsec:la-meetings) the ongoing fortnightly meetings of the Linked Art initiative.
 
-This exploration provides a lens into the number of meetings, the people involved and the outcomes that shape the evolving landscapes of both communities. Meeting minutes from both groups were extracted using a tool developed by @bainbridge_extract_2021 to streamline the process of extracting texts from Google Docs into organised spreadsheets. This data then underwent a cleaning and curation process to ensure accuracy and consistency for analysis and visualisation[^248].
+This exploration provides a lens into the number of meetings, the people involved and the outcomes that shape the evolving landscapes of both communities. Meeting minutes from both groups were extracted using a tool developed by @bainbridge_extract_2021 to streamline the process of extracting texts from Google Docs into organised spreadsheets. This data then underwent a cleaning and curation process to ensure accuracy and consistency for analysis and visualisation[^251].
 
 #### 6.2.1.1 IIIF Discovery TSG Meetings {id="subsubsec:iiif-tsg-meetings"}
 
 The IIIF Discovery TSG formally ended its work in summer 2022, but continued to meet several times until March 2023. The purpose of the Discovery TSG was to address the critical need for interoperable resources to be easily discoverable. Recognising the importance of standardised discovery processes, the group aimed to develop specifications to improve the findability and reusability of IIIF resources. This initiative focused on adopting existing techniques and tools, facilitating their widespread use within the community, and supporting the creation of infrastructure such as registries. Key deliverables from the group comprise the Change Discovery API and the Content State API.
 
-In addition to these APIs, the TSG focused its efforts on producing essential documentation and support materials to facilitate the wider adoption and implementation of these standards. This includes the creation of a Registry of (Metadata) Profiles[^249], which serve as a mechanism for discovery-related metadata profiles to leverage through the `seeAlso` property in IIIF Manifests. A note on SEO guidelines was also produced[^250], with a view to improving search engine ranking of web pages containing IIIF resources.
+In addition to these APIs, the TSG focused its efforts on producing essential documentation and support materials to facilitate the wider adoption and implementation of these standards. This includes the creation of a Registry of (Metadata) Profiles[^252], which serve as a mechanism for discovery-related metadata profiles to leverage through the `seeAlso` property in IIIF Manifests. A note on SEO guidelines was also produced[^253], with a view to improving search engine ranking of web pages containing IIIF resources.
 
 [Figure 6.2](#fig:barchart-tsg-meeting-attendance) shows that 84 people, represented as individual horizontal bars, attended a total of 101 Discovery TSG meetings. Each person attended an average of 10.49 meetings, but the median attendance was 2. This illustrates a significant imbalance in participation: a small core group was highly active and contributed to the majority of discussions, while a larger number of participants attended less frequently.
 
@@ -99,7 +99,7 @@ As the Discovery TSG wrapped up its active phase, its contributions to the IIIF 
 
 Now transitioning into the Linked Art meeting minutes, some parallels with the IIIF Discovery TSG meetings can be observed, yet with distinct dynamics reflective of its ongoing activity. This analysis provides a snapshot of the Linked Art meetings from January 2019 to March 2024. The group convenes fortnightly to deliberate on refining the model and the API, with a strong emphasis on releasing the first stable version and integrating the patterns and specification into various platforms.
 
-[Figure 6.3](#fig:barchart-la-meeting-attendance) indicates participation trends over this period, showing that 130 different individuals attended the 115 meetings held, predominantly in a virtual format, with five of these meetings being face-to-face[^253]. Each participant attended an average of 13.57 of sessions, but the median attendance was only 2, indicating a very long tail of participation. This suggests a core group of highly engaged members who contribute consistently, while a larger number of participants engage more sporadically. This distribution highlights the challenges and successes of sustaining engagement over time, particularly in a volunteer-driven context where continuous engagement can be difficult to maintain.
+[Figure 6.3](#fig:barchart-la-meeting-attendance) indicates participation trends over this period, showing that 130 different individuals attended the 115 meetings held, predominantly in a virtual format, with five of these meetings being face-to-face[^256]. Each participant attended an average of 13.57 of sessions, but the median attendance was only 2, indicating a very long tail of participation. This suggests a core group of highly engaged members who contribute consistently, while a larger number of participants engage more sporadically. This distribution highlights the challenges and successes of sustaining engagement over time, particularly in a volunteer-driven context where continuous engagement can be difficult to maintain.
 
 <figure id="fig:barchart-la-meeting-attendance" style="margin: 0 auto; text-align: center;">
  <img
@@ -139,7 +139,7 @@ style="width: 100%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-[Figure 6.5](#fig:use-case-api-2) details the process undertaken by the IIIF community to review and integrate a specific GitHub issue[^254], the validation of the Image and Presentation APIs 3.0 that happened in May 2020[^255]. This detailed illustration shows the relationships and interactions between the various actors, and highlights the structured approach to consensus building, specification development and implementation by compatible software. The process begins with a human collective, such as the IIIF Editorial Committee, identifying and proposing changes, which are then carefully discussed and voted on by TRC members using platforms such as GitHub and Zoom. The involvement of the TRC is critical, providing the formal review and approval necessary for the adoption of changes, marked by key milestones such as the release of the API 3.0 Release Candidate. This figure emphasises the essential role of compliance and compatibility checks against the JSON-LD API `@context` and the relevant validators, ensuring that updates are seamlessly integrated into the wider IIIF ecosystem, supporting a wide range of compliant clients.
+[Figure 6.5](#fig:use-case-api-2) details the process undertaken by the IIIF community to review and integrate a specific GitHub issue[^257], the validation of the Image and Presentation APIs 3.0 that happened in May 2020[^258]. This detailed illustration shows the relationships and interactions between the various actors, and highlights the structured approach to consensus building, specification development and implementation by compatible software. The process begins with a human collective, such as the IIIF Editorial Committee, identifying and proposing changes, which are then carefully discussed and voted on by TRC members using platforms such as GitHub and Zoom. The involvement of the TRC is critical, providing the formal review and approval necessary for the adoption of changes, marked by key milestones such as the release of the API 3.0 Release Candidate. This figure emphasises the essential role of compliance and compatibility checks against the JSON-LD API `@context` and the relevant validators, ensuring that updates are seamlessly integrated into the wider IIIF ecosystem, supporting a wide range of compliant clients.
 
 <figure id="fig:use-case-api-2" style="margin: 0 auto; text-align: center;">
  <img
@@ -152,9 +152,9 @@ style="width: 100%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-The approval of both specifications by 30 members of the TRC marks a significant milestone, reflecting a substantial level of consensus for such a key initiative. While this level of participation is remarkable in the context of other use cases, it also demonstrates the difficulty of achieving widespread participation. The fact that not all TRC members were present or voted on these crucial specifications, and that not every institution within the IIIF-C consistently sends a representative, suggests areas for improvement in engagement and representation within the decision-making processes of the community[^256].
+The approval of both specifications by 30 members of the TRC marks a significant milestone, reflecting a substantial level of consensus for such a key initiative. While this level of participation is remarkable in the context of other use cases, it also demonstrates the difficulty of achieving widespread participation. The fact that not all TRC members were present or voted on these crucial specifications, and that not every institution within the IIIF-C consistently sends a representative, suggests areas for improvement in engagement and representation within the decision-making processes of the community[^259].
 
-Despite these challenges, there's a great deal of trust within the community in those who manage the development and implementation of the specifications. Many institutions and developers are diligently adapting their content and software to meet or upgrade to the latest specifications. However, without a concentrated authority to enforce compliance, deviations occur. These range from instances where cross-institutional interoperability remains achievable despite unorthodox approaches, to scenarios where outright anti-patterns are deployed, underscoring the diverse adherence to the APIs[^257].
+Despite these challenges, there's a great deal of trust within the community in those who manage the development and implementation of the specifications. Many institutions and developers are diligently adapting their content and software to meet or upgrade to the latest specifications. However, without a concentrated authority to enforce compliance, deviations occur. These range from instances where cross-institutional interoperability remains achievable despite unorthodox approaches, to scenarios where outright anti-patterns are deployed, underscoring the diverse adherence to the APIs[^260].
 
 While there is no ‘policing’ of implementations within the IIIF or Linked Art community, understanding and addressing these deviations is crucial for the ecosystem's health. Moreover, as both communities maintain open and shared specifications, the responsibility falls on the community itself to oversee and assess how the standards are leveraged across different settings.
 
@@ -164,11 +164,11 @@ As highlighted in the literature review, IIIF and to some extent Linked Art publ
 
 These best practices are critical as they demonstrate the full potential of the specifications and, in the case of Linked Art, demonstrate the full promise of the model. However, when moving from one client to another, one often encounters BOs, as parts of a resource may be supported differently or not at all [see @raemy_back_2022]. In the context of Linked Art, starting with the model before considering the implementation of API endpoints can lead to complex situations. This complexity arises when considering cases of transclusion, as the rigidity of the API requires careful consideration of how different aspects of the model are represented and accessed across endpoints, necessitating a nuanced approach to integrating the model with API capability.
 
-To further understand the nuances of these guidelines and best practices, in March 2024 I undertook an in-depth exploration of the IIIF cookbook recipes in [6.2.3.1](#subsubsec:iiif-cookbook) and Linked Art patterns in [6.2.3.2](#subsubsec:la-patterns). This exploration was done to be reasonably grounded in SNA using NetworkX and Gephi Lite, allowing commonalities within this set of guidelines to be discovered and visualised.
+To further understand the nuances of these guidelines and best practices, in March 2024 I undertook an in-depth exploration of the IIIF cookbook recipes in [Subsubsection 6.2.3.1](#subsubsec:iiif-cookbook) and Linked Art patterns in [Subsubsection 6.2.3.2](#subsubsec:la-patterns). This exploration was done to be reasonably grounded in SNA using NetworkX and Gephi Lite, allowing commonalities within this set of guidelines to be discovered and visualised.
 
 #### 6.2.3.1 IIIF Cookbook Recipes {id="subsubsec:iiif-cookbook"}
 
-[Figure 6.6](#fig:iiif-cookbook-gephi) illustrates a network derived from the IIIF cookbook recipes and their support across various viewer clients, including UV, Mirador, Annona, Ramp, Clover, and the navPlace Viewer[^259]. In this graph, nodes represent either specific IIIF Cookbook Recipes, identified by unique slugs and labelled with descriptive titles, or viewer clients, serving as the primary agents interacting with these recipes. The edges between nodes are colour-coded to signify the degree of support -- ‘yes’ for full support or ‘partial’ -- for each recipe by the respective client.
+[Figure 6.6](#fig:iiif-cookbook-gephi) illustrates a network derived from the IIIF cookbook recipes and their support across various viewer clients, including UV, Mirador, Annona, Ramp, Clover, and the navPlace Viewer[^262]. In this graph, nodes represent either specific IIIF Cookbook Recipes, identified by unique slugs and labelled with descriptive titles, or viewer clients, serving as the primary agents interacting with these recipes. The edges between nodes are colour-coded to signify the degree of support -- ‘yes’ for full support or ‘partial’ -- for each recipe by the respective client.
 
 <figure id="fig:iiif-cookbook-gephi" style="margin: 0 auto; text-align: center;">
  <img
@@ -183,17 +183,17 @@ style="width: 100%; display: block; margin: 0 auto;" />
 
 The allocation of node colours, predicated on their modularity class, categorises the recipes, elucidating their thematic relevance and grouping within the IIIF ecosystem. This classification sheds light on the recipes' roles and their significance to the community, from simple manifest creation to more complex implementations like audio, video, and multi-volume work representations. The size of each recipe node quantitatively reflects the extent of client support, visually emphasising recipes that have garnered widespread adoption or those that may require further advocacy. In a more analytical lens, the graph unveils the pivotal roles of Mirador and UV within the framework, underscoring their centrality and indispensability in the broad spectrum of implementing the core APIs. Concurrently, it delineates specific trajectories, such as Annona and Mirador's inclination towards annotations, and Ramp's association with audiovisual content.
 
-In terms of JSON Path analysis, a thorough examination was conducted to discern patterns and insights regarding the structure and use of properties across the IIIF Cookbook Recipes. Although this analysis was meticulously performed, it did not yield any particularly striking results or unexpected insights[^260].
+In terms of JSON Path analysis, a thorough examination was conducted to discern patterns and insights regarding the structure and use of properties across the IIIF Cookbook Recipes. Although this analysis was meticulously performed, it did not yield any particularly striking results or unexpected insights[^263].
 
-For content similarity, leveraging the cosine similarity scores from the analysis, two pairs of recipes emerged as notably identical, showcasing the closest thematic and content-based connections within the dataset. The recipes ‘Embedding HTML in descriptive properties’[^261] and ‘Rights statement’[^262] shared the highest similarity score of 0.672318, indicating a significant overlap in their content and approach. This high degree of similarity suggests that these recipes, while distinct in their focus, employ comparable structures or narratives. Another pair, ‘Support Deep Viewing with Basic Use of a IIIF Image API Service’[^263] and ‘Image in Annotations’[^264], also demonstrated a notable similarity score of 0.541640.
+For content similarity, leveraging the cosine similarity scores from the analysis, two pairs of recipes emerged as notably identical, showcasing the closest thematic and content-based connections within the dataset. The recipes ‘Embedding HTML in descriptive properties’[^264] and ‘Rights statement’[^265] shared the highest similarity score of 0.672318, indicating a significant overlap in their content and approach. This high degree of similarity suggests that these recipes, while distinct in their focus, employ comparable structures or narratives. Another pair, ‘Support Deep Viewing with Basic Use of a IIIF Image API Service’[^266] and ‘Image in Annotations’[^267], also demonstrated a notable similarity score of 0.541640.
 
-Additionally, the examination sheds light on the significant re-use of fixtures or content links across the recipes, which underscores the foundational role of these materials within the IIIF ecosystem. The repeated utilisation of specific resources, such as the image captured during the 2019 IIIF Conference in Göttingen, Germany[^265], which appears 41 times across various guides, exemplifies how readily available and central these resources have become in demonstrating IIIF capabilities. Similarly, audio and video fixtures from Indiana, such as the Mahler Symphony Audio[^266] and the Lunchroom Manners Video[^267], highlight the framework's adaptability and richness in managing a diverse range of multimedia content. However, it also highlights a certain tendency towards using readily available or well-known resources, often those directly provided by the IIIF community or known to be in the public domain. This practice, while practical, sometimes leads to a lack of diversity in the resources used, underscoring an opportunity for the IIIF Cookbook authors to explore and integrate a wider array of materials.
+Additionally, the examination sheds light on the significant re-use of fixtures or content links across the recipes, which underscores the foundational role of these materials within the IIIF ecosystem. The repeated utilisation of specific resources, such as the image captured during the 2019 IIIF Conference in Göttingen, Germany[^268], which appears 41 times across various guides, exemplifies how readily available and central these resources have become in demonstrating IIIF capabilities. Similarly, audio and video fixtures from Indiana, such as the Mahler Symphony Audio[^269] and the Lunchroom Manners Video[^270], highlight the framework's adaptability and richness in managing a diverse range of multimedia content. However, it also highlights a certain tendency towards using readily available or well-known resources, often those directly provided by the IIIF community or known to be in the public domain. This practice, while practical, sometimes leads to a lack of diversity in the resources used, underscoring an opportunity for the IIIF Cookbook authors to explore and integrate a wider array of materials.
 
 #### 6.2.3.2 Linked Art Patterns {id="subsubsec:la-patterns"}
 
 Turning the analytical gaze to Linked Art, I extend my exploration to the patterns that underpin this vibrant ecosystem. This progression makes it possible to discern the web of relationships that animate the Linked Art data model, mirroring here the methodological approach through graphs with the IIIF cookbook recipes.
 
-[Figure 6.7](#fig:la-patterns-gephi) presents a graph where nodes symbolise Linked Art patterns[^268]. The edges in this visualisation represent the relationships derived from the patterns' data, notably in terms of model components and their (sub)category. The colour of each node is determined by the pattern's category, signifying the thematic or functional group to which it belongs. Meanwhile, the edge colour is informed by the source nodes, providing insight into the directionality and origin of each relationship.
+[Figure 6.7](#fig:la-patterns-gephi) presents a graph where nodes symbolise Linked Art patterns[^271]. The edges in this visualisation represent the relationships derived from the patterns' data, notably in terms of model components and their (sub)category. The colour of each node is determined by the pattern's category, signifying the thematic or functional group to which it belongs. Meanwhile, the edge colour is informed by the source nodes, providing insight into the directionality and origin of each relationship.
 
 <figure id="fig:la-patterns-gephi" style="margin: 0 auto; text-align: center;">
  <img
@@ -206,7 +206,7 @@ style="width: 100%; display: block; margin: 0 auto;" />
 </figcaption>
 </figure>
 
-A diverse array of 136 patterns emerges, categorised under themes such as ‘Baseline Patterns’[^269], which serve as the foundation for resource description and interaction. The analysis identifies a comprehensive list of patterns, each addressing specific aspects of CH data modelling. Notably, some patterns function as sub-patterns, inheriting their parent name as one of their categories. Exploration of pattern similarity within the Linked Art model reveals noteworthy connections[^270], reflecting the integrated and comprehensive nature of the model. While these findings underscore the versatility and depth of the framework, its true value extends to practical applications. The insights gained from these similarities provide a rich resource for optimising Linked Art implementations in real-world scenarios, suggesting a broad potential for reuse in various CH contexts.
+A diverse array of 136 patterns emerges, categorised under themes such as ‘Baseline Patterns’[^272], which serve as the foundation for resource description and interaction. The analysis identifies a comprehensive list of patterns, each addressing specific aspects of CH data modelling. Notably, some patterns function as sub-patterns, inheriting their parent name as one of their categories. Exploration of pattern similarity within the Linked Art model reveals noteworthy connections[^273], reflecting the integrated and comprehensive nature of the model. While these findings underscore the versatility and depth of the framework, its true value extends to practical applications. The insights gained from these similarities provide a rich resource for optimising Linked Art implementations in real-world scenarios, suggesting a broad potential for reuse in various CH contexts.
 
 It's important to recognise that, like the IIIF cookbook recipes, this graph represents a snapshot in time, reflecting the entities and relationships documented up to a certain point. While this visualisation provides a window into the modelling efforts within Linked Art, other examples using different entities could be explored, recognising the dynamic and evolving nature of the initiative.
 
@@ -216,7 +216,7 @@ This section addresses the objective of examining community participation, along
 
 Following the publication of a detailed survey report on the characteristics of IIIF and Linked Art [see @raemy_characterising_2023], this section presents a comprehensive summary of its findings. The survey has provided insightful revelations into the dynamics of community engagement, preferred practices and tools, barriers to wider participation and the resulting implications for the CH sector. These findings underscore the central role of open standards and collaborative efforts in shaping practices, and provide a nuanced understanding of how these communities contribute to the development and adoption of LOUD standards.
 
-Conducted between March and May 2023[^271], the online survey attracted 79 participants from 20 countries[^272]. It was targeted to individuals involved in IIIF and Linked Art, but also people that have heard of the communities or the specifications. The survey's structure included sections tailored to gauge involvement in either or both communities, with branching logic to ensure relevance to participants' experiences. It captured data on socio-demographics, organisational affiliation, and the extent of participants' involvement in community events, activities, and calls, offering a window into the communities' composition and engagement patterns.
+Conducted between 24<sup>th</sup> March and 7<sup>th</sup> May 2023[^274], the online survey attracted 79 participants from 20 countries[^275]. It was targeted to individuals involved in IIIF and Linked Art, but also people that have heard of the communities or the specifications. The survey's structure included sections tailored to gauge involvement in either or both communities, with branching logic to ensure relevance to participants' experiences. It captured data on socio-demographics, organisational affiliation, and the extent of participants' involvement in community events, activities, and calls, offering a window into the communities' composition and engagement patterns.
 
 Results highlighted a global distribution of participants, with a noticeable concentration in the Global North, and indicated a wide range of engagement levels, from passive awareness to active participation in community events and activities. The findings underscore the communities' commitment to fostering global collaboration, despite challenges such as geographical and institutional representation biases. The survey serves as a foundational effort to map the landscape of these communities, identifying areas for growth and increased inclusivity.
 
@@ -290,9 +290,9 @@ This section reflects on the empirical findings of this chapter and outlines pro
 
 ### 6.5.1 Enhancing Community Engagement {id="subsec:community-engagement"}
 
-Both the IIIF and Linked Art communities face challenges in transforming increased membership into active participation. Despite a tenfold increase in members on platforms like IIIF Slack workspace over the past 7-8 years, this has not translated into proportional growth in contributions. Advocacy efforts need to focus on making these platforms more welcoming and integrating passive members into active roles. One of these efforts in the IIIF community is the Ambassadors programme[^273], which could be expanded. For Linked Art, it is essential to increase engagement through clear role definitions and regular interactive sessions that go beyond the technicalities of the model, including workshops and webinars. These efforts should aim to demystify the participation process and encourage more diverse community involvement.
+Both the IIIF and Linked Art communities face challenges in transforming increased membership into active participation. Despite a tenfold increase in members on platforms like IIIF Slack workspace over the past 7-8 years, this has not translated into proportional growth in contributions. Advocacy efforts need to focus on making these platforms more welcoming and integrating passive members into active roles. One of these efforts in the IIIF community is the Ambassadors programme[^276], which could be expanded. For Linked Art, it is essential to increase engagement through clear role definitions and regular interactive sessions that go beyond the technicalities of the model, including workshops and webinars. These efforts should aim to demystify the participation process and encourage more diverse community involvement.
 
-While the primary tools for collaboration in the IIIF and Linked Art communities are hosted by GAFAM -- namely GitHub and Google Drive -- there are growing calls to consider alternatives that may better align with open-source values and data sovereignty concerns. Codeberg[^274], as an alternative to GitHub, represents one such possibility. However, transitioning to new platforms could be a significant undertaking, requiring considerable effort and adaptation. Exploring these options could help mitigate the risks associated with reliance on major tech conglomerates and foster a more decentralised approach to digital resource management, though the change would be quite tremendous and involve significant logistics.
+While the primary tools for collaboration in the IIIF and Linked Art communities are hosted by GAFAM -- namely GitHub and Google Drive -- there are growing calls to consider alternatives that may better align with open-source values and data sovereignty concerns. Codeberg[^277], as an alternative to GitHub, represents one such possibility. However, transitioning to new platforms could be a significant undertaking, requiring considerable effort and adaptation. Exploring these options could help mitigate the risks associated with reliance on major tech conglomerates and foster a more decentralised approach to digital resource management, though the change would be quite tremendous and involve significant logistics.
 
 ### 6.5.2 Technical Development {id="subsec:technical-development"}
 
@@ -304,7 +304,7 @@ These measures are crucial for ensuring the broader adoption and sustainability 
 
 ### 6.5.3 Integration Practices {id="subsec:integration-practices"}
 
-Robust governance is essential for sustaining the technical infrastructure and community cohesion in both IIIF and Linked Art. Establishing diverse expert governance bodies can guide strategic developments and ensure adherence to best practices. These bodies should also address the preservation of institutional knowledge to maintain continuity amidst changes. The role of initiatives like iiif-commons[^275] is critical here, as they lower barriers to entry and support the development of both general-purpose and specialised tools, accommodating a wide range of community needs[^276].
+Robust governance is essential for sustaining the technical infrastructure and community cohesion in both IIIF and Linked Art. Establishing diverse expert governance bodies can guide strategic developments and ensure adherence to best practices. These bodies should also address the preservation of institutional knowledge to maintain continuity amidst changes. The role of initiatives like iiif-commons[^278] is critical here, as they lower barriers to entry and support the development of both general-purpose and specialised tools, accommodating a wide range of community needs[^279].
 
 LOUD entities, in the context of this analysis, can be perceived as *‘[a construction of] new properties to perceive in the world’* [p.251 @nyhan_pursuing_2023 citing [@anderson_after_2014]], suggesting that these entities do more than just exist; they actively shape our understanding and engagement with CH. By rearranging data and metadata in unprecedented ways, LOUD instances allow us to see connections and interactions that were previously obscured. This conceptual framework not only enriches our interaction with digital archives, but also challenges us to rethink how these technologies can be used to foster a more inclusive and dynamically interconnected cultural landscape.
 
@@ -312,51 +312,51 @@ Ultimately, the synthesis of insights from the IIIF and Linked Art initiatives p
 
 The following two chapters look at the practical implementation of their respective APIs in a research project and on larger systems, illustrating their versatility and implications in a number of different settings.
 
-[^241]: The LOUD
+[^244]: The LOUD
     Social Fabrics: <https://github.com/julsraemy/loud-socialfabrics/>
 
-[^242]: In the earlier days of the IIIF community, there was much more
+[^245]: In the earlier days of the IIIF community, there was much more
     fluidity in terms of roles and responsibilities, especially within
     the Editorial Board, something Linked Art is still experiencing.
 
-[^244]: Do we have a documented example for expressing image rights?:
+[^247]: Do we have a documented example for expressing image rights?:
     <https://github.com/linked-art/linked.art/issues/311>
 
-[^245]: API
+[^248]: API
     Displacements and/or Transclusions:
     <https://github.com/linked-art/linked.art/issues/411>
 
-[^246]: Inject classes/properties into the CRM hierarchy?:
+[^249]: Inject classes/properties into the CRM hierarchy?:
     <https://github.com/linked-art/linked.art/issues/479>
 
-[^247]: IIIF
+[^250]: IIIF
     Discovery TSG:
     <https://iiif.io/community/groups/discovery/>
 
-[^248]: Cf. The LOUD Social Fabrics -- Meeting Minutes:
+[^251]: Cf. The LOUD Social Fabrics -- Meeting Minutes:
     <https://github.com/julsraemy/loud-socialfabrics/tree/main/01_consensus-advocacy/meeting-minutes>
 
-[^249]: Registry of Profiles: <https://iiif.io/api/registry/profiles/>
+[^252]: Registry of Profiles: <https://iiif.io/api/registry/profiles/>
 
-[^250]: Thinking about IIIF and SEO:
+[^253]: Thinking about IIIF and SEO:
     <https://guides.iiif.io/IIIF-and-SEO/>
 
-[^253]: For one of these face-to-face meetings, documentation was
+[^256]: For one of these face-to-face meetings, documentation was
     produced daily over four days, resulting in four distinct meeting
     records. Therefore, while only five face-to-face gatherings
     occurred, they account for eight entries in the total of 115
     meetings documented.
 
-[^254]: Release Image API and Presentation API 3.0:
+[^257]: Release Image API and Presentation API 3.0:
     <https://github.com/IIIF/trc/issues/37>
 
-[^255]: Further details can be found in the official announcement of the
+[^258]: Further details can be found in the official announcement of the
     final release of the third version of the core
     IIIF
     specifications, available at
     <https://iiif.io/news/2020/06/04/IIIF-C-Announces-Final-Release-of-3.0-Specifications/>
 
-[^256]: The TRC
+[^259]: The TRC
     includes a distinct group of *ex officio* members alongside IIIF-C
     representatives and up to five community representatives. As of May
     2020, IIIF-C
@@ -366,7 +366,7 @@ The following two chapters look at the practical implementation of their respect
     can take place asynchronously and as late as two weeks after the
     meeting.
 
-[^257]: An example of deviation from the IIIF specifications can be seen in the
+[^260]: An example of deviation from the IIIF specifications can be seen in the
     *Digitaler Lesesaal* of the archives of Basel-Stadt and St. Gallen.
     Despite their efforts to implement IIIF within their systems [see
     @kansy_going_2022], there are technical challenges that could hinder
@@ -381,53 +381,53 @@ The following two chapters look at the practical implementation of their respect
     design principles and the exploration of alternatives that would
     still ensure compliance.
 
-[^259]: A few months after this investigation, Aviary, the Glycerine
+[^262]: A few months after this investigation, Aviary, the Glycerine
     Viewer, Theseus, and the Curation Viewer have been added to the
     support matrix.
 
-[^260]: More information can be found at
+[^263]: More information can be found at
     <https://github.com/julsraemy/loud-socialfabrics/tree/main/01_consensus-advocacy/guidelines>.
 
-[^261]: Embedding HTML in descriptive properties:
+[^264]: Embedding HTML in descriptive properties:
     <https://iiif.io/api/cookbook/recipe/0007-string-formats/>
 
-[^262]: Rigths statement:
+[^265]: Rigths statement:
     <https://iiif.io/api/cookbook/recipe/0008-rights/>
 
-[^263]: Support Deep Viewing with Basic Use of a
+[^266]: Support Deep Viewing with Basic Use of a
     IIIF Image API
     Service: <https://iiif.io/api/cookbook/recipe/0005-image-service/>
 
-[^264]: Image in Annotations:
+[^267]: Image in Annotations:
     <https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/>
 
-[^265]: Image of the Gänseliesel in Göttingen taken at the 2019
+[^268]: Image of the Gänseliesel in Göttingen taken at the 2019
     IIIF
     Conference:
     <https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg>
 
-[^266]: Mahler Symphony Audio:
+[^269]: Mahler Symphony Audio:
     <https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4>
 
-[^267]: Lunchroom Manners Video:
+[^270]: Lunchroom Manners Video:
     <https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4>
 
-[^268]: It must be said that each time a new pattern is created or
+[^271]: It must be said that each time a new pattern is created or
     modified on the Linked Art website, it is likely that existing
     URIs of
     JSON-LD
     serialisation may also change as they have been dynamically minted.
 
-[^269]: Baseline Patterns: <https://linked.art/model/base/>
+[^272]: Baseline Patterns: <https://linked.art/model/base/>
 
-[^270]: More information can be found at
+[^273]: More information can be found at
     <https://github.com/julsraemy/loud-socialfabrics/blob/main/01_consensus-advocacy/guidelines/patterns/linked_art_patterns_similarity.csv>
 
-[^271]: The survey was being promoted primarily on the Slack workspace
+[^274]: The survey was being promoted primarily on the Slack workspace
     of both communities, on their respective mailing list, as well as on
     Mastodon [see @raemy_dear_2023].
 
-[^272]: Among the survey respondents, 16 individuals reported
+[^275]: Among the survey respondents, 16 individuals reported
     involvement in both the IIIF and Linked Art communities,
     demonstrating a notable cross-community engagement. In addition, 38
     participants were active in either IIIF or Linked Art, with a significant
@@ -439,15 +439,15 @@ The following two chapters look at the practical implementation of their respect
     no affiliation with either community, highlighting the diverse
     levels of engagement and interest within the CH field.
 
-[^273]: IIIF
+[^276]: IIIF
     Ambassadors: <https://iiif.io/community/ambassadors/>
 
-[^274]: Codeberg: <https://codeberg.org/>
+[^277]: Codeberg: <https://codeberg.org/>
 
-[^275]: IIIF
+[^278]: IIIF
     Commons: <https://github.com/IIIF-Commons>
 
-[^276]: The contrasting models of support between these Mirador and
+[^279]: The contrasting models of support between these Mirador and
     UV illustrate
     the diversity of needs and approaches within the
     IIIF
