@@ -64,7 +64,7 @@
     --link-faint: rgba(0, 123, 255, 0.35);
     --hover-bg: #f1f4f8;
     --active-bg: #e8f0fe;
-    --mark: #fff6cc;
+    --mark: #d3e5ff;
     --row-highlight: #ffffcc;
     --row-total: #f5f5f5;
     --code-bg: #f9f9f9;
@@ -88,7 +88,7 @@
     --link-faint: rgba(108, 178, 255, 0.4);
     --hover-bg: #2a2e34;
     --active-bg: #23344d;
-    --mark: #5a4a12;
+    --mark: #284a78;
     --row-highlight: #3d3a1c;
     --row-total: #2a2e34;
     --code-bg: #262a30;
@@ -113,7 +113,7 @@
         --link-faint: rgba(108, 178, 255, 0.4);
         --hover-bg: #2a2e34;
         --active-bg: #23344d;
-        --mark: #5a4a12;
+        --mark: #284a78;
         --row-highlight: #3d3a1c;
         --row-total: #2a2e34;
         --code-bg: #262a30;
@@ -1235,6 +1235,13 @@ body > nav ul li a[aria-current="page"] {
     border-radius: 4px;
 }
 
+/* Highlighted search terms on pages opened from a result (?highlight=) */
+mark {
+    background: var(--mark);
+    color: inherit;
+    border-radius: 2px;
+}
+
 /* Search page (Pagefind Component UI) */
 .search-ui {
     --pf-font: "CMU Bright", "Segoe UI", Tahoma, sans-serif;
@@ -1245,11 +1252,20 @@ body > nav ul li a[aria-current="page"] {
     --pf-border: var(--rule);
     --pf-border-focus: var(--link);
     --pf-hover: var(--hover-bg);
-    --pf-mark: var(--mark);
+    --pf-mark: var(--text);
     --pf-outline-focus: var(--link);
     margin-top: 1.5em;
     text-align: left;
     hyphens: none;
+}
+
+/* Matched words: highlighted background instead of Pagefind's coloured text.
+   !important is needed to beat Pagefind's high-specificity rule. */
+.search-ui mark {
+    background: var(--mark) !important;
+    color: inherit !important;
+    border-radius: 2px;
+    padding: 0 0.1em;
 }
 
 .search-bar {
