@@ -90,7 +90,9 @@
         if (!li) return [];
         const label = document.createElement("span");
         label.className = "fn-preview-label";
-        label.textContent = (li.getAttribute("value") || link.textContent.replace(/\D/g, "")) + ".";
+        // Numbered notes read "42."; notes with their own marker (e.g. [^*]) read "*"
+        label.textContent = li.dataset.label
+            || (li.getAttribute("value") || link.textContent.replace(/\D/g, "")) + ".";
         const body = Array.from(li.children).map(clean);
         body[0]?.prepend(label, " ");
         return body;
