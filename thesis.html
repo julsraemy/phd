@@ -731,8 +731,13 @@ LOUD should lead efforts to improve the accessibility and usability of CH data. 
             "@type": "CollegeOrUniversity",
             "@id": "https://ror.org/02s6k3f65",
             "name": "University of Basel",
-            "url": "https://www.unibas.ch/"
+            "url": "https://www.unibas.ch/",
+            "department": {
+                "@type": "EducationalOrganization",
+                "name": "Graduate School of Social Sciences (G3S)"
+            }
         },
+        "inSupportOf": "PhD in Digital Humanities",
         "datePublished": "2024-12-23",
         "description": "Digital technologies have fundamentally transformed how Cultural Heritage (CH) collections are accessed and engaged with. Linked Open Usable Data (LOUD) specifications, including the International Image Interoperability Framework (IIIF) Presentation API 3.0, Linked Art, and the Web Annotation Data Model (WADM), have emerged as web standards to facilitate the description and dissemination of these valuable resources. Despite the widespread adoption of IIIF, implementing LOUD specifications, particularly in combination, remains challenging. This is especially evident in the development and assessment of infrastructures, or sites of assemblage, that support these standards.\nThis research is guided by two perspectives: community practices and semantic interoperability. The first perspective assesses how organizations, individuals, and apparatuses engage with and contribute to the consensus-making processes surrounding LOUD. By examining these practices, the social fabrics of the LOUD ecosystem can be better understood. The second perspective focuses on making data meaningful to machines in a standardized, interoperable manner that promotes the exchange of well-formed information. This research is grounded in the SNSF-funded project, *Participatory Knowledge Practices in Analogue and Digital Image Archives* (PIA) (2021–2025), which aims to develop a citizen science platform for three photographic collections from the Cultural Anthropology Switzerland (CAS) archives. Actor-Network Theory (ANT) forms the theoretical foundation, aiming to describe the collaborative structures of the LOUD ecosystem and emphasize the role of non-human actors.\nBeyond its implementation within the PIA project, this research includes an analysis of the social dynamics within the IIIF and Linked Art communities and an investigation of Yale's Collections Discovery platform, LUX. The research identifies socio-technical requirements for developing specifications aligned with LOUD principles. It also examines how the implementation of LOUD standards in PIA highlights their potential benefits and limitations in facilitating data reuse and broader participation. Additionally, it explores Yale University's large-scale deployment of LOUD standards, emphasizing the importance of ensuring consistency between Linked Art and IIIF resources within the LUX platform for the CH domain.\nThe core methodology of this thesis is an actor- and practice-centered inquiry, focusing on a detailed examination of specific cosmologies within LOUD-driven communities, PIA, and LUX. This micro-perspective approach provides rich empirical evidence to unravel the intricate web of cultural processes and constellations in these contexts.\nKey empirical findings indicate that LOUD enhances the discoverability and integration of data in CH, requiring community-driven consensus on model interoperability. However, significant challenges include engaging marginalized groups, sustaining long-term participation, and balancing technological and social factors. Strategic use of technology and the capture of digital materiality are critical, but LOUD also poses challenges related to resource investment, data consistency, and the broader implementation of complex patterns.\nLOUD should lead efforts to improve the accessibility and usability of CH data. The community-driven methodologies of IIIF and Linked Art inherently foster collaboration and transparency, making these standards essential tools in evolving data management practices. Even for institutions and projects that do not adopt these specifications, the socio-technical practices of LOUD offer vital insights into effective digital stewardship and strategies for community engagement.",
         "keywords": "Actor-Network Theory; Community of Practice; Cultural Anthropology Switzerland; Cultural Heritage; Digital Infrastructure; International Image Interoperability Framework; Knowledge Practices; Linked Art; Linked Data; LUX; Participatory Archives; Photographic Archives; Semantic Interoperability; Web Annotation Data Model",
@@ -950,40 +955,23 @@ LOUD should lead efforts to improve the accessibility and usability of CH data. 
     
     
     <h1 id="linked-open-usable-data-for-cultural-heritage%3A-perspectives-on-community-practices-and-semantic-interoperability" tabindex="-1">Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability</h1>
-<p>PhD Thesis in Digital Humanities, completed as part of the Graduate School of Social Sciences’ (<a class="acronym" href="/thesis/acronyms.html#acr-G3S"><abbr title="University of Basel's Graduate School of Social Sciences">G3S</abbr></a>) doctoral programme. It was successfully defended on 18 November 2024 (<a href="https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html" target="_blank" rel="noopener noreferrer">slides</a>) and published on 23 December 2024.</p>
-<p>This page hosts a lightweight <a class="acronym" href="/thesis/acronyms.html#acr-HTML"><abbr title="Hypertext Markup Language">HTML</abbr></a> version of my thesis, optimised for easier access and readability (<em>mindful of digital limitations and with some trade-offs</em>)<sup class="footnote-ref"><a href="#fn*" id="fnref*">[*]</a></sup>. The PDF version (e-dissertation) is available on the University of Basel’s repository, edoc: <a href="https://hdl.handle.net/20.500.14716/148352" target="_blank" rel="noopener noreferrer">https://hdl.handle.net/20.500.14716/148352</a> (also available via the DOI <a href="https://doi.org/10.5451/unibas-ep96807" target="_blank" rel="noopener noreferrer">https://doi.org/10.5451/unibas-ep96807</a>), as well as on the Swiss National Library’s catalogue: <a href="https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487" target="_blank" rel="noopener noreferrer">https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487</a>.</p>
-<p>For machines, the thesis and each of its chapters (full text included) are also available as <a href="https://linked.art/" target="_blank" rel="noopener noreferrer">Linked Art</a> <a class="acronym" href="/thesis/acronyms.html#acr-JSON-LD"><abbr title="JavaScript Object Notation for Linked Data">JSON-LD</abbr></a>: <a href="https://phd.julsraemy.ch/linked-art/text/thesis.json">https://phd.julsraemy.ch/linked-art/text/thesis.json</a>.</p>
-<div id="authors">
-  <h3>Dr. Julien A. Raemy</h3>
-  <p>University of Basel, Basel, Switzerland</p>
-  <p class="thesis-year">2024 · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a></p>
-  <p>
-    <a href="https://orcid.org/0000-0002-4711-5759" target="_blank">
-      <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">
-      https://orcid.org/0000-0002-4711-5759
-    </a>
-  </p>
-</div>
-<div id="supervisors">
-  <h3>Supervisors</h3>
-  <ul>
-    <li>
-      Prof. Dr. Peter Fornaro (University of Basel) 
-      <a href="https://orcid.org/0000-0003-1485-4923" target="_blank">
-        <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">
-        https://orcid.org/0000-0003-1485-4923
-      </a>
-    </li>
-    <li>Prof. Dr. Walter Leimgruber (University of Basel)</li>
-    <li>
-      Dr. Robert Sanderson (Yale University) 
-      <a href="https://orcid.org/0000-0003-4441-6852" target="_blank">
-        <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">
-        https://orcid.org/0000-0003-4441-6852
-      </a>
-    </li>
-  </ul>
-</div>
+<dl class="thesis-meta">
+  <div><dt>Author</dt><dd><strong>Dr. Julien A. Raemy</strong> · <a class="orcid" href="https://orcid.org/0000-0002-4711-5759" target="_blank" rel="noopener noreferrer" title="ORCID"><img alt="ORCID iD" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">0000-0002-4711-5759</a></dd></div>
+  <div><dt>Degree</dt><dd>PhD in Digital Humanities</dd></div>
+  <div><dt>Institution</dt><dd>University of Basel, Switzerland</dd></div>
+  <div><dt>Programme</dt><dd>Graduate School of Social Sciences (<a class="acronym" href="/thesis/acronyms.html#acr-G3S"><abbr title="University of Basel's Graduate School of Social Sciences">G3S</abbr></a>)</dd></div>
+  <div><dt>Supervisors</dt>
+    <dd>Prof. Dr. Peter Fornaro (University of Basel) · <a class="orcid" href="https://orcid.org/0000-0003-1485-4923" target="_blank" rel="noopener noreferrer" title="ORCID"><img alt="ORCID iD" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">0000-0003-1485-4923</a></dd>
+    <dd>Prof. Dr. Walter Leimgruber (University of Basel)</dd>
+    <dd>Dr. Robert Sanderson (Yale University) · <a class="orcid" href="https://orcid.org/0000-0003-4441-6852" target="_blank" rel="noopener noreferrer" title="ORCID"><img alt="ORCID iD" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16">0000-0003-4441-6852</a></dd>
+  </div>
+  <div><dt>Defended</dt><dd>18 November 2024 · <a href="https://julsraemy.ch/prezi/loud4ch-doctoral-examination.html" target="_blank" rel="noopener noreferrer">slides</a></dd></div>
+  <div><dt>Published</dt><dd>23 December 2024</dd></div>
+  <div><dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer">CC BY 4.0</a></dd></div>
+</dl>
+<aside class="edition-note" aria-label="About this edition">
+<p><strong>About this edition.</strong> A lightweight <a class="acronym" href="/thesis/acronyms.html#acr-HTML"><abbr title="Hypertext Markup Language">HTML</abbr></a> version of the thesis, optimised for access and readability<sup class="footnote-ref"><a href="#fn*" id="fnref*">[*]</a></sup>. The PDF (version of record) is on <a href="https://hdl.handle.net/20.500.14716/148352" target="_blank" rel="noopener noreferrer">edoc</a> (<a href="https://doi.org/10.5451/unibas-ep96807" target="_blank" rel="noopener noreferrer">DOI</a>) and in the <a href="https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487" target="_blank" rel="noopener noreferrer">Swiss National Library</a> catalogue. For machines: <a href="https://linked.art/" target="_blank" rel="noopener noreferrer">Linked Art</a> <a href="https://phd.julsraemy.ch/linked-art/text/thesis.json">JSON-LD</a> for the thesis and each chapter, full text included.</p>
+</aside>
 <h2 id="abstract" tabindex="-1">Abstract</h2>
 <p>Digital technologies have fundamentally transformed how Cultural Heritage (<a class="acronym" href="/thesis/acronyms.html#acr-CH"><abbr title="Cultural Heritage">CH</abbr></a>) collections are accessed and engaged with. <a href="loud.html">Linked Open Usable Data</a> (<a class="acronym" href="/thesis/acronyms.html#acr-LOUD"><abbr title="Linked Open Usable Data">LOUD</abbr></a>) specifications, including the <a href="https://iiif.io/api/presentation/3.0/" target="_blank" rel="noopener noreferrer">International Image Interoperability Framework (IIIF) Presentation API 3.0</a>, <a href="https://linked.art" target="_blank" rel="noopener noreferrer">Linked Art</a>, and the <a href="https://www.w3.org/TR/annotation-model/" target="_blank" rel="noopener noreferrer">W3C Web Annotation Data Model</a>, have emerged as web standards to facilitate the description and dissemination of these valuable resources. Despite the widespread adoption of <a class="acronym" href="/thesis/acronyms.html#acr-IIIF"><abbr title="International Image Interoperability Framework">IIIF</abbr></a>, implementing <a class="acronym" href="/thesis/acronyms.html#acr-LOUD"><abbr title="Linked Open Usable Data">LOUD</abbr></a> specifications, particularly in combination, remains challenging. This is especially evident in the development and assessment of infrastructures, or sites of assemblage, that support these standards.</p>
 <p>This research is guided by two perspectives: community practices and semantic interoperability. The first perspective assesses how organizations, individuals, and apparatuses engage with and contribute to the consensus-making processes surrounding <a class="acronym" href="/thesis/acronyms.html#acr-LOUD"><abbr title="Linked Open Usable Data">LOUD</abbr></a>. By examining these practices, the social fabrics of the <a class="acronym" href="/thesis/acronyms.html#acr-LOUD"><abbr title="Linked Open Usable Data">LOUD</abbr></a> ecosystem can be better understood. The second perspective focuses on making data meaningful to machines in a standardized, interoperable manner that promotes the exchange of well-formed information. This research is grounded in the <a class="acronym" href="/thesis/acronyms.html#acr-SNSF"><abbr title="Swiss National Science Foundation">SNSF</abbr></a>-funded project, <a href="pia.html">Participatory Knowledge Practices in Analogue and Digital Image Archives</a> (<a class="acronym" href="/thesis/acronyms.html#acr-PIA"><abbr title="Participatory Knowledge Practices in Analogue and Digital Image Archives">PIA</abbr></a>) (2021–2025), which aims to develop a citizen science platform for three photographic collections from the Cultural Anthropology Switzerland (<a class="acronym" href="/thesis/acronyms.html#acr-CAS"><abbr title="Cultural Anthropology Switzerland">CAS</abbr></a>) archives. Actor-Network Theory (<a class="acronym" href="/thesis/acronyms.html#acr-ANT"><abbr title="Actor-Network Theory">ANT</abbr></a>) forms the theoretical foundation, aiming to describe the collaborative structures of the <a class="acronym" href="/thesis/acronyms.html#acr-LOUD"><abbr title="Linked Open Usable Data">LOUD</abbr></a> ecosystem and emphasize the role of non-human actors.</p>
@@ -998,7 +986,7 @@ LOUD should lead efforts to improve the accessibility and usability of CH data. 
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn*" class="footnote-item" data-label="*" style="--fn-marker: '* '"><p>This <a class="acronym" href="/thesis/acronyms.html#acr-HTML"><abbr title="Hypertext Markup Language">HTML</abbr></a> version aims to represent the thesis accurately, but it was converted from the LaTeX source and minor differences may remain. The PDF on edoc is the version of record. <a href="#fnref*" class="footnote-backref">↩︎</a></p>
+<li id="fn*" class="footnote-item" data-label="*" style="--fn-marker: '* '"><p>Mindful of digital limitations, this version comes with some trade-offs. It aims to represent the thesis accurately, but it was converted from the LaTeX source and minor differences may remain. The PDF on edoc is the version of record. <a href="#fnref*" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>

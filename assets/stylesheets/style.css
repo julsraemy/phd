@@ -1404,3 +1404,98 @@ mark {
     pre { white-space: pre-wrap; border: 1px solid #999; }
     .footnotes, .chapter-references { break-before: auto; }
 }
+
+/* Edition note: info box above the thesis title */
+.edition-note {
+    font-family: "CMUSansSerif", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72em;
+    line-height: 1.45;
+    color: var(--text-soft);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--link);
+    border-radius: 4px;
+    padding: 0.6em 1em;
+    margin: 0 0 1.5em;
+}
+
+.edition-note p {
+    margin: 0.4em 0;
+}
+
+.edition-note a {
+    overflow-wrap: anywhere;
+}
+
+.edition-note strong {
+    font-family: "CMUSansSerif-Bold", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Structured thesis metadata under the title */
+.thesis-meta {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.3em 1.2em;
+    max-width: 46em;
+    margin: 0 auto 1.5em;
+    font-size: 0.9em;
+}
+
+.thesis-meta div {
+    display: contents;
+}
+
+.thesis-meta dt {
+    font-family: "CMUSansSerif", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    text-align: right;
+    padding-top: 0.15em;
+}
+
+.thesis-meta dt { grid-column: 1; }
+
+.thesis-meta dd {
+    grid-column: 2;
+    margin: 0;
+}
+
+.thesis-meta .orcid {
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+.thesis-meta .orcid img {
+    vertical-align: -0.15em;
+    margin-right: 0.25em;
+}
+
+@media (max-width: 480px) {
+    .thesis-meta { grid-template-columns: 1fr; gap: 0; }
+    .thesis-meta dt, .thesis-meta dd { grid-column: 1; }
+    .thesis-meta dt { text-align: left; padding-top: 0.6em; }
+}
+
+/* On the thesis landing page the ids sit on the headings themselves,
+   so the section-level margins above must not apply to them */
+h2#abstract {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h3#keywords {
+    margin-top: 1.25em;
+    margin-bottom: 0.4em;
+    font-size: 1em;
+}
+
+h3#keywords + p {
+    font-size: 0.923em;
+    text-align: left;
+}
+
+.thesis-meta + .edition-note {
+    margin-top: 0;
+}
