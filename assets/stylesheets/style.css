@@ -1421,6 +1421,8 @@ mark {
 
 .edition-note p {
     margin: 0.4em 0;
+    text-indent: 0;
+    text-align: left;
 }
 
 .edition-note a {
@@ -1498,4 +1500,52 @@ h3#keywords + p {
 
 .thesis-meta + .edition-note {
     margin-top: 0;
+}
+
+/* Copy buttons (added by site.js) on code blocks and the "Cite as" line */
+.copy-wrap {
+    position: relative;
+}
+
+.copy-wrap pre {
+    padding-right: 4.5em;
+}
+
+.copy-btn {
+    font-family: "CMUSansSerif", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72rem;
+    line-height: 1;
+    padding: 0.35em 0.6em;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.copy-btn:hover,
+.copy-btn:focus-visible {
+    color: var(--link-strong);
+    border-color: var(--link);
+}
+
+.copy-btn.copied {
+    color: var(--link-strong);
+    border-color: var(--link);
+    background: var(--active-bg);
+}
+
+.copy-wrap .copy-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.cite-as .copy-btn {
+    margin-left: 0.5em;
+    vertical-align: 0.1em;
+}
+
+@media print {
+    .copy-btn { display: none !important; }
 }

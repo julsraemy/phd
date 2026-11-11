@@ -46,7 +46,9 @@ keywords: "Actor-Network Theory; Community of Practice; Cultural Anthropology Sw
 
 <aside class="edition-note" aria-label="About this edition">
 
-**About this edition.** A lightweight HTML version of the thesis, optimised for access and readability[^*]. The PDF (version of record) is on [edoc](https://hdl.handle.net/20.500.14716/148352) ([DOI](https://doi.org/10.5451/unibas-ep96807)) and in the [Swiss National Library](https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487) catalogue. For machines: [Linked Art](https://linked.art/) [JSON-LD](https://phd.julsraemy.ch/linked-art/text/thesis.json) for the thesis and each chapter, full text included.
+**About this edition.** A lightweight HTML version of the thesis, optimised for access and readability[^*]. The PDF version is on [edoc](https://hdl.handle.net/20.500.14716/148352) ([DOI](https://doi.org/10.5451/unibas-ep96807)) and in the [Swiss National Library](https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487) catalogue. For machines: [Linked Art](https://linked.art/) [JSON-LD](https://phd.julsraemy.ch/linked-art/text/thesis.json){target="_blank" rel="noopener noreferrer"} for the thesis and each chapter, full text included.
+
+**Cite as:** Raemy, J. A. (2024). _Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability_ [PhD Thesis, University of Basel]. https://hdl.handle.net/20.500.14716/148352 {.cite-as}
 
 </aside>
 
