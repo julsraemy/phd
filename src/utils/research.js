@@ -40,6 +40,7 @@ function reference(id) {
 }
 
 // --- COinS (OpenURL ContextObject in SPAN) -----------------------------------
+const ZOTERO_TYPES = { software: "computerProgram", speech: "presentation", article: "preprint" };
 function coins(id) {
     const i = get(id);
     const p = new URLSearchParams();
@@ -70,10 +71,14 @@ function coins(id) {
             p.append("rft.genre", "report");
             p.append("rft.btitle", i.title);
             break;
-        default: // software, posters, preprints: COinS has no closer type
+        default: // software, posters, preprints: no OpenURL genre of their own
+            // Zotero (zotero/utilities openurl.js) makes genre=document a document,
+            // whose title only rft.title sets (rft.btitle is ignored, and a span
+            // without a title is looked up by DOI or dropped); rft.type, appended
+            // last, then gives it its Zotero item type
             p.append("rft_val_fmt", "info:ofi/fmt:kev:mtx:book");
             p.append("rft.genre", "document");
-            p.append("rft.btitle", i.title);
+            p.append("rft.title", i.title);
     }
     p.append("rft.date", year(i));
     for (const a of i.author || []) p.append("rft.au", fullName(a));
@@ -85,6 +90,7 @@ function coins(id) {
     if (i.language) p.append("rft.language", i.language);
     if (i.DOI) p.append("rft_id", `info:doi/${i.DOI}`);
     p.append("rft_id", pidUrl(i));
+    if (ZOTERO_TYPES[i.type]) p.append("rft.type", ZOTERO_TYPES[i.type]);
     return `<span class="Z3988" title="${esc(p.toString())}"></span>`;
 }
 
