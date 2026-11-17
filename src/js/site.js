@@ -102,6 +102,17 @@
         }, "Copy citation to clipboard");
     });
 
+    // --- Wide tables scroll inside their own box on narrow screens --------------
+    // Otherwise they widen the whole page on phones, which pushes fixed controls
+    // (back to top, contents drawer) outside the visible area.
+    document.querySelectorAll("main table").forEach(table => {
+        if (getComputedStyle(table.parentElement).overflowX !== "visible") return;
+        const wrap = document.createElement("div");
+        wrap.className = "table-scroll";
+        table.before(wrap);
+        wrap.appendChild(table);
+    });
+
     // --- Back to top (shown once the page has been scrolled down) -------------
     const toTop = document.querySelector(".back-to-top");
     if (toTop) {

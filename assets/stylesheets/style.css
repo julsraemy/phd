@@ -995,6 +995,12 @@ tr.row-highlight { background-color: var(--row-highlight); }
 tr.row-total { background-color: var(--row-total); border-top: 2px solid var(--rule-strong); font-weight: bold; }
 .thesis-content figure > div { max-width: 100%; overflow-x: auto; }
 .thesis-content img { max-width: 100%; height: auto; }
+/* Keep wide content inside the column so the page never gets wider than the
+   screen (which would push the fixed back-to-top button off-screen on phones) */
+main img { max-width: 100%; height: auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; }
+main :not(pre) > code,
+main a { overflow-wrap: anywhere; }
 
 /* Headings are numbered in the source; disable the LNCS auto-counters here */
 .thesis-content section > :is(h2, h3, h4)::before { content: none !important; }
