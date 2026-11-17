@@ -1,11 +1,19 @@
 # Linked Open Usable Data for Cultural Heritage
 
+[![DOI](https://zenodo.org/badge/502887135.svg)](https://doi.org/10.5281/zenodo.24304125)
+
 A website about my PhD thesis on Linked Open Usable Data (LOUD), with an HTML version of the thesis: <https://phd.julsraemy.ch>
 
 Title: *Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability*
 
 - PDF version on the University of Basel's repository (edoc): <https://hdl.handle.net/20.500.14716/148352> (DOI: <https://doi.org/10.5451/unibas-ep96807>)
 - Swiss National Library's e-Helvetica: <https://nbn-resolving.org/urn:nbn:ch:bel-bau-diss155487>
+
+## Cite as
+
+Raemy, J. A. (2026). *Linked Open Usable Data for Cultural Heritage: Website and HTML Version of the PhD Thesis* (Version 1.0) [Computer software]. Zenodo. <https://doi.org/10.5281/zenodo.24304125>
+
+To cite the thesis itself: Raemy, J. A. (2024). *Linked Open Usable Data for Cultural Heritage: Perspectives on Community Practices and Semantic Interoperability* [PhD thesis, University of Basel]. <https://hdl.handle.net/20.500.14716/148352>
 
 ## Running the site
 

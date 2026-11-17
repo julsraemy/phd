@@ -14,10 +14,12 @@ authors:
     given-names: "Julien Antoine"
     orcid: "https://orcid.org/0000-0002-4711-5759"
     affiliation: "University of Basel"
+doi: "10.5281/zenodo.24304125"
 repository-code: "https://github.com/julsraemy/phd"
 url: "https://phd.julsraemy.ch"
 license: MIT
-date-released: 2026-11-06
+version: "1.0"
+date-released: 2026-11-17
 keywords:
   - "Linked Open Usable Data"
   - "LOUD"
